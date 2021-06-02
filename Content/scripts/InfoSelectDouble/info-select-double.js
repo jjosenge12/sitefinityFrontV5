@@ -2,12 +2,6 @@
 
 $(document).ready(function () {
 
-    $("#step-two").click(function () {
-        $("#step-line").toggleClass("active-step");
-        $(this).toggleClass("active-step");
-
-    });
-
     $("#select-one").select2({
         dropdownParent: $("#select-one").parent()
     });
@@ -30,7 +24,7 @@ $(document).ready(function () {
         $("#select-two").removeAttr("disabled");
 
         if (e.params.data.id != "0") {
-            $.getJSON('/get-docs/' + libId + "/" + e.params.data.id, null, function (data) {
+            $.getJSON(`/get-docs?folderId=${e.params.data.id}`, null, function (data) {
                 console.log(data);
                 $("#select-two").html($("#select-two option[value='0']"));
                 $.each(data.documents, function () {

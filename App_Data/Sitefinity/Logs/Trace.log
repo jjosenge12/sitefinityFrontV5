@@ -243,3 +243,10 @@ Message: Scheduler: Task executed: 'Telerik.Sitefinity.Versioning.Cleaner.Versio
 
 
 ----------------------------------------
+----------------------------------------
+Timestamp: 02/06/2021 14:09:11
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 02/06/2021 14:09:11. End time: 02/06/2021 14:09:11. Task data: ''
+
+
+----------------------------------------
