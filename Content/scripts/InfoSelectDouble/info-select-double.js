@@ -27,7 +27,7 @@ $(document).ready(function () {
         let libId = $("#library-id").val();
         $("#step-line").addClass("active-step");
         $("#step-two").addClass("active-step");
-        $("#select-two").removeAttd("disabled");
+        $("#select-two").removeAttr("disabled");
 
         if (e.params.data.id != "0") {
             $.getJSON('/get-docs/' + libId + "/" + e.params.data.id, null, function (data) {
