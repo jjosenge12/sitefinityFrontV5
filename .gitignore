@@ -3,3 +3,5 @@ App_Data/Sitefinity.mdf
 *.log
 *.config
 *.ldf
+*.cache
+*.cache
