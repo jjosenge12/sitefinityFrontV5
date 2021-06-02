@@ -907,9 +907,11 @@
     <Compile Include="Mvc\Controllers\BannerController.cs" />
     <Compile Include="Mvc\Controllers\CarouselController.cs" />
     <Compile Include="Mvc\Controllers\InfoSelectDoubleController.cs" />
+    <Compile Include="Mvc\Controllers\InfoSelectSingleController.cs" />
     <Compile Include="Mvc\Models\BannerModel.cs" />
     <Compile Include="Mvc\Models\CarouselModel.cs" />
     <Compile Include="Mvc\Models\InfoSelectDoubleModel.cs" />
+    <Compile Include="Mvc\Models\InfoSelectSingleModel.cs" />
     <Compile Include="Mvc\Models\Utils\DocumentData.cs" />
     <Compile Include="Mvc\Models\Utils\LibraryData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1068,11 +1070,13 @@
     <Content Include="Content\css\Banner\banner.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\Card\card-estados-financieros.css" />
+    <Content Include="Content\css\Card\card-info-corporativa.css" />
     <Content Include="Content\css\Card\card-login.css" />
     <Content Include="Content\css\Card\card-payment.css" />
     <Content Include="Content\css\Card\card-plan-description.css" />
     <Content Include="Content\css\fonts.css" />
     <Content Include="Content\css\InfoSelectDouble\info-select-double.css" />
+    <Content Include="Content\css\InfoSelectSingle\info-select-single.css" />
     <Content Include="Content\css\inputs.css" />
     <Content Include="Content\css\jquery-ui.min.css" />
     <Content Include="Content\css\select2.min.css" />
@@ -1081,12 +1085,15 @@
     <Content Include="Content\scripts\Card\card-estados-financieros.js" />
     <Content Include="Content\scripts\Card\card-login.js" />
     <Content Include="Content\scripts\InfoSelectDouble\info-select-double.js" />
+    <Content Include="Content\scripts\InfoSelectSingle\info-select-single.js" />
     <Content Include="Content\scripts\inputs.js" />
     <Content Include="Content\scripts\jquery-ui.min.js" />
     <Content Include="Content\scripts\jquery.min.js" />
+    <Content Include="Content\scripts\jquery.validate.min.js" />
     <Content Include="Content\scripts\select2.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="Mvc\Scripts\InfoSelectDouble\designerview-custom.js" />
+    <Content Include="Mvc\Scripts\InfoSelectSingle\designerview-custom.js" />
     <Content Include="Mvc\Views\Content\css\bootstrap.min.css" />
     <Content Include="Mvc\Views\Content\css\Card\card-payment.css" />
     <Content Include="Mvc\Views\Content\css\jquery-ui.min.css" />
@@ -1483,6 +1490,9 @@
     <Content Include="ResourcePackages\Bootstrap4\package-lock.json" />
     <Content Include="ResourcePackages\Bootstrap4\package.json" />
     <Content Include="ResourcePackages\Bootstrap4\razorgenerator.directives" />
+    <Content Include="Mvc\Views\InfoSelectSingle\Index.cshtml" />
+    <Content Include="Mvc\Views\InfoSelectSingle\DesignerView.Custom.cshtml" />
+    <Content Include="Mvc\Views\InfoSelectSingle\DesignerView.Custom.json" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>

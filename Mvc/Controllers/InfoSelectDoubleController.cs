@@ -67,11 +67,12 @@ namespace SitefinityWebApp.Mvc.Controllers
 
             }
 
-            return View(model);
+            return View("Index", model);
         }
 
         protected override void HandleUnknownAction(string actionName)
         {
+            Telerik.Sitefinity.Web.RouteHelper.SetUrlParametersResolved(true);
             this.ActionInvoker.InvokeAction(this.ControllerContext, "Index");
         }
 

@@ -81,7 +81,7 @@ WriteLiteral("\r\n");
 
             
             #line 10 "..\..\MVC\Views\Card\Card.Footer.cshtml"
-Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/jquery.validate.min.js", "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true));
 
             
             #line default
@@ -101,7 +101,7 @@ WriteLiteral("\r\n");
 
             
             #line 13 "..\..\MVC\Views\Card\Card.Footer.cshtml"
-Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "top", true));
+Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true));
 
             
             #line default

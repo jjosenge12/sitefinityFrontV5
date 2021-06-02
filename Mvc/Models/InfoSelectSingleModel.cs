@@ -7,22 +7,18 @@
 using SitefinityWebApp.MVC.Models.Utils;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using Telerik.Sitefinity;
-using Telerik.Sitefinity.Libraries.Model;
 using Telerik.Sitefinity.Mvc;
 
 namespace SitefinityWebApp.Mvc.Models
 {
-	public class InfoSelectDoubleModel
+	public class InfoSelectSingleModel
 	{
 		public string Heading { get; set; }
 		public string Description { get; set; }
 		public string SelectOnePlaceholder { get; set; }
-		public string SelectTwoPlaceholder { get; set; }
 		public string LibraryId { get; set; }
 		public bool IsLibrary { get; set; }
 		public string PageUrl { get; set; }
-		public List<IFolder> Folders { get; set; }
 		public List<DocumentData> Documents { get; set; }
 		public bool HasBackButton { get; set; }
 	}

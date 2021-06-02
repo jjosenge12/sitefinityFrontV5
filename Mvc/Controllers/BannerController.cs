@@ -57,12 +57,13 @@ namespace SitefinityWebApp.Mvc.Controllers
             }
 			model.CssClassText.Trim();
 
-			return View(model);
+			return View("Index", model);
 		}
 		
         protected override void HandleUnknownAction(string actionName)
         {
-            this.ActionInvoker.InvokeAction(this.ControllerContext, "Index");
+			Telerik.Sitefinity.Web.RouteHelper.SetUrlParametersResolved(true);
+			this.ActionInvoker.InvokeAction(this.ControllerContext, "Index");
         }
 
 		public string Message { get; set; }
