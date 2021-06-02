@@ -28,17 +28,9 @@
         {
             <p class="is_double-title">@Html.HtmlSanitize(Model.Heading)</p>
         }
-        else
-        {
-            <p class="is_double-title">Title</p>
-        }
         @if (!string.IsNullOrEmpty(Model.Description))
         {
             <p class="is_double-parrafo">@Html.HtmlSanitize(Model.Description)</p>
-        }
-        else
-        {
-            <p class="is_double-parrafo">Description</p>
         }
         <div class="is_double-steps-container">
             <div id="step-one" class="is_double-step active-step">1</div>

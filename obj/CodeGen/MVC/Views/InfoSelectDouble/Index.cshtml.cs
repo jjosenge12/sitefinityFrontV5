@@ -187,8 +187,7 @@ WriteAttribute("href", Tuple.Create(" href=\"", 1089), Tuple.Create("\"", 1110)
 
 WriteLiteral(">\r\n                    <img");
 
-WriteLiteral(" src=\"http://localhost:60857/images/default-source/default-album/back_button.png\"" +
-"");
+WriteLiteral(" src=\"/images/default-source/default-album/back_button.png\"");
 
 WriteLiteral(" />\r\n                </a>\r\n            </div>\r\n");
 
@@ -227,21 +226,6 @@ WriteLiteral("</p>\r\n");
             
             #line 30 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
         }
-        else
-        {
-
-            
-            #line default
-            #line hidden
-WriteLiteral("            <p");
-
-WriteLiteral(" class=\"is_double-title\"");
-
-WriteLiteral(">Title</p>\r\n");
-
-            
-            #line 34 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
-        }
 
             
             #line default
@@ -249,7 +233,7 @@ WriteLiteral(">Title</p>\r\n");
 WriteLiteral("        ");
 
             
-            #line 35 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 31 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
          if (!string.IsNullOrEmpty(Model.Description))
         {
 
@@ -263,7 +247,7 @@ WriteLiteral(" class=\"is_double-parrafo\"");
 WriteLiteral(">");
 
             
-            #line 37 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 33 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                                     Write(Html.HtmlSanitize(Model.Description));
 
             
@@ -272,22 +256,7 @@ WriteLiteral(">");
 WriteLiteral("</p>\r\n");
 
             
-            #line 38 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
-        }
-        else
-        {
-
-            
-            #line default
-            #line hidden
-WriteLiteral("            <p");
-
-WriteLiteral(" class=\"is_double-parrafo\"");
-
-WriteLiteral(">Description</p>\r\n");
-
-            
-            #line 42 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 34 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
         }
 
             
@@ -340,13 +309,13 @@ WriteLiteral(" class=\"form-control\"");
 WriteLiteral(">\r\n");
 
             
-            #line 53 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 45 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                             
             
             #line default
             #line hidden
             
-            #line 53 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 45 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                              if (!string.IsNullOrEmpty(Model.SelectOnePlaceholder))
                             {
 
@@ -360,7 +329,7 @@ WriteLiteral(" value=\"0\"");
 WriteLiteral(" disabled>");
 
             
-            #line 55 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 47 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                                                                Write(Html.HtmlSanitize(Model.SelectOnePlaceholder));
 
             
@@ -369,7 +338,7 @@ WriteLiteral(" disabled>");
 WriteLiteral("</option>\r\n");
 
             
-            #line 56 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 48 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                             }
                             else
                             {
@@ -384,7 +353,7 @@ WriteLiteral(" value=\"0\"");
 WriteLiteral(" disabled>Elija una opci&oacute;n</option>\r\n");
 
             
-            #line 60 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 52 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                             }
 
             
@@ -393,13 +362,13 @@ WriteLiteral(" disabled>Elija una opci&oacute;n</option>\r\n");
 WriteLiteral("\r\n");
 
             
-            #line 62 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 54 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                             
             
             #line default
             #line hidden
             
-            #line 62 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 54 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                              if (Model.Folders != null && Model.Folders.Count > 0)
                             {
                                 foreach (var folder in Model.Folders)
@@ -410,30 +379,30 @@ WriteLiteral("\r\n");
             #line hidden
 WriteLiteral("                                    <option");
 
-WriteAttribute("id", Tuple.Create(" id=\"", 3050), Tuple.Create("\"", 3065)
+WriteAttribute("id", Tuple.Create(" id=\"", 2848), Tuple.Create("\"", 2863)
             
-            #line 66 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 3055), Tuple.Create<System.Object, System.Int32>(folder.Id
+            #line 58 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 2853), Tuple.Create<System.Object, System.Int32>(folder.Id
             
             #line default
             #line hidden
-, 3055), false)
+, 2853), false)
 );
 
-WriteAttribute("value", Tuple.Create(" value=\"", 3066), Tuple.Create("\"", 3084)
+WriteAttribute("value", Tuple.Create(" value=\"", 2864), Tuple.Create("\"", 2882)
             
-            #line 66 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 3074), Tuple.Create<System.Object, System.Int32>(folder.Id
+            #line 58 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 2872), Tuple.Create<System.Object, System.Int32>(folder.Id
             
             #line default
             #line hidden
-, 3074), false)
+, 2872), false)
 );
 
 WriteLiteral(">");
 
             
-            #line 66 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 58 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                                                                           Write(folder.Title.Value);
 
             
@@ -442,7 +411,7 @@ WriteLiteral(">");
 WriteLiteral("</option>\r\n");
 
             
-            #line 67 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 59 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                                 }
                             }
 
@@ -471,13 +440,13 @@ WriteLiteral(" class=\"form-control\"");
 WriteLiteral(" disabled>\r\n");
 
             
-            #line 76 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 68 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                             
             
             #line default
             #line hidden
             
-            #line 76 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 68 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                              if (!string.IsNullOrEmpty(Model.SelectTwoPlaceholder))
                             {
 
@@ -491,7 +460,7 @@ WriteLiteral(" value=\"0\"");
 WriteLiteral(" disabled>");
 
             
-            #line 78 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 70 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                                                                Write(Html.HtmlSanitize(Model.SelectTwoPlaceholder));
 
             
@@ -500,7 +469,7 @@ WriteLiteral(" disabled>");
 WriteLiteral("</option>\r\n");
 
             
-            #line 79 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 71 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                             }
                             else
                             {
@@ -515,7 +484,7 @@ WriteLiteral(" value=\"0\"");
 WriteLiteral(" disabled>Elija una opci&oacute;n</option>\r\n");
 
             
-            #line 83 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
+            #line 75 "..\..\MVC\Views\InfoSelectDouble\Index.cshtml"
                             }
 
             

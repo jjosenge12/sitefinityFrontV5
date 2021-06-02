@@ -211,7 +211,7 @@ WriteLiteral(" class=\"col-12 col-md-4\"");
 
 WriteLiteral("><a");
 
-WriteLiteral(" href=\"#\"");
+WriteLiteral(" href=\"/legales/informacion-corporativa/reportes-anuales\"");
 
 WriteLiteral(" class=\"btn-red_inverted\"");
 
@@ -221,7 +221,7 @@ WriteLiteral(" class=\"col-12 col-md-4\"");
 
 WriteLiteral("><a");
 
-WriteLiteral(" href=\"#\"");
+WriteLiteral(" href=\"/legales/informacion-corporativa/codigo-de-principios\"");
 
 WriteLiteral(" class=\"btn-red_inverted\"");
 
@@ -231,7 +231,7 @@ WriteLiteral(" class=\"col-12 col-md-4\"");
 
 WriteLiteral("><a");
 
-WriteLiteral(" href=\"#\"");
+WriteLiteral(" href=\"/legales/informacion-corporativa/compulsa-estatutos-sociales\"");
 
 WriteLiteral(" class=\"btn-red_inverted\"");
 
