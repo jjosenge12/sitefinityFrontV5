@@ -1,0 +1,31 @@
+----------------------------------------
+ActivityId: 2fb8b130-8746-4707-8802-09011a7efafe
+
+Timestamp: 28/05/2021 18:28:41
+
+Message: User login failed with exception: IDX10311: RequireNonce is 'true' (default) but validationContext.Nonce is null. A nonce cannot be validated. If you don't need to check the nonce, set OpenIdConnectProtocolValidator.RequireNonce to 'false'.
+
+Category: Authentication
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132666782257590445
+
+ProcessId: 8764
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6004
+
+Extended Properties: 
+----------------------------------------

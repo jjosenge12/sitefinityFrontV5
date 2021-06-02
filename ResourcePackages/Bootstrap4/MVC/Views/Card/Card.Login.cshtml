@@ -1,0 +1,56 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/login.js"), "top", true)
+
+<div class="container w-50 my-3">
+    <form method="GET" action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin" onsubmit="encrypt();">
+        <h3>Login</h3>
+        <div class="form-group">
+            <label for"user">Usuario: </label>
+            <input type="text" name="user" placeholder="Ingrese su número de cliente / ID de Cliente" class="form-control" id="user" />
+        </div>
+        <div class="form-group">
+            <label for"pass">Contraseña: </label>
+            <input type="password" name="pass" placeholder="Ingrese su contraseña" class="form-control" id="pass" />
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check" onclick="showPassword()">
+            <label class="form-check-label" for="check">Ver contraseña</label>
+        </div>
+        <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/login" id="fail" />
+        <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/pruebitaincrustar" id="ok" />
+        <input type="submit" value="Ingresar" class="btn btn-primary" />
+    </form>
+</div>
+
+<script type="text/javascript">
+    function encrypt() {
+        var pass = document.getElementById("pass").value;
+        var user = document.getElementById("user").value;
+        var fail = document.getElementById("fail").value;
+        var ok = document.getElementById("ok").value;
+        var pass_enc = window.btoa(pass);
+        var user_enc = window.btoa(user);
+        var fail_enc = window.btoa(fail);
+        var ok_enc = window.btoa(ok);
+        document.getElementById("pass").value = pass_enc;
+        document.getElementById("user").value = user_enc;
+        document.getElementById("fail").value = fail_enc;
+        document.getElementById("ok").value = ok_enc;
+        alert(pass_enc);
+    }
+    function showPassword() {
+        var x = document.getElementById("pass");
+        if (x.type === "password") {
+            x.type = "text";
+        }
+        else {
+            x.type = "password";
+        }
+    }
+</script>

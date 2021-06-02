@@ -1,0 +1,64 @@
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/22/2021 11:06:56 PM
+
+Message: Timestamp: 4/22/2021 11:06:56 PM
+Message: System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance[T]()
+   at Telerik.Sitefinity.Data.ManagerBase`1.GetManager[T](String providerName, String transactionName)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.EnsureInitialState(IOpenAccessMetadataProvider provider, String connectionName)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.InitializeProvider(IOpenAccessMetadataProvider provider, String connectionName)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.GetContext(IOpenAccessMetadataProvider provider, String connectionName)
+   at Telerik.Sitefinity.Configuration.Data.OpenAccessXmlConfigStorageProvider.TryGetConfigItem(String path, TempXmlConfigItem& item)
+   at Telerik.Sitefinity.Configuration.Data.OpenAccessXmlConfigStorageProvider.GetElement(String path)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.GetElementDatabaseReader(String path)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElementFromDatabase(ConfigSection section, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.TryLoadSectionFromDatabase(ConfigSection section, Boolean initial, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSection(ConfigSection section)
+   at Telerik.Sitefinity.Configuration.ConfigSection.Initialize(ConfigProvider provider)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionInternal(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate[TSection](Boolean safeMode)
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.RegisterRoutes()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/8/ROOT-21-132636063943691265
+ProcessId: 7300
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+Thread Name: 
+Win32 ThreadId:3392
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/8/ROOT-21-132636063943691265
+
+ProcessId: 7300
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3392
+
+Extended Properties: 
+----------------------------------------

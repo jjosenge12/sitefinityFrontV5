@@ -1,0 +1,181 @@
+----------------------------------------
+Timestamp: 5/15/2021 9:52:02 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 10:41:14 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 11:02:53 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 11:55:45 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 12:47:27 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 2:37:14 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 5/15/2021 2:37:14 PM. End time: 5/15/2021 2:37:14 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 3:12:28 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 3:45:30 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 5:28:01 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 6:07:50 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 6:37:30 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 5/15/2021 6:37:30 PM. End time: 5/15/2021 6:37:30 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 7:15:56 PM
+
+Message: System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.<>c__DisplayClass33_0.<WritePartialResponse>b__0()
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.IgnoringClosedConnection(Action action)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 7:20:41 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 8:17:38 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 9:42:40 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/15/2021 11:14:03 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/16/2021 12:44:00 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/16/2021 2:12:15 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/16/2021 3:01:09 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/16/2021 3:31:35 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/16/2021 4:53:50 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/16/2021 6:39:27 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/16/2021 7:03:46 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 5/16/2021 7:03:46 AM. End time: 5/16/2021 7:03:46 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/16/2021 8:25:11 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/16/2021 9:26:39 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------

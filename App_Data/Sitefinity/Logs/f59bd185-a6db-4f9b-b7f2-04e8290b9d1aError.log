@@ -1,0 +1,1020 @@
+----------------------------------------
+ActivityId: 00000000-0000-0000-0400-0080000000f7
+
+Timestamp: 4/21/2021 8:24:19 PM
+
+Message: HandlingInstanceID: c09d7ca1-d2b7-4331-8e53-9518bc6aca80
+An exception of type 'Telerik.OpenAccess.OpenAccessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+04/21/2021 20:24:19
+Type : Telerik.OpenAccess.OpenAccessException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing
+Source : Telerik.OpenAccess.Runtime
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : 
+Reason : Runtime
+CanRetry : True
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Exception Throw()
+HResult : -2146233088
+Stack Trace :    at OpenAccessRuntime.ExceptionWrapper.Throw()
+   at OpenAccessRuntime.DataObjects.tools.ant.DataObjectsTaskBase.throwBuildException(String str, Exception e)
+   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.execute()
+   at OpenAccessRuntime.OpenAccessSchemaAdapter.CreateDatabase(Boolean checkOnly)
+   at OpenAccessRuntime.SchemaHandlerImpl.Telerik.OpenAccess.ISchemaHandler.CreateDatabase()
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.UpgradeDatabaseSchema(ISchemaHandler schemaHandler, OpenAccessConnection connection)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.UpgradeDatabase(Database database, OpenAccessConnection connection)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.GetAndUpgradeMetadataDatabase(IConnectionStringSettings connectionSettings, OpenAccessConnection oaConnection, MetadataContainer metadataContainer, String appName, String moduleName, String& connString, Int32& previousBuild, Boolean isSecondCall)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/21/2021 8:24:19 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/1/ROOT-1-132635100416365528
+ThreadIdentity : 
+WindowsIdentity : INSTANCE-TFS-SI\mariana_martinez
+Requested URL : http://localhost:58808/
+	Inner Exception
+	---------------
+	Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : MsSqlDriver.GetCreateDatabaseSql : Database= missing
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ParamName : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.String GetCreateDatabaseSql(System.String, System.String, System.Collections.IDictionary, Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver, System.IO.StreamWriter)
+	HResult : -2147024809
+	Stack Trace :    at OpenAccessRuntime.Relational.sql.MsSqlDriver.GetCreateDatabaseSql(String url, String databaseName, IDictionary p, DBDriver drv, StreamWriter out_Renamed)
+	   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+
+ProcessId: 5244
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:8144
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0400-0080000000f7
+
+Timestamp: 4/21/2021 8:24:23 PM
+
+Message: HandlingInstanceID: c2a54243-d657-4de7-a0fc-a8f69d8ea4f1
+An exception of type 'Telerik.OpenAccess.Exceptions.DataStoreException' occurred and was caught.
+------------------------------------------------------------------------------------------------
+04/21/2021 20:24:23
+Type : Telerik.OpenAccess.Exceptions.DataStoreException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+Reason : Runtime
+CanRetry : False
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void Initialize(System.String, System.Collections.Specialized.NameValueCollection, System.Type)
+HResult : -2146233088
+Stack Trace :    at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_1e409c22cd4c4f27867603f84a69e142.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/21/2021 8:24:23 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/1/ROOT-1-132635100416365528
+ThreadIdentity : 
+WindowsIdentity : INSTANCE-TFS-SI\mariana_martinez
+Requested URL : http://localhost:58808/
+	Inner Exception
+	---------------
+	Type : Telerik.OpenAccess.RT.sql.SQLException, Telerik.OpenAccess.Runtime, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+	Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ErrorCode : 4064
+	ArrayBindIndex : -1
+	Number : 4064
+	ObjectId : 
+	Description : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Telerik.OpenAccess.RT.sql.Connection connect(Telerik.OpenAccess.Config.Sql.ConnectionString, Telerik.OpenAccess.SPI.PropertySet, Telerik.OpenAccess.ConnectionPoolType, OpenAccessRuntime.logging.LogEventStore)
+	HResult : -2146233088
+	Stack Trace :    at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+	   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+
+		Inner Exception
+		---------------
+		Type : System.Data.SqlClient.SqlException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+		Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+		Source : .Net SqlClient Data Provider
+		Help link : 
+		Errors : System.Data.SqlClient.SqlErrorCollection
+		ClientConnectionId : f6829d65-af40-4b45-8ba7-70bdca480b49
+		Class : 11
+		LineNumber : 65536
+		Number : 4064
+		Procedure : 
+		Server : \\.\pipe\F6CA5FE2-D822-42\tsql\query
+		State : 1
+		ErrorCode : -2146232060
+		Data : System.Collections.ListDictionaryInternal
+		TargetSite : Void .ctor(System.Data.ProviderBase.DbConnectionPoolIdentity, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SqlCredential, System.Object, System.String, System.Security.SecureString, Boolean, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SessionData, System.Data.ProviderBase.DbConnectionPool, System.String, Boolean, System.Data.SqlClient.SqlAuthenticationProviderManager)
+		HResult : -2146232060
+		Stack Trace :    at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+		   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+		   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+		   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+		   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+		   at System.Data.SqlClient.SqlConnection.Open()
+		   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+		   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+
+ProcessId: 5244
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:8144
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0400-0080000000f7
+
+Timestamp: 4/21/2021 8:24:33 PM
+
+Message: HandlingInstanceID: c1ff0c49-9d20-40ac-9abe-4b71fa504511
+An exception of type 'Telerik.OpenAccess.OpenAccessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+04/21/2021 20:24:33
+Type : Telerik.OpenAccess.OpenAccessException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing
+Source : Telerik.OpenAccess.Runtime
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : 
+Reason : Runtime
+CanRetry : True
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Exception Throw()
+HResult : -2146233088
+Stack Trace :    at OpenAccessRuntime.ExceptionWrapper.Throw()
+   at OpenAccessRuntime.DataObjects.tools.ant.DataObjectsTaskBase.throwBuildException(String str, Exception e)
+   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.execute()
+   at OpenAccessRuntime.OpenAccessSchemaAdapter.CreateDatabase(Boolean checkOnly)
+   at OpenAccessRuntime.SchemaHandlerImpl.Telerik.OpenAccess.ISchemaHandler.CreateDatabase()
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.UpgradeDatabaseSchema(ISchemaHandler schemaHandler, OpenAccessConnection connection)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.UpgradeDatabase(Database database, OpenAccessConnection connection)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.GetAndUpgradeMetadataDatabase(IConnectionStringSettings connectionSettings, OpenAccessConnection oaConnection, MetadataContainer metadataContainer, String appName, String moduleName, String& connString, Int32& previousBuild, Boolean isSecondCall)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/21/2021 8:24:33 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/1/ROOT-1-132635100416365528
+ThreadIdentity : 
+WindowsIdentity : INSTANCE-TFS-SI\mariana_martinez
+Requested URL : http://localhost:58808/
+	Inner Exception
+	---------------
+	Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : MsSqlDriver.GetCreateDatabaseSql : Database= missing
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ParamName : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.String GetCreateDatabaseSql(System.String, System.String, System.Collections.IDictionary, Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver, System.IO.StreamWriter)
+	HResult : -2147024809
+	Stack Trace :    at OpenAccessRuntime.Relational.sql.MsSqlDriver.GetCreateDatabaseSql(String url, String databaseName, IDictionary p, DBDriver drv, StreamWriter out_Renamed)
+	   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+
+ProcessId: 5244
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:8144
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0400-0080000000f7
+
+Timestamp: 4/21/2021 8:24:37 PM
+
+Message: HandlingInstanceID: 2c83be6b-4eba-4d5b-8897-6ac2ea940466
+An exception of type 'Telerik.OpenAccess.Exceptions.DataStoreException' occurred and was caught.
+------------------------------------------------------------------------------------------------
+04/21/2021 20:24:37
+Type : Telerik.OpenAccess.Exceptions.DataStoreException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+Reason : Runtime
+CanRetry : False
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void Initialize(System.String, System.Collections.Specialized.NameValueCollection, System.Type)
+HResult : -2146233088
+Stack Trace :    at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_1e409c22cd4c4f27867603f84a69e142.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/21/2021 8:24:37 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/1/ROOT-1-132635100416365528
+ThreadIdentity : 
+WindowsIdentity : INSTANCE-TFS-SI\mariana_martinez
+Requested URL : http://localhost:58808/
+	Inner Exception
+	---------------
+	Type : Telerik.OpenAccess.RT.sql.SQLException, Telerik.OpenAccess.Runtime, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+	Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ErrorCode : 4064
+	ArrayBindIndex : -1
+	Number : 4064
+	ObjectId : 
+	Description : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Telerik.OpenAccess.RT.sql.Connection connect(Telerik.OpenAccess.Config.Sql.ConnectionString, Telerik.OpenAccess.SPI.PropertySet, Telerik.OpenAccess.ConnectionPoolType, OpenAccessRuntime.logging.LogEventStore)
+	HResult : -2146233088
+	Stack Trace :    at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+	   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+
+		Inner Exception
+		---------------
+		Type : System.Data.SqlClient.SqlException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+		Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+		Source : .Net SqlClient Data Provider
+		Help link : 
+		Errors : System.Data.SqlClient.SqlErrorCollection
+		ClientConnectionId : 55cb39d0-37c9-414e-9ee6-1d877e525398
+		Class : 11
+		LineNumber : 65536
+		Number : 4064
+		Procedure : 
+		Server : \\.\pipe\F6CA5FE2-D822-42\tsql\query
+		State : 1
+		ErrorCode : -2146232060
+		Data : System.Collections.ListDictionaryInternal
+		TargetSite : Void .ctor(System.Data.ProviderBase.DbConnectionPoolIdentity, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SqlCredential, System.Object, System.String, System.Security.SecureString, Boolean, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SessionData, System.Data.ProviderBase.DbConnectionPool, System.String, Boolean, System.Data.SqlClient.SqlAuthenticationProviderManager)
+		HResult : -2146232060
+		Stack Trace :    at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+		   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+		   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+		   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+		   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+		   at System.Data.SqlClient.SqlConnection.Open()
+		   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+		   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90030
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+
+ProcessId: 5244
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:8144
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/21/2021 8:24:48 PM
+
+Message: HandlingInstanceID: a540281f-8f96-458a-b039-1349570dd5cd
+An exception of type 'Telerik.OpenAccess.OpenAccessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+04/21/2021 20:24:48
+Type : Telerik.OpenAccess.OpenAccessException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing
+Source : Telerik.OpenAccess.Runtime
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : 
+Reason : Runtime
+CanRetry : True
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Exception Throw()
+HResult : -2146233088
+Stack Trace :    at OpenAccessRuntime.ExceptionWrapper.Throw()
+   at OpenAccessRuntime.DataObjects.tools.ant.DataObjectsTaskBase.throwBuildException(String str, Exception e)
+   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.execute()
+   at OpenAccessRuntime.OpenAccessSchemaAdapter.CreateDatabase(Boolean checkOnly)
+   at OpenAccessRuntime.SchemaHandlerImpl.Telerik.OpenAccess.ISchemaHandler.CreateDatabase()
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.UpgradeDatabaseSchema(ISchemaHandler schemaHandler, OpenAccessConnection connection)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.UpgradeDatabase(Database database, OpenAccessConnection connection)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.GetAndUpgradeMetadataDatabase(IConnectionStringSettings connectionSettings, OpenAccessConnection oaConnection, MetadataContainer metadataContainer, String appName, String moduleName, String& connString, Int32& previousBuild, Boolean isSecondCall)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/21/2021 8:24:48 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/1/ROOT-1-132635100416365528
+ThreadIdentity : 
+WindowsIdentity : INSTANCE-TFS-SI\mariana_martinez
+Requested URL : http://127.0.0.1/
+	Inner Exception
+	---------------
+	Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : MsSqlDriver.GetCreateDatabaseSql : Database= missing
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ParamName : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.String GetCreateDatabaseSql(System.String, System.String, System.Collections.IDictionary, Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver, System.IO.StreamWriter)
+	HResult : -2147024809
+	Stack Trace :    at OpenAccessRuntime.Relational.sql.MsSqlDriver.GetCreateDatabaseSql(String url, String databaseName, IDictionary p, DBDriver drv, StreamWriter out_Renamed)
+	   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+
+ProcessId: 5244
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:1928
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/21/2021 8:24:52 PM
+
+Message: HandlingInstanceID: 6cdbe669-4a40-4492-beb1-17860ae89fa5
+An exception of type 'Telerik.OpenAccess.Exceptions.DataStoreException' occurred and was caught.
+------------------------------------------------------------------------------------------------
+04/21/2021 20:24:52
+Type : Telerik.OpenAccess.Exceptions.DataStoreException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+Reason : Runtime
+CanRetry : False
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void Initialize(System.String, System.Collections.Specialized.NameValueCollection, System.Type)
+HResult : -2146233088
+Stack Trace :    at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_1e409c22cd4c4f27867603f84a69e142.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/21/2021 8:24:52 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/1/ROOT-1-132635100416365528
+ThreadIdentity : 
+WindowsIdentity : INSTANCE-TFS-SI\mariana_martinez
+Requested URL : http://127.0.0.1/
+	Inner Exception
+	---------------
+	Type : Telerik.OpenAccess.RT.sql.SQLException, Telerik.OpenAccess.Runtime, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+	Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ErrorCode : 4064
+	ArrayBindIndex : -1
+	Number : 4064
+	ObjectId : 
+	Description : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Telerik.OpenAccess.RT.sql.Connection connect(Telerik.OpenAccess.Config.Sql.ConnectionString, Telerik.OpenAccess.SPI.PropertySet, Telerik.OpenAccess.ConnectionPoolType, OpenAccessRuntime.logging.LogEventStore)
+	HResult : -2146233088
+	Stack Trace :    at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+	   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+
+		Inner Exception
+		---------------
+		Type : System.Data.SqlClient.SqlException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+		Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+		Source : .Net SqlClient Data Provider
+		Help link : 
+		Errors : System.Data.SqlClient.SqlErrorCollection
+		ClientConnectionId : 18f7f43a-6cd5-40d4-bc45-d57cea39e737
+		Class : 11
+		LineNumber : 65536
+		Number : 4064
+		Procedure : 
+		Server : \\.\pipe\F6CA5FE2-D822-42\tsql\query
+		State : 1
+		ErrorCode : -2146232060
+		Data : System.Collections.ListDictionaryInternal
+		TargetSite : Void .ctor(System.Data.ProviderBase.DbConnectionPoolIdentity, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SqlCredential, System.Object, System.String, System.Security.SecureString, Boolean, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SessionData, System.Data.ProviderBase.DbConnectionPool, System.String, Boolean, System.Data.SqlClient.SqlAuthenticationProviderManager)
+		HResult : -2146232060
+		Stack Trace :    at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+		   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+		   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+		   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+		   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+		   at System.Data.SqlClient.SqlConnection.Open()
+		   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+		   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90030
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+
+ProcessId: 5244
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:1928
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/21/2021 8:25:03 PM
+
+Message: HandlingInstanceID: 35ac3977-2024-4c89-82a6-9a64cd048f21
+An exception of type 'Telerik.OpenAccess.OpenAccessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+04/21/2021 20:25:03
+Type : Telerik.OpenAccess.OpenAccessException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing
+Source : Telerik.OpenAccess.Runtime
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : 
+Reason : Runtime
+CanRetry : True
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Exception Throw()
+HResult : -2146233088
+Stack Trace :    at OpenAccessRuntime.ExceptionWrapper.Throw()
+   at OpenAccessRuntime.DataObjects.tools.ant.DataObjectsTaskBase.throwBuildException(String str, Exception e)
+   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.execute()
+   at OpenAccessRuntime.OpenAccessSchemaAdapter.CreateDatabase(Boolean checkOnly)
+   at OpenAccessRuntime.SchemaHandlerImpl.Telerik.OpenAccess.ISchemaHandler.CreateDatabase()
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.UpgradeDatabaseSchema(ISchemaHandler schemaHandler, OpenAccessConnection connection)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.UpgradeDatabase(Database database, OpenAccessConnection connection)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.GetAndUpgradeMetadataDatabase(IConnectionStringSettings connectionSettings, OpenAccessConnection oaConnection, MetadataContainer metadataContainer, String appName, String moduleName, String& connString, Int32& previousBuild, Boolean isSecondCall)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/21/2021 8:25:03 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/1/ROOT-1-132635100416365528
+ThreadIdentity : 
+WindowsIdentity : INSTANCE-TFS-SI\mariana_martinez
+Requested URL : http://127.0.0.1/
+	Inner Exception
+	---------------
+	Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : MsSqlDriver.GetCreateDatabaseSql : Database= missing
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ParamName : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.String GetCreateDatabaseSql(System.String, System.String, System.Collections.IDictionary, Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver, System.IO.StreamWriter)
+	HResult : -2147024809
+	Stack Trace :    at OpenAccessRuntime.Relational.sql.MsSqlDriver.GetCreateDatabaseSql(String url, String databaseName, IDictionary p, DBDriver drv, StreamWriter out_Renamed)
+	   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+
+ProcessId: 5244
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:1928
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/21/2021 8:25:06 PM
+
+Message: HandlingInstanceID: dd79b0c5-4a7f-4adc-a370-b7ac2aa0a4a2
+An exception of type 'Telerik.OpenAccess.Exceptions.DataStoreException' occurred and was caught.
+------------------------------------------------------------------------------------------------
+04/21/2021 20:25:06
+Type : Telerik.OpenAccess.Exceptions.DataStoreException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+Reason : Runtime
+CanRetry : False
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void Initialize(System.String, System.Collections.Specialized.NameValueCollection, System.Type)
+HResult : -2146233088
+Stack Trace :    at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_1e409c22cd4c4f27867603f84a69e142.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/21/2021 8:25:06 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/1/ROOT-1-132635100416365528
+ThreadIdentity : 
+WindowsIdentity : INSTANCE-TFS-SI\mariana_martinez
+Requested URL : http://127.0.0.1/
+	Inner Exception
+	---------------
+	Type : Telerik.OpenAccess.RT.sql.SQLException, Telerik.OpenAccess.Runtime, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+	Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ErrorCode : 4064
+	ArrayBindIndex : -1
+	Number : 4064
+	ObjectId : 
+	Description : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Telerik.OpenAccess.RT.sql.Connection connect(Telerik.OpenAccess.Config.Sql.ConnectionString, Telerik.OpenAccess.SPI.PropertySet, Telerik.OpenAccess.ConnectionPoolType, OpenAccessRuntime.logging.LogEventStore)
+	HResult : -2146233088
+	Stack Trace :    at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+	   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+
+		Inner Exception
+		---------------
+		Type : System.Data.SqlClient.SqlException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+		Message : Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+		Source : .Net SqlClient Data Provider
+		Help link : 
+		Errors : System.Data.SqlClient.SqlErrorCollection
+		ClientConnectionId : 9c5f1f52-ee9a-4ef4-886b-5139464e9adb
+		Class : 11
+		LineNumber : 65536
+		Number : 4064
+		Procedure : 
+		Server : \\.\pipe\F6CA5FE2-D822-42\tsql\query
+		State : 1
+		ErrorCode : -2146232060
+		Data : System.Collections.ListDictionaryInternal
+		TargetSite : Void .ctor(System.Data.ProviderBase.DbConnectionPoolIdentity, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SqlCredential, System.Object, System.String, System.Security.SecureString, Boolean, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SessionData, System.Data.ProviderBase.DbConnectionPool, System.String, Boolean, System.Data.SqlClient.SqlAuthenticationProviderManager)
+		HResult : -2146232060
+		Stack Trace :    at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+		   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+		   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+		   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+		   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+		   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+		   at System.Data.SqlClient.SqlConnection.Open()
+		   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+		   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90030
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+
+ProcessId: 5244
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:1928
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/21/2021 8:25:06 PM
+
+Message: Timestamp: 4/21/2021 8:25:06 PM
+Message: Telerik.Microsoft.Practices.Unity.ResolutionFailedException: Resolution of the dependency failed, type = "Telerik.Sitefinity.Data.Metadata.MetadataManager", name = "OPENACCESSDATAPROVIDER".
+Exception occurred while: Calling constructor Telerik.Sitefinity.Data.Metadata.MetadataManager(System.String providerName).
+Exception is: DataStoreException - Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Telerik.Sitefinity.Data.Metadata.MetadataManager,OPENACCESSDATAPROVIDER
+  Calling constructor Telerik.Sitefinity.Data.Metadata.MetadataManager(System.String providerName)
+ ---> Telerik.OpenAccess.Exceptions.DataStoreException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType) ---> Telerik.OpenAccess.RT.sql.SQLException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'. ---> System.Data.SqlClient.SqlException: Cannot open user default database. Login failed.
+Login failed for user 'INSTANCE-TFS-SI\mariana_martinez'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType)
+   --- End of inner exception stack trace ---
+   at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_1e409c22cd4c4f27867603f84a69e142.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, ExceptionPolicyName policy, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.ResolveProvider(String providerName, String dataSourceName)
+   at Telerik.Sitefinity.Data.ManagerBase`1.SetProvider(String providerName, String transactionName)
+   at Telerik.Sitefinity.Data.ManagerBase`1..ctor(String providerName, String transactionName)
+   at BuildUp_Telerik.Sitefinity.Data.Metadata.MetadataManager(IBuilderContext )
+   at Telerik.Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   --- End of inner exception stack trace ---
+   at Telerik.Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   at Telerik.Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name, ResolverOverride[] resolverOverrides)
+   at Telerik.Sitefinity.Abstractions.ObjectFactory.Resolve(Type type, String name)
+   at Telerik.Sitefinity.Data.ManagerBase.ResolveManager(Type managerType, String providerName)
+   at Telerik.Sitefinity.Data.ManagerBase`1.GetManager[T](String providerName, String transactionName)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.EnsureInitialState(IOpenAccessMetadataProvider provider, String connectionName)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.InitializeProvider(IOpenAccessMetadataProvider provider, String connectionName)
+   at Telerik.Sitefinity.Data.OA.OpenAccessConnection.GetContext(IOpenAccessMetadataProvider provider, String connectionName)
+   at Telerik.Sitefinity.Configuration.Data.OpenAccessXmlConfigStorageProvider.TryGetConfigItem(String path, TempXmlConfigItem& item)
+   at Telerik.Sitefinity.Configuration.Data.OpenAccessXmlConfigStorageProvider.GetElement(String path)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.GetElementDatabaseReader(String path)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElementFromDatabase(ConfigSection section, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.TryLoadSectionFromDatabase(ConfigSection section, Boolean initial, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSection(ConfigSection section)
+   at Telerik.Sitefinity.Configuration.ConfigSection.Initialize(ConfigProvider provider)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionInternal(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate[TSection](Boolean safeMode)
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.RegisterRoutes()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+ProcessId: 5244
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+Thread Name: 
+Win32 ThreadId:1928
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132635100416365528
+
+ProcessId: 5244
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:1928
+
+Extended Properties: 
+----------------------------------------

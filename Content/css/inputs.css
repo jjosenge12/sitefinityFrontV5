@@ -1,0 +1,92 @@
+﻿:root {
+    --color-red: #cc0000;
+    --color-gray-1: #dddbda;
+    --color-gray-2: #706e6b;
+    --color-gray-4: #3e3e3c;
+    --color-black: #121212;
+    font-size: 10px;
+}
+
+:focus {
+    outline: none;
+}
+
+.form-input {
+    width: 100%;
+    font-size: 14px;
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.effect-2 ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-red);
+    transition: 0.4s;
+}
+
+.effect-2:focus ~ .focus-border,
+.effect-2 ~ .focus-border.active {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
+
+.effect-2 ~ .float-label {
+    color: var(--color-red);
+    transition: 0.4s;
+}
+
+.float-container {
+    position: relative;
+    margin: 12px 0;
+}
+
+.float-label {
+    font-size: 14px;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0, 10px) scale(1);
+    transition: all 0.1s ease-in-out;
+    color: #706e6b;
+    font-weight: normal;
+    cursor: text;
+}
+
+.float-container.active label,
+.float-label.active {
+    transform: translate(0, -12px) scale(0.8);
+}
+
+.float-container.focus label {
+    color: var(--color-red);
+    transition: all 0.4s ease-in-out;
+}
+
+.select2-results{
+    border-bottom: 1px solid gray;
+}
+
+.select2-selection__rendered {
+    font-size: 14px;
+    line-height: 40px !important;
+    padding-left: 0 !important;
+}
+
+.select2-selection__arrow {
+    height: 38px !important;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-selection {
+    height: 35px !important;
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+}

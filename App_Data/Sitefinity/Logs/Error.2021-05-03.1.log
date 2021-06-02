@@ -1,0 +1,460 @@
+----------------------------------------
+ActivityId: 330decdd-8184-463c-9cfa-0431a489eb04
+
+Timestamp: 02/05/2021 01:10:26
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132643904619761245
+
+ProcessId: 10128
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9964
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 2a43a201-a6a7-4e30-94d1-7e8b921c0d53
+
+Timestamp: 5/2/2021 2:53:08 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132643967441962439
+
+ProcessId: 5228
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:11260
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: d1ca485e-f9d7-4601-b427-d182fff6e12b
+
+Timestamp: 5/2/2021 4:24:39 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644029647153419
+
+ProcessId: 3912
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:10396
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 5cc3e78e-ed7f-421c-a893-6a20e149491c
+
+Timestamp: 5/2/2021 5:28:27 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644059602474920
+
+ProcessId: 11020
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9908
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 844daa12-739c-494e-a5ed-5f1b39a93949
+
+Timestamp: 5/2/2021 7:26:25 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644129061575228
+
+ProcessId: 8036
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: aa4ea651-0286-49ad-aa05-3b28a30294c5
+
+Timestamp: 02/05/2021 08:27:16
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644175873188092
+
+ProcessId: 3928
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6448
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 6d91636c-a31c-404e-ae92-3c7b7f68b31f
+
+Timestamp: 5/2/2021 11:44:35 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644290133710712
+
+ProcessId: 10092
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5972
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 5/2/2021 12:17:19 PM
+
+Message: HandlingInstanceID: 1071a613-772a-425b-b8d7-b1a525c9ddb7
+An exception of type 'System.Web.HttpRequestValidationException' occurred and was caught.
+-----------------------------------------------------------------------------------------
+05/02/2021 12:17:19
+Type : System.Web.HttpRequestValidationException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.RawUrl value was detected from the client (="...h&content=<php>die(@md5(HelloT...").
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateString(System.String, System.String, System.Web.Util.RequestValidationSource)
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_RawUrl()
+   at Telerik.Sitefinity.Security.Claims.CustomRequestValidator.IsValidRequestString(HttpContext context, String value, RequestValidationSource requestValidationSource, String collectionKey, Int32& validationFailureIndex)
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_PathInfo()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.context_BeginRequest(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 5/2/2021 12:17:19 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132644314210656891
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : http://130.211.122.213/?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644314210656891
+
+ProcessId: 10340
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6332
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: d90926ca-f7b9-424f-994f-cff695e099da
+
+Timestamp: 5/2/2021 1:47:59 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644357747334574
+
+ProcessId: 6124
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5300
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 2bd89a0a-d4fc-40cc-9170-fed7c687bfac
+
+Timestamp: 5/2/2021 9:19:22 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644635051942348
+
+ProcessId: 8592
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8948
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 5/2/2021 9:20:34 PM
+
+Message: HandlingInstanceID: 8279acd1-33f5-46c3-b027-4d4ffb7bead9
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+05/02/2021 21:20:34
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 5/2/2021 9:20:34 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132644635051942348
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : http://130.211.122.213/w00tw00t.at.blackhats.romanian.anti-sec:)
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644635051942348
+
+ProcessId: 8592
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:4924
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: a82bde04-bd0b-4ad7-81b8-81b79503f7f0
+
+Timestamp: 5/2/2021 10:45:08 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644687127530366
+
+ProcessId: 5812
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:10204
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 273fa1c0-91ae-4c19-bed0-2999048ffd97
+
+Timestamp: 3/5/2021 00:18:28
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132644746475411036
+
+ProcessId: 4300
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5644
+
+Extended Properties: 
+----------------------------------------

@@ -1,0 +1,32 @@
+----------------------------------------
+Timestamp: 4/27/2021 7:20:32 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/27/2021 7:29:07 PM
+
+Message: System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.<>c__DisplayClass35_0.<WriteEntireResponse>b__0()
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.IgnoringClosedConnection(Action action)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/27/2021 7:29:07 PM
+
+Message: System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.IgnoringClosedConnection(Action action)
+
+
+----------------------------------------

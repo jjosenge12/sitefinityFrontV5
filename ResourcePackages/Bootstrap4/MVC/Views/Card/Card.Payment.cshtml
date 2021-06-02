@@ -1,0 +1,37 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@*@Html.Script(ScriptRef.JQuery, "top", true)*@
+@*@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)*@
+
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-payment.css"))
+
+<div class="payment-card-container">
+    <div class="payment-card">
+        @if (!string.IsNullOrEmpty(Model.Heading))
+        {
+            <div class="payment-card-head">@Html.HtmlSanitize(Model.Heading)</div>
+        }
+        else
+        {
+            <div class="payment-card-head">Title</div>
+        }
+        @if (!string.IsNullOrEmpty(Model.Description))
+        {
+            <div class="payment-card-body">@Html.HtmlSanitize(Model.Description)</div>
+        }
+        else
+        {
+            <div class="payment-card-body">Description</div>
+        }
+        @if (!string.IsNullOrEmpty(Model.ActionName))
+        {
+            <div class="payment-card-action">
+                <a class="btn-red" href="@Html.UrlSanitize(Model.ActionUrl)">@Model.ActionName</a>
+            </div>
+        }
+
+    </div>
+</div>

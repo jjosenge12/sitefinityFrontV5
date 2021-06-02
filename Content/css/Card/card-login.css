@@ -1,0 +1,137 @@
+﻿.registro-title {
+    font-family: "ToyotaType-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.red-title,
+.normal-p a {
+    color: #EB0A1E;
+}
+
+.black-title {
+    color: #000;
+}
+
+.normal-p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #58595B;
+}
+
+.normal-p a:hover {
+    text-decoration: none;
+    color: #EB0A1E;
+}
+
+.normal-p.short{
+    width: 70%;
+}
+
+#main-container {
+    padding: 0;
+    overflow: hidden;
+}
+
+.sub-title {
+    font-family: "ToyotaType-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+}
+
+.btn-registro {
+    font-family: "ToyotaType-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #EB0A1E;
+    border: 1px solid #EB0A1E;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 8px 24px;
+    background-color: #FFFFFF;
+    width: 192px;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn-registro:hover,
+.btn-registro:active,
+.btn-registro:focus {
+    color: #FFFFFF;
+    background-color: #EB0A1E;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+.login-img {
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+}
+
+.login-img>img {
+    width: 100%;
+}
+
+.login-form {
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.back-button {
+    padding: 16px 19px;
+    border-radius: 50%;
+    border: 1px solid #EB0A1E;
+    cursor: pointer;
+}
+
+.back-button:hover{
+    background-color: #EB0A1E;
+    transition: all 0.2s ease-in-out;
+}
+
+.back-button:hover>img{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+}
+
+*:focus,
+*:active{
+    outline: none;
+}
+
+@media(max-width: 1199px){
+    #bienvenida,
+    #iniciar-sesion {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media(max-width: 767px) {
+    .login-form {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .btn-registro{
+        width: 100%;
+    }
+
+    .normal-p.short {
+        width: 100%;
+    }
+}

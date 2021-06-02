@@ -1,0 +1,2558 @@
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/25/2021 6:37:32 PM
+
+Message: HandlingInstanceID: 98465a94-278c-42e7-b077-738e2449bd27
+An exception of type 'System.Web.HttpRequestValidationException' occurred and was caught.
+-----------------------------------------------------------------------------------------
+04/25/2021 18:37:31
+Type : System.Web.HttpRequestValidationException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.RawUrl value was detected from the client (="...h&content=<php>die(@md5(HelloT...").
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateString(System.String, System.String, System.Web.Util.RequestValidationSource)
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_RawUrl()
+   at Telerik.Sitefinity.Security.Claims.CustomRequestValidator.IsValidRequestString(HttpContext context, String value, RequestValidationSource requestValidationSource, String collectionKey, Int32& validationFailureIndex)
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_PathInfo()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.context_BeginRequest(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/25/2021 6:37:32 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132638494320234316
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : http://130.211.122.213/?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132638494320234316
+
+ProcessId: 10116
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9384
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 1dbbfa40-eab3-4f64-9364-2768b1831d48
+
+Timestamp: 4/25/2021 10:55:57 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132638646541565252
+
+ProcessId: 9320
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9972
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: af5216f8-1fa8-4a1a-9f0e-62873539e43d
+
+Timestamp: 4/26/2021 1:31:03 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132638739415803548
+
+ProcessId: 6024
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5560
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 9f62b603-169a-424a-99dd-9a1b235d724b
+
+Timestamp: 4/26/2021 2:50:21 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132638782343581198
+
+ProcessId: 10012
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 61c7ec0e-1aef-413b-a282-846262651f48
+
+Timestamp: 4/26/2021 9:50:20 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639039249796682
+
+ProcessId: 9528
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:4576
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/26/2021 11:40:06 AM
+
+Message: HandlingInstanceID: 854162e1-a852-4f22-8900-a4d15bee667e
+An exception of type 'System.Web.HttpRequestValidationException' occurred and was caught.
+-----------------------------------------------------------------------------------------
+04/26/2021 11:40:06
+Type : System.Web.HttpRequestValidationException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.RawUrl value was detected from the client (="...h&content=<php>die(@md5(HelloT...").
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateString(System.String, System.String, System.Web.Util.RequestValidationSource)
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_RawUrl()
+   at Telerik.Sitefinity.Security.Claims.CustomRequestValidator.IsValidRequestString(HttpContext context, String value, RequestValidationSource requestValidationSource, String collectionKey, Int32& validationFailureIndex)
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_PathInfo()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.context_BeginRequest(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/26/2021 11:40:06 AM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639107868837102
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : http://130.211.122.213/?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639107868837102
+
+ProcessId: 5644
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8212
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 90f8d926-8930-405f-9ad4-66b4815e39c8
+
+Timestamp: 4/26/2021 12:03:41 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639121511141984
+
+ProcessId: 5012
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3148
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 3a2f5374-6579-418f-805e-ad66459e0f30
+
+Timestamp: 26/04/2021 12:46:00
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639147291496319
+
+ProcessId: 7100
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3684
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 02658c33-e024-4f4f-9b99-60eb0805153d
+
+Timestamp: 4/26/2021 2:23:55 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639205645470607
+
+ProcessId: 5664
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7424
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: f627a69c-3ca3-4d42-ab0d-6270c96244c9
+
+Timestamp: 26/04/2021 16:53:32
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8180
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:05:42
+
+Message: HandlingInstanceID: 63fd7d43-816e-4960-b7b3-5d600dde1d03
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:05:42
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:05:42
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7096
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:05:42
+
+Message: HandlingInstanceID: 671b51ac-c44f-4d83-84cf-f2a2772218ba
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:05:42
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:05:42
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6436
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:05:42
+
+Message: HandlingInstanceID: c5455976-fb1d-4bfb-87cd-e653b5c23f71
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:05:42
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:05:42
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6468
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:05:43
+
+Message: HandlingInstanceID: c39555ac-94fa-498e-8bac-e86ca82f579f
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:05:43
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:05:43
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6436
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:05:43
+
+Message: HandlingInstanceID: 526862ac-1a95-4fe3-89aa-487694123800
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:05:43
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:05:43
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5504
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:05:43
+
+Message: HandlingInstanceID: 0cbff80d-bb55-4c17-85db-8483d17dea4b
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:05:43
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:05:43
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8140
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:06:13
+
+Message: HandlingInstanceID: ad075113-5018-4bdf-8c04-f0122855da8c
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:06:13
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:06:13
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8140
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:06:13
+
+Message: HandlingInstanceID: ad4caa16-cdab-4a91-ba12-e60542f62621
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:06:13
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:06:13
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5504
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:06:13
+
+Message: HandlingInstanceID: 54e477aa-356f-45e7-8094-dea2b190e723
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:06:13
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:06:13
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8140
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:08:01
+
+Message: HandlingInstanceID: 94952946-3187-439b-8b90-d6b66d9a206e
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:08:01
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:08:01
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5504
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:08:01
+
+Message: HandlingInstanceID: 46af7733-6e72-4ca3-8fb5-283f351d94fe
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:08:01
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:08:01
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8140
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:08:01
+
+Message: HandlingInstanceID: 9d96a4be-18d1-401f-9b0a-5c2f5bf07997
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:08:01
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:08:01
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6436
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:08:02
+
+Message: HandlingInstanceID: b3b0b517-3216-4c1c-be92-1a7fb038a5b2
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:08:02
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:08:02
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:10192
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:08:02
+
+Message: HandlingInstanceID: 0ce7d27d-d682-48ce-8712-6927fe17ba11
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:08:02
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:08:02
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7096
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:08:02
+
+Message: HandlingInstanceID: 6cc5d2e9-659f-41fd-a9fb-376f91163124
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:08:02
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:08:02
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8140
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:15:56
+
+Message: HandlingInstanceID: 99d3ed82-6248-4fea-8328-209f581fbbd6
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:15:56
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:15:56
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8140
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:15:56
+
+Message: HandlingInstanceID: 6863f574-5b23-44f7-a8b8-9586d2bedc13
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:15:56
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:15:56
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8140
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:15:56
+
+Message: HandlingInstanceID: 215f7411-2199-4290-b6fd-d8c02aba9d26
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:15:56
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:15:56
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5352
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:05
+
+Message: HandlingInstanceID: e72d5d03-9403-48bd-a2e3-84eee4dafbac
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:05
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:05
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7096
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:05
+
+Message: HandlingInstanceID: eb7cf428-ac8c-4842-b37a-e8bef747cf82
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:05
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:05
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3056
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:05
+
+Message: HandlingInstanceID: 9c931a8c-6a2c-4c72-8c42-66181073b077
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:05
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:05
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7056
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:38
+
+Message: HandlingInstanceID: d05ca98b-cd17-4d20-a5d0-77221747a34e
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:38
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:38
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6436
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:38
+
+Message: HandlingInstanceID: b90e1379-959d-4672-b2cf-67a69e9e4a47
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:38
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:38
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:1764
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:38
+
+Message: HandlingInstanceID: b5ecf21d-362a-4889-93f9-d3f05835a7a6
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:38
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:38
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3056
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:41
+
+Message: HandlingInstanceID: 2ca5623e-b733-4f41-a26e-bea31ab66315
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:41
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:41
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6436
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:41
+
+Message: HandlingInstanceID: 4d94037e-6b22-471a-b3c4-b4ba6dc11614
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:41
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:41
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6468
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:41
+
+Message: HandlingInstanceID: 2c838149-58e9-4d5d-a4d3-152106921dd5
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:41
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:41
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7096
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:43
+
+Message: HandlingInstanceID: f95f6cc8-3d10-4ab8-9738-94e9ab5ffcd3
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:43
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:43
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5504
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:43
+
+Message: HandlingInstanceID: a2b79411-cb10-4e19-93cc-b2417e81f70c
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:43
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:43
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7056
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:43
+
+Message: HandlingInstanceID: 33fd4061-79cb-4db3-85f5-d2ee59c26492
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:43
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:43
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6468
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:58
+
+Message: HandlingInstanceID: 7d0c5ba1-b896-43a5-995e-1ac3f1de920c
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:58
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:58
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8140
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:58
+
+Message: HandlingInstanceID: 6e7448f1-e6f8-4b3c-b8df-cfbd6b9d5e79
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:58
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:58
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5504
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:58
+
+Message: HandlingInstanceID: 64c007ce-d1cd-4b08-9070-b03e9949f317
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:58
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:58
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5504
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:59
+
+Message: HandlingInstanceID: 42276d96-c9b6-4cbe-87c0-7728570222b4
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:59
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:59
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5352
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:59
+
+Message: HandlingInstanceID: 7ba633e7-8679-443a-a085-8afb4bbac75a
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:59
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:59
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:1352
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:16:59
+
+Message: HandlingInstanceID: 4ae7262c-2d6c-400c-bb00-a626f177c357
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:16:59
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:16:59
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7096
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:17:08
+
+Message: HandlingInstanceID: bc6950fc-b610-4030-8105-1b7da9ce6415
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:17:08
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:17:08
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5504
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:17:08
+
+Message: HandlingInstanceID: f777d19e-395d-4ece-ae23-8e21afd1314c
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:17:08
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:17:08
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3056
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 26/04/2021 17:17:08
+
+Message: HandlingInstanceID: 5f1cbca9-0653-4d01-ad97-de0400f079c3
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+04/26/2021 17:17:08
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 26/04/2021 17:17:08
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132639295327064570
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Template/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132639295327064570
+
+ProcessId: 8708
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6468
+
+Extended Properties: 
+----------------------------------------

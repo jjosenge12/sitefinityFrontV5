@@ -1,0 +1,96 @@
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/22/2021 11:09:05 PM
+
+Message: Timestamp: 4/22/2021 11:09:01 PM
+Message: Microsoft.Practices.ServiceLocation.ActivationException: Activation error occured while trying to get instance of type LogWriter, key "" ---> Telerik.Microsoft.Practices.Unity.ResolutionFailedException: Resolution of the dependency failed, type = "Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter", name = "(none)".
+Exception occurred while: Calling constructor Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollingFlatFileTraceListener(System.String fileName, System.String header, System.String footer, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter formatter, System.Int32 rollSizeKB, System.String timeStampPattern, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollFileExistsBehavior rollFileExistsBehavior, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollInterval rollInterval, System.Int32 maxArchivedFiles).
+Exception is: ThreadAbortException - Thread was being aborted.
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriterImpl,LogWriter.__default__ (mapped from Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter, (none))
+  Resolving parameter "structureHolder" of constructor Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriterImpl(Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriterStructureHolder structureHolder, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.ILoggingInstrumentationProvider instrumentationProvider, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.ILoggingUpdateCoordinator updateCoordinator)
+    Resolving Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriterStructureHolder,LogWriterStructureHolder.__default__ (mapped from Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriterStructureHolder, (none))
+    Resolving parameter "traceSources" of constructor Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriterStructureHolder(System.Collections.Generic.IEnumerable`1[[Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.Filters.ILogFilter, Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563]] filters, System.Collections.Generic.IEnumerable`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] traceSourceNames, System.Collections.Generic.IEnumerable`1[[Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogSource, Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563]] traceSources, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogSource allEventsTraceSource, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogSource notProcessedTraceSource, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogSource errorsTraceSource, System.String defaultCategory, System.Boolean tracingEnabled, System.Boolean logWarningsWhenNoCategoriesMatch, System.Boolean revertImpersonation)
+      Resolving Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogSource,Default
+      Resolving parameter "traceListeners" of constructor Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogSource(System.String name, System.Collections.Generic.IEnumerable`1[[System.Diagnostics.TraceListener, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] traceListeners, System.Diagnostics.SourceLevels level, System.Boolean autoFlush, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.Instrumentation.ILoggingInstrumentationProvider instrumentationProvider)
+        Resolving Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.ReconfigurableTraceListenerWrapper,Default (mapped from System.Diagnostics.TraceListener, Default)
+        Resolving parameter "wrappedTraceListener" of constructor Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.ReconfigurableTraceListenerWrapper(System.Diagnostics.TraceListener wrappedTraceListener, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.ILoggingUpdateCoordinator coordinator)
+          Resolving Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollingFlatFileTraceListener,Default‌implementation (mapped from System.Diagnostics.TraceListener, Default‌implementation)
+          Calling constructor Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollingFlatFileTraceListener(System.String fileName, System.String header, System.String footer, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter formatter, System.Int32 rollSizeKB, System.String timeStampPattern, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollFileExistsBehavior rollFileExistsBehavior, Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollInterval rollInterval, System.Int32 maxArchivedFiles)
+ ---> System.Threading.ThreadAbortException: Thread was being aborted.
+   at Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.EnvironmentHelper.ReplaceEnvironmentVariables(String fileName)
+   at Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollingFlatFileTraceListener..ctor(String fileName, String header, String footer, ILogFormatter formatter, Int32 rollSizeKB, String timeStampPattern, RollFileExistsBehavior rollFileExistsBehavior, RollInterval rollInterval, Int32 maxArchivedFiles)
+   at BuildUp_Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollingFlatFileTraceListener(IBuilderContext )
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)
+   at BuildUp_Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.ReconfigurableTraceListenerWrapper(IBuilderContext )
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)
+   at Telerik.Microsoft.Practices.Unity.ResolvedArrayWithElementsResolverPolicy.DoResolve[T](IBuilderContext context, IDependencyResolverPolicy[] elementPolicies)
+   at BuildUp_Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogSource(IBuilderContext )
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)
+   at Telerik.Microsoft.Practices.Unity.ResolvedArrayWithElementsResolverPolicy.DoResolve[T](IBuilderContext context, IDependencyResolverPolicy[] elementPolicies)
+   at BuildUp_Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriterStructureHolder(IBuilderContext )
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)
+   at BuildUp_Telerik.Microsoft.Practices.EnterpriseLibrary.Logging.LogWriterImpl(IBuilderContext )
+   at Telerik.Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   at Telerik.Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   --- End of inner exception stack trace ---
+   at Telerik.Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   at Telerik.Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name, ResolverOverride[] resolverOverrides)
+   at Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   --- End of inner exception stack trace ---
+   at Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase.GetInstance(Type serviceType, String key)
+   at Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase.GetInstance[TService]()
+   at Telerik.Sitefinity.Abstractions.Log.get_Writer()
+   at Telerik.Sitefinity.Services.SystemManager.AddListenerToLogSources(TraceListener listener, String[] logSourceKeys)
+   at Telerik.Sitefinity.Services.SystemManager.RegisterAppStatusTraceListener()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/8/ROOT-24-132636065268687883
+ProcessId: 7300
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+Thread Name: 
+Win32 ThreadId:8924
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/8/ROOT-24-132636065268687883
+
+ProcessId: 7300
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8924
+
+Extended Properties: 
+----------------------------------------

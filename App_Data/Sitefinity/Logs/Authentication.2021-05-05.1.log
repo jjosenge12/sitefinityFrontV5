@@ -1,0 +1,31 @@
+----------------------------------------
+ActivityId: ac4d6d41-0f1d-4263-b417-dfa3a88fcc4a
+
+Timestamp: 30/04/2021 16:19:21
+
+Message: Identity Server: NoSignInCookie
+
+Category: Authentication
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132642717630770135
+
+ProcessId: 10948
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8704
+
+Extended Properties: 
+----------------------------------------

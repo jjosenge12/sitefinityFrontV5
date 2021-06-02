@@ -1,0 +1,49 @@
+----------------------------------------
+Timestamp: 11/05/2021 18:01:02
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 11/05/2021 18:01:02. End time: 11/05/2021 18:01:02. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 12/05/2021 0:00:08
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationSyncTask'. Start time: 12/05/2021 0:00:08. End time: 12/05/2021 0:00:08. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 12/05/2021 0:00:08
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Authentication.IdentityServer.Data.TransientDataCleanupTask'. Start time: 12/05/2021 0:00:08. End time: 12/05/2021 0:00:08. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/12/2021 12:00:12 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationImportTask'. Start time: 5/12/2021 12:00:12 AM. End time: 5/12/2021 12:00:12 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 12/05/2021 0:00:21
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.UsageTracking.Scheduling.UsageTrackingTask'. Start time: 12/05/2021 0:00:08. End time: 12/05/2021 0:00:21. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 12/05/2021 0:01:00
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 12/05/2021 0:01:00. End time: 12/05/2021 0:01:00. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 12/05/2021 1:00:09
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Versioning.Cleaner.VersioningCleanerTask'. Start time: 12/05/2021 1:00:09. End time: 12/05/2021 1:00:09. Task data: ''
+
+
+----------------------------------------

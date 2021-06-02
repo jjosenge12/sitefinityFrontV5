@@ -1,0 +1,242 @@
+----------------------------------------
+Timestamp: 5/17/2021 10:29:00 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 11:54:47 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 1:00:10 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 1:32:04 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 17/05/2021 14:03:16
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 17/05/2021 14:03:16. End time: 17/05/2021 14:03:16. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 2:17:21 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 2:39:51 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 3:28:10 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 4:51:16 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 17/05/2021 18:19:02
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 17/05/2021 18:19:00. End time: 17/05/2021 18:19:02. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 6:32:41 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 7:21:29 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 8:06:37 PM
+
+Message: System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.<>c__DisplayClass33_0.<WritePartialResponse>b__0()
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.IgnoringClosedConnection(Action action)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 8:10:44 PM
+
+Message: System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.<>c__DisplayClass33_0.<WritePartialResponse>b__0()
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.IgnoringClosedConnection(Action action)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 8:25:49 PM
+
+Message: System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.<>c__DisplayClass33_0.<WritePartialResponse>b__0()
+   at Telerik.Sitefinity.Modules.Libraries.Web.LibraryHttpHandler.IgnoringClosedConnection(Action action)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 9:59:01 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/17/2021 10:38:51 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 12:09:24 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationSyncTask'. Start time: 5/18/2021 12:09:24 AM. End time: 5/18/2021 12:09:24 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 12:09:24 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Authentication.IdentityServer.Data.TransientDataCleanupTask'. Start time: 5/18/2021 12:09:24 AM. End time: 5/18/2021 12:09:24 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 12:09:25 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 5/18/2021 12:09:25 AM. End time: 5/18/2021 12:09:25 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 12:09:25 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationImportTask'. Start time: 5/18/2021 12:09:25 AM. End time: 5/18/2021 12:09:25 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 12:09:36 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.UsageTracking.Scheduling.UsageTrackingTask'. Start time: 5/18/2021 12:09:24 AM. End time: 5/18/2021 12:09:36 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 12:59:38 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 1:37:28 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 3:13:26 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 3:38:37 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 5:06:31 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 5:40:58 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 6:24:41 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 8:03:12 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 8:56:39 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/18/2021 9:51:50 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------

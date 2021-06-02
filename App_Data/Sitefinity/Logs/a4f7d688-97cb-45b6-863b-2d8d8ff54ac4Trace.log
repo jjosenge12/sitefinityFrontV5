@@ -1,0 +1,217 @@
+----------------------------------------
+Timestamp: 5/23/2021 8:45:07 PM
+
+Message: System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at Telerik.Sitefinity.Web.Compilation.CompilationHelpers.LoadControl[T](String virtualPath, Boolean isCausedByUserInteraction, PageSiteNode pageSiteNode)
+   at Telerik.Sitefinity.Web.UI.ControlUtilities.LoadControl(String virtualPath, Page page)
+   at Telerik.Sitefinity.Web.UI.VirtualPathTemplate.InstantiateIn(Control container, PlaceHoldersCollection placeHolders)
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/23/2021 8:45:07 PM
+
+Message: System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at Telerik.Sitefinity.Web.Compilation.CompilationHelpers.LoadControl[T](String virtualPath, Boolean isCausedByUserInteraction, PageSiteNode pageSiteNode)
+   at Telerik.Sitefinity.Web.UI.ControlUtilities.LoadControl(String virtualPath, Page page)
+   at Telerik.Sitefinity.Web.UI.VirtualPathTemplate.InstantiateIn(Control container, PlaceHoldersCollection placeHolders)
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/23/2021 8:59:27 PM
+
+Message: System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at Telerik.Sitefinity.Web.Compilation.CompilationHelpers.LoadControl[T](String virtualPath, Boolean isCausedByUserInteraction, PageSiteNode pageSiteNode)
+   at Telerik.Sitefinity.Web.UI.ControlUtilities.LoadControl(String virtualPath, Page page)
+   at Telerik.Sitefinity.Web.UI.VirtualPathTemplate.InstantiateIn(Control container, PlaceHoldersCollection placeHolders)
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/23/2021 8:59:27 PM
+
+Message: System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at Telerik.Sitefinity.Web.Compilation.CompilationHelpers.LoadControl[T](String virtualPath, Boolean isCausedByUserInteraction, PageSiteNode pageSiteNode)
+   at Telerik.Sitefinity.Web.UI.ControlUtilities.LoadControl(String virtualPath, Page page)
+   at Telerik.Sitefinity.Web.UI.VirtualPathTemplate.InstantiateIn(Control container, PlaceHoldersCollection placeHolders)
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/23/2021 8:59:27 PM
+
+Message: System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at Telerik.Sitefinity.Web.Compilation.CompilationHelpers.LoadControl[T](String virtualPath, Boolean isCausedByUserInteraction, PageSiteNode pageSiteNode)
+   at Telerik.Sitefinity.Web.UI.ControlUtilities.LoadControl(String virtualPath, Page page)
+   at Telerik.Sitefinity.Web.UI.VirtualPathTemplate.InstantiateIn(Control container, PlaceHoldersCollection placeHolders)
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/23/2021 8:59:27 PM
+
+Message: System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at Telerik.Sitefinity.Web.Compilation.CompilationHelpers.LoadControl[T](String virtualPath, Boolean isCausedByUserInteraction, PageSiteNode pageSiteNode)
+   at Telerik.Sitefinity.Web.UI.ControlUtilities.LoadControl(String virtualPath, Page page)
+   at Telerik.Sitefinity.Web.UI.VirtualPathTemplate.InstantiateIn(Control container, PlaceHoldersCollection placeHolders)
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/23/2021 8:59:44 PM
+
+Message: System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpParseException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'. ---> System.Web.HttpException (0x80004005): Could not load type 'SitefinityWebApp.App_Data.Sitefinity.WebsiteTemplates.TFSM.CustomLayouts.grid_4_4_4'.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at Telerik.Sitefinity.Web.Compilation.CompilationHelpers.LoadControl[T](String virtualPath, Boolean isCausedByUserInteraction, PageSiteNode pageSiteNode)
+   at Telerik.Sitefinity.Web.UI.ControlUtilities.LoadControl(String virtualPath, Page page)
+   at Telerik.Sitefinity.Web.UI.VirtualPathTemplate.InstantiateIn(Control container, PlaceHoldersCollection placeHolders)
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------

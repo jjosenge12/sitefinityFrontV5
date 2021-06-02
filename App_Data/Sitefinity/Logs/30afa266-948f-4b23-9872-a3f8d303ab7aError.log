@@ -1,0 +1,341 @@
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/22/2021 11:25:24 PM
+
+Message: HandlingInstanceID: 486ed9c1-5d04-4656-8ad6-afb74bdfdd67
+An exception of type 'Telerik.OpenAccess.OpenAccessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+04/22/2021 23:25:24
+Type : Telerik.OpenAccess.OpenAccessException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : 
+Reason : Runtime
+CanRetry : True
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void Initialize(System.String, System.Collections.Specialized.NameValueCollection, System.Type)
+HResult : -2146233088
+Stack Trace :    at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_c0409f954b924f80a26e0ade87241918.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/22/2021 11:25:24 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/7/ROOT-2-132636075082745017
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Test2
+Requested URL : http://127.0.0.1/
+	Inner Exception
+	---------------
+	Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : MsSqlDriver.GetCreateDatabaseSql : Database= missing
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ParamName : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.String GetCreateDatabaseSql(System.String, System.String, System.Collections.IDictionary, Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver, System.IO.StreamWriter)
+	HResult : -2147024809
+	Stack Trace :    at OpenAccessRuntime.Relational.sql.MsSqlDriver.GetCreateDatabaseSql(String url, String databaseName, IDictionary p, DBDriver drv, StreamWriter out_Renamed)
+	   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/7/ROOT-2-132636075082745017
+
+ProcessId: 6040
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:4732
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/22/2021 11:25:34 PM
+
+Message: HandlingInstanceID: e6cf4a18-94b6-431b-ad24-27c3adecfdfb
+An exception of type 'Telerik.OpenAccess.OpenAccessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+04/22/2021 23:25:34
+Type : Telerik.OpenAccess.OpenAccessException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : 
+Reason : Runtime
+CanRetry : True
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void Initialize(System.String, System.Collections.Specialized.NameValueCollection, System.Type)
+HResult : -2146233088
+Stack Trace :    at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_c0409f954b924f80a26e0ade87241918.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/22/2021 11:25:34 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/7/ROOT-2-132636075082745017
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Test2
+Requested URL : http://127.0.0.1/
+	Inner Exception
+	---------------
+	Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : MsSqlDriver.GetCreateDatabaseSql : Database= missing
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ParamName : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.String GetCreateDatabaseSql(System.String, System.String, System.Collections.IDictionary, Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver, System.IO.StreamWriter)
+	HResult : -2147024809
+	Stack Trace :    at OpenAccessRuntime.Relational.sql.MsSqlDriver.GetCreateDatabaseSql(String url, String databaseName, IDictionary p, DBDriver drv, StreamWriter out_Renamed)
+	   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90030
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/7/ROOT-2-132636075082745017
+
+ProcessId: 6040
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:4732
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/22/2021 11:25:34 PM
+
+Message: Timestamp: 4/22/2021 11:25:34 PM
+Message: Telerik.OpenAccess.OpenAccessException: System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing ---> System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing
+   at OpenAccessRuntime.Relational.sql.MsSqlDriver.GetCreateDatabaseSql(String url, String databaseName, IDictionary p, DBDriver drv, StreamWriter out_Renamed)
+   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+   --- End of inner exception stack trace ---
+   at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_c0409f954b924f80a26e0ade87241918.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, ExceptionPolicyName policy, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.ResolveProvider(String providerName, String dataSourceName)
+   at Telerik.Sitefinity.Data.ManagerBase`1.SetProvider(String providerName, String transactionName)
+   at Telerik.Sitefinity.Data.Metadata.MetadataManager..ctor()
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/7/ROOT-2-132636075082745017
+ProcessId: 6040
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+Thread Name: 
+Win32 ThreadId:4732
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/7/ROOT-2-132636075082745017
+
+ProcessId: 6040
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:4732
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/22/2021 11:25:43 PM
+
+Message: HandlingInstanceID: 18f61145-3bef-4b33-adf2-360f858ae2f2
+An exception of type 'Telerik.OpenAccess.OpenAccessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+04/22/2021 23:25:43
+Type : Telerik.OpenAccess.OpenAccessException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : 
+Reason : Runtime
+CanRetry : True
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void Initialize(System.String, System.Collections.Specialized.NameValueCollection, System.Type)
+HResult : -2146233088
+Stack Trace :    at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_c0409f954b924f80a26e0ade87241918.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/22/2021 11:25:43 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/7/ROOT-2-132636075082745017
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Test2
+Requested URL : http://127.0.0.1/
+	Inner Exception
+	---------------
+	Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : MsSqlDriver.GetCreateDatabaseSql : Database= missing
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ParamName : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.String GetCreateDatabaseSql(System.String, System.String, System.Collections.IDictionary, Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver, System.IO.StreamWriter)
+	HResult : -2147024809
+	Stack Trace :    at OpenAccessRuntime.Relational.sql.MsSqlDriver.GetCreateDatabaseSql(String url, String databaseName, IDictionary p, DBDriver drv, StreamWriter out_Renamed)
+	   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90030
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/7/ROOT-2-132636075082745017
+
+ProcessId: 6040
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5848
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/22/2021 11:25:53 PM
+
+Message: HandlingInstanceID: 9f6542e2-18a5-4d68-bc40-e27b0b166884
+An exception of type 'Telerik.OpenAccess.OpenAccessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+04/22/2021 23:25:53
+Type : Telerik.OpenAccess.OpenAccessException, Telerik.OpenAccess, Version=2020.0.428.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342
+Message : System.ArgumentException: MsSqlDriver.GetCreateDatabaseSql : Database= missing
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+InnerExceptions : System.Exception[]
+FailedObject : 
+BackendError : 
+Reason : Runtime
+CanRetry : True
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void Initialize(System.String, System.Collections.Specialized.NameValueCollection, System.Type)
+HResult : -2146233088
+Stack Trace :    at DynamicModule.ns.Wrapped_OpenAccessMetaDataProvider_c0409f954b924f80a26e0ade87241918.Initialize(String providerName, NameValueCollection config, Type managerType)
+   at Telerik.Sitefinity.Data.ManagerBase`1.InstantiateProvider(IDataProviderSettings providerSettings, Type providerType, ExceptionPolicyName policy, Type managerType)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 4/22/2021 11:25:53 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7600.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/7/ROOT-2-132636075082745017
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Test2
+Requested URL : http://127.0.0.1/
+	Inner Exception
+	---------------
+	Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : MsSqlDriver.GetCreateDatabaseSql : Database= missing
+	Source : Telerik.OpenAccess.Runtime
+	Help link : 
+	ParamName : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.String GetCreateDatabaseSql(System.String, System.String, System.Collections.IDictionary, Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver, System.IO.StreamWriter)
+	HResult : -2147024809
+	Stack Trace :    at OpenAccessRuntime.Relational.sql.MsSqlDriver.GetCreateDatabaseSql(String url, String databaseName, IDictionary p, DBDriver drv, StreamWriter out_Renamed)
+	   at OpenAccessRuntime.DataObjects.tools.ant.DatabaseCreationTask.createDatabase()
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90030
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/7/ROOT-2-132636075082745017
+
+ProcessId: 6040
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5848
+
+Extended Properties: 
+----------------------------------------

@@ -1,0 +1,188 @@
+----------------------------------------
+Timestamp: 5/19/2021 11:06:24 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 11:38:27 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 12:29:48 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 5/19/2021 12:29:48 PM. End time: 5/19/2021 12:29:48 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 1:53:01 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 3:30:01 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 4:13:41 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 4:58:03 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 5:40:03 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 6:48:31 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 7:54:52 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/19/2021 8:26:48 PM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 19/05/2021 20:29:30
+
+Message: Operation: 'ApplicationRestart'. Parameters: 'flags:Default;sendRestartApplicationSystemMessage:True'. Reason: 'LicenseUpdate'. User: 'Anonymous'. StackTrace: '
+Telerik.Sitefinity.Services.SystemManager: Boolean RestartApplication(Telerik.Sitefinity.Services.OperationReason, Telerik.Sitefinity.Services.SystemRestartFlags, Boolean)
+Telerik.Sitefinity.Licensing.LicenseState: Void InvalidateLicense(Boolean)
+Telerik.Sitefinity.Licensing.Web.UI.LicenseRegistration: Void SaveLicense()
+System.Web.UI.WebControls.LinkButton: Void OnClick(System.EventArgs)
+System.Web.UI.WebControls.LinkButton: Void RaisePostBackEvent(System.String)
+System.Web.UI.Page: Void ProcessRequestMain(Boolean, Boolean)
+System.Web.UI.Page: Void ProcessRequest(Boolean, Boolean)
+System.Web.UI.Page: Void ProcessRequest()
+System.Web.UI.Page: Void ProcessRequest(System.Web.HttpContext)
+System.Web.HttpApplication+CallHandlerExecutionStep: Void System.Web.HttpApplication.IExecutionStep.Execute()
+System.Web.HttpApplication: Void ExecuteStepImpl(IExecutionStep)
+System.Web.HttpApplication: System.Exception ExecuteStep(IExecutionStep, Boolean ByRef)
+System.Web.HttpApplication+PipelineStepManager: Void ResumeSteps(System.Exception)
+System.Web.HttpApplication: System.IAsyncResult BeginProcessRequestNotification(System.Web.HttpContext, System.AsyncCallback)
+System.Web.HttpRuntime: System.Web.RequestNotificationStatus ProcessRequestNotificationPrivate(System.Web.Hosting.IIS7WorkerRequest, System.Web.HttpContext)
+System.Web.Hosting.PipelineRuntime: Int32 ProcessRequestNotificationHelper(IntPtr, IntPtr, IntPtr, Int32)
+System.Web.Hosting.PipelineRuntime: Int32 ProcessRequestNotification(IntPtr, IntPtr, IntPtr, Int32)'.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 19/05/2021 20:29:39
+
+Message: Operation: 'ApplicationRestart'. Parameters: 'flags:Default;sendRestartApplicationSystemMessage:True'. Reason: 'LicenseUpdate'. User: 'Anonymous'. StackTrace: '
+Telerik.Sitefinity.Services.SystemManager: Boolean RestartApplication(Telerik.Sitefinity.Services.OperationReason, Telerik.Sitefinity.Services.SystemRestartFlags, Boolean)
+Telerik.Sitefinity.Licensing.LicenseState: Void InvalidateLicense(Boolean)
+Telerik.Sitefinity.Licensing.Web.UI.LicenseRegistration: Void SaveLicense()
+System.Web.UI.WebControls.LinkButton: Void OnClick(System.EventArgs)
+System.Web.UI.WebControls.LinkButton: Void RaisePostBackEvent(System.String)
+System.Web.UI.Page: Void ProcessRequestMain(Boolean, Boolean)
+System.Web.UI.Page: Void ProcessRequest(Boolean, Boolean)
+System.Web.UI.Page: Void ProcessRequest()
+System.Web.UI.Page: Void ProcessRequest(System.Web.HttpContext)
+System.Web.HttpApplication+CallHandlerExecutionStep: Void System.Web.HttpApplication.IExecutionStep.Execute()
+System.Web.HttpApplication: Void ExecuteStepImpl(IExecutionStep)
+System.Web.HttpApplication: System.Exception ExecuteStep(IExecutionStep, Boolean ByRef)
+System.Web.HttpApplication+PipelineStepManager: Void ResumeSteps(System.Exception)
+System.Web.HttpApplication: System.IAsyncResult BeginProcessRequestNotification(System.Web.HttpContext, System.AsyncCallback)
+System.Web.HttpRuntime: System.Web.RequestNotificationStatus ProcessRequestNotificationPrivate(System.Web.Hosting.IIS7WorkerRequest, System.Web.HttpContext)
+System.Web.Hosting.PipelineRuntime: Int32 ProcessRequestNotificationHelper(IntPtr, IntPtr, IntPtr, Int32)
+System.Web.Hosting.PipelineRuntime: Int32 ProcessRequestNotification(IntPtr, IntPtr, IntPtr, Int32)'.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 19/05/2021 20:34:47
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/20/2021 12:36:06 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/20/2021 2:02:35 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/20/2021 3:17:22 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/20/2021 4:17:58 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/20/2021 5:40:59 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/20/2021 6:05:13 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/20/2021 8:31:09 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/20/2021 9:55:05 AM
+
+Message: The domain name Default configured to serve your website content was not found in your current license file. Refer to tfs-sitefinity.virtualdreams.io for troubleshooting advice.
+
+
+----------------------------------------

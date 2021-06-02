@@ -1,0 +1,496 @@
+----------------------------------------
+ActivityId: fe08256d-5836-4c96-9de4-41080c27debe
+
+Timestamp: 5/6/2021 4:12:07 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647474886682250
+
+ProcessId: 6816
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:2924
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 15936afa-8b11-4f85-82b9-728ebefcf2cd
+
+Timestamp: 5/6/2021 5:36:37 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647524033860470
+
+ProcessId: 1200
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5144
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 2314ca65-b9d1-4774-940d-f3049911d855
+
+Timestamp: 5/6/2021 6:07:42 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647546163152340
+
+ProcessId: 4796
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:4292
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 87d79e56-7c8c-4613-a0b2-08d84c0e95a3
+
+Timestamp: 5/6/2021 6:57:34 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647568916745918
+
+ProcessId: 9164
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:1564
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 0bd98250-ff67-4af1-a29e-0e8bf8825345
+
+Timestamp: 5/6/2021 8:33:53 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647629400715783
+
+ProcessId: 7840
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:2800
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 24909066-26a8-4f75-92d8-e000eeb71438
+
+Timestamp: 5/6/2021 10:09:09 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647686799428011
+
+ProcessId: 4732
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3024
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 2f3be591-1af3-438d-b70b-77237c3f01d3
+
+Timestamp: 5/6/2021 10:52:17 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647708368912180
+
+ProcessId: 9304
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8648
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 7015cfbb-ed33-4b36-a782-208e7cc02570
+
+Timestamp: 06/05/2021 12:26:44
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647768964156405
+
+ProcessId: 1976
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:10776
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 1b8e6041-18e5-477a-9af1-45cf664831ae
+
+Timestamp: 5/6/2021 1:35:26 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647807210600533
+
+ProcessId: 8292
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:1880
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 15354f35-aeae-479d-a7be-ea484528881b
+
+Timestamp: 06/05/2021 14:04:00
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647834076469728
+
+ProcessId: 1212
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:2800
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 966ac393-d2a1-40f9-a923-a046bbd9b953
+
+Timestamp: 5/6/2021 3:10:01 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647869660171658
+
+ProcessId: 11124
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:2924
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: bf9a9aed-2eca-4ce4-b231-c137ac1f3e7a
+
+Timestamp: 5/6/2021 5:48:59 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132647967047758506
+
+ProcessId: 10632
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:4692
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: b57e0038-6916-48d4-a152-936cc59d6dc3
+
+Timestamp: 06/05/2021 19:52:05
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132648042849313555
+
+ProcessId: 10744
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5052
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: d34e79ed-11b5-4f56-88f7-542a2bed8de2
+
+Timestamp: 06/05/2021 23:03:26
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132648157703912244
+
+ProcessId: 10748
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:2800
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: e58b80c1-5681-4682-8b15-97be2c71a1ea
+
+Timestamp: 5/7/2021 12:50:18 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132648209912783408
+
+ProcessId: 6820
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:10232
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: de4d9ed2-3c6f-45df-a659-034ace7688df
+
+Timestamp: 5/7/2021 4:05:13 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132648338622966262
+
+ProcessId: 3632
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:10532
+
+Extended Properties: 
+----------------------------------------

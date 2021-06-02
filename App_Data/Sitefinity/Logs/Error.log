@@ -1,0 +1,3004 @@
+----------------------------------------
+ActivityId: 18296107-6309-4d25-81db-97e3c5684aec
+
+Timestamp: 6/1/2021 12:28:35 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132669800131508060
+
+ProcessId: 7056
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6476
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/1/2021 12:39:44 AM
+
+Message: HandlingInstanceID: f450947f-8f74-4247-a952-b0eb10ed9c21
+An exception of type 'System.Web.HttpRequestValidationException' occurred and was caught.
+-----------------------------------------------------------------------------------------
+06/01/2021 00:39:44
+Type : System.Web.HttpRequestValidationException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.RawUrl value was detected from the client (="...h&content=<php>die(@md5(HelloT...").
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateString(System.String, System.String, System.Web.Util.RequestValidationSource)
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_RawUrl()
+   at Telerik.Sitefinity.Security.Claims.CustomRequestValidator.IsValidRequestString(HttpContext context, String value, RequestValidationSource requestValidationSource, String collectionKey, Int32& validationFailureIndex)
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Path()
+   at System.Web.HttpRequest.BuildUrl(Func`1 pathAccessor)
+   at System.Web.HttpRequest.get_Url()
+   at Telerik.Sitefinity.Services.RequestStartEvent.GetOperationKey(HttpContextBase context)
+   at Telerik.Sitefinity.Services.RequestStartEvent..ctor(HttpContextBase context)
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.context_BeginRequest(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 12:39:44 AM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132669800131508060
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : http://130.211.122.213/?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132669800131508060
+
+ProcessId: 7056
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7680
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 12528163-3af0-49e1-a5e4-b3e6fc1883b4
+
+Timestamp: 6/1/2021 4:09:24 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132669930308259044
+
+ProcessId: 9188
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3008
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 57993372-ea9f-44ea-882b-b8a0d67929dd
+
+Timestamp: 6/1/2021 5:54:05 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670003170241962
+
+ProcessId: 1300
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8576
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 9857cad4-a3af-4eaf-9ac0-2850f2147640
+
+Timestamp: 6/1/2021 9:52:35 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670147032327043
+
+ProcessId: 1632
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7148
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: ecdd62c3-75b8-442c-b4df-2a37d4053fb8
+
+Timestamp: 6/1/2021 1:19:14 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670267986405534
+
+ProcessId: 7700
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6652
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 7264d77c-d24e-4ea8-837b-155ec3779107
+
+Timestamp: 1/6/2021 14:35:19
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5124
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: c872b988-6f11-463e-a57d-69bd9ffcd686
+
+Timestamp: 6/1/2021 2:35:29 PM
+
+Message: HandlingInstanceID: 27b0c650-8638-400b-a745-01351a799d10
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/01/2021 14:35:29
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception has been thrown by the target of an invocation.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.CallHandleUnknownAction(String actionName)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.Execute()
+   at Telerik.Sitefinity.Mvc.ControllerActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Routing.FeatherActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 2:35:29 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : Anonymous
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/nuestros-planes/bdce3056-b1de-484b-9913-ce19d601e0cb
+	Inner Exception
+	---------------
+	Type : System.InvalidOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : The view 'bdce3056-b1de-484b-9913-ce19d601e0cb' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+	Source : System.Web.Mvc
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+	HResult : -2146233079
+	Stack Trace :    at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+	   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+	   at SitefinityWebApp.Mvc.Controllers.BannerController.HandleUnknownAction(String actionName) in G:\Tomas\Proyectos\Default2\MVC\Controllers\BannerController.cs:line 65
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8264
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: a9ce1484-fa63-4a9b-9834-277e6b31d4b6
+
+Timestamp: 6/1/2021 2:35:29 PM
+
+Message: HandlingInstanceID: 439fb058-f1ef-494d-b3e7-f4f9696c59df
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/01/2021 14:35:29
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception has been thrown by the target of an invocation.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.CallHandleUnknownAction(String actionName)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.Execute()
+   at Telerik.Sitefinity.Mvc.ControllerActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Routing.FeatherActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 2:35:29 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : Anonymous
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/nuestros-planes/48356baa-ce0b-442d-aacd-134b81bd293f
+	Inner Exception
+	---------------
+	Type : System.InvalidOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : The view '48356baa-ce0b-442d-aacd-134b81bd293f' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+	Source : System.Web.Mvc
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+	HResult : -2146233079
+	Stack Trace :    at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+	   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+	   at SitefinityWebApp.Mvc.Controllers.BannerController.HandleUnknownAction(String actionName) in G:\Tomas\Proyectos\Default2\MVC\Controllers\BannerController.cs:line 65
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7308
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: a9ce1484-fa63-4a9b-9834-277e6b31d4b6
+
+Timestamp: 6/1/2021 2:35:30 PM
+
+Message: HandlingInstanceID: 18c7be7c-fb3f-4043-9a7c-9d28493af088
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/01/2021 14:35:30
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception has been thrown by the target of an invocation.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.CallHandleUnknownAction(String actionName)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.Execute()
+   at Telerik.Sitefinity.Mvc.ControllerActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Routing.FeatherActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 2:35:30 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : Anonymous
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/nuestros-planes/48356baa-ce0b-442d-aacd-134b81bd293f
+	Inner Exception
+	---------------
+	Type : System.InvalidOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : The view '48356baa-ce0b-442d-aacd-134b81bd293f' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+	Source : System.Web.Mvc
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+	HResult : -2146233079
+	Stack Trace :    at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+	   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+	   at SitefinityWebApp.Mvc.Controllers.BannerController.HandleUnknownAction(String actionName) in G:\Tomas\Proyectos\Default2\MVC\Controllers\BannerController.cs:line 65
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7308
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: c872b988-6f11-463e-a57d-69bd9ffcd686
+
+Timestamp: 6/1/2021 2:35:30 PM
+
+Message: HandlingInstanceID: f75dd96d-9f21-46a8-8589-42ea008be1a5
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/01/2021 14:35:30
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception has been thrown by the target of an invocation.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.CallHandleUnknownAction(String actionName)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.Execute()
+   at Telerik.Sitefinity.Mvc.ControllerActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Routing.FeatherActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 2:35:30 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : Anonymous
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/nuestros-planes/bdce3056-b1de-484b-9913-ce19d601e0cb
+	Inner Exception
+	---------------
+	Type : System.InvalidOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : The view 'bdce3056-b1de-484b-9913-ce19d601e0cb' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+	Source : System.Web.Mvc
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+	HResult : -2146233079
+	Stack Trace :    at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+	   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+	   at SitefinityWebApp.Mvc.Controllers.BannerController.HandleUnknownAction(String actionName) in G:\Tomas\Proyectos\Default2\MVC\Controllers\BannerController.cs:line 65
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8264
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: c872b988-6f11-463e-a57d-69bd9ffcd686
+
+Timestamp: 6/1/2021 2:35:30 PM
+
+Message: HandlingInstanceID: 8a20783a-2da2-429b-8b71-d26d3c0ced86
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/01/2021 14:35:30
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception has been thrown by the target of an invocation.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.CallHandleUnknownAction(String actionName)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.Execute()
+   at Telerik.Sitefinity.Mvc.ControllerActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Routing.FeatherActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 2:35:30 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : Anonymous
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/nuestros-planes/bdce3056-b1de-484b-9913-ce19d601e0cb
+	Inner Exception
+	---------------
+	Type : System.InvalidOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : The view 'bdce3056-b1de-484b-9913-ce19d601e0cb' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.cshtml
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.ascx
+~/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/bdce3056-b1de-484b-9913-ce19d601e0cb.vbhtml
+	Source : System.Web.Mvc
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+	HResult : -2146233079
+	Stack Trace :    at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+	   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+	   at SitefinityWebApp.Mvc.Controllers.BannerController.HandleUnknownAction(String actionName) in G:\Tomas\Proyectos\Default2\MVC\Controllers\BannerController.cs:line 65
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8264
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: a9ce1484-fa63-4a9b-9834-277e6b31d4b6
+
+Timestamp: 6/1/2021 2:35:30 PM
+
+Message: HandlingInstanceID: f3720a47-860e-4d97-b923-f8d66d187994
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/01/2021 14:35:30
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception has been thrown by the target of an invocation.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.CallHandleUnknownAction(String actionName)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.Execute()
+   at Telerik.Sitefinity.Mvc.ControllerActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Routing.FeatherActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 2:35:30 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : Anonymous
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/nuestros-planes/48356baa-ce0b-442d-aacd-134b81bd293f
+	Inner Exception
+	---------------
+	Type : System.InvalidOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : The view '48356baa-ce0b-442d-aacd-134b81bd293f' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.cshtml
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.ascx
+~/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/48356baa-ce0b-442d-aacd-134b81bd293f.vbhtml
+	Source : System.Web.Mvc
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+	HResult : -2146233079
+	Stack Trace :    at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+	   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+	   at SitefinityWebApp.Mvc.Controllers.BannerController.HandleUnknownAction(String actionName) in G:\Tomas\Proyectos\Default2\MVC\Controllers\BannerController.cs:line 65
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7308
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 15a7f2c1-e89d-420c-a042-59f725fec748
+
+Timestamp: 6/1/2021 2:35:31 PM
+
+Message: HandlingInstanceID: c3594812-d1f6-4367-8d61-ba25c05ff992
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/01/2021 14:35:31
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception has been thrown by the target of an invocation.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.CallHandleUnknownAction(String actionName)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.Execute()
+   at Telerik.Sitefinity.Mvc.ControllerActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Routing.FeatherActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 2:35:31 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : Anonymous
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/nuestros-planes/f3917a32-18bd-4bb6-a275-82435609fc6a
+	Inner Exception
+	---------------
+	Type : System.InvalidOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : The view 'f3917a32-18bd-4bb6-a275-82435609fc6a' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+	Source : System.Web.Mvc
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+	HResult : -2146233079
+	Stack Trace :    at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+	   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+	   at SitefinityWebApp.Mvc.Controllers.BannerController.HandleUnknownAction(String actionName) in G:\Tomas\Proyectos\Default2\MVC\Controllers\BannerController.cs:line 65
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5412
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 15a7f2c1-e89d-420c-a042-59f725fec748
+
+Timestamp: 6/1/2021 2:35:31 PM
+
+Message: HandlingInstanceID: f0a3f8e1-e23d-4064-a876-693c000b4483
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/01/2021 14:35:31
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception has been thrown by the target of an invocation.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.CallHandleUnknownAction(String actionName)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.Execute()
+   at Telerik.Sitefinity.Mvc.ControllerActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Routing.FeatherActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 2:35:31 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : Anonymous
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/nuestros-planes/f3917a32-18bd-4bb6-a275-82435609fc6a
+	Inner Exception
+	---------------
+	Type : System.InvalidOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : The view 'f3917a32-18bd-4bb6-a275-82435609fc6a' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+	Source : System.Web.Mvc
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+	HResult : -2146233079
+	Stack Trace :    at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+	   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+	   at SitefinityWebApp.Mvc.Controllers.BannerController.HandleUnknownAction(String actionName) in G:\Tomas\Proyectos\Default2\MVC\Controllers\BannerController.cs:line 65
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5412
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 15a7f2c1-e89d-420c-a042-59f725fec748
+
+Timestamp: 6/1/2021 2:35:31 PM
+
+Message: HandlingInstanceID: 82d2efd6-b60e-4ba7-98fd-c0235aede151
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/01/2021 14:35:31
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception has been thrown by the target of an invocation.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.CallHandleUnknownAction(String actionName)
+   at Telerik.Sitefinity.Mvc.ControllerWrapper.Execute()
+   at Telerik.Sitefinity.Mvc.ControllerActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Routing.FeatherActionInvoker.ExecuteController(MvcProxyBase proxyControl)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 2:35:31 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : Anonymous
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/nuestros-planes/f3917a32-18bd-4bb6-a275-82435609fc6a
+	Inner Exception
+	---------------
+	Type : System.InvalidOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : The view 'f3917a32-18bd-4bb6-a275-82435609fc6a' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.cshtml
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.aspx
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.ascx
+~/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/SitefinityWebApp/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Banner/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+~/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Views/Shared/f3917a32-18bd-4bb6-a275-82435609fc6a.vbhtml
+	Source : System.Web.Mvc
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+	HResult : -2146233079
+	Stack Trace :    at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+	   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+	   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+	   at SitefinityWebApp.Mvc.Controllers.BannerController.HandleUnknownAction(String actionName) in G:\Tomas\Proyectos\Default2\MVC\Controllers\BannerController.cs:line 65
+
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5412
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 1/6/2021 14:40:42
+
+Message: HandlingInstanceID: 5b1ab09d-634b-4768-8b4d-1d87f3d0dd11
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 14:40:42
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 1/6/2021 14:40:42
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/legales/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:1476
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 1/6/2021 14:40:42
+
+Message: HandlingInstanceID: 7d5b1087-60d6-4b78-b784-b2a190df21dc
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 14:40:42
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 1/6/2021 14:40:42
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/legales/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:408
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 1/6/2021 14:40:42
+
+Message: HandlingInstanceID: 26136dd3-32af-4ccd-84c9-432aec57a2cb
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 14:40:42
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 1/6/2021 14:40:42
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670316890438227
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/legales/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670316890438227
+
+ProcessId: 6540
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5072
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: e3cdde95-e5dc-4ba3-b248-081059b637ff
+
+Timestamp: 01/06/2021 17:07:57
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:408
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 17:10:15
+
+Message: HandlingInstanceID: 009eb5c0-4a61-4977-b7e5-7bfd8994665e
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 17:10:15
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 01/06/2021 17:10:15
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/legales/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9224
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 17:10:15
+
+Message: HandlingInstanceID: 6e212346-f380-4062-9f3c-bb2ede6d1c89
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 17:10:15
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 01/06/2021 17:10:15
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/legales/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9224
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 17:10:15
+
+Message: HandlingInstanceID: b3518e40-a8c4-41d1-acf1-33795f9064cf
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 17:10:15
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 01/06/2021 17:10:15
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/legales/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9224
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 17:11:15
+
+Message: HandlingInstanceID: 19af8539-d716-42f9-8ed5-8ccc709d480e
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 17:11:15
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 01/06/2021 17:11:15
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/adminapp/pages/legales/informacion-corporativa/Action/Edit/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7532
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 17:11:15
+
+Message: HandlingInstanceID: df89a793-27df-4999-8629-5faeb9780a31
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 17:11:15
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 01/06/2021 17:11:15
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/adminapp/pages/legales/informacion-corporativa/Action/Edit/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7532
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 17:11:15
+
+Message: HandlingInstanceID: 9890bd31-8e9d-4d85-a08e-e9902ad3d67f
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 17:11:15
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 01/06/2021 17:11:15
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/adminapp/pages/legales/informacion-corporativa/Action/Edit/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7532
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 17:16:26
+
+Message: HandlingInstanceID: 8dcfb8f7-8348-45f9-aa15-3786c3419c8f
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 17:16:26
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 01/06/2021 17:16:26
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/adminapp/pages/legales/informacion-corporativa/Action/Edit/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3056
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 17:16:26
+
+Message: HandlingInstanceID: 5f8c9679-11d5-4605-b45f-d7d7fcb37cc8
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 17:16:26
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 01/06/2021 17:16:26
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/adminapp/pages/legales/informacion-corporativa/Action/Edit/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9876
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 17:16:26
+
+Message: HandlingInstanceID: fce83a7c-e4a7-44e2-a0cc-bbfac5b57f2d
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/01/2021 17:16:26
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 01/06/2021 17:16:26
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/adminapp/pages/legales/informacion-corporativa/Action/Edit/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:1088
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/1/2021 5:20:02 PM
+
+Message: HandlingInstanceID: 4a968fad-8e83-47b9-96fb-5c56b70300be
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+06/01/2021 17:20:02
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Telerik.Sitefinity
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Boolean CanAdaptComponent(Telerik.Sitefinity.Pages.Model.ControlData)
+HResult : -2147467261
+Stack Trace :    at Telerik.Sitefinity.Modules.GenericContent.Web.Services.ContentBlockControllerAdaptor.CanAdaptComponent(ControlData component)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Telerik.Sitefinity.Modules.Pages.Web.Services.ZoneEditorService.UpdateState(ZoneEditorWebServiceArgs state, Boolean isLayoutControl)
+   at SyncInvokeUpdateControlState(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 5:20:02 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-1-132670408466504808
+ThreadIdentity : tomas.vera@virtualdreams.io
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/Sitefinity/Services/Pages/ZoneEditorService.svc/Control/
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132670408466504808
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8296
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 56f00ae2-1bb1-4a73-90d5-afc3d1797b86
+
+Timestamp: 01/06/2021 17:22:07
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-2-132670416933946880
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9668
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: db17a4c8-19d5-4272-9473-42df32446256
+
+Timestamp: 6/1/2021 5:26:05 PM
+
+Message: HandlingInstanceID: ae5aa764-1b56-4bfc-a5ae-7852914ac1f7
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+06/01/2021 17:26:05
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Telerik.Sitefinity
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Boolean CanAdaptComponent(Telerik.Sitefinity.Pages.Model.ControlData)
+HResult : -2147467261
+Stack Trace :    at Telerik.Sitefinity.Modules.GenericContent.Web.Services.ContentBlockControllerAdaptor.CanAdaptComponent(ControlData component)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.CreateControlWrapperDock(ControlData controlData, Boolean isOrphaned)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.AddControlToContainer(ControlData controlData, Control container, Boolean addLast, Boolean isOrphaned)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.AddControlDocksToZone(String placeHolderId, Control zone)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.ProcessPlaceholders()
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 5:26:05 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-2-132670416933946880
+ThreadIdentity : tomas.vera@virtualdreams.io
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/legales/informacion-corporativa/Action/Edit/en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-2-132670416933946880
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8600
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 6f9305ab-7345-4337-8620-8f5b00bc0217
+
+Timestamp: 6/1/2021 5:27:01 PM
+
+Message: HandlingInstanceID: f129c854-d3a5-46e6-ba2d-9f9b72ce6f20
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+06/01/2021 17:27:01
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Telerik.Sitefinity
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Boolean CanAdaptComponent(Telerik.Sitefinity.Pages.Model.ControlData)
+HResult : -2147467261
+Stack Trace :    at Telerik.Sitefinity.Modules.GenericContent.Web.Services.ContentBlockControllerAdaptor.CanAdaptComponent(ControlData component)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.CreateControlWrapperDock(ControlData controlData, Boolean isOrphaned)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.AddControlToContainer(ControlData controlData, Control container, Boolean addLast, Boolean isOrphaned)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.AddControlDocksToZone(String placeHolderId, Control zone)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.ProcessPlaceholders()
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : INSTANCE-TFS-SI
+TimeStamp : 6/1/2021 5:27:01 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/5/ROOT-2-132670416933946880
+ThreadIdentity : tomas.vera@virtualdreams.io
+WindowsIdentity : IIS APPPOOL\Sitefinity-Dev3
+Requested URL : https://tfs-sitefinity.virtualdreams.io/legales/informacion-corporativa/Action/Edit/en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-2-132670416933946880
+
+ProcessId: 4784
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6636
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 7844265a-76c0-4a1f-ab1b-57b9e10bef45
+
+Timestamp: 01/06/2021 20:32:15
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670530924765392
+
+ProcessId: 30412
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:19072
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 9c301e79-a206-4fdc-96e5-c1ea16a20e7c
+
+Timestamp: 6/1/2021 8:33:59 PM
+
+Message: HandlingInstanceID: 6b36fa54-5646-4036-8227-ec19ffd86264
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+06/01/2021 17:33:59
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Telerik.Sitefinity
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Boolean CanAdaptComponent(Telerik.Sitefinity.Pages.Model.ControlData)
+HResult : -2147467261
+Stack Trace :    at Telerik.Sitefinity.Modules.GenericContent.Web.Services.ContentBlockControllerAdaptor.CanAdaptComponent(ControlData component)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.<>c__DisplayClass3_0.<SupportsAdminAppEditor>b__0(IPropertiesAdaptor x)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.SupportsAdminAppEditor(ControlData controlData)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.OpenNewWidgetEditor(ControlData control)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.CreateControlWrapperDock(ControlData controlData, Boolean isOrphaned)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.AddControlToContainer(ControlData controlData, Control container, Boolean addLast, Boolean isOrphaned)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.AddControlDocksToZone(String placeHolderId, Control zone)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.ProcessPlaceholder(Control placeholder)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.ProcessPlaceholders()
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : DESKTOP-UP3FQ7N
+TimeStamp : 6/1/2021 8:33:59 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-132670530924765392
+ThreadIdentity : tomas.vera@virtualdreams.io
+WindowsIdentity : DESKTOP-UP3FQ7N\Tomas Vera
+Requested URL : http://localhost:60876/legales/informacion-corporativa/Action/Edit/en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670530924765392
+
+ProcessId: 30412
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:21696
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 7ac1b849-3c05-4bda-ba7a-b6e5748a2ad5
+
+Timestamp: 6/1/2021 8:48:44 PM
+
+Message: HandlingInstanceID: 1fce6358-5446-471c-bd05-4039defea5a1
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+06/01/2021 17:48:44
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Telerik.Sitefinity
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Boolean CanAdaptComponent(Telerik.Sitefinity.Pages.Model.ControlData)
+HResult : -2147467261
+Stack Trace :    at Telerik.Sitefinity.Modules.GenericContent.Web.Services.ContentBlockControllerAdaptor.CanAdaptComponent(ControlData component)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.<>c__DisplayClass3_0.<SupportsAdminAppEditor>b__0(IPropertiesAdaptor x)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.SupportsAdminAppEditor(ControlData controlData)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.OpenNewWidgetEditor(ControlData control)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.CreateControlWrapperDock(ControlData controlData, Boolean isOrphaned)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.AddControlToContainer(ControlData controlData, Control container, Boolean addLast, Boolean isOrphaned)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.AddControlDocksToZone(String placeHolderId, Control zone)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.ProcessPlaceholder(Control placeholder)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.ProcessPlaceholders()
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : DESKTOP-UP3FQ7N
+TimeStamp : 6/1/2021 8:48:44 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-132670530924765392
+ThreadIdentity : tomas.vera@virtualdreams.io
+WindowsIdentity : DESKTOP-UP3FQ7N\Tomas Vera
+Requested URL : http://localhost:60876/legales/informacion-corporativa/Action/Edit/en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670530924765392
+
+ProcessId: 30412
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:37616
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/1/2021 8:49:59 PM
+
+Message: HandlingInstanceID: 6f1d0014-554e-4039-a8da-e7e2d8148e98
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+06/01/2021 17:49:59
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Telerik.Sitefinity
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Boolean CanAdaptComponent(Telerik.Sitefinity.Pages.Model.ControlData)
+HResult : -2147467261
+Stack Trace :    at Telerik.Sitefinity.Modules.GenericContent.Web.Services.ContentBlockControllerAdaptor.CanAdaptComponent(ControlData component)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.<>c__DisplayClass3_0.<SupportsAdminAppEditor>b__0(IPropertiesAdaptor x)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.SupportsAdminAppEditor(ControlData controlData)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.OpenNewWidgetEditor(ControlData control)
+   at Telerik.Sitefinity.Modules.Pages.Web.Services.ZoneEditorService.UpdateState(ZoneEditorWebServiceArgs state, Boolean isLayoutControl)
+   at Telerik.Sitefinity.Modules.Pages.Web.Services.ZoneEditorService.UpdateControlState(ZoneEditorWebServiceArgs state)
+   at SyncInvokeUpdateControlState(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+
+Additional Info:
+
+MachineName : DESKTOP-UP3FQ7N
+TimeStamp : 6/1/2021 8:49:59 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-132670530924765392
+ThreadIdentity : tomas.vera@virtualdreams.io
+WindowsIdentity : DESKTOP-UP3FQ7N\Tomas Vera
+Requested URL : http://localhost:60876/Sitefinity/Services/Pages/ZoneEditorService.svc/Control/?package=Bootstrap4
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670530924765392
+
+ProcessId: 30412
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:10596
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 1af5e0ae-fecf-455e-8868-2eee231a8971
+
+Timestamp: 01/06/2021 20:58:26
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670546778106514
+
+ProcessId: 31688
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:18208
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/1/2021 8:59:33 PM
+
+Message: HandlingInstanceID: 0d1228da-3fa9-4be1-9fd1-d8f6b7dc520c
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+06/01/2021 17:59:33
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Telerik.Sitefinity
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Boolean CanAdaptComponent(Telerik.Sitefinity.Pages.Model.ControlData)
+HResult : -2147467261
+Stack Trace :    at Telerik.Sitefinity.Modules.GenericContent.Web.Services.ContentBlockControllerAdaptor.CanAdaptComponent(ControlData component)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.<>c__DisplayClass3_0.<SupportsAdminAppEditor>b__0(IPropertiesAdaptor x)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.SupportsAdminAppEditor(ControlData controlData)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.OpenNewWidgetEditor(ControlData control)
+   at Telerik.Sitefinity.Modules.Pages.Web.Services.ZoneEditorService.UpdateState(ZoneEditorWebServiceArgs state, Boolean isLayoutControl)
+   at Telerik.Sitefinity.Modules.Pages.Web.Services.ZoneEditorService.UpdateControlState(ZoneEditorWebServiceArgs state)
+   at SyncInvokeUpdateControlState(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+
+Additional Info:
+
+MachineName : DESKTOP-UP3FQ7N
+TimeStamp : 6/1/2021 8:59:33 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-132670546778106514
+ThreadIdentity : tomas.vera@virtualdreams.io
+WindowsIdentity : DESKTOP-UP3FQ7N\Tomas Vera
+Requested URL : http://localhost:60876/Sitefinity/Services/Pages/ZoneEditorService.svc/Control/?package=Bootstrap4
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670546778106514
+
+ProcessId: 31688
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:40928
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: f10e1944-6a05-4e1f-bd2e-03abd38e234b
+
+Timestamp: 01/06/2021 21:02:02
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670548906144298
+
+ProcessId: 38420
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:34632
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 01/06/2021 21:02:03
+
+Message: HandlingInstanceID: 71464d5d-6ac9-4b15-9090-2e8663f0ec53
+An exception of type 'Telerik.Sitefinity.SitefinityExceptions.ItemNotFoundException' occurred and was caught.
+-------------------------------------------------------------------------------------------------------------
+06/01/2021 18:02:03
+Type : Telerik.Sitefinity.SitefinityExceptions.ItemNotFoundException, Telerik.Sitefinity, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+Message : You are trying to access ScheduledTaskData item with id 5d1d361d-58e7-4714-80f2-c1ebb501c0c9 that no longer exists. The most probable reason is that it has been deleted by another user.
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Telerik.Sitefinity.Scheduling.Model.ScheduledTaskData GetTaskData(System.Guid)
+HResult : -2146233088
+Stack Trace :    en DynamicModule.ns.Wrapped_OpenAccessSchedulingProvider_a11601b5f69c4eb2b4320ae6b51783ca.GetTaskData(Guid id)
+   en Telerik.Sitefinity.Scheduling.Scheduler.DeleteTask(ScheduledTask task, String transactionName)
+
+Additional Info:
+
+MachineName : DESKTOP-UP3FQ7N
+TimeStamp : 01/06/2021 21:02:03
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-132670548906144298
+ThreadIdentity : 
+WindowsIdentity : DESKTOP-UP3FQ7N\Tomas Vera
+Requested URL : http://localhost:60876/
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670548906144298
+
+ProcessId: 38420
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:40548
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/1/2021 9:03:09 PM
+
+Message: HandlingInstanceID: 22589e76-dbf0-4d6a-a9cf-266ebc104587
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+06/01/2021 18:03:09
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Telerik.Sitefinity
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Boolean CanAdaptComponent(Telerik.Sitefinity.Pages.Model.ControlData)
+HResult : -2147467261
+Stack Trace :    at Telerik.Sitefinity.Modules.GenericContent.Web.Services.ContentBlockControllerAdaptor.CanAdaptComponent(ControlData component)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.<>c__DisplayClass3_0.<SupportsAdminAppEditor>b__0(IPropertiesAdaptor x)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Telerik.Sitefinity.Web.Services.Contracts.Operations.Pages.PropertyEditor.Adaptors.ComponentAdaptorBase.SupportsAdminAppEditor(ControlData controlData)
+   at Telerik.Sitefinity.Web.UI.ZoneEditor.OpenNewWidgetEditor(ControlData control)
+   at Telerik.Sitefinity.Modules.Pages.Web.Services.ZoneEditorService.UpdateState(ZoneEditorWebServiceArgs state, Boolean isLayoutControl)
+   at Telerik.Sitefinity.Modules.Pages.Web.Services.ZoneEditorService.UpdateControlState(ZoneEditorWebServiceArgs state)
+   at SyncInvokeUpdateControlState(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+
+Additional Info:
+
+MachineName : DESKTOP-UP3FQ7N
+TimeStamp : 6/1/2021 9:03:09 PM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7624.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-132670548906144298
+ThreadIdentity : tomas.vera@virtualdreams.io
+WindowsIdentity : DESKTOP-UP3FQ7N\Tomas Vera
+Requested URL : http://localhost:60876/Sitefinity/Services/Pages/ZoneEditorService.svc/Control/?package=Bootstrap4
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670548906144298
+
+ProcessId: 38420
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:25068
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: d6288ac9-a725-44ff-baee-07a5e8730f4c
+
+Timestamp: 01/06/2021 21:33:13
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670559150090716
+
+ProcessId: 9500
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:14296
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 44ace5aa-3fbe-4395-b6e9-0a8b41fce75c
+
+Timestamp: 01/06/2021 21:48:59
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670577042647570
+
+ProcessId: 1168
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:3028
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: ab54b240-4548-4f56-bf59-0ac308256eeb
+
+Timestamp: 02/06/2021 3:13:33
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670771760010758
+
+ProcessId: 13092
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:27816
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: ab54b240-4548-4f56-bf59-0ac308256eeb
+
+Timestamp: 02/06/2021 3:13:34
+
+Message: System.Web.HttpException (0x80004005): El servidor no puede anexar un encabezado después de enviar los encabezados HTTP.
+   en System.Web.HttpHeaderCollection.SetHeader(String name, String value, Boolean replace)
+   en System.Web.HttpHeaderCollection.Set(String name, String value)
+   en Microsoft.Owin.Host.SystemWeb.CallHeaders.AspNetResponseHeaders.Set(String key, String[] values)
+   en Microsoft.Owin.Host.SystemWeb.CallHeaders.AspNetResponseHeaders.set_Item(String key, String[] value)
+   en Microsoft.Owin.Infrastructure.OwinHelpers.SetHeaderUnmodified(IDictionary`2 headers, String key, String[] values)
+   en Microsoft.Owin.Infrastructure.OwinHelpers.AppendHeaderUnmodified(IDictionary`2 headers, String key, String[] values)
+   en Microsoft.Owin.HeaderDictionary.AppendValues(String key, String[] values)
+   en Microsoft.Owin.Infrastructure.ChunkingCookieManager.AppendResponseCookie(IOwinContext context, String key, String value, CookieOptions options)
+   en Telerik.Sitefinity.Authentication.Owin.SitefinityAuthentication.SitefinityCookieAuthenticationHandler.SetAuthCookie(AuthenticationTicket ticket, Boolean isPersistent, Nullable`1 expiresUtc)
+   en Telerik.Sitefinity.Authentication.Owin.SitefinityAuthentication.SitefinityCookieAuthenticationHandler.<Renew>d__10.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Authentication.Owin.SitefinityAuthentication.SitefinityCookieAuthenticationHandler.<ApplyResponseGrantAsync>d__2.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.<ApplyResponseCoreAsync>d__b.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.<ApplyResponseAsync>d__8.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Microsoft.Owin.Security.Infrastructure.AuthenticationHandler.<TeardownAsync>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1.<Invoke>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Authentication.Owin.Cookies.CookieSaverMiddleware.<Invoke>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Microsoft.Owin.Mapping.MapWhenMiddleware.<Invoke>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Microsoft.Owin.Mapping.MapMiddleware.<Invoke>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Microsoft.Owin.Mapping.MapMiddleware.<Invoke>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Authentication.Owin.RelyingPartyMiddleware.<Invoke>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Authentication.Owin.AnonymousUserMiddleware.<Invoke>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Authentication.Owin.AccessControlMiddleware.<Invoke>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Microsoft.Owin.Mapping.MapMiddleware.<Invoke>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Microsoft.Owin.Mapping.MapMiddleware.<Invoke>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Authentication.Owin.SecurityTokenServiceMiddleware.<Invoke>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Authentication.Owin.SitefinityAuthenticationMiddleware.<Invoke>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Owin.Extensions.SslOffloaderMiddleware.<Invoke>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Owin.HttpsRedirectMiddleware.<Invoke>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Telerik.Sitefinity.Owin.Extensions.GlobalExceptionMiddleware.<Invoke>d__1.MoveNext()
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670771760010758
+
+ProcessId: 13092
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:33820
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/2/2021 3:13:35 AM
+
+Message: HandlingInstanceID: 11c2e6ce-bba0-4263-9389-d65a4b8274a1
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/02/2021 00:13:35
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : El servidor no puede anexar un encabezado después de enviar los encabezados HTTP.
+Source : Telerik.Sitefinity
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void MoveNext()
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Owin.Extensions.GlobalExceptionMiddleware.<Invoke>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Telerik.Sitefinity.Owin.SitefinityMiddleware.<Invoke>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContextStage.<RunApp>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContext.<DoFinalWork>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.StageAsyncResult.End(IAsyncResult ar)
+   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContext.EndFinalWork(IAsyncResult ar)
+   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : DESKTOP-UP3FQ7N
+TimeStamp : 6/2/2021 3:13:35 AM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-132670771760010758
+ThreadIdentity : Anonymous
+WindowsIdentity : DESKTOP-UP3FQ7N\Tomas Vera
+Requested URL : http://localhost:60876/appstatus?count=1
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670771760010758
+
+ProcessId: 13092
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:33820
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/2/2021 3:18:39 AM
+
+Message: HandlingInstanceID: 252bbec4-ca39-48ca-8b3b-bd0a49a42c04
+An exception of type 'Telerik.Sitefinity.Data.Linq.Dynamic.ParseException' occurred and was caught.
+---------------------------------------------------------------------------------------------------
+06/02/2021 00:18:39
+Type : Telerik.Sitefinity.Data.Linq.Dynamic.ParseException, Telerik.Sitefinity, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+Message : Expression expected
+Source : Telerik.Sitefinity
+Help link : 
+Position : 4
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Linq.Expressions.Expression ParsePrimaryStart()
+HResult : -2146233088
+Stack Trace :    at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParsePrimaryStart()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParsePrimary()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseUnary()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseMultiplicative()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseAdditive()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseComparison()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseLogicalAnd()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseLogicalOr()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseExpression()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseParenExpression()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParsePrimaryStart()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParsePrimary()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseUnary()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseMultiplicative()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseAdditive()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseComparison()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseLogicalAnd()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseLogicalOr()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.ParseExpression()
+   at Telerik.Sitefinity.Data.Linq.Dynamic.ExpressionParser.Parse(Type resultType)
+   at Telerik.Sitefinity.Data.Linq.Dynamic.DynamicExpression.ParseLambda(ParameterExpression[] parameters, Type resultType, String expression, Object[] values)
+   at Telerik.Sitefinity.Data.Linq.Dynamic.DynamicExpression.ParseLambda(Type itType, Type resultType, String expression, Object[] values)
+   at Telerik.Sitefinity.Data.Linq.Dynamic.DynamicQueryable.Where(IQueryable source, String predicate, Object[] values)
+   at Telerik.Sitefinity.Data.Linq.Dynamic.DynamicQueryable.Where[T](IQueryable`1 source, String predicate, Object[] values)
+   at Telerik.Sitefinity.Data.DataProviderBase.SetExpressions[T](IQueryable`1 query, String filterExpression, String orderExpression, Nullable`1 skip, Nullable`1 take, Nullable`1& totalCount)
+   at Telerik.Sitefinity.Modules.Libraries.Web.Services.LibraryService`4.GetFolders(String sortExpression, Int32 skip, Int32 take, String filter, String providerName, Boolean hierarchyMode)
+   at SyncInvokeGetFolders(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+
+Additional Info:
+
+MachineName : DESKTOP-UP3FQ7N
+TimeStamp : 6/2/2021 3:18:39 AM
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-132670771760010758
+ThreadIdentity : tomas.vera@virtualdreams.io
+WindowsIdentity : DESKTOP-UP3FQ7N\Tomas Vera
+Requested URL : http://localhost:60876/Sitefinity/Services/Content/DocumentLibraryService.svc/folders/?filter=(Id%3D)&skip=0&take=100
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670771760010758
+
+ProcessId: 13092
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:4844
+
+Extended Properties: 
+----------------------------------------

@@ -1,0 +1,39 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-estados-financieros.js"), "bottom", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-info-corporativa.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/select2.min.css"))
+
+<div class="card-ic-container">
+    <div class="card-ic">
+        <input type="hidden" value="estados-financieros" id="card-type" />
+        @if (!string.IsNullOrEmpty(Model.Heading))
+        {
+            <p class="card-ic-title">@Html.HtmlSanitize(Model.Heading)</p>
+        }
+        @if (!string.IsNullOrEmpty(Model.Description))
+        {
+            <p class="card-ic-parrafo">@Html.HtmlSanitize(Model.Description)</p>
+        }
+    <div class="card-ic-btn_container">
+        <div class="row">
+            <div class="col-12 col-md-4"><a href="#" class="btn-red_inverted">REPORTES ANUALES</a></div>
+            <div class="col-12 col-md-4"><a href="#" class="btn-red_inverted">CÓDIGO DE PRINCIPIOS</a></div>
+            <div class="col-12 col-md-4"><a href="#" class="btn-red_inverted">COMPULSA ESTATUTOS SOCIALES</a></div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4"><a href="#" class="btn-red_inverted">EVENTOS RELEVANTES</a></div>
+            <div class="col-12 col-md-4"><a href="#" class="btn-red_inverted">INVERSIONISTAS</a></div>
+            <div class="col-12 col-md-4"><a href="#" class="btn-red_inverted">RELACIÓN CON INVERSIONISTAS</a></div>
+        </div>
+    </div>
+    </div>
+</div>

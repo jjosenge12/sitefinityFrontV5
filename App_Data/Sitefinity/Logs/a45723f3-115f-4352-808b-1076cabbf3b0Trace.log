@@ -1,0 +1,49 @@
+----------------------------------------
+Timestamp: 5/30/2021 1:28:52 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationSyncTask'. Start time: 5/30/2021 1:28:51 AM. End time: 5/30/2021 1:28:52 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/30/2021 1:28:52 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Authentication.IdentityServer.Data.TransientDataCleanupTask'. Start time: 5/30/2021 1:28:52 AM. End time: 5/30/2021 1:28:52 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/30/2021 1:28:53 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 5/30/2021 1:28:53 AM. End time: 5/30/2021 1:28:53 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/30/2021 1:28:57 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Lifecycle.Cleanup.TempItemsCleanupTask'. Start time: 5/30/2021 1:28:50 AM. End time: 5/30/2021 1:28:57 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/30/2021 1:28:57 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Versioning.Cleaner.VersioningCleanerTask'. Start time: 5/30/2021 1:28:57 AM. End time: 5/30/2021 1:28:57 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/30/2021 1:28:57 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationImportTask'. Start time: 5/30/2021 1:28:57 AM. End time: 5/30/2021 1:28:57 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/30/2021 1:29:01 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.UsageTracking.Scheduling.UsageTrackingTask'. Start time: 5/30/2021 1:28:50 AM. End time: 5/30/2021 1:29:01 AM. Task data: ''
+
+
+----------------------------------------

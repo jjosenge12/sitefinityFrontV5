@@ -1,0 +1,726 @@
+----------------------------------------
+ActivityId: 8cbc66f8-141b-480b-8637-513f87726cf1
+
+Timestamp: 4/19/2021 1:19:44 AM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-1-132632657073488179
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:4676
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/19/2021 1:31:35 PM
+
+Message: Timestamp: 4/19/2021 1:31:35 PM
+Message: System.ArgumentException: Type "Telerik.Sitefinity.Authentication.IdentityServer.Data.OpenAccessIdentityServerDataProvider" cannot be resolved. Exception of type 'System.OutOfMemoryException' was thrown. ---> System.Configuration.ConfigurationErrorsException: Exception of type 'System.OutOfMemoryException' was thrown. ---> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   at System.Web.Configuration.CompilationSection.LoadAllAssembliesFromAppDomainBinDirectory()
+   at System.Web.Configuration.CompilationSection.LoadAssembly(AssemblyInfo ai)
+   at System.Web.Compilation.BuildManager.<>c.<GetAssembliesForAppLevel>b__143_0(AssemblyInfo ai)
+   at System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+   at System.Linq.Enumerable.<UnionIterator>d__67`1.MoveNext()
+   at System.Linq.Enumerable.<DistinctIterator>d__64`1.MoveNext()
+   at System.Web.UI.Util.GetTypeFromAssemblies(IEnumerable assemblies, String typeName, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   --- End of inner exception stack trace ---
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.InitializeDefaultProviders(ConfigElementDictionary`2 providers)
+   at Telerik.Sitefinity.Modules.GenericContent.Configuration.ModuleConfigBase.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigSection.InitializeProperties()
+   at Telerik.Sitefinity.Configuration.ConfigElement.EnsurePropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigElement.get_Properties()
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadAttributes(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElement(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew, Boolean validateTagName)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSectionFromReader(ConfigSection section, XmlReader reader, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElementFromDatabase(ConfigSection section, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.TryLoadSectionFromDatabase(ConfigSection section, Boolean initial, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSection(ConfigSection section)
+   at Telerik.Sitefinity.Configuration.ConfigSection.Initialize(ConfigProvider provider)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionInternal(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate[TSection](Boolean safeMode)
+   at Telerik.Sitefinity.Authentication.AuthenticationModule.Initialize(ModuleSettings settings)
+   at Telerik.Sitefinity.Services.SystemManager.InitializeModule(ModuleSettings settings, InstallContext installContext, ModuleVersionInfo moduleVersion, Nullable`1 start, Boolean skipModuleRegistration)
+   at Telerik.Sitefinity.Services.SystemManager.Initialize()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.RegisterRoutes()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/1/ROOT-2-132633126045225353
+ProcessId: 5480
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+Thread Name: 
+Win32 ThreadId:6208
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-2-132633126045225353
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:6208
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/19/2021 1:32:46 PM
+
+Message: Timestamp: 4/19/2021 1:32:46 PM
+Message: System.ArgumentException: Type "Telerik.Sitefinity.Authentication.IdentityServer.Data.OpenAccessIdentityServerDataProvider" cannot be resolved. Exception of type 'System.OutOfMemoryException' was thrown. ---> System.Configuration.ConfigurationErrorsException: Exception of type 'System.OutOfMemoryException' was thrown. ---> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   at System.Web.Configuration.CompilationSection.LoadAllAssembliesFromAppDomainBinDirectory()
+   at System.Web.Configuration.CompilationSection.LoadAssembly(AssemblyInfo ai)
+   at System.Web.Compilation.BuildManager.<>c.<GetAssembliesForAppLevel>b__143_0(AssemblyInfo ai)
+   at System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+   at System.Linq.Enumerable.<UnionIterator>d__67`1.MoveNext()
+   at System.Linq.Enumerable.<DistinctIterator>d__64`1.MoveNext()
+   at System.Web.UI.Util.GetTypeFromAssemblies(IEnumerable assemblies, String typeName, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   --- End of inner exception stack trace ---
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.InitializeDefaultProviders(ConfigElementDictionary`2 providers)
+   at Telerik.Sitefinity.Modules.GenericContent.Configuration.ModuleConfigBase.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigSection.InitializeProperties()
+   at Telerik.Sitefinity.Configuration.ConfigElement.EnsurePropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigElement.get_Properties()
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadAttributes(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElement(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew, Boolean validateTagName)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSectionFromReader(ConfigSection section, XmlReader reader, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElementFromDatabase(ConfigSection section, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.TryLoadSectionFromDatabase(ConfigSection section, Boolean initial, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSection(ConfigSection section)
+   at Telerik.Sitefinity.Configuration.ConfigSection.Initialize(ConfigProvider provider)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionInternal(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate[TSection](Boolean safeMode)
+   at Telerik.Sitefinity.Authentication.AuthenticationModule.Initialize(ModuleSettings settings)
+   at Telerik.Sitefinity.Services.SystemManager.InitializeModule(ModuleSettings settings, InstallContext installContext, ModuleVersionInfo moduleVersion, Nullable`1 start, Boolean skipModuleRegistration)
+   at Telerik.Sitefinity.Services.SystemManager.Initialize()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.RegisterRoutes()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/1/ROOT-3-132633127268671235
+ProcessId: 5480
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+Thread Name: 
+Win32 ThreadId:6208
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-3-132633127268671235
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:6208
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/19/2021 1:34:11 PM
+
+Message: Timestamp: 4/19/2021 1:34:11 PM
+Message: System.ArgumentException: Type "Telerik.Sitefinity.Authentication.IdentityServer.Data.OpenAccessIdentityServerDataProvider" cannot be resolved. Exception of type 'System.OutOfMemoryException' was thrown. ---> System.Configuration.ConfigurationErrorsException: Exception of type 'System.OutOfMemoryException' was thrown. ---> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   at System.Web.Configuration.CompilationSection.LoadAllAssembliesFromAppDomainBinDirectory()
+   at System.Web.Configuration.CompilationSection.LoadAssembly(AssemblyInfo ai)
+   at System.Web.Compilation.BuildManager.<>c.<GetAssembliesForAppLevel>b__143_0(AssemblyInfo ai)
+   at System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+   at System.Linq.Enumerable.<UnionIterator>d__67`1.MoveNext()
+   at System.Linq.Enumerable.<DistinctIterator>d__64`1.MoveNext()
+   at System.Web.UI.Util.GetTypeFromAssemblies(IEnumerable assemblies, String typeName, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   --- End of inner exception stack trace ---
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.InitializeDefaultProviders(ConfigElementDictionary`2 providers)
+   at Telerik.Sitefinity.Modules.GenericContent.Configuration.ModuleConfigBase.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigSection.InitializeProperties()
+   at Telerik.Sitefinity.Configuration.ConfigElement.EnsurePropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigElement.get_Properties()
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadAttributes(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElement(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew, Boolean validateTagName)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSectionFromReader(ConfigSection section, XmlReader reader, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElementFromDatabase(ConfigSection section, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.TryLoadSectionFromDatabase(ConfigSection section, Boolean initial, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSection(ConfigSection section)
+   at Telerik.Sitefinity.Configuration.ConfigSection.Initialize(ConfigProvider provider)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionInternal(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate[TSection](Boolean safeMode)
+   at Telerik.Sitefinity.Authentication.AuthenticationModule.Initialize(ModuleSettings settings)
+   at Telerik.Sitefinity.Services.SystemManager.InitializeModule(ModuleSettings settings, InstallContext installContext, ModuleVersionInfo moduleVersion, Nullable`1 start, Boolean skipModuleRegistration)
+   at Telerik.Sitefinity.Services.SystemManager.Initialize()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.RegisterRoutes()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/1/ROOT-4-132633128113476652
+ProcessId: 5480
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+Thread Name: 
+Win32 ThreadId:4984
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-4-132633128113476652
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:4984
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/19/2021 1:37:21 PM
+
+Message: Timestamp: 4/19/2021 1:37:21 PM
+Message: System.ArgumentException: Type "Telerik.Sitefinity.Authentication.IdentityServer.Data.OpenAccessIdentityServerDataProvider" cannot be resolved. Exception of type 'System.OutOfMemoryException' was thrown. ---> System.Configuration.ConfigurationErrorsException: Exception of type 'System.OutOfMemoryException' was thrown. ---> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   at System.Web.Configuration.CompilationSection.LoadAllAssembliesFromAppDomainBinDirectory()
+   at System.Web.Configuration.CompilationSection.LoadAssembly(AssemblyInfo ai)
+   at System.Web.Compilation.BuildManager.<>c.<GetAssembliesForAppLevel>b__143_0(AssemblyInfo ai)
+   at System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+   at System.Linq.Enumerable.<UnionIterator>d__67`1.MoveNext()
+   at System.Linq.Enumerable.<DistinctIterator>d__64`1.MoveNext()
+   at System.Web.UI.Util.GetTypeFromAssemblies(IEnumerable assemblies, String typeName, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   --- End of inner exception stack trace ---
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.InitializeDefaultProviders(ConfigElementDictionary`2 providers)
+   at Telerik.Sitefinity.Modules.GenericContent.Configuration.ModuleConfigBase.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigSection.InitializeProperties()
+   at Telerik.Sitefinity.Configuration.ConfigElement.EnsurePropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigElement.get_Properties()
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadAttributes(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElement(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew, Boolean validateTagName)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSectionFromReader(ConfigSection section, XmlReader reader, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElementFromDatabase(ConfigSection section, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.TryLoadSectionFromDatabase(ConfigSection section, Boolean initial, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSection(ConfigSection section)
+   at Telerik.Sitefinity.Configuration.ConfigSection.Initialize(ConfigProvider provider)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionInternal(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate[TSection](Boolean safeMode)
+   at Telerik.Sitefinity.Authentication.AuthenticationModule.Initialize(ModuleSettings settings)
+   at Telerik.Sitefinity.Services.SystemManager.InitializeModule(ModuleSettings settings, InstallContext installContext, ModuleVersionInfo moduleVersion, Nullable`1 start, Boolean skipModuleRegistration)
+   at Telerik.Sitefinity.Services.SystemManager.Initialize()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.RegisterRoutes()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/1/ROOT-5-132633130012590816
+ProcessId: 5480
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+Thread Name: 
+Win32 ThreadId:4528
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-5-132633130012590816
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:4528
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/19/2021 1:41:29 PM
+
+Message: Timestamp: 4/19/2021 1:41:29 PM
+Message: System.ArgumentException: Type "Telerik.Sitefinity.Authentication.IdentityServer.Data.OpenAccessIdentityServerDataProvider" cannot be resolved. Exception of type 'System.OutOfMemoryException' was thrown. ---> System.Configuration.ConfigurationErrorsException: Exception of type 'System.OutOfMemoryException' was thrown. ---> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   at System.Web.Configuration.CompilationSection.LoadAllAssembliesFromAppDomainBinDirectory()
+   at System.Web.Configuration.CompilationSection.LoadAssembly(AssemblyInfo ai)
+   at System.Web.Compilation.BuildManager.<>c.<GetAssembliesForAppLevel>b__143_0(AssemblyInfo ai)
+   at System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+   at System.Linq.Enumerable.<UnionIterator>d__67`1.MoveNext()
+   at System.Linq.Enumerable.<DistinctIterator>d__64`1.MoveNext()
+   at System.Web.UI.Util.GetTypeFromAssemblies(IEnumerable assemblies, String typeName, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   --- End of inner exception stack trace ---
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.InitializeDefaultProviders(ConfigElementDictionary`2 providers)
+   at Telerik.Sitefinity.Modules.GenericContent.Configuration.ModuleConfigBase.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigSection.InitializeProperties()
+   at Telerik.Sitefinity.Configuration.ConfigElement.EnsurePropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigElement.get_Properties()
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadAttributes(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElement(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew, Boolean validateTagName)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSectionFromReader(ConfigSection section, XmlReader reader, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElementFromDatabase(ConfigSection section, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.TryLoadSectionFromDatabase(ConfigSection section, Boolean initial, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSection(ConfigSection section)
+   at Telerik.Sitefinity.Configuration.ConfigSection.Initialize(ConfigProvider provider)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionInternal(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate[TSection](Boolean safeMode)
+   at Telerik.Sitefinity.Authentication.AuthenticationModule.Initialize(ModuleSettings settings)
+   at Telerik.Sitefinity.Services.SystemManager.InitializeModule(ModuleSettings settings, InstallContext installContext, ModuleVersionInfo moduleVersion, Nullable`1 start, Boolean skipModuleRegistration)
+   at Telerik.Sitefinity.Services.SystemManager.Initialize()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.RegisterRoutes()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/1/ROOT-6-132633132474557428
+ProcessId: 5480
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+Thread Name: 
+Win32 ThreadId:6916
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-6-132633132474557428
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:6916
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/19/2021 1:42:59 PM
+
+Message: Timestamp: 4/19/2021 1:42:59 PM
+Message: System.ArgumentException: Type "Telerik.Sitefinity.Authentication.IdentityServer.Data.OpenAccessIdentityServerDataProvider" cannot be resolved. Exception of type 'System.OutOfMemoryException' was thrown. ---> System.Configuration.ConfigurationErrorsException: Exception of type 'System.OutOfMemoryException' was thrown. ---> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   at System.Web.Configuration.CompilationSection.LoadAllAssembliesFromAppDomainBinDirectory()
+   at System.Web.Configuration.CompilationSection.LoadAssembly(AssemblyInfo ai)
+   at System.Web.Compilation.BuildManager.<>c.<GetAssembliesForAppLevel>b__143_0(AssemblyInfo ai)
+   at System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+   at System.Linq.Enumerable.<UnionIterator>d__67`1.MoveNext()
+   at System.Linq.Enumerable.<DistinctIterator>d__64`1.MoveNext()
+   at System.Web.UI.Util.GetTypeFromAssemblies(IEnumerable assemblies, String typeName, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   --- End of inner exception stack trace ---
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.InitializeDefaultProviders(ConfigElementDictionary`2 providers)
+   at Telerik.Sitefinity.Modules.GenericContent.Configuration.ModuleConfigBase.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigSection.InitializeProperties()
+   at Telerik.Sitefinity.Configuration.ConfigElement.EnsurePropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigElement.get_Properties()
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadAttributes(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElement(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew, Boolean validateTagName)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSectionFromReader(ConfigSection section, XmlReader reader, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElementFromDatabase(ConfigSection section, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.TryLoadSectionFromDatabase(ConfigSection section, Boolean initial, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSection(ConfigSection section)
+   at Telerik.Sitefinity.Configuration.ConfigSection.Initialize(ConfigProvider provider)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionInternal(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate[TSection](Boolean safeMode)
+   at Telerik.Sitefinity.Authentication.AuthenticationModule.Initialize(ModuleSettings settings)
+   at Telerik.Sitefinity.Services.SystemManager.InitializeModule(ModuleSettings settings, InstallContext installContext, ModuleVersionInfo moduleVersion, Nullable`1 start, Boolean skipModuleRegistration)
+   at Telerik.Sitefinity.Services.SystemManager.Initialize()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.RegisterRoutes()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/1/ROOT-7-132633133379139788
+ProcessId: 5480
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+Thread Name: 
+Win32 ThreadId:6072
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-7-132633133379139788
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:6072
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 26c3f171-8c64-4f35-bd2a-061070da0cbf
+
+Timestamp: 4/19/2021 1:56:27 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-8-132633141034446865
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:7044
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/19/2021 2:01:40 PM
+
+Message: Timestamp: 4/19/2021 2:01:40 PM
+Message: System.ArgumentException: Type "Telerik.Sitefinity.Authentication.IdentityServer.Data.OpenAccessIdentityServerDataProvider" cannot be resolved. Exception of type 'System.OutOfMemoryException' was thrown. ---> System.Configuration.ConfigurationErrorsException: Exception of type 'System.OutOfMemoryException' was thrown. ---> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.CompilationSection.LoadAssemblyHelper(String assemblyName, Boolean starDirective)
+   at System.Web.Configuration.CompilationSection.LoadAllAssembliesFromAppDomainBinDirectory()
+   at System.Web.Configuration.CompilationSection.LoadAssembly(AssemblyInfo ai)
+   at System.Web.Compilation.BuildManager.<>c.<GetAssembliesForAppLevel>b__143_0(AssemblyInfo ai)
+   at System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+   at System.Linq.Enumerable.<UnionIterator>d__67`1.MoveNext()
+   at System.Linq.Enumerable.<DistinctIterator>d__64`1.MoveNext()
+   at System.Web.UI.Util.GetTypeFromAssemblies(IEnumerable assemblies, String typeName, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   --- End of inner exception stack trace ---
+   at Telerik.Sitefinity.Utilities.TypeConverters.TypeResolutionService.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.InitializeDefaultProviders(ConfigElementDictionary`2 providers)
+   at Telerik.Sitefinity.Modules.GenericContent.Configuration.ModuleConfigBase.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.OnPropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigSection.InitializeProperties()
+   at Telerik.Sitefinity.Configuration.ConfigElement.EnsurePropertiesInitialized()
+   at Telerik.Sitefinity.Configuration.ConfigElement.get_Properties()
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadAttributes(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElement(ConfigElement element, XmlReader reader, LoadContext loadContext, Boolean isNew, Boolean validateTagName)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSectionFromReader(ConfigSection section, XmlReader reader, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadElementFromDatabase(ConfigSection section, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.TryLoadSectionFromDatabase(ConfigSection section, Boolean initial, LoadContext loadContext)
+   at Telerik.Sitefinity.Configuration.Data.XmlConfigProvider.LoadSection(ConfigSection section)
+   at Telerik.Sitefinity.Configuration.ConfigSection.Initialize(ConfigProvider provider)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionInternal(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate(Type sectionType, Boolean safeMode, String sectionName)
+   at Telerik.Sitefinity.Configuration.Config.GetSectionPrivate[TSection](Boolean safeMode)
+   at Telerik.Sitefinity.Authentication.AuthenticationModule.Initialize(ModuleSettings settings)
+   at Telerik.Sitefinity.Services.SystemManager.InitializeModule(ModuleSettings settings, InstallContext installContext, ModuleVersionInfo moduleVersion, Nullable`1 start, Boolean skipModuleRegistration)
+   at Telerik.Sitefinity.Services.SystemManager.Initialize()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.RegisterRoutes()
+   at Telerik.Sitefinity.Abstractions.Bootstrapper.Bootstrap()
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+Category: 
+Priority: -1
+EventId: 0
+Severity: Critical
+Title:
+Machine: INSTANCE-TFS-SI
+App Domain: /LM/W3SVC/1/ROOT-9-132633144591477786
+ProcessId: 5480
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+Thread Name: 
+Win32 ThreadId:6796
+Extended Properties: 
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-9-132633144591477786
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:6796
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 7320e3f7-f607-4b11-a5f6-f4c6f42505d6
+
+Timestamp: 4/19/2021 2:06:13 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-10-132633146891936824
+
+ProcessId: 5480
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:3120
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: f4e55e77-93b8-42a0-bad9-2385383072ad
+
+Timestamp: 4/19/2021 7:43:17 PM
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/1/ROOT-2-132633349130897465
+
+ProcessId: 1840
+
+Process Name: C:\Program Files (x86)\IIS Express\IISExpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:6932
+
+Extended Properties: 
+----------------------------------------

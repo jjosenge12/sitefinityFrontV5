@@ -1,0 +1,80 @@
+----------------------------------------
+ActivityId: cb103c79-f958-4347-aa6b-fa583e509a84
+
+Timestamp: 22/04/2021 21:03:20
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132635989469058131
+
+ProcessId: 6560
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:1780
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 12faf4ab-5dde-4814-b2ff-c88d200114db
+
+Timestamp: 22/04/2021 21:03:40
+
+Message: System.InvalidOperationException: 
+=== === === === ===
+IDX10803: Unable to create to obtain configuration from: 'http://tfs-sitefinity.virtualdreams.io:774/Sitefinity/Authenticate/OpenID/.well-known/openid-configuration'.
+Possible reason is wrong SSL configuration. Please ensure offloader settings and Sitefinity configurations are synchronized.
+=== === === === ===
+ ---> System.IO.IOException: Unable to get document from: http://tfs-sitefinity.virtualdreams.io:774/Sitefinity/Authenticate/OpenID/.well-known/openid-configuration ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 400 (Bad Request).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.<GetDocumentAsync>d__0.MoveNext()
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.<GetDocumentAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.IdentityModel.Protocols.OpenIdConnectConfigurationRetriever.<GetAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.<GetConfigurationAsync>d__3.MoveNext()
+   --- End of inner exception stack trace ---
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132635989469058131
+
+ProcessId: 6560
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:1780
+
+Extended Properties: 
+----------------------------------------

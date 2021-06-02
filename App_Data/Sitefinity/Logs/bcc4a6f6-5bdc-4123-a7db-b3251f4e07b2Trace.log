@@ -1,0 +1,14 @@
+----------------------------------------
+Timestamp: 27/05/2021 18:01:02
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 27/05/2021 18:01:02. End time: 27/05/2021 18:01:02. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/27/2021 6:29:15 PM
+
+Message: Scheduler: Task executed: 'LibraryRelocationTask'. Start time: 5/27/2021 6:29:15 PM. End time: 5/27/2021 6:29:15 PM. Task data: '1f9ecda0-69b7-4b57-8bf8-09ef1a00510a;OpenAccessDataProvider;Información Financiera;Telerik.Sitefinity.Libraries.Model.DocumentLibrary'
+
+
+----------------------------------------

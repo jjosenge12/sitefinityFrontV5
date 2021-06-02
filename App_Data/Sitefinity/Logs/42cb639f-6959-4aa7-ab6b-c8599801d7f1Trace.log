@@ -1,0 +1,42 @@
+----------------------------------------
+Timestamp: 4/24/2021 1:28:48 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationSyncTask'. Start time: 4/24/2021 1:28:47 AM. End time: 4/24/2021 1:28:47 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/24/2021 1:28:48 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Authentication.IdentityServer.Data.TransientDataCleanupTask'. Start time: 4/24/2021 1:28:48 AM. End time: 4/24/2021 1:28:48 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/24/2021 1:28:48 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 4/24/2021 1:28:48 AM. End time: 4/24/2021 1:28:48 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/24/2021 1:28:48 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Versioning.Cleaner.VersioningCleanerTask'. Start time: 4/24/2021 1:28:48 AM. End time: 4/24/2021 1:28:48 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/24/2021 1:28:50 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationImportTask'. Start time: 4/24/2021 1:28:48 AM. End time: 4/24/2021 1:28:50 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/24/2021 1:28:59 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.UsageTracking.Scheduling.UsageTrackingTask'. Start time: 4/24/2021 1:28:47 AM. End time: 4/24/2021 1:28:59 AM. Task data: ''
+
+
+----------------------------------------

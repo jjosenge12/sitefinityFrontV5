@@ -1,0 +1,3 @@
+https://tfs-sitefinity.virtualdreams.io {
+        reverse_proxy http://localhost
+}

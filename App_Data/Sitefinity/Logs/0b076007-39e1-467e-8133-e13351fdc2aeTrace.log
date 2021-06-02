@@ -1,0 +1,33 @@
+----------------------------------------
+Timestamp: 4/29/2021 7:25:29 PM
+
+Message: System.ArgumentException: Cannot find template "~/Frontend-Assembly/Telerik.Sitefinity.Frontend/GridSystem/Templates/customContainer.html". Most probably it is specific for a particular resource package which is not applied in the current context. Try duplicating the template in SitefinityWebApp root folder while keeping the same folder hierarchy.
+   at Telerik.Sitefinity.Frontend.GridSystem.GridControl.GetTemplate(Boolean isVirtualPath, Boolean isHtmlTemplate, String layout)
+   at Telerik.Sitefinity.Frontend.GridSystem.GridControl.GetTemplate()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/29/2021 7:25:30 PM
+
+Message: System.ArgumentException: Cannot find template "~/Frontend-Assembly/Telerik.Sitefinity.Frontend/GridSystem/Templates/customContainer.html". Most probably it is specific for a particular resource package which is not applied in the current context. Try duplicating the template in SitefinityWebApp root folder while keeping the same folder hierarchy.
+   at Telerik.Sitefinity.Frontend.GridSystem.GridControl.GetTemplate(Boolean isVirtualPath, Boolean isHtmlTemplate, String layout)
+   at Telerik.Sitefinity.Frontend.GridSystem.GridControl.GetTemplate()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/29/2021 7:25:49 PM
+
+Message: System.ArgumentException: Cannot find template "~/Frontend-Assembly/Telerik.Sitefinity.Frontend/GridSystem/Templates/customContainer.html". Most probably it is specific for a particular resource package which is not applied in the current context. Try duplicating the template in SitefinityWebApp root folder while keeping the same folder hierarchy.
+   at Telerik.Sitefinity.Frontend.GridSystem.GridControl.GetTemplate(Boolean isVirtualPath, Boolean isHtmlTemplate, String layout)
+   at Telerik.Sitefinity.Frontend.GridSystem.GridControl.GetTemplate()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.Initialize()
+   at Telerik.Sitefinity.Web.UI.LayoutControl.CreateChildControls()
+
+
+----------------------------------------

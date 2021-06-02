@@ -1,0 +1,60 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-estados-financieros.js"), "bottom", true)
+@Html.Script("https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js", "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-estados-financieros.css"))
+@Html.StyleSheet("https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css")
+
+<div class="card-ef-container">
+    <div class="card-ef">
+        <input type="hidden" value="estados-financieros" id="card-type" />
+        @if (!string.IsNullOrEmpty(Model.Heading))
+        {
+            <p class="card-ef-title">@Html.HtmlSanitize(Model.Heading)</p>
+        }
+        else
+        {
+            <p class="card-ef-title">Title</p>
+        }
+        @if (!string.IsNullOrEmpty(Model.Description))
+        {
+            <p class="card-ef-parrafo">@Html.HtmlSanitize(Model.Description)</p>
+        }
+        else
+        {
+            <p class="card-ef-parrafo">Description</p>
+        }
+        <div class="card-ef-steps-container">
+            <div id="step-one" class="card-ef-step active-step">1</div>
+            <span class="card-ef-step-line"><span id="step-line" class="card-ef-red-line"></span></span>
+            <div id="step-two" class="card-ef-step">2</div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-12 col-md-6 mb-5 mb-md-0">
+                    <div class="position-relative">
+                        <select id="select-one" class="form-control">
+                            <option selected value="0" disabled>Elija un año</option>
+                        </select>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-5 mb-md-0">
+                    <div class="position-relative">
+                        <select id="select-two" class="form-control">
+                            <option selected value="0" disabled>Seleccione uno</option>
+                        </select>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

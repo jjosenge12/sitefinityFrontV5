@@ -1,0 +1,42 @@
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 5/4/2021 1:58:05 PM
+
+Message: Cannot read property 'totalCount' of undefined
+TypeError: Cannot read property 'totalCount' of undefined
+    at MapSubscriber.project (https://tfs-sitefinity.virtualdreams.io/adminapp/main.2ff40dc90c66e1d1769c.js:2:4402977)
+    at MapSubscriber._next (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:62061)
+    at MapSubscriber.next (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:8437)
+    at MergeMapSubscriber.notifyNext (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:73502)
+    at SimpleInnerSubscriber._next (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:77451)
+    at SimpleInnerSubscriber.next (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:8437)
+    at https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:46982
+    at innerSubscribe (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:79595)
+    at MergeMapSubscriber._innerSub (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:73252)
+    at MergeMapSubscriber._tryNext (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:73085)
+
+Category: WebClientLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132646062328436351
+
+ProcessId: 8756
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:2664
+
+Extended Properties: 
+----------------------------------------

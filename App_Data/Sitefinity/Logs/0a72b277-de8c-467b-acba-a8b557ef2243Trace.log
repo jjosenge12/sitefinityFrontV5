@@ -1,0 +1,14 @@
+----------------------------------------
+Timestamp: 5/29/2021 7:29:39 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 5/29/2021 7:29:38 AM. End time: 5/29/2021 7:29:39 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/29/2021 7:29:39 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Versioning.Cleaner.VersioningCleanerTask'. Start time: 5/29/2021 7:29:39 AM. End time: 5/29/2021 7:29:39 AM. Task data: ''
+
+
+----------------------------------------

@@ -1,0 +1,76 @@
+----------------------------------------
+Timestamp: 5/14/2021 11:18:59 PM
+
+Message: Db Migration Complexity: Extending
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/14/2021 11:18:59 PM
+
+Message: Adding a column(s) on an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/14/2021 11:18:59 PM
+
+Message: Adding a foreign key constraint(s) to a new table(s), the create table statement(s) is included as well.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/14/2021 11:18:59 PM
+
+Message: Adding a new table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/14/2021 11:19:06 PM
+
+Message: -- add column for field <internal-class-id>
+ALTER TABLE [sf_dynamic_content] ADD [voa_class] int NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/14/2021 11:19:06 PM
+
+Message: UPDATE [sf_dynamic_content] SET [voa_class] = 0
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/14/2021 11:19:06 PM
+
+Message: ALTER TABLE [sf_dynamic_content] ALTER COLUMN [voa_class] int NOT NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/14/2021 11:19:06 PM
+
+Message: -- Telerik.Sitefinity.DynamicTypes.Model.TestModule.Person
+CREATE TABLE [testmodule_person] (
+    [base_id] uniqueidentifier NOT NULL,
+    [Title] NVARCHAR(255) NULL,             -- Person.Title
+    CONSTRAINT [pk_testmodule_person] PRIMARY KEY ([base_id])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/21/2021 6:26:47 PM
+
+Message: Upgrading Progress Sitefinity CMS from build version 7600 to 7624.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 1/6/2021 21:19:00
+
+Message: Upgrading Progress Sitefinity CMS from build version 7624 to 7625.
+
+
+----------------------------------------

@@ -1,0 +1,64 @@
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 4/23/2021 1:49:40 PM
+
+Message: Cannot read property 'column' of undefined
+
+TypeError: Cannot read property 'column' of undefined
+    at _.<anonymous> (https://tfs-sitefinity.virtualdreams.io/adminapp/assets/js/monaco-editor/vs/editor/editor.main.js:2309:716)
+    at Generator.next (<anonymous>)
+    at r (https://tfs-sitefinity.virtualdreams.io/adminapp/assets/js/monaco-editor/vs/editor/editor.main.js:93:776)
+    at ZoneDelegate.invoke (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:8262)
+    at Object.onInvoke (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:513027)
+    at ZoneDelegate.invoke (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:8202)
+    at Zone.run (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:3301)
+    at https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:15553
+    at ZoneDelegate.invokeTask (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:8995)
+    at Object.onInvokeTask (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:512874)
+Error: Cannot read property 'column' of undefined
+
+TypeError: Cannot read property 'column' of undefined
+    at _.<anonymous> (https://tfs-sitefinity.virtualdreams.io/adminapp/assets/js/monaco-editor/vs/editor/editor.main.js:2309:716)
+    at Generator.next (<anonymous>)
+    at r (https://tfs-sitefinity.virtualdreams.io/adminapp/assets/js/monaco-editor/vs/editor/editor.main.js:93:776)
+    at ZoneDelegate.invoke (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:8262)
+    at Object.onInvoke (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:513027)
+    at ZoneDelegate.invoke (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:8202)
+    at Zone.run (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:3301)
+    at https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:15553
+    at ZoneDelegate.invokeTask (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:8995)
+    at Object.onInvokeTask (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:512874)
+    at https://tfs-sitefinity.virtualdreams.io/adminapp/assets/js/monaco-editor/vs/editor/editor.main.js:51:301
+    at ZoneDelegate.invokeTask (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:8995)
+    at Object.onInvokeTask (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:512874)
+    at ZoneDelegate.invokeTask (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:8916)
+    at Zone.runTask (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:3998)
+    at ZoneTask.invokeTask (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:10181)
+    at ZoneTask.i.useG.invoke (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:10065)
+    at timer (https://tfs-sitefinity.virtualdreams.io/adminapp/polyfills.0d95ff61aaae11488e49.js:2:27430)
+
+Category: WebClientLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132636528199456769
+
+ProcessId: 8340
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6216
+
+Extended Properties: 
+----------------------------------------

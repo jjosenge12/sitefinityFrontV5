@@ -1,0 +1,84 @@
+----------------------------------------
+ActivityId: 71748fab-278e-4df5-b255-cf4447e1505f
+
+Timestamp: 5/11/2021 3:41:41 PM
+
+Message: Cannot read property 'totalCount' of undefined
+TypeError: Cannot read property 'totalCount' of undefined
+    at MapSubscriber.project (https://tfs-sitefinity.virtualdreams.io/adminapp/main.2ff40dc90c66e1d1769c.js:2:4402977)
+    at MapSubscriber._next (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:62061)
+    at MapSubscriber.next (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:8437)
+    at MergeMapSubscriber.notifyNext (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:73502)
+    at SimpleInnerSubscriber._next (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:77451)
+    at SimpleInnerSubscriber.next (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:8437)
+    at https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:46982
+    at innerSubscribe (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:79595)
+    at MergeMapSubscriber._innerSub (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:73252)
+    at MergeMapSubscriber._tryNext (https://tfs-sitefinity.virtualdreams.io/adminapp/vendor.11dfe0e25f27daa3d52b.js:2:73085)
+
+Category: WebClientLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132652199747398099
+
+ProcessId: 8188
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:7740
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/2/2021 3:14:31 AM
+
+Message: Cannot read property 'length' of null
+TypeError: Cannot read property 'length' of null
+    at Telerik.Sitefinity.Modules.Pages.Web.UI.EditorToolBar._workflowMenuCommandHandler (http://localhost:60876/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl19_TSM&compress=0&_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity%2c+Version%3d13.3.7625.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3afe1af1b5-3d55-4e38-9f45-dd84686faf3d%3afe4b1370%3ace5f2717%3b+Telerik.Sitefinity%3aen%3afe1af1b5-3d55-4e38-9f45-dd84686faf3d%3a9da9eb7f%3bTelerik.Sitefinity%2c+Version%3d13.3.7625.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3afe1af1b5-3d55-4e38-9f45-dd84686faf3d%3a41f6c3a7%3bTelerik.Web.UI%2c+Version%3d2021.1.119.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen%3aa0d12491-c9c2-4851-b575-66251a466dfe%3ab2e06756%3a16e4e7cd%3af7645509%3a24ee1bba%3a874f8ea2%3a33715776%3a92fe8ea0%3afa31b949%3ac128760b%3a19620875%3af46195d3%3a4877f69a%3a490a9d4e%3abd8f85e4%3bTelerik.Sitefinity%2c+Version%3d13.3.7625.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3afe1af1b5-3d55-4e38-9f45-dd84686faf3d%3af799cb2a%3a6015cc62%3ad7d242ca%3a78a01e8%3bTelerik.Sitefinity.Personalization.Impl%2c+Version%3d13.3.7625.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3a784f176f-cd21-4630-bfa1-c068d06c0c50%3a4c24b65a%3bTelerik.Sitefinity.Resources%3aen%3a21498d8c-980b-4189-b05d-9c0cc9114d1f%3acaa640fd%3bTelerik.Sitefinity%2c+Version%3d13.3.7625.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3afe1af1b5-3d55-4e38-9f45-dd84686faf3d%3a80c147f%3af77740f1%3a26cfb6dc%3a6e04508f%3a447a22b8%3bTelerik.Sitefinity.Resources%3aen%3a21498d8c-980b-4189-b05d-9c0cc9114d1f%3ac4ef6dcd%3a6f03d72a%3bTelerik.Sitefinity%2c+Version%3d13.3.7625.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3afe1af1b5-3d55-4e38-9f45-dd84686faf3d%3ac1fc658e%3af263d2e5%3bTelerik.Sitefinity.ABTesting%2c+Version%3d13.3.7625.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3aa4929fd4-4883-4927-b757-33fa512ea54b%3aa2f3ab5d:1156:63)
+    at e.invokeSafeFunction (http://localhost:60876/adminapp/main.82507f5f3902d69ad69f.js:2:3816979)
+    at e.handleCompletedWorkflowOperation (http://localhost:60876/adminapp/main.82507f5f3902d69ad69f.js:2:3816503)
+    at t.handleSaveOperationSuccess (http://localhost:60876/adminapp/main.82507f5f3902d69ad69f.js:2:3810511)
+    at n._next (http://localhost:60876/adminapp/main.82507f5f3902d69ad69f.js:2:3000009)
+    at n.value (http://localhost:60876/adminapp/vendor.a787cfdb273769cadfb5.js:2:9981)
+    at n.value (http://localhost:60876/adminapp/vendor.a787cfdb273769cadfb5.js:2:9082)
+    at n.value (http://localhost:60876/adminapp/vendor.a787cfdb273769cadfb5.js:2:7896)
+    at n.value (http://localhost:60876/adminapp/vendor.a787cfdb273769cadfb5.js:2:7514)
+    at n.value (http://localhost:60876/adminapp/vendor.a787cfdb273769cadfb5.js:2:158699)
+
+Category: WebClientLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DESKTOP-UP3FQ7N
+
+App Domain: /LM/W3SVC/2/ROOT-1-132670771760010758
+
+ProcessId: 13092
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:11292
+
+Extended Properties: 
+----------------------------------------

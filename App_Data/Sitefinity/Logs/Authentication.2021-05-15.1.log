@@ -1,0 +1,62 @@
+----------------------------------------
+ActivityId: e5ba03e7-219d-41e7-8e96-868e52248e18
+
+Timestamp: 14/05/2021 13:01:03
+
+Message: Identity Server: NoSignInCookie
+
+Category: Authentication
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132654689564860532
+
+ProcessId: 6892
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:864
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: bcb1cd24-965d-4e64-8f2f-92f872615110
+
+Timestamp: 14/05/2021 13:01:16
+
+Message: Identity Server: NoSignInCookie
+
+Category: Authentication
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: INSTANCE-TFS-SI
+
+App Domain: /LM/W3SVC/5/ROOT-1-132654689564860532
+
+ProcessId: 6892
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8648
+
+Extended Properties: 
+----------------------------------------
