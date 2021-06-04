@@ -338,8 +338,12 @@ WriteLiteral("><a>Aviso de Privacidad</a></li>\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
-WriteLiteral("><a>Pol&iacute;tica de protecci&oacute;n de datos Personales</a></li>\r\n          " +
-"      <li");
+WriteLiteral("><a");
+
+WriteLiteral(" href=\"/legales/proteccion-de-datos\"");
+
+WriteLiteral(">Pol&iacute;tica de protecci&oacute;n de datos Personales</a></li>\r\n             " +
+"   <li");
 
 WriteLiteral(" class=\"footerItem\"");
 

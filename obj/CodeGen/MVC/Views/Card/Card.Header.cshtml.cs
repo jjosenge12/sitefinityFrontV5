@@ -258,7 +258,7 @@ WriteLiteral(">Plan Anualidades</a>\r\n                <a");
 
 WriteLiteral(" class=\"menuLink\"");
 
-WriteLiteral(" href=\"#\"");
+WriteLiteral(" href=\"/nuestros-planes/tasas-y-comisiones\"");
 
 WriteLiteral(">Tasas y comisiones</a>\r\n            </div>\r\n        </span>\r\n        <div><a>Cot" +
 "izar Plan</a></div>\r\n        <div");
