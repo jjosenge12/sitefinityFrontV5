@@ -1,0 +1,62 @@
+﻿.card-dealers{
+    height: 85vh;
+    max-width: 100%;
+}
+
+.dealer-browser{
+    padding: 80px;
+}
+
+.browser-tab {
+    width: 50%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: #858585;
+    position: relative;
+    border-bottom: 1px solid #cccccc;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.browser-tab:hover{
+    background-color: #eee;
+    transition: all 0.1s ease-in-out;
+}
+
+.tab-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.browser-tab > .focus-border {
+    position: absolute;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-red);
+    transition: 0.4s;
+}
+
+.browser-tab > .focus-border.fb-left{
+    left: 100%;
+    transition: 0.4s;
+}
+
+.browser-tab > .focus-border.fb-right{
+    left: 0;
+    transition: 0.4s;
+}
+
+.browser-tab.active > .focus-border.fb-left {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
+
+.browser-tab.active > .focus-border.fb-right {
+    width: 100%;
+    transition: 0.4s;
+}

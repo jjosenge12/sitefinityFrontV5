@@ -1,0 +1,35 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-distribuidores.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-distribuidores.css"))
+
+@*<div class="container">*@
+<div class="row card-dealers">
+    <div class="col-5">
+        <div class="dealer-browser">
+            <div class="info-card-subtitle">Encuentra nuestros Distribuidores Autorizados</div>
+            <div class="tab-container">
+                <div class="browser-tab active">
+                    Código Postal
+                    <span class="focus-border fb-left"></span>
+                </div>
+                <div class="browser-tab">
+                    Estado
+                    <span class="focus-border fb-right"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-7">
+        <div id="map" class="h-100"></div>
+    </div>
+</div>
+@*</div>*@
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXcPfvcjvg30JnlXggadE6_jbjnsQvCTw&callback=initMap&libraries=places" async defer></script>

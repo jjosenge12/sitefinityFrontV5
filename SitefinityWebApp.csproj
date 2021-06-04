@@ -1069,6 +1069,7 @@
     <Content Include="AdminApp\vendor.a787cfdb273769cadfb5.js.LICENSE.txt" />
     <Content Include="Content\css\Banner\banner.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\Card\card-distribuidores.css" />
     <Content Include="Content\css\Card\card-estados-financieros.css" />
     <Content Include="Content\css\Card\card-info-corporativa.css" />
     <Content Include="Content\css\Card\card-login.css" />
@@ -1082,6 +1083,7 @@
     <Content Include="Content\css\select2.min.css" />
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\scripts\bootstrap.min.js" />
+    <Content Include="Content\scripts\Card\card-distribuidores.js" />
     <Content Include="Content\scripts\Card\card-estados-financieros.js" />
     <Content Include="Content\scripts\Card\card-login.js" />
     <Content Include="Content\scripts\InfoSelectDouble\info-select-double.js" />
@@ -1493,6 +1495,7 @@
     <Content Include="Mvc\Views\InfoSelectSingle\Index.cshtml" />
     <Content Include="Mvc\Views\InfoSelectSingle\DesignerView.Custom.cshtml" />
     <Content Include="Mvc\Views\InfoSelectSingle\DesignerView.Custom.json" />
+    <Content Include="Mvc\Views\Card\Card.Distribuidores.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>

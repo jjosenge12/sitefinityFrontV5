@@ -334,7 +334,11 @@ WriteLiteral(">\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
-WriteLiteral("><a>Aviso de Privacidad</a></li>\r\n                <li");
+WriteLiteral("><a");
+
+WriteLiteral(" href=\"/legales/aviso-de-privacidad\"");
+
+WriteLiteral(">Aviso de Privacidad</a></li>\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
@@ -347,7 +351,13 @@ WriteLiteral(">Pol&iacute;tica de protecci&oacute;n de datos Personales</a></li>
 
 WriteLiteral(" class=\"footerItem\"");
 
-WriteLiteral("><a>Formato ARCO</a></li>\r\n                <li");
+WriteLiteral("><a");
+
+WriteLiteral(" href=\"/docs/default-source/formato-arco/formato-derechos-arco.pdf\"");
+
+WriteLiteral(" target=\"_blank\"");
+
+WriteLiteral(">Formato ARCO</a></li>\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
@@ -375,8 +385,16 @@ WriteLiteral("><a");
 
 WriteLiteral(" href=\"/legales/informacion-financiera\"");
 
-WriteLiteral(">Informaci&oacute;n Financiera</a></li>\r\n            </ul>\r\n        </div>\r\n     " +
-"   <div");
+WriteLiteral(">Informaci&oacute;n Financiera</a></li>\r\n                <li");
+
+WriteLiteral(" class=\"footerItem\"");
+
+WriteLiteral("><a");
+
+WriteLiteral(" href=\"/legales/politica-de-cookies\"");
+
+WriteLiteral(">Pol&iacute;tica de Cookies</a></li>\r\n            </ul>\r\n        </div>\r\n        " +
+"<div");
 
 WriteLiteral(" class=\"col-12 col-lg-4 nav-list\"");
 
