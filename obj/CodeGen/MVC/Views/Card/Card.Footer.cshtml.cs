@@ -359,7 +359,11 @@ WriteLiteral(">Estados Financieros</a></li>\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
-WriteLiteral("><a>Informaci&oacute;n Corporativa</a></li>\r\n                <li");
+WriteLiteral("><a");
+
+WriteLiteral(" href=\"/legales/informacion-corporativa\"");
+
+WriteLiteral(">Informaci&oacute;n Corporativa</a></li>\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
