@@ -245,7 +245,7 @@ WriteLiteral(" class=\"col-12 col-md-4\"");
 
 WriteLiteral("><a");
 
-WriteLiteral(" href=\"#\"");
+WriteLiteral(" href=\"/legales/informacion-corporativa/eventos-relevantes\"");
 
 WriteLiteral(" class=\"btn-red_inverted\"");
 
@@ -255,7 +255,7 @@ WriteLiteral(" class=\"col-12 col-md-4\"");
 
 WriteLiteral("><a");
 
-WriteLiteral(" href=\"#\"");
+WriteLiteral(" href=\"/legales/informacion-corporativa/inversionistas\"");
 
 WriteLiteral(" class=\"btn-red_inverted\"");
 
@@ -265,7 +265,7 @@ WriteLiteral(" class=\"col-12 col-md-4\"");
 
 WriteLiteral("><a");
 
-WriteLiteral(" href=\"#\"");
+WriteLiteral(" href=\"/legales/informacion-corporativa/relacion-con-inversionistas\"");
 
 WriteLiteral(" class=\"btn-red_inverted\"");
 
