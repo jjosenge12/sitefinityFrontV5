@@ -1,6 +1,10 @@
-﻿.card-dealers{
+﻿.card-dealers {
     height: 85vh;
     max-width: 100%;
+}
+
+.card-dealers>*{
+    max-height: 100%;
 }
 
 .map-section{
@@ -9,6 +13,16 @@
 
 .dealer-browser {
     padding: 80px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dealer-browser.results{
+    padding-top: 40px;
+    transition: all 0.3s ease-in-out;
 }
 
 .browser-tab {
@@ -69,8 +83,15 @@
     margin-top: 50px;
 }
 
-.browser-input{
+.browser-input {
     padding-left: 30px !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.state-container.results,
+.browser-input.results{
+    padding-right: 30px !important;
+    transition: all 0.3s ease-in-out;   
 }
 
 .browser-input-icon {
@@ -79,6 +100,19 @@
     top: 50%;
     margin-top: -12px;
     user-select: none;
+}
+
+#refresh-search-select,
+#refresh-search-pc {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+    user-select: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
 }
 
 .browser-actions{
@@ -117,6 +151,93 @@
     border-bottom: 1px solid #aaaaaa;
 }
 
+select[class*="error"] ~ .select2-container {
+    border-bottom: 1px solid red !important;
+}
+
+label.error {
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    color: red;
+    font-size: 12px;
+}
+
+.dealer-result {
+    border-radius: 12px;
+    border: 2px solid #cccccc;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 120px;
+    padding: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dealer-result.active{
+    border-color: #cc0000;
+}
+
+.dealer-result-title{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 24px;
+}
+
+.dealer-result-address {
+    font-size: 14px;
+    font-weight: 400;
+    color: #858585;
+    line-height: 20px;
+}
+
+#browser-title{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+#browser-title>.info-card-subtitle{
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+#browser-title>#back-button{
+    color: #cc0000;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+#refresh-search-select:hover,
+#refresh-search-pc:hover,
+#browser-title > #back-button:hover {
+    background-color: rgba(204,204,204,0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+#refresh-search-select:active,
+#refresh-search-pc:active,
+#browser-title > #back-button:active {
+    background-color: rgba(204,204,204,0.7);
+    transition: all 0.1s ease-in-out;
+}
+
+#dealer-results{
+    overflow-y: auto;
+    margin-top: 30px;
+    padding-right: 10px;
+}
+
+.dealer-browser ::-webkit-scrollbar-track{
+    background: white;
+}
+
 @media(max-width: 991px){
     .card-dealers{
         height: auto;
@@ -125,4 +246,19 @@
     .map-section{
         height: 85vh;
     }
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: #eee radial-gradient(circle, transparent 1%, #eee 1%) center/15000%;
+}
+
+.ripple:active {
+  background-color: #ccc;
+  background-size: 100%;
+  transition: background 0s;
 }

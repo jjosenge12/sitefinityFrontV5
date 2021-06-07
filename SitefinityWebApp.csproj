@@ -1080,6 +1080,8 @@
     <Content Include="Content\css\InfoSelectSingle\info-select-single.css" />
     <Content Include="Content\css\inputs.css" />
     <Content Include="Content\css\jquery-ui.min.css" />
+    <Content Include="Content\css\loaders.css" />
+    <Content Include="Content\css\material-icons.css" />
     <Content Include="Content\css\select2.min.css" />
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\images\map-pin.png" />
@@ -1087,6 +1089,7 @@
     <Content Include="Content\scripts\Card\card-distribuidores.js" />
     <Content Include="Content\scripts\Card\card-estados-financieros.js" />
     <Content Include="Content\scripts\Card\card-login.js" />
+    <Content Include="Content\scripts\config.js" />
     <Content Include="Content\scripts\InfoSelectDouble\info-select-double.js" />
     <Content Include="Content\scripts\InfoSelectSingle\info-select-single.js" />
     <Content Include="Content\scripts\inputs.js" />

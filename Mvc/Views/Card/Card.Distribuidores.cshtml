@@ -6,7 +6,7 @@
 @Html.Script(ScriptRef.JQuery, "top", true)
 @Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
-@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-distribuidores.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-distribuidores.js"), "bottom", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/select2.min.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/Card/card-distribuidores.css"))
@@ -15,9 +15,13 @@
 @*<div class="container">*@
 <div class="customRow card-dealers">
     <div class="col-12 col-lg-5">
-        <div class="dealer-browser">
-            <div class="info-card-subtitle">Encuentra nuestros<br />Distribuidores Autorizados</div>
-            <div class="tab-container">
+        <div id="browser" class="dealer-browser">
+            <div id="dealers-title" class="info-card-subtitle">Encuentra nuestros<br />Distribuidores Autorizados</div>
+            <div id="browser-title" style="display: none;">
+                <span id="back-button" class="material-icons">arrow_back</span>
+                <span class="info-card-subtitle">Distribuidores</span>
+            </div>
+            <div id="tabs" class="tab-container">
                 <div class="browser-tab active" data-tab="1">
                     Código Postal
                     <span class="focus-border fb-left"></span>
@@ -27,27 +31,59 @@
                     <span class="focus-border fb-right"></span>
                 </div>
             </div>
-            <div>
+            <div id="tab-panels">
                 <div class="tab-panel" data-tab-panel="1">
-                    <div class="position-relative">
-                        <label class="browser-input-icon" for="postal-code"><img src="~/Content/images/map-pin.png" /></label>
-                        <input id="postal-code" class="form-input effect-2 browser-input" placeholder="Ingresa tu código postal" />
-                        <span class="focus-border"></span>
+                    <div class="sf-form-container" data-id="pc-input" data-action="#">
+                        <div class="position-relative">
+                            <label class="browser-input-icon" for="postal-code"><img src="~/Content/images/map-pin.png" /></label>
+                            <input name="postal-code" id="postal-code" class="form-input effect-2 browser-input" placeholder="Ingresa tu código postal" />
+                            <span id="refresh-search-pc" class="material-icons">search</span>
+                            <span class="focus-border"></span>
+                        </div>
                     </div>
                     <div class="browser-actions">
                         <button type="button" class="btn-red_inverted">VER MAPA</button>
-                        <button type="button" class="btn-red">BUSCAR</button>
+                        <button type="button" id="search-dealers-pc" class="btn-red">BUSCAR</button>
                     </div>
                 </div>
                 <div class="tab-panel" data-tab-panel="2" style="display: none;">
-                    <div class="position-relative">
-                        <label class="browser-input-icon" for="state"><img src="~/Content/images/map-pin.png" /></label>
-                        <select id="state" class="form-input effect-2 browser-input">
-                            <option>Selecciona un estado</option>
-                        </select>
-                        <span class="focus-border"></span>
+                    <div class="sf-form-container" data-id="state-select" data-action="#">
+                        <div class="position-relative state-container">
+                            <label class="browser-input-icon" for="state"><img src="~/Content/images/map-pin.png" /></label>
+                            <select name="state" id="state" class="form-input effect-2 browser-input">
+                                <option value="0" disabled selected>Selecciona un estado</option>
+                            </select>
+                            <span id="refresh-search-select" class="material-icons">search</span>
+                            <span class="focus-border"></span>
+                        </div>
+                    </div>
+                    <div class="browser-actions">
+                        <button type="button" class="btn-red_inverted">VER MAPA</button>
+                        <button type="button" id="search-dealers-state" class="btn-red">BUSCAR</button>
                     </div>
                 </div>
+            </div>
+            <div id="dealer-results" style="display: none;">
+                <div class="d-flex justify-content-center">
+                    <div id="dealer-loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                </div>
+                <div id="results-list"></div>
+                @*<div class="dealer-result ripple">
+                        <div class="dealer-result-title">Toyota Merida</div>
+                        <div class="dealer-result-address">Prol. Paseo Montejo 330, Benito Juárez Nte., 97119 Mérida, Yuc., México.</div>
+                    </div>
+                    <div class="dealer-result ripple">
+                        <div class="dealer-result-title">Toyota Merida</div>
+                        <div class="dealer-result-address">Prol. Paseo Montejo 330, Benito Juárez Nte., 97119 Mérida, Yuc., México.</div>
+                    </div>
+                    <div class="dealer-result ripple">
+                        <div class="dealer-result-title">Toyota Merida</div>
+                        <div class="dealer-result-address">Prol. Paseo Montejo 330, Benito Juárez Nte., 97119 Mérida, Yuc., México.</div>
+                    </div>
+                    <div class="dealer-result ripple">
+                        <div class="dealer-result-title">Toyota Merida</div>
+                        <div class="dealer-result-address">Prol. Paseo Montejo 330, Benito Juárez Nte., 97119 Mérida, Yuc., México.</div>
+                    </div>*@
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@ var warningImg = '../../../../../Mvc/Content/TFSM/Images/Paso0/alert.gif';
 var dealerCode = 0;
 
 $(document).ready(function () {
-    initMap();
+    //initMap();
     /*GetDDLEstados();*/
 
     //$('#ddlEstados').on('change', function () {
@@ -61,11 +61,34 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
+function capitalize(str) {
+    return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
+        return letter.toUpperCase();
+    });
+}
+
 $(document).ready(function () {
+    var select_validator = $("#state-select").validate({
+        rules:
+        {
+            state: {
+                selectRequired: true
+            }
+        }
+    });
+    var input_validator = $("#pc-input").validate({
+        rules:
+        {
+            "postal-code": {
+                required: true,
+                isPostalCode: true
+            }
+        }
+    });
+
     $(".browser-tab").click(function () {
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
-        console.log($(this));
         var tab = $(this)[0].dataset["tab"];
 
         var panel = $(`.tab-panel[data-tab-panel=${tab}]`)[0];
@@ -73,15 +96,179 @@ $(document).ready(function () {
         $(panel).siblings().hide();
     });
 
-    $("#state").select2({
-        dropdownParent: $("#state").parent()
+    let states = [];
+    $.ajax({
+        type: "get",
+        url: window.config.urlbase + "/getcountrystates",
+        datatype: "json",
+        success: function (data) {
+            data.results.forEach((x) => {
+                let state = {
+                    id: x.id_estado,
+                    text: capitalize(x.descripcion),
+                };
+
+                states.push(state);
+            });
+
+            $("#state").select2({
+                dropdownParent: $("#state").parent(),
+                data: states,
+            });
+
+            $("select").on("select2:open", function () {
+                $(this).siblings("[class='focus-border']").addClass("active");
+            });
+
+            $("select").on("select2:close", function () {
+                $(this).siblings("[class='focus-border active']").removeClass("active");
+            });
+
+            $("select").on("select2:select", function () {
+                select_validator.element("#state");
+            });
+        },
     });
 
-    $("select").on("select2:open", function () {
-        $(this).siblings("[class='focus-border']").addClass("active");
+    $("#search-dealers-pc").click(function () {
+        $("#results-list").html("");
+        if ($("#pc-input").valid()) {
+            hideBrowser(this, 1);
+            $("#dealer-results").show();
+            getDealersByPostalCode($("#postal-code").val());
+        }
     });
 
-    $("select").on("select2:close", function () {
-        $(this).siblings("[class='focus-border active']").removeClass("active");
+    $("#refresh-search-pc").click(function () {
+
+        if ($("#pc-input").valid()) {
+            $("#results-list").html("");
+            getDealersByPostalCode($("#postal-code").val());
+        }
     });
+
+    $("#search-dealers-state").click(function () {
+
+        $("#results-list").html("");
+        if ($("#state-select").valid()) {
+            hideBrowser(this, 2);
+            $("#dealer-results").show();
+            getDealersByState($("#state").val());
+        }
+
+    });
+
+    $("#refresh-search-select").click(function () {
+
+        if ($("#state-select").valid()) {
+            $("#results-list").html("");
+            getDealersByState($("#state").val());
+        }
+    });
+
+    $("#back-button").click(function () {
+        showBrowser();
+    });
+
 });
+
+function hideBrowser(btn, type) {
+    $("#dealers-title").slideUp(400, () => $("#browser-title").show());
+    $("#tabs").slideUp(400);
+    $("#browser").addClass('results');
+    $(btn).parent().hide('fade', 400, () => $("#dealer-results").show());
+
+    if (type === 1) {
+        $(".browser-input").addClass('results');
+        setTimeout(() => $("#refresh-search-pc").show(), 400);
+    }
+    else {
+        $(".state-container").addClass('results');
+        setTimeout(() => $("#refresh-search-select").show(), 400);
+    }
+}
+
+function showBrowser() {
+    $("#browser-title").hide(0, () => $("#dealers-title").slideDown(400));
+    $("#tabs").show();
+    $("#browser").removeClass('results');
+    $("#dealer-results").hide('fade', 400, () => $(".browser-actions").show('fade', 400));
+    $("#refresh-search-pc").hide(() => $(".browser-input").removeClass('results'));
+    $("#refresh-search-select").hide(() => $(".state-container").removeClass('results'));
+}
+
+function getDealersByPostalCode(pc) {
+    $.ajax({
+        type: "get",
+        beforeSend: () => $("#dealer-loader").show(),
+        url: window.config.urlbase + "/getdealersbypostalcode?pc=" + pc,
+        datatype: "json",
+        success: function (data) {
+            let dealers = document.createElement('div');
+            data.results.forEach(function (x) {
+                let card = document.createElement('div');
+                let title = document.createElement('div');
+                let address = document.createElement('div');
+                console.log(x);
+                card.classList.add("dealer-result");
+                card.classList.add("ripple");
+                title.classList.add("dealer-result-title");
+                address.classList.add("dealer-result-address");
+
+                title.innerHTML = capitalize(x.Dealer);
+                address.innerHTML = x.Adress;
+                card.append(title);
+                card.append(address);
+
+                dealers.append(card);
+            });
+
+            $("#dealer-loader").hide();
+            $("#results-list").html(dealers.innerHTML);
+
+            $(".dealer-result").click(function () {
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+            });
+        },
+        complete: () => $("#dealer-loader").hide()
+    })
+}
+
+function getDealersByState(stateId) {
+    $.ajax({
+        type: "get",
+        beforeSend: () => $("#dealer-loader").show(),
+        url: window.config.urlbase + "/getdealersbystateid?stateId=" + stateId,
+        datatype: "json",
+        success: function (data) {
+            let dealers = document.createElement('div');
+            data.results.forEach(function (x) {
+                let card = document.createElement('div');
+                let title = document.createElement('div');
+                let address = document.createElement('div');
+                console.log(x);
+                card.classList.add("dealer-result");
+                card.classList.add("ripple");
+                title.classList.add("dealer-result-title");
+                address.classList.add("dealer-result-address");
+
+                title.innerHTML = capitalize(x.Dealer);
+                address.innerHTML = x.Adress;
+                card.append(title);
+                card.append(address);
+
+                dealers.append(card);
+            });
+
+            $("#dealer-loader").hide();
+            $("#results-list").html(dealers.innerHTML);
+
+            $(".dealer-result").click(function () {
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+            });
+        },
+        complete: () => $("#dealer-loader").hide()
+    })
+}
