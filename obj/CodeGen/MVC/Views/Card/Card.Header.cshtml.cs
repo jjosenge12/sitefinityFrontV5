@@ -339,8 +339,11 @@ WriteLiteral(">Cont&aacute;ctanos</a>\r\n                <a");
 
 WriteLiteral(" class=\"menuLink\"");
 
-WriteLiteral(">Vacantes</a>\r\n            </div>\r\n        </span>\r\n        <div><a>Distribuidore" +
-"s</a></div>\r\n    </div>\r\n</div>\r\n<div");
+WriteLiteral(">Vacantes</a>\r\n            </div>\r\n        </span>\r\n        <a");
+
+WriteLiteral(" href=\"/distribuidores\"");
+
+WriteLiteral(">Distribuidores</a>\r\n    </div>\r\n</div>\r\n<div");
 
 WriteLiteral(" id=\"modalOverlay\"");
 

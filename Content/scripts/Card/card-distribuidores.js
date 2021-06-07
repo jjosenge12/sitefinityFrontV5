@@ -65,5 +65,23 @@ $(document).ready(function () {
     $(".browser-tab").click(function () {
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
+        console.log($(this));
+        var tab = $(this)[0].dataset["tab"];
+
+        var panel = $(`.tab-panel[data-tab-panel=${tab}]`)[0];
+        $(panel).show();
+        $(panel).siblings().hide();
+    });
+
+    $("#state").select2({
+        dropdownParent: $("#state").parent()
+    });
+
+    $("select").on("select2:open", function () {
+        $(this).siblings("[class='focus-border']").addClass("active");
+    });
+
+    $("select").on("select2:close", function () {
+        $(this).siblings("[class='focus-border active']").removeClass("active");
     });
 });

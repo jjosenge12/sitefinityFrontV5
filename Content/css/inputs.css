@@ -83,10 +83,10 @@
 
 .select2-container {
     width: 100% !important;
+    border-bottom: 1px solid #ccc !important;
 }
 
 .select2-selection {
     height: 35px !important;
     border: none !important;
-    border-bottom: 1px solid #ccc !important;
 }

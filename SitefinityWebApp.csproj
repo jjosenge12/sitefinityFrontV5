@@ -1082,6 +1082,7 @@
     <Content Include="Content\css\jquery-ui.min.css" />
     <Content Include="Content\css\select2.min.css" />
     <Content Include="Content\css\styles.css" />
+    <Content Include="Content\images\map-pin.png" />
     <Content Include="Content\scripts\bootstrap.min.js" />
     <Content Include="Content\scripts\Card\card-distribuidores.js" />
     <Content Include="Content\scripts\Card\card-estados-financieros.js" />

@@ -5,23 +5,48 @@
 
 @Html.Script(ScriptRef.JQuery, "top", true)
 @Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-distribuidores.js"), "top", true)
 
+@Html.StyleSheet(Url.Content("~/Content/css/select2.min.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/Card/card-distribuidores.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
 
 @*<div class="container">*@
 <div class="customRow card-dealers">
     <div class="col-5">
         <div class="dealer-browser">
-            <div class="info-card-subtitle">Encuentra nuestros Distribuidores Autorizados</div>
+            <div class="info-card-subtitle">Encuentra nuestros<br />Distribuidores Autorizados</div>
             <div class="tab-container">
-                <div class="browser-tab active">
+                <div class="browser-tab active" data-tab="1">
                     Código Postal
                     <span class="focus-border fb-left"></span>
                 </div>
-                <div class="browser-tab">
+                <div class="browser-tab" data-tab="2">
                     Estado
                     <span class="focus-border fb-right"></span>
+                </div>
+            </div>
+            <div>
+                <div class="tab-panel" data-tab-panel="1">
+                    <div class="position-relative">
+                        <label class="browser-input-icon" for="postal-code"><img src="~/Content/images/map-pin.png" /></label>
+                        <input id="postal-code" class="form-input effect-2 browser-input" placeholder="Ingresa tu código postal" />
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="browser-actions">
+                        <button type="button" class="btn-red_inverted">VER MAPA</button>
+                        <button type="button" class="btn-red">BUSCAR</button>
+                    </div>
+                </div>
+                <div class="tab-panel" data-tab-panel="2" style="display: none;">
+                    <div class="position-relative">
+                        <label class="browser-input-icon" for="state"><img src="~/Content/images/map-pin.png" /></label>
+                        <select id="state" class="form-input effect-2 browser-input">
+                            <option>Selecciona un estado</option>
+                        </select>
+                        <span class="focus-border"></span>
+                    </div>
                 </div>
             </div>
         </div>

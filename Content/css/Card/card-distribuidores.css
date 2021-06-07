@@ -60,3 +60,55 @@
     width: 100%;
     transition: 0.4s;
 }
+
+.tab-panel{
+    margin-top: 50px;
+}
+
+.browser-input{
+    padding-left: 30px !important;
+}
+
+.browser-input-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -12px;
+    user-select: none;
+}
+
+.browser-actions{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.browser-actions>button{
+    width: 48%;
+}
+
+.select2-selection__rendered {
+    font-size: 14px;
+    line-height: 40px !important;
+    padding-left: 0 !important;
+}
+
+.select2-selection__arrow {
+    height: 38px !important;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-selection {
+    height: 35px !important;
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+    padding-left: 30px !important;
+    background-color: transparent !important;
+}
+
+.select2-results {
+    border-bottom: 1px solid #aaaaaa;
+}
