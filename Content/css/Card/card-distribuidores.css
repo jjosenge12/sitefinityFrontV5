@@ -3,7 +3,11 @@
     max-width: 100%;
 }
 
-.dealer-browser{
+.map-section{
+    height: 100%;
+}
+
+.dealer-browser {
     padding: 80px;
 }
 
@@ -111,4 +115,14 @@
 
 .select2-results {
     border-bottom: 1px solid #aaaaaa;
+}
+
+@media(max-width: 991px){
+    .card-dealers{
+        height: auto;
+    }
+
+    .map-section{
+        height: 85vh;
+    }
 }
