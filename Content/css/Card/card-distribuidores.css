@@ -273,7 +273,11 @@ label.error {
 }
 
 .gm-style .gm-style-iw-c {
-    background-color: #cc0000 !important;
+    /*background-color: #cc0000 !important;*/
+}
+
+.poi-info-window{
+    padding: 10px;
 }
 
 .gm-style-iw-c {
@@ -307,6 +311,15 @@ label.error {
     top: calc(50% - 150px);
     left: calc(50% - 250px);
     z-index: 14;
+}
+
+@media(max-width: 767px) {
+    #contactModal {
+        width: 100vw;
+        left: 0;
+        top: 0;
+        height: 100vh;
+    }
 }
 
 .float-container{

@@ -77,6 +77,7 @@ function initMap() {
 
                 var contentString = '';
                 contentString += '<div class="container marker-popup" style="max-width:35rem;">';
+                contentString += '<input type="hidden" id="dealerId" value="' + dealer.IdDealer + '"/>';
                 contentString += '<div class="row">';
                 contentString += '<div class="col-9 popup-left">';
                 contentString += '<div><p class="popup-title">' + dealer.Dealer + '</p></div>';
@@ -145,12 +146,6 @@ function initMap() {
             contentString += '<div class="row">';
             contentString += '<div class="col-9 d-flex align-items-center justify-content-center">';
             contentString += '<div><p class="popup-title">Aquí se encuentra usted</p></div>';
-            //contentString += '<hr style="color:#ffffff; margin: 0.5rem 0;"/>';
-            //contentString += '<div><p class="adreess">' + dealer.Adress + '</p></div>';
-
-            //contentString += '<div class="col-sm-12 mt-4" style="display:flex; justify-content:center;">';
-            //contentString += '<button type="button" onclick="openModal(\'contactModal\')" class="btn-red">Contactar</button>';
-            //contentString += '</div>';
 
             contentString += '</div>';
             contentString += '<div class="col-3 popup-right">';
@@ -187,73 +182,22 @@ function initMap() {
 
         }, function () {
             handleLocationError(true, infoWindow, map.getCenter());
+            //map.setCenter({ lat: dealers[0].Lat, lng: dealers[0].Lng })
         });
     } else {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
+        map.setCenter({ lat: dealers[0].Lat, lng: dealers[0].Lng })
     }
 
 };
-
-function createMarker(dealer) {
-    let marker = new google.maps.Marker({
-
-        position: { lat: Number(dealer.Lat), lng: Number(dealer.Lng) },
-
-        zIndex: google.maps.Marker.MAX_ZINDEX,
-
-        //icon: iconTFSM
-
-    });
-
-    var contentString = '';
-    contentString += '<div class="container MarkerPopUp" style="max-width:18rem;">';
-    contentString += '<div class="row">';
-    contentString += '<div class="col-sm-9">';
-    contentString += '<div class="row"><p class="custom-title">' + dealer.Dealer + '</p></div>';
-    contentString += '<div class="row"><p class="adreess">' + dealer.Adress + '</p></div>';
-    contentString += '</div>';
-    contentString += '<div class="col-sm-3">';
-    contentString += '<img src="../../Content/TFSM/Images/Distribuidores/map-marker-tfsm.png" />';
-    contentString += '</div>';
-
-    contentString += '<div class="col-sm-12" style="display:flex; justify-content:center;">';
-    contentString += '<input type="button" onclick="openModal("newsletterTermsModal");" id="btnContactarMapa" value="Contactar"/>';
-    contentString += '</div>';
-
-    contentString += '</div>';
-    contentString += '</div>';
-
-    marker.info = new google.maps.InfoWindow({
-
-        content: contentString
-    });
-
-
-    google.maps.event.addListener(marker, 'click', function () {
-
-        if (lastMarker) {
-
-            lastMarker.info.close();
-
-        }
-
-        marker.info.open(map, marker);
-
-        lastMarker = marker;
-        map.setZoom(15);
-        map.setCenter(marker.position);
-    });
-
-    return marker;
-}
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
+    //infoWindow.open(map);
 }
 
 function capitalize(str) {
@@ -385,10 +329,11 @@ $(document).ready(function () {
     });
 
     $("#sendContact").click(function () {
+        closeModal("contactModal");
         if ($("#contact-form").valid()) {
 
             var data = {};
-            data.CodigoDistribuidor = $(".dealer-result.ripple.active")[0].dataset.dealerId;
+            data.CodigoDistribuidor = $("#dealerId").val();
             data.Nombre = $('#contact-name').val();
             data.Movil = $('#contact-phone').val();
             data.Email = $('#contact-email').val();
@@ -397,6 +342,8 @@ $(document).ready(function () {
                 type: 'POST',
                 url: window.config.urlbase + '/SalesForceDistribuidores',
                 data: data,
+                beforeSend: showLoader,
+                complete: hideLoader,
                 dataType: "json",
                 success: function (result) {
                     console.log(result);
