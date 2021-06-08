@@ -5,45 +5,186 @@
 
 // Global variables
 var map, infoWindow, geocoder, closestDistance = 50000, icon = '', arrMarkers = [];
-var iconMyPosition = '../../../../../Mvc/Content/TFSM/Images/Distribuidores/Map-Marker-Azure.png';
-var iconTFSM = '../../../../../Mvc/Content/TFSM/Images/Distribuidores/marker_map_travel_48.png';
-var iconSelected = '../../../../../Mvc/Content/TFSM/Images/Distribuidores/map-marker-toyota-car.png';
-var okImg = '../../../../../Mvc/Content/TFSM/Images/Paso0/ok.gif';
-var errImg = '../../../../../Mvc/Content/TFSM/Images/Paso0/err.gif';
-var warningImg = '../../../../../Mvc/Content/TFSM/Images/Paso0/alert.gif';
+var iconMyPosition = '../../Content/Images/Distribuidores/map-marker.svg';
+var iconTFSM = '../../Content/Images/Distribuidores/marker_map_travel_48.png';
+var iconSelected = '../../Content/Images/Distribuidores/map-marker-toyota-car.png';
+var okImg = '../../Content/Images/Paso0/ok.gif';
+var errImg = '../../Content/Images/Paso0/err.gif';
+var warningImg = '../../Content/Images/Paso0/alert.gif';
 var dealerCode = 0;
+var dealers = [], lastMarker;
 
-$(document).ready(function () {
-    //initMap();
-    /*GetDDLEstados();*/
+function CenterControl(controlDiv, map, myLoc) {
 
-    //$('#ddlEstados').on('change', function () {
-    //    var id = $(this).attr('value');
-    //    if (parseInt(id) > 0) {
-    //        if (parseInt(id) === 1000)
-    //            initMap();
-    //        else
-    //            GetDealersByCountry(id);
-    //    }
-    //});
-});
+    // Set CSS for the control border.
+    var controlUI = document.createElement('div');
+    controlUI.style.backgroundColor = '#fff';
+    controlUI.style.border = '2px solid #fff';
+    controlUI.style.borderRadius = '2px';
+    controlUI.style.boxShadow = 'rgb(0 0 0 / 30%) 0px 1px 4px -1px';
+    controlUI.style.cursor = 'pointer';
+    controlUI.style.marginBottom = '22px';
+    controlUI.style.textAlign = 'center';
+    controlUI.style.width = '40px';
+    controlUI.style.height = '40px';
+    controlUI.style.display = 'flex';
+    controlUI.style.alignItems = 'center';
+    controlUI.style.justifyContent = 'center';
+    controlUI.title = 'Click to recenter the map';
+    controlDiv.appendChild(controlUI);
+
+    var controlImg = document.createElement('img');
+    //controlImg.src = '../Content/images/gps.png';
+    controlImg.src = '../../Content/Images/Distribuidores/gps.png';
+    controlImg.width = 20;
+    controlUI.appendChild(controlImg);
+
+
+    // Setup the click event listeners: simply set the map to Chicago.
+    controlUI.addEventListener('click', function () {
+        map.setZoom(15);
+        map.setCenter(myLoc);
+    });
+
+}
 
 function initMap() {
-    // Geolocation. Get Origin Point.
-    //$('#Loader').modal('show');
 
-    //infoWindow = new google.maps.InfoWindow;
+    infoWindow = new google.maps.InfoWindow;
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 21.914925, lng: -102.291311 },
+        zoom: 10
+    });
+
+    var markers;
+    $.ajax({
+        type: "get",
+        url: window.config.urlbase + "/getdealers",
+        datatype: "json",
+        success: function (data) {
+            dealers = data.results;
+            markers = data.results.map(function (dealer, i) {
+
+                let marker = new google.maps.Marker({
+
+                    position: { lat: Number(dealer.Lat), lng: Number(dealer.Lng) },
+                    zIndex: google.maps.Marker.MAX_ZINDEX,
+                    map: map,
+                    icon: iconTFSM
+
+                });
+
+                var contentString = '';
+                contentString += '<div class="container marker-popup" style="max-width:35rem;">';
+                contentString += '<div class="row">';
+                contentString += '<div class="col-9 popup-left">';
+                contentString += '<div><p class="popup-title">' + dealer.Dealer + '</p></div>';
+                contentString += '<hr style="color:#ffffff; margin: 0.5rem 0;"/>';
+                contentString += '<div><p class="adreess">' + dealer.Adress + '</p></div>';
+
+                contentString += '<div class="col-sm-12 mt-4" style="display:flex; justify-content:center;">';
+                contentString += '<button type="button" onclick="openModal(\'contactModal\')" class="btn-red">Contactar</button>';
+                contentString += '</div>';
+
+                contentString += '</div>';
+                contentString += '<div class="col-3 popup-right">';
+                contentString += '<img src="../../Content/Images/Distribuidores/map-marker-tfsm.png" />';
+                contentString += '</div>';
+
+                contentString += '</div>';
+                contentString += '</div>';
+
+                marker.info = new google.maps.InfoWindow({
+
+                    content: contentString
+                });
+
+
+                google.maps.event.addListener(marker, 'click', function () {
+
+                    if (lastMarker) {
+
+                        lastMarker.info.close();
+
+                    }
+
+                    marker.info.open(map, marker);
+
+                    lastMarker = marker;
+                    map.setZoom(15);
+                    map.setCenter(marker.position);
+                });
+
+                return marker;
+
+            });
+        },
+    });
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-            var pos = { lat: position.coords.latitude, lng: position.coords.longitude };
-            // Initialize variables.
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: pos,
-                zoom: 10
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+
+            map.setCenter(pos);
+
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                icon: { url: iconMyPosition, scaledSize: new google.maps.Size(45, 45) }
             });
 
-            /*getData(map, pos);*/
+            contentString = '';
+            contentString += '<div class="container marker-popup" style="max-width:35rem;">';
+            contentString += '<div class="row">';
+            contentString += '<div class="col-9 d-flex align-items-center justify-content-center">';
+            contentString += '<div><p class="popup-title">Aquí se encuentra usted</p></div>';
+            //contentString += '<hr style="color:#ffffff; margin: 0.5rem 0;"/>';
+            //contentString += '<div><p class="adreess">' + dealer.Adress + '</p></div>';
+
+            //contentString += '<div class="col-sm-12 mt-4" style="display:flex; justify-content:center;">';
+            //contentString += '<button type="button" onclick="openModal(\'contactModal\')" class="btn-red">Contactar</button>';
+            //contentString += '</div>';
+
+            contentString += '</div>';
+            contentString += '<div class="col-3 popup-right">';
+            contentString += '<img src="../../Content/Images/Distribuidores/map-marker-tfsm.png" />';
+            contentString += '</div>';
+
+            contentString += '</div>';
+            contentString += '</div>';
+
+            marker.info = new google.maps.InfoWindow({
+
+                content: contentString
+
+            });
+
+
+            google.maps.event.addListener(marker, 'click', function () {
+
+                if (lastMarker) {
+                    lastMarker.info.close();
+                }
+                marker.info.open(map, marker);
+                lastMarker = marker;
+                map.setZoom(15);
+                map.setCenter(pos);
+            });
+
+            var centerControlDiv = document.createElement('div');
+            CenterControl(centerControlDiv, map, pos);
+
+            centerControlDiv.index = 1;
+            centerControlDiv.className = 'myLocationContainer';
+            map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(centerControlDiv);
+
         }, function () {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -51,7 +192,61 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
+
 };
+
+function createMarker(dealer) {
+    let marker = new google.maps.Marker({
+
+        position: { lat: Number(dealer.Lat), lng: Number(dealer.Lng) },
+
+        zIndex: google.maps.Marker.MAX_ZINDEX,
+
+        //icon: iconTFSM
+
+    });
+
+    var contentString = '';
+    contentString += '<div class="container MarkerPopUp" style="max-width:18rem;">';
+    contentString += '<div class="row">';
+    contentString += '<div class="col-sm-9">';
+    contentString += '<div class="row"><p class="custom-title">' + dealer.Dealer + '</p></div>';
+    contentString += '<div class="row"><p class="adreess">' + dealer.Adress + '</p></div>';
+    contentString += '</div>';
+    contentString += '<div class="col-sm-3">';
+    contentString += '<img src="../../Content/TFSM/Images/Distribuidores/map-marker-tfsm.png" />';
+    contentString += '</div>';
+
+    contentString += '<div class="col-sm-12" style="display:flex; justify-content:center;">';
+    contentString += '<input type="button" onclick="openModal("newsletterTermsModal");" id="btnContactarMapa" value="Contactar"/>';
+    contentString += '</div>';
+
+    contentString += '</div>';
+    contentString += '</div>';
+
+    marker.info = new google.maps.InfoWindow({
+
+        content: contentString
+    });
+
+
+    google.maps.event.addListener(marker, 'click', function () {
+
+        if (lastMarker) {
+
+            lastMarker.info.close();
+
+        }
+
+        marker.info.open(map, marker);
+
+        lastMarker = marker;
+        map.setZoom(15);
+        map.setCenter(marker.position);
+    });
+
+    return marker;
+}
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
@@ -170,6 +365,58 @@ $(document).ready(function () {
         showBrowser();
     });
 
+    $("#contact-form").validate({
+        rules: {
+            name: {
+                required: true
+            },
+            phone: {
+                required: true
+            },
+            email: {
+                required: true,
+                isEmail: true
+            }
+        }
+    });
+
+    $("#contact-form").submit(function (e) {
+        e.preventDefault();
+    });
+
+    $("#sendContact").click(function () {
+        if ($("#contact-form").valid()) {
+
+            var data = {};
+            data.CodigoDistribuidor = $(".dealer-result.ripple.active")[0].dataset.dealerId;
+            data.Nombre = $('#contact-name').val();
+            data.Movil = $('#contact-phone').val();
+            data.Email = $('#contact-email').val();
+
+            $.ajax({
+                type: 'POST',
+                url: window.config.urlbase + '/SalesForceDistribuidores',
+                data: data,
+                dataType: "json",
+                success: function (result) {
+                    console.log(result);
+                    Toastnotify.create({
+                        text: "¡Gracias! Nos pondremos en contacto contigo.",
+                        duration: 5000
+                    });
+                },
+                error: function (err) {
+                    consoler.log(err);
+                    swal.fire({
+                        title: "Ocurrió un error",
+                        text: "Por favor recargue la página e intente de nuevo.",
+                        icon: "error"
+                    });
+                }
+            });
+        }
+    });
+
 });
 
 function hideBrowser(btn, type) {
@@ -209,7 +456,7 @@ function getDealersByPostalCode(pc) {
                 let card = document.createElement('div');
                 let title = document.createElement('div');
                 let address = document.createElement('div');
-                console.log(x);
+
                 card.classList.add("dealer-result");
                 card.classList.add("ripple");
                 title.classList.add("dealer-result-title");
@@ -220,6 +467,10 @@ function getDealersByPostalCode(pc) {
                 card.append(title);
                 card.append(address);
 
+                card.dataset["lat"] = x.Lat;
+                card.dataset["lng"] = x.Lng;
+                card.dataset["dealerId"] = x.IdDealer;
+
                 dealers.append(card);
             });
 
@@ -229,6 +480,14 @@ function getDealersByPostalCode(pc) {
             $(".dealer-result").click(function () {
                 $(this).addClass('active');
                 $(this).siblings().removeClass('active');
+
+                console.log(this);
+                let lat = Number(this.dataset["lat"]);
+                let lng = Number(this.dataset["lng"]);
+
+                map.setCenter({ lat, lng });
+                map.setZoom(15);
+
             });
         },
         complete: () => $("#dealer-loader").hide()
@@ -247,7 +506,7 @@ function getDealersByState(stateId) {
                 let card = document.createElement('div');
                 let title = document.createElement('div');
                 let address = document.createElement('div');
-                console.log(x);
+
                 card.classList.add("dealer-result");
                 card.classList.add("ripple");
                 title.classList.add("dealer-result-title");
@@ -258,6 +517,10 @@ function getDealersByState(stateId) {
                 card.append(title);
                 card.append(address);
 
+                card.dataset["lat"] = x.Lat;
+                card.dataset["lng"] = x.Lng;
+                card.dataset["dealerId"] = x.IdDealer;
+
                 dealers.append(card);
             });
 
@@ -267,8 +530,55 @@ function getDealersByState(stateId) {
             $(".dealer-result").click(function () {
                 $(this).addClass('active');
                 $(this).siblings().removeClass('active');
+
+                console.log(this);
+                let lat = Number(this.dataset["lat"]);
+                let lng = Number(this.dataset["lng"]);
+
+                map.setCenter({ lat, lng });
+                map.setZoom(15);
+
             });
         },
         complete: () => $("#dealer-loader").hide()
     })
+}
+
+function getAllDealers() {
+    $.ajax({
+        type: "get",
+        url: window.config.urlbase + "/getdealers",
+        datatype: "json",
+        success: function (data) {
+            dealers = data.results;
+        },
+    })
+}
+
+var deviceWidth = () =>
+    window.innerWidth > 0 ? window.innerWidth : screen.width;
+
+function openModal(modalId) {
+    const modal = $(`#${modalId}`);
+    document.body.style.overflow = "hidden";
+    $("#modalOverlay").show("fade");
+    console.log(modal);
+    if (modal.id === "newsletterTermsModal") {
+        let body = modal.querySelector(".modal-body-custom");
+        $(body).animate({ scrollTop: $(body).offset().top - 20 }, "fast");
+    }
+
+    if (deviceWidth() <= 767) {
+        modal.show("slide", { direction: "down" });
+    } else {
+        modal.animate(
+            {
+                display: "toggle",
+                opacity: 1,
+                top: "-=50",
+            },
+            400,
+            () => modal.css({ display: "block" })
+        );
+    }
 }

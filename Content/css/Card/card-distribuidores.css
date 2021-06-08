@@ -14,7 +14,6 @@
 .dealer-browser {
     padding: 80px;
     transition: all 0.3s ease-in-out;
-    overflow: hidden;
     max-height: 100%;
     display: flex;
     flex-direction: column;
@@ -261,4 +260,71 @@ label.error {
   background-color: #ccc;
   background-size: 100%;
   transition: background 0s;
+}
+
+.marker-popup{
+    background-color: #cc0000;
+    color: #ffffff;
+    font-family: 'ToyotaType-Regular';
+}
+
+.popup-title{
+    font-weight: 600;
+}
+
+.gm-style .gm-style-iw-c {
+    background-color: #cc0000 !important;
+}
+
+.gm-style-iw-c {
+    padding: 0 !important;
+}
+
+.gm-style-iw-c button{
+    outline: none !important;
+}
+
+.gm-style .gm-style-iw-d {
+    overflow: auto !important;
+}
+
+.popup-left{
+    padding: 20px 15px 10px 15px !important;
+}
+
+.popup-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ea1e30;
+}
+
+#contactModal {
+    display: block;
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 250px);
+    z-index: 14;
+}
+
+.float-container{
+    margin: 16px 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.myLocationContainer{
+    right: 10px !important;
 }

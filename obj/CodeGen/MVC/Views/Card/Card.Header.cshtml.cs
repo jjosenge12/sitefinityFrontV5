@@ -133,6 +133,15 @@ WriteLiteral("\r\n");
 
             
             #line 16 "..\..\MVC\Views\Card\Card.Header.cshtml"
+Write(Html.StyleSheet(Url.Content("~/Content/css/loaders.css")));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+            
+            #line 17 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css")));
 
             

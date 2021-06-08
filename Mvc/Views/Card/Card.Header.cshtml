@@ -7,6 +7,7 @@
 @Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/sweetalert2.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true)
 @Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true)
 
@@ -69,6 +70,7 @@
         <a href="/distribuidores">Distribuidores</a>
     </div>
 </div>
+<div id="loader-overlay" style="display:none;"></div>
 <div id="modalOverlay" style="display:none;"></div>
 <div id="newsletterTermsModal" style="display:none;">
     <div class="modal-custom">
@@ -86,7 +88,10 @@
             en relaci&oacute;n con nuestros servicios; mantener controles administrativos y generar informaci&oacute;n estad&iacute;stica. De manera adicional, su informaci&oacute;n personal ser&aacute; utilizada para las siguientes finalidades secundarias
             que no son necesarias
         </div>
-        <div class="modal-actions-custom"><button id="denyNewsletterTerms" class="btn-red_inverted mr-3">NO</button><button id="acceptNewsletterTerms" class="btn-red">SI, ACEPTO</button></div>
+        <div class="modal-actions-custom">
+            <button type="button" id="denyNewsletterTerms" class="btn-red_inverted mr-3">NO</button>
+            <button type="button" id="acceptNewsletterTerms" class="btn-red">SI, ACEPTO</button>
+        </div>
     </div>
 </div>
 <div id="instagramModal" class="siteModal" style="display:none;">
@@ -100,7 +105,10 @@
         <div class="modal-body-custom">
             Entrar&aacute;s a un sitio web ajeno a Toyota Financial Services M&eacute;xico, el cual es responsable de sus propios contenidos y mantiene su pol&iacute;tica de privacidad y seguridad.
         </div>
-        <div class="modal-actions-custom"><button id="instagramModalBack" data-modal="instagram" class="btn-red_inverted mr-3">VOLVER</button><button id="instagramModalContinue" data-modal="instagram" class="btn-red">CONTINUAR</button></div>
+        <div class="modal-actions-custom">
+            <button type="button" id="instagramModalBack" data-modal="instagram" class="btn-red_inverted mr-3">VOLVER</button>
+            <button type="button" id="instagramModalContinue" data-modal="instagram" class="btn-red">CONTINUAR</button>
+        </div>
     </div>
 </div>
 <div id="facebookModal" class="siteModal" style="display:none;">
@@ -114,7 +122,10 @@
         <div class="modal-body-custom">
             Entrar&aacute;s a un sitio web ajeno a Toyota Financial Services M&eacute;xico, el cual es responsable de sus propios ontenidos y mantiene su pol&iacute;tica de privacidad y seguridad.
         </div>
-        <div class="modal-actions-custom"><button id="facebookModalBack" data-modal="facebook" class="btn-red_inverted mr-3">VOLVER</button><button id="facebookModalContinue" data-modal="facebook" class="btn-red">CONTINUAR</button></div>
+        <div class="modal-actions-custom">
+            <button type="button" id="facebookModalBack" data-modal="facebook" class="btn-red_inverted mr-3">VOLVER</button>
+            <button type="button" id="facebookModalContinue" data-modal="facebook" class="btn-red">CONTINUAR</button>
+        </div>
     </div>
 </div>
 <div id="linkedinModal" class="siteModal" style="display:none;">
@@ -128,7 +139,10 @@
         <div class="modal-body-custom">
             Entrar&aacute;s a un sitio web ajeno a Toyota Financial Services M&eacute;xico, el cual es responsable de sus propios contenidos y mantiene su pol&iacute;tica de privacidad y seguridad.
         </div>
-        <div class="modal-actions-custom"><button id="linkedinModalBack" data-modal="linkedin" class="btn-red_inverted mr-3">VOLVER</button><button id="linkedinModalContinue" data-modal="linkedin" class="btn-red">CONTINUAR</button></div>
+        <div class="modal-actions-custom">
+            <button type="button" id="linkedinModalBack" data-modal="linkedin" class="btn-red_inverted mr-3">VOLVER</button>
+            <button type="button" id="linkedinModalContinue" data-modal="linkedin" class="btn-red">CONTINUAR</button>
+        </div>
     </div>
 </div>
 <div id="youtubeModal" class="siteModal" style="display:none;">
@@ -142,6 +156,9 @@
         <div class="modal-body-custom">
             Entrar&aacute;s a un sitio web ajeno a Toyota Financial Services M&eacute;xico, el cual es responsable de sus propios contenidos y mantiene su pol&iacute;tica de privacidad y seguridad.
         </div>
-        <div class="modal-actions-custom"><button id="youtubeModalBack" data-modal="youtube" class="btn-red_inverted mr-3">VOLVER</button><button id="youtubeModalContinue" data-modal="youtube" class="btn-red">CONTINUAR</button></div>
+        <div class="modal-actions-custom">
+            <button type="button" id="youtubeModalBack" data-modal="youtube" class="btn-red_inverted mr-3">VOLVER</button>
+            <button type="button" id="youtubeModalContinue" data-modal="youtube" class="btn-red">CONTINUAR</button>
+        </div>
     </div>
 </div>

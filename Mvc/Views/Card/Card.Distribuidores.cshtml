@@ -6,13 +6,14 @@
 @Html.Script(ScriptRef.JQuery, "top", true)
 @Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-distribuidores.js"), "bottom", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/select2.min.css"))
-@Html.StyleSheet(Url.Content("~/Content/css/Card/card-distribuidores.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-distribuidores.css"))
 
-@*<div class="container">*@
 <div class="customRow card-dealers">
     <div class="col-12 col-lg-5">
         <div id="browser" class="dealer-browser">
@@ -68,22 +69,6 @@
                     <div id="dealer-loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>
                 </div>
                 <div id="results-list"></div>
-                @*<div class="dealer-result ripple">
-                        <div class="dealer-result-title">Toyota Merida</div>
-                        <div class="dealer-result-address">Prol. Paseo Montejo 330, Benito Juárez Nte., 97119 Mérida, Yuc., México.</div>
-                    </div>
-                    <div class="dealer-result ripple">
-                        <div class="dealer-result-title">Toyota Merida</div>
-                        <div class="dealer-result-address">Prol. Paseo Montejo 330, Benito Juárez Nte., 97119 Mérida, Yuc., México.</div>
-                    </div>
-                    <div class="dealer-result ripple">
-                        <div class="dealer-result-title">Toyota Merida</div>
-                        <div class="dealer-result-address">Prol. Paseo Montejo 330, Benito Juárez Nte., 97119 Mérida, Yuc., México.</div>
-                    </div>
-                    <div class="dealer-result ripple">
-                        <div class="dealer-result-title">Toyota Merida</div>
-                        <div class="dealer-result-address">Prol. Paseo Montejo 330, Benito Juárez Nte., 97119 Mérida, Yuc., México.</div>
-                    </div>*@
             </div>
         </div>
     </div>
@@ -91,6 +76,40 @@
         <div id="map" class="map-section"></div>
     </div>
 </div>
-@*</div>*@
+
+@*<div id="contact-overlay" class="overlay" style="display:none;"></div>*@
+<div id="contactModal" style="display:none;">
+    <div class="modal-custom">
+        <div class="modal-header-custom">
+            <span class="modal-header-custom_title">¡Hola! ¡D&eacute;janos tus datos y nosotros te contactaremos!</span>
+            <div class="modal-header-custom_close">
+                <span id="contactModalClose" data-modas="contact" class="material-icons icon-button">close</span>
+            </div>
+        </div>
+        <div class="modal-body-custom">
+            <div class="sf-form-container" data-id="contact-form" data-style="display: flex; flex-direction: column;">
+                <div class="float-container">
+                    <label class="float-label" for="contact-name">Nombre completo</label>
+                    <input type="text" name="name" id="contact-name" class="form-input effect-2" required/>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="float-container">
+                    <label class="float-label" for="contact-phone">Tel&eacute;fono</label>
+                    <input type="number" name="phone" id="contact-phone" class="form-input effect-2" required/>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="float-container">
+                    <label class="float-label" for="contact-email">Correo electr&oacute;nico</label>
+                    <input type="email" name="email" id="contact-email" class="form-input effect-2" required/>
+                    <span class="focus-border"></span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-actions-custom">
+            <button type="button" id="contactModalClose" data-modas="contact" class="btn-red_inverted mr-3">CANCELAR</button>
+            <button type="button" id="sendContact" class="btn-red">ENVIAR</button>
+        </div>
+    </div>
+</div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXcPfvcjvg30JnlXggadE6_jbjnsQvCTw&callback=initMap&libraries=places" async defer></script>
