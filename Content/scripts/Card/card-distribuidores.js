@@ -494,7 +494,8 @@ function createDealerCards(data) {
             //distance.innerHTML = res;
             //card.append(distance);
 
-            let pos = { lat: Number(x.lat), lng: Number(x.lng) };
+            let pos = { lat: Number(x.Lat), lng: Number(x.Lng) };
+            console.log(pos);
             service.getDistanceMatrix({
                 origins: [testPos],
                 destinations: [pos],
@@ -502,8 +503,8 @@ function createDealerCards(data) {
                 avoidHighways: false,
                 avoidTolls: false
             }, function (result, status) {
-                    console.log(result);
-                    distance.innerHTML = result.rows[0].elements[0].distance.text;
+                console.log(result);
+                distance.innerHTML = result.rows[0].elements[0].distance.text;
                 card.append(distance);
             });
 

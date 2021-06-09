@@ -31,9 +31,9 @@
     function encrypt_reg(isClient) {
 
         if (isClient) {
-            var clientId = document.getElementById("clientIdVisible").value;
+            var clientId = document.getElementById("clientVisible").value;
             var clientId_enc = window.btoa(clientId);
-            document.getElementById("clientId").value = clientId_enc;
+            document.getElementById("client").value = clientId_enc;
         }
         else {
             var name = document.getElementById("nameVisible").value;
