@@ -303,13 +303,17 @@ WriteLiteral(" class=\"normal-p\"");
 
 WriteLiteral(">\r\n                                Nos da mucho gusto que quieras ser parte de la" +
 " familia Toyota, juntos es posible.\r\n                            </p>\r\n         " +
-"               </div>\r\n\r\n                        <form");
+"               </div>\r\n\r\n                        <div");
 
-WriteLiteral(" method=\"GET\"");
+WriteLiteral(" data-id=\"nc-form\"");
 
-WriteLiteral(" action=\"https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin\"");
+WriteLiteral(" class=\"sf-form-container\"");
 
-WriteLiteral(" onsubmit=\"encrypt()\"");
+WriteLiteral(" data-method=\"GET\"");
+
+WriteLiteral(" data-action=\"https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin\"");
+
+WriteLiteral(" data-onsubmit=\"encrypt()\"");
 
 WriteLiteral(">\r\n                            <div");
 
@@ -321,16 +325,14 @@ WriteLiteral(" class=\"float-label\"");
 
 WriteLiteral(" for=\"userVisible\"");
 
-WriteLiteral(">\r\n                                    Ingresar su número / ID de cliente\r\n      " +
-"                          </label>\r\n                                <input");
+WriteLiteral(">\r\n                                    Correo electr&oacute;nico\r\n               " +
+"                 </label>\r\n                                <input");
 
 WriteLiteral(" class=\"form-input effect-2\"");
 
 WriteLiteral(" type=\"text\"");
 
 WriteLiteral(" id=\"userVisible\"");
-
-WriteLiteral(" placeholder=\"Ingresar su número / ID de cliente\"");
 
 WriteLiteral(" />\r\n                                <span");
 
@@ -354,8 +356,6 @@ WriteLiteral(" class=\"form-input effect-2\"");
 WriteLiteral(" type=\"password\"");
 
 WriteLiteral(" id=\"passVisible\"");
-
-WriteLiteral(" placeholder=\"Ingrese su contraseña\"");
 
 WriteLiteral(" />\r\n                                <span");
 
@@ -388,7 +388,7 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"fail\"");
 
-WriteLiteral(" value=\"https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/\"");
+WriteLiteral(" value=\"http://localhost:60876/tfsm/my-tfsm/\"");
 
 WriteLiteral(" id=\"fail\"");
 
@@ -413,7 +413,7 @@ WriteLiteral(" type=\"submit\"");
 WriteLiteral(" class=\"btn-registro\"");
 
 WriteLiteral("> INGRESAR </button>\r\n                            </div>\r\n\r\n                     " +
-"   </form>\r\n\r\n\r\n                        <div");
+"   </div>\r\n\r\n\r\n                        <div");
 
 WriteLiteral(" class=\"mb-1\"");
 
@@ -443,21 +443,9 @@ WriteLiteral(@">
                 </div>
             </div>
         </div>
-        <script");
+        ");
 
-WriteLiteral(" type=\"text/javascript\"");
-
-WriteLiteral(@">
-            function encrypt() {
-                var pass = document.getElementById(""passVisible"").value;
-                var user = document.getElementById(""userVisible"").value;
-                var pass_enc = window.btoa(pass);
-                var user_enc = window.btoa(user);
-                document.getElementById(""pass"").value = pass_enc;
-                document.getElementById(""user"").value = user_enc;
-            }
-        </script>
-");
+WriteLiteral("\r\n");
 
         }
     }

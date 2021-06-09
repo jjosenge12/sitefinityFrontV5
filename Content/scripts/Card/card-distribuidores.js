@@ -4,7 +4,7 @@
 // locate you.
 
 // Global variables
-var map, infoWindow, geocoder, closestDistance = 50000, icon = '', arrMarkers = [];
+var map, infoWindow, geocoder, closestDistance = 50000, distanceMatrix, userPos;
 var iconMyPosition = '../../Content/Images/Distribuidores/map-marker.svg';
 var iconTFSM = '../../Content/Images/Distribuidores/marker_map_travel_48.png';
 var iconSelected = '../../Content/Images/Distribuidores/map-marker-toyota-car.png';
@@ -89,7 +89,7 @@ function initMap() {
                 contentString += '</div>';
 
                 contentString += '</div>';
-                contentString += '<div class="col-3 popup-right">';
+                contentString += '<div class="col-3 popup-right" style="user-select:none;">';
                 contentString += '<img src="../../Content/Images/Distribuidores/map-marker-tfsm.png" />';
                 contentString += '</div>';
 
@@ -125,18 +125,18 @@ function initMap() {
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-            var pos = {
+            userPos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
 
-            infoWindow.setPosition(pos);
+            infoWindow.setPosition(userPos);
             infoWindow.setContent('Location found.');
 
-            map.setCenter(pos);
+            map.setCenter(userPos);
 
             var marker = new google.maps.Marker({
-                position: pos,
+                position: userPos,
                 map: map,
                 icon: { url: iconMyPosition, scaledSize: new google.maps.Size(45, 45) }
             });
@@ -170,11 +170,11 @@ function initMap() {
                 marker.info.open(map, marker);
                 lastMarker = marker;
                 map.setZoom(15);
-                map.setCenter(pos);
+                map.setCenter(userPos);
             });
 
             var centerControlDiv = document.createElement('div');
-            CenterControl(centerControlDiv, map, pos);
+            CenterControl(centerControlDiv, map, userPos);
 
             centerControlDiv.index = 1;
             centerControlDiv.className = 'myLocationContainer';
@@ -366,6 +366,27 @@ $(document).ready(function () {
 
 });
 
+function getDistance(lat, lng) {
+    distanceMatrix = new google.maps.DistanceMatrixService();
+    let testPos = { lat: 20.5974244, lng: -103.4430505 };
+    let pos = { lat: Number(lat), lng: Number(lng) };
+    let distance;
+    //-----------------------------------------
+    distanceMatrix.getDistanceMatrix({
+        origins: [testPos],
+        destinations: [pos],
+        travelMode: google.maps.TravelMode.DRIVING,
+        avoidHighways: false,
+        avoidTolls: false
+    }, function (response, status) {
+        distance = response.rows[0].elements[0].distance.text;
+        console.log(status);
+        console.log(distance);
+        return distance;
+    });
+
+}
+
 function hideBrowser(btn, type) {
     $("#dealers-title").slideUp(400, () => $("#browser-title").show());
     $("#tabs").slideUp(400);
@@ -398,44 +419,7 @@ function getDealersByPostalCode(pc) {
         url: window.config.urlbase + "/getdealersbypostalcode?pc=" + pc,
         datatype: "json",
         success: function (data) {
-            let dealers = document.createElement('div');
-            data.results.forEach(function (x) {
-                let card = document.createElement('div');
-                let title = document.createElement('div');
-                let address = document.createElement('div');
-
-                card.classList.add("dealer-result");
-                card.classList.add("ripple");
-                title.classList.add("dealer-result-title");
-                address.classList.add("dealer-result-address");
-
-                title.innerHTML = capitalize(x.Dealer);
-                address.innerHTML = x.Adress;
-                card.append(title);
-                card.append(address);
-
-                card.dataset["lat"] = x.Lat;
-                card.dataset["lng"] = x.Lng;
-                card.dataset["dealerId"] = x.IdDealer;
-
-                dealers.append(card);
-            });
-
-            $("#dealer-loader").hide();
-            $("#results-list").html(dealers.innerHTML);
-
-            $(".dealer-result").click(function () {
-                $(this).addClass('active');
-                $(this).siblings().removeClass('active');
-
-                console.log(this);
-                let lat = Number(this.dataset["lat"]);
-                let lng = Number(this.dataset["lng"]);
-
-                map.setCenter({ lat, lng });
-                map.setZoom(15);
-
-            });
+            createDealerCards(data);
         },
         complete: () => $("#dealer-loader").hide()
     })
@@ -448,47 +432,58 @@ function getDealersByState(stateId) {
         url: window.config.urlbase + "/getdealersbystateid?stateId=" + stateId,
         datatype: "json",
         success: function (data) {
-            let dealers = document.createElement('div');
-            data.results.forEach(function (x) {
-                let card = document.createElement('div');
-                let title = document.createElement('div');
-                let address = document.createElement('div');
-
-                card.classList.add("dealer-result");
-                card.classList.add("ripple");
-                title.classList.add("dealer-result-title");
-                address.classList.add("dealer-result-address");
-
-                title.innerHTML = capitalize(x.Dealer);
-                address.innerHTML = x.Adress;
-                card.append(title);
-                card.append(address);
-
-                card.dataset["lat"] = x.Lat;
-                card.dataset["lng"] = x.Lng;
-                card.dataset["dealerId"] = x.IdDealer;
-
-                dealers.append(card);
-            });
-
-            $("#dealer-loader").hide();
-            $("#results-list").html(dealers.innerHTML);
-
-            $(".dealer-result").click(function () {
-                $(this).addClass('active');
-                $(this).siblings().removeClass('active');
-
-                console.log(this);
-                let lat = Number(this.dataset["lat"]);
-                let lng = Number(this.dataset["lng"]);
-
-                map.setCenter({ lat, lng });
-                map.setZoom(15);
-
-            });
+            createDealerCards(data);
         },
         complete: () => $("#dealer-loader").hide()
     })
+}
+
+function createDealerCards(data) {
+    let dealers = document.createElement('div');
+    data.results.forEach(function (x) {
+        let card = document.createElement('div');
+        let title = document.createElement('div');
+        let address = document.createElement('div');
+
+        card.classList.add("dealer-result");
+        card.classList.add("ripple");
+        title.classList.add("dealer-result-title");
+        address.classList.add("dealer-result-address");
+
+        title.innerHTML = capitalize(x.Dealer);
+        address.innerHTML = x.Adress;
+        card.append(title);
+        card.append(address);
+
+        if (userPos) {
+            let distance = document.createElement('div');
+            let res = getDistance(x.Lat, x.Lng);
+            console.log(res);
+            //distance.innerHTML = res;
+            card.append(distance);
+        }
+
+        card.dataset["lat"] = x.Lat;
+        card.dataset["lng"] = x.Lng;
+        card.dataset["dealerId"] = x.IdDealer;
+
+        dealers.append(card);
+    });
+
+    $("#dealer-loader").hide();
+    $("#results-list").html(dealers.innerHTML);
+
+    $(".dealer-result").click(function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+
+        let lat = Number(this.dataset["lat"]);
+        let lng = Number(this.dataset["lng"]);
+
+        map.setCenter({ lat, lng });
+        map.setZoom(15);
+
+    });
 }
 
 function getAllDealers() {

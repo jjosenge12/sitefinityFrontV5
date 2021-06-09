@@ -79,25 +79,25 @@
                             </p>
                         </div>
 
-                        <form method="GET" action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin" onsubmit="encrypt()">
+                        <div data-id="nc-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin" data-onsubmit="encrypt()">
                             <div class="float-container my-5">
                                 <label class="float-label" for="userVisible">
-                                    Ingresar su número / ID de cliente
+                                    Correo electr&oacute;nico
                                 </label>
-                                <input class="form-input effect-2" type="text" id="userVisible" placeholder="Ingresar su número / ID de cliente" />
+                                <input class="form-input effect-2" type="text" id="userVisible" />
                                 <span class="focus-border"></span>
                             </div>
                             <div class="float-container my-5">
                                 <label class="float-label" for="passVisible">
                                     Ingrese su contraseña
                                 </label>
-                                <input class="form-input effect-2" type="password" id="passVisible" placeholder="Ingrese su contraseña" />
+                                <input class="form-input effect-2" type="password" id="passVisible" />
                                 <span class="focus-border"></span>
                             </div>
 
                             <input type="hidden" value="" name="user" id="user" />
                             <input type="hidden" value="" name="pass" id="pass" />
-                            <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/" id="fail" />
+                            <input type="hidden" name="fail" value="http://localhost:60876/tfsm/my-tfsm/" id="fail" />
                             <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/pruebitaincrustar"
                                    id="ok" />
 
@@ -105,7 +105,7 @@
                                 <button type="submit" class="btn-registro"> INGRESAR </button>
                             </div>
 
-                        </form>
+                        </div>
 
 
                         <div class="mb-1">
@@ -125,13 +125,35 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript">
+        @*<script type="text/javascript">
+            $(".sf-form-container").each(function () {
+                var form = document.createElement("form");
+
+                form.innerHTML = this.innerHTML;
+                Object.keys(this.dataset).forEach((x) => {
+                    form[x] = this.dataset[x];
+                });
+
+                $(this).html(form);
+            });
+
+            $("#nc-form").submit(function (e) {
+                encrypt();
+            });
+
             function encrypt() {
                 var pass = document.getElementById("passVisible").value;
                 var user = document.getElementById("userVisible").value;
+                var fail = document.getElementById("fail").value;
+                var ok = document.getElementById("ok").value;
                 var pass_enc = window.btoa(pass);
                 var user_enc = window.btoa(user);
+                var fail_enc = window.btoa(fail);
+                var ok_enc = window.btoa(ok);
                 document.getElementById("pass").value = pass_enc;
                 document.getElementById("user").value = user_enc;
+                document.getElementById("fail").value = fail_enc;
+                document.getElementById("ok").value = ok_enc;
+                //alert(pass_enc);
             }
-        </script>
+        </script>*@

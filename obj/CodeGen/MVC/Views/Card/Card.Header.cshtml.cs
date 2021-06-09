@@ -88,7 +88,7 @@ WriteLiteral("\r\n");
 
             
             #line 10 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/sweetalert2.js"), "top", true));
 
             
             #line default
@@ -97,6 +97,15 @@ WriteLiteral("\r\n");
 
             
             #line 11 "..\..\MVC\Views\Card\Card.Header.cshtml"
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+            
+            #line 12 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true));
 
             
@@ -105,7 +114,7 @@ Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TF
 WriteLiteral("\r\n\r\n");
 
             
-            #line 13 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 14 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css")));
 
             
@@ -114,7 +123,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 14 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 15 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 
             
@@ -123,7 +132,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 15 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 16 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/material-icons.css")));
 
             
@@ -132,7 +141,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/material-icons.css")));
 WriteLiteral("\r\n");
 
             
-            #line 16 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 17 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/loaders.css")));
 
             
@@ -141,7 +150,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/loaders.css")));
 WriteLiteral("\r\n");
 
             
-            #line 17 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 18 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css")));
 
             
@@ -372,6 +381,16 @@ WriteLiteral(" href=\"/distribuidores\"");
 
 WriteLiteral(">Distribuidores</a>\r\n    </div>\r\n</div>\r\n<div");
 
+WriteLiteral(" id=\"loader-overlay\"");
+
+WriteLiteral(" style=\"display:none;\"");
+
+WriteLiteral("><div");
+
+WriteLiteral(" class=\"lds-ring\"");
+
+WriteLiteral("><div></div><div></div><div></div><div></div></div></div>\r\n<div");
+
 WriteLiteral(" id=\"modalOverlay\"");
 
 WriteLiteral(" style=\"display:none;\"");
@@ -422,19 +441,23 @@ WriteLiteral(@">
 
 WriteLiteral(" class=\"modal-actions-custom\"");
 
-WriteLiteral("><button");
+WriteLiteral(">\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"denyNewsletterTerms\"");
 
 WriteLiteral(" class=\"btn-red_inverted mr-3\"");
 
-WriteLiteral(">NO</button><button");
+WriteLiteral(">NO</button>\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"acceptNewsletterTerms\"");
 
 WriteLiteral(" class=\"btn-red\"");
 
-WriteLiteral(">SI, ACEPTO</button></div>\r\n    </div>\r\n</div>\r\n<div");
+WriteLiteral(">SI, ACEPTO</button>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div");
 
 WriteLiteral(" id=\"instagramModal\"");
 
@@ -477,7 +500,9 @@ WriteLiteral(">\r\n            Entrar&aacute;s a un sitio web ajeno a Toyota Fin
 
 WriteLiteral(" class=\"modal-actions-custom\"");
 
-WriteLiteral("><button");
+WriteLiteral(">\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"instagramModalBack\"");
 
@@ -485,7 +510,9 @@ WriteLiteral(" data-modal=\"instagram\"");
 
 WriteLiteral(" class=\"btn-red_inverted mr-3\"");
 
-WriteLiteral(">VOLVER</button><button");
+WriteLiteral(">VOLVER</button>\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"instagramModalContinue\"");
 
@@ -493,7 +520,7 @@ WriteLiteral(" data-modal=\"instagram\"");
 
 WriteLiteral(" class=\"btn-red\"");
 
-WriteLiteral(">CONTINUAR</button></div>\r\n    </div>\r\n</div>\r\n<div");
+WriteLiteral(">CONTINUAR</button>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div");
 
 WriteLiteral(" id=\"facebookModal\"");
 
@@ -536,7 +563,9 @@ WriteLiteral(">\r\n            Entrar&aacute;s a un sitio web ajeno a Toyota Fin
 
 WriteLiteral(" class=\"modal-actions-custom\"");
 
-WriteLiteral("><button");
+WriteLiteral(">\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"facebookModalBack\"");
 
@@ -544,7 +573,9 @@ WriteLiteral(" data-modal=\"facebook\"");
 
 WriteLiteral(" class=\"btn-red_inverted mr-3\"");
 
-WriteLiteral(">VOLVER</button><button");
+WriteLiteral(">VOLVER</button>\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"facebookModalContinue\"");
 
@@ -552,7 +583,7 @@ WriteLiteral(" data-modal=\"facebook\"");
 
 WriteLiteral(" class=\"btn-red\"");
 
-WriteLiteral(">CONTINUAR</button></div>\r\n    </div>\r\n</div>\r\n<div");
+WriteLiteral(">CONTINUAR</button>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div");
 
 WriteLiteral(" id=\"linkedinModal\"");
 
@@ -595,7 +626,9 @@ WriteLiteral(">\r\n            Entrar&aacute;s a un sitio web ajeno a Toyota Fin
 
 WriteLiteral(" class=\"modal-actions-custom\"");
 
-WriteLiteral("><button");
+WriteLiteral(">\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"linkedinModalBack\"");
 
@@ -603,7 +636,9 @@ WriteLiteral(" data-modal=\"linkedin\"");
 
 WriteLiteral(" class=\"btn-red_inverted mr-3\"");
 
-WriteLiteral(">VOLVER</button><button");
+WriteLiteral(">VOLVER</button>\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"linkedinModalContinue\"");
 
@@ -611,7 +646,7 @@ WriteLiteral(" data-modal=\"linkedin\"");
 
 WriteLiteral(" class=\"btn-red\"");
 
-WriteLiteral(">CONTINUAR</button></div>\r\n    </div>\r\n</div>\r\n<div");
+WriteLiteral(">CONTINUAR</button>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div");
 
 WriteLiteral(" id=\"youtubeModal\"");
 
@@ -654,7 +689,9 @@ WriteLiteral(">\r\n            Entrar&aacute;s a un sitio web ajeno a Toyota Fin
 
 WriteLiteral(" class=\"modal-actions-custom\"");
 
-WriteLiteral("><button");
+WriteLiteral(">\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"youtubeModalBack\"");
 
@@ -662,7 +699,9 @@ WriteLiteral(" data-modal=\"youtube\"");
 
 WriteLiteral(" class=\"btn-red_inverted mr-3\"");
 
-WriteLiteral(">VOLVER</button><button");
+WriteLiteral(">VOLVER</button>\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
 
 WriteLiteral(" id=\"youtubeModalContinue\"");
 
@@ -670,7 +709,7 @@ WriteLiteral(" data-modal=\"youtube\"");
 
 WriteLiteral(" class=\"btn-red\"");
 
-WriteLiteral(">CONTINUAR</button></div>\r\n    </div>\r\n</div>");
+WriteLiteral(">CONTINUAR</button>\r\n        </div>\r\n    </div>\r\n</div>");
 
         }
     }

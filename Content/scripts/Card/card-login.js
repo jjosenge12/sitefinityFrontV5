@@ -1,28 +1,36 @@
 ﻿$(document).ready(function () {
-    //let bloqueVariable = document.getElementById("variable");
-    //bloqueVariable.innerHTML = document.getElementById("bienvenida").innerHTML;
-    var noCliente = document.getElementById("ingreso-no-clientes");
-    var volver = document.getElementById("volver");
 
-    function changeBienvenida() {
-        //bloqueVariable.innerHTML = document.getElementById("iniciar-sesion").innerHTML;
-        $("#bienvenida").hide('slide', {direction: 'left'});
-        $("#iniciar-sesion").show('slide', { direction: 'left' });
-    };
-    function changeInicioDeSesion() {
-        //bloqueVariable.innerHTML = document.getElementById("bienvenida").innerHTML;
-        $("#iniciar-sesion").hide();
-        $("#bienvenida").show();
-    };
+    $(".sf-form-container").each(function () {
+        var form = document.createElement("form");
 
-    //function encrypt() {
-    //    var pass = document.getElementById("pass").value;
-    //    var user = document.getElementById("user").value;
-    //    var pass_enc = window.btoa(pass);
-    //    var user_enc = window.btoa(user);
-    //    document.getElementById("passwordHidden").value = pass_enc;
-    //    document.getElementById("userHidden").value = user_enc;
-    //}
+        form.innerHTML = this.innerHTML;
+        Object.keys(this.dataset).forEach((x) => {
+            form[x] = this.dataset[x];
+        });
+
+        $(this).html(form);
+        FloatLabel.init();
+    });
+
+    $("#nc-form").submit(function (e) {
+        encrypt();
+    });
+
+    function encrypt() {
+        var pass = document.getElementById("passVisible").value;
+        var user = document.getElementById("userVisible").value;
+        var fail = document.getElementById("fail").value;
+        var ok = document.getElementById("ok").value;
+        var pass_enc = window.btoa(pass);
+        var user_enc = window.btoa(user);
+        var fail_enc = window.btoa(fail);
+        var ok_enc = window.btoa(ok);
+        document.getElementById("pass").value = pass_enc;
+        document.getElementById("user").value = user_enc;
+        document.getElementById("fail").value = fail_enc;
+        document.getElementById("ok").value = ok_enc;
+        //alert(pass_enc);
+    }
 
     const swiper = new Swiper('.swiper-container', {
         speed: 400,
