@@ -1503,7 +1503,7 @@
     <Content Include="Mvc\Views\Card\Card.Login_Cliente.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Registro_NoCliente.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Registro_Exito.cshtml" />
-    <Content Include="Mvc\Views\Card\Card.Registro_Cliente - Copy.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Registro_Cliente.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>

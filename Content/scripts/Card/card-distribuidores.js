@@ -366,26 +366,53 @@ $(document).ready(function () {
 
 });
 
-function getDistance(lat, lng) {
-    distanceMatrix = new google.maps.DistanceMatrixService();
-    let testPos = { lat: 20.5974244, lng: -103.4430505 };
-    let pos = { lat: Number(lat), lng: Number(lng) };
-    let distance;
-    //-----------------------------------------
-    distanceMatrix.getDistanceMatrix({
-        origins: [testPos],
-        destinations: [pos],
-        travelMode: google.maps.TravelMode.DRIVING,
-        avoidHighways: false,
-        avoidTolls: false
-    }, function (response, status) {
-        distance = response.rows[0].elements[0].distance.text;
-        console.log(status);
-        console.log(distance);
-        return distance;
-    });
+//async function getDistance(lat, lng) {
+//    distanceMatrix = new google.maps.DistanceMatrixService();
+//    let testPos = { lat: 20.5974244, lng: -103.4430505 };
+//    let pos = { lat: Number(lat), lng: Number(lng) };
+//    let distance;
+//    //-----------------------------------------
+//    distance = await distanceMatrix.getDistanceMatrix({
+//        origins: [testPos],
+//        destinations: [pos],
+//        travelMode: google.maps.TravelMode.DRIVING,
+//        avoidHighways: false,
+//        avoidTolls: false
+//    });
 
-}
+
+//    console.log(distance);
+//    return await distance;
+//}
+
+const getDistanceMatrix = (service, data) => new Promise((resolve, reject) => {
+    service.getDistanceMatrix(data, (response, status) => {
+        if (status === 'OK') {
+            resolve(response)
+        } else {
+            reject(response);
+        }
+    })
+});
+
+getDistance = async (lat, lng) => {
+    const testPos = { lat: 20.5974244, lng: -103.4430505 };
+    const pos = { lat: Number(lat), lng: Number(lng) };
+    const service = new google.maps.DistanceMatrixService();
+    const result = await getDistanceMatrix(
+        service,
+        {
+            origins: [testPos],
+            destinations: [pos],
+            travelMode: google.maps.TravelMode.DRIVING,
+            avoidHighways: false,
+            avoidTolls: false
+        }
+    )
+    return {
+        distance: result.rows[0].elements[0].status
+    };
+};
 
 function hideBrowser(btn, type) {
     $("#dealers-title").slideUp(400, () => $("#browser-title").show());
@@ -440,6 +467,10 @@ function getDealersByState(stateId) {
 
 function createDealerCards(data) {
     let dealers = document.createElement('div');
+
+    const service = new google.maps.DistanceMatrixService();
+    let testPos = { lat: 20.5974244, lng: -103.4430505 };
+
     data.results.forEach(function (x) {
         let card = document.createElement('div');
         let title = document.createElement('div');
@@ -457,10 +488,25 @@ function createDealerCards(data) {
 
         if (userPos) {
             let distance = document.createElement('div');
-            let res = getDistance(x.Lat, x.Lng);
-            console.log(res);
+            //let res;
+            //getDistance(x.Lat, x.Lng).then(x => res = x);
+            //console.log(res);
             //distance.innerHTML = res;
-            card.append(distance);
+            //card.append(distance);
+
+            let pos = { lat: Number(x.lat), lng: Number(x.lng) };
+            service.getDistanceMatrix({
+                origins: [testPos],
+                destinations: [pos],
+                travelMode: google.maps.TravelMode.DRIVING,
+                avoidHighways: false,
+                avoidTolls: false
+            }, function (result, status) {
+                    console.log(result);
+                    distance.innerHTML = result.rows[0].elements[0].distance.text;
+                card.append(distance);
+            });
+
         }
 
         card.dataset["lat"] = x.Lat;
