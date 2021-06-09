@@ -1501,6 +1501,8 @@
     <Content Include="Mvc\Views\InfoSelectSingle\DesignerView.Custom.json" />
     <Content Include="Mvc\Views\Card\Card.Distribuidores.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Login_Cliente.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Registro_Cliente.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Registro_NoCliente.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>
