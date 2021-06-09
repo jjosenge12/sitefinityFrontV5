@@ -24,6 +24,66 @@
         <div class="swiper-container col-12 col-lg-5">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
+                    <div id="iniciar-sesion" class="login-form">
+                        <div class="d-flex mb-5">
+                            <div class="back-button" id="volver-c">
+                                <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
+                            </div>
+                        </div>
+                        <div class="mt-5 mb-1">
+                            <h1 class="registro-title black-title text-left">Iniciar sesión</h1>
+                        </div>
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                Nos da mucho gusto que vuelvas a Estrenar con nosotros un Toyota, juntos es posible.
+                            </p>
+                        </div>
+
+                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin" data-onsubmit="encrypt()">
+                            <div class="float-container my-5">
+                                <label class="float-label" for="clientVisible">
+                                    Ingresar su n&uacute;mero de cliente / ID de cliente
+                                </label>
+                                <input class="form-input effect-2" type="text" id="clientVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                            <div class="float-container my-5">
+                                <label class="float-label" for="passVisible">
+                                    Ingrese su contraseña
+                                </label>
+                                <input class="form-input effect-2" type="password" id="passVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+
+                            <input type="hidden" value="" name="client" id="client" />
+                            <input type="hidden" value="" name="pass" id="pass" />
+                            <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/login-clientes" id="fail" />
+                            <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/tfsm/mis-cotizaciones"
+                                   id="ok" />
+
+                            <div class="my-5 d-flex justify-content-center">
+                                <button type="submit" class="btn-registro"> INGRESAR </button>
+                            </div>
+
+                        </div>
+
+
+                        <div class="mb-1">
+                            <p class="normal-p">
+                                ¿No tienes cuenta?
+                            </p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                <a href="#">
+                                    Regístrate e inicia tu proceso de crédito en línea.
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
                     <div id="bienvenida" class="login-form">
                         <!-- **************************************************************** -->
                         <div class="mb-3">
@@ -59,14 +119,14 @@
                             </p>
                         </div>
                         <div class="mt-3">
-                            <button type="button" class="btn-registro"> ACCESO CLIENTES </button>
+                            <button type="button" class="btn-registro" id="ingreso-clientes"> ACCESO CLIENTES </button>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div id="iniciar-sesion" class="login-form">
                         <div class="d-flex mb-5">
-                            <div class="back-button" id="volver">
+                            <div class="back-button" id="volver-nc">
                                 <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
                             </div>
                         </div>

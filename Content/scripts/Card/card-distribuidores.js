@@ -366,53 +366,14 @@ $(document).ready(function () {
 
 });
 
-//async function getDistance(lat, lng) {
-//    distanceMatrix = new google.maps.DistanceMatrixService();
-//    let testPos = { lat: 20.5974244, lng: -103.4430505 };
-//    let pos = { lat: Number(lat), lng: Number(lng) };
-//    let distance;
-//    //-----------------------------------------
-//    distance = await distanceMatrix.getDistanceMatrix({
-//        origins: [testPos],
-//        destinations: [pos],
-//        travelMode: google.maps.TravelMode.DRIVING,
-//        avoidHighways: false,
-//        avoidTolls: false
-//    });
+function getDistance(lat, lng) {
+
+    $()
 
 
-//    console.log(distance);
-//    return await distance;
-//}
-
-const getDistanceMatrix = (service, data) => new Promise((resolve, reject) => {
-    service.getDistanceMatrix(data, (response, status) => {
-        if (status === 'OK') {
-            resolve(response)
-        } else {
-            reject(response);
-        }
-    })
-});
-
-getDistance = async (lat, lng) => {
-    const testPos = { lat: 20.5974244, lng: -103.4430505 };
-    const pos = { lat: Number(lat), lng: Number(lng) };
-    const service = new google.maps.DistanceMatrixService();
-    const result = await getDistanceMatrix(
-        service,
-        {
-            origins: [testPos],
-            destinations: [pos],
-            travelMode: google.maps.TravelMode.DRIVING,
-            avoidHighways: false,
-            avoidTolls: false
-        }
-    )
-    return {
-        distance: result.rows[0].elements[0].status
-    };
-};
+    console.log(distance);
+    return await distance;
+}
 
 function hideBrowser(btn, type) {
     $("#dealers-title").slideUp(400, () => $("#browser-title").show());

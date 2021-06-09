@@ -79,9 +79,12 @@
 
     const swiper = new Swiper('.swiper-container', {
         speed: 400,
-        allowTouchMove: false
+        allowTouchMove: false,
+        initialSlide: 1
     });
 
     $("#ingreso-no-clientes").click(() => swiper.slideNext());
-    $("#volver").click(() => swiper.slidePrev());
+    $("#ingreso-clientes").click(() => swiper.slideTo(0));
+    $("#volver-c").click(() => swiper.slideTo(1));
+    $("#volver-nc").click(() => swiper.slideTo(1));
 });
