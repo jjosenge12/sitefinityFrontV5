@@ -16,97 +16,75 @@
 @Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
 
 <div class="container-fluid" id="main-container">
-    <div class="row customRow flex-column-reverse flex-lg-row align-items-center">
-        <div class="col-12 col-lg-7 login-img">
-            <img src="/images/default-source/tfsm/my-tfsm/tfsm-banner-bienvenida.png" class="img-fluid custom-img-fluid" />
-        </div>
-        <!-- COLUMNA VARIABLE -->
-        <div class="col-12 col-lg-5">
+    <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-center">
+        <div class="col-12 col-lg-7">
             <div id="iniciar-sesion" class="login-form">
                 <div class="mt-5 mb-1">
-                    <h1 class="registro-title black-title text-left">Iniciar sesión</h1>
+                    <h1 class="registro-title black-title text-left">Nos da mucho gusto que quieras ser parte de la familia Toyota.</h1>
                 </div>
                 <div class="mb-3">
                     <p class="normal-p">
-                        Nos da mucho gusto que vuelvas a Estrenar con nosotros un Toyota, juntos es posible.
+                        Completa los siguientes campos para generar tu cuenta de ingreso a nuestra plataforma Home Delivery, con la que podrás iniciar y dar seguimiento a tu proceso de financiamiento para Estrenar un Toyota.
                     </p>
                 </div>
 
-                <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin" data-onsubmit="encrypt()">
-                    <div class="float-container my-5">
-                        <label class="float-label" for="clientVisible">
-                            Ingresar su n&uacute;mero de cliente / ID de cliente
-                        </label>
-                        <input class="form-input effect-2" type="text" id="clientVisible" />
-                        <span class="focus-border"></span>
+                <div data-id="registro-nc-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinityregister">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="float-container my-5">
+                                <label class="float-label" for="nameVisible">
+                                    Nombre
+                                </label>
+                                <input class="form-input effect-2" type="text" id="nameVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="float-container my-5">
+                                <label class="float-label" for="lastnameVisible">
+                                    Apellido
+                                </label>
+                                <input class="form-input effect-2" type="text" id="lastnameVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="float-container my-5">
-                        <label class="float-label" for="passVisible">
-                            Ingrese su contraseña
-                        </label>
-                        <input class="form-input effect-2" type="password" id="passVisible" />
-                        <span class="focus-border"></span>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="float-container my-5">
+                                <label class="float-label" for="emailVisible">
+                                    Correo electr&oacute;nico
+                                </label>
+                                <input class="form-input effect-2" type="email" id="emailVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="float-container my-5">
+                                <label class="float-label" for="rfcVisible">
+                                    RFC
+                                </label>
+                                <input class="form-input effect-2" type="text" id="rfcVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <input type="hidden" value="" name="client" id="client" />
-                    <input type="hidden" value="" name="pass" id="pass" />
-                    <input type="hidden" name="fail" value="http://localhost:60876/tfsm/my-tfsm/" id="fail" />
-                    <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/pruebitaincrustar"
+
+                    <input type="hidden" value="" name="name" id="name" />
+                    <input type="hidden" value="" name="lastname" id="lastname" />
+                    <input type="hidden" value="" name="email" id="email" />
+                    <input type="hidden" value="" name="rfc" id="rfc" />
+                    <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/registro-no-cliente" id="fail" />
+                    <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/registro-exito"
                            id="ok" />
 
                     <div class="my-5 d-flex justify-content-center">
-                        <button type="submit" class="btn-registro"> INGRESAR </button>
+                        <button type="submit" class="btn-registro"> REGISTRARME </button>
                     </div>
 
-                </div>
-
-
-                <div class="mb-1">
-                    <p class="normal-p">
-                        ¿No tienes cuenta?
-                    </p>
-                </div>
-
-                <div class="mb-3">
-                    <p class="normal-p">
-                        <a href="#">
-                            Regístrate e inicia tu proceso de crédito en línea.
-                        </a>
-                    </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-@*<script type="text/javascript">
-        $(".sf-form-container").each(function () {
-            var form = document.createElement("form");
-
-            form.innerHTML = this.innerHTML;
-            Object.keys(this.dataset).forEach((x) => {
-                form[x] = this.dataset[x];
-            });
-
-            $(this).html(form);
-        });
-
-        $("#nc-form").submit(function (e) {
-            encrypt();
-        });
-
-        function encrypt() {
-            var pass = document.getElementById("passVisible").value;
-            var user = document.getElementById("userVisible").value;
-            var fail = document.getElementById("fail").value;
-            var ok = document.getElementById("ok").value;
-            var pass_enc = window.btoa(pass);
-            var user_enc = window.btoa(user);
-            var fail_enc = window.btoa(fail);
-            var ok_enc = window.btoa(ok);
-            document.getElementById("pass").value = pass_enc;
-            document.getElementById("user").value = user_enc;
-            document.getElementById("fail").value = fail_enc;
-            document.getElementById("ok").value = ok_enc;
-            //alert(pass_enc);
-        }
-    </script>*@

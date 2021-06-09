@@ -1,0 +1,33 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-login.js"), "bottom", true)
+@Html.Script("https://unpkg.com/swiper/swiper-bundle.min.js", "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-login.css"))
+@Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
+
+<div class="container-fluid" id="main-container">
+    <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-center">
+        <div class="col-12 col-lg-7">
+            <div id="iniciar-sesion" class="login-form">
+                <div class="mt-5 mb-1">
+                    <h1 class="registro-title black-title text-left">Gracias por registrarte</h1>
+                </div>
+                <div class="mb-3">
+                    <p class="normal-p">
+                        En breve recibirás un correo electrónico con el que podrás validar tu cuenta y obtener tu contraseña de ingreso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
