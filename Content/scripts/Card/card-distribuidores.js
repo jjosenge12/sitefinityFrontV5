@@ -13,6 +13,7 @@ var errImg = '../../Content/Images/Paso0/err.gif';
 var warningImg = '../../Content/Images/Paso0/alert.gif';
 var dealerCode = 0;
 var dealers = [], lastMarker;
+const apiKey = 'AIzaSyAXcPfvcjvg30JnlXggadE6_jbjnsQvCTw';
 
 function CenterControl(controlDiv, map, myLoc) {
 
@@ -367,12 +368,50 @@ $(document).ready(function () {
 });
 
 function getDistance(lat, lng) {
+    let testPos = { lat: 20.5974244, lng: -103.4430505 };
 
-    $()
+    var myHeaders = new Headers();
+    myHeaders.append('Access-Control-Allow-Origin', '*');
+    myHeaders.append('Access-Control-Allow-Credentials', 'application/json');
+    myHeaders.append('Content-Type', true);
+
+    //{
+    //    //'Access-Control-Allow-Origin': 'https://maps.googleapis.com',
+    //    'Access-Control-Allow-Origin': '*',
+    //    "Access-Control-Allow-Credentials": true,
+    //};
+
+    var myInit = {
+        method: 'GET',
+        headers: myHeaders,
+        crossorigin: 'anonymous',
+        cache: 'default',
+    };
+
+    //fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?origins=${testPos.lat},${testPos.lng}&destinations=${lat},${lng}&key=${apiKey}`, myInit)
+    //    .then(response => response.json())
+    //    .catch(error => console.error('Error:', error))
+    //    .then(response => console.log('Success:', response));
+
+    $.ajax({
+        url: `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${testPos.lat},${testPos.lng}&destinations=${lat},${lng}&key=${apiKey}`,
+        method: 'GET',
+        async: false,
+        //crossDomain: 'anonymous',
+        //mode: 'cors',
+        headers: myHeaders,
+        error: (err) => {
+            console.log(err);
+            distance = "";
+        },
+        success: (res) => {
+            console.log(res);
+        }
+    })
 
 
-    console.log(distance);
-    return await distance;
+    //console.log(distance);
+    //return distance;
 }
 
 function hideBrowser(btn, type) {
@@ -447,29 +486,12 @@ function createDealerCards(data) {
         card.append(title);
         card.append(address);
 
-        if (userPos) {
-            let distance = document.createElement('div');
-            //let res;
-            //getDistance(x.Lat, x.Lng).then(x => res = x);
-            //console.log(res);
-            //distance.innerHTML = res;
-            //card.append(distance);
+        //if (userPos) {
+        //    let distance = document.createElement('div');
 
-            let pos = { lat: Number(x.Lat), lng: Number(x.Lng) };
-            console.log(pos);
-            service.getDistanceMatrix({
-                origins: [testPos],
-                destinations: [pos],
-                travelMode: google.maps.TravelMode.DRIVING,
-                avoidHighways: false,
-                avoidTolls: false
-            }, function (result, status) {
-                console.log(result);
-                distance.innerHTML = result.rows[0].elements[0].distance.text;
-                card.append(distance);
-            });
+        //    console.log(getDistance(x.Lat, x.Lng));
 
-        }
+        //}
 
         card.dataset["lat"] = x.Lat;
         card.dataset["lng"] = x.Lng;
