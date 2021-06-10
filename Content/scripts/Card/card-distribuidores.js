@@ -226,6 +226,9 @@ $(document).ready(function () {
         }
     });
 
+    $("#state-select").submit((e) => e.preventDefault());
+    $("#pc-input").submit((e) => e.preventDefault());
+
     $(".browser-tab").click(function () {
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
