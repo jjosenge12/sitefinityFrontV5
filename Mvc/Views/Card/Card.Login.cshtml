@@ -39,7 +39,7 @@
                             </p>
                         </div>
 
-                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin" data-onsubmit="encrypt()">
+                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin">
                             <div class="float-container my-5">
                                 <label class="float-label" for="clientVisible">
                                     Ingresar su n&uacute;mero de cliente / ID de cliente
@@ -48,19 +48,20 @@
                                 <span class="focus-border"></span>
                             </div>
                             <div class="float-container my-5">
-                                <label class="float-label" for="passClientVisible">
+                                <label class="float-label" for="passVisible">
                                     Ingrese su contraseña
                                 </label>
-                                <input class="form-input effect-2" type="password" id="passClientVisible" />
+                                <input class="form-input effect-2" type="password" id="passVisible" />
                                 <span class="focus-border"></span>
                             </div>
                             <div id="err-cliente"></div>
 
                             <input type="hidden" value="" name="client" id="client" />
-                            <input type="hidden" value="" name="pass" id="passClient" />
-                            <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm" id="failClient" />
-                            <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/tfsm/mis-cotizaciones"
-                                   id="okClient" />
+                            <input type="hidden" value="" name="pass" id="pass" />
+                            <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/login-clientes" id="fail" />
+                            <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/tfsm/mis-cotizaciones" id="ok" />
+                            @*<input type="hidden" name="fail" value="http://localhost:60876/tfsm/my-tfsm/login-clientes" id="fail" />
+                                <input type="hidden" name="ok" value="http://localhost:60876/tfsm/mis-cotizaciones" id="ok" />*@
 
                             <div class="my-5 d-flex justify-content-center">
                                 <button type="submit" class="btn-registro"> INGRESAR </button>
@@ -114,14 +115,14 @@
                             </button>
                         </div>
 
-                        <div class="mt-5">
+                        @*<div class="mt-5">
                             <p class="normal-p short">
                                 Tengo un financiamiento con TFS, y quiero volver a Estrenar
                             </p>
                         </div>
                         <div class="mt-3">
                             <button type="button" class="btn-registro" id="ingreso-clientes"> ACCESO CLIENTES </button>
-                        </div>
+                        </div>*@
                         <div id="err"></div>
                     </div>
                 </div>
