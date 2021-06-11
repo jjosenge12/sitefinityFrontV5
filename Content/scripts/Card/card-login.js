@@ -102,7 +102,7 @@
     const swiper = new Swiper('.swiper-container', {
         speed: 400,
         allowTouchMove: false,
-        initialSlide: 1
+        //initialSlide: 1
     });
 
     $("#ingreso-no-clientes").click(() => swiper.slideNext());
