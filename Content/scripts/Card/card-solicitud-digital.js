@@ -8,9 +8,9 @@ var lead = url.searchParams.get("lead");
 if (token != '' && token != null && token != undefined)
     token = atob(token);
 
-//document.onreadystatechange = function () {
-//    showLoader();
-//}
+document.onreadystatechange = function () {
+    showLoader();
+}
 
 $(document).ready(function () {
     $Lightning.use("c:pruebita3", () => {
