@@ -8,9 +8,6 @@ var lead = url.searchParams.get("lead");
 if (token != '' && token != null && token != undefined)
     token = atob(token);
 
-document.onreadystatechange = function () {
-}
-
 $(document).ready(function () {
     showLoader();
     $Lightning.use("c:pruebita3", () => {
