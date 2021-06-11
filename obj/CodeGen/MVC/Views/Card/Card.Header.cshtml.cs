@@ -198,7 +198,7 @@ WriteLiteral(" class=\"links d-none d-md-block\"");
 
 WriteLiteral(">\r\n            <a");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm\"");
+WriteLiteral(" href=\"/tfsm/my-tfsm/login-clientes\"");
 
 WriteLiteral(">My TFSM</a>\r\n            <a");
 
@@ -206,7 +206,7 @@ WriteLiteral(" href=\"#\"");
 
 WriteLiteral(">Cotizar Plan</a>\r\n            <a");
 
-WriteLiteral(" href=\"/nuestros-planes\"");
+WriteLiteral(" href=\"/tfsm/my-tfsm\"");
 
 WriteLiteral(" class=\"linkFinanciamiento\"");
 

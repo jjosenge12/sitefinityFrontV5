@@ -12,7 +12,8 @@
 }
 
 .dealer-browser {
-    padding: 80px;
+    padding: 14%;
+    padding-bottom: 70px;
     transition: all 0.3s ease-in-out;
     max-height: 100%;
     display: flex;
@@ -117,7 +118,7 @@
 .browser-actions{
     margin-top: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .browser-actions>button{
@@ -168,7 +169,7 @@ label.error {
     width: 100%;
     display: flex;
     flex-flow: column;
-    height: 120px;
+    height: 125px;
     padding: 16px;
     cursor: pointer;
     margin-top: 10px;
@@ -242,7 +243,15 @@ label.error {
         height: auto;
     }
 
-    .map-section{
+    .dealer-browser{
+        padding: 5%;
+    }
+
+    .browser-actions>button{
+        width: 100%;
+    }
+
+    .map-section {
         height: 85vh;
     }
 }

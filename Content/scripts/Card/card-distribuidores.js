@@ -370,53 +370,6 @@ $(document).ready(function () {
 
 });
 
-function getDistance(lat, lng) {
-    let testPos = { lat: 20.5974244, lng: -103.4430505 };
-
-    var myHeaders = new Headers();
-    myHeaders.append('Access-Control-Allow-Origin', '*');
-    myHeaders.append('Access-Control-Allow-Credentials', 'application/json');
-    myHeaders.append('Content-Type', true);
-
-    //{
-    //    //'Access-Control-Allow-Origin': 'https://maps.googleapis.com',
-    //    'Access-Control-Allow-Origin': '*',
-    //    "Access-Control-Allow-Credentials": true,
-    //};
-
-    var myInit = {
-        method: 'GET',
-        headers: myHeaders,
-        crossorigin: 'anonymous',
-        cache: 'default',
-    };
-
-    //fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?origins=${testPos.lat},${testPos.lng}&destinations=${lat},${lng}&key=${apiKey}`, myInit)
-    //    .then(response => response.json())
-    //    .catch(error => console.error('Error:', error))
-    //    .then(response => console.log('Success:', response));
-
-    $.ajax({
-        url: `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${testPos.lat},${testPos.lng}&destinations=${lat},${lng}&key=${apiKey}`,
-        method: 'GET',
-        async: false,
-        //crossDomain: 'anonymous',
-        //mode: 'cors',
-        headers: myHeaders,
-        error: (err) => {
-            console.log(err);
-            distance = "";
-        },
-        success: (res) => {
-            console.log(res);
-        }
-    })
-
-
-    //console.log(distance);
-    //return distance;
-}
-
 function hideBrowser(btn, type) {
     $("#dealers-title").slideUp(400, () => $("#browser-title").show());
     $("#tabs").slideUp(400);
@@ -449,7 +402,12 @@ function getDealersByPostalCode(pc) {
         url: window.config.urlbase + "/getdealersbypostalcode?pc=" + pc,
         datatype: "json",
         success: function (data) {
-            createDealerCards(data);
+            if (userPos) {
+                createDealerCardsWithDistance(data);
+            }
+            else {
+                createDealerCards(data);
+            }
         },
         complete: () => $("#dealer-loader").hide()
     })
@@ -462,7 +420,12 @@ function getDealersByState(stateId) {
         url: window.config.urlbase + "/getdealersbystateid?stateId=" + stateId,
         datatype: "json",
         success: function (data) {
-            createDealerCards(data);
+            if (userPos) {
+                createDealerCardsWithDistance(data);
+            }
+            else {
+                createDealerCards(data);
+            }
         },
         complete: () => $("#dealer-loader").hide()
     })
@@ -470,9 +433,6 @@ function getDealersByState(stateId) {
 
 function createDealerCards(data) {
     let dealers = document.createElement('div');
-
-    const service = new google.maps.DistanceMatrixService();
-    let testPos = { lat: 20.5974244, lng: -103.4430505 };
 
     data.results.forEach(function (x) {
         let card = document.createElement('div');
@@ -488,13 +448,6 @@ function createDealerCards(data) {
         address.innerHTML = x.Adress;
         card.append(title);
         card.append(address);
-
-        //if (userPos) {
-        //    let distance = document.createElement('div');
-
-        //    console.log(getDistance(x.Lat, x.Lng));
-
-        //}
 
         card.dataset["lat"] = x.Lat;
         card.dataset["lng"] = x.Lng;
@@ -518,6 +471,74 @@ function createDealerCards(data) {
 
     });
 }
+
+function createDealerCardsWithDistance(data) {
+    let dealers = document.createElement('div');
+
+    const service = new google.maps.DistanceMatrixService();
+    let testPos = { lat: 20.5974244, lng: -103.4430505 };
+
+    data.results.forEach(function (x, index) {
+        let pos = { lat: Number(x.Lat), lng: Number(x.Lng) };
+
+        service.getDistanceMatrix(
+            {
+                origins: [testPos],
+                destinations: [pos],
+                travelMode: google.maps.TravelMode.DRIVING,
+                avoidHighways: false,
+                avoidTolls: false
+            }, function (response, status) {
+
+                let card = document.createElement('div');
+                let title = document.createElement('div');
+                let address = document.createElement('div');
+                let distance = document.createElement('div');
+
+                card.classList.add("dealer-result");
+                card.classList.add("ripple");
+                title.classList.add("dealer-result-title");
+                address.classList.add("dealer-result-address");
+
+                title.innerHTML = capitalize(x.Dealer);
+                address.innerHTML = x.Adress;
+                card.append(title);
+                card.append(address);
+
+                if (status === 'OK') {
+                    console.log(response.rows[0].elements[0].distance.text);
+
+                    distance.innerHTML = response.rows[0].elements[0].distance.text;
+                    card.append(distance);
+                }
+
+                card.dataset["lat"] = x.Lat;
+                card.dataset["lng"] = x.Lng;
+                card.dataset["dealerId"] = x.IdDealer;
+
+                dealers.append(card);
+                //if (index - 1 === data.results.length)
+                $("#results-list").html(dealers.innerHTML);
+                $(".dealer-result").click(function () {
+                    $(this).addClass('active');
+                    $(this).siblings().removeClass('active');
+
+                    let lat = Number(this.dataset["lat"]);
+                    let lng = Number(this.dataset["lng"]);
+
+                    map.setCenter({ lat, lng });
+                    map.setZoom(15);
+
+                });
+            });
+    });
+
+
+    $("#dealer-loader").hide();
+}
+
+
+
 
 function getAllDealers() {
     $.ajax({

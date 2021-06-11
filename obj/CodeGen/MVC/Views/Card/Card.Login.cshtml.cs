@@ -269,8 +269,11 @@ WriteLiteral(" />\r\n                                <span");
 
 WriteLiteral(" class=\"focus-border\"");
 
-WriteLiteral("></span>\r\n                            </div>\r\n\r\n                            <inpu" +
-"t");
+WriteLiteral("></span>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" id=\"err-cliente\"");
+
+WriteLiteral("></div>\r\n\r\n                            <input");
 
 WriteLiteral(" type=\"hidden\"");
 
@@ -446,7 +449,12 @@ WriteLiteral(" class=\"btn-registro\"");
 WriteLiteral(" id=\"ingreso-clientes\"");
 
 WriteLiteral("> ACCESO CLIENTES </button>\r\n                        </div>\r\n                    " +
-"</div>\r\n                </div>\r\n                <div");
+"    <div");
+
+WriteLiteral(" id=\"err\"");
+
+WriteLiteral("></div>\r\n                    </div>\r\n                </div>\r\n                <div" +
+"");
 
 WriteLiteral(" class=\"swiper-slide\"");
 
@@ -548,8 +556,11 @@ WriteLiteral(" />\r\n                                <span");
 
 WriteLiteral(" class=\"focus-border\"");
 
-WriteLiteral("></span>\r\n                            </div>\r\n\r\n                            <inpu" +
-"t");
+WriteLiteral("></span>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" id=\"err-nocliente\"");
+
+WriteLiteral("></div>\r\n\r\n                            <input");
 
 WriteLiteral(" type=\"hidden\"");
 
