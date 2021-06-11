@@ -108,5 +108,5 @@
     $("#ingreso-no-clientes").click(() => swiper.slideNext());
     $("#ingreso-clientes").click(() => swiper.slideTo(0));
     $("#volver-c").click(() => swiper.slideTo(1));
-    $("#volver-nc").click(() => swiper.slideTo(1));
+    $("#volver-nc").click(() => swiper.slideTo(0));
 });
