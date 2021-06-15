@@ -1,10 +1,9 @@
 ﻿var url_string = window.location.href;
 var url = new URL(url_string);
-//var c = url.searchParams.get("email");
+
 var token = url.searchParams.get("token");
 var lead = url.searchParams.get("lead");
-/* if(c!='' && c!=null && c!=undefined)
-    c=atob(c); */
+
 if (token != '' && token != null && token != undefined)
     token = atob(token);
 

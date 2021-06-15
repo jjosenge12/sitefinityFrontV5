@@ -1,0 +1,345 @@
+@model SitefinityWebApp.Mvc.Models.CotizadorModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using SitefinityWebApp.Mvc.Models.Utils;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
+@Html.Script("https://unpkg.com/swiper/swiper-bundle.min.js", "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/webkit-input-range-fill-lower/webkit-input-range-fill-lower.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Config.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Cotizador/cotizador.js"), "bottom", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Cotizador/cotizador.css"))
+@Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
+
+<div class="cotizador-container">
+    <div id="cotizador-swiper-container" class="swiper-container">
+        <div class="swiper-wrapper">
+            @* ----------------STEP 1---------------- *@
+            <div class="swiper-slide">
+                <div id="step-1">
+                    <div class="col-12">
+                        <div class="title">Cotiza en 3 pasos el Toyota de tus sue&ntilde;os</div>
+                        <div>
+                            <button id="start" type="button" class="btn-red">COMENZAR COTIZACI&Oacute;N</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            @* ----------------STEP 2---------------- *@
+            <div class="swiper-slide">
+                <div id="step-2">
+                    <div class="col-12 col-md-8 col-lg-4">
+                        <div class="title">
+                            Estamos listos para cotizar tu pr&oacute;ximo Toyota. Para comenzar ingresa los siguientes datos:
+                        </div>
+                        <div class="step-2-form">
+                            <div class="sf-form-container" data-id="step-2-form" data-style="display:grid;">
+                                <div class="float-container">
+                                    <label class="float-label" for="name">Nombre</label>
+                                    <input type="text" name="name" id="name" class="form-input effect-2" />
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="float-container">
+                                    <label class="float-label" for="lastname">Apellido</label>
+                                    <input type="text" name="lastname" id="lastname" class="form-input effect-2" />
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="float-container">
+                                    <label class="float-label" for="email">Correo electr&oacute;nico</label>
+                                    <input type="text" name="email" id="email" class="form-input effect-2" />
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="terms">
+                            <div><input type="checkbox" id="step-2-terms" /></div>
+                            <div>
+                                He le&iacute;do y acepto el <span class="red-link">aviso de privacidad</span> y los <span class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-5">
+                            <button type="button" id="step-2-continue" class="btn-red">CONTINUAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @* ----------------STEP 3---------------- *@
+            <div class="swiper-slide">
+                <div id="step-3">
+                    <div class="col-11">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-between">
+                                <button type="button" id="step-3-back" class="btn-transparent color-red">
+                                    <span class="material-icons color-red">chevron_left</span>
+                                    VOLVER
+                                </button>
+                                <button type="button" id="step-3-continue" class="btn-transparent color-red">
+                                    CONTINUAR
+                                    <span class="material-icons color-red">chevron_right</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona una categor&iacute;a y veh&iacute;culo</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 categories">
+                            <div class="col-sm"><button type="button" class="btn-red">AUTOS</button></div>
+                            <div class="col-sm"><button type="button" class="btn-black_inverted">H&Iacute;BRIDOS</button></div>
+                            <div class="col-sm"><button type="button" class="btn-black_inverted">SUV'S & MINIVANS</button></div>
+                            <div class="col-sm"><button type="button" class="btn-black_inverted">PICK UP'S & COMERCIALES</button></div>
+                            <div class="col-sm"><button type="button" class="btn-black_inverted">DEPORTIVOS</button></div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-12 d-flex justify-content-between">
+                                <div id="cars-swiper-prev" class="slider-button">
+                                    <img src="~/Content/images/Cotizador/slider_prev.png" />
+                                </div>
+                                <div id="cars-swiper-next" class="slider-button">
+                                    <img src="~/Content/images/Cotizador/slider_next.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div id="cars-swiper-container" class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    @foreach (var item in Model.autos)
+                                    {
+                                        <div class="swiper-slide">
+                                            <div class="car-slide" data-auto-id="@item.AutoId" data-auto-name="@item.Name" data-auto-picture="@item.CarImage">
+                                                <div class="car-image">
+                                                    <img src="@item.CarImage" />
+                                                </div>
+                                                <div class="car-title">@item.Name</div>
+                                                <div class="select-car">SELECCIONAR</div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="sf-form-container" data-id="car-version-form">
+                                <div class="row my-5 justify-content-center">
+                                    <div class="col-11 col-md-4 d-flex">
+                                        <div class="float-container w-100">
+                                            <label for="car_version" class="float-label">Versi&oacute;n</label>
+                                            <select id="car_version" name="car_version" class="form-input effect-2 bg-transparent">
+                                                <option value="0" disabled selected>Versi&oacute;n</option>
+                                            </select>
+                                            <span class="focus-border"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-11 col-md-2 d-flex align-items-center">
+                                        <button id="step-3-continue" type="button" class="btn-red">CONTINUAR</button>
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+            @* ----------------STEP 4---------------- *@
+            <div class="swiper-slide">
+                <div id="step-4">
+                    <div class="col-11">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-between">
+                                <button type="button" id="step-4-back" class="btn-transparent color-red">
+                                    <span class="material-icons color-red">chevron_left</span>
+                                    VOLVER
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-grid">
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona la versi&oacute;n de tu pr&oacute;ximo <span class="step-4-nombre-auto"></span></div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center block">
+                            <div class="col-12 col-lg-6">
+                                <div>
+                                    <img class="step-4-imagen-auto" />
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="float-container w-100">
+                                    <label for="car_version" class="float-label">Versi&oacute;n</label>
+                                    <select id="car_version" name="car_version" class="form-input effect-2 bg-transparent">
+                                        <option value="0" disabled selected>Versi&oacute;n</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona tu personalidad fiscal</div>
+                            </div>
+                        </div>
+                        <div id="select-personalidad-fiscal" class="row block">
+                            <div class="col-12 col-lg-3">
+                                <div class="select-button" data-for="personalidad-fiscal">F&iacute;SICA</div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="select-button" data-for="personalidad-fiscal">F&iacute;SICA CON ACTIVIDAD EMPRESARIAL</div>
+
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="select-button" data-for="personalidad-fiscal">MORAL</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona la Aseguradora</div>
+                            </div>
+                        </div>
+                        <div class="row block">
+                            <div class="col-12 col-lg-4">
+                                <div class="float-container">
+                                    <label class="float-label" for="select-state">Selecciona tu estado</label>
+                                    <select id="select-state" name="select-state" class="form-input effect-2">
+                                        <option value="0" selected disabled>Selecciona tu estado</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="float-container">
+                                    <label class="float-label" for="select-insurance">Selecciona la aseguradora</label>
+                                    <select id="select-insurance" name="select-insurance" class="form-input effect-2">
+                                        <option value="0" selected disabled>Selecciona la aseguradora</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="float-container">
+                                    <label class="float-label" for="select-coverage">Selecciona la cobertura</label>
+                                    <select id="select-coverage" name="select-coverage" class="form-input effect-2">
+                                        <option value="0" selected disabled>Selecciona la cobertura</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona la soluci&oacute;n financiera con la que deseas adquirir tu pr&oacute;ximo <span class="step-4-nombre-auto"></span></div>
+                            </div>
+                        </div>
+                        <div id="select-financing" class="row block">
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="financing">FINANCIAMIENTO</div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="financing">ARRENDAMIENTO</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona el plan de financiamiento con el que deseas estrenar tu pr&oacute;ximo <span class="step-4-nombre-auto"></span></div>
+                            </div>
+                        </div>
+                        <div id="select-plan" class="row block">
+                            <div class="col-12 mb-4">
+                                <div class="row my-3 align-items-center">
+                                    <div class="col-6 col-lg-4">
+                                        <img src="~/Content/images/Planes/plan-tradicional.png" />
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <div class="select-button" data-for="plan">SELECCIONAR</div>
+                                    </div>
+                                </div>
+                                <div class="text-plan">Pagas mensualidades iguales durante toda la vida del financiamiento.</div>
+                            </div>
+                            <div class="col-12 my-4">
+                                <div class="row my-3 align-items-center">
+                                    <div class="col-6 col-lg-4">
+                                        <img src="~/Content/images/Planes/plan-balloon.png" />
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <div class="select-button" data-for="plan">SELECCIONAR</div>
+                                    </div>
+                                </div>
+                                <div class="text-plan">Tienes acceso a una mensualidad m&aacute;s baja, ya que estableces un pago al final de tu financiamiento, el cual puede ser del 25% o 35% del valor del veh&iacute;culo.</div>
+                            </div>
+                            <div class="col-12 my-4">
+                                <div class="row my-3 align-items-center">
+                                    <div class="col-6 col-lg-4">
+                                        <img src="~/Content/images/Planes/plan-anualidades.png" />
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <div class="select-button" data-for="plan">SELECCIONAR</div>
+                                    </div>
+                                </div>
+                                <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del año en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona el plazo de tu plan de financiamiento</div>
+                            </div>
+                        </div>
+                        <div id="select-term" class="row block">
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="term">24 MESES</div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="term">36 MESES</div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="term">48 MESES</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona el monto de enganche con el que deseas iniciar tu plan</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title"><input type="range" id="hitch-range" min="0" max="100000" step="5000" value="0" /></div>
+                            </div>
+                        </div>
+                        <div class="row block range-controls">
+                            <div class="col-12 d-flex">
+                                <div id="hitch-minus" class="range-button">
+                                    <img src="~/Content/images/Cotizador/menos.png" />
+                                </div>
+                                <div id="hitch-text"></div>
+                                <div id="hitch-plus" class="range-button">
+                                    <img src="~/Content/images/Cotizador/mas.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row block justify-content-center">
+                            <div class="col-12 col-lg-4">
+                                <button type="button" id="step-4-finish" class="btn-red w-100">FINALIZAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        //new WebkitInputRangeFillLower({
+        //    selectors: ['hitch-range'],
+        //    color: '#cc0000'
+        //});
+    });
+</script>

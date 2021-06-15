@@ -1,0 +1,16 @@
+﻿@using Telerik.Sitefinity.Mvc;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+<form>
+
+    <div>
+        <label for="library-field" class="m-top-sm">Library</label>
+        <sf-list-selector sf-library-selector sf-multiselect="false" sf-sortable="true"
+                          sf-provider="properties.ProviderName.PropertyValue"
+                          sf-selected-item-id="librariesSelector.selectedItemId"
+                          id="library-field"
+                          sf-selected-item="librariesSelector.selectedItem"
+                          sf-media-type="images"></sf-list-selector>
+    </div>
+
+</form>

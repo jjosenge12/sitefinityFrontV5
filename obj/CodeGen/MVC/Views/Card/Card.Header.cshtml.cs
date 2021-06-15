@@ -250,7 +250,7 @@ WriteLiteral(" id=\"drawerMenu\"");
 
 WriteLiteral(">\r\n        <a");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm\"");
+WriteLiteral(" href=\"/tfsm/my-tfsm/login-clientes\"");
 
 WriteLiteral(">My TFSM</a>\r\n        <div");
 
@@ -363,19 +363,9 @@ WriteLiteral(" class=\"menuLink\"");
 
 WriteLiteral(" href=\"/tfsm/quienes-somos\"");
 
-WriteLiteral(">Nosotros</a>\r\n                <a");
+WriteLiteral(">Nosotros</a>\r\n                ");
 
-WriteLiteral(" class=\"menuLink\"");
-
-WriteLiteral(">Ventajas TFSM</a>\r\n                <a");
-
-WriteLiteral(" class=\"menuLink\"");
-
-WriteLiteral(">Cont&aacute;ctanos</a>\r\n                <a");
-
-WriteLiteral(" class=\"menuLink\"");
-
-WriteLiteral(">Vacantes</a>\r\n            </div>\r\n        </span>\r\n        <a");
+WriteLiteral("\r\n            </div>\r\n        </span>\r\n        <a");
 
 WriteLiteral(" href=\"/distribuidores\"");
 
@@ -435,7 +425,7 @@ WriteLiteral(@">
             que se recaban de usted, se utilizar&aacute;n para las siguientes finalidades que son necesarias para brindarle los servicios solicitados: identificarlo y autenticarlo a trav&eacute;s de la informaci&oacute;n que proporciona; llevar a cabo
             los procesos para ofrecerle la informaci&oacute;n que solicita; brindarle cotizaciones de productos y servicios; contactarlo en relaci&oacute;n con su solicitud de informaci&oacute;n; atender y dar seguimiento a dudas, quejas o comentarios
             en relaci&oacute;n con nuestros servicios; mantener controles administrativos y generar informaci&oacute;n estad&iacute;stica. De manera adicional, su informaci&oacute;n personal ser&aacute; utilizada para las siguientes finalidades secundarias
-            que no son necesarias
+            que no son necesarias.
         </div>
         <div");
 
