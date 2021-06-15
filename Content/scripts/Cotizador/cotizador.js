@@ -15,7 +15,7 @@ $(document).ready(function () {
     const swiper = new Swiper('#cotizador-swiper-container', {
         speed: 400,
         allowTouchMove: false,
-        initialSlide: 2
+        //initialSlide: 2
     });
 
     //new WebkitInputRangeFillLower({
