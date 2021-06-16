@@ -13,9 +13,9 @@
 }
 
 .flex-center{
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #cotizador-swiper-container.limited-height{
@@ -407,4 +407,39 @@
 
 .step-5-card.size-big{
     height: 256px;
+}
+
+.step-5-card.solicitud{
+    height: 340px;
+}
+
+#step-5 .terms {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+#step-5 .red-link {
+    color: #cc0000;
+    cursor: pointer;
+}
+
+#step-5 .terms input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
+    margin: 7px;
+}
+
+#step-5 .float-container{
+    margin: 15px 0;
+}
+
+@media(max-width: 991px){
+    .step-5-card.size-medium {
+        height: 428px;
+    }
 }

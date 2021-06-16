@@ -204,6 +204,45 @@ $(document).ready(function () {
         }
     });
 
+    //----------------STEP 5----------------
+
+    $("#step-5-contact-form").validate({
+        rules: {
+            distribuidores: {
+                selectRequired: true
+            },
+            phone: {
+                required: true
+            }
+        }
+    });
+
+    $("#step-5-contact-form").submit(function (e) {
+        e.preventDefault();
+    });
+
+    $("#step-5-contact").click(function () {
+        $("#step-5-contact-form").valid();
+    });
+
+    $("#step-5-contact").click(() => {
+        if ($("#step-5-contact-form").valid()) {
+            if ($("#step-5-terms").prop("checked")) {
+                alert("contact valido");
+
+                form = {
+                    ...form,
+                    distribuidor: $("#step-5-distribuidores").val(),
+                    phoneClient: $("#step-5-phone").val()
+                }
+                console.log(form);
+
+            } else {
+                termsCheckbox = "#step-5-terms";
+                openModal("newsletterTermsModal");
+            }
+        }
+    });
 });
 
 function getFormValues() {

@@ -320,14 +320,14 @@
             <div class="swiper-slide">
                 <div id="step-5">
                     <div class="col-11">
-                        <div class="row">
-                            <div class="col-12 d-flex justify-content-between">
-                                <button type="button" id="step-5-back" class="btn-transparent color-red">
-                                    <span class="material-icons color-red">chevron_left</span>
-                                    VOLVER
-                                </button>
-                            </div>
-                        </div>
+                        @*<div class="row">
+                                <div class="col-12 d-flex justify-content-between">
+                                    <button type="button" id="step-5-back" class="btn-transparent color-red">
+                                        <span class="material-icons color-red">chevron_left</span>
+                                        VOLVER
+                                    </button>
+                                </div>
+                            </div>*@
                         <div class="row mt-4">
                             <div class="col-12">
                                 <div class="title"><span class="step-5-nombre-cliente"></span> te presentamos el resultado de tu pr&oacute;ximo Toyota</div>
@@ -342,27 +342,27 @@
                                             <div class="row">
                                                 <div class="col-12 col-lg-6 d-flex flex-column">
                                                     <div class="row flex-grow-1">
-                                                        <div class="col-12 col-lg-6">
+                                                        <div class="col-6">
                                                             <div class="text-tag">Modelo:</div>
                                                             <div class="step-5-nombre-auto text-value"></div>
                                                         </div>
-                                                        <div class="col-12 col-lg-6">
+                                                        <div class="col-6">
                                                             <div class="text-tag">Versi&oacute;n:</div>
                                                             <div class="step-5-version-auto text-value"></div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-12 col-lg-6">
+                                                        <div class="col-6">
                                                             <div class="text-tag">A&ntilde;o:</div>
                                                             <div class="step-5-anio-auto text-value"></div>
                                                         </div>
-                                                        <div class="col-12 col-lg-6">
+                                                        <div class="col-6">
                                                             <div class="text-tag">Tipo de persona:</div>
                                                             <div class="step-5-tipo-persona text-value"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-6 flex-center">
+                                                <div class="col-12 col-lg-6 flex-center align-items-end align-items-lg-center">
                                                     <img class="step-5-imagen-auto" />
                                                 </div>
                                             </div>
@@ -448,13 +448,13 @@
                                     </div>
                                 </div>
                                 <div class="row my-5">
-                                    <div class="col-12 col-lg-4">
-                                        <button type="button" class="btn-red_inverted w-100">REGRESAR</button>
+                                    @*<div class="col-12 col-lg-4">
+                                            <button type="button" class="btn-red_inverted w-100">REGRESAR</button>
+                                        </div>*@
+                                    <div class="col-12 col-lg-4 mb-3 m-lg-0">
+                                        <button type="button" class="btn-red_inverted w-100">COTIZAR OTRO VEH&Iacute;CULO</button>
                                     </div>
-                                    <div class="col-12 col-lg-4">
-                                        <button type="button" class="btn-red_inverted w-100">COTIZAR OTRO VEH&iacute;CULO</button>
-                                    </div>
-                                    <div class="col-12 col-lg-4">
+                                    <div class="col-12 col-lg-4 mt-3 m-lg-0">
                                         <button type="button" class="btn-red btn-long w-100">DESCARGAR COTIZACI&Oacute;N PDF</button>
                                     </div>
                                 </div>
@@ -462,10 +462,57 @@
                             @* --------------- Columna 2 --------------- *@
                             <div class="col-12 col-lg-4">
                                 <div class="row">
-                                    <div class="col-12"></div>
+                                    <div class="col-12">
+                                        <div class="step-5-card solicitud">
+                                            <div class="row">
+                                                <div class="col-12 flex-grow-1">
+                                                    <div class="title">Inicia ahora tu solicitud de cr&eacute;dito de forma digital y estrena hoy un <span class="step-5-nombre-auto"></span></div>
+                                                </div>
+                                                <div class="col-12 d-grid">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex align-items-end">
+                                                            <button type="button" class="btn-red btn-long">INICIAR SOLICITUD</button>
+                                                        </div>
+                                                        <div class="col-4 d-flex align-items-end">
+                                                            <img src="~/Content/images/Cotizador/tfsm-logo-home-delivery.png" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12"></div>
+                                    <div class="col-12">
+                                        <div class="sf-form-container step-5-card" data-id="step-5-contact-form">
+                                            <div class="title">
+                                                <span class="step-5-nombre-cliente"></span>,<br /> se contactado por uno de nuestros Distribuidores para recibir m&aacute;s informaci&oacute;n:
+                                            </div>
+                                            <div class="d-grid">
+                                                <div class="float-container">
+                                                    <label class="float-label" for="step-5-distribuidores">Distribuidor</label>
+                                                    <select class="form-input effect-2 bg-transparent" id="step-5-distribuidores" name="distribuidores">
+                                                        <option value="0" disabled selected>Distribuidor</option>
+                                                    </select>
+                                                    <span class="focus-border"></span>
+                                                </div>
+                                                <div class="float-container">
+                                                    <label class="float-label" for="step-5-phone">Tel&eacute;fono</label>
+                                                    <input id="step-5-phone" name="phone" class="form-input effect-2 bg-transparent" />
+                                                    <span class="focus-border"></span>
+                                                </div>
+                                            </div>
+                                            <div class="terms">
+                                                <div><input type="checkbox" id="step-5-terms" /></div>
+                                                <div>
+                                                    He le&iacute;do y acepto el <span class="red-link">aviso de privacidad</span> y los <span class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
+                                                </div>
+                                            </div>
+                                            <div class="mt-5">
+                                                <button id="step-5-contact" type="button" class="btn-red btn-long col-12 col-lg-7">SER CONTACTADO</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
