@@ -1,4 +1,4 @@
-﻿var auto;
+﻿var form = {};
 
 $(document).ready(function () {
     jQuery.validator.addMethod(
@@ -22,6 +22,13 @@ $(document).ready(function () {
     //    selectors: ['hitch-range'],
     //    color: '#cc0000'
     //});
+
+    $(".select-button").click(function () {
+        let container = this.dataset.for;
+
+        $(`#select-${container} .select-button`).removeClass("selected");
+        $(this).addClass("selected");
+    });
 
     //----------------STEP 1----------------
 
@@ -48,6 +55,9 @@ $(document).ready(function () {
         if ($("#step-2-form").valid()) {
             if ($("#step-2-terms").prop("checked")) {
                 swiper.slideNext();
+                form["nombreCliente"] = $("#name").val();
+                form["apellidoCliente"] = $("#lastname").val();
+                form["emailCliente"] = $("#email").val();
             } else {
                 termsCheckbox = "#step-2-terms";
                 openModal("newsletterTermsModal");
@@ -59,7 +69,6 @@ $(document).ready(function () {
 
     const cars_swiper = new Swiper('#cars-swiper-container', {
         speed: 400,
-        //allowTouchMove: false,
         slideToClickedSlide: true,
         slidesPerView: 4,
         spaceBetween: 30,
@@ -99,13 +108,6 @@ $(document).ready(function () {
 
         $(".car-slide").removeClass("selected");
         cars_swiper.autoplay.start();
-
-        //let opt = document.createElement("option");
-        //opt.value = "0";
-        //opt.innerHTML = "Versión";
-        //opt.attributes.disabled = true;
-
-        //$("#car_version").html(opt);
     });
 
     $("#step-3-continue").click(function () {
@@ -114,14 +116,18 @@ $(document).ready(function () {
             let selected = $(".car-slide.selected")[0];
 
             $.when(
-                auto = {
-                    name: selected.dataset.autoName,
+                form = {
+                    ...form,
+                    nombreAuto: selected.dataset.autoName,
                     autoId: selected.dataset.autoId,
-                    picture: selected.dataset.autoPicture
+                    imagenAuto: selected.dataset.autoPicture
                 },
                 setAutoValues(selected)
             )
-                .then(() => swiper.slideNext());
+                .then(() => {
+                    swiper.slideNext();
+                    $("#cotizador-swiper-container").removeClass("limited-height");
+                });
 
             getVersions(selected.dataset.autoId);
         }
@@ -138,36 +144,35 @@ $(document).ready(function () {
     //----------------STEP 4----------------
 
     $("#step-4-back").click(function () {
+        $("#cotizador-swiper-container").addClass("limited-height");
         swiper.slidePrev();
     });
 
     $("#car_version").change(function (e) {
-        auto["price"] = $(this).val();
-        auto["hitch"] = $(this).val() / 10;
+        form = {
+            ...form,
+            versionAuto: $("#car_version option:selected")[0].dataset.version,
+            anioAuto: $("#car_version option:selected")[0].dataset.anio,
+            precioAuto: $(this).val(),
+            engancheAuto: $(this).val() / 10
+        }
 
-        $("#hitch-range").attr("min", auto.hitch);
-        $("#hitch-range").val(auto.hitch);
-        $("#hitch-text").html("$ " + auto.hitch + " M.N.");
-    });
-
-    $(".select-button").click(function () {
-        let container = this.dataset.for;
-
-        $(`#select-${container} .select-button`).removeClass("selected");
-        $(this).addClass("selected");
+        $("#hitch-range").attr("min", form.engancheAuto);
+        $("#hitch-range").val(form.engancheAuto);
+        $("#hitch-text").html("$ " + form.engancheAuto + " M.N.");
     });
 
     $("#select-insurance").change(() => getCoverages());
 
     $("#hitch-range").change(function () {
-        auto.hitch = $("#hitch-range").val();
-        $("#hitch-text").html("$ " + Number(auto.hitch).toFixed(2) + " M.N.");
+        form.hitch = $("#hitch-range").val();
+        $("#hitch-text").html("$ " + Number(form.hitch).toFixed(2) + " M.N.");
     });
 
     $("#hitch-minus").click(function () {
         let val = $("#hitch-range").val();
         let calc = Number(val) - 5000;
-        if (calc >= (auto.price / 10)) {
+        if (calc >= (form.price / 10)) {
             $("#hitch-range").val(calc);
             $("#hitch-range").change();
             $("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
@@ -186,6 +191,8 @@ $(document).ready(function () {
 
     $("#step-4-finish").click(function () {
         if (validateStepFour()) {
+            $.when(getFormValues())
+                .then()
             swiper.slideNext();
         }
         else {
@@ -199,8 +206,33 @@ $(document).ready(function () {
 
 });
 
+function getFormValues() {
+    form = {
+        nombreCliente: $("#name").val(),
+        apellidoCliente: $("#lastname").val(),
+        emailCliente: $("#email").val(),
+        nombreAuto: $(".car-slide.selected")[0].dataset.autoName,
+        autoId: $(".car-slide.selected")[0].dataset.autoId,
+        imagenAuto: $(".car-slide.selected")[0].dataset.autoPicture,
+        versionAuto: $("#car_version option:selected")[0].dataset.version,
+        anioAuto: $("#car_version option:selected")[0].dataset.anio,
+        precioAuto: $("#car_version").val(),
+        engancheAuto: $("#car_version").val() / 10,
+        tipoPersona: $("#select-personalidad-fiscal .select-button.selected")[0].dataset.value,
+
+    }
+
+    console.log(form);
+
+    $(".step-5-nombre-cliente").html(form.nombreCliente);
+    $(".step-5-nombre-auto").html(form.nombreAuto);
+    $(".step-5-version-auto").html(form.versionAuto);
+    $(".step-5-anio-auto").html(form.anioAuto);
+    $(".step-5-tipo-persona").html(form.tipoPersona);
+    $(".step-5-imagen-auto").attr("src", form.imagenAuto);
+}
+
 function setAutoValues(selected) {
-    console.log(selected);
     $(".step-4-nombre-auto").html(selected.dataset.autoName);
     $(".step-4-imagen-auto").attr("src", selected.dataset.autoPicture);
 }
@@ -222,6 +254,8 @@ function getVersions(autoId) {
                 opt = document.createElement("option");
                 opt.value = item.precio;
                 opt.innerHTML = `${item.descripcion_tipo} - ${item.descripcion}`;
+                opt.dataset.anio = item.descripcion;
+                opt.dataset.version = item.descripcion_tipo;
 
                 $("#car_version").append(opt);
             });

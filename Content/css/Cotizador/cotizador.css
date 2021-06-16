@@ -12,6 +12,18 @@
     display: grid !important;
 }
 
+.flex-center{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#cotizador-swiper-container.limited-height{
+    max-height: calc(100vh - 63px);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
 .select-button {
     display: flex;
     align-items: center;
@@ -46,6 +58,12 @@
     outline: none;
 }
 
+.btn-red.btn-long,
+.btn-red_inverted.btn-long,
+.btn-black_inverted.btn-long,
+.btn-black.btn-long{
+    padding: 12px 18px;
+}
 /*----------------STEP 1----------------*/
 #step-1 {
     height: calc(100vh - 63px);
@@ -153,7 +171,9 @@
     padding-top: 20px;
 }
 
-#step-3-back {
+#step-3-back,
+#step-4-back,
+#step-5-back {
     margin-left: -30px;
 }
 
@@ -335,3 +355,56 @@
       background-color: #494545; */
     /*-webkit-appearance: none;
 }*/
+
+/*----------------STEP 5----------------*/
+
+#step-5 {
+    min-height: calc(100vh - 63px);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+#step-5 .title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 40px;
+}
+
+#step-5 .text-tag{
+    font-weight: 400;
+    color: #58595B;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 2px;
+}
+
+#step-5 .text-value {
+    font-weight: 600;
+    color: #333333;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.step-5-card {
+    padding: 32px;
+    border-radius: 12px;
+    background: #F5F5F5;
+    display: grid;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.step-5-card.size-small{
+    height: 116px;
+}
+
+.step-5-card.size-medium{
+    height: 208px;
+}
+
+.step-5-card.size-big{
+    height: 256px;
+}

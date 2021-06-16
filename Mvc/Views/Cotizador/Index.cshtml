@@ -20,7 +20,7 @@
 @Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
 
 <div class="cotizador-container">
-    <div id="cotizador-swiper-container" class="swiper-container">
+    <div id="cotizador-swiper-container" class="swiper-container limited-height">
         <div class="swiper-wrapper">
             @* ----------------STEP 1---------------- *@
             <div class="swiper-slide">
@@ -128,22 +128,6 @@
                                 </div>
                             </div>
                         </div>
-                        @*<div class="sf-form-container" data-id="car-version-form">
-                                <div class="row my-5 justify-content-center">
-                                    <div class="col-11 col-md-4 d-flex">
-                                        <div class="float-container w-100">
-                                            <label for="car_version" class="float-label">Versi&oacute;n</label>
-                                            <select id="car_version" name="car_version" class="form-input effect-2 bg-transparent">
-                                                <option value="0" disabled selected>Versi&oacute;n</option>
-                                            </select>
-                                            <span class="focus-border"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-11 col-md-2 d-flex align-items-center">
-                                        <button id="step-3-continue" type="button" class="btn-red">CONTINUAR</button>
-                                    </div>
-                                </div>
-                            </div>*@
                     </div>
                 </div>
             </div>
@@ -189,14 +173,15 @@
                         </div>
                         <div id="select-personalidad-fiscal" class="row block">
                             <div class="col-12 col-lg-3">
-                                <div class="select-button" data-for="personalidad-fiscal">F&iacute;SICA</div>
+                                <div class="select-button" data-for="personalidad-fiscal" data-value="Física">F&iacute;SICA</div>
                             </div>
                             <div class="col-12 col-lg-6">
-                                <div class="select-button" data-for="personalidad-fiscal">F&iacute;SICA CON ACTIVIDAD EMPRESARIAL</div>
-
+                                <div class="select-button" data-for="personalidad-fiscal" data-value="Física con Actividad Empresarial">
+                                    F&iacute;SICA CON ACTIVIDAD EMPRESARIAL
+                                </div>
                             </div>
                             <div class="col-12 col-lg-3">
-                                <div class="select-button" data-for="personalidad-fiscal">MORAL</div>
+                                <div class="select-button" data-for="personalidad-fiscal" data-value="Moral">MORAL</div>
                             </div>
                         </div>
                         <div class="row mt-4">
@@ -283,7 +268,7 @@
                                         <div class="select-button" data-for="plan">SELECCIONAR</div>
                                     </div>
                                 </div>
-                                <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del año en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
+                                <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del a&ntilde;o en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
                             </div>
                         </div>
                         <div class="row mt-4">
@@ -326,6 +311,162 @@
                         <div class="row block justify-content-center">
                             <div class="col-12 col-lg-4">
                                 <button type="button" id="step-4-finish" class="btn-red w-100">FINALIZAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @* ----------------STEP 5---------------- *@
+            <div class="swiper-slide">
+                <div id="step-5">
+                    <div class="col-11">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-between">
+                                <button type="button" id="step-5-back" class="btn-transparent color-red">
+                                    <span class="material-icons color-red">chevron_left</span>
+                                    VOLVER
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title"><span class="step-5-nombre-cliente"></span> te presentamos el resultado de tu pr&oacute;ximo Toyota</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @* --------------- Columna 1 --------------- *@
+                            <div class="col-12 col-lg-8">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="step-5-card size-medium">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6 d-flex flex-column">
+                                                    <div class="row flex-grow-1">
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="text-tag">Modelo:</div>
+                                                            <div class="step-5-nombre-auto text-value"></div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="text-tag">Versi&oacute;n:</div>
+                                                            <div class="step-5-version-auto text-value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="text-tag">A&ntilde;o:</div>
+                                                            <div class="step-5-anio-auto text-value"></div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="text-tag">Tipo de persona:</div>
+                                                            <div class="step-5-tipo-persona text-value"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 flex-center">
+                                                    <img class="step-5-imagen-auto" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Mensualidad:</div>
+                                            <div class="text-value">$ 7,233.40 M.N.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Enganche:</div>
+                                            <div class="text-value">$ 81,930.00 M.N.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Plazo:</div>
+                                            <div class="text-value">48 meses</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Precio total:</div>
+                                            <div class="text-value">$ 475, 124.91 M.N.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-big">
+                                            <div class="text-tag">Elegir otro plazo:</div>
+                                            <div class="flex-center">
+                                                <div id="select-otro-plazo" class="flex-center row">
+                                                    <div class="select-button col-7 my-3" data-for="otro-plazo">24 MESES</div>
+                                                    <div class="select-button col-7 my-3" data-for="otro-plazo">36 MESES</div>
+                                                    <div class="select-button col-7 my-3 selected" data-for="otro-plazo">48 MESES</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-big d-flex flex-column">
+                                            <div class="text-tag">Plan de financiamiento:</div>
+                                            <div class="flex-center flex-grow-1">
+                                                <img src="~/Content/images/Planes/plan-tradicional.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Aseguradora seleccionada:</div>
+                                            <div class="text-value">AXA</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Cobertura de seguro seleccionada:</div>
+                                            <div class="text-value">Diamante</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Tasa de interés:</div>
+                                            <div class="text-value">13.99%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">CAT:</div>
+                                            <div class="text-value">14.2%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-5">
+                                    <div class="col-12 col-lg-4">
+                                        <button type="button" class="btn-red_inverted w-100">REGRESAR</button>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <button type="button" class="btn-red_inverted w-100">COTIZAR OTRO VEH&iacute;CULO</button>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <button type="button" class="btn-red btn-long w-100">DESCARGAR COTIZACI&Oacute;N PDF</button>
+                                    </div>
+                                </div>
+                            </div>
+                            @* --------------- Columna 2 --------------- *@
+                            <div class="col-12 col-lg-4">
+                                <div class="row">
+                                    <div class="col-12"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
