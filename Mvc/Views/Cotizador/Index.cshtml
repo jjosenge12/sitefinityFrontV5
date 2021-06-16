@@ -20,7 +20,7 @@
 @Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
 
 <div class="cotizador-container">
-    <div id="cotizador-swiper-container" class="swiper-container limited-height">
+    <div id="cotizador-swiper-container" class="swiper-container">
         <div class="swiper-wrapper">
             @* ----------------STEP 1---------------- *@
             <div class="swiper-slide">
@@ -63,7 +63,7 @@
                         <div class="terms">
                             <div><input type="checkbox" id="step-2-terms" /></div>
                             <div>
-                                He le&iacute;do y acepto el <span class="red-link">aviso de privacidad</span> y los <span class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
+                                He le&iacute;do y acepto el <span class="red-link link-aviso-privacidad">aviso de privacidad</span> y los <span id="step-2-terms-btn" class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-5">
@@ -112,10 +112,10 @@
                         </div>
                         <div class="row mt-5">
                             <div id="cars-swiper-container" class="swiper-container">
-                                <div class="swiper-wrapper">
+                                <div class="swiper-wrapper car-slide-container">
                                     @foreach (var item in Model.autos)
                                     {
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide car-slide-container">
                                             <div class="car-slide" data-auto-id="@item.AutoId" data-auto-name="@item.Name" data-auto-picture="@item.CarImage">
                                                 <div class="car-image">
                                                     <img src="@item.CarImage" />
@@ -144,13 +144,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 d-grid">
+                    <div class="col-12 col-lg-6 d-grid">
                         <div class="row mt-4">
                             <div class="col-12">
                                 <div class="title">Selecciona la versi&oacute;n de tu pr&oacute;ximo <span class="step-4-nombre-auto"></span></div>
                             </div>
                         </div>
-                        <div class="row align-items-center block">
+                        <div class="row align-items-center block flex-column-reverse flex-lg-row">
                             <div class="col-12 col-lg-6">
                                 <div>
                                     <img class="step-4-imagen-auto" />
@@ -190,7 +190,7 @@
                             </div>
                         </div>
                         <div class="row block">
-                            <div class="col-12 col-lg-4">
+                            <div class="col-12 col-lg-4 my-3 m-0">
                                 <div class="float-container">
                                     <label class="float-label" for="select-state">Selecciona tu estado</label>
                                     <select id="select-state" name="select-state" class="form-input effect-2">
@@ -199,7 +199,7 @@
                                     <span class="focus-border"></span>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-4">
+                            <div class="col-12 col-lg-4 my-3 m-0">
                                 <div class="float-container">
                                     <label class="float-label" for="select-insurance">Selecciona la aseguradora</label>
                                     <select id="select-insurance" name="select-insurance" class="form-input effect-2">
@@ -208,7 +208,7 @@
                                     <span class="focus-border"></span>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-4">
+                            <div class="col-12 col-lg-4 my-3 m-0">
                                 <div class="float-container">
                                     <label class="float-label" for="select-coverage">Selecciona la cobertura</label>
                                     <select id="select-coverage" name="select-coverage" class="form-input effect-2">
@@ -342,21 +342,21 @@
                                             <div class="row">
                                                 <div class="col-12 col-lg-6 d-flex flex-column">
                                                     <div class="row flex-grow-1">
-                                                        <div class="col-6">
+                                                        <div class="col-5 col-lg-6">
                                                             <div class="text-tag">Modelo:</div>
                                                             <div class="step-5-nombre-auto text-value"></div>
                                                         </div>
-                                                        <div class="col-6">
+                                                        <div class="col-7 col-lg-6">
                                                             <div class="text-tag">Versi&oacute;n:</div>
                                                             <div class="step-5-version-auto text-value"></div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-6">
+                                                        <div class="col-5 col-lg-6">
                                                             <div class="text-tag">A&ntilde;o:</div>
                                                             <div class="step-5-anio-auto text-value"></div>
                                                         </div>
-                                                        <div class="col-6">
+                                                        <div class="col-7 col-lg-6">
                                                             <div class="text-tag">Tipo de persona:</div>
                                                             <div class="step-5-tipo-persona text-value"></div>
                                                         </div>
@@ -401,11 +401,11 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-big">
                                             <div class="text-tag">Elegir otro plazo:</div>
-                                            <div class="flex-center">
+                                            <div class="flex-center m-3">
                                                 <div id="select-otro-plazo" class="flex-center row">
-                                                    <div class="select-button col-7 my-3" data-for="otro-plazo">24 MESES</div>
-                                                    <div class="select-button col-7 my-3" data-for="otro-plazo">36 MESES</div>
-                                                    <div class="select-button col-7 my-3 selected" data-for="otro-plazo">48 MESES</div>
+                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo">24 MESES</div>
+                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo">36 MESES</div>
+                                                    <div class="select-button col-12 col-lg-7 my-3 selected" data-for="otro-plazo">48 MESES</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -413,7 +413,7 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-big d-flex flex-column">
                                             <div class="text-tag">Plan de financiamiento:</div>
-                                            <div class="flex-center flex-grow-1">
+                                            <div class="flex-center flex-grow-1 m-3">
                                                 <img src="~/Content/images/Planes/plan-tradicional.png" />
                                             </div>
                                         </div>
@@ -505,7 +505,7 @@
                                             <div class="terms">
                                                 <div><input type="checkbox" id="step-5-terms" /></div>
                                                 <div>
-                                                    He le&iacute;do y acepto el <span class="red-link">aviso de privacidad</span> y los <span class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
+                                                    He le&iacute;do y acepto el <span class="red-link link-aviso-privacidad">aviso de privacidad</span> y los <span id="step-5-terms-btn" class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
                                                 </div>
                                             </div>
                                             <div class="mt-5">

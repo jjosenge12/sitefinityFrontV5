@@ -1,4 +1,4 @@
-﻿var form = {};
+﻿var form = {}, cars_swiper;
 
 $(document).ready(function () {
     jQuery.validator.addMethod(
@@ -15,7 +15,7 @@ $(document).ready(function () {
     const swiper = new Swiper('#cotizador-swiper-container', {
         speed: 400,
         allowTouchMove: false,
-        //initialSlide: 2
+        autoHeight: true
     });
 
     //new WebkitInputRangeFillLower({
@@ -49,7 +49,12 @@ $(document).ready(function () {
                 isEmail: true
             },
         }
-    })
+    });
+
+    $("#step-2-terms-btn").click(function () {
+        termsCheckbox = "#step-2-terms";
+        openModal("newsletterTermsModal");
+    });
 
     $("#step-2-continue").click(() => {
         if ($("#step-2-form").valid()) {
@@ -58,6 +63,8 @@ $(document).ready(function () {
                 form["nombreCliente"] = $("#name").val();
                 form["apellidoCliente"] = $("#lastname").val();
                 form["emailCliente"] = $("#email").val();
+
+                cars_swiper.autoplay.start();
             } else {
                 termsCheckbox = "#step-2-terms";
                 openModal("newsletterTermsModal");
@@ -67,32 +74,44 @@ $(document).ready(function () {
 
     //----------------STEP 3----------------
 
-    const cars_swiper = new Swiper('#cars-swiper-container', {
+    cars_swiper = new Swiper('#cars-swiper-container', {
         speed: 400,
-        slideToClickedSlide: true,
-        slidesPerView: 4,
         spaceBetween: 30,
+        slidesPerColumn: 2,
+        slidesPerView: 1,
         autoplay: {
             delay: 3000,
         },
-        loop: true,
+        breakpoints: {
+            992: {
+                slidesPerColumnFill: 'column',
+                slidesPerView: 4,
+                slidesPerColumn: 1,
+                slideToClickedSlide: true,
+                loop: true,
+            }
+        },
         navigation: {
             nextEl: '#cars-swiper-next',
             prevEl: '#cars-swiper-prev'
         }
     });
+    cars_swiper.autoplay.stop();
+
 
     $(".select-car").click(function () {
         $(".car-slide").removeClass("selected");
         $(this).parent().addClass("selected");
         console.log(this.parentNode.dataset.autoId);
         $("#step-3-continue").removeAttr("disabled");
+        cars_swiper.autoplay.stop();
     });
 
     $(".car-slide").click(function () {
         $(".car-slide").removeClass("selected");
         $(this).addClass("selected");
         $("#step-3-continue").removeAttr("disabled");
+        cars_swiper.autoplay.stop();
     });
 
     $("#car-version-form").validate({
@@ -126,7 +145,6 @@ $(document).ready(function () {
             )
                 .then(() => {
                     swiper.slideNext();
-                    $("#cotizador-swiper-container").removeClass("limited-height");
                 });
 
             getVersions(selected.dataset.autoId);
@@ -194,6 +212,7 @@ $(document).ready(function () {
             $.when(getFormValues())
                 .then()
             swiper.slideNext();
+            window.scrollTo(0, 0);
         }
         else {
             Swal.fire({
@@ -225,6 +244,11 @@ $(document).ready(function () {
         $("#step-5-contact-form").valid();
     });
 
+    $("#step-5-terms-btn").click(function () {
+        termsCheckbox = "#step-5-terms";
+        openModal("newsletterTermsModal");
+    });
+    
     $("#step-5-contact").click(() => {
         if ($("#step-5-contact-form").valid()) {
             if ($("#step-5-terms").prop("checked")) {

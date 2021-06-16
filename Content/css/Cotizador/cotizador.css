@@ -12,16 +12,20 @@
     display: grid !important;
 }
 
-.flex-center{
+.flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#cotizador-swiper-container.limited-height{
-    max-height: calc(100vh - 63px);
+.cotizador-container{
+    /*margin-bottom: 30px;*/
+}
+
+#cotizador-swiper-container.limited-height {
+    /*max-height: calc(100vh - 63px);
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;*/
 }
 
 .select-button {
@@ -41,29 +45,48 @@
     transition: all 0.3s ease;
 }
 
-.select-button.selected {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    height: 40px;
-    background-color: var(--color-black);
-    border-radius: 20px;
-    border: 1px solid var(--color-black);
-    color: white;
-    transition: all 0.3s ease;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: 600;
-    outline: none;
+    .select-button.selected {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        height: 40px;
+        background-color: var(--color-black);
+        border-radius: 20px;
+        border: 1px solid var(--color-black);
+        color: white;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: 600;
+        outline: none;
+    }
+
+    .btn-red.btn-long,
+    .btn-red_inverted.btn-long,
+    .btn-black_inverted.btn-long,
+    .btn-black.btn-long,
+    .select-button.btn-long {
+        padding: 12px 18px;
+    }
+
+#step-3-back,
+#step-4-back,
+#step-5-back {
+    margin-left: -30px;
 }
 
-.btn-red.btn-long,
-.btn-red_inverted.btn-long,
-.btn-black_inverted.btn-long,
-.btn-black.btn-long{
-    padding: 12px 18px;
+#step-3-continue {
+    margin-right: -30px;
 }
+
+@media(max-width: 991px){
+    .select-button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
 /*----------------STEP 1----------------*/
 #step-1 {
     height: calc(100vh - 63px);
@@ -152,6 +175,10 @@
     }
 
 @media (max-width: 575px) {
+    #step-2{
+        padding-top: 0px;
+    }
+
     #step-2 .title {
         margin-bottom: 20px;
     }
@@ -171,41 +198,35 @@
     padding-top: 20px;
 }
 
-#step-3-back,
-#step-4-back,
-#step-5-back {
-    margin-left: -30px;
-}
-
-#step-3 .title {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 32px;
-    margin-bottom: 40px;
-}
-
-#step-3 .categories button {
-    width: 100%;
-}
-
-#step-3 .slider-button {
-    padding: 24px 27px;
-    border-radius: 50%;
-    border: 1px solid #cccccc;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.2s ease-in-out;
-}
-
-    #step-3 .slider-button:hover {
-        background-color: #eee;
-        transition: all 0.3s ease-in-out;
+    #step-3 .title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 40px;
     }
 
-    #step-3 .slider-button:active {
-        background-color: #ccc;
-        transition: all 0.1s ease-in-out;
+    #step-3 .categories button {
+        width: 100%;
     }
+
+    #step-3 .slider-button {
+        padding: 24px 27px;
+        border-radius: 50%;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.2s ease-in-out;
+    }
+
+        #step-3 .slider-button:hover {
+            background-color: #eee;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #step-3 .slider-button:active {
+            background-color: #ccc;
+            transition: all 0.1s ease-in-out;
+        }
 
 .car-slide {
     user-select: none;
@@ -270,6 +291,16 @@
     color: white;
 }
 
+@media(max-width: 991px) {
+    .swiper-slide.car-slide-container {
+        height: calc((100% - 30px) / 2);
+    }
+
+    .swiper-wrapper.car-slide-container {
+        max-height: calc(100vh - 63px);
+    }
+}
+
 /*----------------STEP 4----------------*/
 
 #step-4 {
@@ -280,45 +311,45 @@
     padding-top: 20px;
 }
 
-#step-4 .title {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 32px;
-    margin-bottom: 40px;
-}
+    #step-4 .title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
 
-#step-4 .block {
-    margin-top: 20px;
-    margin-bottom: 80px;
-}
+    #step-4 .block {
+        margin-top: 20px;
+        margin-bottom: 80px;
+    }
 
-#step-4 .text-plan{
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 24px;
-}
+    #step-4 .text-plan {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 24px;
+    }
 
-#step-4 .range-button {
-    padding: 12px;
-    border-radius: 50%;
-    border: 1px solid #cccccc;
-    cursor: pointer;
-    user-select: none;
-    flex: 0 1 auto;
-    transition: all 0.2s ease-in-out;
-}
+    #step-4 .range-button {
+        padding: 12px;
+        border-radius: 50%;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+        user-select: none;
+        flex: 0 1 auto;
+        transition: all 0.2s ease-in-out;
+    }
 
-#step-4 .range-button:hover {
-    background-color: #eee;
-    transition: all 0.3s ease-in-out;
-}
+        #step-4 .range-button:hover {
+            background-color: #eee;
+            transition: all 0.3s ease-in-out;
+        }
 
-#step-4 .range-button:active {
-    background-color: #ccc;
-    transition: all 0.1s ease-in-out;
-}
+        #step-4 .range-button:active {
+            background-color: #ccc;
+            transition: all 0.1s ease-in-out;
+        }
 
-#hitch-text{
+#hitch-text {
     flex: 1 1 auto;
     text-align: center;
     align-self: center;
@@ -327,7 +358,7 @@
     line-height: 32px;
 }
 
-.range-controls{
+.range-controls {
     margin-top: 0 !important;
 }
 
@@ -351,10 +382,16 @@
 
 #hitch-range {
     background-color: rgba(255, 255, 255, 0.3);*/
-    /* background-color: transparent;
+/* background-color: transparent;
       background-color: #494545; */
-    /*-webkit-appearance: none;
+/*-webkit-appearance: none;
 }*/
+
+@media(max-width: 991px) {
+    #hitch-text {
+        font-size: 18px;
+    }
+}
 
 /*----------------STEP 5----------------*/
 
@@ -366,27 +403,27 @@
     padding-top: 20px;
 }
 
-#step-5 .title {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 32px;
-    margin-bottom: 40px;
-}
+    #step-5 .title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
 
-#step-5 .text-tag{
-    font-weight: 400;
-    color: #58595B;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 2px;
-}
+    #step-5 .text-tag {
+        font-weight: 400;
+        color: #58595B;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 2px;
+    }
 
-#step-5 .text-value {
-    font-weight: 600;
-    color: #333333;
-    font-size: 16px;
-    line-height: 24px;
-}
+    #step-5 .text-value {
+        font-weight: 600;
+        color: #333333;
+        font-size: 16px;
+        line-height: 24px;
+    }
 
 .step-5-card {
     padding: 32px;
@@ -397,21 +434,21 @@
     margin-bottom: 8px;
 }
 
-.step-5-card.size-small{
-    height: 116px;
-}
+    .step-5-card.size-small {
+        height: 116px;
+    }
 
-.step-5-card.size-medium{
-    height: 208px;
-}
+    .step-5-card.size-medium {
+        height: 208px;
+    }
 
-.step-5-card.size-big{
-    height: 256px;
-}
+    .step-5-card.size-big {
+        height: 256px;
+    }
 
-.step-5-card.solicitud{
-    height: 340px;
-}
+    .step-5-card.solicitud {
+        height: 340px;
+    }
 
 #step-5 .terms {
     display: flex;
@@ -434,12 +471,30 @@
     margin: 7px;
 }
 
-#step-5 .float-container{
+#step-5 .float-container {
     margin: 15px 0;
 }
 
-@media(max-width: 991px){
+@media(max-width: 991px) {
     .step-5-card.size-medium {
         height: 428px;
+    }
+}
+
+@media(max-width: 767px) {
+    #step-5{
+        padding-top: 0;
+    }
+
+    .step-5-card {
+        padding: 16px;
+    }
+
+    .step-5-card.size-big{
+        height: auto;
+    }
+
+    .step-5-card.solicitud{
+        height: auto;
     }
 }
