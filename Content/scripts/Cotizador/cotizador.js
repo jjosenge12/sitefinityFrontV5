@@ -30,6 +30,8 @@ $(document).ready(function () {
         $(this).addClass("selected");
     });
 
+    getDealersByState("step-5-distribuidores");
+
     //----------------STEP 1----------------
 
     $("#start").click(() => swiper.slideNext());
@@ -266,6 +268,20 @@ $(document).ready(function () {
                 required: true
             }
         }
+    });
+
+    $("#step-5-distribuidores").on("select2:open", function () {
+        $("#step-5-distribuidores").siblings("[class='focus-border']").addClass("active");
+    });
+
+    $("#step-5-distribuidores").on("select2:close", function () {
+        $("#step-5-distribuidores")
+            .siblings("[class='focus-border active']")
+            .removeClass("active");
+    });
+
+    $("#step-5-distribuidores").on("select2:select", function () {
+        $("#step-5-distribuidores").valid();
     });
 
     $("#step-5-contact-form").submit(function (e) {

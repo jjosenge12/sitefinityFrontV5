@@ -4,16 +4,18 @@
 @using Telerik.Sitefinity.Frontend.Mvc.Helpers;
 
 @Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/sweetalert2.js"), "top", true)
-@Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true)
 @Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/material-icons.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/select2.min.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/loaders.css"))
 @Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css"))
 
@@ -28,7 +30,7 @@
         </nav>
         @*<div class="btn userButton toggleMenu" id="openMenuBtn"><span class="material-icons">logout</span>&nbsp;  Cerrar sesi&oacute;n Cerrar sesi&oacute;n</div>*@
         @*<div class="btn userButton toggleMenu" style="display:none;" id="closeMenuBtn"><span class="material-icons">close</span></div>*@
-    <a class="btn userButton" href="/tfsm/my-tfsm"><span class="material-icons">logout</span>&nbsp;Cerrar sesión</a>
+        <a class="btn userButton" href="/tfsm/my-tfsm"><span class="material-icons">logout</span>&nbsp;Cerrar sesión</a>
     </div>
     <div class="overlay toggleMenu" style="display:none;" id="menuOverlay"></div>
     <div class="drawerMenu" style="display:none;" id="drawerMenu">

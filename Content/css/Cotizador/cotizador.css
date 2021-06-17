@@ -80,6 +80,10 @@
     margin-right: -30px;
 }
 
+.select2-container--default .select2-selection--single {
+    background-color: transparent;
+}
+
 @media(max-width: 991px) {
     .select-button {
         margin-top: 10px;
