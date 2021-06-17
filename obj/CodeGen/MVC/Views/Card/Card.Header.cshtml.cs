@@ -202,7 +202,7 @@ WriteLiteral(" href=\"/tfsm/my-tfsm/login-clientes\"");
 
 WriteLiteral(">My TFSM</a>\r\n            <a");
 
-WriteLiteral(" href=\"#\"");
+WriteLiteral(" href=\"/cotizador\"");
 
 WriteLiteral(">Cotizar Plan</a>\r\n            <a");
 
@@ -296,8 +296,11 @@ WriteLiteral(" class=\"menuLink\"");
 
 WriteLiteral(" href=\"/nuestros-planes/tasas-y-comisiones\"");
 
-WriteLiteral(">Tasas y comisiones</a>\r\n            </div>\r\n        </span>\r\n        <div><a>Cot" +
-"izar Plan</a></div>\r\n        <div");
+WriteLiteral(">Tasas y comisiones</a>\r\n            </div>\r\n        </span>\r\n        <a");
+
+WriteLiteral(" href=\"/cotizador\"");
+
+WriteLiteral(">Cotizar Plan</a>\r\n        <div");
 
 WriteLiteral(" id=\"deployArrendamientos\"");
 

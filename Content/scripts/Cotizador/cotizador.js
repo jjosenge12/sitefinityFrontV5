@@ -186,6 +186,32 @@ $(document).ready(function () {
 
     $("#select-insurance").change(() => getCoverages());
 
+    $("#select-personalidad-fiscal .select-button").click(function () {
+        if (this.dataset.value === "Física") {
+            $("#select-financing .select-button")[0].classList.add("selected");
+            $("#select-financing .select-button")[0].click();
+            $("#select-financing .select-button")[1].style.display = "none";
+        }
+        else {
+            $("#select-financing .select-button")[1].style.display = "flex";
+        }
+    });
+
+    $("#select-financing .select-button").click(function () {
+        switch (this.dataset.value) {
+            case "Financiamiento":
+                $("#title-financiamiento").html("financiamiento");
+                $("#select-plan").show();
+                $("#select-arrendamiento").hide();
+                break;
+            case "Arrendamiento":
+                $("#title-financiamiento").html("arrendamiento");
+                $("#select-plan").hide();
+                $("#select-arrendamiento").show();
+                break;
+        }
+    });
+
     $("#hitch-range").change(function () {
         form.hitch = $("#hitch-range").val();
         $("#hitch-text").html("$ " + Number(form.hitch).toFixed(2) + " M.N.");
@@ -194,7 +220,7 @@ $(document).ready(function () {
     $("#hitch-minus").click(function () {
         let val = $("#hitch-range").val();
         let calc = Number(val) - 5000;
-        if (calc >= (form.price / 10)) {
+        if (calc >= (form.precioAuto / 10)) {
             $("#hitch-range").val(calc);
             $("#hitch-range").change();
             $("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
@@ -446,9 +472,17 @@ function validateStepFour() {
         console.log("financiamiento invalida");
         return false;
     }
-    else if ($("#select-plan .select-button.selected").length != 1) {
-        console.log("plan invalida");
-        return false
+    else if ($("#select-financing .select-button.selected")[0].dataset.value === "Financiamiento") {
+        if ($("#select-plan .select-button.selected").length != 1) {
+            console.log("plan invalida");
+            return false
+        }
+    }
+    else if ($("#select-financing .select-button.selected")[0].dataset.value === "Arrendamiento") {
+        if ($("#select-arrendamiento .select-button.selected").length != 1) {
+            console.log("arrendamiento invalida");
+            return false
+        }
     }
     else if ($("#select-term .select-button.selected").length != 1) {
         console.log("plazo invalida");
