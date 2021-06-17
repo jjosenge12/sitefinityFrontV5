@@ -380,12 +380,21 @@ function showResults(data) {
     switch (form.PlanCotizar) {
         case "Tradicional":
             $(".step-5-plan").attr("src", "/Content/images/Planes/plan-tradicional.png");
+            $("#data-anualidades").hide();
+            $("#data-balloon").hide();
             break;
         case "Balloon":
             $(".step-5-plan").attr("src", "/Content/images/Planes/plan-balloon.png");
+            $(".step-5-monto-balloon").html(`$ ${numberWithCommas(_data.Ballon.toFixed(2))} M.N.`);
+            $(".step-5-porcentaje-balloon").html((_data.PBallon * 100) + "%");
+            $("#data-anualidades").hide();
+            $("#data-balloon").show();
             break;
         case "Anualidades":
             $(".step-5-plan").attr("src", "/Content/images/Planes/plan-anualidades.png");
+            $(".step-5-anualidad").html(`$ ${numberWithCommas(_data.Anualidad.toFixed(2))} M.N.`);
+            $("#data-anualidades").show();
+            $("#data-balloon").hide();
             break;
     }
 
@@ -418,6 +427,7 @@ function cotizar() {
                     window.scrollTo(0, 0);
                     swiper.slideNext();
                     commitSalesforce();
+                    console.log(result.data.Prices);
 
                 } else {
                     Swal.fire({
@@ -432,13 +442,14 @@ function cotizar() {
             }
         },
         error: function (err) {
-            //console.log(err);
-            $('.TablaCotizar5').css('display', 'none');
-            $('#FrmPaso5').css('display', 'none');
-            $('#statusImgC').attr('src', errImg);
-            $('#messageC').html('<span>Ocurrio un error al procesar la información</span>');
-            $('#MyModalCotizador').modal('show');
-            return;
+            Swal.fire({
+                title: "Error",
+                text: "Ocurrio un error al procesar la información",
+                icon: "error",
+                confirmButtonColor: "#cc0000",
+                timer: 5000
+            });
+            console.log(err);
         }
     });
 }
