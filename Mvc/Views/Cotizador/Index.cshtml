@@ -58,6 +58,11 @@
                                     <input type="text" name="email" id="email" class="form-input effect-2" />
                                     <span class="focus-border"></span>
                                 </div>
+                                <div class="float-container">
+                                    <label class="float-label" for="phone">Tel&eacute;fono</label>
+                                    <input type="tel" name="phone" id="phone" class="form-input effect-2" />
+                                    <span class="focus-border"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="terms">
@@ -243,7 +248,7 @@
                                         <img src="~/Content/images/Planes/plan-tradicional.png" />
                                     </div>
                                     <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="plan">SELECCIONAR</div>
+                                        <div class="select-button" data-for="plan" data-value="Tradicional">SELECCIONAR</div>
                                     </div>
                                 </div>
                                 <div class="text-plan">Pagas mensualidades iguales durante toda la vida del financiamiento.</div>
@@ -254,7 +259,7 @@
                                         <img src="~/Content/images/Planes/plan-balloon.png" />
                                     </div>
                                     <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="plan">SELECCIONAR</div>
+                                        <div class="select-button" data-for="plan" data-value="Balloon">SELECCIONAR</div>
                                     </div>
                                 </div>
                                 <div class="text-plan">Tienes acceso a una mensualidad m&aacute;s baja, ya que estableces un pago al final de tu financiamiento, el cual puede ser del 25% o 35% del valor del veh&iacute;culo.</div>
@@ -265,7 +270,7 @@
                                         <img src="~/Content/images/Planes/plan-anualidades.png" />
                                     </div>
                                     <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="plan">SELECCIONAR</div>
+                                        <div class="select-button" data-for="plan" data-value="Anualidades">SELECCIONAR</div>
                                     </div>
                                 </div>
                                 <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del a&ntilde;o en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
@@ -278,13 +283,13 @@
                         </div>
                         <div id="select-term" class="row block">
                             <div class="col-12 col-lg-4">
-                                <div class="select-button" data-for="term">24 MESES</div>
+                                <div class="select-button" data-for="term" data-value="24">24 MESES</div>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <div class="select-button" data-for="term">36 MESES</div>
+                                <div class="select-button" data-for="term" data-value="36">36 MESES</div>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <div class="select-button" data-for="term">48 MESES</div>
+                                <div class="select-button" data-for="term" data-value="48">48 MESES</div>
                             </div>
                         </div>
                         <div class="row mt-4">
@@ -302,7 +307,7 @@
                                 <div id="hitch-minus" class="range-button">
                                     <img src="~/Content/images/Cotizador/menos.png" />
                                 </div>
-                                <div id="hitch-text"></div>
+                                <div id="hitch-text">$ 0 M.N.</div>
                                 <div id="hitch-plus" class="range-button">
                                     <img src="~/Content/images/Cotizador/mas.png" />
                                 </div>
@@ -373,13 +378,13 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">Mensualidad:</div>
-                                            <div class="text-value">$ 7,233.40 M.N.</div>
+                                            <div class="text-value step-5-mensualidad">$ 0 M.N.</div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">Enganche:</div>
-                                            <div class="text-value">$ 81,930.00 M.N.</div>
+                                            <div class="text-value step-5-enganche">$ 0 M.N.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -387,13 +392,13 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">Plazo:</div>
-                                            <div class="text-value">48 meses</div>
+                                            <div class="text-value step-5-plazo"></div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">Precio total:</div>
-                                            <div class="text-value">$ 475, 124.91 M.N.</div>
+                                            <div class="text-value step-5-precio-total">$ 0 M.N.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -403,9 +408,9 @@
                                             <div class="text-tag">Elegir otro plazo:</div>
                                             <div class="flex-center m-3">
                                                 <div id="select-otro-plazo" class="flex-center row">
-                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo">24 MESES</div>
-                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo">36 MESES</div>
-                                                    <div class="select-button col-12 col-lg-7 my-3 selected" data-for="otro-plazo">48 MESES</div>
+                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo" data-value="24">24 MESES</div>
+                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo" data-value="36">36 MESES</div>
+                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo" data-value="48">48 MESES</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -414,7 +419,7 @@
                                         <div class="step-5-card size-big d-flex flex-column">
                                             <div class="text-tag">Plan de financiamiento:</div>
                                             <div class="flex-center flex-grow-1 m-3">
-                                                <img src="~/Content/images/Planes/plan-tradicional.png" />
+                                                <img class="step-5-plan" />
                                             </div>
                                         </div>
                                     </div>
@@ -423,13 +428,13 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">Aseguradora seleccionada:</div>
-                                            <div class="text-value">AXA</div>
+                                            <div class="text-value step-5-aseguradora"></div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">Cobertura de seguro seleccionada:</div>
-                                            <div class="text-value">Diamante</div>
+                                            <div class="text-value step-5-cobertura"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -437,13 +442,13 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">Tasa de interés:</div>
-                                            <div class="text-value">13.99%</div>
+                                            <div class="text-value step-5-tasa-interes"></div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">CAT:</div>
-                                            <div class="text-value">14.2%</div>
+                                            <div class="text-value step-5-cat"></div>
                                         </div>
                                     </div>
                                 </div>

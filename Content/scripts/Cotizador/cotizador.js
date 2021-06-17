@@ -1,4 +1,4 @@
-﻿var form = {}, cars_swiper;
+﻿var form = {}, cars_swiper, cotizacion;
 
 $(document).ready(function () {
     jQuery.validator.addMethod(
@@ -48,6 +48,9 @@ $(document).ready(function () {
                 required: true,
                 isEmail: true
             },
+            phone: {
+                required: true
+            }
         }
     });
 
@@ -60,9 +63,10 @@ $(document).ready(function () {
         if ($("#step-2-form").valid()) {
             if ($("#step-2-terms").prop("checked")) {
                 swiper.slideNext();
-                form["nombreCliente"] = $("#name").val();
-                form["apellidoCliente"] = $("#lastname").val();
+                form["Nombre"] = $("#name").val();
+                form["Apellido"] = $("#lastname").val();
                 form["emailCliente"] = $("#email").val();
+                form["Telefono"] = $("#phone").val();
 
                 cars_swiper.autoplay.start();
             } else {
@@ -137,7 +141,7 @@ $(document).ready(function () {
             $.when(
                 form = {
                     ...form,
-                    nombreAuto: selected.dataset.autoName,
+                    Marca: selected.dataset.autoName,
                     autoId: selected.dataset.autoId,
                     imagenAuto: selected.dataset.autoPicture
                 },
@@ -169,15 +173,15 @@ $(document).ready(function () {
     $("#car_version").change(function (e) {
         form = {
             ...form,
-            versionAuto: $("#car_version option:selected")[0].dataset.version,
-            anioAuto: $("#car_version option:selected")[0].dataset.anio,
+            Vesion: $("#car_version option:selected")[0].dataset.version,
+            Anio: $("#car_version option:selected")[0].dataset.anio,
             precioAuto: $(this).val(),
-            engancheAuto: $(this).val() / 10
+            EngancheDeposito: $(this).val() / 10
         }
 
-        $("#hitch-range").attr("min", form.engancheAuto);
-        $("#hitch-range").val(form.engancheAuto);
-        $("#hitch-text").html("$ " + form.engancheAuto + " M.N.");
+        $("#hitch-range").attr("min", form.EngancheDeposito);
+        $("#hitch-range").val(form.EngancheDeposito);
+        $("#hitch-text").html("$ " + form.EngancheDeposito + " M.N.");
     });
 
     $("#select-insurance").change(() => getCoverages());
@@ -213,6 +217,7 @@ $(document).ready(function () {
                 .then()
             swiper.slideNext();
             window.scrollTo(0, 0);
+            cotizar();
         }
         else {
             Swal.fire({
@@ -248,7 +253,12 @@ $(document).ready(function () {
         termsCheckbox = "#step-5-terms";
         openModal("newsletterTermsModal");
     });
-    
+
+    $("#select-otro-plazo .select-button").click(function () {
+        $.when(form.Plazo = this.dataset.value)
+            .then(() => showResults(cotizacion));
+    });
+
     $("#step-5-contact").click(() => {
         if ($("#step-5-contact-form").valid()) {
             if ($("#step-5-terms").prop("checked")) {
@@ -259,7 +269,6 @@ $(document).ready(function () {
                     distribuidor: $("#step-5-distribuidores").val(),
                     phoneClient: $("#step-5-phone").val()
                 }
-                console.log(form);
 
             } else {
                 termsCheckbox = "#step-5-terms";
@@ -271,28 +280,122 @@ $(document).ready(function () {
 
 function getFormValues() {
     form = {
-        nombreCliente: $("#name").val(),
-        apellidoCliente: $("#lastname").val(),
+        Nombre: $("#name").val(),
+        Apellido: $("#lastname").val(),
         emailCliente: $("#email").val(),
-        nombreAuto: $(".car-slide.selected")[0].dataset.autoName,
+        Telefono: $("#phone").val(),
+        Marca: $(".car-slide.selected")[0].dataset.autoName,
         autoId: $(".car-slide.selected")[0].dataset.autoId,
         imagenAuto: $(".car-slide.selected")[0].dataset.autoPicture,
-        versionAuto: $("#car_version option:selected")[0].dataset.version,
-        anioAuto: $("#car_version option:selected")[0].dataset.anio,
+        Vesion: $("#car_version option:selected")[0].dataset.version,
+        Anio: $("#car_version option:selected")[0].dataset.anio,
+        Modelo: $("#car_version option:selected")[0].dataset.anio,
         precioAuto: $("#car_version").val(),
-        engancheAuto: $("#car_version").val() / 10,
-        tipoPersona: $("#select-personalidad-fiscal .select-button.selected")[0].dataset.value,
-
+        EngancheDeposito: $("#hitch-range").val(),
+        TipoPersona: $("#select-personalidad-fiscal .select-button.selected")[0].dataset.value,
+        Estado: $("#select-state option:selected")[0].innerHTML,
+        Aseguradora: $("#select-insurance option:selected")[0].innerHTML,
+        Cobertura: $("#select-coverage option:selected")[0].innerHTML,
+        PlanCotizar: $("#select-plan .select-button.selected")[0].dataset.value,
+        Plazo: $("#select-term .select-button.selected")[0].dataset.value,
+        TipoUso: "Depósitos de Garantía",
+        CantidadDepositosGarantia: 0,
     }
 
-    console.log(form);
+}
 
-    $(".step-5-nombre-cliente").html(form.nombreCliente);
-    $(".step-5-nombre-auto").html(form.nombreAuto);
-    $(".step-5-version-auto").html(form.versionAuto);
-    $(".step-5-anio-auto").html(form.anioAuto);
-    $(".step-5-tipo-persona").html(form.tipoPersona);
+function showResults(data) {
+    var _data = data.filter(x => x.Plazo == form.Plazo)[0];
+
+    $(".step-5-nombre-cliente").html(_data.Nombre);
+    $(".step-5-nombre-auto").html(_data.Marca);
+    $(".step-5-version-auto").html(_data.Vesion);
+    $(".step-5-anio-auto").html(_data.Anio);
+    $(".step-5-tipo-persona").html(_data.TipoPersona);
     $(".step-5-imagen-auto").attr("src", form.imagenAuto);
+    $(".step-5-mensualidad").html(`$ ${numberWithCommas(_data.Mensualidad.toFixed(2))} M.N.`);
+    $(".step-5-enganche").html(`$ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.`);
+    $(".step-5-plazo").html(_data.Plazo + " Meses");
+    $(".step-5-precio-total").html(`$ ${numberWithCommas(_data.PrecioTotal.toFixed(2))} M.N.`);
+    $(".step-5-aseguradora").html(_data.Aseguradora);
+    $(".step-5-cobertura").html(_data.Cobertura);
+    $(".step-5-cat").html(_data.CAT + "%");
+    $(".step-5-tasa-interes").html((_data.PorcentajeComision * 100).toFixed(2) + "%");
+
+    switch (form.Plazo) {
+        case "24":
+            $("#select-otro-plazo .select-button")[0].classList.add("selected");
+            break;
+        case "36":
+            $("#select-otro-plazo .select-button")[1].classList.add("selected");
+            break;
+        case "48":
+            $("#select-otro-plazo .select-button")[2].classList.add("selected");
+            break;
+    }
+
+    switch (form.PlanCotizar) {
+        case "Tradicional":
+            $(".step-5-plan").attr("src", "/Content/images/Planes/plan-tradicional.png");
+            break;
+        case "Balloon":
+            $(".step-5-plan").attr("src", "/Content/images/Planes/plan-balloon.png");
+            break;
+        case "Anualidades":
+            $(".step-5-plan").attr("src", "/Content/images/Planes/plan-anualidades.png");
+            break;
+    }
+
+}
+
+function cotizar() {
+
+    $.ajax({
+        type: 'POST',
+        url: window.config.urlbase + '/PostCotizacion',
+        data: form,
+        beforeSend: showLoader,
+        complete: hideLoader,
+        dataType: "json",
+        success: function (result) {
+            if (parseInt(result.data.Status) == 400) {
+                Swal.fire({
+                    title: "Error",
+                    text: "No existe información para la versión seleccionada",
+                    icon: "error",
+                    confirmButtonColor: "#cc0000",
+                    timer: 5000
+                });
+                console.log(result.data.Message);
+            } else {
+
+                if (result.data.Prices.length > 0) {
+                    cotizacion = result.data.Prices;
+                    showResults(result.data.Prices);
+                    commitSalesforce();
+
+                } else {
+                    Swal.fire({
+                        title: "Error",
+                        text: "No existe información para la versión seleccionada",
+                        icon: "error",
+                        confirmButtonColor: "#cc0000",
+                        timer: 5000
+                    });
+                    console.log(result.data.Message);
+                }
+            }
+        },
+        error: function (err) {
+            //console.log(err);
+            $('.TablaCotizar5').css('display', 'none');
+            $('#FrmPaso5').css('display', 'none');
+            $('#statusImgC').attr('src', errImg);
+            $('#messageC').html('<span>Ocurrio un error al procesar la información</span>');
+            $('#MyModalCotizador').modal('show');
+            return;
+        }
+    });
 }
 
 function setAutoValues(selected) {
@@ -451,6 +554,49 @@ function getCoverages() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    /*const myRanges = new WebkitInputRangeFillLower({ selectors: 'hitch-range', color: '#cc0000' });*/
-});
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function commitSalesforce() {
+
+    var data = {
+        Estado: form.Estado,
+        Aseguradora: form.Aseguradora,
+        Cobertura: form.Cobertura,
+        Plan: form.PlanCotizar,
+        Movil: form.Telefono,
+        Email: form.emailCliente,
+        Nombre: form.Nombre,
+        Apellido: form.Apellido,
+        AceptoTerminosYCondiciones: 'SiAcepto',
+        Marca: form.Marca,
+        Modelo: form.Modelo,
+        Vesion: form.Vesion,
+        TipoPersona: form.TipoPersona,
+        Enganche: form.EngancheDeposito,
+        Ballon: "text_ballon",
+        DepositoGarantia: "0",
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: window.config.urlbase + '/SalesForceStep4',
+        data: data,
+        dataType: "json",
+        success: function (result) {
+
+            console.log(result);
+        },
+        error: function (err) {
+            console.log(err);
+            Swal.fire({
+                title: "Error",
+                text: "Error al enviar información a Salesforce",
+                icon: "error",
+                confirmButtonColor: "#cc0000",
+                timer: 5000
+            });
+        }
+    });
+}
