@@ -203,14 +203,16 @@ $(document).ready(function () {
     $("#select-financing .select-button").click(function () {
         switch (this.dataset.value) {
             case "Financiamiento":
-                $("#title-financiamiento").html("financiamiento");
+                $(".title-financiamiento").html("financiamiento");
+                $(".title-enganche").html("enganche");
                 $("#select-plan").show();
                 $("#select-arrendamiento").hide();
                 $("#data-depositos").hide();
                 $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
                 break;
             case "Arrendamiento":
-                $("#title-financiamiento").html("arrendamiento");
+                $(".title-financiamiento").html("arrendamiento");
+                $(".title-enganche").html("depósito");
                 $("#select-plan").hide();
                 $("#select-arrendamiento").show();
                 $("#data-depositos").show();
@@ -303,6 +305,11 @@ $(document).ready(function () {
     $("#select-otro-plazo .select-button").click(function () {
         $.when(form.Plazo = this.dataset.value)
             .then(() => showResults(cotizacion));
+    });
+
+    $("#cotizar-otro").click(function () {
+        $.when(clearValues())
+            .then(() => swiper.slideTo(2, 0));
     });
 
     $("#step-5-contact").click(() => {
@@ -666,7 +673,7 @@ function commitSalesforce() {
         TipoPersona: form.TipoPersona,
         Enganche: form.EngancheDeposito,
         Ballon: "text_ballon",
-        DepositoGarantia: "0",
+        DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
     }
 
     $.ajax({
@@ -722,4 +729,36 @@ function getCantidadDepositos(autoId) {
             });
         }
     });
+}
+
+function clearValues() {
+    form = {
+        Nombre: form.Nombre,
+        Apellido: form.Apellido,
+        emailCliente: form.emailCliente,
+        Telefono: form.Telefono,
+    }
+
+    $(".car-slide").removeClass("selected");
+    $("#car_version").html($("#car_version option")[0]);
+    $("#select-personalidad-fiscal .select-button").removeClass("selected");
+    $("#select-state").val(0);
+    $("#select-insurance").val(0);
+    $("#select-coverage").val(0);
+    $("#select-financing .select-button")[0].click();
+    $(".select-plan .select-button").removeClass("selected");
+    $(".select-arrendamiento .select-button").removeClass("selected");
+    $("#select-cantidad-depositos").val(-1);
+    $("#select-term .select-button").removeClass("selected");
+    $("#hitch-range").attr("min", 0);
+    $("#hitch-range").val(0);
+    $("#hitch-text").html("$ 0 M.N.");
+
+    cars_swiper.autoplay.start();
+    window.scrollTo(0, 0);
+
+    $("#step-5-distribuidores").val(0);
+    $("#step-5-distribuidores").trigger("change");
+    $("#step-5-phone").val("");
+    $("#step-5-terms").prop("checked", false);
 }
