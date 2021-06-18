@@ -280,10 +280,10 @@
                             <div class="col-12 my-4">
                                 <div class="row my-3 align-items-center">
                                     <div class="col-6 col-lg-4">
-                                        <div class="title-arrendamiento">Arrendamiento Financiero</div>
+                                        <img src="~/Content/images/Planes/logo_arrendamiento_finan.png" />
                                     </div>
                                     <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="arrendamiento" data-value="Financiero">SELECCIONAR</div>
+                                        <div class="select-button" data-for="arrendamiento" data-value="financiero">SELECCIONAR</div>
                                     </div>
                                 </div>
                                 <div class="text-plan">Adquiere la propiedad fiscal del autom&oacute;vil, lo que permite deducirlo de impuestos, ya que el veh&iacute;culo se registra dentro de los activos del contratante.</div>
@@ -291,13 +291,31 @@
                             <div class="col-12 my-4">
                                 <div class="row my-3 align-items-center">
                                     <div class="col-6 col-lg-4">
-                                        <div class="title-arrendamiento">Arrendamiento Puro</div>
+                                        <img src="~/Content/images/Planes/logo_arrendamiento_puro.png" />
                                     </div>
                                     <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="arrendamiento" data-value="Puro">SELECCIONAR</div>
+                                        <div class="select-button" data-for="arrendamiento" data-value="puro">SELECCIONAR</div>
                                     </div>
                                 </div>
                                 <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del a&ntilde;o en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
+                            </div>
+                        </div>
+                        <div id="data-depositos" class="row mt-4" style="display: none;">
+                            <div class="col-12">
+                                <div class="title">Selecciona la cantidad de Depósitos</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row block">
+                                    <div class="col-12 col-lg-6 my-3 m-0">
+                                        <div class="float-container">
+                                            <label class="float-label" for="select-cantidad-depositos">Cantidad de Depósitos</label>
+                                            <select id="select-cantidad-depositos" name="select-cantidad-depositos" class="form-input effect-2">
+                                                <option value="0" selected disabled>Cantidad de Depósitos</option>
+                                            </select>
+                                            <span class="focus-border"></span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row mt-4">
@@ -405,10 +423,16 @@
                                             <div class="text-value step-5-mensualidad">$ 0 M.N.</div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 step-5-datos-plan">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">Enganche:</div>
                                             <div class="text-value step-5-enganche">$ 0 M.N.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 step-5-datos-arrendamiento" style="display: none;">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Total rentas en Depósito:</div>
+                                            <div class="text-value step-5-deposito">$ 0 M.N.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -419,10 +443,16 @@
                                             <div class="text-value step-5-plazo"></div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 step-5-datos-plan">
                                         <div class="step-5-card size-small">
                                             <div class="text-tag">Precio total:</div>
                                             <div class="text-value step-5-precio-total">$ 0 M.N.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 step-5-datos-arrendamiento" style="display: none;">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Monto a Arrendar:</div>
+                                            <div class="text-value step-5-monto-arrendar">$ 0 M.N.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -441,7 +471,7 @@
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-big d-flex flex-column">
-                                            <div class="text-tag">Plan de financiamiento:</div>
+                                            <div class="text-tag">Plan de <span id="title-financiamiento">financiamiento</span>:</div>
                                             <div class="flex-center flex-grow-1 m-3">
                                                 <img class="step-5-plan" />
                                             </div>
@@ -506,8 +536,8 @@
                                 </div>
                                 <div class="row my-5">
                                     @*<div class="col-12 col-lg-4">
-                <button type="button" class="btn-red_inverted w-100">REGRESAR</button>
-            </div>*@
+                                            <button type="button" class="btn-red_inverted w-100">REGRESAR</button>
+                                        </div>*@
                                     <div class="col-12 col-lg-4 mb-3 m-lg-0">
                                         <button type="button" class="btn-red_inverted w-100">COTIZAR OTRO VEH&Iacute;CULO</button>
                                     </div>

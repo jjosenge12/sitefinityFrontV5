@@ -4,7 +4,7 @@ $(document).ready(function () {
     jQuery.validator.addMethod(
         "selectRequired",
         function (value, element) {
-            return [0, "0", "", "null", "undefined"].indexOf(String(value)) === -1;
+            return [0, "0", "-1", "", "null", "undefined"].indexOf(String(value)) === -1;
         },
         "Este campo es obligatorio"
     );
@@ -139,7 +139,7 @@ $(document).ready(function () {
 
         if ($(".car-slide.selected").length > 0) {
             let selected = $(".car-slide.selected")[0];
-
+            getCantidadDepositos(selected.dataset.autoId);
             $.when(
                 form = {
                     ...form,
@@ -206,15 +206,18 @@ $(document).ready(function () {
                 $("#title-financiamiento").html("financiamiento");
                 $("#select-plan").show();
                 $("#select-arrendamiento").hide();
+                $("#data-depositos").hide();
                 $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
                 break;
             case "Arrendamiento":
                 $("#title-financiamiento").html("arrendamiento");
                 $("#select-plan").hide();
                 $("#select-arrendamiento").show();
+                $("#data-depositos").show();
                 $("#select-plan .select-button.selected")[0]?.classList.remove("selected");
                 break;
         }
+        swiper.updateAutoHeight(0);
     });
 
     $("#hitch-range").change(function () {
@@ -342,7 +345,7 @@ function getFormValues() {
         PlanCotizar: $("#select-financing .select-button.selected")[0].dataset.value === "Financiamiento" ? $("#select-plan .select-button.selected")[0].dataset.value : "Arrendamiento " + $("#select-arrendamiento .select-button.selected")[0].dataset.value,
         Plazo: $("#select-term .select-button.selected")[0].dataset.value,
         TipoUso: "Depósitos de Garantía",
-        CantidadDepositosGarantia: 0,
+        CantidadDepositosGarantia: $("#select-cantidad-depositos").val(),
     }
     console.log(form);
 }
@@ -358,8 +361,10 @@ function showResults(data) {
     $(".step-5-imagen-auto").attr("src", form.imagenAuto);
     $(".step-5-mensualidad").html(`$ ${numberWithCommas(_data.Mensualidad.toFixed(2))} M.N.`);
     $(".step-5-enganche").html(`$ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.`);
+    $(".step-5-deposito").html(`${_data.DepositoGarantia} - $ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.`);
     $(".step-5-plazo").html(_data.Plazo + " Meses");
     $(".step-5-precio-total").html(`$ ${numberWithCommas(_data.PrecioTotal.toFixed(2))} M.N.`);
+    $(".step-5-monto-arrendar").html(`$ ${numberWithCommas(_data.PrecioTotal.toFixed(2))} M.N.`);
     $(".step-5-aseguradora").html(_data.Aseguradora);
     $(".step-5-cobertura").html(_data.Cobertura);
     $(".step-5-cat").html(_data.CAT + "%");
@@ -382,6 +387,8 @@ function showResults(data) {
             $(".step-5-plan").attr("src", "/Content/images/Planes/plan-tradicional.png");
             $("#data-anualidades").hide();
             $("#data-balloon").hide();
+            $(".step-5-datos-plan").show();
+            $(".step-5-datos-arrendamiento").hide();
             break;
         case "Balloon":
             $(".step-5-plan").attr("src", "/Content/images/Planes/plan-balloon.png");
@@ -389,14 +396,33 @@ function showResults(data) {
             $(".step-5-porcentaje-balloon").html((_data.PBallon * 100) + "%");
             $("#data-anualidades").hide();
             $("#data-balloon").show();
+            $(".step-5-datos-plan").show();
+            $(".step-5-datos-arrendamiento").hide();
             break;
         case "Anualidades":
             $(".step-5-plan").attr("src", "/Content/images/Planes/plan-anualidades.png");
             $(".step-5-anualidad").html(`$ ${numberWithCommas(_data.Anualidad.toFixed(2))} M.N.`);
             $("#data-anualidades").show();
             $("#data-balloon").hide();
+            $(".step-5-datos-plan").show();
+            $(".step-5-datos-arrendamiento").hide();
+            break;
+        case "Arrendamiento financiero":
+            $(".step-5-plan").attr("src", "/Content/images/Planes/logo_arrendamiento_finan.png");
+            $("#data-anualidades").hide();
+            $("#data-balloon").hide();
+            $(".step-5-datos-plan").hide();
+            $(".step-5-datos-arrendamiento").show();
+            break;
+        case "Arrendamiento puro":
+            $(".step-5-plan").attr("src", "/Content/images/Planes/logo_arrendamiento_puro.png");
+            $("#data-anualidades").hide();
+            $("#data-balloon").hide();
+            $(".step-5-datos-plan").hide();
+            $(".step-5-datos-arrendamiento").show();
             break;
     }
+    swiper.updateAutoHeight(0);
 
 }
 
@@ -508,6 +534,10 @@ function validateStepFour() {
     }
     else if ($("#select-financing .select-button.selected")[0].dataset.value === "Arrendamiento" && $("#select-arrendamiento .select-button.selected").length != 1) {
         console.log("arrendamiento invalida");
+        return false
+    }
+    else if ($("#select-financing .select-button.selected")[0].dataset.value === "Arrendamiento" && !$("#select-cantidad-depositos").val()) {
+        console.log("depositos invalida");
         return false
     }
     else if ($("#select-term .select-button.selected").length != 1) {
@@ -653,6 +683,39 @@ function commitSalesforce() {
             Swal.fire({
                 title: "Error",
                 text: "Error al enviar información a Salesforce",
+                icon: "error",
+                confirmButtonColor: "#cc0000",
+                timer: 5000
+            });
+        }
+    });
+}
+
+function getCantidadDepositos(autoId) {
+    $.ajax({
+        type: 'GET',
+        url: window.config.urlbase + '/GetTypeUsePlan?id=' + autoId,
+        success: function (result) {
+            let opt = document.createElement('option');
+            opt.value = -1;
+            opt.innerHTML = "Cantidad de Depósitos";
+            opt.setAttribute("disabled", true);
+            opt.setAttribute("selected", true);
+            $("#select-cantidad-depositos").html(opt);
+
+            result.results.forEach(function (item) {
+                opt = document.createElement('option');
+                opt.value = item.descripcion;
+                opt.innerHTML = item.descripcion;
+
+                $("#select-cantidad-depositos").append(opt);
+            });
+        },
+        error: function (err) {
+            console.log(err);
+            Swal.fire({
+                title: "Error",
+                text: "Ocurrio un error al intentar obtener datos del servicio",
                 icon: "error",
                 confirmButtonColor: "#cc0000",
                 timer: 5000

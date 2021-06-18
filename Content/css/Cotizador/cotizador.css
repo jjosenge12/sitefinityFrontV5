@@ -28,6 +28,10 @@
     transition: all 0.3s ease-in-out;*/
 }
 
+#cotizador-swiper-container > .swiper-wrapper {
+    /*height: auto !important;*/
+}
+
 .select-button {
     display: flex;
     align-items: center;
