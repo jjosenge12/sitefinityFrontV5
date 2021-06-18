@@ -1,5 +1,11 @@
 ﻿var form = {}, swiper, cars_swiper, cotizacion;
 
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+});
+
 $(document).ready(function () {
     jQuery.validator.addMethod(
         "selectRequired",
@@ -315,13 +321,7 @@ $(document).ready(function () {
     $("#step-5-contact").click(() => {
         if ($("#step-5-contact-form").valid()) {
             if ($("#step-5-terms").prop("checked")) {
-                alert("contact valido");
-
-                form = {
-                    ...form,
-                    distribuidor: $("#step-5-distribuidores").val(),
-                    phoneClient: $("#step-5-phone").val()
-                }
+                sendDataSalesforce();
 
             } else {
                 termsCheckbox = "#step-5-terms";
@@ -761,4 +761,74 @@ function clearValues() {
     $("#step-5-distribuidores").trigger("change");
     $("#step-5-phone").val("");
     $("#step-5-terms").prop("checked", false);
+}
+
+function sendDataSalesforce() {
+
+    let _data = cotizacion.find(x => x.Plazo === Number(form.Plazo));
+
+    if (_data) {
+        var data = {
+            "Mensualidad": formatter.format(_data.Mensualidad),
+            "PrecioTotal": formatter.format(_data.PrecioTotal),
+            "PagoMensual": formatter.format(_data.PagoMensual),
+            "Enganche": formatter.format(_data.Enganche),
+            "Marca": _data.Marca,
+            "Modelo": _data.Modelo,
+            "Vesion": _data.Vesion,
+            "TipoPersona": _data.TipoPersona,
+            "Estado": _data.Estado,
+            "Aseguradora": _data.Aseguradora,
+            "Cobertura": _data.Cobertura,
+            "CAT": formatter.format(_data.CAT),
+            "Plan": _data.Plan,
+            "Ballon": "text_ballon",
+            "Movil": $("#step-5-phone").val(),
+            "Email": form.emailCliente,
+            "Nombre": form.Nombre,
+            "Apellido": form.Apellido,
+            "Comision": formatter.format(_data.Comision),
+            "PorcentajeComision": formatter.format(_data.PorcentajeComision),
+            "Plazo": form.Plazo,
+            "Anualidad": formatter.format(_data.Anualidad),
+            "DepositoGarantia": formatter.format(_data.DepositoGarantia),
+            "AceptoTerminosYCondiciones": 'SiAcepto',
+            "CodigoDistribuidor": $("#step-5-distribuidores").select2('data')[0].codigo,
+            "EstadoSeleccionado": _data.Estado,
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: window.config.urlbase + '/SalesForce',
+            data: data,
+            dataType: "json",
+            beforeSend: showLoader,
+            complete: hideLoader,
+            success: function (result) {
+                Swal.fire({
+                    title: "¡Gracias!",
+                    text: "Nos pondremos en contacto contigo",
+                    icon: "success",
+                    confirmButtonColor: "#66bb6a"
+                });
+
+                $("#step-5-distribuidores").val(0);
+                $("#step-5-distribuidores").trigger("change");
+                $("#step-5-phone").val("");
+                $("#step-5-terms").prop("checked", false);
+            },
+            error: function (err) {
+                console.log(err);
+                Swal.fire({
+                    title: "Error",
+                    text: "Ocurrió un error al enviar información, intenta mas tarde.",
+                    icon: "error",
+                    confirmButtonColor: "#cc0000",
+                    timer: 5000
+                });
+            }
+        });
+    }
+
+    
 }
