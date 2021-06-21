@@ -5,5 +5,11 @@ if(isLogged !== "true"){
 }
 
 $(document).ready(function () {
-    $("#user-name").html(sessionStorage.getItem("name"));
+    let username = sessionStorage.getItem("name");
+    if (username) {
+        $("#user-name").html(username);
+    }
+    else {
+        $("#user-name").html("Usuario");
+    }
 });
