@@ -10,6 +10,7 @@
 @Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/sweetalert2.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-header-logged.js"), "top", true)
 @Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
@@ -28,9 +29,9 @@
         <nav class="links d-none d-md-block">
             <a class="linkFinanciamiento">IR AL PORTAL DE CLIENTES</a>
         </nav>
-        @*<div class="btn userButton toggleMenu" id="openMenuBtn"><span class="material-icons">logout</span>&nbsp;  Cerrar sesi&oacute;n Cerrar sesi&oacute;n</div>*@
+        <div class="btn userButton toggleMenu" id="openMenuBtn"><span class="material-icons">user</span>&nbsp;<span id="user-name"></span></div>
         @*<div class="btn userButton toggleMenu" style="display:none;" id="closeMenuBtn"><span class="material-icons">close</span></div>*@
-        <a class="btn userButton" href="/tfsm/my-tfsm"><span class="material-icons">logout</span>&nbsp;Cerrar sesión</a>
+        @*<a class="btn userButton" href="/tfsm/my-tfsm"><span class="material-icons">logout</span>&nbsp;Cerrar sesión</a>*@
     </div>
     <div class="overlay toggleMenu" style="display:none;" id="menuOverlay"></div>
     <div class="drawerMenu" style="display:none;" id="drawerMenu">

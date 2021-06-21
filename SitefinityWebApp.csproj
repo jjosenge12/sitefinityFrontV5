@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -33,6 +34,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1078,6 +1080,7 @@
     <Content Include="Content\css\Card\card-login.css" />
     <Content Include="Content\css\Card\card-payment.css" />
     <Content Include="Content\css\Card\card-plan-description.css" />
+    <Content Include="Content\css\Card\card-solicitud-digital.css" />
     <Content Include="Content\css\Cotizador\cotizador.css" />
     <Content Include="Content\css\fonts.css" />
     <Content Include="Content\css\InfoSelectDouble\info-select-double.css" />
@@ -1132,10 +1135,16 @@
     <Content Include="Content\images\Perfilador\personajes-4.png" />
     <Content Include="Content\images\Perfilador\personajes-5.png" />
     <Content Include="Content\images\Perfilador\pleca-cotizador.png" />
+    <Content Include="Content\images\Planes\logo_arrendamiento_finan.png" />
+    <Content Include="Content\images\Planes\logo_arrendamiento_puro.png" />
+    <Content Include="Content\images\Planes\plan-anualidades.png" />
+    <Content Include="Content\images\Planes\plan-balloon.png" />
+    <Content Include="Content\images\Planes\plan-tradicional.png" />
     <Content Include="Content\images\Video\play.png" />
     <Content Include="Content\scripts\bootstrap.min.js" />
     <Content Include="Content\scripts\Card\card-distribuidores.js" />
     <Content Include="Content\scripts\Card\card-estados-financieros.js" />
+    <Content Include="Content\scripts\Card\card-header-logged.js" />
     <Content Include="Content\scripts\Card\card-login.js" />
     <Content Include="Content\scripts\Card\card-solicitud-digital.js" />
     <Content Include="Content\scripts\config.js" />
@@ -1149,6 +1158,8 @@
     <Content Include="Content\scripts\lightning.out.js" />
     <Content Include="Content\scripts\select2.min.js" />
     <Content Include="Content\scripts\sweetalert2.js" />
+    <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.js" />
+    <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="Mvc\Scripts\Cotizador\designerview-custom.js" />
     <Content Include="Mvc\Scripts\InfoSelectDouble\designerview-custom.js" />
@@ -1562,6 +1573,7 @@
     <Content Include="Mvc\Views\Card\Card.SolicitudDigital.cshtml" />
     <Content Include="Mvc\Views\Cotizador\DesignerView.Custom.cshtml" />
     <Content Include="Mvc\Views\Cotizador\DesignerView.Custom.json" />
+    <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.js.map" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>
@@ -1573,7 +1585,14 @@
     <Analyzer Include="packages\AWSSDK.S3.3.5.3.12\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
     <Analyzer Include="packages\AWSSDK.SQS.3.5.0.36\analyzers\dotnet\cs\AWSSDK.SQS.CodeAnalysis.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

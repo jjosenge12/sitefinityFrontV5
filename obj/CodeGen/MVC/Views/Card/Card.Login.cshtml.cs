@@ -166,64 +166,7 @@ WriteLiteral(">\r\n            <div");
 
 WriteLiteral(" class=\"swiper-wrapper\"");
 
-WriteLiteral(">\r\n                <!--<div class=\"swiper-slide\">\r\n                    <div id=\"i" +
-"niciar-sesion\" class=\"login-form\">\r\n                        <div class=\"d-flex m" +
-"b-5\">\r\n                            <div class=\"back-button\" id=\"volver-c\">\r\n    " +
-"                            <img src=\"/images/default-source/tfsm/my-tfsm/back_b" +
-"utton.png\" />\r\n                            </div>\r\n                        </div" +
-">\r\n                        <div class=\"mt-5 mb-1\">\r\n                            " +
-"<h1 class=\"registro-title black-title text-left\">Iniciar sesión</h1>\r\n          " +
-"              </div>\r\n                        <div class=\"mb-3\">\r\n              " +
-"              <p class=\"normal-p\">\r\n                                Nos da mucho" +
-" gusto que vuelvas a Estrenar con nosotros un Toyota, juntos es posible.\r\n      " +
-"                      </p>\r\n                        </div>\r\n\r\n                  " +
-"      <div data-id=\"c-form\" class=\"sf-form-container\" data-method=\"GET\" data-act" +
-"ion=\"https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin\">\r\n        " +
-"                    <div class=\"float-container my-5\">\r\n                        " +
-"        <label class=\"float-label\" for=\"clientVisible\">\r\n                       " +
-"             Ingresar su n&uacute;mero de cliente / ID de cliente\r\n             " +
-"                   </label>\r\n                                <input class=\"form-" +
-"input effect-2\" type=\"text\" id=\"clientVisible\" />\r\n                             " +
-"   <span class=\"focus-border\"></span>\r\n                            </div>\r\n     " +
-"                       <div class=\"float-container my-5\">\r\n                     " +
-"           <label class=\"float-label\" for=\"passVisible\">\r\n                      " +
-"              Ingrese su contraseña\r\n                                </label>\r\n " +
-"                               <input class=\"form-input effect-2\" type=\"password" +
-"\" id=\"passVisible\" />\r\n                                <span class=\"focus-border" +
-"\"></span>\r\n                            </div>\r\n                            <div " +
-"id=\"err-cliente\"></div>\r\n\r\n                            <input type=\"hidden\" valu" +
-"e=\"\" name=\"client\" id=\"client\" />\r\n                            <input type=\"hidd" +
-"en\" value=\"\" name=\"pass\" id=\"pass\" />\r\n                            <input type=\"" +
-"hidden\" name=\"fail\" value=\"https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/" +
-"login-clientes\" id=\"fail\" />\r\n                            <input type=\"hidden\" n" +
-"ame=\"ok\" value=\"https://tfs-sitefinity.virtualdreams.io/tfsm/mis-cotizaciones\" i" +
-"d=\"ok\" />-->\r\n                            ");
-
-WriteLiteral(@"
-
-                            <!--<div class=""my-5 d-flex justify-content-center"">
-                                <button type=""submit"" class=""btn-registro""> INGRESAR </button>
-                            </div>
-
-                        </div>
-
-
-                        <div class=""mb-1"">
-                            <p class=""normal-p"">
-                                ¿No tienes cuenta?
-                            </p>
-                        </div>
-
-                        <div class=""mb-3"">
-                            <p class=""normal-p"">
-                                <a href=""/tfsm/my-tfsm/registro-clientes"" style=""text-decoration:none;"">
-                                    Regístrate e inicia tu proceso de crédito en línea.
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>-->
-                <div");
+WriteLiteral(">\r\n                <div");
 
 WriteLiteral(" class=\"swiper-slide\"");
 
@@ -278,9 +221,7 @@ WriteLiteral(" class=\"btn-registro\"");
 WriteLiteral(" id=\"ingreso-no-clientes\"");
 
 WriteLiteral(">\r\n                                INGRESAR AQUÍ\r\n                            </b" +
-"utton>\r\n                        </div>\r\n\r\n                        ");
-
-WriteLiteral("\r\n                        <div");
+"utton>\r\n                        </div>\r\n                        <div");
 
 WriteLiteral(" id=\"err\"");
 
@@ -427,7 +368,7 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"ok\"");
 
-WriteLiteral(" value=\"https://tfs-sitefinity.virtualdreams.io/tfsm/mis-cotizaciones\"");
+WriteLiteral(" value=\"https://tfs-sitefinity.virtualdreams.io/my-tfsm/session\"");
 
 WriteLiteral("\r\n                                   id=\"ok\"");
 
