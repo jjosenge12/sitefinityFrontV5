@@ -29,9 +29,12 @@
         @if (!string.IsNullOrEmpty(Model.ActionName))
         {
             <div class="payment-card-action">
-                <a class="btn-red" href="@Html.UrlSanitize(Model.ActionUrl)">@Model.ActionName</a>
+                <a class="payment-card-button" href="@Html.UrlSanitize(Model.ActionUrl)">@Model.ActionName</a>
             </div>
         }
-
+        @if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
+        {
+            <img class="payment-card-image" src="@Model.SelectedSizeUrl" title="@Model.ImageTitle" alt="@Model.ImageAlternativeText" />
+        }
     </div>
 </div>
