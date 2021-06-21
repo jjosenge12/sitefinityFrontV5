@@ -1,6 +1,6 @@
 let isLogged = sessionStorage.getItem("isLogged");
 
-if(isLogged !== "true"){
+if (isLogged !== "true" && !window.location.href.includes("Sitefinity/adminapp/pages")) {
   window.location.replace(window.location.origin + "/tfsm/my-tfsm/login-clientes");
 }
 
@@ -12,4 +12,9 @@ $(document).ready(function () {
     else {
         $(".user-name").html("Usuario");
     }
+
+    $("#logout").click(function () {
+        sessionStorage.clear();
+        window.location.replace(window.location.origin + "/tfsm/my-tfsm");
+    });
 });

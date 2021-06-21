@@ -76,7 +76,7 @@
 }
 
 .login-img {
-    height: 100vh;
+    height: calc(100vh - 63px);
     overflow: hidden;
     align-items: center;
     display: flex;
