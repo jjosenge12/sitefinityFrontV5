@@ -103,7 +103,7 @@
     display: flex;
     flex-flow: column;
     padding: 30px 20px;
-    padding-right: 45px;
+    padding-right: 55px;
     background: #121212;
     border-radius: 12px;
     height: 100%;
@@ -116,16 +116,11 @@
     flex: 1 1 auto;
 }
 
-/*.payment-card > div {
-    padding: 10px 0;
-}*/
-
 .payment-card-head {
     font-size: 18px;
     font-weight: 600;
     flex: 0 1 auto;
     margin-left: 12px;
-    margin-right: 12px;
     padding: 10px 0;
 }
 
@@ -133,7 +128,6 @@
     font-size: 16px;
     flex: 1 1 auto;
     margin-left: 12px;
-    margin-right: 12px;
     padding: 10px 0;
 }
 
@@ -178,7 +172,7 @@
 .payment-card-image{
     position: absolute;
     right: 0;
-    bottom: 15%;
+    bottom: 10%;
 }
 
 @media(max-width: 293px) {
