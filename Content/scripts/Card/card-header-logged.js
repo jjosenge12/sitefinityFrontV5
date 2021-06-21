@@ -7,9 +7,9 @@ if(isLogged !== "true"){
 $(document).ready(function () {
     let username = sessionStorage.getItem("name");
     if (username) {
-        $("#user-name").html(username);
+        $(".user-name").html(username);
     }
     else {
-        $("#user-name").html("Usuario");
+        $(".user-name").html("Usuario");
     }
 });
