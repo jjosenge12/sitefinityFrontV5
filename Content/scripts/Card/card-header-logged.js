@@ -14,7 +14,14 @@ $(document).ready(function () {
     }
 
     $("#logout").click(function () {
+        let url, session = sessionStorage.getItem("isClient");
+        if (session === "true") {
+            url = window.location.origin + "/tfsm/my-tfsm/login-clientes";
+        }
+        else {
+            url = window.location.origin + "/tfsm/my-tfsm";
+        }
         sessionStorage.clear();
-        window.location.replace(window.location.origin + "/tfsm/my-tfsm");
+        window.location.replace(url);
     });
 });
