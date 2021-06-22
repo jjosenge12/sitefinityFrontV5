@@ -87,7 +87,8 @@
         width: 100%;
     }
 
-.login-form {
+.login-form,
+.login-form-stretch {
     padding-left: 7vw;
     padding-right: 7vw;
 }
@@ -146,10 +147,10 @@
 }
 
 @media(max-width: 767px) {
-    /*.login-form {
+    .login-form-stretch {
         padding-left: 10vw;
         padding-right: 10vw;
-    }*/
+    }
 
     .btn-registro {
         width: 100%;
