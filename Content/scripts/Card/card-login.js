@@ -135,7 +135,9 @@
                 required: true
             },
             _rfc: {
-                required: true
+                required: true,
+                min: 12,
+                max: 13
             },
             _email: {
                 required: true,
