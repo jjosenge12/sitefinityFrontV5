@@ -40,7 +40,8 @@
                 bindEvents(input);
 
                 if (input.value) {
-                    element.classList.add("active");
+                    //element.classList.add("active");
+                    $(input).click();
                 }
             }
 
