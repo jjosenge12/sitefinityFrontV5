@@ -148,8 +148,8 @@
 
 @media(max-width: 767px) {
     .login-form-stretch {
-        padding-left: 10vw;
-        padding-right: 10vw;
+        padding-left: 11vw;
+        padding-right: 11vw;
     }
 
     .btn-registro {

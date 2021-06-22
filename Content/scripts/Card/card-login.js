@@ -146,6 +146,29 @@
         }
     });
 
+    $("#c-form").validate({
+        rules: {
+            _clientId: {
+                required: true
+            },
+            _password: {
+                required: true
+            }
+        }
+    });
+
+    $("#nc-form").validate({
+        rules: {
+            _email: {
+                required: true,
+                isEmail: true
+            },
+            _password: {
+                required: true
+            }
+        }
+    });
+
     $("#registro-nc-form").submit(function (e) {
         if ($("#registro-nc-form").valid()) {
             if ($("#registro-terms").prop("checked")) {
