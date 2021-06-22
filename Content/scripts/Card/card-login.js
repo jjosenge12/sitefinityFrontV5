@@ -47,13 +47,18 @@
     });
 
     $("#registro-c-form").submit(function (e) {
-        if ($("#registro-terms").prop("checked")) {
-            encrypt_reg(true);
+        if ($("#registro-c-form").valid()) {
+            if ($("#registro-terms").prop("checked")) {
+                encrypt_reg(true);
+            }
+            else {
+                e.preventDefault();
+                termsCheckbox = "#registro-terms";
+                openModal("newsletterTermsModal");
+            }
         }
         else {
             e.preventDefault();
-            termsCheckbox = "#registro-terms";
-            openModal("newsletterTermsModal");
         }
     });
 
