@@ -136,8 +136,8 @@
             },
             _rfc: {
                 required: true,
-                min: 12,
-                max: 13
+                minlength: 12,
+                maxlength: 13
             },
             _email: {
                 required: true,
