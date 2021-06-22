@@ -55,9 +55,6 @@ $(document).ready(function () {
             email: {
                 required: true,
                 isEmail: true
-            },
-            phone: {
-                required: true
             }
         }
     });

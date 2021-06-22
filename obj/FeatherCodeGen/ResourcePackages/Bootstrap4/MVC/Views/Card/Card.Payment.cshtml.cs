@@ -185,23 +185,23 @@ WriteLiteral(" class=\"payment-card-action\"");
 
 WriteLiteral(">\r\n                <a");
 
-WriteLiteral(" class=\"btn-red\"");
+WriteLiteral(" class=\"payment-card-button\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1135), Tuple.Create("\"", 1176)
+WriteAttribute("href", Tuple.Create(" href=\"", 1147), Tuple.Create("\"", 1188)
             
             #line 32 "..\..MVC\Views\Card\Card.Payment.cshtml"
-, Tuple.Create(Tuple.Create("", 1142), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.ActionUrl)
+, Tuple.Create(Tuple.Create("", 1154), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.ActionUrl)
             
             #line default
             #line hidden
-, 1142), false)
+, 1154), false)
 );
 
 WriteLiteral(">");
 
             
             #line 32 "..\..MVC\Views\Card\Card.Payment.cshtml"
-                                                                        Write(Model.ActionName);
+                                                                                    Write(Model.ActionName);
 
             
             #line default
@@ -215,7 +215,60 @@ WriteLiteral("</a>\r\n            </div>\r\n");
             
             #line default
             #line hidden
-WriteLiteral("\r\n    </div>\r\n</div>");
+WriteLiteral("        ");
+
+            
+            #line 35 "..\..MVC\Views\Card\Card.Payment.cshtml"
+         if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
+        {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("            <img");
+
+WriteLiteral(" class=\"payment-card-image\"");
+
+WriteAttribute("src", Tuple.Create(" src=\"", 1358), Tuple.Create("\"", 1386)
+            
+            #line 37 "..\..MVC\Views\Card\Card.Payment.cshtml"
+, Tuple.Create(Tuple.Create("", 1364), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
+            
+            #line default
+            #line hidden
+, 1364), false)
+);
+
+WriteAttribute("title", Tuple.Create(" title=\"", 1387), Tuple.Create("\"", 1412)
+            
+            #line 37 "..\..MVC\Views\Card\Card.Payment.cshtml"
+, Tuple.Create(Tuple.Create("", 1395), Tuple.Create<System.Object, System.Int32>(Model.ImageTitle
+            
+            #line default
+            #line hidden
+, 1395), false)
+);
+
+WriteAttribute("alt", Tuple.Create(" alt=\"", 1413), Tuple.Create("\"", 1446)
+            
+            #line 37 "..\..MVC\Views\Card\Card.Payment.cshtml"
+                        , Tuple.Create(Tuple.Create("", 1419), Tuple.Create<System.Object, System.Int32>(Model.ImageAlternativeText
+            
+            #line default
+            #line hidden
+, 1419), false)
+);
+
+WriteLiteral(" />\r\n");
+
+            
+            #line 38 "..\..MVC\Views\Card\Card.Payment.cshtml"
+        }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("    </div>\r\n</div>");
 
         }
     }
