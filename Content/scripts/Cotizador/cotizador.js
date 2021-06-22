@@ -24,11 +24,6 @@ $(document).ready(function () {
         autoHeight: true
     });
 
-    //new WebkitInputRangeFillLower({
-    //    selectors: ['hitch-range'],
-    //    color: '#cc0000'
-    //});
-
     $(".select-button").click(function () {
         let container = this.dataset.for;
 

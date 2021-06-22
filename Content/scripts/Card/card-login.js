@@ -116,4 +116,24 @@
             "_blank"
         );
     });
+
+    $("#registro-c-form").validate({
+        rules: {
+            _clientId: {
+                required: true
+            },
+            _rfc: {
+                required: true
+            },
+            _email: {
+                required: true,
+                isEmail: true
+            }
+        }
+    });
+
+    $("#terms-btn").click(function () {
+        termsCheckbox = "#registro-terms";
+        openModal("newsletterTermsModal");
+    });
 });
