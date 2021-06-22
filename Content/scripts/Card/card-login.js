@@ -43,7 +43,19 @@
     });
 
     $("#registro-nc-form").submit(function (e) {
-        encrypt_reg(false);
+        if ($("#registro-nc-form").valid()) {
+            if ($("#registro-terms").prop("checked")) {
+                encrypt_reg(false);
+            }
+            else {
+                e.preventDefault();
+                termsCheckbox = "#registro-terms";
+                openModal("newsletterTermsModal");
+            }
+        }
+        else {
+            e.preventDefault();
+        }
     });
 
     $("#registro-c-form").submit(function (e) {
@@ -132,6 +144,26 @@
     $("#registro-c-form").validate({
         rules: {
             _clientId: {
+                required: true
+            },
+            _rfc: {
+                required: true,
+                minlength: 12,
+                maxlength: 13
+            },
+            _email: {
+                required: true,
+                isEmail: true
+            }
+        }
+    });
+
+    $("#registro-nc-form").validate({
+        rules: {
+            _name: {
+                required: true
+            },
+            _lastname: {
                 required: true
             },
             _rfc: {
