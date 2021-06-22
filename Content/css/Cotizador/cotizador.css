@@ -18,20 +18,6 @@
     justify-content: center;
 }
 
-.cotizador-container {
-    /*margin-bottom: 30px;*/
-}
-
-#cotizador-swiper-container.limited-height {
-    /*max-height: calc(100vh - 63px);
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;*/
-}
-
-#cotizador-swiper-container > .swiper-wrapper {
-    /*height: auto !important;*/
-}
-
 .select-button {
     display: flex;
     align-items: center;

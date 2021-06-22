@@ -16,11 +16,11 @@
 @Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
 
 <div class="container-fluid" id="main-container">
-    <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-center">
+    <div class="customRow flex-column-reverse flex-lg-row align-items-center justify-content-center">
         <div class="col-12 col-lg-7">
             <div id="iniciar-sesion" class="login-form">
-                <div class="d-flex my-5">
-                    <a href="/tfsm/my-tfsm" class="back-button">
+                <div class="d-flex my-lg-5">
+                    <a href="/tfsm/my-tfsm/login-clientes" class="back-button">
                         <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
                     </a>
                 </div>
@@ -74,8 +74,18 @@
                     <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/registro-exito"
                            id="ok" />
 
-                    <div class="my-5 d-flex justify-content-center">
-                        <button type="submit" class="btn-registro"> REGISTRARME </button>
+                    <div class="my-5 row align-items-center">
+                        <div class="col-12 col-lg-8">
+                            <div class="terms">
+                                <div><input type="checkbox" id="registro-terms" /></div>
+                                <div>
+                                    He le&iacute;do y acepto el <span class="red-link link-aviso-privacidad">aviso de privacidad</span> y los <span id="step-2-terms-btn" class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <button type="submit" class="btn-registro">REGISTRARME</button>
+                        </div>
                     </div>
 
                 </div>
