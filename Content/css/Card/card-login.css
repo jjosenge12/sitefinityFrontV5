@@ -142,10 +142,10 @@
 }
 
 @media(max-width: 767px) {
-    .login-form {
+    /*.login-form {
         padding-left: 10vw;
         padding-right: 10vw;
-    }
+    }*/
 
     .btn-registro {
         width: 100%;
