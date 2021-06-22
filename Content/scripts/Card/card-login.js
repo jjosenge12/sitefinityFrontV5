@@ -109,4 +109,11 @@
     $("#ingreso-clientes").click(() => swiper.slideTo(0));
     $("#volver-c").click(() => swiper.slideTo(1));
     $("#volver-nc").click(() => swiper.slideTo(0));
+
+    $(".link-aviso-privacidad").click(function () {
+        window.open(
+            window.location.origin + "/legales/aviso-de-privacidad",
+            "_blank"
+        );
+    });
 });
