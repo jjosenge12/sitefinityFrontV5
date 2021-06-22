@@ -47,7 +47,14 @@
     });
 
     $("#registro-c-form").submit(function (e) {
-        encrypt_reg(true);
+        if ($("#registro-terms").prop("checked")) {
+            encrypt_reg(true);
+        }
+        else {
+            e.preventDefault();
+            termsCheckbox = "#registro-terms";
+            openModal("newsletterTermsModal");
+        }
     });
 
     function encrypt_reg(isClient) {
