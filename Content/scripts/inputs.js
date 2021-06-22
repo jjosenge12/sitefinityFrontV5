@@ -37,11 +37,11 @@
             let select = element.querySelector("select");
 
             if (input) {
+                bindEvents(input);
+
                 if (input.value) {
                     element.classList.add("active");
                 }
-
-                bindEvents(input);
             }
 
             if (select) {
