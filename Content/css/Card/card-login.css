@@ -133,6 +133,10 @@
         margin: 7px;
     }
 
+.float-container{
+    margin: 15px 0;
+}
+
 @media(max-width: 1199px) {
     #bienvenida,
     #iniciar-sesion {
