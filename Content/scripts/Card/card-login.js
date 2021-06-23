@@ -111,6 +111,13 @@
     });
 
     $("#registro-c-form").validate({
+        submitHandler: function (form) {
+            document.getElementById("clientVisible").removeAttribute("name");
+            document.getElementById("rfcVisible").removeAttribute("name");
+            document.getElementById("emailVisible").removeAttribute("name");
+
+            $(form).ajaxSubmit();
+        },
         rules: {
             _clientId: {
                 required: true
@@ -127,7 +134,15 @@
         }
     });
 
-    $("#registro-nc-form").validate({
+    $("#registro-nc-form").validate({{
+        submitHandler: function (form) {
+            document.getElementById("nameVisible").removeAttribute("name");
+            document.getElementById("lastnameVisible").removeAttribute("name");
+            document.getElementById("emailVisible").removeAttribute("name");
+            document.getElementById("rfcVisible").removeAttribute("name");
+
+            $(form).ajaxSubmit();
+        },
         rules: {
             _name: {
                 required: true
