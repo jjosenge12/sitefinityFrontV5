@@ -4,8 +4,17 @@ var url = new URL(url_string);
 var token = sessionStorage.getItem("token");
 var lead = url.searchParams.get("lead");
 
-//if (token != '' && token != null && token != undefined)
-//    token = atob(token);
+if (lead === '' && lead === null && lead === undefined) {
+    Swal.fire({
+        title: "Selección Inválida",
+        text: "Por favor seleccione una cotización en la tabla de cotizaciones",
+        icon: "error",
+        confirmButtonColor: "#cc0000"
+    })
+        .then(() => {
+            window.location.replace(window.location.origin + "/tfsm/mis-cotizaciones");
+        })
+}
 
 $(document).ready(function () {
     showLoader();
