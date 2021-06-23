@@ -40,6 +40,9 @@
         document.getElementById("client").value = user_enc;
         document.getElementById("failClient").value = fail_enc;
         document.getElementById("okClient").value = ok_enc;
+
+        document.getElementById("passClientVisible").removeAttribute("name");
+        document.getElementById("clientVisible").removeAttribute("name");
     });
 
     function encrypt_reg(isClient) {
