@@ -234,6 +234,13 @@
     });
 
     $("#recuperar-form").validate({
+        submitHandler: function (form) {
+            document.getElementById("clientVisible").removeAttribute("name");
+            document.getElementById("rfcVisible").removeAttribute("name");
+            document.getElementById("emailVisible").removeAttribute("name");
+
+            $(form).ajaxSubmit();
+        },
         rules: {
             _clientId: {
                 required: true
