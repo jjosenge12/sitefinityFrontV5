@@ -169,6 +169,23 @@
         }
     });
 
+    $("#recuperar-form").validate({
+        rules: {
+            _clientId: {
+                required: true
+            },
+            _rfc: {
+                required: true,
+                minlength: 12,
+                maxlength: 13
+            },
+            _email: {
+                required: true,
+                isEmail: true
+            }
+        }
+    });
+
     $("#registro-nc-form").submit(function (e) {
         if ($("#registro-nc-form").valid()) {
             if ($("#registro-terms").prop("checked")) {
