@@ -165,6 +165,12 @@
     });
 
     $("#nc-form").validate({
+        submitHandler: function (form) {
+            document.getElementById("passVisible").removeAttribute("name");
+            document.getElementById("userVisible").removeAttribute("name");
+
+            $(form).ajaxSubmit();
+        },
         rules: {
             _email: {
                 required: true,
