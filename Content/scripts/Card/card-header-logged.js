@@ -5,13 +5,15 @@ if (isLogged !== "true" && !window.location.href.includes("Sitefinity/adminapp")
 }
 
 $(document).ready(function () {
-    let username = sessionStorage.getItem("name");
-    if (username) {
-        $(".user-name").html(username);
-    }
-    else {
-        $(".user-name").html("Usuario");
-    }
+    let username = sessionStorage.getItem("name"), isClient = sessionStorage.getItem("isClient");
+    $(".user-name").html(username || "Usuario");
+    $("#link-portal").css("display", isClient === "true" ? "block" : "none");
+    //if (username) {
+    //    $(".user-name").html(username);
+    //}
+    //else {
+    //    $(".user-name").html("Usuario");
+    //}
 
     $("#logout").click(function () {
         let url, session = sessionStorage.getItem("isClient");
