@@ -152,18 +152,7 @@
             document.getElementById("passClientVisible").removeAttribute("name");
             document.getElementById("clientVisible").removeAttribute("name");
 
-            var pass = document.getElementById("passClientVisible").value;
-            var user = document.getElementById("clientVisible").value;
-            var fail = document.getElementById("failClient").value;
-            var ok = document.getElementById("okClient").value;
-            var pass_enc = window.btoa(pass);
-            var user_enc = window.btoa(user);
-            var fail_enc = window.btoa(fail);
-            var ok_enc = window.btoa(ok);
-            document.getElementById("passClient").value = pass_enc;
-            document.getElementById("client").value = user_enc;
-            document.getElementById("failClient").value = fail_enc;
-            document.getElementById("okClient").value = ok_enc;
+            $(form).ajaxSubmit();
         },
         rules: {
             _clientId: {
