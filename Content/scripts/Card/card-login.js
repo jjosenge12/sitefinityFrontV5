@@ -218,6 +218,10 @@
         }
     });
 
+    $("#recuperar-form").submit(function (e) {
+        encrypt_reg(true);
+    });
+
     $("#terms-btn").click(function () {
         termsCheckbox = "#registro-terms";
         openModal("newsletterTermsModal");
