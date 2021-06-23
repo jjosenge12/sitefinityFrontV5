@@ -88,9 +88,14 @@
     }
 
 .login-form,
-.login-form-stretch {
+.login-form-stretch,
+.reg-exitoso {
     padding-left: 7vw;
     padding-right: 7vw;
+}
+
+.reg-exitoso{
+    display: grid;
 }
 
 .back-button {
@@ -146,6 +151,12 @@
     }
 }
 
+@media(min-width: 992px) {
+    .reg-exitoso {
+        margin-top: 45px;
+    }
+}
+
 @media(max-width: 767px) {
     .login-form-stretch {
         padding-left: 11vw;
@@ -159,11 +170,15 @@
     .normal-p.short {
         width: 100%;
     }
-}
-
-@media(max-width: 767px) {
     .registro-title {
         font-size: 24px;
         line-height: 32px;
+    }
+}
+
+@media(max-width: 360px) {
+    .reg-exitoso{
+        padding-left: 0;
+        padding-right: 0;
     }
 }
