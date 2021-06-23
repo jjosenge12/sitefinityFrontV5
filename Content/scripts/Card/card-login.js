@@ -41,8 +41,6 @@
         document.getElementById("failClient").value = fail_enc;
         document.getElementById("okClient").value = ok_enc;
 
-        document.getElementById("passClientVisible").removeAttribute("name");
-        document.getElementById("clientVisible").removeAttribute("name");
     });
 
     function encrypt_reg(isClient) {
@@ -150,6 +148,10 @@
     });
 
     $("#c-form").validate({
+        submitHandler: function (form) {
+            document.getElementById("passClientVisible").removeAttribute("name");
+            document.getElementById("clientVisible").removeAttribute("name");
+        },
         rules: {
             _clientId: {
                 required: true
