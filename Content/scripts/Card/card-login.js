@@ -134,7 +134,7 @@
         }
     });
 
-    $("#registro-nc-form").validate({{
+    $("#registro-nc-form").validate({
         submitHandler: function (form) {
             document.getElementById("nameVisible").removeAttribute("name");
             document.getElementById("lastnameVisible").removeAttribute("name");
