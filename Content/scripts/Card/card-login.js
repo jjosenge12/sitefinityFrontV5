@@ -43,6 +43,42 @@
 
     });
 
+    $("#registro-nc-form").submit(function (e) {
+        if ($("#registro-nc-form").valid()) {
+            if ($("#registro-terms").prop("checked")) {
+                encrypt_reg(false);
+            }
+            else {
+                e.preventDefault();
+                termsCheckbox = "#registro-terms";
+                openModal("newsletterTermsModal");
+            }
+        }
+        else {
+            e.preventDefault();
+        }
+    });
+
+    $("#registro-c-form").submit(function (e) {
+        if ($("#registro-c-form").valid()) {
+            if ($("#registro-terms").prop("checked")) {
+                encrypt_reg(true);
+            }
+            else {
+                e.preventDefault();
+                termsCheckbox = "#registro-terms";
+                openModal("newsletterTermsModal");
+            }
+        }
+        else {
+            e.preventDefault();
+        }
+    });
+
+    $("#recuperar-form").submit(function (e) {
+        encrypt_reg(true);
+    });
+
     function encrypt_reg(isClient) {
 
         if (isClient) {
@@ -212,42 +248,6 @@
                 isEmail: true
             }
         }
-    });
-
-    $("#registro-nc-form").submit(function (e) {
-        if ($("#registro-nc-form").valid()) {
-            if ($("#registro-terms").prop("checked")) {
-                encrypt_reg(false);
-            }
-            else {
-                e.preventDefault();
-                termsCheckbox = "#registro-terms";
-                openModal("newsletterTermsModal");
-            }
-        }
-        else {
-            e.preventDefault();
-        }
-    });
-
-    $("#registro-c-form").submit(function (e) {
-        if ($("#registro-c-form").valid()) {
-            if ($("#registro-terms").prop("checked")) {
-                encrypt_reg(true);
-            }
-            else {
-                e.preventDefault();
-                termsCheckbox = "#registro-terms";
-                openModal("newsletterTermsModal");
-            }
-        }
-        else {
-            e.preventDefault();
-        }
-    });
-
-    $("#recuperar-form").submit(function (e) {
-        encrypt_reg(true);
     });
 
     $("#terms-btn").click(function () {
