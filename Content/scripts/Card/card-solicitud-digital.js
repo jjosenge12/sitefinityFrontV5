@@ -4,7 +4,7 @@ var url = new URL(url_string);
 var token = sessionStorage.getItem("token");
 var lead = url.searchParams.get("lead");
 
-if (lead === '' && lead === null && lead === undefined) {
+if (lead === '' || lead === null || lead === undefined) {
     Swal.fire({
         title: "Selección Inválida",
         text: "Por favor seleccione una cotización en la tabla de cotizaciones",
