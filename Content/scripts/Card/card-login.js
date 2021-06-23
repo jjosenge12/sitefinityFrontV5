@@ -152,7 +152,7 @@
             document.getElementById("passClientVisible").removeAttribute("name");
             document.getElementById("clientVisible").removeAttribute("name");
 
-            $(form).ajaxSubmit();
+            $(form).submit();
         },
         rules: {
             _clientId: {
