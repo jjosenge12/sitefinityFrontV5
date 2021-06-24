@@ -220,7 +220,7 @@ $(document).ready(function () {
     $("#select-insurance").change(() => getCoverages());
 
     $("#select-state").change(() => {
-        if (!$("#select-state").val() && !$("#select-coverage").val()) {
+        if ($("#select-state").val() && $("#select-coverage").val()) {
             formNextStep(4);
         }
     });
