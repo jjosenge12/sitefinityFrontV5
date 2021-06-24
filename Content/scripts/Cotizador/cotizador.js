@@ -405,7 +405,7 @@ function getFormValues() {
 function showResults(data) {
     var _data = data.filter(x => x.Plazo == form.Plazo)[0];
 
-    $(".step-5-nombre-cliente").html(_data.Nombre);
+    $(".step-5-nombre-cliente").html(_data.Nombre.trim());
     $(".step-5-nombre-auto").html(_data.Marca);
     $(".step-5-version-auto").html(_data.Vesion);
     $(".step-5-anio-auto").html(_data.Anio);
