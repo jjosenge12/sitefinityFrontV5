@@ -197,6 +197,7 @@ $(document).ready(function () {
 
     $("#step-4-back").click(function () {
         $("#cotizador-swiper-container").addClass("limited-height");
+        clearValues();
         swiper.slidePrev();
     });
 

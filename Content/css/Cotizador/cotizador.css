@@ -189,7 +189,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    /*padding-top: 20px;*/
 }
 
     #step-3 .title {
