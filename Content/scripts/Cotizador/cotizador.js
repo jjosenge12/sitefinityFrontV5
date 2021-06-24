@@ -233,8 +233,8 @@ $(document).ready(function () {
 
     $("#select-personalidad-fiscal .select-button").click(function () {
         if (this.dataset.value === "Física") {
-            $("#select-financing .select-button")[0].classList.add("selected");
-            $("#select-financing .select-button")[0].click();
+            //$("#select-financing .select-button")[0].classList.add("selected");
+            //$("#select-financing .select-button")[0].click();
             $("#select-financing .select-button")[1].style.display = "none";
             $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
         }
