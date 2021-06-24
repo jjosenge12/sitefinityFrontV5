@@ -131,13 +131,13 @@
     const swiper = new Swiper('.swiper-container', {
         speed: 400,
         allowTouchMove: false,
-        //initialSlide: 1
+        initialSlide: 1
     });
 
-    $("#ingreso-no-clientes").click(() => swiper.slideNext());
-    $("#ingreso-clientes").click(() => swiper.slideTo(0));
+    $("#ingreso-no-clientes").click(() => swiper.slideTo(0));
+    $("#ingreso-clientes").click(() => swiper.slideTo(2));
     $("#volver-c").click(() => swiper.slideTo(1));
-    $("#volver-nc").click(() => swiper.slideTo(0));
+    $("#volver-nc").click(() => swiper.slideTo(1));
 
     $(".link-aviso-privacidad").click(function () {
         window.open(

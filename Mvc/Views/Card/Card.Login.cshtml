@@ -24,38 +24,6 @@
         <div class="swiper-container col-12 col-lg-5">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div id="bienvenida" class="login-form-stretch">
-                        <!-- **************************************************************** -->
-                        <div class="mb-3">
-                            <img src="/images/default-source/tfsm/my-tfsm/tfsm-logo-home-delivery.png" class="img-fluid" />
-                        </div>
-                        <div class="mb-3">
-                            <h1 class="registro-title red-title">Bienvenido</h1>
-                        </div>
-                        <div class="mb-3">
-                            <p class="normal-p">
-                                Desde Home Delivery podrás iniciar tu proceso de financiamiento estés en donde
-                                estés.
-                            </p>
-                        </div>
-                        @*<div class="my-5 my-lg-3">
-                                <h3 class="sub-title">Elije una opción para Iniciar sesión</h3>
-                            </div>
-
-                            <div class="mb-3">
-                                <p class="normal-p short">
-                                    Quiero estrenar un Toyota con un Financiamiento de TFS
-                                </p>
-                            </div>*@
-                        <div style="margin-top: 100px;">
-                            <button type="button" class="btn-registro" id="ingreso-no-clientes">
-                                INGRESAR AQUÍ
-                            </button>
-                        </div>
-                        <div id="err"></div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
                     <div id="iniciar-sesion" class="login-form-stretch">
                         <div class="d-flex mb-5">
                             <div class="back-button" id="volver-nc">
@@ -110,6 +78,112 @@
                         <div class="mb-3">
                             <p class="normal-p">
                                 <a href="/tfsm/my-tfsm/registro-no-clientes" style="text-decoration:none;">
+                                    Regístrate e inicia tu proceso de crédito en línea.
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="bienvenida" class="login-form-stretch">
+                        <!-- **************************************************************** -->
+                        <div class="mb-3">
+                            <img src="/images/default-source/tfsm/my-tfsm/tfsm-logo-home-delivery.png" class="img-fluid" />
+                        </div>
+                        <div class="mb-3">
+                            <h1 class="registro-title red-title">Bienvenido</h1>
+                        </div>
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                Desde Home Delivery podrás iniciar tu proceso de financiamiento estés en donde
+                                estés.
+                            </p>
+                        </div>
+                        <div class="my-5 my-lg-3">
+                            <h3 class="sub-title">Elije una opción para Iniciar sesión</h3>
+                        </div>
+
+                        @*<div class="mb-3">
+                    <p class="normal-p short">
+                        Quiero estrenar un Toyota con un Financiamiento de TFS
+                    </p>
+                </div>*@
+                        <div class="row" style="margin-top: 100px;">
+                            <div class="col-12 col-lg-6">
+                                <button type="button" class="btn-registro btn-long" id="ingreso-no-clientes">
+                                    QUIERO SER CLIENTE
+                                </button>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <button type="button" class="btn-registro" id="ingreso-clientes">
+                                    SOY CLIENTE
+                                </button>
+                            </div>
+                        </div>
+                        <div id="err"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="iniciar-sesion" class="login-form">
+                        <div class="d-flex mb-5">
+                            <div class="back-button" id="volver-c">
+                                <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
+                            </div>
+                        </div>
+                        <div class="mt-5 mb-1">
+                            <h1 class="registro-title black-title text-left">Iniciar sesión</h1>
+                        </div>
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                Nos da mucho gusto que vuelvas a Estrenar con nosotros un Toyota, juntos es posible.
+                            </p>
+                        </div>
+
+                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin">
+                            <div class="float-container my-5">
+                                <label class="float-label" for="clientVisible">
+                                    Ingresar su n&uacute;mero de cliente / ID de cliente
+                                </label>
+                                <input class="form-input effect-2" type="text" name="_clientId" id="clientVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                            <div class="float-container my-5">
+                                <label class="float-label" for="passClientVisible">
+                                    Ingrese su contraseña
+                                </label>
+                                <input class="form-input effect-2" type="password" name="_password" id="passClientVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                            <div id="err-cliente"></div>
+
+                            <input type="hidden" value="" name="client" id="client" />
+                            <input type="hidden" value="" name="pass" id="passClient" />
+                            <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/login-clientes" id="failClient" />
+                            <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/my-tfsm/session" id="okClient" />
+
+                            <div class="my-5 d-flex justify-content-center">
+                                <button type="submit" class="btn-registro"> INGRESAR </button>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-5">
+                            <p class="normal-p">
+                                <a href="/tfsm/my-tfsm/recuperar-contrasena">
+                                    Olvid&eacute; mi contrase&ntilde;a
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="normal-p">
+                                ¿No tienes cuenta?
+                            </p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                <a href="/tfsm/my-tfsm/registro-clientes">
                                     Regístrate e inicia tu proceso de crédito en línea.
                                 </a>
                             </p>
