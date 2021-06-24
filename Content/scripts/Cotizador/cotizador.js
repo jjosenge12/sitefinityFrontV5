@@ -6,6 +6,36 @@ const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 2
 });
 
+function scrollToTargetAdjusted(element) {
+    //var element = document.getElementById(elementId);
+    var headerOffset = 0;
+    //var elementPosition = element.getBoundingClientRect().top;
+    var elementPosition = element.offsetTop;
+    var offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
+}
+
+function formNextStep(step) {
+    let next = $(`.step-4-${step}`)[0];
+    console.log(next);
+    console.log(`.step-4-${step}`);
+    if (next !== null && next !== undefined) {
+        $.when(
+            $(`.step-4-${step}`).removeClass(`step-4-${step}`),
+            swiper.updateAutoHeight(0)
+        )
+            .then(() => scrollToTargetAdjusted(next));
+        //$(`.step-4-${step}`).removeClass(`step-4-${step}`);
+        //swiper.updateAutoHeight(0);
+        //$(`.step-4-${step}`).each(function (item) { this.classList.remove(`step-4-${step}`) })
+        //scrollToTargetAdjusted(next);
+    }
+}
+
 $(document).ready(function () {
     jQuery.validator.addMethod(
         "selectRequired",
@@ -182,9 +212,23 @@ $(document).ready(function () {
         $("#hitch-range").attr("min", form.EngancheDeposito);
         $("#hitch-range").val(form.EngancheDeposito);
         $("#hitch-text").html("$ " + form.EngancheDeposito + " M.N.");
+
+        formNextStep(2);
     });
 
     $("#select-insurance").change(() => getCoverages());
+
+    $("#select-state").change(() => {
+        if (!$("#select-state").val() && !$("#select-coverage").val()) {
+            formNextStep(4);
+        }
+    });
+
+    $("#select-coverage").change(() => {
+        if ($("#select-state").val() && $("#select-coverage").val()) {
+            formNextStep(4);
+        }
+    });
 
     $("#select-personalidad-fiscal .select-button").click(function () {
         if (this.dataset.value === "Física") {
@@ -196,6 +240,8 @@ $(document).ready(function () {
         else {
             $("#select-financing .select-button")[1].style.display = "flex";
         }
+
+        formNextStep(3);
     });
 
     $("#select-financing .select-button").click(function () {
@@ -218,7 +264,13 @@ $(document).ready(function () {
                 break;
         }
         swiper.updateAutoHeight(0);
+        formNextStep(5);
     });
+
+    $("#select-plan .select-button").click(function () { formNextStep(7); });
+    $("#select-arrendamiento .select-button").click(function () { formNextStep(6); });
+    $("#select-term .select-button").click(function () { formNextStep(8); });
+    $("#select-cantidad-depositos").change(function () { formNextStep(7); });
 
     $("#hitch-range").change(function () {
         form.hitch = $("#hitch-range").val();
@@ -249,7 +301,7 @@ $(document).ready(function () {
         if (validateStepFour()) {
             $.when(getFormValues())
                 .then(() => cotizar());
-            
+
         }
         else {
             Swal.fire({
@@ -822,5 +874,5 @@ function sendDataSalesforce() {
         });
     }
 
-    
+
 }
