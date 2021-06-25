@@ -307,7 +307,7 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"fail\"");
 
-WriteLiteral(" value=\"https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm\"");
+WriteLiteral(" value=\"https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery\"");
 
 WriteLiteral(" id=\"fail\"");
 
@@ -351,7 +351,7 @@ WriteLiteral(" class=\"normal-p\"");
 
 WriteLiteral(">\r\n                                <a");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm/registro-no-clientes\"");
+WriteLiteral(" href=\"/tfsm/my-tfsm/registro-nuevo-cliente\"");
 
 WriteLiteral(" style=\"text-decoration:none;\"");
 
@@ -587,7 +587,7 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"fail\"");
 
-WriteLiteral(" value=\"https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/login-clientes\"");
+WriteLiteral(" value=\"https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery\"");
 
 WriteLiteral(" id=\"failClient\"");
 

@@ -226,7 +226,7 @@ WriteLiteral(" href=\"/cotizador\"");
 
 WriteLiteral(">Cotizar Plan</a>\r\n            <a");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm\"");
+WriteLiteral(" href=\"/tfsm/home-delivery\"");
 
 WriteLiteral(" class=\"linkFinanciamiento\"");
 
@@ -272,13 +272,15 @@ WriteLiteral(" id=\"drawerMenu\"");
 
 WriteLiteral(">\r\n        <a");
 
+WriteLiteral(" target=\"_blank\"");
+
 WriteLiteral(" href=\"https://mytfs.toyotacredito.com.mx/s/login/?ec=302&startURL=%2Fs%2F\"");
 
 WriteLiteral(" id=\"my-tfsm-menu\"");
 
 WriteLiteral(">My TFSM</a>\r\n        <a");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm\"");
+WriteLiteral(" href=\"/tfsm/home-delivery\"");
 
 WriteLiteral(" id=\"link-finan-menu\"");
 

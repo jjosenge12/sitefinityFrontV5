@@ -51,6 +51,7 @@ $(document).ready(function () {
     swiper = new Swiper('#cotizador-swiper-container', {
         speed: 400,
         allowTouchMove: false,
+        initialSlide: 2,
         autoHeight: true
     });
 
