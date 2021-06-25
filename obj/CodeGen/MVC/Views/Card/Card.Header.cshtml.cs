@@ -216,6 +216,8 @@ WriteLiteral(" class=\"links d-none d-md-block\"");
 
 WriteLiteral(">\r\n            <a");
 
+WriteLiteral(" target=\"_blank\"");
+
 WriteLiteral(" href=\"https://mytfs.toyotacredito.com.mx/s/login/?ec=302&startURL=%2Fs%2F\"");
 
 WriteLiteral(" id=\"my-tfsm\"");
