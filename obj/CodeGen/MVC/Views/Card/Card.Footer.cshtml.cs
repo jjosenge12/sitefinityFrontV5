@@ -61,13 +61,6 @@ WriteLiteral("\r\n");
 
 WriteLiteral("\r\n");
 
-            
-            #line 8 "..\..\MVC\Views\Card\Card.Footer.cshtml"
-Write(Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true));
-
-            
-            #line default
-            #line hidden
 WriteLiteral("\r\n");
 
             

@@ -1072,6 +1072,7 @@
     <Content Include="AdminApp\vendor.11dfe0e25f27daa3d52b.js.LICENSE.txt" />
     <Content Include="AdminApp\vendor.a787cfdb273769cadfb5.js" />
     <Content Include="AdminApp\vendor.a787cfdb273769cadfb5.js.LICENSE.txt" />
+    <Content Include="client-components\fields\multi-image-field\sf-multi-image-field.js" />
     <Content Include="Content\css\Banner\banner.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\Card\card-distribuidores.css" />
@@ -1161,6 +1162,7 @@
     <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.js" />
     <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.min.js" />
     <Content Include="Default.aspx" />
+    <Content Include="Mvc\Scripts\Carousel\designerview-custom.js" />
     <Content Include="Mvc\Scripts\Cotizador\designerview-custom.js" />
     <Content Include="Mvc\Scripts\InfoSelectDouble\designerview-custom.js" />
     <Content Include="Mvc\Scripts\InfoSelectSingle\designerview-custom.js" />
@@ -1349,6 +1351,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Sitefinity\" />
+    <Folder Include="Mvc\Views\Image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminApp\assets\fonts\flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" />
@@ -1574,6 +1577,10 @@
     <Content Include="Mvc\Views\Cotizador\DesignerView.Custom.cshtml" />
     <Content Include="Mvc\Views\Cotizador\DesignerView.Custom.json" />
     <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.js.map" />
+    <Content Include="Mvc\Views\Carousel\DesignerView.Custom.json" />
+    <Content Include="Mvc\Views\Carousel\DesignerView.Custom.cshtml" />
+    <None Include="client-components\fields\multi-image-field\sf-multi-image-field.sf-cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Recuperar_Cliente.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>

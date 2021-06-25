@@ -216,7 +216,9 @@ WriteLiteral(" class=\"links d-none d-md-block\"");
 
 WriteLiteral(">\r\n            <a");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm/login-clientes\"");
+WriteLiteral(" href=\"https://mytfs.toyotacredito.com.mx/s/login/?ec=302&startURL=%2Fs%2F\"");
+
+WriteLiteral(" id=\"my-tfsm\"");
 
 WriteLiteral(">My TFSM</a>\r\n            <a");
 
@@ -227,6 +229,8 @@ WriteLiteral(">Cotizar Plan</a>\r\n            <a");
 WriteLiteral(" href=\"/tfsm/my-tfsm\"");
 
 WriteLiteral(" class=\"linkFinanciamiento\"");
+
+WriteLiteral(" id=\"link-finan\"");
 
 WriteLiteral(">FINANCIAMIENTO EN L&Iacute;NEA</a>\r\n        </nav>\r\n        <div");
 
@@ -268,9 +272,17 @@ WriteLiteral(" id=\"drawerMenu\"");
 
 WriteLiteral(">\r\n        <a");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm/login-clientes\"");
+WriteLiteral(" href=\"https://mytfs.toyotacredito.com.mx/s/login/?ec=302&startURL=%2Fs%2F\"");
 
-WriteLiteral(">My TFSM</a>\r\n        <div");
+WriteLiteral(" id=\"my-tfsm-menu\"");
+
+WriteLiteral(">My TFSM</a>\r\n        <a");
+
+WriteLiteral(" href=\"/tfsm/my-tfsm\"");
+
+WriteLiteral(" id=\"link-finan-menu\"");
+
+WriteLiteral(">Financiamiento en l&iacute;nea</a>\r\n        <div");
 
 WriteLiteral(" id=\"deployPlans\"");
 

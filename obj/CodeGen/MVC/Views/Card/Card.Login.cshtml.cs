@@ -150,15 +150,20 @@ WriteLiteral(" class=\"row customRow flex-column-reverse flex-lg-row align-items
 
 WriteLiteral(">\r\n        <div");
 
-WriteLiteral(" class=\"col-12 col-lg-7 login-img\"");
+WriteLiteral(" class=\"col-12 col-lg-7\"");
 
-WriteLiteral(">\r\n            <img");
+WriteLiteral(">\r\n            <div");
+
+WriteLiteral(" class=\"login-img\"");
+
+WriteLiteral(">\r\n                <img");
 
 WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/tfsm-banner-bienvenida.png\"");
 
 WriteLiteral(" class=\"img-fluid custom-img-fluid\"");
 
-WriteLiteral(" />\r\n        </div>\r\n        <!-- COLUMNA VARIABLE -->\r\n        <div");
+WriteLiteral(" />\r\n            </div>\r\n        </div>\r\n        <!-- COLUMNA VARIABLE -->\r\n     " +
+"   <div");
 
 WriteLiteral(" class=\"swiper-container col-12 col-lg-5\"");
 
@@ -172,69 +177,9 @@ WriteLiteral(" class=\"swiper-slide\"");
 
 WriteLiteral(">\r\n                    <div");
 
-WriteLiteral(" id=\"bienvenida\"");
-
-WriteLiteral(" class=\"login-form\"");
-
-WriteLiteral(">\r\n                        <!-- *************************************************" +
-"*************** -->\r\n                        <div");
-
-WriteLiteral(" class=\"mb-3\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/tfsm-logo-home-delivery.png\"");
-
-WriteLiteral(" class=\"img-fluid\"");
-
-WriteLiteral(" />\r\n                        </div>\r\n                        <div");
-
-WriteLiteral(" class=\"mb-3\"");
-
-WriteLiteral(">\r\n                            <h1");
-
-WriteLiteral(" class=\"registro-title red-title\"");
-
-WriteLiteral(">Bienvenido</h1>\r\n                        </div>\r\n                        <div");
-
-WriteLiteral(" class=\"mb-3\"");
-
-WriteLiteral(">\r\n                            <p");
-
-WriteLiteral(" class=\"normal-p\"");
-
-WriteLiteral(">\r\n                                Desde Home Delivery podrás iniciar tu proceso " +
-"de financiamiento estés en donde\r\n                                estés.\r\n      " +
-"                      </p>\r\n                        </div>\r\n                    " +
-"    ");
-
-WriteLiteral("\r\n                        <div");
-
-WriteLiteral(" style=\"margin-top: 100px;\"");
-
-WriteLiteral(">\r\n                            <button");
-
-WriteLiteral(" type=\"button\"");
-
-WriteLiteral(" class=\"btn-registro\"");
-
-WriteLiteral(" id=\"ingreso-no-clientes\"");
-
-WriteLiteral(">\r\n                                INGRESAR AQUÍ\r\n                            </b" +
-"utton>\r\n                        </div>\r\n                        <div");
-
-WriteLiteral(" id=\"err\"");
-
-WriteLiteral("></div>\r\n                    </div>\r\n                </div>\r\n                <div" +
-"");
-
-WriteLiteral(" class=\"swiper-slide\"");
-
-WriteLiteral(">\r\n                    <div");
-
 WriteLiteral(" id=\"iniciar-sesion\"");
 
-WriteLiteral(" class=\"login-form\"");
+WriteLiteral(" class=\"login-form-stretch\"");
 
 WriteLiteral(">\r\n                        <div");
 
@@ -299,6 +244,8 @@ WriteLiteral(" class=\"form-input effect-2\"");
 
 WriteLiteral(" type=\"text\"");
 
+WriteLiteral(" name=\"_email\"");
+
 WriteLiteral(" id=\"userVisible\"");
 
 WriteLiteral(" />\r\n                                <span");
@@ -321,6 +268,8 @@ WriteLiteral(">\r\n                                    Ingrese su contraseña\r\
 WriteLiteral(" class=\"form-input effect-2\"");
 
 WriteLiteral(" type=\"password\"");
+
+WriteLiteral(" name=\"_password\"");
 
 WriteLiteral(" id=\"passVisible\"");
 
@@ -405,6 +354,298 @@ WriteLiteral(">\r\n                                <a");
 WriteLiteral(" href=\"/tfsm/my-tfsm/registro-no-clientes\"");
 
 WriteLiteral(" style=\"text-decoration:none;\"");
+
+WriteLiteral(@">
+                                    Regístrate e inicia tu proceso de crédito en línea.
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div");
+
+WriteLiteral(" class=\"swiper-slide\"");
+
+WriteLiteral(">\r\n                    <div");
+
+WriteLiteral(" id=\"bienvenida\"");
+
+WriteLiteral(" class=\"login-form-stretch\"");
+
+WriteLiteral(">\r\n                        <!-- *************************************************" +
+"*************** -->\r\n                        <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                            <img");
+
+WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/tfsm-logo-home-delivery.png\"");
+
+WriteLiteral(" class=\"img-fluid\"");
+
+WriteLiteral(" />\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                            <h1");
+
+WriteLiteral(" class=\"registro-title red-title\"");
+
+WriteLiteral(">Bienvenido</h1>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p\"");
+
+WriteLiteral(">\r\n                                Desde Home Delivery podrás iniciar tu proceso " +
+"de financiamiento estés en donde\r\n                                estés.\r\n      " +
+"                      </p>\r\n                        </div>\r\n                    " +
+"    <div");
+
+WriteLiteral(" class=\"my-5 my-lg-3\"");
+
+WriteLiteral(">\r\n                            <h3");
+
+WriteLiteral(" class=\"sub-title\"");
+
+WriteLiteral(">Elije una opción para Iniciar sesión</h3>\r\n                        </div>\r\n\r\n   " +
+"                     ");
+
+WriteLiteral("\r\n                        <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(" style=\"margin-top: 100px;\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"col-12 col-lg-6\"");
+
+WriteLiteral(">\r\n                                <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn-registro btn-long\"");
+
+WriteLiteral(" id=\"ingreso-no-clientes\"");
+
+WriteLiteral(">\r\n                                    QUIERO SER CLIENTE\r\n                      " +
+"          </button>\r\n                            </div>\r\n                       " +
+"     <div");
+
+WriteLiteral(" class=\"col-12 col-lg-6\"");
+
+WriteLiteral(">\r\n                                <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn-registro\"");
+
+WriteLiteral(" id=\"ingreso-clientes\"");
+
+WriteLiteral(">\r\n                                    SOY CLIENTE\r\n                             " +
+"   </button>\r\n                            </div>\r\n                        </div>" +
+"\r\n                        <div");
+
+WriteLiteral(" id=\"err\"");
+
+WriteLiteral("></div>\r\n                    </div>\r\n                </div>\r\n                <div" +
+"");
+
+WriteLiteral(" class=\"swiper-slide\"");
+
+WriteLiteral(">\r\n                    <div");
+
+WriteLiteral(" id=\"iniciar-sesion\"");
+
+WriteLiteral(" class=\"login-form\"");
+
+WriteLiteral(">\r\n                        <div");
+
+WriteLiteral(" class=\"d-flex mb-5\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"back-button\"");
+
+WriteLiteral(" id=\"volver-c\"");
+
+WriteLiteral(">\r\n                                <img");
+
+WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/back_button.png\"");
+
+WriteLiteral(" />\r\n                            </div>\r\n                        </div>\r\n        " +
+"                <div");
+
+WriteLiteral(" class=\"mt-5 mb-1\"");
+
+WriteLiteral(">\r\n                            <h1");
+
+WriteLiteral(" class=\"registro-title black-title text-left\"");
+
+WriteLiteral(">Iniciar sesión</h1>\r\n                        </div>\r\n                        <di" +
+"v");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p\"");
+
+WriteLiteral(">\r\n                                Nos da mucho gusto que vuelvas a Estrenar con " +
+"nosotros un Toyota, juntos es posible.\r\n                            </p>\r\n      " +
+"                  </div>\r\n\r\n                        <div");
+
+WriteLiteral(" data-id=\"c-form\"");
+
+WriteLiteral(" class=\"sf-form-container\"");
+
+WriteLiteral(" data-method=\"GET\"");
+
+WriteLiteral(" data-action=\"https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"float-container my-5\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" class=\"float-label\"");
+
+WriteLiteral(" for=\"clientVisible\"");
+
+WriteLiteral(">\r\n                                    Ingresar su n&uacute;mero de cliente / ID " +
+"de cliente\r\n                                </label>\r\n                          " +
+"      <input");
+
+WriteLiteral(" class=\"form-input effect-2\"");
+
+WriteLiteral(" type=\"text\"");
+
+WriteLiteral(" name=\"_clientId\"");
+
+WriteLiteral(" id=\"clientVisible\"");
+
+WriteLiteral(" />\r\n                                <span");
+
+WriteLiteral(" class=\"focus-border\"");
+
+WriteLiteral("></span>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"float-container my-5\"");
+
+WriteLiteral(">\r\n                                <label");
+
+WriteLiteral(" class=\"float-label\"");
+
+WriteLiteral(" for=\"passClientVisible\"");
+
+WriteLiteral(">\r\n                                    Ingrese su contraseña\r\n                   " +
+"             </label>\r\n                                <input");
+
+WriteLiteral(" class=\"form-input effect-2\"");
+
+WriteLiteral(" type=\"password\"");
+
+WriteLiteral(" name=\"_password\"");
+
+WriteLiteral(" id=\"passClientVisible\"");
+
+WriteLiteral(" />\r\n                                <span");
+
+WriteLiteral(" class=\"focus-border\"");
+
+WriteLiteral("></span>\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" id=\"err-cliente\"");
+
+WriteLiteral("></div>\r\n\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" name=\"client\"");
+
+WriteLiteral(" id=\"client\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" name=\"pass\"");
+
+WriteLiteral(" id=\"passClient\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"fail\"");
+
+WriteLiteral(" value=\"https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/login-clientes\"");
+
+WriteLiteral(" id=\"failClient\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"ok\"");
+
+WriteLiteral(" value=\"https://tfs-sitefinity.virtualdreams.io/my-tfsm/session\"");
+
+WriteLiteral(" id=\"okClient\"");
+
+WriteLiteral(" />\r\n\r\n                            <div");
+
+WriteLiteral(" class=\"my-5 d-flex justify-content-center\"");
+
+WriteLiteral(">\r\n                                <button");
+
+WriteLiteral(" type=\"submit\"");
+
+WriteLiteral(" class=\"btn-registro\"");
+
+WriteLiteral("> INGRESAR </button>\r\n                            </div>\r\n\r\n                     " +
+"   </div>\r\n\r\n                        <div");
+
+WriteLiteral(" class=\"mb-5\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p\"");
+
+WriteLiteral(">\r\n                                <a");
+
+WriteLiteral(" href=\"/tfsm/my-tfsm/recuperar-contrasena\"");
+
+WriteLiteral(">\r\n                                    Olvid&eacute; mi contrase&ntilde;a\r\n      " +
+"                          </a>\r\n                            </p>\r\n              " +
+"          </div>\r\n\r\n                        <div");
+
+WriteLiteral(" class=\"mb-1\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p\"");
+
+WriteLiteral(">\r\n                                ¿No tienes cuenta?\r\n                          " +
+"  </p>\r\n                        </div>\r\n\r\n                        <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p\"");
+
+WriteLiteral(">\r\n                                <a");
+
+WriteLiteral(" href=\"/tfsm/my-tfsm/registro-clientes\"");
 
 WriteLiteral(@">
                                     Regístrate e inicia tu proceso de crédito en línea.
