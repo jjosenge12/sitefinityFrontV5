@@ -557,7 +557,23 @@ WriteLiteral(" />\r\n                                <span");
 
 WriteLiteral(" class=\"focus-border\"");
 
-WriteLiteral("></span>\r\n                            </div>\r\n                            <div");
+WriteLiteral("></span>\r\n                            </div>\r\n\r\n                            <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                                <p");
+
+WriteLiteral(" class=\"normal-p\"");
+
+WriteLiteral(">\r\n                                    <a");
+
+WriteLiteral(" style=\"font-size: 12px;\"");
+
+WriteLiteral(" href=\"/tfsm/my-tfsm/recuperar-contrasena\"");
+
+WriteLiteral(">\r\n                                        ¿Olvidaste tu contrase&ntilde;a?\r\n    " +
+"                                </a>\r\n                                </p>\r\n    " +
+"                        </div>\r\n\r\n                            <div");
 
 WriteLiteral(" id=\"err-cliente\"");
 
@@ -613,20 +629,6 @@ WriteLiteral(" class=\"btn-registro\"");
 
 WriteLiteral("> INGRESAR </button>\r\n                            </div>\r\n\r\n                     " +
 "   </div>\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"mb-5\"");
-
-WriteLiteral(">\r\n                            <p");
-
-WriteLiteral(" class=\"normal-p\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" href=\"/tfsm/my-tfsm/recuperar-contrasena\"");
-
-WriteLiteral(">\r\n                                    Olvid&eacute; mi contrase&ntilde;a\r\n      " +
-"                          </a>\r\n                            </p>\r\n              " +
-"          </div>\r\n\r\n                        <div");
 
 WriteLiteral(" class=\"mb-1\"");
 

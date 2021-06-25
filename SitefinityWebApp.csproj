@@ -1581,6 +1581,7 @@
     <Content Include="Mvc\Views\Carousel\DesignerView.Custom.cshtml" />
     <None Include="client-components\fields\multi-image-field\sf-multi-image-field.sf-cshtml" />
     <Content Include="Mvc\Views\Card\Card.Recuperar_Cliente.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Recuperar_NoCliente.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>

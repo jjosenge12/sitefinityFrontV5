@@ -98,6 +98,11 @@
     padding-right: 7vw;
 }
 
+.recuperar-form {
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
 .reg-exitoso {
     display: grid;
 }
@@ -165,6 +170,11 @@
     .login-form-stretch {
         padding-left: 11vw;
         padding-right: 11vw;
+    }
+
+    .recuperar-form {
+        padding-left: 7vw;
+        padding-right: 7vw;
     }
 
     .btn-registro {
