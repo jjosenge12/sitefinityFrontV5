@@ -286,7 +286,6 @@
 }
 
 #step-3 .buttons {
-    /*border-radius: 30px;*/
     overflow: hidden;
     display: flex;
     flex-direction: row;
