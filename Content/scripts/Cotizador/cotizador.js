@@ -29,10 +29,6 @@ function formNextStep(step) {
             swiper.updateAutoHeight(0)
         )
             .then(() => scrollToTargetAdjusted(next));
-        //$(`.step-4-${step}`).removeClass(`step-4-${step}`);
-        //swiper.updateAutoHeight(0);
-        //$(`.step-4-${step}`).each(function (item) { this.classList.remove(`step-4-${step}`) })
-        //scrollToTargetAdjusted(next);
     }
 }
 
@@ -65,7 +61,26 @@ $(document).ready(function () {
 
     //----------------STEP 1----------------
 
-    $("#start").click(() => swiper.slideNext());
+    $("#start").click(() => {
+        let session = sessionStorage.getItem("isLogged");
+        if (session === "true") {
+            let name = sessionStorage.getItem("name"),
+                lastname = sessionStorage.getItem("lastname"),
+                email = sessionStorage.getItem("email");
+
+            form["Nombre"] = name;
+            form["Apellido"] = lastname;
+            form["emailCliente"] = email;
+
+            $("#name").val(name);
+            $("#lastname").val(lastname);
+            $("#email").val(email);
+            swiper.slideTo(2);
+        }
+        else {
+            swiper.slideTo(1);
+        }
+    });
 
     //----------------STEP 2----------------
 
@@ -96,7 +111,6 @@ $(document).ready(function () {
                 form["Nombre"] = $("#name").val();
                 form["Apellido"] = $("#lastname").val();
                 form["emailCliente"] = $("#email").val();
-                form["Telefono"] = $("#phone").val();
 
                 cars_swiper.autoplay.start();
             } else {
