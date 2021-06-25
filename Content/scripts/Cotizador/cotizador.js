@@ -121,7 +121,6 @@ $(document).ready(function () {
                 slidesPerColumnFill: 'column',
                 slidesPerView: 4,
                 slidesPerColumn: 1,
-                slideToClickedSlide: true,
                 loop: true,
             }
         },
