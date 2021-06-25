@@ -277,7 +277,25 @@ WriteLiteral(" />\r\n                                <span");
 
 WriteLiteral(" class=\"focus-border\"");
 
-WriteLiteral("></span>\r\n                            </div>\r\n                            <div");
+WriteLiteral("></span>\r\n                            </div>\r\n\r\n                            <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                                <p");
+
+WriteLiteral(" class=\"normal-p\"");
+
+WriteLiteral(">\r\n                                    <a");
+
+WriteLiteral(" class=\"text-decoration-none\"");
+
+WriteLiteral(" style=\"font-size: 12px;\"");
+
+WriteLiteral(" href=\"/tfsm/home-delivery/olvide-mi-contrasena\"");
+
+WriteLiteral(">\r\n                                        ¿Olvidaste tu contrase&ntilde;a?\r\n    " +
+"                                </a>\r\n                                </p>\r\n    " +
+"                        </div>\r\n\r\n                            <div");
 
 WriteLiteral(" id=\"err-nocliente\"");
 
@@ -417,11 +435,11 @@ WriteLiteral("\r\n                        <div");
 
 WriteLiteral(" class=\"row\"");
 
-WriteLiteral(" style=\"margin-top: 100px;\"");
+WriteLiteral(" style=\"margin-top: 70px;\"");
 
 WriteLiteral(">\r\n                            <div");
 
-WriteLiteral(" class=\"col-12 col-lg-6\"");
+WriteLiteral(" class=\"col-12 col-lg-6 mb-3 mb-lg-0\"");
 
 WriteLiteral(">\r\n                                <button");
 
@@ -567,9 +585,11 @@ WriteLiteral(" class=\"normal-p\"");
 
 WriteLiteral(">\r\n                                    <a");
 
+WriteLiteral(" class=\"text-decoration-none\"");
+
 WriteLiteral(" style=\"font-size: 12px;\"");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm/recuperar-contrasena\"");
+WriteLiteral(" href=\"/tfsm/home-delivery/recuperar-contrasena\"");
 
 WriteLiteral(">\r\n                                        ¿Olvidaste tu contrase&ntilde;a?\r\n    " +
 "                                </a>\r\n                                </p>\r\n    " +
