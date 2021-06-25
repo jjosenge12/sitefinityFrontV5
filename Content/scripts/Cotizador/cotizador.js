@@ -75,7 +75,7 @@ $(document).ready(function () {
             $("#name").val(name);
             $("#lastname").val(lastname);
             $("#email").val(email);
-            swiper.slideTo(2);
+            swiper.slideTo(2, 200);
         }
         else {
             swiper.slideTo(1);
