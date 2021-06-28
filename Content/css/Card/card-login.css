@@ -98,6 +98,14 @@
     padding-right: 6vw;
 }
 
+.login-error {
+    padding: 8px;
+    border-radius: 12px;
+    background: red;
+    color: white;
+    text-align: center;
+}
+
 .recuperar-form {
     padding-left: 6vw;
     padding-right: 6vw;
