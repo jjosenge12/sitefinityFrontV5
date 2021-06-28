@@ -1,5 +1,63 @@
 ﻿$(document).ready(function () {
 
+    var swiper;
+
+    if (window.location.search.includes("err")) {
+        const urlParams = new URLSearchParams(window.location.search);
+        var error = urlParams.get("err").split('.');
+
+        switch (error[0]) {
+            //Errores de usuarios no clientes
+            case '1':
+                swiper = new Swiper('.swiper-container', {
+                    speed: 400,
+                    allowTouchMove: false,
+                    initialSlide: 0
+                });
+
+                switch (error[1]) {
+                    case '1':
+                        $("#err-nocliente").html(`Usuario o contraseña incorrectos`);
+                        break;
+                    case '2':
+                        $("#err-nocliente").html(`No es posible iniciar sesión con esta Cuenta, favor de enviar un correo electrónico a <a style="text-decoration:none;" href="mailto:servicioalcliente@toyota.com">servicioalcliente@toyota.com</a>`);
+                        break;
+
+                }
+
+                break;
+
+            //Errores de usuario cliente
+            case '2':
+                swiper = new Swiper('.swiper-container', {
+                    speed: 400,
+                    allowTouchMove: false,
+                    initialSlide: 2
+                });
+
+                switch (error[1]) {
+                    case '1':
+                        $("#err-cliente").html(`Usuario o contraseña incorrectos`);
+                        break;
+                    case '2':
+                        $("#err-cliente").html(`No es posible iniciar sesión con esta Cuenta, favor de enviar un correo electrónico a <a style="text-decoration:none;" href="mailto:servicioalcliente@toyota.com">servicioalcliente@toyota.com</a>`);
+                        break;
+
+                }
+
+                break;
+        }
+    }
+    else {
+
+        swiper = new Swiper('.swiper-container', {
+            speed: 400,
+            allowTouchMove: false,
+            initialSlide: 1
+        });
+    }
+
+
     $(".sf-form-container").each(function () {
         var form = document.createElement("form");
 
@@ -42,38 +100,6 @@
         document.getElementById("okClient").value = ok_enc;
 
     });
-
-    //$("#registro-nc-form").submit(function (e) {
-    //    if ($("#registro-nc-form").valid()) {
-    //        if ($("#registro-terms").prop("checked")) {
-    //            encrypt_reg(false);
-    //        }
-    //        else {
-    //            e.preventDefault();
-    //            termsCheckbox = "#registro-terms";
-    //            openModal("newsletterTermsModal");
-    //        }
-    //    }
-    //    else {
-    //        e.preventDefault();
-    //    }
-    //});
-
-    //$("#registro-c-form").submit(function (e) {
-    //    if ($("#registro-c-form").valid()) {
-    //        if ($("#registro-terms").prop("checked")) {
-    //            encrypt_reg(true);
-    //        }
-    //        else {
-    //            e.preventDefault();
-    //            termsCheckbox = "#registro-terms";
-    //            openModal("newsletterTermsModal");
-    //        }
-    //    }
-    //    else {
-    //        e.preventDefault();
-    //    }
-    //});
 
     $("#recuperar-c-form").submit(function (e) {
         encrypt_reg(true);
@@ -127,12 +153,6 @@
         //alert(pass_enc);
     }
 
-    const swiper = new Swiper('.swiper-container', {
-        speed: 400,
-        allowTouchMove: false,
-        initialSlide: 1
-    });
-
     $("#ingreso-no-clientes").click(() => swiper.slideTo(0));
     $("#ingreso-clientes").click(() => swiper.slideTo(2));
     $("#volver-c").click(() => swiper.slideTo(1));
@@ -144,58 +164,6 @@
             "_blank"
         );
     });
-
-    //$("#registro-c-form").validate({
-    //    submitHandler: function (form) {
-    //        document.getElementById("clientVisible").removeAttribute("name");
-    //        document.getElementById("rfcVisible").removeAttribute("name");
-    //        document.getElementById("emailVisible").removeAttribute("name");
-
-    //        $(form).ajaxSubmit();
-    //    },
-    //    rules: {
-    //        _clientId: {
-    //            required: true
-    //        },
-    //        _rfc: {
-    //            required: true,
-    //            minlength: 12,
-    //            maxlength: 13
-    //        },
-    //        _email: {
-    //            required: true,
-    //            isEmail: true
-    //        }
-    //    }
-    //});
-
-    //$("#registro-nc-form").validate({
-    //    submitHandler: function (form) {
-    //        document.getElementById("nameVisible").removeAttribute("name");
-    //        document.getElementById("lastnameVisible").removeAttribute("name");
-    //        document.getElementById("emailVisible").removeAttribute("name");
-    //        document.getElementById("rfcVisible").removeAttribute("name");
-
-    //        $(form).ajaxSubmit();
-    //    },
-    //    rules: {
-    //        _name: {
-    //            required: true
-    //        },
-    //        _lastname: {
-    //            required: true
-    //        },
-    //        _rfc: {
-    //            required: true,
-    //            minlength: 12,
-    //            maxlength: 13
-    //        },
-    //        _email: {
-    //            required: true,
-    //            isEmail: true
-    //        }
-    //    }
-    //});
 
     $("#c-form").validate({
         submitHandler: function (form) {
