@@ -18,6 +18,7 @@
                 switch (error[1]) {
                     case '1':
                         $("#err-nocliente").html(`Usuario o contraseña incorrectos`);
+                        $("#err-nocliente").show();
                         break;
 
                 }
@@ -35,9 +36,11 @@
                 switch (error[1]) {
                     case '1':
                         $("#err-cliente").html(`Usuario o contraseña incorrectos`);
+                        $("#err-cliente").show();
                         break;
                     case '2':
                         $("#err-cliente").html(`No es posible iniciar sesión con esta Cuenta, favor de enviar un correo electrónico a <a style="text-decoration:none;color:#121212;font-weight:600;" href="mailto:servicioalcliente@toyota.com">servicioalcliente@toyota.com</a>`);
+                        $("#err-cliente").show();
                         break;
 
                 }
