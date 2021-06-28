@@ -43,37 +43,37 @@
 
     });
 
-    $("#registro-nc-form").submit(function (e) {
-        if ($("#registro-nc-form").valid()) {
-            if ($("#registro-terms").prop("checked")) {
-                encrypt_reg(false);
-            }
-            else {
-                e.preventDefault();
-                termsCheckbox = "#registro-terms";
-                openModal("newsletterTermsModal");
-            }
-        }
-        else {
-            e.preventDefault();
-        }
-    });
+    //$("#registro-nc-form").submit(function (e) {
+    //    if ($("#registro-nc-form").valid()) {
+    //        if ($("#registro-terms").prop("checked")) {
+    //            encrypt_reg(false);
+    //        }
+    //        else {
+    //            e.preventDefault();
+    //            termsCheckbox = "#registro-terms";
+    //            openModal("newsletterTermsModal");
+    //        }
+    //    }
+    //    else {
+    //        e.preventDefault();
+    //    }
+    //});
 
-    $("#registro-c-form").submit(function (e) {
-        if ($("#registro-c-form").valid()) {
-            if ($("#registro-terms").prop("checked")) {
-                encrypt_reg(true);
-            }
-            else {
-                e.preventDefault();
-                termsCheckbox = "#registro-terms";
-                openModal("newsletterTermsModal");
-            }
-        }
-        else {
-            e.preventDefault();
-        }
-    });
+    //$("#registro-c-form").submit(function (e) {
+    //    if ($("#registro-c-form").valid()) {
+    //        if ($("#registro-terms").prop("checked")) {
+    //            encrypt_reg(true);
+    //        }
+    //        else {
+    //            e.preventDefault();
+    //            termsCheckbox = "#registro-terms";
+    //            openModal("newsletterTermsModal");
+    //        }
+    //    }
+    //    else {
+    //        e.preventDefault();
+    //    }
+    //});
 
     $("#recuperar-c-form").submit(function (e) {
         encrypt_reg(true);
@@ -127,22 +127,6 @@
         //alert(pass_enc);
     }
 
-    function encrypt(name) {
-        var pass = document.getElementById("passVisible").value;
-        var user = document.getElementById(`${name}Visible`).value;
-        var fail = document.getElementById("fail").value;
-        var ok = document.getElementById("ok").value;
-        var pass_enc = window.btoa(pass);
-        var user_enc = window.btoa(user);
-        var fail_enc = window.btoa(fail);
-        var ok_enc = window.btoa(ok);
-        document.getElementById("pass").value = pass_enc;
-        document.getElementById(name).value = user_enc;
-        document.getElementById("fail").value = fail_enc;
-        document.getElementById("ok").value = ok_enc;
-        //alert(pass_enc);
-    }
-
     const swiper = new Swiper('.swiper-container', {
         speed: 400,
         allowTouchMove: false,
@@ -161,57 +145,57 @@
         );
     });
 
-    $("#registro-c-form").validate({
-        submitHandler: function (form) {
-            document.getElementById("clientVisible").removeAttribute("name");
-            document.getElementById("rfcVisible").removeAttribute("name");
-            document.getElementById("emailVisible").removeAttribute("name");
+    //$("#registro-c-form").validate({
+    //    submitHandler: function (form) {
+    //        document.getElementById("clientVisible").removeAttribute("name");
+    //        document.getElementById("rfcVisible").removeAttribute("name");
+    //        document.getElementById("emailVisible").removeAttribute("name");
 
-            $(form).ajaxSubmit();
-        },
-        rules: {
-            _clientId: {
-                required: true
-            },
-            _rfc: {
-                required: true,
-                minlength: 12,
-                maxlength: 13
-            },
-            _email: {
-                required: true,
-                isEmail: true
-            }
-        }
-    });
+    //        $(form).ajaxSubmit();
+    //    },
+    //    rules: {
+    //        _clientId: {
+    //            required: true
+    //        },
+    //        _rfc: {
+    //            required: true,
+    //            minlength: 12,
+    //            maxlength: 13
+    //        },
+    //        _email: {
+    //            required: true,
+    //            isEmail: true
+    //        }
+    //    }
+    //});
 
-    $("#registro-nc-form").validate({
-        submitHandler: function (form) {
-            document.getElementById("nameVisible").removeAttribute("name");
-            document.getElementById("lastnameVisible").removeAttribute("name");
-            document.getElementById("emailVisible").removeAttribute("name");
-            document.getElementById("rfcVisible").removeAttribute("name");
+    //$("#registro-nc-form").validate({
+    //    submitHandler: function (form) {
+    //        document.getElementById("nameVisible").removeAttribute("name");
+    //        document.getElementById("lastnameVisible").removeAttribute("name");
+    //        document.getElementById("emailVisible").removeAttribute("name");
+    //        document.getElementById("rfcVisible").removeAttribute("name");
 
-            $(form).ajaxSubmit();
-        },
-        rules: {
-            _name: {
-                required: true
-            },
-            _lastname: {
-                required: true
-            },
-            _rfc: {
-                required: true,
-                minlength: 12,
-                maxlength: 13
-            },
-            _email: {
-                required: true,
-                isEmail: true
-            }
-        }
-    });
+    //        $(form).ajaxSubmit();
+    //    },
+    //    rules: {
+    //        _name: {
+    //            required: true
+    //        },
+    //        _lastname: {
+    //            required: true
+    //        },
+    //        _rfc: {
+    //            required: true,
+    //            minlength: 12,
+    //            maxlength: 13
+    //        },
+    //        _email: {
+    //            required: true,
+    //            isEmail: true
+    //        }
+    //    }
+    //});
 
     $("#c-form").validate({
         submitHandler: function (form) {

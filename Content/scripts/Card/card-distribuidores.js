@@ -433,7 +433,6 @@ function getDealersByState(stateId) {
 
 function createDealerCards(data) {
     let dealers = document.createElement('div');
-
     data.results.forEach(function (x) {
         let card = document.createElement('div');
         let title = document.createElement('div');
@@ -532,7 +531,6 @@ function createDealerCardsWithDistance(data) {
                 });
             });
     });
-
 
     $("#dealer-loader").hide();
 }

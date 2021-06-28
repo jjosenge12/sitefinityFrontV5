@@ -1147,6 +1147,7 @@
     <Content Include="Content\scripts\Card\card-estados-financieros.js" />
     <Content Include="Content\scripts\Card\card-header-logged.js" />
     <Content Include="Content\scripts\Card\card-login.js" />
+    <Content Include="Content\scripts\Card\card-registro.js" />
     <Content Include="Content\scripts\Card\card-solicitud-digital.js" />
     <Content Include="Content\scripts\config.js" />
     <Content Include="Content\scripts\Cotizador\cotizador.js" />
