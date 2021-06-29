@@ -183,7 +183,7 @@ WriteLiteral(" class=\"login-form-stretch\"");
 
 WriteLiteral(">\r\n                        <div");
 
-WriteLiteral(" class=\"d-flex mb-5\"");
+WriteLiteral(" class=\"d-flex mb-4\"");
 
 WriteLiteral(">\r\n                            <div");
 
@@ -198,7 +198,7 @@ WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/back_button.png\"");
 WriteLiteral(" />\r\n                            </div>\r\n                        </div>\r\n        " +
 "                <div");
 
-WriteLiteral(" class=\"mt-5 mb-1\"");
+WriteLiteral(" class=\"mt-4 mb-1\"");
 
 WriteLiteral(">\r\n                            <h1");
 
@@ -279,9 +279,13 @@ WriteLiteral(" class=\"focus-border\"");
 
 WriteLiteral("></span>\r\n                            </div>\r\n\r\n                            <div");
 
-WriteLiteral(" class=\"mb-3\"");
+WriteLiteral(" style=\"display:none;\"");
 
-WriteLiteral(">\r\n                                <p");
+WriteLiteral(" class=\"login-error\"");
+
+WriteLiteral(" id=\"err-nocliente\"");
+
+WriteLiteral("></div>\r\n\r\n                            <div>\r\n                                <p");
 
 WriteLiteral(" class=\"normal-p\"");
 
@@ -295,11 +299,7 @@ WriteLiteral(" href=\"/tfsm/home-delivery/olvide-mi-contrasena\"");
 
 WriteLiteral(">\r\n                                        ¿Olvidaste tu contrase&ntilde;a?\r\n    " +
 "                                </a>\r\n                                </p>\r\n    " +
-"                        </div>\r\n\r\n                            <div");
-
-WriteLiteral(" id=\"err-nocliente\"");
-
-WriteLiteral("></div>\r\n\r\n                            <input");
+"                        </div>\r\n\r\n                            <input");
 
 WriteLiteral(" type=\"hidden\"");
 
@@ -341,7 +341,7 @@ WriteLiteral("\r\n                                   id=\"ok\"");
 
 WriteLiteral(" />\r\n\r\n                            <div");
 
-WriteLiteral(" class=\"my-5 d-flex justify-content-center\"");
+WriteLiteral(" class=\"my-4 d-flex justify-content-center\"");
 
 WriteLiteral(">\r\n                                <button");
 
@@ -369,7 +369,7 @@ WriteLiteral(" class=\"normal-p\"");
 
 WriteLiteral(">\r\n                                <a");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm/registro-nuevo-cliente\"");
+WriteLiteral(" href=\"/tfsm/home-delivery/registro-nuevo-cliente\"");
 
 WriteLiteral(" style=\"text-decoration:none;\"");
 
@@ -393,7 +393,7 @@ WriteLiteral(" class=\"login-form-stretch\"");
 WriteLiteral(">\r\n                        <!-- *************************************************" +
 "*************** -->\r\n                        <div");
 
-WriteLiteral(" class=\"mb-3\"");
+WriteLiteral(" class=\"my-3\"");
 
 WriteLiteral(">\r\n                            <img");
 
@@ -428,10 +428,8 @@ WriteLiteral(">\r\n                            <h3");
 
 WriteLiteral(" class=\"sub-title\"");
 
-WriteLiteral(">Elije una opción para Iniciar sesión</h3>\r\n                        </div>\r\n\r\n   " +
-"                     ");
-
-WriteLiteral("\r\n                        <div");
+WriteLiteral(">Elije una opción para Iniciar sesión</h3>\r\n                        </div>\r\n     " +
+"                   <div");
 
 WriteLiteral(" class=\"row\"");
 
@@ -482,7 +480,7 @@ WriteLiteral(" class=\"login-form\"");
 
 WriteLiteral(">\r\n                        <div");
 
-WriteLiteral(" class=\"d-flex mb-5\"");
+WriteLiteral(" class=\"d-flex mb-4\"");
 
 WriteLiteral(">\r\n                            <div");
 
@@ -497,7 +495,7 @@ WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/back_button.png\"");
 WriteLiteral(" />\r\n                            </div>\r\n                        </div>\r\n        " +
 "                <div");
 
-WriteLiteral(" class=\"mt-5 mb-1\"");
+WriteLiteral(" class=\"mt-4 mb-1\"");
 
 WriteLiteral(">\r\n                            <h1");
 
@@ -577,9 +575,13 @@ WriteLiteral(" class=\"focus-border\"");
 
 WriteLiteral("></span>\r\n                            </div>\r\n\r\n                            <div");
 
-WriteLiteral(" class=\"mb-3\"");
+WriteLiteral(" style=\"display:none;\"");
 
-WriteLiteral(">\r\n                                <p");
+WriteLiteral(" class=\"login-error\"");
+
+WriteLiteral(" id=\"err-cliente\"");
+
+WriteLiteral("></div>\r\n\r\n                            <div>\r\n                                <p");
 
 WriteLiteral(" class=\"normal-p\"");
 
@@ -593,11 +595,7 @@ WriteLiteral(" href=\"/tfsm/home-delivery/recuperar-contrasena\"");
 
 WriteLiteral(">\r\n                                        ¿Olvidaste tu contrase&ntilde;a?\r\n    " +
 "                                </a>\r\n                                </p>\r\n    " +
-"                        </div>\r\n\r\n                            <div");
-
-WriteLiteral(" id=\"err-cliente\"");
-
-WriteLiteral("></div>\r\n\r\n                            <input");
+"                        </div>\r\n\r\n                            <input");
 
 WriteLiteral(" type=\"hidden\"");
 
@@ -639,7 +637,7 @@ WriteLiteral(" id=\"okClient\"");
 
 WriteLiteral(" />\r\n\r\n                            <div");
 
-WriteLiteral(" class=\"my-5 d-flex justify-content-center\"");
+WriteLiteral(" class=\"my-4 d-flex justify-content-center\"");
 
 WriteLiteral(">\r\n                                <button");
 
@@ -667,7 +665,7 @@ WriteLiteral(" class=\"normal-p\"");
 
 WriteLiteral(">\r\n                                <a");
 
-WriteLiteral(" href=\"/tfsm/my-tfsm/registro-clientes\"");
+WriteLiteral(" href=\"/tfsm/home-delivery/registro-clientes\"");
 
 WriteLiteral(@">
                                     Regístrate e inicia tu proceso de crédito en línea.
