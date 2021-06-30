@@ -1,0 +1,36 @@
+@model Telerik.Sitefinity.Frontend.Mvc.Models.ContentDetailsViewModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Infrastructure
+@using Telerik.Sitefinity;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Web.DataResolving;
+
+<div class="@Model.CssClass" @Html.InlineEditingAttributes(Model.ProviderName, Model.ContentType.FullName, (Guid)Model.Item.Fields.Id)>
+    <h3>
+        <span @Html.InlineEditingFieldAttributes("Title", "ShortText")>@Model.Item.Fields.Title</span>
+    </h3>
+
+    <div>
+        @Model.Item.GetDateTime("PublicationDate", "MMM d, yyyy, HH:mm tt")
+        @Html.Resource("By")
+        @DataResolver.Resolve(@Model.Item.DataItem, "Author", null)
+        @Html.CommentsCount(string.Empty, @Model.Item.DataItem)
+    </div>
+    
+    <div @Html.InlineEditingFieldAttributes("Summary", "LongText")>@Html.HtmlSanitize((string)Model.Item.Fields.Summary)</div>
+
+    <div @Html.InlineEditingFieldAttributes("Content", "LongText")>@Html.HtmlSanitize((string)Model.Item.Fields.Content)</div>
+
+    @Html.CommentsList(@Model.Item.DataItem)
+
+    @{                      
+        var meta = new System.Web.UI.HtmlControls.HtmlMeta();         
+        meta.Attributes.Add("name", "description");                 
+        meta.Content = "desc";                                       
+
+        // Get the current page handler in order to access the page header
+        var pageHandler = this.ViewContext.HttpContext.Handler.GetPageHandler();
+        pageHandler.Header.Controls.Add(meta);
+    }
+
+</div>

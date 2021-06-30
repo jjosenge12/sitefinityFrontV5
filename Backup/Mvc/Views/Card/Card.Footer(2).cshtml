@@ -1,0 +1,87 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@*@Html.Script(Url.WidgetContent("~/Content/scripts/jquery.min.js"), "top", true)*@
+@*@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)*@
+@Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true)
+@Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/toastnotify.js", "top", true)
+@*@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-footer.js"), "top", true)*@
+@Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css"))
+@Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/toastnotify.css"))
+@Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css"))
+
+
+<div class="footer">
+    <div class="customRow newsletter">
+        <div class="col-12 col-lg-4 mb-4">
+            <span class="newsletterTitle">Recibe contenido exclusivo y nuestras &uacute;ltimas noticias.</span>
+            <br /><span class="newsletterTitle">Suscr&iacute;bete a nuestro newsletter.</span>
+        </div>
+        <div class="col-12 col-lg-4 mb-4">
+            <div class="newsletterEmail">Correo electr&oacute;nico</div>
+            <div class="sf-form-container" data-id="newsletter-form">
+                <input id="nl-email" name="nl-email" class="form-control text-small" type="email" placeholder="Ingrese su correo electrónico" required="" />
+            </div>
+            <div class="termsCheckbox">
+                <input id="termsCheckbox" type="checkbox" /><span>
+                    <span>Acepto los&nbsp;</span>
+                    <span id="newsletterTerms" class="cursor-pointer color-red">T&eacute;rminos de servicio de TFS</span>
+                </span>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 mb-4 justify-content-center d-flex d-lg-block">
+            <button type="button" id="submit-newsletter" class="btn btn-primary custom-button text-small">ENVIAR</button>
+        </div>
+    </div>
+    <hr style="border-top:1px solid #58595B;" />
+    <div class="customRow">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="footerSectionTitle d-none d-md-block">Planes de Financiamiento</div>
+            <div class="footerSectionTitle d-md-none" style="cursor:pointer;" id="expandPlanes">
+                <span class="material-icons mr-2 pointRight" id="planesArrow">chevron_right</span>
+                <span>Planes de Financiamiento</span>
+            </div>
+            <ul class="d-md-block nav-list" style="padding:0;display:none;" id="listPlanes">
+                <li class="footerItem"><a href="/nuestros-planes">Planes de Financiamiento</a></li>
+                <li class="footerItem"><a href="/nuestros-planes/plan-tradicional">Plan Tradicional</a></li>
+                <li class="footerItem"><a href="/nuestros-planes/plan-balloon">Plan Balloon</a></li>
+                <li class="footerItem"><a href="/nuestros-planes/plan-anualidades">Plan Anualidades</a></li>
+                <li class="footerItem"><a href="/nuestros-planes/arrendamiento-financiero">Arrendamiento Financiero</a></li>
+                <li class="footerItem"><a href="/nuestros-planes/arrendamiento-puro">Arrendamiento Puro</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="footerSectionTitle d-none d-md-block">Legales</div>
+            <div class="footerSectionTitle d-md-none" style="cursor:pointer;" id="expandLegales">
+                <span class="material-icons mr-2 pointRight" id="legalesArrow">chevron_right</span>
+                <span>Legales</span>
+            </div>
+            <ul class="d-md-block nav-list" style="padding:0;display:none;" id="listLegales">
+                <li class="footerItem"><a href="/legales/aviso-de-privacidad">Aviso de Privacidad</a></li>
+                <li class="footerItem"><a href="/legales/proteccion-de-datos">Pol&iacute;tica de protecci&oacute;n de datos Personales</a></li>
+                <li class="footerItem"><a href="/docs/default-source/formato-arco/formato-derechos-arco.pdf" target="_blank">Formato ARCO</a></li>
+                <li class="footerItem"><a>T&eacute;rminos y condiciones de uso</a></li>
+                <li class="footerItem"><a href="/legales/estados-financieros">Estados Financieros</a></li>
+                <li class="footerItem"><a href="/legales/informacion-corporativa">Informaci&oacute;n Corporativa</a></li>
+                <li class="footerItem"><a href="/legales/informacion-financiera">Informaci&oacute;n Financiera</a></li>
+                <li class="footerItem"><a href="/legales/politica-de-cookies">Pol&iacute;tica de Cookies</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-4 nav-list">
+            <div class="footerSectionTitle">Toyota Financial Services M&eacute;xico</div>
+            <div class="footerItem">Paseo de Tamarindos No. 400-B Piso 4</div>
+            <div class="footerItem">Bosques de las Lomas, C.P. 05120, Ciudad de M&eacute;xico</div>
+            <div class="socialNetworks">
+                <img id="instagram" class="social-network" src="/images/default-source/tfsm/tfs-networks/instagram.png?sfvrsn=a34d4b81_3" alt="" title="instagram" data-displaymode="Original" sfref="[images|OpenAccessDataProvider]dd7065eb-ee84-4144-951a-3d02e8cb523f" /><img id="facebook" class="social-network" src="/images/default-source/tfsm/tfs-networks/facebook.png?sfvrsn=4059a8c7_3" alt="" title="facebook" data-displaymode="Original" sfref="[images|OpenAccessDataProvider]79a089ca-cb65-4679-89d6-fd1f073388bb" /><img id="linkedin" class="social-network" src="/images/default-source/tfsm/tfs-networks/linkedin.png?sfvrsn=90ce8255_3" alt="" title="linkedin" data-displaymode="Original" sfref="[images|OpenAccessDataProvider]86307131-bff4-4dcc-9a3a-6383c0a9660b" /><img id="youtube" class="social-network" src="/images/default-source/tfsm/tfs-networks/youtube.png?sfvrsn=32519c0d_3" alt="" title="youtube" data-displaymode="Original" sfref="[images|OpenAccessDataProvider]e268ac3c-6b0a-4116-9bd3-e2df6e951265" /><img src="Item with ID: &#39;bdce3056-b1de-484b-9913-ce19d601e0cb&#39; was not found!" alt="" title="facebook" data-displaymode="Original" sfref="[images|OpenAccessDataProvider]bdce3056-b1de-484b-9913-ce19d601e0cb" /><img src="Item with ID: &#39;f3917a32-18bd-4bb6-a275-82435609fc6a&#39; was not found!"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      alt="" title="linkedin" data-displaymode="Original" sfref="[images|OpenAccessDataProvider]f3917a32-18bd-4bb6-a275-82435609fc6a" /><img src="Item with ID: &#39;48356baa-ce0b-442d-aacd-134b81bd293f&#39; was not found!" alt="" title="youtube"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             data-displaymode="Original" sfref="[images|OpenAccessDataProvider]48356baa-ce0b-442d-aacd-134b81bd293f" />
+            </div>
+        </div>
+    </div>
+</div>

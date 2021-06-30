@@ -1,0 +1,221 @@
+﻿.card-ic {
+    background-color: #ffffff;
+    /*box-shadow: 0px 4px 12px rgba(112, 110, 107, 0.1);*/
+    border-radius: 12px;
+    padding: 65px;
+    position: relative;
+    top: -125px;
+}
+
+.card-ic-title {
+    color: #121212;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 56px;
+    margin-bottom: 25px;
+}
+
+.card-ic-parrafo {
+    color: #3e3e3c;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.card-ic-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -100px;
+}
+
+.card-ic-steps-container {
+    margin: 70px -17px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-ic-step {
+    padding: 40px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    height: 72px;
+    width: 72px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #858585;
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-ic-step-line{
+    flex: 1 1 auto;
+    border-top: 1px solid #cccccc;
+    position: relative;
+}
+
+.card-ic-red-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    z-index: 1;
+    border-top: 1px solid #EB0A1E;
+    border-bottom: 1px solid #EB0A1E;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-ic-red-line.active-step{
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-ic-step.active-step {
+    /*transition-delay: 1s;*/
+    border: 1px solid #EB0A1E;
+    color: #EB0A1E;
+    background-color: #FFF1F1;
+    transition: all 0.5s ease-in-out;
+}
+
+.select2-selection__rendered {
+    font-size: 14px;
+    line-height: 40px !important;
+    padding-left: 0 !important;
+}
+
+.select2-selection__arrow {
+    height: 38px !important;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-selection {
+    height: 35px !important;
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+}
+
+.select2-results {
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-red);
+    transition: 0.4s;
+}
+
+.focus-border.active{
+  width: 100%;
+  transition: 0.4s;
+  left: 0;
+}
+
+.btn-red,
+.btn-red:active,
+.btn-red:focus,
+.btn-red_inverted:hover {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 40px;
+    background: #cc0000;
+    border-radius: 20px;
+    border: 1px solid #cc0000;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+    font-weight: 600;
+    text-decoration: none !important;
+    text-align: center;
+}
+
+.btn-red_inverted,
+.btn-red_inverted:active,
+.btn-red_inverted:focus,
+.btn-red:hover {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 40px;
+    background: #fff;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+    font-weight: 600;
+    text-decoration: none !important;
+    text-align: center;
+}
+
+.card-ic-btn_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.card-ic-btn_container > div {
+        width: 120%;
+}
+
+.card-ic-btn_container>div>div{
+        margin: 10px 0;
+    }
+
+/* EXTRA LARGE */
+@media(min-width: 1200px) {
+    .card-ic {
+        max-width: 63.33333333%;
+    }
+}
+
+/* LARGE */
+@media(max-width: 1199px) {
+    .card-ic{
+        max-width: 75%;
+    }
+}
+@media(min-width: 992px) {
+    .card-ic-btn_container > div {
+        width: 127%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .card-ic-btn_container>div>div{
+        margin: 0;
+    }
+}
+
+/* MEDIUM */
+@media(max-width: 991px){
+    .card-ic {
+        max-width: 91.66667%;
+        padding: 7%;
+    }
+}
+
+/* SMALL */
+@media(max-width: 767px){
+    .card-ic-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}

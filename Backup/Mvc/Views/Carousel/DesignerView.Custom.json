@@ -1,0 +1,13 @@
+{
+  "priority": 1,
+  "hidden": false,
+  "components": [
+    "sf-image-field",
+    "sf-site-selector",
+    "sf-page-selector"
+  ],
+  "scripts": [
+    "Mvc/Scripts/Carousel/designerview-custom.js",
+    "client-components/fields/multi-image-field/sf-multi-image-field.js"
+  ]
+}

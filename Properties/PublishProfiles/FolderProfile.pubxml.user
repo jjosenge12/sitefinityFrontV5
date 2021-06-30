@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>G:\Tomas\Proyectos\Default\bin\Nueva carpeta</_PublishTargetUrl>
+    <History>False|2021-06-30T17:55:54.0006597Z;False|2021-06-30T14:29:29.6096789-03:00;False|2021-06-30T14:19:30.0399612-03:00;False|2021-06-30T14:18:25.7295248-03:00;False|2021-06-30T13:13:17.0236098-03:00;False|2021-06-30T13:12:30.5380862-03:00;False|2021-06-30T12:48:32.1008358-03:00;False|2021-06-30T12:48:19.6991271-03:00;False|2021-06-30T12:47:51.8674139-03:00;False|2021-06-30T12:02:23.8497387-03:00;False|2021-06-30T11:57:10.6512610-03:00;False|2021-06-30T11:51:21.8286637-03:00;False|2021-06-30T11:46:14.7423167-03:00;</History>
+  </PropertyGroup>
+</Project>

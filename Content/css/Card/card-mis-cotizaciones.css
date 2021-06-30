@@ -1,0 +1,144 @@
+﻿.proceso-activo-a {
+    color: #EB0A1E;
+    text-decoration: underline;
+}
+
+    .proceso-activo-a:hover {
+        color: #333333;
+    }
+
+.active-red {
+    border-top: 2px solid #CB302A !important
+}
+
+.table td,
+.table th {
+    line-height: 25px !important;
+    padding: 25px !important;
+}
+
+.table th {
+    text-align: center;
+}
+
+.table td a {
+    color: #EB0A1E;
+}
+
+    .table td a:hover {
+        color: #333333;
+        text-decoration: none;
+    }
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    border-bottom: none !important;
+}
+
+.cotizaciones-title {
+    font-family: "ToyotaType-Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    color: #333333;
+}
+
+.cotizaciones-p {
+    font-family: "ToyotaType-Regular";
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    color: #58595B;
+}
+
+.cotizaciones-card,
+.cotizaciones-row {
+    background: #F5F5F5;
+    border-radius: 12px;
+}
+
+.cotizaciones-row {
+    max-width: 98%;
+    margin-left: 1rem;
+    margin-right: 1rem
+}
+
+.cotizaciones-card {
+    margin: 1rem;
+    max-width: 48% !important;
+    min-height: 260px !important;
+}
+
+.cotizaciones-card-title {
+    font-family: "ToyotaType-Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #121212;
+}
+
+.cotizacion-btn {
+    padding: 8px 24px !important;
+    background: #EB0A1E !important;
+    border-radius: 20px !important;
+    font-family: "ToyotaType-Regular" !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    color: #FFFFFF !important;
+}
+
+    .cotizacion-btn:hover {
+        color: #EB0A1E !important;
+        background-color: #FFFFFF !important;
+        border: solid 1px #EB0A1E !important;
+    }
+
+.status {
+    border-top: 2px solid rgba(0,0,0,.1);
+}
+
+.cotizaciones-table {
+    background: #FFFFFF;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.table th {
+    border-top: 0px;
+}
+
+.table-text {
+    font-family: "ToyotaType-Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+
+    .table-text a {
+        color: #EB0A1E
+    }
+
+.status-p {
+    font-family: "ToyotaType-Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #858585;
+}
+
+.sin-procesos {
+    font-family: "ToyotaType-Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #EB0A1E;
+}

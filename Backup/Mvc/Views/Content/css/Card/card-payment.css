@@ -1,0 +1,163 @@
+﻿@font-face {
+    font-family: "ToyotaType-Black";
+    src: url("../../Fonts/ToyotaType-Black.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "ToyotaType-Bold";
+    src: url("../../Fonts/ToyotaType-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "ToyotaType-Regular";
+    src: url("../../Fonts/ToyotaType-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "ToyotaType-SemiBold";
+    src: url("../../Fonts/ToyotaType-Semibold.ttf") format("opentype");
+}
+
+:root {
+    --color-red: #cc0000;
+    --color-gray-1: #dddbda;
+    --color-gray-2: #706e6b;
+    --color-gray-4: #3e3e3c;
+    --color-black: #121212;
+    font-size: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f7efef;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c6c2c1;
+    border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(141, 140, 140);
+}
+
+.color-red {
+    color: #cc0000;
+}
+
+.color-gray-1 {
+    color: #dddbda;
+}
+
+.color-gray-2 {
+    color: #706e6b;
+}
+
+.color-gray-4 {
+    color: #3e3e3c;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+body {
+    font-family: "ToyotaType-Regular", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+body p {
+    margin: 0;
+}
+
+[class^="col-"]{
+    padding: 0;
+}
+
+.btn-red,
+.btn-red:active,
+.btn-red:focus,
+.btn-red_inverted:hover {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 40px;
+    background: #cc0000;
+    border-radius: 20px;
+    border: 1px solid #cc0000;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+}
+
+.btn-red_inverted,
+.btn-red_inverted:active,
+.btn-red_inverted:focus,
+.btn-red:hover {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 40px;
+    background: #fff;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    transition: all 3ms;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+}
+
+.payment-card {
+    display: flex;
+    flex-flow: column;
+    padding: 30px 20px;
+    /*margin: 30px 15px 15px 15px;*/
+    background: #F5F5F5;
+    border-radius: 1.5rem;
+    height: 100%;
+    margin: -10px 0;
+    /*width: 95%;*/
+}
+
+.payment-card-container{
+    margin: 20px 0;
+    height: 39vh;
+}
+
+.payment-card>div{
+    padding: 10px 0;
+}
+
+.payment-card-head{
+    font-size: 18px;
+    font-weight: 600;
+    flex: 0 1 auto;
+}
+
+.payment-card-body{
+    font-size: 16px;
+    flex: 1 1 auto;
+}
+
+.payment-card-action{
+    flex: 0 1 47px;
+}
+
+.payment-card-action a {
+    text-decoration: none;
+}
+
+@media(max-width: 293px){
+    .payment-card-container {
+        height: 43vh;
+    }
+}

@@ -1,0 +1,105 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-registro.js"), "bottom", true)
+@Html.Script("https://unpkg.com/swiper/swiper-bundle.min.js", "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-login.css"))
+@Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
+
+<div class="container-fluid" id="main-container">
+    <div class="customRow flex-column-reverse flex-lg-row align-items-center justify-content-center">
+        <div class="col-12 col-lg-7">
+            <div id="iniciar-sesion" class="login-form">
+                <div class="d-flex my-lg-4">
+                    <a href="/tfsm/home-delivery" class="back-button">
+                        <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
+                    </a>
+                </div>
+                <div class="mt-2 mb-1">
+                    <h1 class="registro-title black-title text-left">Nos da mucho gusto que quieras ser parte de la familia Toyota.</h1>
+                </div>
+                <div class="mb-3">
+                    <p class="normal-p">
+                        Completa los siguientes campos para generar tu cuenta de ingreso a nuestra plataforma Home Delivery, con la que podrás iniciar y dar seguimiento a tu proceso de financiamiento para Estrenar un Toyota.
+                    </p>
+                </div>
+
+                <div data-id="registro-nc-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinityregister">
+                    <div class="row mt-5">
+                        <div class="col-12 col-lg-6">
+                            <div class="float-container">
+                                <label class="float-label" for="nameVisible">
+                                    Nombre
+                                </label>
+                                <input class="form-input effect-2" type="text" name="_name" id="nameVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="float-container">
+                                <label class="float-label" for="lastnameVisible">
+                                    Apellido
+                                </label>
+                                <input class="form-input effect-2" type="text" name="_lastname" id="lastnameVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="float-container">
+                                <label class="float-label" for="emailVisible">
+                                    Correo electr&oacute;nico
+                                </label>
+                                <input class="form-input effect-2" type="email" name="_email" id="emailVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="float-container">
+                                <label class="float-label" for="rfcVisible">
+                                    RFC
+                                </label>
+                                <input class="form-input effect-2" type="text" name="_rfc" id="rfcVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="err"></div>
+
+                    <input type="hidden" value="" name="name" id="name" />
+                    <input type="hidden" value="" name="lastname" id="lastname" />
+                    <input type="hidden" value="" name="email" id="email" />
+                    <input type="hidden" value="" name="rfc" id="rfc" />
+                    <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery/registro-nuevo-cliente" id="fail" />
+                    <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery/registro-exito"
+                           id="ok" />
+
+                    <div class="my-5 row align-items-center">
+                        <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+                            <div class="terms">
+                                <div><input type="checkbox" id="registro-terms" /></div>
+                                <div>
+                                    He le&iacute;do y acepto el <span class="red-link link-aviso-privacidad">aviso de privacidad</span> y los <span id="terms-btn" class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <button type="submit" class="btn-registro">REGISTRARME</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

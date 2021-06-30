@@ -1,0 +1,10 @@
+{
+  "priority": 1,
+  "hidden": false,
+  "components": [
+    "sf-library-selector"
+  ],
+  "scripts": [
+    "Mvc/Scripts/Cotizador/designerview-custom.js"
+  ]
+}

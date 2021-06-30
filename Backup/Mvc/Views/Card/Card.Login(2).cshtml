@@ -1,0 +1,202 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-login.js"), "bottom", true)
+@Html.Script("https://unpkg.com/swiper/swiper-bundle.min.js", "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-login.css"))
+@Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
+
+<div class="container-fluid" id="main-container">
+    <div class="row customRow flex-column-reverse flex-lg-row align-items-center">
+        <div class="col-12 col-lg-7">
+            <div class="login-img">
+                <img src="/images/default-source/tfsm/my-tfsm/tfsm-banner-bienvenida.png" class="img-fluid custom-img-fluid" />
+            </div>
+        </div>
+        <!-- COLUMNA VARIABLE -->
+        <div class="swiper-container col-12 col-lg-5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div id="iniciar-sesion" class="login-form-stretch">
+                        <div class="d-flex mb-4">
+                            <div class="back-button" id="volver-nc">
+                                <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
+                            </div>
+                        </div>
+                        <div class="mt-4 mb-1">
+                            <h1 class="registro-title black-title text-left">Iniciar sesión</h1>
+                        </div>
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                Nos da mucho gusto que quieras ser parte de la familia Toyota, juntos es posible.
+                            </p>
+                        </div>
+
+                        <div data-id="nc-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin" data-onsubmit="encrypt()">
+                            <div class="float-container my-5">
+                                <label class="float-label" for="userVisible">
+                                    Correo electr&oacute;nico
+                                </label>
+                                <input class="form-input effect-2" type="text" name="_email" id="userVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                            <div class="float-container my-5">
+                                <label class="float-label" for="passVisible">
+                                    Ingrese su contraseña
+                                </label>
+                                <input class="form-input effect-2" type="password" name="_password" id="passVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+
+                            <div style="display:none;" class="login-error" id="err-nocliente"></div>
+
+                            <div>
+                                <p class="normal-p">
+                                    <a class="text-decoration-none" style="font-size: 12px;" href="/tfsm/home-delivery/olvide-mi-contrasena">
+                                        ¿Olvidaste tu contrase&ntilde;a?
+                                    </a>
+                                </p>
+                            </div>
+
+                            <input type="hidden" value="" name="user" id="user" />
+                            <input type="hidden" value="" name="pass" id="pass" />
+                            <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery" id="fail" />
+                            <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/my-tfsm/session"
+                                   id="ok" />
+
+                            <div class="my-4 d-flex justify-content-center">
+                                <button type="submit" class="btn-registro"> INGRESAR </button>
+                            </div>
+
+                        </div>
+
+
+                        <div class="mb-1">
+                            <p class="normal-p">
+                                ¿No tienes cuenta?
+                            </p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                <a href="/tfsm/home-delivery/registro-nuevo-cliente" style="text-decoration:none;">
+                                    Regístrate e inicia tu proceso de crédito en línea.
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="bienvenida" class="login-form-stretch">
+                        <!-- **************************************************************** -->
+                        <div class="my-3">
+                            <img src="/images/default-source/tfsm/my-tfsm/tfsm-logo-home-delivery.png" class="img-fluid" />
+                        </div>
+                        <div class="mb-3">
+                            <h1 class="registro-title red-title">Bienvenido</h1>
+                        </div>
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                Desde Home Delivery podrás iniciar tu proceso de financiamiento estés en donde
+                                estés.
+                            </p>
+                        </div>
+                        <div class="my-5 my-lg-3">
+                            <h3 class="sub-title">Elije una opción para Iniciar sesión</h3>
+                        </div>
+                        <div class="row" style="margin-top: 70px;">
+                            <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                                <button type="button" class="btn-registro btn-long" id="ingreso-no-clientes">
+                                    QUIERO SER CLIENTE
+                                </button>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <button type="button" class="btn-registro" id="ingreso-clientes">
+                                    SOY CLIENTE
+                                </button>
+                            </div>
+                        </div>
+                        <div id="err"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="iniciar-sesion" class="login-form">
+                        <div class="d-flex mb-4">
+                            <div class="back-button" id="volver-c">
+                                <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
+                            </div>
+                        </div>
+                        <div class="mt-4 mb-1">
+                            <h1 class="registro-title black-title text-left">Iniciar sesión</h1>
+                        </div>
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                Nos da mucho gusto que vuelvas a Estrenar con nosotros un Toyota, juntos es posible.
+                            </p>
+                        </div>
+
+                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin">
+                            <div class="float-container my-5">
+                                <label class="float-label" for="clientVisible">
+                                    Ingresar su n&uacute;mero de cliente / ID de cliente
+                                </label>
+                                <input class="form-input effect-2" type="text" name="_clientId" id="clientVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+                            <div class="float-container my-5">
+                                <label class="float-label" for="passClientVisible">
+                                    Ingrese su contraseña
+                                </label>
+                                <input class="form-input effect-2" type="password" name="_password" id="passClientVisible" />
+                                <span class="focus-border"></span>
+                            </div>
+
+                            <div style="display:none;" class="login-error" id="err-cliente"></div>
+
+                            <div>
+                                <p class="normal-p">
+                                    <a class="text-decoration-none" style="font-size: 12px;" href="/tfsm/home-delivery/recuperar-contrasena">
+                                        ¿Olvidaste tu contrase&ntilde;a?
+                                    </a>
+                                </p>
+                            </div>
+
+                            <input type="hidden" value="" name="client" id="client" />
+                            <input type="hidden" value="" name="pass" id="passClient" />
+                            <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery" id="failClient" />
+                            <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/my-tfsm/session" id="okClient" />
+
+                            <div class="my-4 d-flex justify-content-center">
+                                <button type="submit" class="btn-registro"> INGRESAR </button>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="normal-p">
+                                ¿No tienes cuenta?
+                            </p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="normal-p">
+                                <a href="/tfsm/home-delivery/registro-clientes">
+                                    Regístrate e inicia tu proceso de crédito en línea.
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

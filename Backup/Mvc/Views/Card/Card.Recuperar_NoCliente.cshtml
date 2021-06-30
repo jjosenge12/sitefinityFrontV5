@@ -1,0 +1,70 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-login.js"), "bottom", true)
+@Html.Script("https://unpkg.com/swiper/swiper-bundle.min.js", "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-login.css"))
+@Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
+
+<div class="container-fluid" id="main-container">
+    <div class="row customRow flex-column-reverse flex-lg-row align-items-center">
+        <div class="col-12 col-lg-7 login-img">
+            <img src="/images/default-source/tfsm/my-tfsm/tfsm-banner-bienvenida.png" class="img-fluid custom-img-fluid" />
+        </div>
+        <!-- COLUMNA VARIABLE -->
+        <div class="col-12 col-lg-5">
+            <div id="iniciar-sesion" class="recuperar-form">
+                <div class="d-flex mb-5">
+                    <a href="/tfsm/home-delivery" class="back-button">
+                        <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
+                    </a>
+                </div>
+                <div class="mt-5 mb-1">
+                    <h1 class="registro-title black-title text-left">Recuperar contrase&ntilde;a</h1>
+                </div>
+                <div class="mb-3">
+                    <p class="normal-p">
+                        Completa los siguientes campos y te enviaremos un enlace para que vuelvas a entrar en tu cuenta.
+                    </p>
+                </div>
+
+                <div data-id="recuperar-nc-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinityforgotpwd">
+                    <div class="float-container my-5">
+                        <label class="float-label" for="emailVisible">
+                            Correo electr&oacute;nico
+                        </label>
+                        <input class="form-input effect-2" type="text" name="_email" id="emailVisible" />
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="float-container my-5">
+                        <label class="float-label" for="rfcVisible">
+                            RFC
+                        </label>
+                        <input class="form-input effect-2" type="text" name="_rfc" id="rfcVisible" />
+                        <span class="focus-border"></span>
+                    </div>
+                    @*<div id="err-cliente"></div>*@
+
+                    <input type="hidden" value="" name="email" id="email" />
+                    <input type="hidden" value="" name="rfc" id="rfc" />
+                    <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery/olvide-mi-contrasena" id="fail" />
+                    <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery" id="ok" />
+
+                    <div class="py-4 d-flex justify-content-center">
+                        <button type="submit" class="btn-registro"> ENVIAR </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

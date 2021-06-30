@@ -1,0 +1,167 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/sweetalert2.js"), "top", true)
+@Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/material-icons.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/select2.min.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/loaders.css"))
+@Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css"))
+
+
+<div class="d-flex align-items-center p-4 header shadow-sm site-container">
+    <div class="col-6 col-md-2">
+        <a href="https://tfs-sitefinity.virtualdreams.io"><img data-method="ResizeFitToAreaArguments" data-customsizemethodproperties="{'MaxWidth':158,'MaxHeight':63,'Width':null,'Height':null,'ScaleUp':false,'Quality':'High','Method':'ResizeFitToAreaArguments'}" src="/images/default-source/tfsm/logo/imagen-1.png?sfvrsn=f7aa113e_3&amp;MaxWidth=158&amp;MaxHeight=63&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=9F9CC0F3946CD3C633CD388B34F29BF8C8EEEEA7" alt="" title="imagen-1" data-displaymode="Custom" sfref="[images|OpenAccessDataProvider]3222fff0-1c7d-4e6f-b48b-dc826339bdde" /></a><br />
+    </div>
+    <div class="col-6 col-md-10 customNavbar">
+        <nav class="links d-none d-md-block">
+            <a target="_blank" href="https://mytfs.toyotacredito.com.mx/s/login/?ec=302&startURL=%2Fs%2F" id="my-tfsm">My TFSM</a>
+            <a href="/cotizador">Cotizar Plan</a>
+            <a href="/tfsm/home-delivery" class="linkFinanciamiento" id="link-finan">FINANCIAMIENTO EN L&Iacute;NEA</a>
+        </nav>
+        <div class="btn menuButton toggleMenu" id="openMenuBtn"><span class="material-icons">menu</span></div>
+        <div class="btn menuButton toggleMenu" style="display:none;" id="closeMenuBtn"><span class="material-icons">close</span></div>
+    </div>
+    <div class="overlay toggleMenu" style="display:none;" id="menuOverlay"></div>
+    <div class="drawerMenu" style="display:none;" id="drawerMenu">
+        <a target="_blank" href="https://mytfs.toyotacredito.com.mx/s/login/?ec=302&startURL=%2Fs%2F" id="my-tfsm-menu">My TFSM</a>
+        <a href="/tfsm/home-delivery" id="link-finan-menu">Financiamiento en l&iacute;nea</a>
+        <div id="deployPlans" class="deployItems">
+            <span>Nuestros Planes</span>
+            <span class="material-icons pointRight" id="deployPlansArrow">chevron_right</span>
+        </div><span id="deployPlansItems" class="deployable" style="display:none;">
+            <div>
+                <a class="menuLink" href="/nuestros-planes/plan-tradicional">Plan Tradicional</a>
+                <a class="menuLink" href="/nuestros-planes/plan-balloon">Plan Balloon</a>
+                <a class="menuLink" href="/nuestros-planes/plan-anualidades">Plan Anualidades</a>
+                <a class="menuLink" href="/nuestros-planes/tasas-y-comisiones">Tasas y comisiones</a>
+            </div>
+        </span>
+        <a href="/cotizador">Cotizar Plan</a>
+        <div id="deployArrendamientos" class="deployItems">
+            <span>Arrendamientos</span>
+            <span class="material-icons pointRight" id="deployArrendamientosArrow">chevron_right</span>
+        </div><span id="deployArrendamientosItems" class="deployable" style="display:none;">
+            <div>
+                <a class="menuLink" href="/nuestros-planes/arrendamiento-financiero">Arrendamiento Financiero</a>
+                <a class="menuLink" href="/nuestros-planes/arrendamiento-puro">Arrendamiento Puro</a>
+            </div>
+        </span>
+        <a class="toggleMenu" href="https://creditotoyota.com.mx/promocion-del-mes" target="_blank">Promociones</a>
+        <div id="deployAbout" class="deployItems">
+            <span>&iquest;Qui&eacute;nes somos?</span>
+            <span class="material-icons pointRight" id="deployAboutArrow">chevron_right</span>
+        </div><span id="deployAboutItems" class="deployable" style="display:none;">
+            <div>
+                <a class="menuLink" href="/tfsm/quienes-somos">Nosotros</a>
+                @*<a class="menuLink">Ventajas TFSM</a>
+                    <a class="menuLink">Cont&aacute;ctanos</a>
+                    <a class="menuLink">Vacantes</a>*@
+            </div>
+        </span>
+        <a href="/distribuidores">Distribuidores</a>
+    </div>
+</div>
+<div id="loader-overlay" style="display:none;"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+<div id="modalOverlay" style="display:none;"></div>
+<div id="newsletterTermsModal" style="display:none;">
+    <div class="modal-custom">
+        <div class="modal-header-custom">
+            <span class="modal-header-custom_title">T&eacute;rminos de servicio de TFS</span>
+            <div class="modal-header-custom_close">
+                <span id="closeNewsletterTerms" class="material-icons icon-button">close</span>
+            </div>
+        </div>
+        <div id="newsletterTermsBody" class="modal-body-custom">
+            Identidad y domicilio del responsable. Toyota Financial Services M&eacute;xico, S.A. de C.V. (en los sucesivo &ldquo;TFSM&rdquo;), con domicilio en Paseo de los Tamarindos 400-B, piso 11, Colonia Bosques de las Lomas, C&oacute;digo Postal 05120,
+            Delegaci&oacute;n Cuajimalpa, en la Ciudad de M&eacute;xico, es el responsable del uso y protecci&oacute;n de sus datos personales, y al respecto le informamos lo siguiente: Finalidades del tratamiento de datos personales. Los datos personales
+            que se recaban de usted, se utilizar&aacute;n para las siguientes finalidades que son necesarias para brindarle los servicios solicitados: identificarlo y autenticarlo a trav&eacute;s de la informaci&oacute;n que proporciona; llevar a cabo
+            los procesos para ofrecerle la informaci&oacute;n que solicita; brindarle cotizaciones de productos y servicios; contactarlo en relaci&oacute;n con su solicitud de informaci&oacute;n; atender y dar seguimiento a dudas, quejas o comentarios
+            en relaci&oacute;n con nuestros servicios; mantener controles administrativos y generar informaci&oacute;n estad&iacute;stica. De manera adicional, su informaci&oacute;n personal ser&aacute; utilizada para las siguientes finalidades secundarias
+            que no son necesarias.
+        </div>
+        <div class="modal-actions-custom">
+            <button type="button" id="denyNewsletterTerms" class="btn-red_inverted mr-3">NO</button>
+            <button type="button" id="acceptNewsletterTerms" class="btn-red">SI, ACEPTO</button>
+        </div>
+    </div>
+</div>
+<div id="instagramModal" class="siteModal" style="display:none;">
+    <div class="modal-custom">
+        <div class="modal-header-custom">
+            <span class="modal-header-custom_title">Est&aacute;s saliendo de toyotacredito.com.mx para entrar al sitio de Instagram.</span>
+            <div class="modal-header-custom_close">
+                <span id="instagramModalClose" data-modal="instagram" class="material-icons icon-button">close</span>
+            </div>
+        </div>
+        <div class="modal-body-custom">
+            Entrar&aacute;s a un sitio web ajeno a Toyota Financial Services M&eacute;xico, el cual es responsable de sus propios contenidos y mantiene su pol&iacute;tica de privacidad y seguridad.
+        </div>
+        <div class="modal-actions-custom">
+            <button type="button" id="instagramModalBack" data-modal="instagram" class="btn-red_inverted mr-3">VOLVER</button>
+            <button type="button" id="instagramModalContinue" data-modal="instagram" class="btn-red">CONTINUAR</button>
+        </div>
+    </div>
+</div>
+<div id="facebookModal" class="siteModal" style="display:none;">
+    <div class="modal-custom">
+        <div class="modal-header-custom">
+            <span class="modal-header-custom_title">Est&aacute;s saliendo de toyotacredito.com.mx para entrar al sitio de Facebook.</span>
+            <div class="modal-header-custom_close">
+                <span id="facebookModalClose" data-modal="facebook" class="material-icons icon-button">close</span>
+            </div>
+        </div>
+        <div class="modal-body-custom">
+            Entrar&aacute;s a un sitio web ajeno a Toyota Financial Services M&eacute;xico, el cual es responsable de sus propios ontenidos y mantiene su pol&iacute;tica de privacidad y seguridad.
+        </div>
+        <div class="modal-actions-custom">
+            <button type="button" id="facebookModalBack" data-modal="facebook" class="btn-red_inverted mr-3">VOLVER</button>
+            <button type="button" id="facebookModalContinue" data-modal="facebook" class="btn-red">CONTINUAR</button>
+        </div>
+    </div>
+</div>
+<div id="linkedinModal" class="siteModal" style="display:none;">
+    <div class="modal-custom">
+        <div class="modal-header-custom">
+            <span class="modal-header-custom_title">Est&aacute;s saliendo de toyotacredito.com.mx para entrar al sitio de LinkedIn.</span>
+            <div class="modal-header-custom_close">
+                <span id="linkedinModalClose" data-modal="linkedin" class="material-icons icon-button">close</span>
+            </div>
+        </div>
+        <div class="modal-body-custom">
+            Entrar&aacute;s a un sitio web ajeno a Toyota Financial Services M&eacute;xico, el cual es responsable de sus propios contenidos y mantiene su pol&iacute;tica de privacidad y seguridad.
+        </div>
+        <div class="modal-actions-custom">
+            <button type="button" id="linkedinModalBack" data-modal="linkedin" class="btn-red_inverted mr-3">VOLVER</button>
+            <button type="button" id="linkedinModalContinue" data-modal="linkedin" class="btn-red">CONTINUAR</button>
+        </div>
+    </div>
+</div>
+<div id="youtubeModal" class="siteModal" style="display:none;">
+    <div class="modal-custom">
+        <div class="modal-header-custom">
+            <span class="modal-header-custom_title">Est&aacute;s saliendo de toyotacredito.com.mx para entrar al sitio de Youtube.</span>
+            <div class="modal-header-custom_close">
+                <span id="youtubeModalClose" data-modal="youtube" class="material-icons icon-button">close</span>
+            </div>
+        </div>
+        <div class="modal-body-custom">
+            Entrar&aacute;s a un sitio web ajeno a Toyota Financial Services M&eacute;xico, el cual es responsable de sus propios contenidos y mantiene su pol&iacute;tica de privacidad y seguridad.
+        </div>
+        <div class="modal-actions-custom">
+            <button type="button" id="youtubeModalBack" data-modal="youtube" class="btn-red_inverted mr-3">VOLVER</button>
+            <button type="button" id="youtubeModalContinue" data-modal="youtube" class="btn-red">CONTINUAR</button>
+        </div>
+    </div>
+</div>

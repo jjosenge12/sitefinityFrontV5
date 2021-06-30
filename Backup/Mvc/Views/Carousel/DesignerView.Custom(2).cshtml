@@ -1,0 +1,79 @@
+﻿@using Telerik.Sitefinity.Mvc;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+<link type="text/css" href="~/Content/css/Carousel/carousel-designer.css" />
+<script type="text/javascript" src="~/Content/scripts/jquery.min.js"></script>
+
+<form>
+    <div class="tab-container">Tab</div>
+    <div>
+        <label for="desktop-images" class="m-top-sm">Desktop Images</label>
+        <sf-multi-image-field sf-model="images" sf-media-settings="@SettingsHelpers.GetMediaSettings("Image")"></sf-multi-image-field>
+    </div>
+
+    <h5>Slide Options</h5>
+
+    <div class="form-group" ng-show="images">
+        <label for="select-slide" class="m-top-sm">Select a slide</label>
+        <select id="select-slide" ng-model="select_image" class="form-control">
+            <option ng-repeat="(key, value) in images" value="{{key}}">{{key + 1}}</option>
+        </select>
+    </div>
+
+    <div ng-show="select_image">
+        <div class="form-group">
+            <label for="slide-text">
+                Slide Text
+            </label>
+            <input id="slide-text" type="text" class="form-control" ng-model="slide_text" />
+        </div>
+    </div>
+
+    <div ng-show="select_image">
+        <label class="m-top-sm">Slide Link</label>
+        <div class="form-group d-flex">
+            <div class="mr-4">
+                <input type="radio" id="no-link" name="link_btn" value="0" ng-model="link_btn" ng-checked="link_btn == 0">
+                <label for="no-link">No Link</label>
+            </div>
+            <div class="mr-4">
+                <input type="radio" id="button-link" name="link_btn" value="1" ng-model="link_btn" ng-checked="link_btn == 1">
+                <label for="button-link">Link on button</label>
+            </div>
+            <div>
+                <input type="radio" id="image-link" name="link_btn" value="2" ng-model="link_btn" ng-checked="link_btn == 2">
+                <label for="image-link">Link on slide</label>
+            </div>
+        </div>
+
+        <div class="form-group" ng-hide="link_btn == 0">
+            <div class="row row-margin align-items-center">
+                <div class="col-3">
+                    <input type="radio" id="url" name="link_src" value="0" ng-model="link_src" ng-checked="link_src == 0">
+                    <label for="url">External URL</label><br />
+                    <input type="radio" id="page" name="link_src" value="1" ng-model="link_src" ng-checked="link_src == 1">
+                    <label for="page">Page within site</label><br />
+                </div>
+                <div class="col-9" ng-show="link_src == 0">
+                    <label for="url-link">
+                        Link to
+                    </label>
+                    <input id="url-link" type="text" class="form-control" ng-model="url_link" placeholder="Example: https://www.progress.com" />
+                </div>
+                <div class="col-9" ng-show="link_src == 1">
+                    <label for="url-link">
+                        Link to
+                    </label>
+                    <sf-list-selector sf-page-selector sf-multiselect="false" sf-sortable="true"
+                                      sf-selected-item-id="selectedPage.id"
+                                      sf-selected-item="selectedPage.page"
+                                      id="selected-page"
+                                      ng-model="selected_page"></sf-list-selector>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+@*<script type="text/javascript" src="~/Content/scripts/Carousel/carousel-designer.js"></script>*@

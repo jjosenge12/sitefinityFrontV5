@@ -1,0 +1,43 @@
+@model SitefinityWebApp.Mvc.Models.BannerModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/Banner/banner.css"))
+
+
+@if (Model.Link != null && !string.IsNullOrEmpty(Model.Link.Href))
+{
+    <a class="@Model.CssClasses" href="@Model.Link.Href">
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="banner-text-container">
+                <h3 class="@Model.CssClassText">@Html.HtmlSanitize(Model.Message)</h3>
+            </div>
+        }
+        <img src="@Model.ImageDesktopUrl" class="@(!string.IsNullOrEmpty(Model.ImageMobileUrl) ? "d-none d-md-block" : "")" />
+        @if (!string.IsNullOrEmpty(Model.ImageMobileUrl))
+        {
+            <img src="@Model.ImageMobileUrl" class="d-md-none" />
+        }
+    </a>
+}
+else
+{
+    <div class="@Model.CssClasses">
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="banner-text-container">
+                <h3 class="@Model.CssClassText">@Html.HtmlSanitize(Model.Message)</h3>
+            </div>
+        }
+        <img src="@Model.ImageDesktopUrl" class="@(!string.IsNullOrEmpty(Model.ImageMobileUrl) ? "d-none d-md-block" : "")" />
+        @if (!string.IsNullOrEmpty(Model.ImageMobileUrl))
+        {
+            <img src="@Model.ImageMobileUrl" class="d-md-none" />
+        }
+    </div>
+}

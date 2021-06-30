@@ -1,0 +1,61 @@
+@model SitefinityWebApp.Mvc.Models.InfoSelectSingleModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/InfoSelectSingle/info-select-single.js"), "bottom", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/InfoSelectSingle/info-select-single.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/select2.min.css"))
+
+<div class="is_single-container">
+    <div class="is_single">
+        @if (Model.HasBackButton && !string.IsNullOrEmpty(Model.PageUrl))
+        {
+            <div class="d-flex mb-5">
+                <a class="back-button" href="@Model.PageUrl">
+                    <img src="/images/default-source/default-album/back_button.png" />
+                </a>
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model.Heading))
+        {
+            <p class="is_single-title">@Html.HtmlSanitize(Model.Heading)</p>
+        }
+        @if (!string.IsNullOrEmpty(Model.Description))
+        {
+            <p class="is_single-parrafo">@Html.HtmlSanitize(Model.Description)</p>
+        }
+        <div>
+            <div class="row">
+                <div class="col-12 is_single-select-container">
+                    <div class="position-relative">
+                        <select id="select-one" class="form-control">
+                            @if (!string.IsNullOrEmpty(Model.SelectOnePlaceholder))
+                            {
+                                <option selected value="0" disabled>@Html.HtmlSanitize(Model.SelectOnePlaceholder)</option>
+                            }
+                            else
+                            {
+                                <option selected value="0" disabled>Elija una opci&oacute;n</option>
+                            }
+
+                            @if (Model.Documents != null && Model.Documents.Count > 0)
+                            {
+                                foreach (var doc in Model.Documents)
+                                {
+                                    <option id="@doc.Id" value="@doc.Url">@doc.Title</option>
+                                }
+                            }
+                        </select>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+.small{
+    font-size: 12px;
+    color: #5f5a5a;
+    padding-top: 3px;
+}
+
+.required{
+    font-size: 12px;
+    color: #c44955;
+    padding-top: 3px;
+}
+
+.requiredC{
+    font-size: 12px;
+    color: #c44955;
+    padding-top: 3px;
+}
+
+.negative{
+    margin-top: -15px;
+}
+
+.positive{
+    margin-top: 12px;
+}
+
+.neg_bottom {
+    margin-top: 12px;
+    margin-bottom: -30px;
+}
+
+.title{
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 40px;
+color: #3E3E3C;
+}
+
+.subtitle{
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 32px;
+color: #3E3E3C;
+}
+
+.auto-title{
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.auto-desc{
+    font-size: 15px;
+    text-align: center;
+}
+
+.izq{
+    align-self: left;
+}
+
+.der{
+    align-self: left;
+}
+
+.incompleta{
+    background-color: yellow;
+}
+
+.message-alert {
+    font-weight: normal;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 1.33;
+    color: #cc0000;
+    letter-spacing: normal;
+}
+
+.title { 
+    /* font-family: ToyotaType; */
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #cc0000;
+    text-transform: uppercase;
+}
+
+.description {
+    /* font-family: ToyotaType; */
+    max-width: 384px;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #3e3e3c;
+}
+
+.caseNumber {
+    font-weight: 600;
+}

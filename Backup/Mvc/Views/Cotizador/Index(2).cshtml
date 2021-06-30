@@ -1,0 +1,628 @@
+@model SitefinityWebApp.Mvc.Models.CotizadorModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using SitefinityWebApp.Mvc.Models.Utils;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
+@Html.Script("https://unpkg.com/swiper/swiper-bundle.min.js", "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/webkit-input-range-fill-lower/webkit-input-range-fill-lower.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Config.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Cotizador/cotizador.js"), "bottom", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Cotizador/cotizador.css"))
+@Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
+
+<div class="cotizador-container">
+    <div id="cotizador-swiper-container" class="swiper-container">
+        <div class="swiper-wrapper">
+            @* ----------------STEP 1---------------- *@
+            <div class="swiper-slide">
+                <div id="step-1">
+                    <div class="col-12">
+                        <div class="title">Cotiza en 3 pasos el Toyota de tus sue&ntilde;os</div>
+                        <div>
+                            <button id="start" type="button" class="btn-red">COMENZAR COTIZACI&Oacute;N</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            @* ----------------STEP 2---------------- *@
+            <div class="swiper-slide">
+                <div id="step-2">
+                    <div class="col-12 col-md-8 col-lg-4">
+                        <div class="title">
+                            Estamos listos para cotizar tu pr&oacute;ximo Toyota. Para comenzar ingresa los siguientes datos:
+                        </div>
+                        <div class="step-2-form">
+                            <div class="sf-form-container" data-id="step-2-form" data-style="display:grid;">
+                                <div class="float-container">
+                                    <label class="float-label" for="name">Nombre</label>
+                                    <input type="text" name="name" id="name" class="form-input effect-2" />
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="float-container">
+                                    <label class="float-label" for="lastname">Apellido</label>
+                                    <input type="text" name="lastname" id="lastname" class="form-input effect-2" />
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="float-container">
+                                    <label class="float-label" for="email">Correo electr&oacute;nico</label>
+                                    <input type="text" name="email" id="email" class="form-input effect-2" />
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="terms">
+                            <div><input type="checkbox" id="step-2-terms" /></div>
+                            <div>
+                                He le&iacute;do y acepto el <span class="red-link link-aviso-privacidad">aviso de privacidad</span> y los <span id="step-2-terms-btn" class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-5">
+                            <button type="button" id="step-2-continue" class="btn-red">CONTINUAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @* ----------------STEP 3---------------- *@
+            <div class="swiper-slide">
+                <div id="step-3">
+                    <div class="col-11">
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona una categor&iacute;a y veh&iacute;culo</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 categories">
+                            <div class="col-sm"><button type="button" class="btn-red">AUTOS</button></div>
+                            <div class="col-sm"><button type="button" class="btn-black_inverted">H&Iacute;BRIDOS</button></div>
+                            <div class="col-sm"><button type="button" class="btn-black_inverted">SUV'S & MINIVANS</button></div>
+                            <div class="col-sm"><button type="button" class="btn-black_inverted">PICK UP'S & COMERCIALES</button></div>
+                            <div class="col-sm"><button type="button" class="btn-black_inverted">DEPORTIVOS</button></div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-12 d-flex justify-content-between">
+                                <div id="cars-swiper-prev" class="slider-button">
+                                    <img src="~/Content/images/Cotizador/slider_prev.png" />
+                                </div>
+                                <div id="cars-swiper-next" class="slider-button">
+                                    <img src="~/Content/images/Cotizador/slider_next.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div id="cars-swiper-container" class="swiper-container">
+                                <div class="swiper-wrapper car-slide-container">
+                                    @foreach (var item in Model.autos)
+                                    {
+                                        <div class="swiper-slide car-slide-container">
+                                            <div class="car-slide" data-auto-id="@item.AutoId" data-auto-name="@item.Name" data-auto-picture="@item.CarImage">
+                                                <div class="car-image">
+                                                    <img src="@item.CarImage" />
+                                                </div>
+                                                <div class="car-title">@item.Name</div>
+                                                <div class="select-car">SELECCIONAR</div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4 justify-content-center">
+                            <button type="button" id="step-3-back" class="btn-red_inverted color-red mx-2 col-12 col-md-3 col-lg-2 mb-3 mb-md-0">
+                                <span class="material-icons">chevron_left</span>
+                                VOLVER
+                            </button>
+                            <button type="button" id="step-3-continue" class="btn-red color-red mx-2 col-12 col-md-3 col-lg-2">
+                                CONTINUAR
+                                <span class="material-icons">chevron_right</span>
+                            </button>
+                        </div>
+                        @*<div class="row my-4">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <div class="buttons">
+                                        <div class="btn-left" id="step-3-back">
+                                            <span class="material-icons">chevron_left</span>
+                                            VOLVER
+                                        </div>
+                                        <span class="middle-line"></span>
+                                        <div class="btn-right" id="step-3-continue">
+                                            CONTINUAR
+                                            <span class="material-icons">chevron_right</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+            @* ----------------STEP 4---------------- *@
+            <div class="swiper-slide">
+                <div id="step-4">
+                    <div class="col-11">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-between">
+                                <button type="button" id="step-4-back" class="btn-transparent color-red">
+                                    <span class="material-icons color-red">chevron_left</span>
+                                    VOLVER
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 d-grid">
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona la versi&oacute;n de tu pr&oacute;ximo <span class="step-4-nombre-auto"></span></div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center block flex-column-reverse flex-lg-row">
+                            <div class="col-12 col-lg-6">
+                                <div>
+                                    <img class="step-4-imagen-auto" />
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="float-container w-100">
+                                    <label for="car_version" class="float-label">Versi&oacute;n</label>
+                                    <select id="car_version" name="car_version" class="form-input effect-2 bg-transparent">
+                                        <option value="0" disabled selected>Versi&oacute;n</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 step-4-2">
+                            <div class="col-12">
+                                <div class="title">Selecciona tu personalidad fiscal</div>
+                            </div>
+                        </div>
+                        <div id="select-personalidad-fiscal" class="row block step-4-2">
+                            <div class="col-12 col-lg-3">
+                                <div class="select-button" data-for="personalidad-fiscal" data-value="Física">F&Iacute;SICA</div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="select-button" data-for="personalidad-fiscal" data-value="Física con Actividad Empresarial">
+                                    F&iacute;SICA CON ACTIVIDAD EMPRESARIAL
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="select-button" data-for="personalidad-fiscal" data-value="Moral">MORAL</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 step-4-3">
+                            <div class="col-12">
+                                <div class="title">Selecciona la Aseguradora</div>
+                            </div>
+                        </div>
+                        <div class="row block step-4-3">
+                            <div class="col-12 col-lg-4 my-3 m-0">
+                                <div class="float-container">
+                                    <label class="float-label" for="select-state">Selecciona tu estado</label>
+                                    <select id="select-state" name="select-state" class="form-input effect-2">
+                                        <option value="0" selected disabled>Selecciona tu estado</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 my-3 m-0">
+                                <div class="float-container">
+                                    <label class="float-label" for="select-insurance">Selecciona la aseguradora</label>
+                                    <select id="select-insurance" name="select-insurance" class="form-input effect-2">
+                                        <option value="0" selected disabled>Selecciona la aseguradora</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 my-3 m-0">
+                                <div class="float-container">
+                                    <label class="float-label" for="select-coverage">Selecciona la cobertura</label>
+                                    <select id="select-coverage" name="select-coverage" class="form-input effect-2">
+                                        <option value="0" selected disabled>Selecciona la cobertura</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 step-4-4">
+                            <div class="col-12">
+                                <div class="title">Selecciona la soluci&oacute;n financiera con la que deseas adquirir tu pr&oacute;ximo <span class="step-4-nombre-auto"></span></div>
+                            </div>
+                        </div>
+                        <div id="select-financing" class="row block step-4-4">
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="financing" data-value="Financiamiento">FINANCIAMIENTO</div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="financing" data-value="Arrendamiento">ARRENDAMIENTO</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 step-4-5">
+                            <div class="col-12">
+                                <div class="title">Selecciona el plan de <span class="title-financiamiento">financiamiento</span> con el que deseas estrenar tu pr&oacute;ximo <span class="step-4-nombre-auto"></span></div>
+                            </div>
+                        </div>
+                        <div id="select-plan" class="row block step-4-5">
+                            <div class="col-12 mb-4">
+                                <div class="row my-3 align-items-center">
+                                    <div class="col-6 col-lg-4">
+                                        <img src="~/Content/images/Planes/plan-tradicional.png" />
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <div class="select-button" data-for="plan" data-value="Tradicional">SELECCIONAR</div>
+                                    </div>
+                                </div>
+                                <div class="text-plan">Pagas mensualidades iguales durante toda la vida del financiamiento.</div>
+                            </div>
+                            <div class="col-12 my-4">
+                                <div class="row my-3 align-items-center">
+                                    <div class="col-6 col-lg-4">
+                                        <img src="~/Content/images/Planes/plan-balloon.png" />
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <div class="select-button" data-for="plan" data-value="Balloon">SELECCIONAR</div>
+                                    </div>
+                                </div>
+                                <div class="text-plan">Tienes acceso a una mensualidad m&aacute;s baja, ya que estableces un pago al final de tu financiamiento, el cual puede ser del 25% o 35% del valor del veh&iacute;culo.</div>
+                            </div>
+                            <div class="col-12 my-4">
+                                <div class="row my-3 align-items-center">
+                                    <div class="col-6 col-lg-4">
+                                        <img src="~/Content/images/Planes/plan-anualidades.png" />
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <div class="select-button" data-for="plan" data-value="Anualidades">SELECCIONAR</div>
+                                    </div>
+                                </div>
+                                <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del a&ntilde;o en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
+                            </div>
+                        </div>
+                        <div id="select-arrendamiento" class="row block step-4-5" style="display: none;">
+                            <div class="col-12 my-4">
+                                <div class="row my-3 align-items-center">
+                                    <div class="col-6 col-lg-4">
+                                        <img src="~/Content/images/Planes/logo_arrendamiento_finan.png" />
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <div class="select-button" data-for="arrendamiento" data-value="financiero">SELECCIONAR</div>
+                                    </div>
+                                </div>
+                                <div class="text-plan">Adquiere la propiedad fiscal del autom&oacute;vil, lo que permite deducirlo de impuestos, ya que el veh&iacute;culo se registra dentro de los activos del contratante.</div>
+                            </div>
+                            <div class="col-12 my-4">
+                                <div class="row my-3 align-items-center">
+                                    <div class="col-6 col-lg-4">
+                                        <img src="~/Content/images/Planes/logo_arrendamiento_puro.png" />
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <div class="select-button" data-for="arrendamiento" data-value="puro">SELECCIONAR</div>
+                                    </div>
+                                </div>
+                                <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del a&ntilde;o en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
+                            </div>
+                        </div>
+                        <div id="data-depositos" class="row mt-4 step-4-6" style="display: none;">
+                            <div class="col-12">
+                                <div class="title">Selecciona la cantidad de Depósitos</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row block">
+                                    <div class="col-12 col-lg-6 my-3 m-0">
+                                        <div class="float-container">
+                                            <label class="float-label" for="select-cantidad-depositos">Cantidad de Depósitos</label>
+                                            <select id="select-cantidad-depositos" name="select-cantidad-depositos" class="form-input effect-2">
+                                                <option value="0" selected disabled>Cantidad de Dep&oacute;sitos</option>
+                                            </select>
+                                            <span class="focus-border"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 step-4-7">
+                            <div class="col-12">
+                                <div class="title">Selecciona el plazo de tu plan de <span class="title-financiamiento">financiamiento</span></div>
+                            </div>
+                        </div>
+                        <div id="select-term" class="row block step-4-7">
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="term" data-value="24">24 MESES</div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="term" data-value="36">36 MESES</div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="select-button" data-for="term" data-value="48">48 MESES</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 step-4-8">
+                            <div class="col-12">
+                                <div class="title">Selecciona el monto de <span class="title-enganche">enganche</span> con el que deseas iniciar tu plan</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 step-4-8">
+                            <div class="col-12">
+                                <div class="title"><input type="range" id="hitch-range" min="0" max="100000" step="5000" value="0" /></div>
+                            </div>
+                        </div>
+                        <div class="row block range-controls step-4-8">
+                            <div class="col-12 d-flex">
+                                <div id="hitch-minus" class="range-button">
+                                    <img src="~/Content/images/Cotizador/menos.png" />
+                                </div>
+                                <div id="hitch-text">$ 0 M.N.</div>
+                                <div id="hitch-plus" class="range-button">
+                                    <img src="~/Content/images/Cotizador/mas.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row block justify-content-center step-4-8">
+                            <div class="col-12 col-lg-4">
+                                <button type="button" id="step-4-finish" class="btn-red w-100">FINALIZAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @* ----------------STEP 5---------------- *@
+            <div class="swiper-slide">
+                <div id="step-5">
+                    <div class="col-11">
+                        @*<div class="row">
+                                <div class="col-12 d-flex justify-content-between">
+                                    <button type="button" id="step-5-back" class="btn-transparent color-red">
+                                        <span class="material-icons color-red">chevron_left</span>
+                                        VOLVER
+                                    </button>
+                                </div>
+                            </div>*@
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="title"><span class="step-5-nombre-cliente"></span> te presentamos el resultado de tu pr&oacute;ximo Toyota</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @* --------------- Columna 1 --------------- *@
+                            <div class="col-12 col-lg-8">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="step-5-card size-medium">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6 d-flex flex-column">
+                                                    <div class="row flex-grow-1">
+                                                        <div class="col-5 col-lg-6">
+                                                            <div class="text-tag">Modelo:</div>
+                                                            <div class="step-5-nombre-auto text-value"></div>
+                                                        </div>
+                                                        <div class="col-7 col-lg-6">
+                                                            <div class="text-tag">Versi&oacute;n:</div>
+                                                            <div class="step-5-version-auto text-value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-5 col-lg-6">
+                                                            <div class="text-tag">A&ntilde;o:</div>
+                                                            <div class="step-5-anio-auto text-value"></div>
+                                                        </div>
+                                                        <div class="col-7 col-lg-6">
+                                                            <div class="text-tag">Tipo de persona:</div>
+                                                            <div class="step-5-tipo-persona text-value"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 flex-center align-items-end align-items-lg-center">
+                                                    <img class="step-5-imagen-auto" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Mensualidad:</div>
+                                            <div class="text-value step-5-mensualidad">$ 0 M.N.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 step-5-datos-plan">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Enganche:</div>
+                                            <div class="text-value step-5-enganche">$ 0 M.N.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 step-5-datos-arrendamiento" style="display: none;">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Total rentas en Depósito:</div>
+                                            <div class="text-value step-5-deposito">$ 0 M.N.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Plazo:</div>
+                                            <div class="text-value step-5-plazo"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 step-5-datos-plan">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Precio total:</div>
+                                            <div class="text-value step-5-precio-total">$ 0 M.N.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 step-5-datos-arrendamiento" style="display: none;">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Monto a Arrendar:</div>
+                                            <div class="text-value step-5-monto-arrendar">$ 0 M.N.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-big">
+                                            <div class="text-tag">Elegir otro plazo:</div>
+                                            <div class="flex-center m-3">
+                                                <div id="select-otro-plazo" class="flex-center row">
+                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo" data-value="24">24 MESES</div>
+                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo" data-value="36">36 MESES</div>
+                                                    <div class="select-button col-12 col-lg-7 my-3" data-for="otro-plazo" data-value="48">48 MESES</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-big d-flex flex-column">
+                                            <div class="text-tag">Plan de <span class="title-financiamiento">financiamiento</span>:</div>
+                                            <div class="flex-center flex-grow-1 m-3">
+                                                <img class="step-5-plan" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Aseguradora seleccionada:</div>
+                                            <div class="text-value step-5-aseguradora"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Cobertura de seguro seleccionada:</div>
+                                            <div class="text-value step-5-cobertura"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Tasa de interés:</div>
+                                            <div class="text-value step-5-tasa-interes"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">CAT:</div>
+                                            <div class="text-value step-5-cat"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="data-anualidades" style="display: none;">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Anualidad:</div>
+                                            <div class="text-value step-5-anualidad"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Mes de Anualidad:</div>
+                                            <div class="text-value">Diciembre</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="data-balloon" style="display: none;">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Monto Balloon:</div>
+                                            <div class="text-value step-5-monto-balloon"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="step-5-card size-small">
+                                            <div class="text-tag">Balloon:</div>
+                                            <div class="text-value step-5-porcentaje-balloon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-5">
+                                    <div class="col-12 col-lg-4">
+                                        <a href="/tfsm/mis-cotizaciones" class="btn-red_inverted w-100 text-decoration-none">VER COTIZACIONES</a>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mb-3 m-lg-0">
+                                        <button id="cotizar-otro" type="button" class="btn-red_inverted w-100">COTIZAR OTRO VEH&Iacute;CULO</button>
+                                    </div>
+                                    <div class="col-12 col-lg-4 mt-3 m-lg-0">
+                                        <button type="button" class="btn-red btn-long w-100">DESCARGAR COTIZACI&Oacute;N PDF</button>
+                                    </div>
+                                </div>
+                            </div>
+                            @* --------------- Columna 2 --------------- *@
+                            <div class="col-12 col-lg-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="step-5-card solicitud">
+                                            <div class="row">
+                                                <div class="col-12 flex-grow-1">
+                                                    <div class="title">Inicia ahora tu solicitud de cr&eacute;dito de forma digital y estrena hoy un <span class="step-5-nombre-auto"></span></div>
+                                                </div>
+                                                <div class="col-12 d-grid">
+                                                    <div class="row">
+                                                        <div class="col-8 d-flex align-items-end">
+                                                            <button type="button" class="btn-red btn-long">INICIAR SOLICITUD</button>
+                                                        </div>
+                                                        <div class="col-4 d-flex align-items-end">
+                                                            <img src="~/Content/images/Cotizador/tfsm-logo-home-delivery.png" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="sf-form-container step-5-card" data-id="step-5-contact-form">
+                                            <div class="title">
+                                                <span class="step-5-nombre-cliente"></span>,<br />contacta con uno de nuestros Distribuidores para recibir m&aacute;s informaci&oacute;n:
+                                            </div>
+                                            <div class="d-grid">
+                                                <div class="float-container">
+                                                    <label class="float-label" for="step-5-distribuidores">Distribuidor</label>
+                                                    <select class="form-input effect-2 bg-transparent" id="step-5-distribuidores" name="distribuidores">
+                                                        <option value="0" disabled selected>Distribuidor</option>
+                                                    </select>
+                                                    <span class="focus-border"></span>
+                                                </div>
+                                                <div class="float-container">
+                                                    <label class="float-label" for="step-5-phone">Tel&eacute;fono</label>
+                                                    <input id="step-5-phone" name="phone" class="form-input effect-2 bg-transparent" />
+                                                    <span class="focus-border"></span>
+                                                </div>
+                                            </div>
+                                            <div class="terms">
+                                                <div><input type="checkbox" id="step-5-terms" /></div>
+                                                <div>
+                                                    He le&iacute;do y acepto el <span class="red-link link-aviso-privacidad">aviso de privacidad</span> y los <span id="step-5-terms-btn" class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span>
+                                                </div>
+                                            </div>
+                                            <div class="mt-5">
+                                                <button id="step-5-contact" type="button" class="btn-red btn-long col-12 col-lg-7">SER CONTACTADO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        //new WebkitInputRangeFillLower({
+        //    selectors: ['hitch-range'],
+        //    color: '#cc0000'
+        //});
+    });
+</script>

@@ -1,0 +1,11 @@
+{
+  "priority": 1,
+  "hidden": false,
+  "components": [
+    "sf-library-selector",
+    "sf-page-selector"
+  ],
+  "scripts": [
+    "Mvc/Scripts/InfoSelectDouble/designerview-custom.js"
+  ]
+}

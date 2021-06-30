@@ -1,0 +1,84 @@
+﻿.color-red {
+    color: #cc0000;
+}
+
+.color-gray-1 {
+    color: #dddbda;
+}
+
+.color-gray-2 {
+    color: #706e6b;
+}
+
+.color-gray-4 {
+    color: #3e3e3c;
+}
+
+.btn-red,
+.btn-red:active,
+.btn-red:focus,
+.btn-red_inverted:hover {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 40px;
+    background: #cc0000;
+    border-radius: 20px;
+    border: 1px solid #cc0000;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+}
+
+    .btn-red_inverted,
+    .btn-red_inverted:active,
+    .btn-red_inverted:focus,
+    .btn-red:hover {
+        display: flex;
+        align-items: center;
+        padding: 12px 24px;
+        height: 40px;
+        background: #fff;
+        color: #cc0000;
+        border: 1px solid #cc0000;
+        transition: all 3ms;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        outline: none;
+        justify-content: center;
+    }
+
+.plan-description-card {
+    display: flex;
+    flex-flow: column;
+    padding: 16px;
+    background: #FFFFFF;
+    border-radius: 1.5rem;
+    height: 100%;
+    margin: -10px 0;
+}
+
+.plan-description-card-container {
+    margin: 20px 0;
+    height: 100%;
+}
+
+.plan-description-card > div {
+    padding: 10px 0;
+}
+
+.plan-description-card-body {
+    font-size: 16px;
+    flex: 1 1 auto;
+}
+
+.plan-description-card-action {
+    flex: 0 1 47px;
+}
+
+.plan-description-card-action a {
+    text-decoration: none;
+}

@@ -1,0 +1,78 @@
+﻿<div>
+  <style>
+  .images-container{
+  overflow-x: scroll;
+  flex-wrap: nowrap !important;
+  height: 125px !important;
+  align-items: center;
+  margin-bottom: 10px;
+  }
+
+  .image-item{
+  display: flex;
+  position: relative !important;
+  }
+
+  .image-number{
+  color: #ffffff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.5);
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-weight: 600;
+  user-select: none;
+  }
+</style>
+
+<div style="padding: 0 15px;">
+  <div class="row images-container" style="overflow-x: scroll !important; margin-bottom: 10px !important;">
+    <div ng-repeat="(key, value) in sfImages" class="col-3 image-item" style="margin-right: 5px !important;max-height: 100% !important;">
+
+      <img ng-show="value.sfImageIsVisible" ng-src="{{value.ThumbnailUrl}}" src="" alt="{{value.Title.Value}}" />
+      <div ng-hide="value.ThumbnailUrl" class="sf-Media-empty--image icon-no-image">
+        {{value.ThumbnailUrl}}
+      </div>
+      <div ng-show="value.sfImageIsVisible" class="image-number">
+        {{key + 1}}
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
+
+<button ng-show="!sfImages || sfImages.length == 0" class="btn btn-xs btn-default" ng-click="changeImage()">Select Images</button>
+<button ng-show="sfImages && sfImages.length > 0" class="btn btn-xs btn-default" ng-click="changeImage()">Change Images</button>
+
+<div class="imageSelectorModal"
+     template-url="sf-image-selector-modal-template"
+     modal=""
+     size="normal"
+     window-class="modal-fluid sf-backend-wrp"
+     existing-scope="true">
+</div>
+
+<script type="text/ng-template" id="sf-image-selector-modal-template">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()">
+      <i class=" fa fa-times"></i>
+    </button>
+    <h3 class="modal-title">
+      Select Images
+    </h3>
+  </div>
+  <div class="modal-body">
+    <sf-image-selector sf-model="model.selectedItems" sf-filter="model.filterObject" sf-deselectable="true" sf-multiselect="true" sf-provider="model.provider" sf-media-settings="sfMediaSettings"></sf-image-selector>
+  </div>
+  <div class="modal-footer">
+    <button type="button"  nmclass="btn btn-primary pull-left" ng-click="done()" ng-disabled="!model.selectedItems.length">
+      @(Res.Get<ClientComponentsResources>().DoneSelecting)</button>
+    <button type="button" class="btn btn-link  pull-left" ng-click="cancel()">
+      @(Res.Get<ClientComponentsResources>().Cancel)</button>
+  </div>
+</script>
+</div>

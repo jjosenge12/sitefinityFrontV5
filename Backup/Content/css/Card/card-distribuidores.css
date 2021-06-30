@@ -1,0 +1,352 @@
+﻿.card-dealers {
+    height: 85vh;
+    max-width: 100%;
+}
+
+.card-dealers>*{
+    max-height: 100%;
+}
+
+.map-section{
+    height: 100%;
+}
+
+.dealer-browser {
+    padding: 14%;
+    padding-bottom: 70px;
+    transition: all 0.3s ease-in-out;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dealer-browser.results{
+    padding-top: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.browser-tab {
+    width: 50%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: #858585;
+    position: relative;
+    border-bottom: 1px solid #cccccc;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.browser-tab:hover{
+    background-color: #eee;
+    transition: all 0.1s ease-in-out;
+}
+
+.tab-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.browser-tab > .focus-border {
+    position: absolute;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-red);
+    transition: 0.4s;
+}
+
+.browser-tab > .focus-border.fb-left{
+    left: 100%;
+    transition: 0.4s;
+}
+
+.browser-tab > .focus-border.fb-right{
+    left: 0;
+    transition: 0.4s;
+}
+
+.browser-tab.active > .focus-border.fb-left {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
+
+.browser-tab.active > .focus-border.fb-right {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.tab-panel{
+    margin-top: 50px;
+}
+
+.browser-input {
+    padding-left: 30px !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.state-container.results,
+.browser-input.results{
+    padding-right: 30px !important;
+    transition: all 0.3s ease-in-out;   
+}
+
+.browser-input-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -12px;
+    user-select: none;
+}
+
+#refresh-search-select,
+#refresh-search-pc {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+    user-select: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.browser-actions{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.browser-actions>button{
+    width: 48%;
+}
+
+.select2-selection__rendered {
+    font-size: 14px;
+    line-height: 40px !important;
+    padding-left: 0 !important;
+}
+
+.select2-selection__arrow {
+    height: 38px !important;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-selection {
+    height: 35px !important;
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+    padding-left: 30px !important;
+    background-color: transparent !important;
+}
+
+.select2-results {
+    border-bottom: 1px solid #aaaaaa;
+}
+
+select[class*="error"] ~ .select2-container {
+    border-bottom: 1px solid red !important;
+}
+
+label.error {
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    color: red;
+    font-size: 12px;
+}
+
+.dealer-result {
+    border-radius: 12px;
+    border: 2px solid #cccccc;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 125px;
+    padding: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dealer-result.active{
+    border-color: #cc0000;
+}
+
+.dealer-result-title{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 24px;
+}
+
+.dealer-result-address {
+    font-size: 14px;
+    font-weight: 400;
+    color: #858585;
+    line-height: 20px;
+}
+
+#browser-title{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+#browser-title>.info-card-subtitle{
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+#browser-title>#back-button{
+    color: #cc0000;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+#refresh-search-select:hover,
+#refresh-search-pc:hover,
+#browser-title > #back-button:hover {
+    background-color: rgba(204,204,204,0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+#refresh-search-select:active,
+#refresh-search-pc:active,
+#browser-title > #back-button:active {
+    background-color: rgba(204,204,204,0.7);
+    transition: all 0.1s ease-in-out;
+}
+
+#dealer-results{
+    overflow-y: auto;
+    margin-top: 30px;
+    padding-right: 10px;
+}
+
+.dealer-browser ::-webkit-scrollbar-track{
+    background: white;
+}
+
+@media(max-width: 991px){
+    .card-dealers{
+        height: auto;
+    }
+
+    .dealer-browser{
+        padding: 5%;
+    }
+
+    .browser-actions>button{
+        width: 100%;
+    }
+
+    .map-section {
+        height: 85vh;
+    }
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: #eee radial-gradient(circle, transparent 1%, #eee 1%) center/15000%;
+}
+
+.ripple:active {
+  background-color: #ccc;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.marker-popup{
+    background-color: #cc0000;
+    color: #ffffff;
+    font-family: 'ToyotaType-Regular';
+}
+
+.popup-title{
+    font-weight: 600;
+}
+
+.gm-style .gm-style-iw-c {
+    /*background-color: #cc0000 !important;*/
+}
+
+.poi-info-window{
+    padding: 10px;
+}
+
+.gm-style-iw-c {
+    padding: 0 !important;
+}
+
+.gm-style-iw-c button{
+    outline: none !important;
+}
+
+.gm-style .gm-style-iw-d {
+    overflow: auto !important;
+}
+
+.popup-left{
+    padding: 20px 15px 10px 15px !important;
+}
+
+.popup-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ea1e30;
+}
+
+#contactModal {
+    display: block;
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 250px);
+    z-index: 14;
+}
+
+@media(max-width: 767px) {
+    #contactModal {
+        width: 100vw;
+        left: 0;
+        top: 0;
+        height: 100vh;
+    }
+}
+
+.float-container{
+    margin: 16px 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.myLocationContainer{
+    right: 10px !important;
+}

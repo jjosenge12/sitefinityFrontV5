@@ -1,0 +1,36 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-mis-cotizaciones.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-mis-cotizaciones.css"))
+
+<div>
+    <div id="bannerBienvenida" class="customRow container"></div>
+    <div id="dashboard" class="customRow container"></div>
+    <div id="procesos" class="customRow container"></div>
+    <div id="cotizaciones" class="customRow container"></div>
+</div>
+
+<div id="modalOverlay" style="display: none;">&nbsp;</div>
+<div id="eliminarCotizacionModal" class="siteModal" style="display: none;">
+    <div class="modal-custom">
+        <div class="modal-header-custom">
+            <span class="modal-header-custom_title">Est&aacute;s saliendo de toyotacredito.com.mx para entrar al sitio de Instagram.</span>
+            <div class="modal-header-custom_close">
+                <span id="eliminarCotizacionesModalClose" data-modal="eliminarCotizaciones" class="material-icons icon-button">close</span>
+            </div>
+        </div>
+        <div class="modal-body-custom">
+            Entrar&aacute;s a un sitio web ajeno a Toyota Financial Services M&eacute;xico, el cual es responsable de sus propios contenidos y mantiene su pol&iacute;tica de privacidad y seguridad.
+        </div>
+        <div class="modal-actions-custom">
+            <button type="button" id="instagramModalBack" data-modal="instagram" class="btn-red_inverted mr-3">VOLVER</button>
+            <button type="button" id="instagramModalContinue" data-modal="instagram" class="btn-red">CONTINUAR</button>
+        </div>
+    </div>
+</div>

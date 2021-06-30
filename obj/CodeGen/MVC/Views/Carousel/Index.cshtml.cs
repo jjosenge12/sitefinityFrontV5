@@ -211,7 +211,7 @@ WriteLiteral(">\r\n");
             #line hidden
             
             #line 29 "..\..\MVC\Views\Carousel\Index.cshtml"
-                         if (!string.IsNullOrEmpty(Model.Title))
+                         if (!string.IsNullOrEmpty(Model.DesktopTexts[i]))
                         {
 
             
@@ -225,7 +225,7 @@ WriteLiteral(">");
 
             
             #line 31 "..\..\MVC\Views\Carousel\Index.cshtml"
-                                                                    Write(Html.HtmlSanitize(Model.Title));
+                                                                    Write(Html.HtmlSanitize(Model.DesktopTexts[i]));
 
             
             #line default
@@ -338,27 +338,27 @@ WriteLiteral("\r\n");
             #line hidden
 WriteLiteral("                <div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 2554), Tuple.Create("\"", 2592)
-, Tuple.Create(Tuple.Create("", 2562), Tuple.Create("item", 2562), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 2574), Tuple.Create("\"", 2612)
+, Tuple.Create(Tuple.Create("", 2582), Tuple.Create("item", 2582), true)
             
             #line 51 "..\..\MVC\Views\Carousel\Index.cshtml"
-, Tuple.Create(Tuple.Create(" ", 2566), Tuple.Create<System.Object, System.Int32>(j == 0 ? "active" : ""
+, Tuple.Create(Tuple.Create(" ", 2586), Tuple.Create<System.Object, System.Int32>(j == 0 ? "active" : ""
             
             #line default
             #line hidden
-, 2567), false)
+, 2587), false)
 );
 
 WriteLiteral(">\r\n                    <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 2620), Tuple.Create("\"", 2633)
+WriteAttribute("src", Tuple.Create(" src=\"", 2640), Tuple.Create("\"", 2653)
             
             #line 52 "..\..\MVC\Views\Carousel\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 2626), Tuple.Create<System.Object, System.Int32>(imgSrc
+, Tuple.Create(Tuple.Create("", 2646), Tuple.Create<System.Object, System.Int32>(imgSrc
             
             #line default
             #line hidden
-, 2626), false)
+, 2646), false)
 );
 
 WriteLiteral(" style=\"width:100%;\"");

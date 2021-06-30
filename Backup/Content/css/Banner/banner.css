@@ -1,0 +1,74 @@
+﻿.banner {
+    max-width: 100%;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .banner-medium {
+        max-height: 66vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .banner-small {
+        max-height: 33vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.banner > img {
+    width: 100%;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.banner-link{
+    cursor: pointer;
+}
+
+.banner-text-container {
+    position: absolute;
+    top: 25%;
+    right: 70% !important;
+    left: 12% !important;
+    z-index: 1;
+}
+
+.banner-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.25rem;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    color: #fafafa;
+    text-align: left;
+    width: 35vw;
+}
+
+.banner-link:hover > img {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .banner-text-container {
+        top: 25%;
+        right: 65% !important;
+        left: initial;
+    }
+
+    .banner-text {
+        width: 40vw;
+        text-align: left;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        color: #fafafa;
+    }
+}
