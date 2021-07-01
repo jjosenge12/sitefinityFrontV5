@@ -1,5 +1,6 @@
 ﻿var form = {}, swiper, cars_swiper, cotizacion;
-var maxEnganche = $("#max-enganche").val();
+//var maxEnganche = $("#max-enganche").val();
+var maxEnganche = 0;
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
