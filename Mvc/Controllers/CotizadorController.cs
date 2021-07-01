@@ -32,7 +32,7 @@ namespace SitefinityWebApp.Mvc.Controllers
 		public ActionResult Index()
 		{
 			var model = new CotizadorModel();
-			model.MontoEnganche = this.MontoEnganche;
+			//model.MontoEnganche = this.MontoEnganche;
 			model.autos = GetAllAutos();
 
 			return View("Index", model);
