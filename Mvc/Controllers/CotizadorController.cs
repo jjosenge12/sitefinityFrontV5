@@ -49,8 +49,6 @@ namespace SitefinityWebApp.Mvc.Controllers
         }
 
 		public string MontoEnganche { get; set; }
-		public string SerializedSelectedItemId { get; set; }
-		public string SerializedSelectedItem { get; set; }
 
 		public static IQueryable<MediaContent> GetImagesByImageLibrary(IFolder folder)
 		{

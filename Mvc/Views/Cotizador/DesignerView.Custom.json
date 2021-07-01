@@ -1,6 +1,6 @@
 {
   "priority": 1,
-  "hidden": false,
+  "hidden": true,
   "components": [],
   "scripts": [
     "Mvc/Scripts/Cotizador/designerview-custom.js"
