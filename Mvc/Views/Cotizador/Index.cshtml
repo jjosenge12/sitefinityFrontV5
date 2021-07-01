@@ -19,8 +19,6 @@
 @Html.StyleSheet(Url.Content("~/Content/css/Cotizador/cotizador.css"))
 @Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
 
-@*<div class="d-none" id="monto-enganche">@Model.MontoEnganche</div>*@
-
 <div class="cotizador-container">
     <div id="cotizador-swiper-container" class="swiper-container">
         <div class="swiper-wrapper">
@@ -149,6 +147,7 @@
             @* ----------------STEP 4---------------- *@
             <div class="swiper-slide">
                 <div id="step-4">
+                    <input type="hidden" id="max-enganche" value="@Model.MontoEnganche.ToString()"/>
                     <div class="col-11">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-between">
