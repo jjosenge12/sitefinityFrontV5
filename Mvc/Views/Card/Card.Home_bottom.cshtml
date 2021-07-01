@@ -8,31 +8,65 @@
 
 @Html.StyleSheet(Url.Content("~/Content/css/styles.css"))
 
-<div class="card custom-card">
-    <div class="card-img-container">
-        @if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
-        {
-            <img alt="" src="@Model.SelectedSizeUrl" title="@Model.ImageTitle" alt="@Model.ImageAlternativeText" />
-        }
-    </div>
-    <div class="card-body-custom">
-        <div class="mt-2">
-            @if (!string.IsNullOrEmpty(Model.Heading))
+@if (!string.IsNullOrEmpty(Model.ActionUrl))
+{
+    <a href="@Html.UrlSanitize(Model.ActionUrl)" class="card custom-card text-decoration-none">
+        <div class="card-img-container">
+            @if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
             {
-                <p class="card-text titulo-card FontToyotaRegular" style="min-height:50px;">@Html.HtmlSanitize(Model.Heading)</p>
+                <img alt="" src="@Model.SelectedSizeUrl" title="@Model.ImageTitle" alt="@Model.ImageAlternativeText" />
+            }
+        </div>
+        <div class="card-body-custom">
+            <div class="mt-2">
+                @if (!string.IsNullOrEmpty(Model.Heading))
+                {
+                    <p class="card-text titulo-card FontToyotaRegular" style="min-height:50px;">@Html.HtmlSanitize(Model.Heading)</p>
+                }
+                else
+                {
+                    <p class="card-text titulo-card FontToyotaRegular" style="min-height:50px;">Title</p>
+                }
+            </div>
+            @if (!string.IsNullOrEmpty(Model.Description))
+            {
+                <p class="parrafo-card mt-1 FontToyotaRegular">@Html.HtmlSanitize(Model.Description)</p>
             }
             else
             {
-                <p class="card-text titulo-card FontToyotaRegular" style="min-height:50px;">Title</p>
+                <p class="parrafo-card FontToyotaRegular">Description</p>
             }
         </div>
-        @if (!string.IsNullOrEmpty(Model.Description))
-        {
-            <p class="parrafo-card mt-1 FontToyotaRegular">@Html.HtmlSanitize(Model.Description)</p>
-        }
-        else
-        {
-            <p class="parrafo-card FontToyotaRegular">Description</p>
-        }
+    </a>
+}
+else
+{
+    <div class="card custom-card">
+        <div class="card-img-container">
+            @if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
+            {
+                <img alt="" src="@Model.SelectedSizeUrl" title="@Model.ImageTitle" alt="@Model.ImageAlternativeText" />
+            }
+        </div>
+        <div class="card-body-custom">
+            <div class="mt-2">
+                @if (!string.IsNullOrEmpty(Model.Heading))
+                {
+                    <p class="card-text titulo-card FontToyotaRegular" style="min-height:50px;">@Html.HtmlSanitize(Model.Heading)</p>
+                }
+                else
+                {
+                    <p class="card-text titulo-card FontToyotaRegular" style="min-height:50px;">Title</p>
+                }
+            </div>
+            @if (!string.IsNullOrEmpty(Model.Description))
+            {
+                <p class="parrafo-card mt-1 FontToyotaRegular">@Html.HtmlSanitize(Model.Description)</p>
+            }
+            else
+            {
+                <p class="parrafo-card FontToyotaRegular">Description</p>
+            }
+        </div>
     </div>
-</div>
+}

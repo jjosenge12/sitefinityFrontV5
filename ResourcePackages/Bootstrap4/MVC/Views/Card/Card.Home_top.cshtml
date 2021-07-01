@@ -8,26 +8,53 @@
 
 @Html.StyleSheet(Url.Content("~/Content/css/styles.css"))
 
-
-<div class="card custom-card shadow shadow-hover">
-    <div class="card-body">
-        @if (!string.IsNullOrEmpty(Model.Heading))
-        {
-            <p class="card-text titulo-card FontToyotaRegular">@Html.HtmlSanitize(Model.Heading)</p>
-        }
-        else
-        {
-            <p class="card-text titulo-card FontToyotaRegular">Title</p>
-        }
-        <hr class="separador-card" />
-        @if (!string.IsNullOrEmpty(Model.Description))
-        {
-            <p class="parrafo-card FontToyotaRegular">@Html.HtmlSanitize(Model.Description)</p>
-        }
-        else
-        {
-            <p class="parrafo-card FontToyotaRegular">Description</p>
-        }
+@if (!string.IsNullOrEmpty(Model.ActionUrl))
+{
+    <a href="@Html.UrlSanitize(Model.ActionUrl)" class="card custom-card shadow shadow-hover text-decoration-none">
+        <div class="card-body">
+            @if (!string.IsNullOrEmpty(Model.Heading))
+            {
+                <p class="card-text titulo-card FontToyotaRegular">@Html.HtmlSanitize(Model.Heading)</p>
+            }
+            else
+            {
+                <p class="card-text titulo-card FontToyotaRegular">Title</p>
+            }
+            <hr class="separador-card" />
+            @if (!string.IsNullOrEmpty(Model.Description))
+            {
+                <p class="parrafo-card FontToyotaRegular">@Html.HtmlSanitize(Model.Description)</p>
+            }
+            else
+            {
+                <p class="parrafo-card FontToyotaRegular">Description</p>
+            }
+        </div>
+        <img src="@Model.SelectedSizeUrl" title="@Model.ImageTitle" alt="@Model.ImageAlternativeText" />
+    </a>
+}
+else
+{
+    <div class="card custom-card shadow shadow-hover">
+        <div class="card-body">
+            @if (!string.IsNullOrEmpty(Model.Heading))
+            {
+                <p class="card-text titulo-card FontToyotaRegular">@Html.HtmlSanitize(Model.Heading)</p>
+            }
+            else
+            {
+                <p class="card-text titulo-card FontToyotaRegular">Title</p>
+            }
+            <hr class="separador-card" />
+            @if (!string.IsNullOrEmpty(Model.Description))
+            {
+                <p class="parrafo-card FontToyotaRegular">@Html.HtmlSanitize(Model.Description)</p>
+            }
+            else
+            {
+                <p class="parrafo-card FontToyotaRegular">Description</p>
+            }
+        </div>
+        <img src="@Model.SelectedSizeUrl" title="@Model.ImageTitle" alt="@Model.ImageAlternativeText" />
     </div>
-    <img src="@Model.SelectedSizeUrl" title="@Model.ImageTitle" alt="@Model.ImageAlternativeText" />
-</div>
+}

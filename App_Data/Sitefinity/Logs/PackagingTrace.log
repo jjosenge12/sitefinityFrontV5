@@ -208,3 +208,213 @@ Message: Content export successfully completed for 0 items [0 succeeded, 0 faile
 
 
 ----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:50 PM
+
+Message: Exporting Blogs structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:52 PM
+
+Message: Exported Blogs structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:52 PM
+
+Message: Exporting Classifications structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:52 PM
+
+Message: Exported Classifications structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:52 PM
+
+Message: Exporting Autos structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:54 PM
+
+Message: Exported Autos structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:54 PM
+
+Message: Exporting Test Module structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:56 PM
+
+Message: Exported Test Module structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:56 PM
+
+Message: Exporting Events structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:59 PM
+
+Message: Exported Events structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:59 PM
+
+Message: Exporting Forums structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:59 PM
+
+Message: Forums are up to date
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:34:59 PM
+
+Message: Exporting Libraries structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:03 PM
+
+Message: Exported Libraries structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:03 PM
+
+Message: Exporting Lists structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:05 PM
+
+Message: Exported Lists structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:05 PM
+
+Message: Exporting Mobile formats structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:05 PM
+
+Message: Exported Mobile formats structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:05 PM
+
+Message: Exporting News structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:07 PM
+
+Message: Exported News structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:07 PM
+
+Message: Exporting Pages structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:07 PM
+
+Message: Pages are up to date
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:07 PM
+
+Message: Exporting User profiles structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:08 PM
+
+Message: Exported User profiles structure
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:08 PM
+
+Message: Content export requested by system with the following settings: TypeName: Telerik.Sitefinity.Multisite.Model.Site; ProviderName: []; Languages: []; ItemsFilterExpression: ; ItemsSortExpression: Id
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:08 PM
+
+Message: Content export started.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:09 PM
+
+Message: Content export successfully completed for 1 items [1 succeeded, 0 failed].
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:09 PM
+
+Message: Content export requested by system with the following settings: TypeName: MobileFormats; ProviderName: []; Languages: []; ItemsFilterExpression: ; ItemsSortExpression: Id
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:09 PM
+
+Message: Content export started.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/30/2021 8:35:09 PM
+
+Message: Content export successfully completed for 0 items [0 succeeded, 0 failed].
+
+
+----------------------------------------
