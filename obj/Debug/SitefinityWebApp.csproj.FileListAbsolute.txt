@@ -549,4 +549,3 @@ G:\Tomas\Proyectos\Default\obj\Debug\SitefinityWebApp.csproj.CopyComplete
 G:\Tomas\Proyectos\Default\obj\Debug\SitefinityWebApp.dll
 G:\Tomas\Proyectos\Default\obj\Debug\SitefinityWebApp.pdb
 G:\Tomas\Proyectos\Default\bin\SitefinityWebApp.dll.config
-G:\Tomas\Proyectos\Default\obj\Debug\SitefinityWebApp.csprojAssemblyReference.cache
