@@ -31,10 +31,10 @@ namespace SitefinityWebApp.Mvc.Controllers
 		// GET: Cotizador
 		public ActionResult Index()
 		{
-            if (string.IsNullOrEmpty(this.MontoEnganche))
-            {
-				this.MontoEnganche = "0";
-            }
+    //        if (string.IsNullOrEmpty(this.MontoEnganche))
+    //        {
+				//this.MontoEnganche = "0";
+    //        }
 
 			var model = new CotizadorModel();
 			model.MontoEnganche = this.MontoEnganche;
@@ -48,7 +48,7 @@ namespace SitefinityWebApp.Mvc.Controllers
             this.ActionInvoker.InvokeAction(this.ControllerContext, "Index");
         }
 
-		public string MontoEnganche { get; set; }
+		public int MontoEnganche { get; set; }
 
 		public static IQueryable<MediaContent> GetImagesByImageLibrary(IFolder folder)
 		{

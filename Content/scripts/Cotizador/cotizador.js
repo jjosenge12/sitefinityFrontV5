@@ -1,6 +1,5 @@
 ﻿var form = {}, swiper, cars_swiper, cotizacion;
-//var maxEnganche = $("#max-enganche").val();
-var maxEnganche = 0;
+//var maxEnganche = 0;
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -35,6 +34,8 @@ function formNextStep(step) {
 }
 
 $(document).ready(function () {
+    var maxEnganche = Number($("#max-enganche").val());
+
     jQuery.validator.addMethod(
         "selectRequired",
         function (value, element) {
@@ -307,8 +308,8 @@ $(document).ready(function () {
 
     $("#hitch-plus").click(function () {
         let val = $("#hitch-range").val();
-        let calc = Number(val) + 5000;
-        if (calc <= 100000) {
+        let calc = Number(val) + 5000, max = form.precioAuto - maxEnganche;
+        if (calc <= max) {
             $("#hitch-range").val(calc);
             $("#hitch-range").change();
             $("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
