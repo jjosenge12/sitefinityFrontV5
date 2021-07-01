@@ -27,6 +27,12 @@ namespace ASP
     using System.Web.UI;
     using System.Web.WebPages;
     
+    #line 5 "..\..\MVC\Views\Card\Card.Header.cshtml"
+    using SitefinityWebApp.Mvc;
+    
+    #line default
+    #line hidden
+    
     #line 4 "..\..\MVC\Views\Card\Card.Header.cshtml"
     using Telerik.Sitefinity.Frontend.Mvc.Helpers;
     
@@ -51,7 +57,7 @@ namespace ASP
 WriteLiteral("\r\n");
 
             
-            #line 6 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 7 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.Script(ScriptRef.JQuery, "top", true));
 
             
@@ -60,17 +66,8 @@ Write(Html.Script(ScriptRef.JQuery, "top", true));
 WriteLiteral("\r\n");
 
             
-            #line 7 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n");
-
-            
             #line 8 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true));
 
             
             #line default
@@ -79,7 +76,7 @@ WriteLiteral("\r\n");
 
             
             #line 9 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true));
 
             
             #line default
@@ -88,7 +85,7 @@ WriteLiteral("\r\n");
 
             
             #line 10 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top", true));
 
             
             #line default
@@ -97,7 +94,7 @@ WriteLiteral("\r\n");
 
             
             #line 11 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true));
 
             
             #line default
@@ -106,7 +103,7 @@ WriteLiteral("\r\n");
 
             
             #line 12 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script(Url.WidgetContent("~/Content/scripts/sweetalert2.js"), "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true));
 
             
             #line default
@@ -115,7 +112,7 @@ WriteLiteral("\r\n");
 
             
             #line 13 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/sweetalert2.js"), "top", true));
 
             
             #line default
@@ -124,6 +121,15 @@ WriteLiteral("\r\n");
 
             
             #line 14 "..\..\MVC\Views\Card\Card.Header.cshtml"
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+            
+            #line 15 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true));
 
             
@@ -132,7 +138,7 @@ Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TF
 WriteLiteral("\r\n\r\n");
 
             
-            #line 16 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 17 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css")));
 
             
@@ -141,7 +147,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 17 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 18 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 
             
@@ -150,7 +156,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 18 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 19 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/material-icons.css")));
 
             
@@ -159,7 +165,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/material-icons.css")));
 WriteLiteral("\r\n");
 
             
-            #line 19 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 20 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/select2.min.css")));
 
             
@@ -168,7 +174,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/select2.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 20 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 21 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/loaders.css")));
 
             
@@ -177,7 +183,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/loaders.css")));
 WriteLiteral("\r\n");
 
             
-            #line 21 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 22 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css")));
 
             
@@ -227,9 +233,15 @@ WriteLiteral(">\r\n            <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteLiteral(" class=\"url-mytfsm\"");
-
-WriteLiteral(" href=\"#\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 2235), Tuple.Create("\"", 2268)
+            
+            #line 31 "..\..\MVC\Views\Card\Card.Header.cshtml"
+, Tuple.Create(Tuple.Create("", 2242), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
+            
+            #line default
+            #line hidden
+, 2242), false)
+);
 
 WriteLiteral(" id=\"my-tfsm\"");
 
@@ -287,9 +299,15 @@ WriteLiteral(">\r\n        <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteLiteral(" class=\"url-mytfsm\"");
-
-WriteLiteral(" href=\"#\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 2921), Tuple.Create("\"", 2954)
+            
+            #line 40 "..\..\MVC\Views\Card\Card.Header.cshtml"
+, Tuple.Create(Tuple.Create("", 2928), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
+            
+            #line default
+            #line hidden
+, 2928), false)
+);
 
 WriteLiteral(" id=\"my-tfsm-menu\"");
 
@@ -383,7 +401,15 @@ WriteLiteral(">Arrendamiento Puro</a>\r\n            </div>\r\n        </span>\r
 
 WriteLiteral(" class=\"toggleMenu\"");
 
-WriteLiteral(" href=\"https://creditotoyota.com.mx/home-delivery\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 4456), Tuple.Create("\"", 4487)
+            
+            #line 63 "..\..\MVC\Views\Card\Card.Header.cshtml"
+, Tuple.Create(Tuple.Create("", 4463), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlOfertas
+            
+            #line default
+            #line hidden
+, 4463), false)
+);
 
 WriteLiteral(" target=\"_blank\"");
 
@@ -413,9 +439,11 @@ WriteLiteral(" class=\"menuLink\"");
 
 WriteLiteral(" href=\"/tfsm/quienes-somos\"");
 
-WriteLiteral(">Nosotros</a>\r\n                ");
+WriteLiteral(">Nosotros</a>\r\n                <a");
 
-WriteLiteral("\r\n            </div>\r\n        </span>\r\n        <a");
+WriteLiteral(" class=\"menuLink\"");
+
+WriteLiteral(">Vacantes</a>\r\n            </div>\r\n        </span>\r\n        <a");
 
 WriteLiteral(" href=\"/distribuidores\"");
 
