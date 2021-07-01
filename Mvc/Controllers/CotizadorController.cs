@@ -32,7 +32,11 @@ namespace SitefinityWebApp.Mvc.Controllers
 		public ActionResult Index()
 		{
 			var model = new CotizadorModel();
+<<<<<<< HEAD
 			//model.MontoEnganche = this.MontoEnganche;
+=======
+
+>>>>>>> parent of aeebce3 (Update cotizador)
 			model.autos = GetAllAutos();
 
 			return View("Index", model);
@@ -43,7 +47,7 @@ namespace SitefinityWebApp.Mvc.Controllers
             this.ActionInvoker.InvokeAction(this.ControllerContext, "Index");
         }
 
-		public int MontoEnganche { get; set; }
+		public string Message { get; set; }
 		public string SerializedSelectedItemId { get; set; }
 		public string SerializedSelectedItem { get; set; }
 

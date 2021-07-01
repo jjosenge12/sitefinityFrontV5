@@ -1,5 +1,4 @@
 ﻿var form = {}, swiper, cars_swiper, cotizacion;
-var maxEnganche = $("#monto-enganche").val();
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -221,12 +220,10 @@ $(document).ready(function () {
             Vesion: $("#car_version option:selected")[0].dataset.version,
             Anio: $("#car_version option:selected")[0].dataset.anio,
             precioAuto: $(this).val(),
-            EngancheDeposito: $(this).val() / 10,
-            MaxEnganche: $(this).val() - maxEnganche
+            EngancheDeposito: $(this).val() / 10
         }
 
         $("#hitch-range").attr("min", form.EngancheDeposito);
-        $("#hitch-range").attr("max", form.MaxEnganche);
         $("#hitch-range").val(form.EngancheDeposito);
         $("#hitch-text").html("$ " + form.EngancheDeposito + " M.N.");
 
