@@ -2,6 +2,7 @@
 
 @using Telerik.Sitefinity.Modules.Pages;
 @using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using SitefinityWebApp.Mvc;
 
 @Html.Script(ScriptRef.JQuery, "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
@@ -41,7 +42,7 @@
                             </p>
                         </div>
 
-                        <div data-id="nc-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin" data-onsubmit="encrypt()">
+                        <div data-id="nc-form" class="sf-form-container" data-method="GET" data-action="@GlobalConfig.UrlToyotaClientes/s/sitefinitylogin" data-onsubmit="encrypt()">
                             <div class="float-container my-5">
                                 <label class="float-label" for="userVisible">
                                     Correo electr&oacute;nico
@@ -144,7 +145,7 @@
                             </p>
                         </div>
 
-                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinitylogin">
+                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="@GlobalConfig.UrlToyotaClientes/s/sitefinitylogin">
                             <div class="float-container my-5">
                                 <label class="float-label" for="clientVisible">
                                     Ingresar su n&uacute;mero de cliente / ID de cliente

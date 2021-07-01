@@ -2,6 +2,7 @@
 
 @using Telerik.Sitefinity.Modules.Pages;
 @using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using SitefinityWebApp.Mvc;
 
 @Html.Script(ScriptRef.JQuery, "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
@@ -33,7 +34,7 @@
                     </p>
                 </div>
 
-                <div data-id="recuperar-c-form" class="sf-form-container" data-method="GET" data-action="https://salt001-toyotaclientes.cs43.force.com/s/sitefinityforgotpwd">
+                <div data-id="recuperar-c-form" class="sf-form-container" data-method="GET" data-action="@GlobalConfig.UrlToyotaClientes/s/sitefinityforgotpwd">
                     <div class="row mt-5">
                         <div class="col-12 col-lg-6">
                             <div class="float-container">

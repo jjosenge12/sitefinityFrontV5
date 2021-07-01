@@ -916,6 +916,7 @@
     <Compile Include="Mvc\Controllers\CarouselController.cs" />
     <Compile Include="Mvc\Controllers\InfoSelectDoubleController.cs" />
     <Compile Include="Mvc\Controllers\InfoSelectSingleController.cs" />
+    <Compile Include="Mvc\GlobalConfig.cs" />
     <Compile Include="Mvc\Models\BannerModel.cs" />
     <Compile Include="Mvc\Models\CarouselModel.cs" />
     <Compile Include="Mvc\Models\InfoSelectDoubleModel.cs" />
@@ -1362,7 +1363,6 @@
     <Content Include="App_Data\RadCaptcha\Z.wav" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Sitefinity\" />
     <Folder Include="Mvc\Views\Image\" />
   </ItemGroup>
   <ItemGroup>
@@ -1591,6 +1591,14 @@
     <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.js.map" />
     <Content Include="Mvc\Views\Carousel\DesignerView.Custom.json" />
     <Content Include="Mvc\Views\Carousel\DesignerView.Custom.cshtml" />
+    <Content Include="App_Data\Sitefinity\Configuration\AppearanceConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\ProjectConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\SecurityConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\StartupConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\ToolboxesConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\WebSecurityConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\WebServicesConfig.config" />
     <None Include="client-components\fields\multi-image-field\sf-multi-image-field.sf-cshtml" />
     <Content Include="Mvc\Views\Card\Card.Recuperar_Cliente.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Recuperar_NoCliente.cshtml" />

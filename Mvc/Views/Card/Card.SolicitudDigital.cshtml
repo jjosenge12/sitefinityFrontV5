@@ -2,11 +2,12 @@
 
 @using Telerik.Sitefinity.Modules.Pages;
 @using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using SitefinityWebApp.Mvc;
 
 
 @Html.Script(ScriptRef.JQuery, "top", true)
 @Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
-@Html.Script("https://toyotafinancial--salt001.my.salesforce.com/lightning/lightning.out.js", "top", true)
+@Html.Script(GlobalConfig.UrlToyotaClientes + "/lightning/lightning.out.js", "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-solicitud-digital.js"), "bottom", true)
 
 @Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css"))
@@ -19,4 +20,3 @@
 <div class="container my-3 py-3" style="border: solid 0.5px #c0c0c0;border-radius:8px;">
     <div id="lightning" style="font-size:14px;"></div>
 </div>
-@*<script type="text/javascript" src="https://toyotafinancial--salt001.my.salesforce.com/lightning/lightning.out.js"></script>*@
