@@ -32,11 +32,8 @@ namespace SitefinityWebApp.Mvc.Controllers
 		public ActionResult Index()
 		{
 			var model = new CotizadorModel();
-<<<<<<< HEAD
-			//model.MontoEnganche = this.MontoEnganche;
-=======
 
->>>>>>> parent of aeebce3 (Update cotizador)
+			//model.MontoEnganche = this.MontoEnganche;
 			model.autos = GetAllAutos();
 
 			return View("Index", model);
