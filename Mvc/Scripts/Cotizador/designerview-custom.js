@@ -1,6 +1,5 @@
 ﻿(function () {
     // declare dependency on the sfSelectors module
-    angular.module('designer').requires.push('sfFields');
     angular.module('designer').requires.push('sfSelectors');
     angular.module('designer').requires.push('ngSanitize');
 
@@ -12,9 +11,7 @@
             'montoEnganche',
             function (newValue, oldValue) {
                 if (newValue !== oldValue) {
-                    if (newValue) {
-                        $scope.properties.MontoEnganche.PropertyValue = newValue;
-                    }
+                    $scope.properties.MontoEnganche.PropertyValue = newValue;
                 }
             },
             true
