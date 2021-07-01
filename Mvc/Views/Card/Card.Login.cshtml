@@ -69,8 +69,8 @@
 
                             <input type="hidden" value="" name="user" id="user" />
                             <input type="hidden" value="" name="pass" id="pass" />
-                            <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery" id="fail" />
-                            <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/my-tfsm/session"
+                            <input type="hidden" name="fail" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery" id="fail" />
+                            <input type="hidden" name="ok" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/home-delivery/session"
                                    id="ok" />
 
                             <div class="my-4 d-flex justify-content-center">
@@ -172,8 +172,8 @@
 
                             <input type="hidden" value="" name="client" id="client" />
                             <input type="hidden" value="" name="pass" id="passClient" />
-                            <input type="hidden" name="fail" value="https://tfs-sitefinity.virtualdreams.io/tfsm/home-delivery" id="failClient" />
-                            <input type="hidden" name="ok" value="https://tfs-sitefinity.virtualdreams.io/my-tfsm/session" id="okClient" />
+                            <input type="hidden" name="fail" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery" id="failClient" />
+                            <input type="hidden" name="ok" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/home-delivery/session" id="okClient" />
 
                             <div class="my-4 d-flex justify-content-center">
                                 <button type="submit" class="btn-registro"> INGRESAR </button>

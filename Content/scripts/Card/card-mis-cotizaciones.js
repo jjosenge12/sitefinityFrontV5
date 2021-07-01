@@ -54,7 +54,7 @@ $(document).ready(() => {
                 '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
                 "En él podrás iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
                 '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
-                '<img src="https://tfs-sitefinity.virtualdreams.io/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
+                '<img src="' + window.location.origin + '/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
                 '</div><div class="col-md-1"></div>';
 
             $("#bannerBienvenida").append(bannerBienvenida);
@@ -84,7 +84,7 @@ $(document).ready(() => {
                 '<div class="col-md-12 cotizaciones-row p-5 mt-5">' +
                 '<h3 class="cotizaciones-card-title">Cotizaciones realizadas</h3>' +
                 '<div id="sin-cotizaciones"><div class="row mt-5">' +
-                '<div class="col-md-5 text-right"><img src="https://tfs-sitefinity.virtualdreams.io/images/default-source/tfsm/my-tfsm/sin-cotizaciones.png" class="img-fluid" /></div>' +
+                '<div class="col-md-5 text-right"><img src="' + window.location.origin + '/images/default-source/tfsm/my-tfsm/sin-cotizaciones.png" class="img-fluid" /></div>' +
                 '<div class="col-md-5"><p class="table-text">No has realizado cotizaciones.<br />' +
                 'Para iniciar un proceso de financiamiento, es necesario <a href="#"> iniciar una cotización</a>.' +
                 "</div></div></div>";
@@ -111,12 +111,12 @@ $(document).ready(() => {
                         cotizacion.fecha +
                         "</td><td>" +
                         cotizacion.modelo +
-                        '</td><td><a href="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/solicitud-digital?lead=' +
+                        '</td><td><a href="' + window.location.origin + '/tfsm/home-delivery/solicitud-digital?lead=' +
                         cotizacion.id +
                         '">' +
                         cotizacion.etapa +
                         "</div></td>" +
-                        '<td><img onclick="openModal(eliminarCotizacionModal)" id="eliminarCotizacion" src="https://tfs-sitefinity.virtualdreams.io/images/default-source/tfsm/my-tfsm/fi_x" style="cursor:pointer;" />' +
+                        '<td><img onclick="openModal(eliminarCotizacionModal)" id="eliminarCotizacion" src="' + window.location.origin + '/images/default-source/tfsm/my-tfsm/fi_x" style="cursor:pointer;" />' +
                         "</td></tr>";
                 });
 
@@ -137,7 +137,7 @@ $(document).ready(() => {
                 '<div class="col-md-12 cotizaciones-row p-5 my-5">' +
                 '<h3 class="cotizaciones-card-title">Procesos de crédito activos</h3>' +
                 '<div id="sin-cotizaciones"><div class="row mt-5">' +
-                '<div class="col-md-5 text-right"><img src="https://tfs-sitefinity.virtualdreams.io/images/default-source/tfsm/my-tfsm/sin-cotizaciones.png" class="img-fluid" /></div>' +
+                '<div class="col-md-5 text-right"><img src="' + window.location.origin + '/images/default-source/tfsm/my-tfsm/sin-cotizaciones.png" class="img-fluid" /></div>' +
                 '<div class="col-md-5"><p class="table-text">Aún no tienes un proceso de crédito, ' +
                 'no dejes pasar más tiempo e <a href="/cotizador">inicia una cotización</a>.' +
                 "</div></div></div></div>";
@@ -148,7 +148,7 @@ $(document).ready(() => {
                 // Mensaje Sin Procesos de Crédito Activos:
                 sin_procesos_msj +=
                     '<div class="row mt-5">' +
-                    '<img class="img-fluid" src="https://tfs-sitefinity.virtualdreams.io/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="ml-3 sin-procesos">' +
+                    '<img class="img-fluid" src="' + window.location.origin + '/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="ml-3 sin-procesos">' +
                     "Aún no tienes un proceso de crédito activo</p></div></div></div>";
 
                 $("#dashboard-msj").append(sin_procesos_msj);
@@ -192,15 +192,15 @@ $(document).ready(() => {
 
                         //Con un proceso activo:
                         /* con_proceso_msj += '<div class="row mt-5">' + 
-                                          '<img class="img-fluid" src="https://tfs-sitefinity.virtualdreams.io/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="ml-3 sin-procesos">' + 
-                                          'Hemos recibido tu solicitud de crédito. Ingresa <a class="proceso-activo-a" href="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/solicitud-digital?lead=' + 
+                                          '<img class="img-fluid" src="' + window.location.origin + '/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="ml-3 sin-procesos">' + 
+                                          'Hemos recibido tu solicitud de crédito. Ingresa <a class="proceso-activo-a" href="' + window.location.origin + '/tfsm/my-tfsm/solicitud-digital?lead=' + 
                                           data.solicitudes[data.solicitudes.length - 1].parentId + '&token=' + url.searchParams.get("token") + '">aquí</a> para verla.</p></div></div></div>'; */
 
                         con_proceso_msj +=
                             '<div class="row mt-5 mx-1">' +
-                            '<img class="img-fluid" src="https://tfs-sitefinity.virtualdreams.io/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="ml-3 sin-procesos text-center">' +
+                            '<img class="img-fluid" src="' + window.location.origin + '/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="ml-3 sin-procesos text-center">' +
                             data.solicitudes[data.solicitudes.length - 1].etapa +
-                            '. Ingresa <a class="proceso-activo-a" href="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/solicitud-digital?lead=' +
+                            '. Ingresa <a class="proceso-activo-a" href="' + window.location.origin + '/tfsm/home-delivery/solicitud-digital?lead=' +
                             data.solicitudes[data.solicitudes.length - 1].parentId +
                             "&token=" +
                             url.searchParams.get("token") +

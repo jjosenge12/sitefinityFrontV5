@@ -10,6 +10,7 @@
 @Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/sweetalert2.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true)
 @Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
@@ -22,11 +23,11 @@
 
 <div class="d-flex align-items-center p-4 header shadow-sm site-container">
     <div class="col-6 col-md-2">
-        <a href="https://tfs-sitefinity.virtualdreams.io"><img data-method="ResizeFitToAreaArguments" data-customsizemethodproperties="{'MaxWidth':158,'MaxHeight':63,'Width':null,'Height':null,'ScaleUp':false,'Quality':'High','Method':'ResizeFitToAreaArguments'}" src="/images/default-source/tfsm/logo/imagen-1.png?sfvrsn=f7aa113e_3&amp;MaxWidth=158&amp;MaxHeight=63&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=9F9CC0F3946CD3C633CD388B34F29BF8C8EEEEA7" alt="" title="imagen-1" data-displaymode="Custom" sfref="[images|OpenAccessDataProvider]3222fff0-1c7d-4e6f-b48b-dc826339bdde" /></a><br />
+        <a href="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))"><img data-method="ResizeFitToAreaArguments" data-customsizemethodproperties="{'MaxWidth':158,'MaxHeight':63,'Width':null,'Height':null,'ScaleUp':false,'Quality':'High','Method':'ResizeFitToAreaArguments'}" src="/images/default-source/tfsm/logo/imagen-1.png?sfvrsn=f7aa113e_3&amp;MaxWidth=158&amp;MaxHeight=63&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=9F9CC0F3946CD3C633CD388B34F29BF8C8EEEEA7" alt="" title="imagen-1" data-displaymode="Custom" sfref="[images|OpenAccessDataProvider]3222fff0-1c7d-4e6f-b48b-dc826339bdde" /></a><br />
     </div>
     <div class="col-6 col-md-10 customNavbar">
         <nav class="links d-none d-md-block">
-            <a target="_blank" href="https://mytfs.toyotacredito.com.mx/s/login/?ec=302&startURL=%2Fs%2F" id="my-tfsm">My TFSM</a>
+            <a target="_blank" class="url-mytfsm" href="#" id="my-tfsm">My TFSM</a>
             <a href="/cotizador">Cotizar Plan</a>
             <a href="/tfsm/home-delivery" class="linkFinanciamiento" id="link-finan">FINANCIAMIENTO EN L&Iacute;NEA</a>
         </nav>
