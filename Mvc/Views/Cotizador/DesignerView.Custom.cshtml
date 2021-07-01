@@ -4,13 +4,9 @@
 <form>
 
     <div>
-        <label for="library-field" class="m-top-sm">Library</label>
-        <sf-list-selector sf-library-selector sf-multiselect="false" sf-sortable="true"
-                          sf-provider="properties.ProviderName.PropertyValue"
-                          sf-selected-item-id="librariesSelector.selectedItemId"
-                          id="library-field"
-                          sf-selected-item="librariesSelector.selectedItem"
-                          sf-media-type="images"></sf-list-selector>
+        <label for="max-enganche" class="m-top-sm">Monto máximo del Enganche</label>
+        <input type="number" class="form-control" id="max-enganche" required/>
+        <p class="text-muted">Monto para cálculo de enganche máximo</p>
     </div>
 
 </form>
