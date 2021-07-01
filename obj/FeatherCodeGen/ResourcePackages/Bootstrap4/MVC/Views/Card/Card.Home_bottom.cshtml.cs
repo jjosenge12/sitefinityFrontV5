@@ -61,98 +61,118 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/styles.css")));
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<div");
+WriteLiteral("\r\n\r\n");
 
-WriteLiteral(" class=\"card custom-card\"");
+            
+            #line 11 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+ if (!string.IsNullOrEmpty(Model.ActionUrl))
+{
 
-WriteLiteral(">\r\n    <div");
+            
+            #line default
+            #line hidden
+WriteLiteral("    <a");
+
+WriteAttribute("href", Tuple.Create(" href=\"", 448), Tuple.Create("\"", 489)
+            
+            #line 13 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+, Tuple.Create(Tuple.Create("", 455), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.ActionUrl)
+            
+            #line default
+            #line hidden
+, 455), false)
+);
+
+WriteLiteral(" class=\"card custom-card text-decoration-none\"");
+
+WriteLiteral(">\r\n        <div");
 
 WriteLiteral(" class=\"card-img-container\"");
 
 WriteLiteral(">\r\n");
 
             
-            #line 13 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-        
+            #line 15 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            
             
             #line default
             #line hidden
             
-            #line 13 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-         if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
-        {
+            #line 15 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+             if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
+            {
 
             
             #line default
             #line hidden
-WriteLiteral("            <img");
+WriteLiteral("                <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 557), Tuple.Create("\"", 585)
+WriteAttribute("src", Tuple.Create(" src=\"", 687), Tuple.Create("\"", 715)
             
-            #line 15 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-, Tuple.Create(Tuple.Create("", 563), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
+            #line 17 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+, Tuple.Create(Tuple.Create("", 693), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
             
             #line default
             #line hidden
-, 563), false)
+, 693), false)
 );
 
-WriteAttribute("title", Tuple.Create(" title=\"", 586), Tuple.Create("\"", 611)
+WriteAttribute("title", Tuple.Create(" title=\"", 716), Tuple.Create("\"", 741)
             
-            #line 15 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-, Tuple.Create(Tuple.Create("", 594), Tuple.Create<System.Object, System.Int32>(Model.ImageTitle
+            #line 17 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+, Tuple.Create(Tuple.Create("", 724), Tuple.Create<System.Object, System.Int32>(Model.ImageTitle
             
             #line default
             #line hidden
-, 594), false)
+, 724), false)
 );
 
-WriteAttribute("alt", Tuple.Create(" alt=\"", 612), Tuple.Create("\"", 645)
+WriteAttribute("alt", Tuple.Create(" alt=\"", 742), Tuple.Create("\"", 775)
             
-            #line 15 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-     , Tuple.Create(Tuple.Create("", 618), Tuple.Create<System.Object, System.Int32>(Model.ImageAlternativeText
+            #line 17 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+         , Tuple.Create(Tuple.Create("", 748), Tuple.Create<System.Object, System.Int32>(Model.ImageAlternativeText
             
             #line default
             #line hidden
-, 618), false)
+, 748), false)
 );
 
 WriteLiteral(" />\r\n");
 
             
-            #line 16 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-        }
+            #line 18 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            }
 
             
             #line default
             #line hidden
-WriteLiteral("    </div>\r\n    <div");
+WriteLiteral("        </div>\r\n        <div");
 
 WriteLiteral(" class=\"card-body-custom\"");
 
-WriteLiteral(">\r\n        <div");
+WriteLiteral(">\r\n            <div");
 
 WriteLiteral(" class=\"mt-2\"");
 
 WriteLiteral(">\r\n");
 
             
-            #line 20 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-            
+            #line 22 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                
             
             #line default
             #line hidden
             
-            #line 20 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-             if (!string.IsNullOrEmpty(Model.Heading))
-            {
+            #line 22 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                 if (!string.IsNullOrEmpty(Model.Heading))
+                {
 
             
             #line default
             #line hidden
-WriteLiteral("                <p");
+WriteLiteral("                    <p");
 
 WriteLiteral(" class=\"card-text titulo-card FontToyotaRegular\"");
 
@@ -161,8 +181,8 @@ WriteLiteral(" style=\"min-height:50px;\"");
 WriteLiteral(">");
 
             
-            #line 22 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-                                                                                       Write(Html.HtmlSanitize(Model.Heading));
+            #line 24 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                                                                                           Write(Html.HtmlSanitize(Model.Heading));
 
             
             #line default
@@ -170,7 +190,62 @@ WriteLiteral(">");
 WriteLiteral("</p>\r\n");
 
             
-            #line 23 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            #line 25 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                }
+                else
+                {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                    <p");
+
+WriteLiteral(" class=\"card-text titulo-card FontToyotaRegular\"");
+
+WriteLiteral(" style=\"min-height:50px;\"");
+
+WriteLiteral(">Title</p>\r\n");
+
+            
+            #line 29 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("            </div>\r\n");
+
+            
+            #line 31 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            
+            
+            #line default
+            #line hidden
+            
+            #line 31 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+             if (!string.IsNullOrEmpty(Model.Description))
+            {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                <p");
+
+WriteLiteral(" class=\"parrafo-card mt-1 FontToyotaRegular\"");
+
+WriteLiteral(">");
+
+            
+            #line 33 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                                                          Write(Html.HtmlSanitize(Model.Description));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</p>\r\n");
+
+            
+            #line 34 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
             }
             else
             {
@@ -180,44 +255,130 @@ WriteLiteral("</p>\r\n");
             #line hidden
 WriteLiteral("                <p");
 
-WriteLiteral(" class=\"card-text titulo-card FontToyotaRegular\"");
+WriteLiteral(" class=\"parrafo-card FontToyotaRegular\"");
 
-WriteLiteral(" style=\"min-height:50px;\"");
-
-WriteLiteral(">Title</p>\r\n");
+WriteLiteral(">Description</p>\r\n");
 
             
-            #line 27 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            #line 38 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
             }
 
             
             #line default
             #line hidden
-WriteLiteral("        </div>\r\n");
+WriteLiteral("        </div>\r\n    </a>\r\n");
 
             
-            #line 29 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-        
-            
-            #line default
-            #line hidden
-            
-            #line 29 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-         if (!string.IsNullOrEmpty(Model.Description))
-        {
+            #line 41 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+}
+else
+{
 
             
             #line default
             #line hidden
-WriteLiteral("            <p");
+WriteLiteral("    <div");
 
-WriteLiteral(" class=\"parrafo-card mt-1 FontToyotaRegular\"");
+WriteLiteral(" class=\"card custom-card\"");
+
+WriteLiteral(">\r\n        <div");
+
+WriteLiteral(" class=\"card-img-container\"");
+
+WriteLiteral(">\r\n");
+
+            
+            #line 46 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            
+            
+            #line default
+            #line hidden
+            
+            #line 46 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+             if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
+            {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                <img");
+
+WriteLiteral(" alt=\"\"");
+
+WriteAttribute("src", Tuple.Create(" src=\"", 1845), Tuple.Create("\"", 1873)
+            
+            #line 48 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+, Tuple.Create(Tuple.Create("", 1851), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
+            
+            #line default
+            #line hidden
+, 1851), false)
+);
+
+WriteAttribute("title", Tuple.Create(" title=\"", 1874), Tuple.Create("\"", 1899)
+            
+            #line 48 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+, Tuple.Create(Tuple.Create("", 1882), Tuple.Create<System.Object, System.Int32>(Model.ImageTitle
+            
+            #line default
+            #line hidden
+, 1882), false)
+);
+
+WriteAttribute("alt", Tuple.Create(" alt=\"", 1900), Tuple.Create("\"", 1933)
+            
+            #line 48 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+        , Tuple.Create(Tuple.Create("", 1906), Tuple.Create<System.Object, System.Int32>(Model.ImageAlternativeText
+            
+            #line default
+            #line hidden
+, 1906), false)
+);
+
+WriteLiteral(" />\r\n");
+
+            
+            #line 49 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("        </div>\r\n        <div");
+
+WriteLiteral(" class=\"card-body-custom\"");
+
+WriteLiteral(">\r\n            <div");
+
+WriteLiteral(" class=\"mt-2\"");
+
+WriteLiteral(">\r\n");
+
+            
+            #line 53 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                
+            
+            #line default
+            #line hidden
+            
+            #line 53 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                 if (!string.IsNullOrEmpty(Model.Heading))
+                {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                    <p");
+
+WriteLiteral(" class=\"card-text titulo-card FontToyotaRegular\"");
+
+WriteLiteral(" style=\"min-height:50px;\"");
 
 WriteLiteral(">");
 
             
-            #line 31 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-                                                      Write(Html.HtmlSanitize(Model.Description));
+            #line 55 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                                                                                           Write(Html.HtmlSanitize(Model.Heading));
 
             
             #line default
@@ -225,29 +386,91 @@ WriteLiteral(">");
 WriteLiteral("</p>\r\n");
 
             
-            #line 32 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-        }
-        else
-        {
+            #line 56 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                }
+                else
+                {
 
             
             #line default
             #line hidden
-WriteLiteral("            <p");
+WriteLiteral("                    <p");
+
+WriteLiteral(" class=\"card-text titulo-card FontToyotaRegular\"");
+
+WriteLiteral(" style=\"min-height:50px;\"");
+
+WriteLiteral(">Title</p>\r\n");
+
+            
+            #line 60 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("            </div>\r\n");
+
+            
+            #line 62 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            
+            
+            #line default
+            #line hidden
+            
+            #line 62 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+             if (!string.IsNullOrEmpty(Model.Description))
+            {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                <p");
+
+WriteLiteral(" class=\"parrafo-card mt-1 FontToyotaRegular\"");
+
+WriteLiteral(">");
+
+            
+            #line 64 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+                                                          Write(Html.HtmlSanitize(Model.Description));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</p>\r\n");
+
+            
+            #line 65 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            }
+            else
+            {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                <p");
 
 WriteLiteral(" class=\"parrafo-card FontToyotaRegular\"");
 
 WriteLiteral(">Description</p>\r\n");
 
             
-            #line 36 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
-        }
+            #line 69 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+            }
 
             
             #line default
             #line hidden
-WriteLiteral("    </div>\r\n</div>");
+WriteLiteral("        </div>\r\n    </div>\r\n");
 
+            
+            #line 72 "..\..MVC\Views\Card\Card.Home_bottom.cshtml"
+}
+
+            
+            #line default
+            #line hidden
         }
     }
 }

@@ -370,7 +370,7 @@ WriteLiteral(">Arrendamiento Puro</a>\r\n            </div>\r\n        </span>\r
 
 WriteLiteral(" class=\"toggleMenu\"");
 
-WriteLiteral(" href=\"https://creditotoyota.com.mx/promocion-del-mes\"");
+WriteLiteral(" href=\"https://creditotoyota.com.mx/home-delivery\"");
 
 WriteLiteral(" target=\"_blank\"");
 
