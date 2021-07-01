@@ -43,7 +43,7 @@ namespace SitefinityWebApp.Mvc.Controllers
             this.ActionInvoker.InvokeAction(this.ControllerContext, "Index");
         }
 
-		public int MontoEnganche { get; set; }
+		public string MontoEnganche { get; set; }
 		public string SerializedSelectedItemId { get; set; }
 		public string SerializedSelectedItem { get; set; }
 

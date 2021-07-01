@@ -14,6 +14,6 @@ namespace SitefinityWebApp.Mvc.Models
 	public class CotizadorModel
 	{
 		public List<AutoData> autos { get; set; }
-		public int MontoEnganche { get; set; }
+		public string MontoEnganche { get; set; }
 	}
 }
