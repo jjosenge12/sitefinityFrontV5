@@ -6,7 +6,7 @@
 
     angular.module('designer').controller('CustomCtrl', ['$scope', 'propertyService', function ($scope, propertyService) {
         $scope.feedback.showLoadingIndicator = true;
-        $scope.montoEnganche = "";
+        $scope.montoEnganche = "0";
 
         $scope.$watch(
             'montoEnganche',
