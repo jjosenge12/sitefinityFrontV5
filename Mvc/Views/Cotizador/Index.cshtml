@@ -19,7 +19,7 @@
 @Html.StyleSheet(Url.Content("~/Content/css/Cotizador/cotizador.css"))
 @Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
 
-@*<input type="hidden" id="monto-enganche" value="0"/>*@
+<div class="d-none" id="monto-enganche">@Model.MontoEnganche</div>
 
 <div class="cotizador-container">
     <div id="cotizador-swiper-container" class="swiper-container">
