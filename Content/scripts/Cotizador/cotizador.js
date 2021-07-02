@@ -148,7 +148,6 @@ $(document).ready(function () {
             prevEl: '#cars-swiper-prev'
         }
     });
-    cars_swiper.autoplay.start();
 
     $("#select-car-type .select-button").click(function () {
         let type = `type-${this.dataset.value}`;
@@ -171,6 +170,7 @@ $(document).ready(function () {
             $("#step-3-continue").removeAttr("disabled");
             cars_swiper.autoplay.stop();
         });
+        cars_swiper.autoplay.start();
     });
     $("#select-car-type .select-button")[0].click();
 
