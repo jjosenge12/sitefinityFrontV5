@@ -1,4 +1,4 @@
-﻿var form = {}, swiper, cars_swiper, cotizacion;
+﻿var form = {}, swiper, cars_swiper, cotizacion, car_slides;
 //var maxEnganche = 0;
 
 const formatter = new Intl.NumberFormat('en-US', {
@@ -26,7 +26,8 @@ function formNextStep(step) {
     console.log(`.step-4-${step}`);
     if (next !== null && next !== undefined) {
         $.when(
-            $(`.step-4-${step}`).removeClass(`step-4-${step}`),
+            //$(`.step-4-${step}`).removeClass(`step-4-${step}`),
+            $(`.step-4-${step}`).map((idx, item) => item.style.removeProperty("display")),
             swiper.updateAutoHeight(0)
         )
             .then(() => scrollToTargetAdjusted(next));
@@ -35,6 +36,7 @@ function formNextStep(step) {
 
 $(document).ready(function () {
     var maxEnganche = Number($("#max-enganche").val());
+    car_slides = $(".swiper-slide.car-slide-container");
 
     jQuery.validator.addMethod(
         "selectRequired",
@@ -135,10 +137,10 @@ $(document).ready(function () {
         },
         breakpoints: {
             992: {
-                slidesPerColumnFill: 'column',
+                //slidesPerColumnFill: 'column',
                 slidesPerView: 4,
                 slidesPerColumn: 1,
-                loop: true,
+                //loop: true,
             }
         },
         navigation: {
@@ -146,8 +148,31 @@ $(document).ready(function () {
             prevEl: '#cars-swiper-prev'
         }
     });
-    cars_swiper.autoplay.stop();
+    cars_swiper.autoplay.start();
 
+    $("#select-car-type .select-button").click(function () {
+        let type = `type-${this.dataset.value}`;
+
+        cars_swiper.removeAllSlides();
+        car_slides.map((idx, item) => item.children[0].classList.remove("selected"))
+        cars_swiper.addSlide(1, car_slides.filter((idx, item) => item.classList.contains(type)));
+
+        $(".select-car").click(function () {
+            $(".car-slide").removeClass("selected");
+            $(this).parent().addClass("selected");
+            console.log(this.parentNode.dataset.autoId);
+            $("#step-3-continue").removeAttr("disabled");
+            cars_swiper.autoplay.stop();
+        });
+
+        $(".car-slide").click(function () {
+            $(".car-slide").removeClass("selected");
+            $(this).addClass("selected");
+            $("#step-3-continue").removeAttr("disabled");
+            cars_swiper.autoplay.stop();
+        });
+    });
+    $("#select-car-type .select-button")[0].click();
 
     $(".select-car").click(function () {
         $(".car-slide").removeClass("selected");
@@ -189,7 +214,8 @@ $(document).ready(function () {
                     ...form,
                     Marca: selected.dataset.autoName,
                     autoId: selected.dataset.autoId,
-                    imagenAuto: selected.dataset.autoPicture
+                    imagenAuto: selected.dataset.autoPicture,
+                    TipoAuto: selected.dataset.autoTipo
                 },
                 setAutoValues(selected)
             )
@@ -565,15 +591,19 @@ function getVersions(autoId) {
             let opt = document.createElement("option");
             opt.value = "0";
             opt.innerHTML = "Versión";
-            opt.attributes.disabled = true;
+            opt.setAttribute("disabled", true);
+            opt.setAttribute("selected", true);
 
             $("#car_version").html(opt);
-            data.versions.forEach(function (item) {
+            console.log()
+            let _data = data.versions.filter((item, idx) => item.tipo_carrusel.toLowerCase() === form.TipoAuto);
+            _data.forEach(function (item) {
                 opt = document.createElement("option");
                 opt.value = item.precio;
                 opt.innerHTML = `${item.descripcion_tipo} - ${item.descripcion}`;
                 opt.dataset.anio = item.descripcion;
                 opt.dataset.version = item.descripcion_tipo;
+                opt.dataset.tipo = item.tipo_carrusel.toLowerCase();
 
                 $("#car_version").append(opt);
             });
@@ -818,12 +848,16 @@ function clearValues() {
     $("#hitch-text").html("$ 0 M.N.");
 
     cars_swiper.autoplay.start();
-    window.scrollTo(0, 0);
 
     $("#step-5-distribuidores").val(0);
     $("#step-5-distribuidores").trigger("change");
     $("#step-5-phone").val("");
     $("#step-5-terms").prop("checked", false);
+
+    for (let i = 1; i <= 8; i++) {
+        $(`.step-4-${i}`).map((idx, item) => item.style.display = "none");
+    }
+    window.scrollTo(0, 0);
 }
 
 function sendDataSalesforce() {
@@ -894,4 +928,26 @@ function sendDataSalesforce() {
     }
 
 
+}
+
+function initilizeCarsSwiper() {
+    cars_swiper = new Swiper('#cars-swiper-container', {
+        speed: 400,
+        spaceBetween: 30,
+        slidesPerColumn: 2,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 3000,
+        },
+        breakpoints: {
+            992: {
+                slidesPerView: 4,
+                slidesPerColumn: 1,
+            }
+        },
+        navigation: {
+            nextEl: '#cars-swiper-next',
+            prevEl: '#cars-swiper-prev'
+        }
+    });
 }

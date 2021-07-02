@@ -5,7 +5,6 @@
 ------------------------------------------------------------------------------ */
 
 using MoreLinq;
-using Newtonsoft.Json;
 using SitefinityWebApp.Mvc.Models;
 using SitefinityWebApp.Mvc.Models.Utils;
 using System;
@@ -25,16 +24,12 @@ using Telerik.Sitefinity.Utilities.TypeConverters;
 
 namespace SitefinityWebApp.Mvc.Controllers
 {
-	[ControllerToolboxItem(Name = "Cotizador_MVC", Title = "Cotizador", SectionName = "CustomWidgets")]
+    [ControllerToolboxItem(Name = "Cotizador_MVC", Title = "Cotizador", SectionName = "CustomWidgets")]
 	public class CotizadorController : Controller, IPersonalizable
 	{
 		// GET: Cotizador
 		public ActionResult Index()
 		{
-    //        if (string.IsNullOrEmpty(this.MontoEnganche))
-    //        {
-				//this.MontoEnganche = "0";
-    //        }
 
 			var model = new CotizadorModel();
 			model.MontoEnganche = this.MontoEnganche;
@@ -93,6 +88,8 @@ namespace SitefinityWebApp.Mvc.Controllers
 				{
 					auto.CarAnimation = carAnimationItem.GetValue("FilePath").ToString();
 				}
+
+				auto.CarType = Utils.Normalize(item.GetValue("CarType").ToString().ToLower());
 
 				autos.Add(auto);
 

@@ -33,6 +33,7 @@
     font-weight: 600;
     outline: none;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
     .select-button.selected {
@@ -59,6 +60,12 @@
     .select-button.btn-long {
         padding: 12px 18px;
     }
+
+#select-car-type .select-button.selected {
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: white;
+}
 
 /*#step-3-back,*/
 #step-4-back,
@@ -326,6 +333,10 @@
         transition: all 0.3s ease-in-out;
     }
 
+    #cars-swiper-container{
+        width: 100%;
+    }
+
     @media(max-width: 991px) {
         .swiper-slide.car-slide-container {
         height: calc((100% - 30px) / 2);
@@ -370,7 +381,7 @@
         line-height: 26px;
     }
 
-    .step-4-2,
+ /*   .step-4-2,
     .step-4-3,
     .step-4-4,
     .step-4-5,
@@ -378,7 +389,7 @@
     .step-4-7,
     .step-4-8{
         display: none !important;
-    }
+    }*/
 
     #step-4 .range-button {
         padding: 12px;

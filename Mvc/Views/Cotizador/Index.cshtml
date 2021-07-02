@@ -83,12 +83,12 @@
                                 <div class="title">Selecciona una categor&iacute;a y veh&iacute;culo</div>
                             </div>
                         </div>
-                        <div class="row mt-3 categories">
-                            <div class="col-sm"><button type="button" class="btn-red">AUTOS</button></div>
-                            <div class="col-sm"><button type="button" class="btn-black_inverted">H&Iacute;BRIDOS</button></div>
-                            <div class="col-sm"><button type="button" class="btn-black_inverted">SUV'S & MINIVANS</button></div>
-                            <div class="col-sm"><button type="button" class="btn-black_inverted">PICK UP'S & COMERCIALES</button></div>
-                            <div class="col-sm"><button type="button" class="btn-black_inverted">DEPORTIVOS</button></div>
+                        <div id="select-car-type" class="row mt-3 categories">
+                            <div class="col-sm"><div class="select-button selected" data-for="car-type" data-value="auto">AUTOS</div></div>
+                            <div class="col-sm"><div class="select-button" data-for="car-type" data-value="hibrido">H&Iacute;BRIDOS</div></div>
+                            <div class="col-sm"><div class="select-button" data-for="car-type" data-value="suv">SUV'S & MINIVANS</div></div>
+                            <div class="col-sm"><div class="select-button btn-long" data-for="car-type" data-value="pickup">PICK UP'S & COMERCIALES</div></div>
+                            <div class="col-sm"><div class="select-button" data-for="car-type" data-value="deportivo">DEPORTIVOS</div></div>
                         </div>
                         <div class="row my-4">
                             <div class="col-12 d-flex justify-content-between">
@@ -102,11 +102,11 @@
                         </div>
                         <div class="row mt-5">
                             <div id="cars-swiper-container" class="swiper-container">
-                                <div class="swiper-wrapper car-slide-container">
+                                <div id="car-slide-container" class="swiper-wrapper car-slide-container">
                                     @foreach (var item in Model.autos)
                                     {
-                                        <div class="swiper-slide car-slide-container">
-                                            <div class="car-slide" data-auto-id="@item.AutoId" data-auto-name="@item.Name" data-auto-picture="@item.CarImage">
+                                        <div class="swiper-slide car-slide-container type-@item.CarType">
+                                            <div class="car-slide" data-auto-id="@item.AutoId" data-auto-name="@item.Name" data-auto-picture="@item.CarImage" data-auto-tipo="@item.CarType">
                                                 <div class="car-image">
                                                     <img src="@item.CarImage" />
                                                 </div>
@@ -181,12 +181,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-4 step-4-2">
+                        <div class="row mt-4 step-4-2" style="display: none;">
                             <div class="col-12">
                                 <div class="title">Selecciona tu personalidad fiscal</div>
                             </div>
                         </div>
-                        <div id="select-personalidad-fiscal" class="row block step-4-2">
+                        <div id="select-personalidad-fiscal" class="row block step-4-2" style="display: none;">
                             <div class="col-12 col-lg-3">
                                 <div class="select-button" data-for="personalidad-fiscal" data-value="Física">F&Iacute;SICA</div>
                             </div>
@@ -199,12 +199,12 @@
                                 <div class="select-button" data-for="personalidad-fiscal" data-value="Moral">MORAL</div>
                             </div>
                         </div>
-                        <div class="row mt-4 step-4-3">
+                        <div class="row mt-4 step-4-3" style="display: none;">
                             <div class="col-12">
                                 <div class="title">Selecciona la Aseguradora</div>
                             </div>
                         </div>
-                        <div class="row block step-4-3">
+                        <div class="row block step-4-3" style="display: none;">
                             <div class="col-12 col-lg-4 my-3 m-0">
                                 <div class="float-container">
                                     <label class="float-label" for="select-state">Selecciona tu estado</label>
@@ -233,12 +233,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-4 step-4-4">
+                        <div class="row mt-4 step-4-4" style="display: none;">
                             <div class="col-12">
                                 <div class="title">Selecciona la soluci&oacute;n financiera con la que deseas adquirir tu pr&oacute;ximo <span class="step-4-nombre-auto"></span></div>
                             </div>
                         </div>
-                        <div id="select-financing" class="row block step-4-4">
+                        <div id="select-financing" class="row block step-4-4" style="display: none;">
                             <div class="col-12 col-lg-4">
                                 <div class="select-button" data-for="financing" data-value="Financiamiento">FINANCIAMIENTO</div>
                             </div>
@@ -246,68 +246,70 @@
                                 <div class="select-button" data-for="financing" data-value="Arrendamiento">ARRENDAMIENTO</div>
                             </div>
                         </div>
-                        <div class="row mt-4 step-4-5">
+                        <div class="row mt-4 step-4-5" style="display: none;">
                             <div class="col-12">
                                 <div class="title">Selecciona el plan de <span class="title-financiamiento">financiamiento</span> con el que deseas estrenar tu pr&oacute;ximo <span class="step-4-nombre-auto"></span></div>
                             </div>
                         </div>
-                        <div id="select-plan" class="row block step-4-5">
-                            <div class="col-12 mb-4">
-                                <div class="row my-3 align-items-center">
-                                    <div class="col-6 col-lg-4">
-                                        <img src="~/Content/images/Planes/plan-tradicional.png" />
+                        <div class="block step-4-5" style="display: none;">
+                            <div id="select-plan" class="row block" style="display: none;">
+                                <div class="col-12 mb-4">
+                                    <div class="row my-3 align-items-center">
+                                        <div class="col-6 col-lg-4">
+                                            <img src="~/Content/images/Planes/plan-tradicional.png" />
+                                        </div>
+                                        <div class="col-6 col-lg-4">
+                                            <div class="select-button" data-for="plan" data-value="Tradicional">SELECCIONAR</div>
+                                        </div>
                                     </div>
-                                    <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="plan" data-value="Tradicional">SELECCIONAR</div>
-                                    </div>
+                                    <div class="text-plan">Pagas mensualidades iguales durante toda la vida del financiamiento.</div>
                                 </div>
-                                <div class="text-plan">Pagas mensualidades iguales durante toda la vida del financiamiento.</div>
+                                <div class="col-12 my-4">
+                                    <div class="row my-3 align-items-center">
+                                        <div class="col-6 col-lg-4">
+                                            <img src="~/Content/images/Planes/plan-balloon.png" />
+                                        </div>
+                                        <div class="col-6 col-lg-4">
+                                            <div class="select-button" data-for="plan" data-value="Balloon">SELECCIONAR</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-plan">Tienes acceso a una mensualidad m&aacute;s baja, ya que estableces un pago al final de tu financiamiento, el cual puede ser del 25% o 35% del valor del veh&iacute;culo.</div>
+                                </div>
+                                <div class="col-12 my-4">
+                                    <div class="row my-3 align-items-center">
+                                        <div class="col-6 col-lg-4">
+                                            <img src="~/Content/images/Planes/plan-anualidades.png" />
+                                        </div>
+                                        <div class="col-6 col-lg-4">
+                                            <div class="select-button" data-for="plan" data-value="Anualidades">SELECCIONAR</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del a&ntilde;o en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
+                                </div>
                             </div>
-                            <div class="col-12 my-4">
-                                <div class="row my-3 align-items-center">
-                                    <div class="col-6 col-lg-4">
-                                        <img src="~/Content/images/Planes/plan-balloon.png" />
+                            <div id="select-arrendamiento" class="row block" style="display: none;">
+                                <div class="col-12 my-4">
+                                    <div class="row my-3 align-items-center">
+                                        <div class="col-6 col-lg-4">
+                                            <img src="~/Content/images/Planes/logo_arrendamiento_finan.png" />
+                                        </div>
+                                        <div class="col-6 col-lg-4">
+                                            <div class="select-button" data-for="arrendamiento" data-value="financiero">SELECCIONAR</div>
+                                        </div>
                                     </div>
-                                    <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="plan" data-value="Balloon">SELECCIONAR</div>
-                                    </div>
+                                    <div class="text-plan">Adquiere la propiedad fiscal del autom&oacute;vil, lo que permite deducirlo de impuestos, ya que el veh&iacute;culo se registra dentro de los activos del contratante.</div>
                                 </div>
-                                <div class="text-plan">Tienes acceso a una mensualidad m&aacute;s baja, ya que estableces un pago al final de tu financiamiento, el cual puede ser del 25% o 35% del valor del veh&iacute;culo.</div>
-                            </div>
-                            <div class="col-12 my-4">
-                                <div class="row my-3 align-items-center">
-                                    <div class="col-6 col-lg-4">
-                                        <img src="~/Content/images/Planes/plan-anualidades.png" />
+                                <div class="col-12 my-4">
+                                    <div class="row my-3 align-items-center">
+                                        <div class="col-6 col-lg-4">
+                                            <img src="~/Content/images/Planes/logo_arrendamiento_puro.png" />
+                                        </div>
+                                        <div class="col-6 col-lg-4">
+                                            <div class="select-button" data-for="arrendamiento" data-value="puro">SELECCIONAR</div>
+                                        </div>
                                     </div>
-                                    <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="plan" data-value="Anualidades">SELECCIONAR</div>
-                                    </div>
+                                    <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del a&ntilde;o en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
                                 </div>
-                                <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del a&ntilde;o en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
-                            </div>
-                        </div>
-                        <div id="select-arrendamiento" class="row block step-4-5" style="display: none;">
-                            <div class="col-12 my-4">
-                                <div class="row my-3 align-items-center">
-                                    <div class="col-6 col-lg-4">
-                                        <img src="~/Content/images/Planes/logo_arrendamiento_finan.png" />
-                                    </div>
-                                    <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="arrendamiento" data-value="financiero">SELECCIONAR</div>
-                                    </div>
-                                </div>
-                                <div class="text-plan">Adquiere la propiedad fiscal del autom&oacute;vil, lo que permite deducirlo de impuestos, ya que el veh&iacute;culo se registra dentro de los activos del contratante.</div>
-                            </div>
-                            <div class="col-12 my-4">
-                                <div class="row my-3 align-items-center">
-                                    <div class="col-6 col-lg-4">
-                                        <img src="~/Content/images/Planes/logo_arrendamiento_puro.png" />
-                                    </div>
-                                    <div class="col-6 col-lg-4">
-                                        <div class="select-button" data-for="arrendamiento" data-value="puro">SELECCIONAR</div>
-                                    </div>
-                                </div>
-                                <div class="text-plan">Estableces un pago m&aacute;s alto en el mes del a&ntilde;o en que tus ingresos sean mayores, lo que te permitir&aacute; lograr mensualidades m&aacute;s bajas.</div>
                             </div>
                         </div>
                         <div id="data-depositos" class="row mt-4 step-4-6" style="display: none;">
@@ -328,12 +330,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-4 step-4-7">
+                        <div class="row mt-4 step-4-7" style="display: none;">
                             <div class="col-12">
                                 <div class="title">Selecciona el plazo de tu plan de <span class="title-financiamiento">financiamiento</span></div>
                             </div>
                         </div>
-                        <div id="select-term" class="row block step-4-7">
+                        <div id="select-term" class="row block step-4-7" style="display: none;">
                             <div class="col-12 col-lg-4">
                                 <div class="select-button" data-for="term" data-value="24">24 MESES</div>
                             </div>
@@ -344,17 +346,17 @@
                                 <div class="select-button" data-for="term" data-value="48">48 MESES</div>
                             </div>
                         </div>
-                        <div class="row mt-4 step-4-8">
+                        <div class="row mt-4 step-4-8" style="display: none;">
                             <div class="col-12">
                                 <div class="title">Selecciona el monto de <span class="title-enganche">enganche</span> con el que deseas iniciar tu plan</div>
                             </div>
                         </div>
-                        <div class="row mt-4 step-4-8">
+                        <div class="row mt-4 step-4-8" style="display: none;">
                             <div class="col-12">
                                 <div class="title"><input type="range" id="hitch-range" min="0" max="100000" step="5000" value="0" /></div>
                             </div>
                         </div>
-                        <div class="row block range-controls step-4-8">
+                        <div class="row block range-controls step-4-8" style="display: none;">
                             <div class="col-12 d-flex">
                                 <div id="hitch-minus" class="range-button">
                                     <img src="~/Content/images/Cotizador/menos.png" />
@@ -365,7 +367,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row block justify-content-center step-4-8">
+                        <div class="row block justify-content-center step-4-8" style="display: none;">
                             <div class="col-12 col-lg-4">
                                 <button type="button" id="step-4-finish" class="btn-red w-100">FINALIZAR</button>
                             </div>

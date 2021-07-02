@@ -925,6 +925,7 @@
     <Compile Include="Mvc\Models\Utils\DocumentData.cs" />
     <Compile Include="Mvc\Models\Utils\LibraryData.cs" />
     <Compile Include="Mvc\Models\Utils\SlideOptions.cs" />
+    <Compile Include="Mvc\Models\Utils\Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MVC\Controllers\CotizadorController.cs" />
     <Compile Include="MVC\Models\CotizadorModel.cs" />

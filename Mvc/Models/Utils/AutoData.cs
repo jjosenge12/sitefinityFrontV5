@@ -12,5 +12,6 @@ namespace SitefinityWebApp.Mvc.Models.Utils
         public string CarImage { get; set; }
         public string ModelImage { get; set; }
         public string CarAnimation { get; set; }
+        public string CarType { get; set; }
     }
 }
