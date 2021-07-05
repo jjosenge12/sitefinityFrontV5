@@ -12,5 +12,7 @@ namespace SitefinityWebApp.Mvc
         public static string UrlToyotaClientes = "https://salt001-toyotaclientes.cs43.force.com";
         public static string UrlComunidad = "https://mytfs.toyotacredito.com.mx/s/login/?ec=302&startURL=%2Fs%2F";
         public static string UrlOfertas = "https://creditotoyota.com.mx/home-delivery";
+        public static string reCaptchaSiteKey = "6LcjOG8bAAAAAN7E9hTFRkZ89DzWpfkESIYMh1Wo";
+        public static string reCaptchaSecretKey = "6LcjOG8bAAAAAOZvGzH7X_QtizU9Kzl5Iot79WYT";
     }
 }

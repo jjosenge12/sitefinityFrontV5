@@ -27,6 +27,12 @@ namespace ASP
     using System.Web.UI;
     using System.Web.WebPages;
     
+    #line 5 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+    using SitefinityWebApp.Mvc;
+    
+    #line default
+    #line hidden
+    
     #line 4 "..\..\MVC\Views\Card\Card.Footer.cshtml"
     using Telerik.Sitefinity.Frontend.Mvc.Helpers;
     
@@ -51,7 +57,7 @@ namespace ASP
 WriteLiteral("\r\n");
 
             
-            #line 6 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 7 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.Script(ScriptRef.JQuery, "top", true));
 
             
@@ -64,7 +70,7 @@ WriteLiteral("\r\n");
 WriteLiteral("\r\n");
 
             
-            #line 9 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 10 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top", true));
 
             
@@ -73,7 +79,7 @@ Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top"
 WriteLiteral("\r\n");
 
             
-            #line 10 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 11 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true));
 
             
@@ -82,7 +88,7 @@ Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"),
 WriteLiteral("\r\n");
 
             
-            #line 11 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 12 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/toastnotify.js", "top", true));
 
             
@@ -93,7 +99,7 @@ WriteLiteral("\r\n");
 WriteLiteral("\r\n");
 
             
-            #line 13 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 14 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true));
 
             
@@ -102,7 +108,7 @@ Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TF
 WriteLiteral("\r\n\r\n");
 
             
-            #line 15 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 16 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 
             
@@ -111,7 +117,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 16 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 17 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/toastnotify.css")));
 
             
@@ -120,7 +126,7 @@ Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitef
 WriteLiteral("\r\n");
 
             
-            #line 17 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 18 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css")));
 
             
@@ -201,11 +207,28 @@ WriteLiteral(">\r\n            <button");
 
 WriteLiteral(" type=\"button\"");
 
-WriteLiteral(" id=\"submit-newsletter\"");
+WriteLiteral("\r\n                    id=\"submit-newsletter\"");
 
-WriteLiteral(" class=\"btn btn-primary custom-button text-small\"");
+WriteLiteral("\r\n                    class=\"btn btn-primary custom-button text-small g-recaptcha" +
+"\"");
 
-WriteLiteral(">ENVIAR</button>\r\n        </div>\r\n    </div>\r\n    <hr");
+WriteLiteral("\r\n                    data-sitekey=\"");
+
+            
+            #line 43 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+                             Write(GlobalConfig.reCaptchaSiteKey);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\"");
+
+WriteLiteral("\r\n                    data-callback=\'submitNewsletter\'");
+
+WriteLiteral("\r\n                    data-action=\'submit\'");
+
+WriteLiteral(">\r\n                ENVIAR\r\n            </button>\r\n        </div>\r\n    </div>\r\n   " +
+" <hr");
 
 WriteLiteral(" style=\"border-top:1px solid #58595B;\"");
 

@@ -130,6 +130,15 @@ WriteLiteral("\r\n");
 
             
             #line 15 "..\..\MVC\Views\Card\Card.Header.cshtml"
+Write(Html.Script("https://www.google.com/recaptcha/api.js", "top", true));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+            
+            #line 16 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true));
 
             
@@ -138,7 +147,7 @@ Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TF
 WriteLiteral("\r\n\r\n");
 
             
-            #line 17 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 18 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css")));
 
             
@@ -147,7 +156,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 18 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 19 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 
             
@@ -156,7 +165,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 19 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 20 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/material-icons.css")));
 
             
@@ -165,7 +174,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/material-icons.css")));
 WriteLiteral("\r\n");
 
             
-            #line 20 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 21 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/select2.min.css")));
 
             
@@ -174,7 +183,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/select2.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 21 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 22 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/loaders.css")));
 
             
@@ -183,7 +192,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/loaders.css")));
 WriteLiteral("\r\n");
 
             
-            #line 22 "..\..\MVC\Views\Card\Card.Header.cshtml"
+            #line 23 "..\..\MVC\Views\Card\Card.Header.cshtml"
 Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css")));
 
             
@@ -233,14 +242,14 @@ WriteLiteral(">\r\n            <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2235), Tuple.Create("\"", 2268)
+WriteAttribute("href", Tuple.Create(" href=\"", 2305), Tuple.Create("\"", 2338)
             
-            #line 31 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 2242), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
+            #line 32 "..\..\MVC\Views\Card\Card.Header.cshtml"
+, Tuple.Create(Tuple.Create("", 2312), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
             
             #line default
             #line hidden
-, 2242), false)
+, 2312), false)
 );
 
 WriteLiteral(" id=\"my-tfsm\"");
@@ -299,14 +308,14 @@ WriteLiteral(">\r\n        <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2921), Tuple.Create("\"", 2954)
+WriteAttribute("href", Tuple.Create(" href=\"", 2991), Tuple.Create("\"", 3024)
             
-            #line 40 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 2928), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
+            #line 41 "..\..\MVC\Views\Card\Card.Header.cshtml"
+, Tuple.Create(Tuple.Create("", 2998), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
             
             #line default
             #line hidden
-, 2928), false)
+, 2998), false)
 );
 
 WriteLiteral(" id=\"my-tfsm-menu\"");
@@ -401,14 +410,14 @@ WriteLiteral(">Arrendamiento Puro</a>\r\n            </div>\r\n        </span>\r
 
 WriteLiteral(" class=\"toggleMenu\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 4456), Tuple.Create("\"", 4487)
+WriteAttribute("href", Tuple.Create(" href=\"", 4526), Tuple.Create("\"", 4557)
             
-            #line 63 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 4463), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlOfertas
+            #line 64 "..\..\MVC\Views\Card\Card.Header.cshtml"
+, Tuple.Create(Tuple.Create("", 4533), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlOfertas
             
             #line default
             #line hidden
-, 4463), false)
+, 4533), false)
 );
 
 WriteLiteral(" target=\"_blank\"");
