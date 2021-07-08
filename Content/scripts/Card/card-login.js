@@ -58,17 +58,17 @@
     }
 
 
-    $(".sf-form-container").each(function () {
-        var form = document.createElement("form");
+    //$(".sf-form-container").each(function () {
+    //    var form = document.createElement("form");
 
-        form.innerHTML = this.innerHTML;
-        Object.keys(this.dataset).forEach((x) => {
-            form[x] = this.dataset[x];
-        });
+    //    form.innerHTML = this.innerHTML;
+    //    Object.keys(this.dataset).forEach((x) => {
+    //        form[x] = this.dataset[x];
+    //    });
 
-        $(this).html(form);
-        FloatLabel.init();
-    });
+    //    $(this).html(form);
+    //    FloatLabel.init();
+    //});
 
     $("#nc-form").submit(function (e) {
         var pass = document.getElementById("passVisible").value;
