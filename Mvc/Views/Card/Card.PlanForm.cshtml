@@ -1,0 +1,87 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+
+<div class="form-box mt-5">
+    <div class="text-medium weight-600 mb-2">
+        Reg&iacute;strate para ser contactado y conocer m&aacute;s de este
+        plan:
+    </div>
+    @if (!string.IsNullOrEmpty(Model.Heading))
+    {
+        <input id="planType" type="hidden" value="@Html.HtmlSanitize(Model.Heading)" />
+    }
+    else
+    {
+        <input id="planType" type="hidden" value="Plan" />
+    }
+    <div>
+        <div class="sf-form-container" data-id="plan-form">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="float-container">
+                        <label class="float-label" for="name">Nombre</label>
+                        <input class="form-input effect-2" type="text" id="name" name="name" required="" /><span class="focus-border"></span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="float-container">
+                        <label class="float-label" for="lastname">Apellido</label>
+                        <input class="form-input effect-2" type="text" id="lastname" name="lastname" required="" /><span class="focus-border"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="float-container">
+                <label class="float-label" for="email">
+                    Correo
+                    electr&oacute;nico
+                </label>
+                <input class="form-input effect-2" type="email" id="email" name="email" required="" />
+                <span class="focus-border"></span>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="float-container">
+                        <label class="float-label" for="phone">Tel&eacute;fono</label>
+                        <input class="form-input effect-2" type="tel" id="phone" name="phone" required="" /><span class="focus-border"></span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="float-container select-container">
+                        <label class="float-label active" for="vehicle">Veh&iacute;culo</label>
+                        <select class="form-input effect-2" id="vehicle" name="vehicle">
+                            <option selected="selected" disabled="disabled" value="0">Veh&iacute;culo</option>
+                        </select>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="float-container select-container">
+                <label class="float-label active" for="distributor">Distribuidor</label>
+                <select class="form-input effect-2" id="distributor" name="distributor">
+                    <option selected="selected" disabled="disabled" value="0">Distribuidor</option>
+                </select>
+                <span class="focus-border"></span>
+            </div>
+            <div class="py-3">
+                <input type="checkbox" id="plansTermsCheckbox" name="terms" />
+                <span class="text-small">&nbsp;He le&iacute;do y aceptado los</span>
+                <span id="plansTerms" class="text-small color-red cursor-pointer">
+                    &nbsp;t&eacute;rminos y
+                    condiciones.
+                </span>
+            </div>
+            <div class="d-flex justify-content-center my-5">
+                <button type="submit" class="btn btn-primary custom-button text-small">
+                    QUIERO UN TOYOTA
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
