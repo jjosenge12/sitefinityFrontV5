@@ -1307,6 +1307,7 @@ label.error {
 
 /*-----------------CAROUSEL-----------------*/
 .carousel-btn {
+    display: flex;
     position: absolute;
     z-index: 2;
     top: 50%;
