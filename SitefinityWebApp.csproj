@@ -1587,8 +1587,6 @@
     <Content Include="Mvc\Views\Card\Card.Registro_Cliente.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Header_Logged.cshtml" />
     <Content Include="Mvc\Views\Card\Card.SolicitudDigital.cshtml" />
-    <Content Include="Mvc\Views\Shared\DesignerView.Custom.cshtml" />
-    <Content Include="Mvc\Views\Shared\DesignerView.Custom.json" />
     <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.js.map" />
     <Content Include="Mvc\Views\Carousel\DesignerView.Custom.json" />
     <Content Include="Mvc\Views\Carousel\DesignerView.Custom.cshtml" />

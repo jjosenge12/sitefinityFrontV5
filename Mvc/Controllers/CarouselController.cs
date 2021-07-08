@@ -15,6 +15,9 @@ using Telerik.Sitefinity.Personalization;
 using Telerik.Sitefinity.Modules.Libraries;
 using System.Linq;
 using System.Collections.Generic;
+using Telerik.Sitefinity.Libraries.Model;
+using System.Web.Script.Serialization;
+using SitefinityWebApp.Mvc.Models.Utils;
 
 namespace SitefinityWebApp.Mvc.Controllers
 {
@@ -27,19 +30,30 @@ namespace SitefinityWebApp.Mvc.Controllers
             var model = new CarouselModel();
             try
             {
-                model.Title = this.Title;
                 model.ImagesDesktop = new List<string>();
                 model.ImagesMobile = new List<string>();
-                if (this.ImagesDesktop != null)
-                    foreach (string x in this.ImagesDesktop.ItemIdsOrdered)
-                    {
-                        model.ImagesDesktop.Add(GetMediaUrlByImageId(new Guid(x), false));
-                    }
-                if (this.ImagesMobile != null)
-                    foreach (string x in this.ImagesMobile.ItemIdsOrdered)
-                    {
-                        model.ImagesMobile.Add(GetMediaUrlByImageId(new Guid(x), false));
-                    }
+
+                if (!string.IsNullOrEmpty(this.Images) && !string.IsNullOrEmpty(this.ImagesPath))
+                {
+                    var images = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(this.ImagesPath);
+                    model.ImagesDesktop = images;
+                }
+                if (!string.IsNullOrEmpty(this.SlideOptions))
+                {
+                    var options = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SlideOptions>>(this.SlideOptions);
+                    model.DesktopOptions = options;
+                }
+
+                if (!string.IsNullOrEmpty(this.MobileImages) && !string.IsNullOrEmpty(this.MobileImagesPath))
+                {
+                    var images = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(this.MobileImagesPath);
+                    model.ImagesMobile = images;
+                }
+                if (!string.IsNullOrEmpty(this.MobileOptions))
+                {
+                    var options = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SlideOptions>>(this.MobileOptions);
+                    model.MobileOptions = options;
+                }
             }
             catch (Exception e)
             {
@@ -55,13 +69,12 @@ namespace SitefinityWebApp.Mvc.Controllers
             this.ActionInvoker.InvokeAction(this.ControllerContext, "Index");
         }
 
-        public string Title { get; set; }
-
-        [Content(Type = KnownContentTypes.Images)]
-        public MixedContentContext ImagesDesktop { get; set; }
-
-        [Content(Type = KnownContentTypes.Images)]
-        public MixedContentContext ImagesMobile { get; set; }
+        public string ImagesPath { get; set; }
+        public string Images { get; set; }
+        public string SlideOptions { get; set; }
+        public string MobileImagesPath { get; set; }
+        public string MobileImages { get; set; }
+        public string MobileOptions { get; set; }
 
         public static string GetMediaUrlByImageId(Guid masterImageId, bool resolveAsAbsolutUrl)
         {

@@ -1,0 +1,23 @@
+﻿.custom-tab-bar{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+.custom-tab-container{
+    padding: 0 10px;
+    margin: 0 -10px;
+}
+
+.custom-tab {
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #eee;
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+}
+
+.custom-tab.tab-selected{
+    background-color: #ccc;
+}

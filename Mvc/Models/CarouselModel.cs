@@ -5,6 +5,7 @@
 ------------------------------------------------------------------------------ */
 
 using Progress.Sitefinity.Renderer.Entities.Content;
+using SitefinityWebApp.Mvc.Models.Utils;
 using System;
 using System.Collections.Generic;
 
@@ -12,10 +13,9 @@ namespace SitefinityWebApp.Mvc.Models
 {
     public class CarouselModel
 	{
-		public string Title { get; set; }
 		public List<string> ImagesDesktop { get; set; }
-		public List<string> DesktopTexts { get; set; }
 		public List<string> ImagesMobile { get; set; }
-		public List<string> MobileTexts { get; set; }
+		public List<SlideOptions> DesktopOptions { get; set; }
+		public List<SlideOptions> MobileOptions { get; set; }
 	}
 }

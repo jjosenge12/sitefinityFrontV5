@@ -1,0 +1,265 @@
+﻿@using Telerik.Sitefinity.Mvc;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+<link rel="stylesheet" type="text/css" href="~/Content/css/Carousel/carousel-designer.css" />
+
+<form>
+    <div class="custom-tab-bar">
+        <div class="custom-tab-container">
+            <div class="custom-tab tab-selected" data-tab="desktop-carousel">Desktop Images</div>
+        </div>
+        <div class="custom-tab-container">
+            <div class="custom-tab" data-tab="mobile-carousel">Mobile Images</div>
+        </div>
+    </div>
+    <div id="desktop-carousel">
+        <div>
+            <label for="desktop-images" class="m-top-sm">Desktop Images</label>
+            <sf-multi-image-field sf-model="images" sf-media-settings="@SettingsHelpers.GetMediaSettings("Image")"></sf-multi-image-field>
+        </div>
+
+        <hr class="side-to-side" />
+
+        <h5>Slide Options</h5>
+
+        <div class="form-group" ng-show="images">
+            <label for="select-slide" class="m-top-sm">Select a slide</label>
+            <select id="select-slide" ng-model="select_image" class="form-control">
+                <option ng-repeat="(key, value) in images" value="{{key}}">{{key + 1}}</option>
+            </select>
+        </div>
+
+        <div ng-show="select_image">
+            <div class="form-group">
+                <div class="row" style="margin: 0 !important;">
+                    <div class="col-8">
+                        <label for="slide-text">
+                            Slide Text
+                        </label>
+                        <input id="slide-text" type="text" class="form-control" ng-model="slide_text" />
+                    </div>
+                    <div class="col-2" style="padding: 0 5px !important;">
+                        <label for="text-color">Text color</label>
+                        <input type="color" id="text-color" class="form-control" ng-model="text_color" />
+                    </div>
+                    <div class="col-2">
+                        <label for="text-size">Text size</label>
+                        <select id="text-size" class="form-control" ng-model="text_size">
+                            <option value="8">8 px</option>
+                            <option value="9">9 px</option>
+                            <option value="10">10 px</option>
+                            <option value="11">11 px</option>
+                            <option value="12">12 px</option>
+                            <option value="14">14 px</option>
+                            <option value="16">16 px</option>
+                            <option value="18">18 px</option>
+                            <option value="20">20 px</option>
+                            <option value="22">22 px</option>
+                            <option value="24">24 px</option>
+                            <option value="26">26 px</option>
+                            <option value="28">28 px</option>
+                            <option value="32">32 px</option>
+                            <option value="36">36 px</option>
+                            <option value="48">48 px</option>
+                            <option value="54">54 px</option>
+                            <option value="72">72 px</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="select_image">
+            <label class="m-top-sm">Slide Link</label>
+            <div class="form-group d-flex">
+                <div class="mr-4">
+                    <input type="radio" id="no-link" name="link_btn" value="0" ng-model="link_btn" ng-checked="link_btn == 0">
+                    <label for="no-link">No Link</label>
+                </div>
+                <div class="mr-4">
+                    <input type="radio" id="button-link" name="link_btn" value="1" ng-model="link_btn" ng-checked="link_btn == 1">
+                    <label for="button-link">Link on button</label>
+                </div>
+                <div>
+                    <input type="radio" id="image-link" name="link_btn" value="2" ng-model="link_btn" ng-checked="link_btn == 2">
+                    <label for="image-link">Link on slide</label>
+                </div>
+            </div>
+
+            <div class="form-group" ng-show="link_btn == 1">
+                <label for="button-label">
+                    Button text
+                </label>
+                <input type="text" id="button-label" class="form-control" ng-model="btn_label" placeholder="Example: Conocer más..." />
+            </div>
+
+            <div class="form-group" ng-hide="link_btn == 0">
+                <div class="row" style="margin: 0 !important;">
+                    <div class="col-3">
+                        <input type="radio" id="url" name="link_src" value="0" ng-model="link_src" ng-checked="link_src == 0">
+                        <label for="url">External URL</label><br />
+                        <input type="radio" id="page" name="link_src" value="1" ng-model="link_src" ng-checked="link_src == 1">
+                        <label for="page">Page within site</label><br />
+                    </div>
+                    <div class="col-9" ng-show="link_src == 0">
+                        <label for="url-link">
+                            Link to
+                        </label>
+                        <input id="url-link" type="text" class="form-control" ng-model="url_link" placeholder="Example: https://www.progress.com" />
+                    </div>
+                    <div class="col-9" ng-show="link_src == 1">
+                        <label for="url-link">
+                            Link to
+                        </label>
+                        <sf-list-selector sf-page-selector sf-multiselect="false" sf-sortable="true"
+                                          sf-selected-item-id="selected_page.id"
+                                          sf-selected-item="selected_page.page"
+                                          id="selected-page"
+                                          ng-model="selected_page"></sf-list-selector>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="new-tab" ng-model="new_tab" ng-change="new_tab == True" />
+                <label for="new-tab">
+                    Open link in new tab
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-carousel" style="display:none;">
+        <div>
+            <label for="mobile-images" class="m-top-sm">Mobile Images</label>
+            <sf-multi-image-field sf-model="mobile.images" sf-media-settings="@SettingsHelpers.GetMediaSettings("Image")"></sf-multi-image-field>
+        </div>
+
+        <hr class="side-to-side" />
+
+        <h5>Slide Options</h5>
+
+        <div class="form-group" ng-show="mobile.images">
+            <label for="mobile-select-slide" class="m-top-sm">Select a slide</label>
+            <select id="mobile-select-slide" ng-model="mobile.select_image" class="form-control">
+                <option ng-repeat="(key, value) in mobile.images" value="{{key}}">{{key + 1}}</option>
+            </select>
+        </div>
+
+        <div ng-show="mobile.select_image">
+            <div class="form-group">
+                <div class="row" style="margin: 0 !important;">
+                    <div class="col-8">
+                        <label for="mobile-slide-text">
+                            Slide Text
+                        </label>
+                        <input id="mobile-slide-text" type="text" class="form-control" ng-model="mobile.slide_text" />
+                    </div>
+                    <div class="col-2" style="padding: 0 5px !important;">
+                        <label for="mobile-text-color">Text color</label>
+                        <input type="color" id="mobile-text-color" class="form-control" ng-model="mobile.text_color" />
+                    </div>
+                    <div class="col-2">
+                        <label for="mobile-text-size">Text size</label>
+                        <select id="mobile-text-size" class="form-control" ng-model="mobile.text_size">
+                            <option value="8">8 px</option>
+                            <option value="9">9 px</option>
+                            <option value="10">10 px</option>
+                            <option value="11">11 px</option>
+                            <option value="12">12 px</option>
+                            <option value="14">14 px</option>
+                            <option value="16">16 px</option>
+                            <option value="18">18 px</option>
+                            <option value="20">20 px</option>
+                            <option value="22">22 px</option>
+                            <option value="24">24 px</option>
+                            <option value="26">26 px</option>
+                            <option value="28">28 px</option>
+                            <option value="32">32 px</option>
+                            <option value="36">36 px</option>
+                            <option value="48">48 px</option>
+                            <option value="54">54 px</option>
+                            <option value="72">72 px</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="mobile.select_image">
+            <label class="m-top-sm">Slide Link</label>
+            <div class="form-group d-flex">
+                <div class="mr-4">
+                    <input type="radio" id="mobile-no-link" name="mobile-link_btn" value="0" ng-model="mobile.link_btn" ng-checked="mobile.link_btn == 0">
+                    <label for="mobile-no-link">No Link</label>
+                </div>
+                <div class="mr-4">
+                    <input type="radio" id="mobile-button-link" name="mobile-link_btn" value="1" ng-model="mobile.link_btn" ng-checked="mobile.link_btn == 1">
+                    <label for="mobile-button-link">Link on button</label>
+                </div>
+                <div>
+                    <input type="radio" id="mobile-image-link" name="mobile-link_btn" value="2" ng-model="mobile.link_btn" ng-checked="mobile.link_btn == 2">
+                    <label for="mobile-image-link">Link on slide</label>
+                </div>
+            </div>
+
+            <div class="form-group" ng-show="mobile.link_btn == 1">
+                <label for="mobile-button-label">
+                    Button text
+                </label>
+                <input type="text" id="mobile-button-label" class="form-control" ng-model="mobile.btn_label" placeholder="Example: Conocer más..." />
+            </div>
+
+            <div class="form-group" ng-hide="mobile.link_btn == 0">
+                <div class="row" style="margin: 0 !important;">
+                    <div class="col-3">
+                        <input type="radio" id="mobile-url" name="mobile-link_src" value="0" ng-model="mobile.link_src" ng-checked="mobile.link_src == 0">
+                        <label for="mobile-url">External URL</label><br />
+                        <input type="radio" id="mobile-page" name="mobile-link_src" value="1" ng-model="mobile.link_src" ng-checked="mobile.link_src == 1">
+                        <label for="mobile-page">Page within site</label><br />
+                    </div>
+                    <div class="col-9" ng-show="mobile.link_src == 0">
+                        <label for="mobile-url-link">
+                            Link to
+                        </label>
+                        <input id="mobile-url-link" type="text" class="form-control" ng-model="mobile.url_link" placeholder="Example: https://www.progress.com" />
+                    </div>
+                    <div class="col-9" ng-show="mobile.link_src == 1">
+                        <label for="mobile-url-link">
+                            Link to
+                        </label>
+                        <sf-list-selector sf-page-selector sf-multiselect="false" sf-sortable="true"
+                                          sf-selected-item-id="mobile.selected_page.id"
+                                          sf-selected-item="mobile.selected_page.page"
+                                          id="mobile-selected-page"
+                                          ng-model="mobile.selected_page"></sf-list-selector>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="mobile-new-tab" ng-model="mobile.new_tab" ng-change="mobile.new_tab == True" />
+                <label for="mobile-new-tab">
+                    Open link in new tab
+                </label>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+
+    var tabs = document.querySelectorAll(".custom-tab");
+    console.log(tabs);
+    tabs.forEach(x => x.addEventListener('click', function (e) {
+
+        tabs.forEach(x => {
+            x.classList.remove("tab-selected")
+            document.getElementById(x.dataset.tab).style.display = "none";
+        });
+        this.classList.add("tab-selected");
+
+        document.getElementById(this.dataset.tab).style.display = "block";
+
+    }));
+</script>

@@ -224,8 +224,6 @@ WriteLiteral(" src=\"/images/default-source/tfsm/logo/imagen-1.png?sfvrsn=f7aa11
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" title=\"imagen-1\"");
-
 WriteLiteral(" data-displaymode=\"Custom\"");
 
 WriteLiteral(" sfref=\"[images|OpenAccessDataProvider]3222fff0-1c7d-4e6f-b48b-dc826339bdde\"");
@@ -242,14 +240,14 @@ WriteLiteral(">\r\n            <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2305), Tuple.Create("\"", 2338)
+WriteAttribute("href", Tuple.Create(" href=\"", 2288), Tuple.Create("\"", 2321)
             
             #line 32 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 2312), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
+, Tuple.Create(Tuple.Create("", 2295), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
             
             #line default
             #line hidden
-, 2312), false)
+, 2295), false)
 );
 
 WriteLiteral(" id=\"my-tfsm\"");
@@ -308,14 +306,14 @@ WriteLiteral(">\r\n        <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2991), Tuple.Create("\"", 3024)
+WriteAttribute("href", Tuple.Create(" href=\"", 2974), Tuple.Create("\"", 3007)
             
             #line 41 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 2998), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
+, Tuple.Create(Tuple.Create("", 2981), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
             
             #line default
             #line hidden
-, 2998), false)
+, 2981), false)
 );
 
 WriteLiteral(" id=\"my-tfsm-menu\"");
@@ -410,14 +408,14 @@ WriteLiteral(">Arrendamiento Puro</a>\r\n            </div>\r\n        </span>\r
 
 WriteLiteral(" class=\"toggleMenu\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 4526), Tuple.Create("\"", 4557)
+WriteAttribute("href", Tuple.Create(" href=\"", 4509), Tuple.Create("\"", 4540)
             
             #line 64 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 4533), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlOfertas
+, Tuple.Create(Tuple.Create("", 4516), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlOfertas
             
             #line default
             #line hidden
-, 4533), false)
+, 4516), false)
 );
 
 WriteLiteral(" target=\"_blank\"");
