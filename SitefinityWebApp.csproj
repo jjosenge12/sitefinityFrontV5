@@ -1609,6 +1609,7 @@
       <Generator>RazorGenerator</Generator>
     </Content>
     <Content Include="ResourcePackages\Bootstrap4\README.md" />
+    <Content Include="ResourcePackages\Bootstrap4\MVC\Views\Video\Video.Custom.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="packages\AWSSDK.DynamoDBv2.3.5.2\analyzers\dotnet\cs\AWSSDK.DynamoDBv2.CodeAnalysis.dll" />
