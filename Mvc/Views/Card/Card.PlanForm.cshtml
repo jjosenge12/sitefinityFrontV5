@@ -79,10 +79,10 @@
                 </span>
             </div>
             <div class="d-flex justify-content-center my-5">
-                <button type="button"
-                        id="submit-plan"
-                        class="btn btn-primary custom-button text-small g-recaptcha"
-                        data-sitekey="@GlobalConfig.reCaptchaSiteKey">
+                <button class="btn btn-primary custom-button text-small g-recaptcha"
+                        data-sitekey="@GlobalConfig.reCaptchaSiteKey"
+                        data-callback='planSubmitClick'
+                        data-action='submit'>
                     QUIERO UN TOYOTA
                 </button>
             </div>
