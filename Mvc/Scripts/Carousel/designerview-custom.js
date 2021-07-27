@@ -46,7 +46,7 @@ designerModule.controller('CustomCtrl', ['$scope', 'propertyService', function (
                 $scope.feedback.showError = true;
                 if (data) {
                     $scope.feedback.errorMessage = data.Detail;
-                    console.log(data.Detail);
+                    console.log(data);
                 }
             })
         .finally(function () {
@@ -74,6 +74,31 @@ designerModule.controller('CustomCtrl', ['$scope', 'propertyService', function (
                 }));
                 $scope.properties.SlideOptions.PropertyValue = JSON.stringify(options);
             }
+            else {
+                var value = JSON.parse($scope.properties.SlideOptions.PropertyValue);
+
+                let diff = value.length - $scope.images.length;
+                while (diff > 0) {
+                    value.pop();
+                    diff = value.length - $scope.images.length;
+                }
+                while (diff < 0) {
+                    value.push({
+                        Text: '',
+                        HasLink: 0,
+                        LinkSrc: 0,
+                        Link: '',
+                        ButtonLabel: '',
+                        NewTab: false,
+                        TextColor: '#ffffff',
+                        TextSize: '32',
+                        SelectedPage: JSON.stringify({ id: '', page: '' })
+                    });
+                    diff = value.length - $scope.images.length;
+                }
+                $scope.properties.SlideOptions.PropertyValue = JSON.stringify(value);
+            }
+
         }
     }, true);
 
@@ -231,6 +256,30 @@ designerModule.controller('CustomCtrl', ['$scope', 'propertyService', function (
                     SelectedPage: JSON.stringify({ id: '', page: '' })
                 }));
                 $scope.properties.MobileOptions.PropertyValue = JSON.stringify(options);
+            }
+            else {
+                var value = JSON.parse($scope.properties.MobileOptions.PropertyValue);
+
+                let diff = value.length - $scope.mobile.images.length;
+                while (diff > 0) {
+                    value.pop();
+                    diff = value.length - $scope.mobile.images.length;
+                }
+                while (diff < 0) {
+                    value.push({
+                        Text: '',
+                        HasLink: 0,
+                        LinkSrc: 0,
+                        Link: '',
+                        ButtonLabel: '',
+                        NewTab: false,
+                        TextColor: '#ffffff',
+                        TextSize: '32',
+                        SelectedPage: JSON.stringify({ id: '', page: '' })
+                    });
+                    diff = value.length - $scope.mobile.images.length;
+                }
+                $scope.properties.MobileOptions.PropertyValue = JSON.stringify(value);
             }
         }
     }, true);

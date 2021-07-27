@@ -586,7 +586,7 @@ WriteLiteral(" data-ride=\"carousel\"");
 
 WriteLiteral(">\r\n            <a");
 
-WriteLiteral(" class=\"carousel-control-prev\"");
+WriteLiteral(" class=\"carousel-btn-small carousel-prev\"");
 
 WriteLiteral(" href=\"#myCarouselMobile\"");
 
@@ -594,17 +594,16 @@ WriteLiteral(" data-slide=\"prev\"");
 
 WriteLiteral(" data-sf-ec-immutable=\"\"");
 
-WriteLiteral(">\r\n                <span");
+WriteLiteral(">\r\n                <img");
 
-WriteLiteral(" class=\"carousel-control-prev-icon\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 4536), Tuple.Create("\"", 4583)
+, Tuple.Create(Tuple.Create("", 4542), Tuple.Create<System.Object, System.Int32>(Href("~/Content/images/Carousel/slider_prev.png")
+, 4542), false)
+);
 
-WriteLiteral("></span><span");
+WriteLiteral(" />\r\n            </a>\r\n            <a");
 
-WriteLiteral(" class=\"sr-only\"");
-
-WriteLiteral(">Previous</span>\r\n            </a> <a");
-
-WriteLiteral(" class=\"carousel-control-next\"");
+WriteLiteral(" class=\"carousel-btn-small carousel-next\"");
 
 WriteLiteral(" href=\"#myCarouselMobile\"");
 
@@ -612,28 +611,27 @@ WriteLiteral(" data-slide=\"next\"");
 
 WriteLiteral(" data-sf-ec-immutable=\"\"");
 
-WriteLiteral(">\r\n                <span");
+WriteLiteral(">\r\n                <img");
 
-WriteLiteral(" class=\"carousel-control-next-icon\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 4752), Tuple.Create("\"", 4799)
+, Tuple.Create(Tuple.Create("", 4758), Tuple.Create<System.Object, System.Int32>(Href("~/Content/images/Carousel/slider_next.png")
+, 4758), false)
+);
 
-WriteLiteral("></span><span");
-
-WriteLiteral(" class=\"sr-only\"");
-
-WriteLiteral(">Next</span>\r\n            </a>\r\n            <div");
+WriteLiteral(" />\r\n            </a>\r\n            <div");
 
 WriteLiteral(" class=\"carousel-inner\"");
 
 WriteLiteral(">\r\n");
 
             
-            #line 80 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 81 "..\..\MVC\Views\Carousel\Index.cshtml"
                 
             
             #line default
             #line hidden
             
-            #line 80 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 81 "..\..\MVC\Views\Carousel\Index.cshtml"
                   int j = 0;
             
             #line default
@@ -641,13 +639,13 @@ WriteLiteral(">\r\n");
 WriteLiteral("\r\n");
 
             
-            #line 81 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 82 "..\..\MVC\Views\Carousel\Index.cshtml"
                 
             
             #line default
             #line hidden
             
-            #line 81 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 82 "..\..\MVC\Views\Carousel\Index.cshtml"
                  foreach (var imgSrc in Model.ImagesMobile)
                 {
                     if (Model.MobileOptions[j].HasLink == 2)
@@ -658,48 +656,48 @@ WriteLiteral("\r\n");
             #line hidden
 WriteLiteral("                        <a");
 
-WriteAttribute("target", Tuple.Create(" target=\"", 5108), Tuple.Create("\"", 5170)
+WriteAttribute("target", Tuple.Create(" target=\"", 5087), Tuple.Create("\"", 5149)
             
-            #line 85 "..\..\MVC\Views\Carousel\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 5117), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].NewTab ? "_blank" : "_self"
+            #line 86 "..\..\MVC\Views\Carousel\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 5096), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].NewTab ? "_blank" : "_self"
             
             #line default
             #line hidden
-, 5117), false)
+, 5096), false)
 );
 
-WriteAttribute("href", Tuple.Create(" href=\"", 5171), Tuple.Create("\"", 5224)
+WriteAttribute("href", Tuple.Create(" href=\"", 5150), Tuple.Create("\"", 5203)
             
-            #line 85 "..\..\MVC\Views\Carousel\Index.cshtml"
-                , Tuple.Create(Tuple.Create("", 5178), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.MobileOptions[j].Link)
+            #line 86 "..\..\MVC\Views\Carousel\Index.cshtml"
+                , Tuple.Create(Tuple.Create("", 5157), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.MobileOptions[j].Link)
             
             #line default
             #line hidden
-, 5178), false)
+, 5157), false)
 );
 
-WriteAttribute("class", Tuple.Create(" class=\"", 5225), Tuple.Create("\"", 5284)
-, Tuple.Create(Tuple.Create("", 5233), Tuple.Create("item", 5233), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 5204), Tuple.Create("\"", 5263)
+, Tuple.Create(Tuple.Create("", 5212), Tuple.Create("item", 5212), true)
             
-            #line 85 "..\..\MVC\Views\Carousel\Index.cshtml"
-                                                                            , Tuple.Create(Tuple.Create(" ", 5237), Tuple.Create<System.Object, System.Int32>(j == 0 ? "active" : ""
+            #line 86 "..\..\MVC\Views\Carousel\Index.cshtml"
+                                                                            , Tuple.Create(Tuple.Create(" ", 5216), Tuple.Create<System.Object, System.Int32>(j == 0 ? "active" : ""
             
             #line default
             #line hidden
-, 5238), false)
-, Tuple.Create(Tuple.Create(" ", 5263), Tuple.Create("text-decoration-none", 5264), true)
+, 5217), false)
+, Tuple.Create(Tuple.Create(" ", 5242), Tuple.Create("text-decoration-none", 5243), true)
 );
 
 WriteLiteral(">\r\n                            <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 5320), Tuple.Create("\"", 5333)
+WriteAttribute("src", Tuple.Create(" src=\"", 5299), Tuple.Create("\"", 5312)
             
-            #line 86 "..\..\MVC\Views\Carousel\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 5326), Tuple.Create<System.Object, System.Int32>(imgSrc
+            #line 87 "..\..\MVC\Views\Carousel\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 5305), Tuple.Create<System.Object, System.Int32>(imgSrc
             
             #line default
             #line hidden
-, 5326), false)
+, 5305), false)
 );
 
 WriteLiteral(" style=\"width:100%;\"");
@@ -719,13 +717,13 @@ WriteLiteral(" class=\"carousel-caption carousel-caption-mb\"");
 WriteLiteral(">\r\n");
 
             
-            #line 88 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 89 "..\..\MVC\Views\Carousel\Index.cshtml"
                                 
             
             #line default
             #line hidden
             
-            #line 88 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 89 "..\..\MVC\Views\Carousel\Index.cshtml"
                                  if (!string.IsNullOrEmpty(Model.MobileOptions[j].Text))
                                 {
 
@@ -736,31 +734,31 @@ WriteLiteral("                                    <h3");
 
 WriteLiteral(" class=\"FontToyotaRegular texto-carousel-mb\"");
 
-WriteAttribute("style", Tuple.Create(" style=\"", 5774), Tuple.Create("\"", 5894)
-, Tuple.Create(Tuple.Create("", 5782), Tuple.Create("font-size:", 5782), true)
+WriteAttribute("style", Tuple.Create(" style=\"", 5753), Tuple.Create("\"", 5873)
+, Tuple.Create(Tuple.Create("", 5761), Tuple.Create("font-size:", 5761), true)
             
-            #line 90 "..\..\MVC\Views\Carousel\Index.cshtml"
-                      , Tuple.Create(Tuple.Create(" ", 5792), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextSize
-            
-            #line default
-            #line hidden
-, 5793), false)
-, Tuple.Create(Tuple.Create("", 5827), Tuple.Create("px", 5827), true)
-, Tuple.Create(Tuple.Create(" ", 5829), Tuple.Create("!important;color:", 5830), true)
-            
-            #line 90 "..\..\MVC\Views\Carousel\Index.cshtml"
-                                                                             , Tuple.Create(Tuple.Create("", 5847), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextColor
+            #line 91 "..\..\MVC\Views\Carousel\Index.cshtml"
+                      , Tuple.Create(Tuple.Create(" ", 5771), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextSize
             
             #line default
             #line hidden
-, 5847), false)
-, Tuple.Create(Tuple.Create(" ", 5882), Tuple.Create("!important;", 5883), true)
+, 5772), false)
+, Tuple.Create(Tuple.Create("", 5806), Tuple.Create("px", 5806), true)
+, Tuple.Create(Tuple.Create(" ", 5808), Tuple.Create("!important;color:", 5809), true)
+            
+            #line 91 "..\..\MVC\Views\Carousel\Index.cshtml"
+                                                                             , Tuple.Create(Tuple.Create("", 5826), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextColor
+            
+            #line default
+            #line hidden
+, 5826), false)
+, Tuple.Create(Tuple.Create(" ", 5861), Tuple.Create("!important;", 5862), true)
 );
 
 WriteLiteral(">");
 
             
-            #line 90 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 91 "..\..\MVC\Views\Carousel\Index.cshtml"
                                                                                                                                                                                                         Write(Html.HtmlSanitize(Model.MobileOptions[j].Text));
 
             
@@ -769,7 +767,7 @@ WriteLiteral(">");
 WriteLiteral("</h3>\r\n");
 
             
-            #line 91 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 92 "..\..\MVC\Views\Carousel\Index.cshtml"
                                 }
 
             
@@ -778,7 +776,7 @@ WriteLiteral("</h3>\r\n");
 WriteLiteral("                            </div>\r\n                        </a>\r\n");
 
             
-            #line 94 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 95 "..\..\MVC\Views\Carousel\Index.cshtml"
                     }
                     else if (Model.MobileOptions[j].HasLink == 1)
                     {
@@ -788,27 +786,27 @@ WriteLiteral("                            </div>\r\n                        </a>
             #line hidden
 WriteLiteral("                        <div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 6192), Tuple.Create("\"", 6230)
-, Tuple.Create(Tuple.Create("", 6200), Tuple.Create("item", 6200), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 6171), Tuple.Create("\"", 6209)
+, Tuple.Create(Tuple.Create("", 6179), Tuple.Create("item", 6179), true)
             
-            #line 97 "..\..\MVC\Views\Carousel\Index.cshtml"
-, Tuple.Create(Tuple.Create(" ", 6204), Tuple.Create<System.Object, System.Int32>(j == 0 ? "active" : ""
+            #line 98 "..\..\MVC\Views\Carousel\Index.cshtml"
+, Tuple.Create(Tuple.Create(" ", 6183), Tuple.Create<System.Object, System.Int32>(j == 0 ? "active" : ""
             
             #line default
             #line hidden
-, 6205), false)
+, 6184), false)
 );
 
 WriteLiteral(">\r\n                            <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 6266), Tuple.Create("\"", 6279)
+WriteAttribute("src", Tuple.Create(" src=\"", 6245), Tuple.Create("\"", 6258)
             
-            #line 98 "..\..\MVC\Views\Carousel\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 6272), Tuple.Create<System.Object, System.Int32>(imgSrc
+            #line 99 "..\..\MVC\Views\Carousel\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 6251), Tuple.Create<System.Object, System.Int32>(imgSrc
             
             #line default
             #line hidden
-, 6272), false)
+, 6251), false)
 );
 
 WriteLiteral(" style=\"width:100%;\"");
@@ -828,13 +826,13 @@ WriteLiteral(" class=\"carousel-caption carousel-caption-mb\"");
 WriteLiteral(">\r\n");
 
             
-            #line 100 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 101 "..\..\MVC\Views\Carousel\Index.cshtml"
                                 
             
             #line default
             #line hidden
             
-            #line 100 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 101 "..\..\MVC\Views\Carousel\Index.cshtml"
                                  if (!string.IsNullOrEmpty(Model.MobileOptions[j].Text))
                                 {
 
@@ -845,31 +843,31 @@ WriteLiteral("                                    <h3");
 
 WriteLiteral(" class=\"FontToyotaRegular texto-carousel-mb\"");
 
-WriteAttribute("style", Tuple.Create(" style=\"", 6720), Tuple.Create("\"", 6840)
-, Tuple.Create(Tuple.Create("", 6728), Tuple.Create("font-size:", 6728), true)
+WriteAttribute("style", Tuple.Create(" style=\"", 6699), Tuple.Create("\"", 6819)
+, Tuple.Create(Tuple.Create("", 6707), Tuple.Create("font-size:", 6707), true)
             
-            #line 102 "..\..\MVC\Views\Carousel\Index.cshtml"
-                      , Tuple.Create(Tuple.Create(" ", 6738), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextSize
-            
-            #line default
-            #line hidden
-, 6739), false)
-, Tuple.Create(Tuple.Create("", 6773), Tuple.Create("px", 6773), true)
-, Tuple.Create(Tuple.Create(" ", 6775), Tuple.Create("!important;color:", 6776), true)
-            
-            #line 102 "..\..\MVC\Views\Carousel\Index.cshtml"
-                                                                             , Tuple.Create(Tuple.Create("", 6793), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextColor
+            #line 103 "..\..\MVC\Views\Carousel\Index.cshtml"
+                      , Tuple.Create(Tuple.Create(" ", 6717), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextSize
             
             #line default
             #line hidden
-, 6793), false)
-, Tuple.Create(Tuple.Create(" ", 6828), Tuple.Create("!important;", 6829), true)
+, 6718), false)
+, Tuple.Create(Tuple.Create("", 6752), Tuple.Create("px", 6752), true)
+, Tuple.Create(Tuple.Create(" ", 6754), Tuple.Create("!important;color:", 6755), true)
+            
+            #line 103 "..\..\MVC\Views\Carousel\Index.cshtml"
+                                                                             , Tuple.Create(Tuple.Create("", 6772), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextColor
+            
+            #line default
+            #line hidden
+, 6772), false)
+, Tuple.Create(Tuple.Create(" ", 6807), Tuple.Create("!important;", 6808), true)
 );
 
 WriteLiteral(">");
 
             
-            #line 102 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 103 "..\..\MVC\Views\Carousel\Index.cshtml"
                                                                                                                                                                                                         Write(Html.HtmlSanitize(Model.MobileOptions[j].Text));
 
             
@@ -878,7 +876,7 @@ WriteLiteral(">");
 WriteLiteral("</h3>\r\n");
 
             
-            #line 103 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 104 "..\..\MVC\Views\Carousel\Index.cshtml"
                                 }
 
             
@@ -886,24 +884,24 @@ WriteLiteral("</h3>\r\n");
             #line hidden
 WriteLiteral("                                <a");
 
-WriteAttribute("target", Tuple.Create(" target=\"", 6965), Tuple.Create("\"", 7027)
+WriteAttribute("target", Tuple.Create(" target=\"", 6944), Tuple.Create("\"", 7006)
             
-            #line 104 "..\..\MVC\Views\Carousel\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 6974), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].NewTab ? "_blank" : "_self"
+            #line 105 "..\..\MVC\Views\Carousel\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 6953), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].NewTab ? "_blank" : "_self"
             
             #line default
             #line hidden
-, 6974), false)
+, 6953), false)
 );
 
-WriteAttribute("href", Tuple.Create(" href=\"", 7028), Tuple.Create("\"", 7081)
+WriteAttribute("href", Tuple.Create(" href=\"", 7007), Tuple.Create("\"", 7060)
             
-            #line 104 "..\..\MVC\Views\Carousel\Index.cshtml"
-                        , Tuple.Create(Tuple.Create("", 7035), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.MobileOptions[j].Link)
+            #line 105 "..\..\MVC\Views\Carousel\Index.cshtml"
+                        , Tuple.Create(Tuple.Create("", 7014), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.MobileOptions[j].Link)
             
             #line default
             #line hidden
-, 7035), false)
+, 7014), false)
 );
 
 WriteLiteral(" style=\"min-width:180px;width: fit-content;\"");
@@ -913,7 +911,7 @@ WriteLiteral(" class=\"btn-red text-decoration-none\"");
 WriteLiteral(">");
 
             
-            #line 104 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 105 "..\..\MVC\Views\Carousel\Index.cshtml"
                                                                                                                                                                                                                                     Write(Html.HtmlSanitize(Model.MobileOptions[j].ButtonLabel));
 
             
@@ -922,7 +920,7 @@ WriteLiteral(">");
 WriteLiteral("</a>\r\n                            </div>\r\n                        </div>\r\n");
 
             
-            #line 107 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 108 "..\..\MVC\Views\Carousel\Index.cshtml"
                     }
                     else
                     {
@@ -932,27 +930,27 @@ WriteLiteral("</a>\r\n                            </div>\r\n                    
             #line hidden
 WriteLiteral("                        <div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 7392), Tuple.Create("\"", 7430)
-, Tuple.Create(Tuple.Create("", 7400), Tuple.Create("item", 7400), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 7371), Tuple.Create("\"", 7409)
+, Tuple.Create(Tuple.Create("", 7379), Tuple.Create("item", 7379), true)
             
-            #line 110 "..\..\MVC\Views\Carousel\Index.cshtml"
-, Tuple.Create(Tuple.Create(" ", 7404), Tuple.Create<System.Object, System.Int32>(j == 0 ? "active" : ""
+            #line 111 "..\..\MVC\Views\Carousel\Index.cshtml"
+, Tuple.Create(Tuple.Create(" ", 7383), Tuple.Create<System.Object, System.Int32>(j == 0 ? "active" : ""
             
             #line default
             #line hidden
-, 7405), false)
+, 7384), false)
 );
 
 WriteLiteral(">\r\n                            <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 7466), Tuple.Create("\"", 7479)
+WriteAttribute("src", Tuple.Create(" src=\"", 7445), Tuple.Create("\"", 7458)
             
-            #line 111 "..\..\MVC\Views\Carousel\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 7472), Tuple.Create<System.Object, System.Int32>(imgSrc
+            #line 112 "..\..\MVC\Views\Carousel\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 7451), Tuple.Create<System.Object, System.Int32>(imgSrc
             
             #line default
             #line hidden
-, 7472), false)
+, 7451), false)
 );
 
 WriteLiteral(" style=\"width:100%;\"");
@@ -972,13 +970,13 @@ WriteLiteral(" class=\"carousel-caption carousel-caption-mb\"");
 WriteLiteral(">\r\n");
 
             
-            #line 113 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 114 "..\..\MVC\Views\Carousel\Index.cshtml"
                                 
             
             #line default
             #line hidden
             
-            #line 113 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 114 "..\..\MVC\Views\Carousel\Index.cshtml"
                                  if (!string.IsNullOrEmpty(Model.MobileOptions[j].Text))
                                 {
 
@@ -989,31 +987,31 @@ WriteLiteral("                                    <h3");
 
 WriteLiteral(" class=\"FontToyotaRegular texto-carousel-mb\"");
 
-WriteAttribute("style", Tuple.Create(" style=\"", 7920), Tuple.Create("\"", 8040)
-, Tuple.Create(Tuple.Create("", 7928), Tuple.Create("font-size:", 7928), true)
+WriteAttribute("style", Tuple.Create(" style=\"", 7899), Tuple.Create("\"", 8019)
+, Tuple.Create(Tuple.Create("", 7907), Tuple.Create("font-size:", 7907), true)
             
-            #line 115 "..\..\MVC\Views\Carousel\Index.cshtml"
-                      , Tuple.Create(Tuple.Create(" ", 7938), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextSize
-            
-            #line default
-            #line hidden
-, 7939), false)
-, Tuple.Create(Tuple.Create("", 7973), Tuple.Create("px", 7973), true)
-, Tuple.Create(Tuple.Create(" ", 7975), Tuple.Create("!important;color:", 7976), true)
-            
-            #line 115 "..\..\MVC\Views\Carousel\Index.cshtml"
-                                                                             , Tuple.Create(Tuple.Create("", 7993), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextColor
+            #line 116 "..\..\MVC\Views\Carousel\Index.cshtml"
+                      , Tuple.Create(Tuple.Create(" ", 7917), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextSize
             
             #line default
             #line hidden
-, 7993), false)
-, Tuple.Create(Tuple.Create(" ", 8028), Tuple.Create("!important;", 8029), true)
+, 7918), false)
+, Tuple.Create(Tuple.Create("", 7952), Tuple.Create("px", 7952), true)
+, Tuple.Create(Tuple.Create(" ", 7954), Tuple.Create("!important;color:", 7955), true)
+            
+            #line 116 "..\..\MVC\Views\Carousel\Index.cshtml"
+                                                                             , Tuple.Create(Tuple.Create("", 7972), Tuple.Create<System.Object, System.Int32>(Model.MobileOptions[j].TextColor
+            
+            #line default
+            #line hidden
+, 7972), false)
+, Tuple.Create(Tuple.Create(" ", 8007), Tuple.Create("!important;", 8008), true)
 );
 
 WriteLiteral(">");
 
             
-            #line 115 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 116 "..\..\MVC\Views\Carousel\Index.cshtml"
                                                                                                                                                                                                         Write(Html.HtmlSanitize(Model.MobileOptions[j].Text));
 
             
@@ -1022,7 +1020,7 @@ WriteLiteral(">");
 WriteLiteral("</h3>\r\n");
 
             
-            #line 116 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 117 "..\..\MVC\Views\Carousel\Index.cshtml"
                                 }
 
             
@@ -1031,7 +1029,7 @@ WriteLiteral("</h3>\r\n");
 WriteLiteral("                            </div>\r\n                        </div>\r\n");
 
             
-            #line 119 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 120 "..\..\MVC\Views\Carousel\Index.cshtml"
                     }
 
                     j++;
@@ -1043,7 +1041,7 @@ WriteLiteral("                            </div>\r\n                        </di
 WriteLiteral("            </div>\r\n        </div>\r\n");
 
             
-            #line 125 "..\..\MVC\Views\Carousel\Index.cshtml"
+            #line 126 "..\..\MVC\Views\Carousel\Index.cshtml"
     }
 
             

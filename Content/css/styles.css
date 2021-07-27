@@ -73,14 +73,14 @@ body {
     font-size: 14px;
 }
 
-    /*body [class^="col"],*/
-    no-padding-col {
-        padding: 0;
-    }
+/*body [class^="col"],*/
+no-padding-col {
+    padding: 0;
+}
 
-    body p {
-        margin: 0;
-    }
+body p {
+    margin: 0;
+}
 
 .container::after,
 .container::before,
@@ -557,6 +557,7 @@ body {
 .carousel-caption-mb {
     top: 25%;
     right: 65% !important;
+    left: 20% !important;
 }
 
 .main {
@@ -580,29 +581,29 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.custom-card > img {
-    max-width: 100%;
-}
+    .custom-card > img {
+        max-width: 100%;
+    }
 
-.custom-card:hover .card-img-container img:first-of-type{
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
-}
+    .custom-card:hover .card-img-container img:first-of-type {
+        transform: scale(1.15);
+        transition: all 0.2s ease-in-out;
+    }
 
 .card-img-container {
     overflow: hidden;
     border-radius: 1.5rem;
 }
 
-.card-img-container > img {
-    width: 100%;
-    transition: all 0.2s ease-in-out;
-}
+    .card-img-container > img {
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+    }
 
-.card-img-container > img:hover{
-    /*transform: scale(1.15);
+        .card-img-container > img:hover {
+            /*transform: scale(1.15);
     transition: all 0.2s ease-in-out;*/
-}
+        }
 
 .sf_cols {
     max-width: 100%;
@@ -1318,12 +1319,26 @@ label.error {
     transition: all 0.1s ease-in-out;
 }
 
-    .carousel-btn:hover {
+.carousel-btn-small {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    margin-top: -24px;
+    padding: 17px 20px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    transition: all 0.1s ease-in-out;
+}
+
+    .carousel-btn:hover,
+    .carousel-btn-small:hover {
         background: rgba(255,255,255,0.6);
         transition: all 0.3s ease-in-out;
     }
 
-    .carousel-btn:active {
+    .carousel-btn:active,
+    .carousel-btn-small:active {
         background: rgba(255,255,255,0.8);
         transition: all 0.1s ease-in-out;
     }

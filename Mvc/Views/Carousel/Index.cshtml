@@ -71,10 +71,11 @@
     @if (Model.ImagesMobile.Count() > 0)
     {
         <div id="myCarouselMobile" class="carousel slide hidden-md hidden-lg" data-ride="carousel">
-            <a class="carousel-control-prev" href="#myCarouselMobile" data-slide="prev" data-sf-ec-immutable="">
-                <span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span>
-            </a> <a class="carousel-control-next" href="#myCarouselMobile" data-slide="next" data-sf-ec-immutable="">
-                <span class="carousel-control-next-icon"></span><span class="sr-only">Next</span>
+            <a class="carousel-btn-small carousel-prev" href="#myCarouselMobile" data-slide="prev" data-sf-ec-immutable="">
+                <img src="~/Content/images/Carousel/slider_prev.png" />
+            </a>
+            <a class="carousel-btn-small carousel-next" href="#myCarouselMobile" data-slide="next" data-sf-ec-immutable="">
+                <img src="~/Content/images/Carousel/slider_next.png" />
             </a>
             <div class="carousel-inner">
                 @{int j = 0;}
