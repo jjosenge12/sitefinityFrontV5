@@ -1,0 +1,27 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-estados-financieros.js"), "bottom", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/select2.min.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-info-corporativa.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/select2.min.css"))
+
+
+@if (!string.IsNullOrEmpty(Model.ActionName))
+{
+    <a href="@Html.UrlSanitize(Model.ActionUrl)" class="btn-red">
+        @Html.HtmlSanitize(Model.ActionName)
+    </a>
+}
+else
+{
+    <a href="#" class="btn-red">
+        BUTTON
+    </a>
+}

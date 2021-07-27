@@ -1679,6 +1679,7 @@
     <Content Include="Content\css\Pdf\fonts\ToyotaType_Convertida\ToyotaType-RegularIt.ttf" />
     <Content Include="Content\css\Pdf\fonts\ToyotaType_Convertida\ToyotaType-Semibold.ttf" />
     <Content Include="Content\css\Pdf\fonts\ToyotaType_Convertida\ToyotaType-SemiboldIt.ttf" />
+    <Content Include="Mvc\Views\Card\Card.ButtonRed.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>
