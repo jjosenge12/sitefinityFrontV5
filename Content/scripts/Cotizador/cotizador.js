@@ -491,7 +491,7 @@ function showResults(data) {
     $(".step-5-nombre-auto").html(_data.Marca);
     $(".step-5-version-auto").html(_data.Vesion);
     $(".step-5-anio-auto").html(_data.Anio);
-    $(".step-5-tipo-persona").html(_data.TipoPersona);
+    $(".step-5-tipo-persona").html(normalize(_data.TipoPersona));
     $(".step-5-imagen-auto").attr("src", form.ImagenAuto);
     $(".step-5-mensualidad").html(`$ ${numberWithCommas(_data.Mensualidad.toFixed(2))} M.N.`);
     $(".step-5-enganche").html(`$ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.`);
@@ -999,3 +999,25 @@ function base64ToArrayBuffer(base64) {
     }
     return bytes;
 }
+
+var normalize = (function () {
+    var from = "ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç",
+        to = "AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc",
+        mapping = {};
+
+    for (var i = 0, j = from.length; i < j; i++)
+        mapping[from.charAt(i)] = to.charAt(i);
+
+    return function (str) {
+        var ret = [];
+        for (var i = 0, j = str.length; i < j; i++) {
+            var c = str.charAt(i);
+            if (mapping.hasOwnProperty(str.charAt(i)))
+                ret.push(mapping[c]);
+            else
+                ret.push(c);
+        }
+        return ret.join('');
+    }
+
+})();
