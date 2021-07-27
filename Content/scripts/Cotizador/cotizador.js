@@ -875,7 +875,7 @@ function clearValues() {
     $("#select-insurance").val(0);
     $("#select-coverage").val(0);
     $("#select-financing .select-button")[0].click();
-    $(".select-plan .select-button").removeClass("selected");
+    $("#select-plan .select-button").removeClass("selected");
     $(".select-arrendamiento .select-button").removeClass("selected");
     $("#select-cantidad-depositos").val(-1);
     $("#select-term .select-button").removeClass("selected");
@@ -945,7 +945,7 @@ function sendDataSalesforce() {
                     icon: "success",
                     confirmButtonColor: "#66bb6a"
                 });
-
+                console.log(result);
                 $("#step-5-distribuidores").val(0);
                 $("#step-5-distribuidores").trigger("change");
                 $("#step-5-phone").val("");
