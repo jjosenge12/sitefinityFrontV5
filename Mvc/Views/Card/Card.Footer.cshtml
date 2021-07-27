@@ -39,7 +39,7 @@
             <button type="button"
                     id="submit-newsletter"
                     class="btn btn-primary custom-button text-small g-recaptcha"
-                    data-sitekey="@GlobalConfig.reCaptchaSiteKey"
+                    data-sitekey="@System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString()"
                     >
                 ENVIAR
             </button>

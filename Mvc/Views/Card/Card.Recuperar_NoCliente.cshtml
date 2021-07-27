@@ -38,7 +38,7 @@
                     </p>
                 </div>
 
-                <div data-id="recuperar-nc-form" class="sf-form-container" data-method="GET" data-action="@GlobalConfig.UrlToyotaClientes/s/sitefinityforgotpwd">
+                <div data-id="recuperar-nc-form" class="sf-form-container" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinityforgotpwd">
                     <div class="float-container my-5">
                         <label class="float-label" for="emailVisible">
                             Correo electr&oacute;nico

@@ -214,7 +214,7 @@ WriteLiteral("\r\n                    data-sitekey=\"");
 
             
             #line 42 "..\..\MVC\Views\Card\Card.Footer.cshtml"
-                             Write(GlobalConfig.reCaptchaSiteKey);
+                             Write(System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString());
 
             
             #line default

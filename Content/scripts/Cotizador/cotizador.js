@@ -22,11 +22,9 @@ function scrollToTargetAdjusted(element) {
 
 function formNextStep(step) {
     let next = $(`.step-4-${step}`)[0];
-    console.log(next);
-    console.log(`.step-4-${step}`);
+
     if (next !== null && next !== undefined) {
         $.when(
-            //$(`.step-4-${step}`).removeClass(`step-4-${step}`),
             $(`.step-4-${step}`).map((idx, item) => item.style.removeProperty("display")),
             swiper.updateAutoHeight(0)
         )
@@ -214,7 +212,8 @@ $(document).ready(function () {
                     ...form,
                     Marca: selected.dataset.autoName,
                     autoId: selected.dataset.autoId,
-                    imagenAuto: selected.dataset.autoPicture,
+                    ImagenAuto: selected.dataset.autoPicture,
+                    ImagenModelo: selected.dataset.autoModel,
                     TipoAuto: selected.dataset.autoTipo
                 },
                 setAutoValues(selected)
@@ -418,6 +417,45 @@ $(document).ready(function () {
             }
         }
     });
+
+    $("#downloadPdf").click(function () {
+
+        var data = {
+            DatosCotizar: cotizacion,
+            Plazo: form.Plazo,
+            ImagenAuto: window.location.origin + '/' + form.ImagenAuto,
+            ImagenModelo: window.location.origin + '/' + form.ImagenModelo
+        };
+
+        $.ajax(window.config.urlbase + "/DownloadPlanPdf", {
+            method: 'POST',
+            beforeSend: showLoader,
+            complete: hideLoader,
+            data: data,
+            success: function (res) {
+                console.log(res);
+
+                var _data = base64ToArrayBuffer(res.result);
+                var blob = new Blob([_data], { type: "application/pdf" });
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                var fileName = "Cotizacion_Toyota";
+                link.download = fileName;
+                link.click();
+
+            },
+            error: function (err) {
+                console.log(err);
+                Swal.fire({
+                    title: "Error",
+                    text: "Ocurrió un error generar el pdf",
+                    icon: "error",
+                    confirmButtonColor: "#cc0000",
+                    timer: 5000
+                });
+            }
+        });
+    });
 });
 
 function getFormValues() {
@@ -428,7 +466,8 @@ function getFormValues() {
         Telefono: $("#phone").val(),
         Marca: $(".car-slide.selected")[0].dataset.autoName,
         autoId: $(".car-slide.selected")[0].dataset.autoId,
-        imagenAuto: $(".car-slide.selected")[0].dataset.autoPicture,
+        ImagenAuto: $(".car-slide.selected")[0].dataset.autoPicture,
+        ImagenModelo: $(".car-slide.selected")[0].dataset.autoModel,
         Vesion: $("#car_version option:selected")[0].dataset.version,
         Anio: $("#car_version option:selected")[0].dataset.anio,
         Modelo: $("#car_version option:selected")[0].dataset.anio,
@@ -443,7 +482,6 @@ function getFormValues() {
         TipoUso: "Depósitos de Garantía",
         CantidadDepositosGarantia: $("#select-cantidad-depositos").val(),
     }
-    console.log(form);
 }
 
 function showResults(data) {
@@ -454,7 +492,7 @@ function showResults(data) {
     $(".step-5-version-auto").html(_data.Vesion);
     $(".step-5-anio-auto").html(_data.Anio);
     $(".step-5-tipo-persona").html(_data.TipoPersona);
-    $(".step-5-imagen-auto").attr("src", form.imagenAuto);
+    $(".step-5-imagen-auto").attr("src", form.ImagenAuto);
     $(".step-5-mensualidad").html(`$ ${numberWithCommas(_data.Mensualidad.toFixed(2))} M.N.`);
     $(".step-5-enganche").html(`$ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.`);
     $(".step-5-deposito").html(`${_data.DepositoGarantia} - $ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.`);
@@ -549,7 +587,6 @@ function cotizar() {
                     window.scrollTo(0, 0);
                     swiper.slideNext();
                     commitSalesforce();
-                    console.log(result.data.Prices);
 
                 } else {
                     Swal.fire({
@@ -587,7 +624,6 @@ function getVersions(autoId) {
         beforeSend: showLoader,
         complete: hideLoader,
         success: function (data) {
-            console.log(data);
             let opt = document.createElement("option");
             opt.value = "0";
             opt.innerHTML = "Versión";
@@ -846,6 +882,7 @@ function clearValues() {
     $("#hitch-range").attr("min", 0);
     $("#hitch-range").val(0);
     $("#hitch-text").html("$ 0 M.N.");
+    $("#select-otro-plazo .select-button").removeClass("selected");
 
     cars_swiper.autoplay.start();
 
@@ -950,4 +987,15 @@ function initilizeCarsSwiper() {
             prevEl: '#cars-swiper-prev'
         }
     });
+}
+
+function base64ToArrayBuffer(base64) {
+    var binaryString = window.atob(base64);
+    var binaryLen = binaryString.length;
+    var bytes = new Uint8Array(binaryLen);
+    for (var i = 0; i < binaryLen; i++) {
+        var ascii = binaryString.charCodeAt(i);
+        bytes[i] = ascii;
+    }
+    return bytes;
 }

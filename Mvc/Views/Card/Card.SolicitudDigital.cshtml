@@ -7,7 +7,8 @@
 
 @Html.Script(ScriptRef.JQuery, "top", true)
 @Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
-@Html.Script(GlobalConfig.UrlToyotaClientes + "/lightning/lightning.out.js", "top", true)
+@Html.Script(System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString() + "/lightning/lightning.out.js", "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-solicitud-digital.js"), "bottom", true)
 
 @Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css"))

@@ -12,14 +12,14 @@ if (lead === '' || lead === null || lead === undefined) {
         confirmButtonColor: "#cc0000"
     })
         .then(() => {
-            window.location.replace(window.location.origin + "/tfsm/mis-cotizaciones");
+            window.location.replace(window.config.origin + "/tfsm/mis-cotizaciones");
         })
 }
 
 $(document).ready(function () {
     showLoader();
     $Lightning.use("c:pruebita3", () => {
-        $Lightning.createComponent("c:frontofficeSolicitudDigital", { "lead": lead, "backUrl": window.location.origin + "/tfsm/mis-cotizaciones" }, "lightning", () => { console.log("YA SE CREO EL COMPONENTE"); hideLoader(); });
+        $Lightning.createComponent("c:frontofficeSolicitudDigital", { "lead": lead, "backUrl": window.config.origin + "/tfsm/mis-cotizaciones" }, "lightning", () => { console.log("YA SE CREO EL COMPONENTE"); hideLoader(); });
     },
         "https://toyotafinancial--salt001.lightning.force.com", token
     );                        

@@ -8,15 +8,18 @@
 @Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
 @Html.Script("https://unpkg.com/swiper/swiper-bundle.min.js", "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/jspdf.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/webkit-input-range-fill-lower/webkit-input-range-fill-lower.min.js"), "top", true)
-@Html.Script(Url.WidgetContent("~/Content/scripts/Config.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/Cotizador/cotizador.js"), "bottom", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/Cotizador/cotizador.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Pdf/ToyotaCotTrad.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Pdf/fuentes.css"))
 @Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
 
 <input type="hidden" id="max-enganche" value="@Model.MontoEnganche" />
@@ -106,7 +109,7 @@
                                     @foreach (var item in Model.autos)
                                     {
                                         <div class="swiper-slide car-slide-container type-@item.CarType">
-                                            <div class="car-slide" data-auto-id="@item.AutoId" data-auto-name="@item.Name" data-auto-picture="@item.CarImage" data-auto-tipo="@item.CarType">
+                                            <div class="car-slide" data-auto-id="@item.AutoId" data-auto-name="@item.Name" data-auto-picture="@item.CarImage" data-auto-model="@item.ModelImage" data-auto-tipo="@item.CarType">
                                                 <div class="car-image">
                                                     <img src="@item.CarImage" />
                                                 </div>
@@ -128,21 +131,6 @@
                                 <span class="material-icons">chevron_right</span>
                             </button>
                         </div>
-                        @*<div class="row my-4">
-                                <div class="col-12 d-flex justify-content-center">
-                                    <div class="buttons">
-                                        <div class="btn-left" id="step-3-back">
-                                            <span class="material-icons">chevron_left</span>
-                                            VOLVER
-                                        </div>
-                                        <span class="middle-line"></span>
-                                        <div class="btn-right" id="step-3-continue">
-                                            CONTINUAR
-                                            <span class="material-icons">chevron_right</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>*@
                     </div>
                 </div>
             </div>
@@ -379,14 +367,6 @@
             <div class="swiper-slide">
                 <div id="step-5">
                     <div class="col-11">
-                        @*<div class="row">
-                                <div class="col-12 d-flex justify-content-between">
-                                    <button type="button" id="step-5-back" class="btn-transparent color-red">
-                                        <span class="material-icons color-red">chevron_left</span>
-                                        VOLVER
-                                    </button>
-                                </div>
-                            </div>*@
                         <div class="row mt-4">
                             <div class="col-12">
                                 <div class="title"><span class="step-5-nombre-cliente"></span> te presentamos el resultado de tu pr&oacute;ximo Toyota</div>
@@ -443,7 +423,7 @@
                                     </div>
                                     <div class="col-12 col-lg-6 step-5-datos-arrendamiento" style="display: none;">
                                         <div class="step-5-card size-small">
-                                            <div class="text-tag">Total rentas en Depósito:</div>
+                                            <div class="text-tag">Total rentas en Dep&oacute;sito:</div>
                                             <div class="text-value step-5-deposito">$ 0 M.N.</div>
                                         </div>
                                     </div>
@@ -507,7 +487,7 @@
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
                                         <div class="step-5-card size-small">
-                                            <div class="text-tag">Tasa de interés:</div>
+                                            <div class="text-tag">Tasa de inter&eacute;s:</div>
                                             <div class="text-value step-5-tasa-interes"></div>
                                         </div>
                                     </div>
@@ -554,7 +534,7 @@
                                         <button id="cotizar-otro" type="button" class="btn-red_inverted w-100">COTIZAR OTRO VEH&Iacute;CULO</button>
                                     </div>
                                     <div class="col-12 col-lg-4 mt-3 m-lg-0">
-                                        <button type="button" class="btn-red btn-long w-100">DESCARGAR COTIZACI&Oacute;N PDF</button>
+                                        <button type="button" id="downloadPdf" class="btn-red btn-long w-100">DESCARGAR COTIZACI&Oacute;N PDF</button>
                                     </div>
                                 </div>
                             </div>
@@ -621,12 +601,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        //new WebkitInputRangeFillLower({
-        //    selectors: ['hitch-range'],
-        //    color: '#cc0000'
-        //});
-    });
-</script>

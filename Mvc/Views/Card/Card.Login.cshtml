@@ -42,7 +42,7 @@
                             </p>
                         </div>
 
-                        <div data-id="nc-form" class="sf-form-container" data-method="GET" data-action="@GlobalConfig.UrlToyotaClientes/s/sitefinitylogin" data-onsubmit="encrypt()">
+                        <div data-id="nc-form" class="sf-form-container" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinitylogin" data-onsubmit="encrypt()">
                             <div class="float-container my-5">
                                 <label class="float-label" for="userVisible">
                                     Correo electr&oacute;nico
@@ -70,8 +70,8 @@
 
                             <input type="hidden" value="" name="user" id="user" />
                             <input type="hidden" value="" name="pass" id="pass" />
-                            <input type="hidden" name="fail" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery" id="fail" />
-                            <input type="hidden" name="ok" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/home-delivery/session"
+                            <input type="hidden" name="fail" value="@System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()/tfsm/home-delivery" id="fail" />
+                            <input type="hidden" name="ok" value="@System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()/home-delivery/session"
                                    id="ok" />
 
                             <div class="my-4 d-flex justify-content-center">
@@ -145,7 +145,7 @@
                             </p>
                         </div>
 
-                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="@GlobalConfig.UrlToyotaClientes/s/sitefinitylogin">
+                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinitylogin">
                             <div class="float-container my-5">
                                 <label class="float-label" for="clientVisible">
                                     Ingresar su n&uacute;mero de cliente / ID de cliente
@@ -173,8 +173,8 @@
 
                             <input type="hidden" value="" name="client" id="client" />
                             <input type="hidden" value="" name="pass" id="passClient" />
-                            <input type="hidden" name="fail" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery" id="failClient" />
-                            <input type="hidden" name="ok" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/home-delivery/session" id="okClient" />
+                            <input type="hidden" name="fail" value="@System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()/tfsm/home-delivery" id="failClient" />
+                            <input type="hidden" name="ok" value="@System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()/home-delivery/session" id="okClient" />
 
                             <div class="my-4 d-flex justify-content-center">
                                 <button type="submit" class="btn-registro"> INGRESAR </button>

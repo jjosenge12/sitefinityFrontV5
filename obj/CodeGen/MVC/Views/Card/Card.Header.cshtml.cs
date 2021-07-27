@@ -240,10 +240,10 @@ WriteLiteral(">\r\n            <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2288), Tuple.Create("\"", 2321)
+WriteAttribute("href", Tuple.Create(" href=\"", 2288), Tuple.Create("\"", 2376)
             
             #line 32 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 2295), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
+, Tuple.Create(Tuple.Create("", 2295), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
             
             #line default
             #line hidden
@@ -306,14 +306,14 @@ WriteLiteral(">\r\n        <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2974), Tuple.Create("\"", 3007)
+WriteAttribute("href", Tuple.Create(" href=\"", 3029), Tuple.Create("\"", 3117)
             
             #line 41 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 2981), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlComunidad
+, Tuple.Create(Tuple.Create("", 3036), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
             
             #line default
             #line hidden
-, 2981), false)
+, 3036), false)
 );
 
 WriteLiteral(" id=\"my-tfsm-menu\"");
@@ -408,14 +408,14 @@ WriteLiteral(">Arrendamiento Puro</a>\r\n            </div>\r\n        </span>\r
 
 WriteLiteral(" class=\"toggleMenu\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 4509), Tuple.Create("\"", 4540)
+WriteAttribute("href", Tuple.Create(" href=\"", 4619), Tuple.Create("\"", 4705)
             
             #line 64 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 4516), Tuple.Create<System.Object, System.Int32>(GlobalConfig.UrlOfertas
+, Tuple.Create(Tuple.Create("", 4626), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlOfertas"].ToString()
             
             #line default
             #line hidden
-, 4516), false)
+, 4626), false)
 );
 
 WriteLiteral(" target=\"_blank\"");

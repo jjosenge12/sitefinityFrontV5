@@ -30,7 +30,7 @@
     </div>
     <div class="col-6 col-md-10 customNavbar">
         <nav class="links d-none d-md-block">
-            <a id="link-portal" style="display:none;" target="_blank" href="@GlobalConfig.UrlComunidad" class="linkFinanciamiento">My TFSM</a>
+            <a id="link-portal" style="display:none;" target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()" class="linkFinanciamiento">My TFSM</a>
         </nav>
         <div class="btn userButton toggleMenu" id="openMenuBtn"><span class="material-icons">account_circle</span>&nbsp;<span class="user-name"></span></div>
         <div class="btn userButton toggleMenu" style="display:none;" id="closeMenuBtn"><span class="material-icons">close</span>&nbsp;<span class="user-name"></span></div>
