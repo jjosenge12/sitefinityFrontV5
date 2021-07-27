@@ -15,13 +15,13 @@
 
 @if (!string.IsNullOrEmpty(Model.ActionName))
 {
-    <a href="@Html.UrlSanitize(Model.ActionUrl)" class="btn-red">
+    <a href="@Html.UrlSanitize(Model.ActionUrl)" class="btn-red @Model.CssClass">
         @Html.HtmlSanitize(Model.ActionName)
     </a>
 }
 else
 {
-    <a href="#" class="btn-red">
+    <a href="#" class="btn-red @Model.CssClass">
         BUTTON
     </a>
 }
