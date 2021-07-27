@@ -939,13 +939,13 @@ function sendDataSalesforce() {
             beforeSend: showLoader,
             complete: hideLoader,
             success: function (result) {
+                console.log(result);
                 Swal.fire({
                     title: "¡Gracias!",
                     text: "Nos pondremos en contacto contigo",
                     icon: "success",
                     confirmButtonColor: "#66bb6a"
                 });
-                console.log(result);
                 $("#step-5-distribuidores").val(0);
                 $("#step-5-distribuidores").trigger("change");
                 $("#step-5-phone").val("");
