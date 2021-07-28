@@ -1,0 +1,25 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-black.css"))
+
+<div class="black-card">
+    @if (!string.IsNullOrEmpty(Model.Description))
+    {
+        <div class="black-card-text">@Html.Raw(Model.Description.Replace("\r\n", "<br />").Replace("\n", "<br />").Replace("\r", "<br />"))</div>
+    }
+    else
+    {
+        <div class="black-card-text">Texto de muestra</div>
+    }
+    @if (!string.IsNullOrEmpty(Model.ActionName)) {
+        <div class="d-flex justify-content-center">
+            <a class="btn-red" href="@Html.UrlSanitize(Model.ActionUrl)">@Html.HtmlSanitize(Model.ActionName)</a>
+        </div>
+    }
+</div>
