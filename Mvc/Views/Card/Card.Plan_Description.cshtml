@@ -16,7 +16,7 @@
         }
         @if (!string.IsNullOrEmpty(Model.Description))
         {
-            <div class="plan-description-card-body">@Html.HtmlSanitize(Model.Description)</div>
+            <div class="plan-description-card-body">Model.Description</div>
         }
         else
         {
