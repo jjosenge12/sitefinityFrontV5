@@ -19,7 +19,7 @@
     }
     @if (!string.IsNullOrEmpty(Model.ActionName)) {
         <div class="d-flex justify-content-center">
-            <a class="btn-red" href="@Html.UrlSanitize(Model.ActionUrl)">@Html.HtmlSanitize(Model.ActionName)</a>
+            <a class="btn-red text-decoration-none" href="@Html.UrlSanitize(Model.ActionUrl)">@Html.HtmlSanitize(Model.ActionName)</a>
         </div>
     }
 </div>

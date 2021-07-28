@@ -25,7 +25,7 @@
         @if (!string.IsNullOrEmpty(Model.ActionName))
         {
             <div class="plan-description-card-action">
-                <a class="btn-red" href="@Html.UrlSanitize(Model.ActionUrl)">@Model.ActionName</a>
+                <a class="btn-red text-decoration-none" href="@Html.UrlSanitize(Model.ActionUrl)">@Model.ActionName</a>
             </div>
         }
 
