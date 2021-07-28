@@ -62,11 +62,16 @@
         line-height: 48px;
         text-align: center;
         color: #ffffff;
+        min-height: 288px;
     }
 
     @media(max-width: 767px){
         .black-card-text{
             font-size: 24px;
             line-height: 32px;
+        }
+
+        .black-card{
+            min-height: 224px;
         }
     }
