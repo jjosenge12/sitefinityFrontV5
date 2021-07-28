@@ -7,7 +7,7 @@
 }
 
 .color-gray-2 {
-    color: #706e6b;
+    color: #858585;
 }
 
 .color-gray-4 {
@@ -73,6 +73,7 @@
 .plan-description-card-body {
     font-size: 16px;
     flex: 1 1 auto;
+    color: var(--color-gray-2);
 }
 
 .plan-description-card-action {
