@@ -16,7 +16,7 @@
         }
         @if (!string.IsNullOrEmpty(Model.Description))
         {
-            <div class="plan-description-card-body">@Html.Raw(Model.Description.Replace("\r\n", "<br />"))</div>
+            <div class="plan-description-card-body">@Html.Raw(Model.Description.Replace("\r\n", "<br />").Replace("\n", "<br />").Replace("\r", "<br />"))</div>
         }
         else
         {
