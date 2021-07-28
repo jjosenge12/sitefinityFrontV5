@@ -93,3 +93,9 @@
         padding: 10px 0;
     }
 }
+
+@media(max-width: 767px){
+    .ventaja-card {
+        min-height: 216px;
+    }
+}
