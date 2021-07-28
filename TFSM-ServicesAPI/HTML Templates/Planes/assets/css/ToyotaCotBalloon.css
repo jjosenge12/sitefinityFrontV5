@@ -508,7 +508,7 @@
 .container__row71 {
     position: absolute;
     top: 381px;
-    width: 187px;
+    width: 180px;
     height: 47px;
     max-width: 187px;
     max-height: 47px;
@@ -521,8 +521,8 @@
 .container__row72 {
     position: absolute;
     top: 381px;
-    left: 190px;
-    width: 187px;
+    left: 183px;
+    width: 180px;
     height: 47px;
     max-width: 187px;
     max-height: 47px;
@@ -536,7 +536,7 @@
     position: absolute;
     border-collapse: collapse;
     top: 3px;
-    left: 70px;
+    left: 62px;
     padding: 0%;
     border-spacing: 0px 0px;
     border: none;
@@ -550,7 +550,7 @@
     position: absolute;
     border-collapse: collapse;
     bottom: 3px;
-    left: 70px;
+    left: 62px;
     padding: 0%;
     border-spacing: 0px 0px;
     border: none;
@@ -563,10 +563,10 @@
 .container__row73 {
     position: absolute;
     top: 381px;
-    left: 380px;
-    width: 275px;
+    left: 366px;
+    width: 289px;
     height: 47px;
-    max-width: 275px;
+    max-width: 289px;
     max-height: 47px;
     background-color: white;
     border-style: solid;

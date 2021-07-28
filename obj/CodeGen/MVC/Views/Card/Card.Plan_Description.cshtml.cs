@@ -203,23 +203,23 @@ WriteLiteral(" class=\"plan-description-card-action\"");
 
 WriteLiteral(">\r\n                <a");
 
-WriteLiteral(" class=\"btn-red\"");
+WriteLiteral(" class=\"btn-red text-decoration-none\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1198), Tuple.Create("\"", 1239)
+WriteAttribute("href", Tuple.Create(" href=\"", 1219), Tuple.Create("\"", 1260)
             
             #line 28 "..\..\MVC\Views\Card\Card.Plan_Description.cshtml"
-, Tuple.Create(Tuple.Create("", 1205), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.ActionUrl)
+, Tuple.Create(Tuple.Create("", 1226), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.ActionUrl)
             
             #line default
             #line hidden
-, 1205), false)
+, 1226), false)
 );
 
 WriteLiteral(">");
 
             
             #line 28 "..\..\MVC\Views\Card\Card.Plan_Description.cshtml"
-                                                                        Write(Model.ActionName);
+                                                                                             Write(Model.ActionName);
 
             
             #line default
