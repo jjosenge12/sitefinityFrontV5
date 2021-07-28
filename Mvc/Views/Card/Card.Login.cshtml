@@ -20,7 +20,14 @@
     <div class="row customRow flex-column-reverse flex-lg-row align-items-center">
         <div class="col-12 col-lg-7">
             <div class="login-img">
-                <img src="/images/default-source/tfsm/my-tfsm/tfsm-banner-bienvenida.png" class="img-fluid custom-img-fluid" />
+                @if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
+                {
+                    <img src="@Model.SelectedSizeUrl" class="img-fluid custom-img-fluid" />
+                }
+                else
+                {
+                    <img src="/images/default-source/tfsm/my-tfsm/tfsm-banner-bienvenida.png" class="img-fluid custom-img-fluid" />
+                }
             </div>
         </div>
         <!-- COLUMNA VARIABLE -->
