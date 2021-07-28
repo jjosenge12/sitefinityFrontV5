@@ -67,7 +67,6 @@
         line-height: 48px;
         text-align: center;
         color: #ffffff;
-        /*margin-bottom: 30px;*/
     }
 
     @media(max-width: 767px){
@@ -79,5 +78,9 @@
 
         .black-card{
             min-height: 224px;
+        }
+
+        .btn-red{
+            width: 100%;
         }
     }
