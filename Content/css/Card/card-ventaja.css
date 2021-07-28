@@ -87,3 +87,9 @@
     flex: 1 1 auto;
     color: #58595B;
 }
+
+@media(max-width: 1199px){
+    .ventaja-card-container{
+        padding: 10px 0;
+    }
+}
