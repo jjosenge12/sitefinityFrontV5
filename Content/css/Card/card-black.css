@@ -67,6 +67,7 @@
         line-height: 48px;
         text-align: center;
         color: #ffffff;
+        margin-bottom: 30px;
     }
 
     @media(max-width: 767px){
