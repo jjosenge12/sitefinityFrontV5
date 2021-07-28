@@ -55,7 +55,7 @@
         padding: 16px;
         background-color: #121212;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         flex-direction: column;
         min-height: 288px;
@@ -67,7 +67,7 @@
         line-height: 48px;
         text-align: center;
         color: #ffffff;
-        margin-bottom: 30px;
+        /*margin-bottom: 30px;*/
     }
 
     @media(max-width: 767px){
