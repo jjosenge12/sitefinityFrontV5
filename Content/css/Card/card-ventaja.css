@@ -1,0 +1,89 @@
+﻿.color-red {
+    color: #cc0000;
+}
+
+.color-gray-1 {
+    color: #dddbda;
+}
+
+.color-gray-2 {
+    color: #858585;
+}
+
+.color-gray-4 {
+    color: #3e3e3c;
+}
+
+.btn-red,
+.btn-red:active,
+.btn-red:focus,
+.btn-red_inverted:hover {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 40px;
+    background: #cc0000;
+    border-radius: 20px;
+    border: 1px solid #cc0000;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+}
+
+    .btn-red_inverted,
+    .btn-red_inverted:active,
+    .btn-red_inverted:focus,
+    .btn-red:hover {
+        display: flex;
+        align-items: center;
+        padding: 12px 24px;
+        height: 40px;
+        background: #fff;
+        color: #cc0000;
+        border: 1px solid #cc0000;
+        transition: all 3ms;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        outline: none;
+        justify-content: center;
+    }
+
+.ventaja-card {
+    display: flex;
+    flex-flow: column;
+    padding: 16px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    height: 100%;
+    margin: -10px 0;
+}
+
+.ventaja-card-container {
+    margin: 20px 0;
+    height: 100%;
+    width: 100%;
+}
+
+.ventaja-card > div {
+    /*padding: 5px 0;*/
+}
+
+.ventaja-card-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    flex: 0 1 auto;
+    color: #121212;
+    padding: 10px 0;
+}
+
+.ventaja-card-body {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    flex: 1 1 auto;
+    color: #58595B;
+}

@@ -158,7 +158,7 @@ WriteLiteral(">");
 
             
             #line 19 "..\..\MVC\Views\Card\Card.Plan_Description.cshtml"
-                                               Write(Html.HtmlSanitize(Model.Description));
+                                               Write(Html.Raw(Model.Description.Replace("\r\n", "<br />").Replace("\n", "<br />").Replace("\r", "<br />")));
 
             
             #line default
@@ -205,14 +205,14 @@ WriteLiteral(">\r\n                <a");
 
 WriteLiteral(" class=\"btn-red\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1133), Tuple.Create("\"", 1174)
+WriteAttribute("href", Tuple.Create(" href=\"", 1198), Tuple.Create("\"", 1239)
             
             #line 28 "..\..\MVC\Views\Card\Card.Plan_Description.cshtml"
-, Tuple.Create(Tuple.Create("", 1140), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.ActionUrl)
+, Tuple.Create(Tuple.Create("", 1205), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.ActionUrl)
             
             #line default
             #line hidden
-, 1140), false)
+, 1205), false)
 );
 
 WriteLiteral(">");

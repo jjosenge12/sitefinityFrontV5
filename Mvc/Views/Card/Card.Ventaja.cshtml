@@ -1,0 +1,34 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-ventaja.css"))
+
+<div class="ventaja-card-container">
+    <div class="ventaja-card">
+        @if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
+        {
+            <div><img src="@Model.SelectedSizeUrl" title="@Model.ImageTitle" alt="@Model.ImageAlternativeText" /></div>
+        }
+        @if (!string.IsNullOrEmpty(Model.Heading))
+        {
+            <div class="ventaja-card-title">@Html.Raw(Model.Heading.Replace("\r\n", "<br />").Replace("\n", "<br />").Replace("\r", "<br />"))</div>
+        }
+        else
+        {
+            <div class="ventaja-card-title">Title</div>
+        }
+        @if (!string.IsNullOrEmpty(Model.Description))
+        {
+            <div class="ventaja-card-body">@Html.Raw(Model.Description.Replace("\r\n", "<br />").Replace("\n", "<br />").Replace("\r", "<br />"))</div>
+        }
+        else
+        {
+            <div class="ventaja-card-body">Description</div>
+        }
+    </div>
+</div>

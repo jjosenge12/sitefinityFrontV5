@@ -1090,7 +1090,8 @@
     <Content Include="Content\css\Card\card-login.css" />
     <Content Include="Content\css\Card\card-mis-cotizaciones.css" />
     <Content Include="Content\css\Card\card-payment.css" />
-    <Content Include="Content\css\Card\card-plan-description.css" />
+    <Content Include="Content\css\Card\card-plan-description - Copy.css" />
+    <Content Include="Content\css\Card\card-ventaja.css" />
     <Content Include="Content\css\Card\card-solicitud-digital.css" />
     <Content Include="Content\css\Carousel\carousel-designer.css" />
     <Content Include="Content\css\Cotizador\cotizador.css" />
@@ -1457,7 +1458,7 @@
     <Content Include="Mvc\Views\Card\Card.Info_Corporativa.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Login.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Payment.cshtml" />
-    <Content Include="Mvc\Views\Card\Card.Plan_Description.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Ventaja.cshtml" />
     <Content Include="Mvc\Views\Carousel\Index.cshtml" />
     <Content Include="Mvc\Views\Content\Fonts\ToyotaType-Black.otf" />
     <Content Include="Mvc\Views\Content\Fonts\ToyotaType-BlackIt.otf" />
@@ -1680,6 +1681,7 @@
     <Content Include="Content\css\Pdf\fonts\ToyotaType_Convertida\ToyotaType-Semibold.ttf" />
     <Content Include="Content\css\Pdf\fonts\ToyotaType_Convertida\ToyotaType-SemiboldIt.ttf" />
     <Content Include="Mvc\Views\Card\Card.ButtonRed.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Plan_Description - Copy.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>

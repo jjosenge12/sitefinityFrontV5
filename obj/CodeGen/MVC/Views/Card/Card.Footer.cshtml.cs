@@ -299,7 +299,15 @@ WriteLiteral(" class=\"footerItem\"");
 
 WriteLiteral("><a");
 
-WriteLiteral(" href=\"/nuestros-planes/arrendamiento-financiero\"");
+WriteLiteral(" href=\"/arrendamientos\"");
+
+WriteLiteral(">Planes de Arrendamiento</a></li>\r\n                <li");
+
+WriteLiteral(" class=\"footerItem\"");
+
+WriteLiteral("><a");
+
+WriteLiteral(" href=\"/arrendamientos/arrendamiento-financiero\"");
 
 WriteLiteral(">Arrendamiento Financiero</a></li>\r\n                <li");
 
@@ -307,7 +315,7 @@ WriteLiteral(" class=\"footerItem\"");
 
 WriteLiteral("><a");
 
-WriteLiteral(" href=\"/nuestros-planes/arrendamiento-puro\"");
+WriteLiteral(" href=\"/arrendamientos/arrendamiento-puro\"");
 
 WriteLiteral(">Arrendamiento Puro</a></li>\r\n            </ul>\r\n        </div>\r\n        <div");
 

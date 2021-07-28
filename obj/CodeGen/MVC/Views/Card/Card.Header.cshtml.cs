@@ -396,29 +396,19 @@ WriteLiteral(">\r\n            <div>\r\n                <a");
 
 WriteLiteral(" class=\"menuLink\"");
 
-WriteLiteral(" href=\"/nuestros-planes/arrendamiento-financiero\"");
+WriteLiteral(" href=\"/arrendamientos/arrendamiento-financiero\"");
 
 WriteLiteral(">Arrendamiento Financiero</a>\r\n                <a");
 
 WriteLiteral(" class=\"menuLink\"");
 
-WriteLiteral(" href=\"/nuestros-planes/arrendamiento-puro\"");
+WriteLiteral(" href=\"/arrendamientos/arrendamiento-puro\"");
 
 WriteLiteral(">Arrendamiento Puro</a>\r\n            </div>\r\n        </span>\r\n        <a");
 
 WriteLiteral(" class=\"toggleMenu\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 4619), Tuple.Create("\"", 4705)
-            
-            #line 64 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 4626), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlOfertas"].ToString()
-            
-            #line default
-            #line hidden
-, 4626), false)
-);
-
-WriteLiteral(" target=\"_blank\"");
+WriteLiteral(" href=\"/promociones\"");
 
 WriteLiteral(">Promociones</a>\r\n        <div");
 
