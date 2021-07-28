@@ -473,7 +473,7 @@ function getFormValues() {
         Modelo: $("#car_version option:selected")[0].dataset.anio,
         precioAuto: $("#car_version").val(),
         EngancheDeposito: $("#hitch-range").val(),
-        TipoPersona: $("#select-personalidad-fiscal .select-button.selected")[0].dataset.value,
+        TipoPersona: normalize($("#select-personalidad-fiscal .select-button.selected")[0].dataset.value),
         Estado: $("#select-state option:selected")[0].innerHTML,
         Aseguradora: $("#select-insurance option:selected")[0].innerHTML,
         Cobertura: $("#select-coverage option:selected")[0].innerHTML,
