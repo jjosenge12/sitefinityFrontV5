@@ -423,8 +423,8 @@ $(document).ready(function () {
         var data = {
             DatosCotizar: cotizacion,
             Plazo: form.Plazo,
-            ImagenAuto: window.location.origin + '/' + form.ImagenAuto,
-            ImagenModelo: window.location.origin + '/' + form.ImagenModelo
+            ImagenAuto: window.config.origin + '/' + form.ImagenAuto,
+            ImagenModelo: window.config.origin + '/' + form.ImagenModelo
         };
 
         $.ajax(window.config.urlbase + "/DownloadPlanPdf", {

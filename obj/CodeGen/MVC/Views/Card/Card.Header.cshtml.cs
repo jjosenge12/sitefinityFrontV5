@@ -270,7 +270,7 @@ WriteAttribute("href", Tuple.Create(" href=\"", 2434), Tuple.Create("\"", 2522)
 
 WriteLiteral(" id=\"my-tfsm\"");
 
-WriteLiteral(">My TFSM</a>\r\n            <a");
+WriteLiteral(">My TFS</a>\r\n            <a");
 
 WriteLiteral(" href=\"/cotizador\"");
 
@@ -324,19 +324,19 @@ WriteLiteral(">\r\n        <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 3175), Tuple.Create("\"", 3263)
+WriteAttribute("href", Tuple.Create(" href=\"", 3174), Tuple.Create("\"", 3262)
             
             #line 43 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 3182), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
+, Tuple.Create(Tuple.Create("", 3181), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
             
             #line default
             #line hidden
-, 3182), false)
+, 3181), false)
 );
 
 WriteLiteral(" id=\"my-tfsm-menu\"");
 
-WriteLiteral(">My TFSM</a>\r\n        <a");
+WriteLiteral(">My TFS</a>\r\n        <a");
 
 WriteLiteral(" href=\"/tfsm/home-delivery\"");
 

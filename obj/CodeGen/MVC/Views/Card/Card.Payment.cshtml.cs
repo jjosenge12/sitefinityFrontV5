@@ -282,7 +282,34 @@ WriteLiteral(" />\r\n");
             
             #line default
             #line hidden
-WriteLiteral("    </div>\r\n</div>");
+WriteLiteral("    </div>\r\n    <div>");
+
+            
+            #line 40 "..\..\MVC\Views\Card\Card.Payment.cshtml"
+    Write(Model.ContentType);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</div>\r\n    <div>");
+
+            
+            #line 41 "..\..\MVC\Views\Card\Card.Payment.cshtml"
+    Write(Model.EnableSocialSharing);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</div>\r\n    <div>");
+
+            
+            #line 42 "..\..\MVC\Views\Card\Card.Payment.cshtml"
+    Write(Model.ProviderName);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</div>\r\n</div>\r\n\r\n");
 
         }
     }

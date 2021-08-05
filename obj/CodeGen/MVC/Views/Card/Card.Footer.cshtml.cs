@@ -65,12 +65,17 @@ Write(Html.Script(ScriptRef.JQuery, "top", true));
             #line hidden
 WriteLiteral("\r\n");
 
-WriteLiteral("\r\n");
+            
+            #line 8 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true));
 
+            
+            #line default
+            #line hidden
 WriteLiteral("\r\n");
 
             
-            #line 10 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 9 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top", true));
 
             
@@ -79,7 +84,7 @@ Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery-ui.min.js"), "top"
 WriteLiteral("\r\n");
 
             
-            #line 11 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 10 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"), "top", true));
 
             
@@ -88,8 +93,8 @@ Write(Html.Script(Url.WidgetContent("~/Content/scripts/jquery.validate.min.js"),
 WriteLiteral("\r\n");
 
             
-            #line 12 "..\..\MVC\Views\Card\Card.Footer.cshtml"
-Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/toastnotify.js", "top", true));
+            #line 11 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/toastnotify.js"), "top", true));
 
             
             #line default
@@ -97,7 +102,7 @@ Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TF
 WriteLiteral("\r\n");
 
             
-            #line 13 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 12 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true));
 
             
@@ -106,7 +111,7 @@ Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TF
 WriteLiteral("\r\n\r\n");
 
             
-            #line 15 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 14 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 
             
@@ -115,8 +120,8 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/jquery-ui.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 16 "..\..\MVC\Views\Card\Card.Footer.cshtml"
-Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/toastnotify.css")));
+            #line 15 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+Write(Html.StyleSheet(Url.Content("~/Content/css/toastnotify.css")));
 
             
             #line default
@@ -124,7 +129,7 @@ Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitef
 WriteLiteral("\r\n");
 
             
-            #line 17 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 16 "..\..\MVC\Views\Card\Card.Footer.cshtml"
 Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css")));
 
             
@@ -213,7 +218,7 @@ WriteLiteral("\r\n                    class=\"btn btn-primary custom-button text
 WriteLiteral("\r\n                    data-sitekey=\"");
 
             
-            #line 42 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 41 "..\..\MVC\Views\Card\Card.Footer.cshtml"
                              Write(System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString());
 
             
@@ -221,8 +226,8 @@ WriteLiteral("\r\n                    data-sitekey=\"");
             #line hidden
 WriteLiteral("\"");
 
-WriteLiteral("\r\n                    >\r\n                ENVIAR\r\n            </button>\r\n        <" +
-"/div>\r\n    </div>\r\n    <hr");
+WriteLiteral(">\r\n                ENVIAR\r\n            </button>\r\n        </div>\r\n    </div>\r\n   " +
+" <hr");
 
 WriteLiteral(" style=\"border-top:1px solid #58595B;\"");
 

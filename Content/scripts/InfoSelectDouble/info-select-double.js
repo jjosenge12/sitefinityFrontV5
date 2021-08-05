@@ -24,18 +24,25 @@ $(document).ready(function () {
         $("#select-two").removeAttr("disabled");
 
         if (e.params.data.id != "0") {
-            $.getJSON(`/get-docs?folderId=${e.params.data.id}`, null, function (data) {
-                console.log(data);
-                $("#select-two").html($("#select-two option[value='0']"));
-                $.each(data.documents, function () {
-                    files.push(this);
+            $.ajax(`/get-docs?folderId=${e.params.data.id}`, {
+                success: function (data) {
+                    console.log(data);
+                    $("#select-two").html($("#select-two option[value='0']"));
+                    $.each(data.documents, function () {
+                        files.push(this);
 
-                    var option = document.createElement('option');
-                    option.innerHTML = this.Title;
-                    option.value = this.Id;
-                    option.dataset.url = this.Url;
-                    $("#select-two").append(option);
-                });
+                        var option = document.createElement('option');
+                        option.innerHTML = this.Title;
+                        option.value = this.Id;
+                        option.dataset.url = this.Url;
+                        $("#select-two").append(option);
+                    });
+
+                    $('#select-two').val('0');
+                    $('#select-two').trigger('change');
+                },
+                beforeSend: showLoader,
+                complete: hideLoader
             });
         }
     });
