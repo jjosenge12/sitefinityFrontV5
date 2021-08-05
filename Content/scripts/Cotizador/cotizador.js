@@ -90,10 +90,14 @@ $(document).ready(function () {
     $("#step-2-form").validate({
         rules: {
             name: {
-                required: true
+                required: true,
+                isValidName: true,
+                minlength: 3
             },
             lastname: {
-                required: true
+                required: true,
+                isValidName: true,
+                minlength: 3
             },
             email: {
                 required: true,
@@ -789,6 +793,7 @@ function commitSalesforce() {
     var data = {
         Estado: form.Estado,
         Aseguradora: form.Aseguradora,
+        Mensualidad: formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
         Cobertura: form.Cobertura,
         Plan: form.PlanCotizar,
         Movil: form.Telefono,
@@ -801,6 +806,7 @@ function commitSalesforce() {
         Vesion: form.Vesion,
         TipoPersona: form.TipoPersona,
         Enganche: form.EngancheDeposito,
+        Plazo: form.Plazo,
         Ballon: "text_ballon",
         DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
     }
@@ -928,6 +934,7 @@ function sendDataSalesforce() {
             "DepositoGarantia": formatter.format(_data.DepositoGarantia),
             "AceptoTerminosYCondiciones": 'SiAcepto',
             "CodigoDistribuidor": $("#step-5-distribuidores").select2('data')[0].codigo,
+            "Distribuidor": $("#step-5-distribuidores").find(':selected')[0].innerHTML,
             "EstadoSeleccionado": _data.Estado,
         }
 

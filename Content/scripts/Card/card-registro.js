@@ -118,10 +118,12 @@
         },
         rules: {
             _name: {
-                required: true
+                required: true,
+                isValidName: true
             },
             _lastname: {
-                required: true
+                required: true,
+                isValidName: true
             },
             _rfc: {
                 required: true,
