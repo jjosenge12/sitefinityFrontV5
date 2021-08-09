@@ -15,6 +15,12 @@
         if ($("#registro-nc-form").valid()) {
             if ($("#registro-terms").prop("checked")) {
                 encrypt_reg(false);
+
+                sessionStorage.setItem("reg-client", false);
+                sessionStorage.setItem("reg-name", document.getElementById("nameVisible").value);
+                sessionStorage.setItem("reg-lastname", document.getElementById("lastnameVisible").value);
+                sessionStorage.setItem("reg-email", document.getElementById("emailVisible").value);
+                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible").value);
             }
             else {
                 e.preventDefault();
@@ -31,6 +37,11 @@
         if ($("#registro-c-form").valid()) {
             if ($("#registro-terms").prop("checked")) {
                 encrypt_reg(true);
+
+                sessionStorage.setItem("reg-client", true);
+                sessionStorage.setItem("reg-clientId", document.getElementById("clientVisible").value);
+                sessionStorage.setItem("reg-email", document.getElementById("emailVisible").value);
+                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible").value);
             }
             else {
                 e.preventDefault();
@@ -119,11 +130,13 @@
         rules: {
             _name: {
                 required: true,
-                isValidName: true
+                isValidName: true,
+                minlength: 3
             },
             _lastname: {
                 required: true,
-                isValidName: true
+                isValidName: true,
+                minlength: 3
             },
             _rfc: {
                 required: true,

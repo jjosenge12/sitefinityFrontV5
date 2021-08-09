@@ -1225,6 +1225,7 @@
     <Content Include="Content\scripts\Card\card-header-logged.js" />
     <Content Include="Content\scripts\Card\card-login.js" />
     <Content Include="Content\scripts\Card\card-mis-cotizaciones.js" />
+    <Content Include="Content\scripts\Card\card-cambiar-contrasena.js" />
     <Content Include="Content\scripts\Card\card-registro.js" />
     <Content Include="Content\scripts\Card\card-solicitud-digital.js" />
     <Content Include="Content\scripts\Carousel\carousel-designer.js" />
@@ -1649,7 +1650,7 @@
     <Content Include="Mvc\Views\InfoSelectSingle\DesignerView.Custom.json" />
     <Content Include="Mvc\Views\Card\Card.Distribuidores.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Login_Cliente.cshtml" />
-    <Content Include="Mvc\Views\Card\Card.Registro_NoCliente.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.CambiarContrasena.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Registro_Exito.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Registro_Cliente.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Header_Logged.cshtml" />
@@ -1686,6 +1687,7 @@
     <Content Include="Mvc\Views\Card\Card.ButtonRed.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Plan_Description.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Black.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Registro_NoCliente.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>
