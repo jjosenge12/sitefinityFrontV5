@@ -544,6 +544,52 @@ WriteLiteral(" class=\"btn-red\"");
 
 WriteLiteral(">SI, ACEPTO</button>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div");
 
+WriteLiteral(" id=\"termsModal\"");
+
+WriteLiteral(" style=\"display:none;\"");
+
+WriteLiteral(">\r\n    <div");
+
+WriteLiteral(" class=\"modal-custom\"");
+
+WriteLiteral(">\r\n        <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n            <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(">T&eacute;rminos de servicio de TFS</span>\r\n            <div");
+
+WriteLiteral(" class=\"modal-header-custom_close\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" id=\"termsModalClose\"");
+
+WriteLiteral(" data-modal=\"terms\"");
+
+WriteLiteral(" class=\"material-icons icon-button\"");
+
+WriteLiteral(">close</span>\r\n            </div>\r\n        </div>\r\n        <div");
+
+WriteLiteral(" id=\"newsletterTermsBody\"");
+
+WriteLiteral(" class=\"modal-body-custom\"");
+
+WriteLiteral(@">
+            Identidad y domicilio del responsable. Toyota Financial Services M&eacute;xico, S.A. de C.V. (en los sucesivo &ldquo;TFSM&rdquo;), con domicilio en Paseo de los Tamarindos 400-B, piso 11, Colonia Bosques de las Lomas, C&oacute;digo Postal 05120,
+            Delegaci&oacute;n Cuajimalpa, en la Ciudad de M&eacute;xico, es el responsable del uso y protecci&oacute;n de sus datos personales, y al respecto le informamos lo siguiente: Finalidades del tratamiento de datos personales. Los datos personales
+            que se recaban de usted, se utilizar&aacute;n para las siguientes finalidades que son necesarias para brindarle los servicios solicitados: identificarlo y autenticarlo a trav&eacute;s de la informaci&oacute;n que proporciona; llevar a cabo
+            los procesos para ofrecerle la informaci&oacute;n que solicita; brindarle cotizaciones de productos y servicios; contactarlo en relaci&oacute;n con su solicitud de informaci&oacute;n; atender y dar seguimiento a dudas, quejas o comentarios
+            en relaci&oacute;n con nuestros servicios; mantener controles administrativos y generar informaci&oacute;n estad&iacute;stica. De manera adicional, su informaci&oacute;n personal ser&aacute; utilizada para las siguientes finalidades secundarias
+            que no son necesarias.
+        </div>
+        ");
+
+WriteLiteral("\r\n    </div>\r\n</div>\r\n<div");
+
 WriteLiteral(" id=\"instagramModal\"");
 
 WriteLiteral(" class=\"siteModal\"");

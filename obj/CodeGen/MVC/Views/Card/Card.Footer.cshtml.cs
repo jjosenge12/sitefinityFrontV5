@@ -384,7 +384,13 @@ WriteLiteral(">Formato ARCO</a></li>\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
-WriteLiteral("><a>T&eacute;rminos y condiciones de uso</a></li>\r\n                <li");
+WriteLiteral("><a");
+
+WriteLiteral(" class=\"social-network\"");
+
+WriteLiteral(" id=\"terms\"");
+
+WriteLiteral(">T&eacute;rminos y condiciones de uso</a></li>\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
