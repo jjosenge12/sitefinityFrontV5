@@ -52,7 +52,7 @@ $(document).ready(function () {
                 }
                 break;
             case "calculate":
-                let calculation = value.replaceAll('Ans', result);
+                let calculation = value.replaceAll('ANS', result);
                 console.log(calculation);
                 if (calculation.match(/^-?[0-9]+(.[0-9]+)?(((\+|-|×|÷){1}[0-9]+(.[0-9]+)?)+)?$/)) {
                     let res = String(calculate(calculation));
