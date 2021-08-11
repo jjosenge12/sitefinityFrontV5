@@ -1220,6 +1220,8 @@
     <Content Include="Content\images\Planes\plan-tradicional.png" />
     <Content Include="Content\images\Video\play.png" />
     <Content Include="Content\scripts\bootstrap.min.js" />
+    <Content Include="Content\css\Card\card-calculadora.css" />
+    <Content Include="Content\scripts\Card\card-calculadora.js" />
     <Content Include="Content\scripts\Card\card-distribuidores.js" />
     <Content Include="Content\scripts\Card\card-estados-financieros.js" />
     <Content Include="Content\scripts\Card\card-header-logged.js" />
@@ -1688,6 +1690,7 @@
     <Content Include="Mvc\Views\Card\Card.Plan_Description.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Black.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Registro_NoCliente.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Calculadora.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>

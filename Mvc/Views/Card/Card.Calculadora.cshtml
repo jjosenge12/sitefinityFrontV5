@@ -1,0 +1,83 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-calculadora.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-calculadora.css"))
+
+<div class="calc">
+    <div id="screen" class="calc-screen">0</div>
+    <div class="calc-keyboard">
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="calc-btn orange" data-action="number">ANS</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn orange" data-action="clear">C</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn orange" data-action="backspace">DEL</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn orange" data-action="operator">÷</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">7</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">8</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">9</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn orange" data-action="operator">×</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">4</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">5</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">6</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn orange" data-action="operator">-</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">1</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">2</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">3</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn orange" data-action="operator">+</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6">
+                <div class="calc-btn" data-action="number">0</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn" data-action="number">.</div>
+            </div>
+            <div class="col-3">
+                <div class="calc-btn purple" data-action="calculate">=</div>
+            </div>
+        </div>
+    </div>
+</div>

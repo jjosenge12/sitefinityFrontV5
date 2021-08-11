@@ -546,6 +546,8 @@ WriteLiteral(">SI, ACEPTO</button>\r\n        </div>\r\n    </div>\r\n</div>\r\n
 
 WriteLiteral(" id=\"termsModal\"");
 
+WriteLiteral(" class=\"modal-auto\"");
+
 WriteLiteral(" style=\"display:none;\"");
 
 WriteLiteral(">\r\n    <div");
@@ -573,8 +575,6 @@ WriteLiteral(" data-modal=\"terms\"");
 WriteLiteral(" class=\"material-icons icon-button\"");
 
 WriteLiteral(">close</span>\r\n            </div>\r\n        </div>\r\n        <div");
-
-WriteLiteral(" id=\"newsletterTermsBody\"");
 
 WriteLiteral(" class=\"modal-body-custom\"");
 
