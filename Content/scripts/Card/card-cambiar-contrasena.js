@@ -55,6 +55,12 @@ function submitPassword() {
         data: JSON.stringify(body),
         success: function (res) {
             console.log(res);
+            if (res.isSuccess === "true") {
+                Swal.fire({
+                    icon: "success",
+                    title: "Se ha cambiado la contraseña exitosamente"
+                })
+            }
         },
         error: function (err) {
             console.log(err);
