@@ -57,11 +57,11 @@ function submitPassword() {
         success: function (res) {
             console.log(res);
 
-            $("#rfc").val("");
             $("#password").val("");
             $("#confirm_password").val("");
 
             if (res.isSuccess === "true") {
+                $("#rfc").val("");
                 Swal.fire({
                     icon: "success",
                     title: "Se ha cambiado la contraseña exitosamente"
