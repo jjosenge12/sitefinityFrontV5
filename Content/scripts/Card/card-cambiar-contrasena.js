@@ -69,6 +69,10 @@ function submitPassword() {
                         window.location.replace(window.location.origin + "/tfsm/home-delivery");
                     })
             }
+            else {
+                $("#err").html(res.statusMessage);
+                $("#err").slideDown();
+            }
         },
         error: function (err) {
             console.log(err);
