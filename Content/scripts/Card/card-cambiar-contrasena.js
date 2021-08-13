@@ -14,7 +14,8 @@ $(document).ready(function () {
 
         var header = {
             "Authorization": "Bearer " + token,
-            "Access-Control-Allow-Origin": "*"
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json"
         };
 
         var body = {
