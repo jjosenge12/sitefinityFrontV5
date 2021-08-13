@@ -12,7 +12,7 @@ $(document).ready(function () {
     $("#cambiar-pass-form").submit(function (event) {
         event.preventDefault();
 
-        var header = {
+        var headers = {
             "Authorization": "Bearer " + token,
             "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json"
@@ -27,10 +27,13 @@ $(document).ready(function () {
             beforeSend: showLoader,
             complete: hideLoader,
             method: 'post',
-            headers: header,
-            data: body,
+            headers: headers,
+            data: JSON.stringify(body),
             success: function (res) {
                 console.log(res);
+            },
+            error: function (err) {
+                console.log(err);
             }
         });
     });
