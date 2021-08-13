@@ -11,12 +11,11 @@ $(document).ready(function () {
 
     $("#cambiar-pass-form").submit(function (event) {
         event.preventDefault();
-        submitPassword();
     });
 
     $("#cambiar-pass-form").validate({
         submitHandler: function (form) {
-            $(form).ajaxSubmit();
+            submitPassword();
         },
         rules: {
             rfc: {
