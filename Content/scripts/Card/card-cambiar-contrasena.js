@@ -13,7 +13,8 @@ $(document).ready(function () {
         event.preventDefault();
 
         var header = {
-            "Authorization": "Bearer " + token
+            "Authorization": "Bearer " + token,
+            "Access-Control-Allow-Origin": "*"
         };
 
         var body = {
