@@ -26,7 +26,7 @@ $(document).ready(function () {
             beforeSend: showLoader,
             complete: hideLoader,
             method: 'post',
-            header: header,
+            headers: header,
             data: body,
             success: function (res) {
                 console.log(res);
