@@ -11,6 +11,7 @@ $(document).ready(function () {
 
     $("#cambiar-pass-form").submit(function (event) {
         event.preventDefault();
+        $("#err").slideUp();
     });
 
     $("#cambiar-pass-form").validate({
