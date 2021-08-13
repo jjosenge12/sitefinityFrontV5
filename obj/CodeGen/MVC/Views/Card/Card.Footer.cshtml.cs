@@ -266,15 +266,9 @@ WriteLiteral(" style=\"padding:0;display:none;\"");
 
 WriteLiteral(" id=\"listPlanes\"");
 
-WriteLiteral(">\r\n                <li");
+WriteLiteral(">\r\n                ");
 
-WriteLiteral(" class=\"footerItem\"");
-
-WriteLiteral("><a");
-
-WriteLiteral(" href=\"/nuestros-planes\"");
-
-WriteLiteral(">Planes de Financiamiento</a></li>\r\n                <li");
+WriteLiteral("\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
@@ -298,15 +292,9 @@ WriteLiteral("><a");
 
 WriteLiteral(" href=\"/nuestros-planes/plan-anualidades\"");
 
-WriteLiteral(">Plan Anualidades</a></li>\r\n                <li");
+WriteLiteral(">Plan Anualidades</a></li>\r\n                ");
 
-WriteLiteral(" class=\"footerItem\"");
-
-WriteLiteral("><a");
-
-WriteLiteral(" href=\"/arrendamientos\"");
-
-WriteLiteral(">Planes de Arrendamiento</a></li>\r\n                <li");
+WriteLiteral("\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
