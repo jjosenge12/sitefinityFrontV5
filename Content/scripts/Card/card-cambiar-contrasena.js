@@ -55,11 +55,19 @@ function submitPassword() {
         data: JSON.stringify(body),
         success: function (res) {
             console.log(res);
+
+            $("#rfc").val("");
+            $("#password").val("");
+            $("#confirm_password").val("");
+
             if (res.isSuccess === "true") {
                 Swal.fire({
                     icon: "success",
                     title: "Se ha cambiado la contraseña exitosamente"
                 })
+                    .then(() => {
+                        window.location.replace(window.location.origin + "/tfsm/home-delivery");
+                    })
             }
         },
         error: function (err) {
