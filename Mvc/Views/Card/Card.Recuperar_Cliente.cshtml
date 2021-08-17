@@ -7,7 +7,7 @@
 @Html.Script(ScriptRef.JQuery, "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
-@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-login.js"), "bottom", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-recuperar-cliente.js"), "bottom", true)
 @Html.Script("https://unpkg.com/swiper/swiper-bundle.min.js", "top", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="err"></div>
+                    <div id="err" class="login-error"></div>
 
                     <input type="hidden" value="" name="client" id="client" />
                     <input type="hidden" value="" name="email" id="email" />

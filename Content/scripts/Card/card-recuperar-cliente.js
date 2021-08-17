@@ -8,7 +8,7 @@
 
         switch (error) {
             case '1':
-                $("#err").html(`Email o RFC incorrectos`);
+                $("#err").html(`Id de cliente, RFC o email incorrectos`);
                 $("#err").show();
                 break;
 
@@ -16,19 +16,8 @@
 
     }
 
-    $("#recuperar-nc-form").submit(function (e) {
-        var rfc = document.getElementById("rfcVisible").value;
-        var email = document.getElementById("emailVisible").value;
-        var fail = document.getElementById("fail").value;
-        var ok = document.getElementById("ok").value;
-        var rfc_enc = window.btoa(rfc);
-        var email_enc = window.btoa(email);
-        var fail_enc = window.btoa(fail);
-        var ok_enc = window.btoa(ok);
-        document.getElementById("rfc").value = rfc_enc;
-        document.getElementById("email").value = email_enc;
-        document.getElementById("fail").value = fail_enc;
-        document.getElementById("ok").value = ok_enc;
+    $("#recuperar-c-form").submit(function (e) {
+        encrypt_reg(true);
     });
 
     function encrypt_reg(isClient) {
@@ -71,14 +60,18 @@
         );
     });
 
-    $("#recuperar-nc-form").validate({
+    $("#recuperar-c-form").validate({
         submitHandler: function (form) {
+            document.getElementById("clientVisible").removeAttribute("name");
             document.getElementById("rfcVisible").removeAttribute("name");
             document.getElementById("emailVisible").removeAttribute("name");
 
             $(form).ajaxSubmit();
         },
         rules: {
+            _clientId: {
+                required: true
+            },
             _rfc: {
                 required: true,
                 minlength: 12,
