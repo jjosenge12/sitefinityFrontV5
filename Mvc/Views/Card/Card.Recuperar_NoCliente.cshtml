@@ -7,7 +7,7 @@
 @Html.Script(ScriptRef.JQuery, "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/bootstrap.min.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
-@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-login.js"), "bottom", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-recuperar-nocliente.js"), "bottom", true)
 @Html.Script("https://unpkg.com/swiper/swiper-bundle.min.js", "top", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
@@ -53,7 +53,7 @@
                         <input class="form-input effect-2" type="text" name="_rfc" id="rfcVisible" />
                         <span class="focus-border"></span>
                     </div>
-                    @*<div id="err-cliente"></div>*@
+                    <div id="err"></div>
 
                     <input type="hidden" value="" name="email" id="email" />
                     <input type="hidden" value="" name="rfc" id="rfc" />

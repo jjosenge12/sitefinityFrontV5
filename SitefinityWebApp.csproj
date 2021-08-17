@@ -1225,6 +1225,7 @@
     <Content Include="Content\scripts\Card\card-distribuidores.js" />
     <Content Include="Content\scripts\Card\card-estados-financieros.js" />
     <Content Include="Content\scripts\Card\card-header-logged.js" />
+    <Content Include="Content\scripts\Card\card-recuperar-nocliente.js" />
     <Content Include="Content\scripts\Card\card-login.js" />
     <Content Include="Content\scripts\Card\card-mis-cotizaciones.js" />
     <Content Include="Content\scripts\Card\card-cambiar-contrasena.js" />

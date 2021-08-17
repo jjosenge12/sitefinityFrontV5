@@ -306,14 +306,6 @@ WriteLiteral(" class=\"material-icons\"");
 
 WriteLiteral(">close</span></div>\r\n    </div>\r\n    <div");
 
-WriteLiteral(" class=\"overlay toggleMenu\"");
-
-WriteLiteral(" style=\"display:none;\"");
-
-WriteLiteral(" id=\"menuOverlay\"");
-
-WriteLiteral("></div>\r\n    <div");
-
 WriteLiteral(" class=\"drawerMenu\"");
 
 WriteLiteral(" style=\"display:none;\"");
@@ -324,14 +316,14 @@ WriteLiteral(">\r\n        <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 3174), Tuple.Create("\"", 3262)
+WriteAttribute("href", Tuple.Create(" href=\"", 3091), Tuple.Create("\"", 3179)
             
-            #line 43 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 3181), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
+            #line 42 "..\..\MVC\Views\Card\Card.Header.cshtml"
+, Tuple.Create(Tuple.Create("", 3098), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
             
             #line default
             #line hidden
-, 3181), false)
+, 3098), false)
 );
 
 WriteLiteral(" id=\"my-tfsm-menu\"");
@@ -465,6 +457,14 @@ WriteLiteral(">Vacantes</a>\r\n            </div>\r\n        </span>\r\n        
 WriteLiteral(" href=\"/distribuidores\"");
 
 WriteLiteral(">Distribuidores</a>\r\n    </div>\r\n</div>\r\n<div");
+
+WriteLiteral(" class=\"overlay toggleMenu\"");
+
+WriteLiteral(" style=\"display:none;\"");
+
+WriteLiteral(" id=\"menuOverlay\"");
+
+WriteLiteral("></div>\r\n<div");
 
 WriteLiteral(" id=\"loader-overlay\"");
 
