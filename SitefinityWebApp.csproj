@@ -1089,6 +1089,7 @@
     <Content Include="Content\css\Card\card-info-corporativa.css" />
     <Content Include="Content\css\Card\card-login.css" />
     <Content Include="Content\css\Card\card-mis-cotizaciones.css" />
+    <Content Include="Content\css\Card\card-noticia.css" />
     <Content Include="Content\css\Card\card-payment.css" />
     <Content Include="Content\css\Card\card-plan-description.css" />
     <Content Include="Content\css\Card\card-black.css" />
@@ -1693,6 +1694,7 @@
     <Content Include="Mvc\Views\Card\Card.Black.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Registro_NoCliente.cshtml" />
     <Content Include="Mvc\Views\Card\Card.Calculadora.cshtml" />
+    <Content Include="Mvc\Views\Card\Card.Noticia.cshtml" />
     <None Include="packages.config" />
     <Content Include="SampleTemplate.cshtml">
       <Generator>RazorGenerator</Generator>
