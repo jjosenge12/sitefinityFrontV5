@@ -338,8 +338,14 @@
                                 <div class="title">Selecciona el monto de <span class="title-enganche">enganche</span> con el que deseas iniciar tu plan</div>
                             </div>
                         </div>
+
+
+
+
+
                         <div class="row mt-4 step-4-8" style="display: none;">
                             <div class="col-12">
+                                <div class="title" id="porcentaje">10%</div>
                                 <div class="title"><input type="range" id="hitch-range" min="0" max="100000" step="5000" value="0" /></div>
                             </div>
                         </div>
@@ -348,7 +354,13 @@
                                 <div id="hitch-minus" class="range-button">
                                     <img src="~/Content/images/Cotizador/menos.png" />
                                 </div>
-                                <div id="hitch-text">$ 0 M.N.</div>
+
+                                <div class="d-flex hitch-content">
+                                    <div>$</div>
+                                    <input id="hitch-text" type="number" value="0"/>
+                                    <div>M.N.</div>
+                                </div>
+
                                 <div id="hitch-plus" class="range-button">
                                     <img src="~/Content/images/Cotizador/mas.png" />
                                 </div>
@@ -359,6 +371,13 @@
                                 <button type="button" id="step-4-finish" class="btn-red w-100">FINALIZAR</button>
                             </div>
                         </div>
+
+
+
+
+
+
+
                     </div>
                 </div>
             </div>

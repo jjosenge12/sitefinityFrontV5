@@ -259,7 +259,7 @@ $(document).ready(function () {
         $("#hitch-range").attr("min", form.EngancheDeposito);
         $("#hitch-range").attr("max", form.MaxEnganche);
         $("#hitch-range").val(form.EngancheDeposito);
-        $("#hitch-text").html("$ " + form.EngancheDeposito + " M.N.");
+        $("#hitch-text").val(form.EngancheDeposito);
 
         formNextStep(2);
     });
@@ -322,28 +322,63 @@ $(document).ready(function () {
 
     $("#hitch-range").change(function () {
         form.hitch = $("#hitch-range").val();
-        $("#hitch-text").html("$ " + Number(form.hitch).toFixed(2) + " M.N.");
+        $("#hitch-text").val(Number(form.hitch).toFixed(2));
+        let porcentaje = (form.hitch * 100) / form.precioAuto;
+        $("#porcentaje").html(porcentaje.toFixed(0) + " %");
+
     });
 
     $("#hitch-minus").click(function () {
         let val = $("#hitch-range").val();
         let calc = Number(val) - 5000;
+
+        let porcentaje = (calc * 100) / form.precioAuto;
+
         if (calc >= (form.precioAuto / 10)) {
             $("#hitch-range").val(calc);
             $("#hitch-range").change();
-            $("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
+            $("#porcentaje").html(porcentaje.toFixed(0)+ " %");
+            //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
+            $("#hitch-text").val(calc.toFixed(2));
         }
     });
 
     $("#hitch-plus").click(function () {
         let val = $("#hitch-range").val();
         let calc = Number(val) + 5000, max = form.precioAuto - maxEnganche;
+
+        let porcentaje = (calc * 100) / form.precioAuto;
+
         if (calc <= max) {
             $("#hitch-range").val(calc);
             $("#hitch-range").change();
-            $("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
+            $("#porcentaje").html(porcentaje.toFixed(0) + " %");
+            //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
+            $("#hitch-text").val(calc.toFixed(2));
         }
     });
+
+    $("#hitch-text").on('keydown',function () {
+        let val = this.value;
+        if (val >= (form.precioAuto / 10) && val <= (form.precioAuto - maxEnganche)) {
+            $("#hitch-range").val(val);
+            //$("#hitch-range").change();
+            let porcentaje = (val * 100) / form.precioAuto;
+            $("#porcentaje").html(porcentaje.toFixed(0) + " %");
+        }
+    })
+
+    $("#hitch-text").blur(function () {
+        let val = this.value;
+        if (val < (form.precioAuto / 10) || val > (form.precioAuto - maxEnganche)) {
+            let valBarra = $("#hitch-range").val();
+            this.value = valBarra;
+            console.log("entro");
+
+        }
+    })
+
+
 
     $("#step-4-finish").click(function () {
         if (validateStepFour()) {
