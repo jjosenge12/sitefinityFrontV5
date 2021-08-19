@@ -358,11 +358,12 @@ $(document).ready(function () {
         }
     });
 
-    $("#hitch-text").on('keydown',function () {
-        let val = this.value;
+    $("#hitch-text").on('keyup',function (e) {
+        let val = Number($(this).val());
+        console.log(val);
         if (val >= (form.precioAuto / 10) && val <= (form.precioAuto - maxEnganche)) {
+            console.log("valid")
             $("#hitch-range").val(val);
-            //$("#hitch-range").change();
             let porcentaje = (val * 100) / form.precioAuto;
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
         }

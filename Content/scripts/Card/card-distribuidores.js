@@ -79,9 +79,10 @@ function initMap() {
                 var contentString = '';
                 contentString += '<div class="container marker-popup" style="max-width:35rem;">';
                 contentString += '<input type="hidden" id="dealerId" value="' + dealer.IdDealer + '"/>';
+                contentString += '<input type="hidden" id="dealerCode" value="' + dealer.Code + '"/>';
                 contentString += '<div class="row">';
                 contentString += '<div class="col-9 popup-left">';
-                contentString += '<div><p class="popup-title">' + dealer.Dealer + '</p></div>';
+                contentString += '<div><p class="popup-title" id="dealerName">' + dealer.Dealer + '</p></div>';
                 contentString += '<hr style="color:#ffffff; margin: 0.5rem 0;"/>';
                 contentString += '<div><p class="adreess">' + dealer.Adress + '</p></div>';
 
@@ -316,7 +317,14 @@ $(document).ready(function () {
     $("#contact-form").validate({
         rules: {
             name: {
-                required: true
+                required: true,
+                isValidName: true,
+                minlength: 3
+            },
+            lastname: {
+                required: true,
+                isValidName: true,
+                minlength: 3
             },
             phone: {
                 required: true
@@ -333,12 +341,14 @@ $(document).ready(function () {
     });
 
     $("#sendContact").click(function () {
-        closeModal("contactModal");
         if ($("#contact-form").valid()) {
+            closeModal("contactModal");
 
             var data = {};
-            data.CodigoDistribuidor = $("#dealerId").val();
+            data.CodigoDistribuidor = $("#dealerCode").val();
+            data.Distribuidor = $("#dealerName").html();
             data.Nombre = $('#contact-name').val();
+            data.Apellido = $('#contact-lastname').val();
             data.Movil = $('#contact-phone').val();
             data.Email = $('#contact-email').val();
 
@@ -347,7 +357,13 @@ $(document).ready(function () {
                 url: window.config.urlbase + '/SalesForceDistribuidores',
                 data: data,
                 beforeSend: showLoader,
-                complete: hideLoader,
+                complete: function () {
+                    hideLoader();
+                    $('#contact-name').val("");
+                    $('#contact-lastname').val("");
+                    $('#contact-phone').val("");
+                    $('#contact-email').val("");
+                },
                 dataType: "json",
                 success: function (result) {
                     console.log(result);
@@ -355,6 +371,7 @@ $(document).ready(function () {
                         text: "¡Gracias! Nos pondremos en contacto contigo.",
                         duration: 5000
                     });
+
                 },
                 error: function (err) {
                     consoler.log(err);

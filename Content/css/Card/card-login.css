@@ -100,8 +100,7 @@
 
 .login-error {
     padding: 8px;
-    border-radius: 12px;
-    background: red;
+    background: #cc0000;
     color: white;
     text-align: center;
 }

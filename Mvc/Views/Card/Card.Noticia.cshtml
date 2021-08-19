@@ -23,8 +23,8 @@
     }
     @if (!string.IsNullOrEmpty(Model.Description))
     {
-        <p class="card-noticia-body">@Html.HtmlSanitize(Model.Description)</p>
-        @*<p class="card-noticia-body">@Html.Raw(Html.HtmlSanitize(Model.Description.Replace("\r\n", "<br />").Replace("\n", "<br />").Replace("\r", "<br />")))</p>*@
+        @*<p class="card-noticia-body">@Html.HtmlSanitize(Model.Description)</p>*@
+        <p class="card-noticia-body">@Html.Raw(Html.HtmlSanitize(Model.Description.Replace("\r\n", "<br />").Replace("\n", "<br />").Replace("\r", "<br />")))</p>
     }
     else
     {
