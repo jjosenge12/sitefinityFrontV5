@@ -11,6 +11,18 @@
         FloatLabel.init();
     });
 
+    $("#terms-btn").click(function () {
+        console.log("entre");
+        termsCheckbox = "#registro-terms";
+        openModal("newsletterTermsModal");
+    });
+
+    $("#registro-terms").click(function () {
+        console.log("entre");
+        termsCheckbox = "#registro-terms";
+        openModal("newsletterTermsModal");
+    });
+
     $("#registro-nc-form").submit(function (e) {
         if ($("#registro-nc-form").valid()) {
             if ($("#registro-terms").prop("checked")) {
@@ -53,6 +65,29 @@
             e.preventDefault();
         }
     });
+
+    if (window.location.search.includes("err")) {
+        const urlParams = new URLSearchParams(window.location.search);
+        var error = urlParams.get("err");
+
+        switch (error) {
+            case '6':
+                $("#err").html(`Estás registrado como uno de nuestros clientes, por lo que te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
+                En este acceso deberás registrarte con el usuario y contraseña con los que actualmente ingresas
+                a nuestro portal MyTFS`);
+                $("#err").show();
+                break;
+            case '7':
+                $("#err").html(`Este usuario ya se encuentra registrado, te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
+                Para ingresar deberás registrarte con el usuario y contraseña ingresados anteriormente.`);
+                $("#err").show();
+                break;
+            
+
+        }
+
+    }
+
 
     function encrypt_reg(isClient) {
 
@@ -150,8 +185,6 @@
         }
     });
 
-    $("#terms-btn").click(function () {
-        termsCheckbox = "#registro-terms";
-        openModal("newsletterTermsModal");
-    });
+ 
 });
+

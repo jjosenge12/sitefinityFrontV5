@@ -375,6 +375,13 @@ body p {
     margin-right: 15px;
 }
 
+@media (max-width: 1200px){
+    .template-body {
+        min-height: auto;
+    }
+
+}
+
 @media (max-width: 991px) {
     .newsletter input {
         max-width: 100%;

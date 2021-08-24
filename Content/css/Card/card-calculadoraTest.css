@@ -1,0 +1,21 @@
+﻿.calculadora {
+    background-color: grey;
+    padding: 25px;
+    border-radius: 10px;
+    width:100%;
+}
+
+.screen{
+    width: 100%;
+    background-color:white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border:none;
+    margin-bottom: 10px;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}

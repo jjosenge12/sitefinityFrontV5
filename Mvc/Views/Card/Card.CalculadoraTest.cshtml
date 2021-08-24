@@ -1,0 +1,88 @@
+﻿@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.Script(ScriptRef.JQuery, "top", true)
+@Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
+@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-calculadora-test.js"), "top", true)
+
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-calculadoraTest.css"))
+
+<div class="calculadora">
+    <input id="pantalla" class="screen" value="0" />
+
+    <div class="">
+        <div class="row mb-3">
+            <div class="col-3">
+                <button type="button" class="btn btn-danger btn-block" onclick="ultimoResultado()">ANS</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-danger btn-block" onclick="reset()">C</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-danger btn-block" onclick="borrar()">DEL</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-danger btn-block" id="division" value="/" onclick="operacion(value);">/</button>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="7" onclick="numero(value)">7</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="8" onclick="numero(value)">8</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="9" onclick="numero(value);">9</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-danger btn-block" id="multiplicacion" value="x" onclick="operacion(value);">x</button>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="4" onclick="numero(value);">4</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="5" onclick="numero(value);">5</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="6" onclick="numero(value);">6</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-danger btn-block" id="resta" value="-" onclick="operacion(value);">-</button>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="1" onclick="numero(value);">1</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="2" onclick="numero(value);">2</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="3" onclick="numero(value);">3</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-danger btn-block" id="suma" value="+" onclick="operacion(value);">+</button>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-6">
+                <button type="button"class ="btn btn-primary btn-block" value="0" onclick="numero(value);">0</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-block" value="," onclick="numero(value);">.</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-success btn-block" id="result" value="=" onclick="resultado();">=</button>
+            </div>
+        </div>
+    </div>
+</div>

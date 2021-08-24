@@ -106,6 +106,11 @@ $(document).ready(function () {
         }
     });
 
+    $("#step-2-terms").click(function () {
+        termsCheckbox = "#step-2-terms";
+        openModal("newsletterTermsModal");
+    });
+
     $("#step-2-terms-btn").click(function () {
         termsCheckbox = "#step-2-terms";
         openModal("newsletterTermsModal");
@@ -320,12 +325,15 @@ $(document).ready(function () {
     $("#select-term .select-button").click(function () { formNextStep(8); });
     $("#select-cantidad-depositos").change(function () { formNextStep(7); });
 
+    //var slider = document.getElementById("hitch-range");
+    var progress = document.getElementById("progressBar");
+
     $("#hitch-range").change(function () {
         form.hitch = $("#hitch-range").val();
         $("#hitch-text").val(Number(form.hitch).toFixed(2));
         let porcentaje = (form.hitch * 100) / form.precioAuto;
         $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-
+        progress.style.width = (($("#hitch-range").val() * 100) / (form.precioAuto - maxEnganche)) + "%";
     });
 
     $("#hitch-minus").click(function () {
@@ -337,7 +345,8 @@ $(document).ready(function () {
         if (calc >= (form.precioAuto / 10)) {
             $("#hitch-range").val(calc);
             $("#hitch-range").change();
-            $("#porcentaje").html(porcentaje.toFixed(0)+ " %");
+            $("#porcentaje").html(porcentaje.toFixed(0) + " %");
+            progress.style.width = (($("#hitch-range").val() * 100) / (form.precioAuto - maxEnganche)) + "%";
             //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
             $("#hitch-text").val(calc.toFixed(2));
         }
@@ -353,6 +362,7 @@ $(document).ready(function () {
             $("#hitch-range").val(calc);
             $("#hitch-range").change();
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
+            progress.style.width = (($("#hitch-range").val() * 100) / (form.precioAuto - maxEnganche)) + "%";
             //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
             $("#hitch-text").val(calc.toFixed(2));
         }
@@ -366,6 +376,8 @@ $(document).ready(function () {
             $("#hitch-range").val(val);
             let porcentaje = (val * 100) / form.precioAuto;
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
+            progress.style.width = (($("#hitch-range").val() * 100) / (form.precioAuto - maxEnganche)) + "%";
+
         }
     })
 
@@ -378,6 +390,16 @@ $(document).ready(function () {
 
         }
     })
+
+
+    //slider.oninput = function () {
+    //    if (slider.value > 50000) {
+    //        progress.style.width = (slider.value / 100) + "%";
+    //    }
+    //    else {
+    //        progress.style.width = (slider.value / 100) + "%";
+    //    }
+    //};
 
 
 
@@ -432,6 +454,11 @@ $(document).ready(function () {
     });
 
     $("#step-5-terms-btn").click(function () {
+        termsCheckbox = "#step-5-terms";
+        openModal("newsletterTermsModal");
+    });
+
+    $("#step-5-terms").click(function () {
         termsCheckbox = "#step-5-terms";
         openModal("newsletterTermsModal");
     });
