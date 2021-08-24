@@ -333,7 +333,10 @@ $(document).ready(function () {
         $("#hitch-text").val(Number(form.hitch).toFixed(2));
         let porcentaje = (form.hitch * 100) / form.precioAuto;
         $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-        progress.style.width = (($("#hitch-range").val() * 100) / (form.precioAuto - maxEnganche)) + "%";
+
+        let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+        console.log(progress_val);
+        progress.style.width = progress_val + "%";
     });
 
     $("#hitch-minus").click(function () {
