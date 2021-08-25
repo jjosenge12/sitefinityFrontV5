@@ -1112,6 +1112,7 @@
     <Content Include="Content\css\Pdf\ToyotaCotTrad.css" />
     <Content Include="Content\css\select2.min.css" />
     <Content Include="Content\css\styles.css" />
+    <Content Include="Content\css\swiper-bundle.min.css" />
     <Content Include="Content\css\toastnotify.css" />
     <Content Include="Content\images\Buro\captcha-img.png" />
     <Content Include="Content\images\Buro\DocumentProtected.png" />
@@ -1245,6 +1246,7 @@
     <Content Include="Content\scripts\lightning.out.js" />
     <Content Include="Content\scripts\select2.min.js" />
     <Content Include="Content\scripts\sweetalert2.js" />
+    <Content Include="Content\scripts\swiper-bundle.min.js" />
     <Content Include="Content\scripts\toastnotify.js" />
     <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.js" />
     <Content Include="Content\scripts\webkit-input-range-fill-lower\webkit-input-range-fill-lower.min.js" />
