@@ -77,7 +77,7 @@
                 a nuestro portal MyTFS`);
                 $("#err").show();
                 break;
-            case '7':
+            case '0':
                 $("#err").html(`Este usuario ya se encuentra registrado, te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
                 Para ingresar deberás registrarte con el usuario y contraseña ingresados anteriormente.`);
                 $("#err").show();
