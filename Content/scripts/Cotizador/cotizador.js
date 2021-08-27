@@ -333,9 +333,7 @@ $(document).ready(function () {
         $("#hitch-text").val(Number(form.hitch).toFixed(2));
         let porcentaje = (form.hitch * 100) / form.precioAuto;
         $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-
         let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
-        console.log(progress_val);
         progress.style.width = progress_val + "%";
     });
 
@@ -349,9 +347,10 @@ $(document).ready(function () {
             $("#hitch-range").val(calc);
             $("#hitch-range").change();
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-            progress.style.width = (($("#hitch-range").val() * 100) / (form.precioAuto - maxEnganche)) + "%";
             //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
             $("#hitch-text").val(calc.toFixed(2));
+            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+            progress.style.width = progress_val + "%";
         }
     });
 
@@ -365,13 +364,16 @@ $(document).ready(function () {
             $("#hitch-range").val(calc);
             $("#hitch-range").change();
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-            progress.style.width = (($("#hitch-range").val() * 100) / (form.precioAuto - maxEnganche)) + "%";
             //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
             $("#hitch-text").val(calc.toFixed(2));
+            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+            progress.style.width = progress_val + "%";
+
         }
     });
 
-    $("#hitch-text").on('keyup',function (e) {
+
+    $("#hitch-text").on('keyup', function (e) {
         let val = Number($(this).val());
         console.log(val);
         if (val >= (form.precioAuto / 10) && val <= (form.precioAuto - maxEnganche)) {
@@ -379,35 +381,27 @@ $(document).ready(function () {
             $("#hitch-range").val(val);
             let porcentaje = (val * 100) / form.precioAuto;
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-            progress.style.width = (($("#hitch-range").val() * 100) / (form.precioAuto - maxEnganche)) + "%";
-
+            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+            progress.style.width = progress_val + "%";
         }
-    })
+    });
 
     $("#hitch-text").blur(function () {
         let val = this.value;
         if (val < (form.precioAuto / 10) || val > (form.precioAuto - maxEnganche)) {
             let valBarra = $("#hitch-range").val();
             this.value = valBarra;
-            console.log("entro");
-
         }
-    })
+    });
 
-
-    //slider.oninput = function () {
-    //    if (slider.value > 50000) {
-    //        progress.style.width = (slider.value / 100) + "%";
-    //    }
-    //    else {
-    //        progress.style.width = (slider.value / 100) + "%";
-    //    }
-    //};
 
 
 
     $("#step-4-finish").click(function () {
         if (validateStepFour()) {
+            progress_val = 0;
+            progress.style.width = progress_val + "%";
+            $("#porcentaje").html("10%")
             $.when(getFormValues())
                 .then(() => cotizar());
 
