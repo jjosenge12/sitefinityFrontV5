@@ -94,7 +94,7 @@ WriteLiteral("\r\n");
 
             
             #line 11 "..\..\MVC\Views\Card\Card.Login.cshtml"
-Write(Html.Script("~/Content/scripts/swiper-bundle.min.js", "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/swiper-bundle.min.js"), "top", true));
 
             
             #line default
@@ -180,14 +180,14 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("                    <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 1210), Tuple.Create("\"", 1238)
+WriteAttribute("src", Tuple.Create(" src=\"", 1229), Tuple.Create("\"", 1257)
             
             #line 25 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 1216), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
+, Tuple.Create(Tuple.Create("", 1235), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
             
             #line default
             #line hidden
-, 1216), false)
+, 1235), false)
 );
 
 WriteLiteral(" class=\"img-fluid custom-img-fluid\"");
@@ -390,15 +390,15 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"fail\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 4453), Tuple.Create("\"", 4555)
+WriteAttribute("value", Tuple.Create(" value=\"", 4472), Tuple.Create("\"", 4574)
             
             #line 80 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 4461), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
+, Tuple.Create(Tuple.Create("", 4480), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
             
             #line default
             #line hidden
-, 4461), false)
-, Tuple.Create(Tuple.Create("", 4536), Tuple.Create("/tfsm/home-delivery", 4536), true)
+, 4480), false)
+, Tuple.Create(Tuple.Create("", 4555), Tuple.Create("/tfsm/home-delivery", 4555), true)
 );
 
 WriteLiteral(" id=\"fail\"");
@@ -409,15 +409,15 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"ok\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 4629), Tuple.Create("\"", 4734)
+WriteAttribute("value", Tuple.Create(" value=\"", 4648), Tuple.Create("\"", 4753)
             
             #line 81 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 4637), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
+, Tuple.Create(Tuple.Create("", 4656), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
             
             #line default
             #line hidden
-, 4637), false)
-, Tuple.Create(Tuple.Create("", 4712), Tuple.Create("/home-delivery/session", 4712), true)
+, 4656), false)
+, Tuple.Create(Tuple.Create("", 4731), Tuple.Create("/home-delivery/session", 4731), true)
 );
 
 WriteLiteral("\r\n                                   id=\"ok\"");
@@ -713,15 +713,15 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"fail\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 10361), Tuple.Create("\"", 10463)
+WriteAttribute("value", Tuple.Create(" value=\"", 10380), Tuple.Create("\"", 10482)
             
             #line 183 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 10369), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
+, Tuple.Create(Tuple.Create("", 10388), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
             
             #line default
             #line hidden
-, 10369), false)
-, Tuple.Create(Tuple.Create("", 10444), Tuple.Create("/tfsm/home-delivery", 10444), true)
+, 10388), false)
+, Tuple.Create(Tuple.Create("", 10463), Tuple.Create("/tfsm/home-delivery", 10463), true)
 );
 
 WriteLiteral(" id=\"failClient\"");
@@ -732,15 +732,15 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"ok\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 10543), Tuple.Create("\"", 10648)
+WriteAttribute("value", Tuple.Create(" value=\"", 10562), Tuple.Create("\"", 10667)
             
             #line 184 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 10551), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
+, Tuple.Create(Tuple.Create("", 10570), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
             
             #line default
             #line hidden
-, 10551), false)
-, Tuple.Create(Tuple.Create("", 10626), Tuple.Create("/home-delivery/session", 10626), true)
+, 10570), false)
+, Tuple.Create(Tuple.Create("", 10645), Tuple.Create("/home-delivery/session", 10645), true)
 );
 
 WriteLiteral(" id=\"okClient\"");
