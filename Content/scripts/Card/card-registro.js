@@ -155,7 +155,7 @@
         }
     });
 
-    $("#reenviar").click(function{
+    $("#reenviar").click(function(){
         let data = {
             rfc: sessionStorage.getItem("reg-rfc"),
             email: sessionStorage.getItem("reg-email")
