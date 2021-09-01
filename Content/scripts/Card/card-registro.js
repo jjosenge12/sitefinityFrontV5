@@ -171,7 +171,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#reenviar").click(function(){
+    $("#reenviar").click(function () {
         let data = {
             rfc: sessionStorage.getItem("reg-rfc"),
             email: sessionStorage.getItem("reg-email")
@@ -196,18 +196,10 @@ $(document).ready(function () {
                 })
             },
             success: function (res) {
-                if (res.isSuccess === "true") {
-                    Swal.fire({
-                        icon: "success",
-                        title: "Se ha cambiado la contraseña exitosamente"
-                    })
-                }
-                else {
-                    Swal.fire({
-                        icon: "error",
-                        title: "Ocurrio un error al intentar reenviar el mail"
-                    })
-                }
+                Swal.fire({
+                    icon: "success",
+                    title: "Se ha reenviado el mail correctamente"
+                })
             }
         })
     });
