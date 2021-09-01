@@ -185,6 +185,15 @@
     color: dimgrey;
 }
 
+#reenviar{
+    display:inline-block;
+}
+
+    #reenviar:hover {
+        cursor: pointer;
+        color: #cc0000;
+    }
+
 
 @media(max-width: 1199px) {
     #bienvenida,

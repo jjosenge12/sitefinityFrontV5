@@ -1,4 +1,15 @@
-﻿$(document).ready(function () {
+﻿var token = "";
+
+$(document).ready(function () {
+
+    $.ajax(window.config.urlbase + "/GetAccessToken", {
+        beforeSend: showLoader,
+        complete: hideLoader,
+        success: function (data) {
+            token = data.result;
+        }
+    });
+
     $(".sf-form-container").each(function () {
         var form = document.createElement("form");
 
@@ -84,6 +95,11 @@
                 Para ingresar deberás registrarte con el usuario y contraseña ingresados anteriormente.`);
                 $("#err").show();
                 break;
+            case '10':
+                $("#err").html(`Este usuario ya se encuentra registrado con otro correo electronico, te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
+                `);
+                $("#err").show();
+                break;
 
 
         }
@@ -160,6 +176,12 @@
             rfc: sessionStorage.getItem("reg-rfc"),
             email: sessionStorage.getItem("reg-email")
         }
+
+        var headers = {
+            "Authorization": "Bearer " + token,
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json"
+        };
 
         $.ajax(window.config.UrlMySalesforce + '/services/apexrest/SetPasswordSitefinity', {
             beforeSend: showLoader,
