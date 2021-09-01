@@ -8,6 +8,8 @@
 @Html.Script(Url.WidgetContent("~/ResourcePackages/Bootstrap4/assets/dist/js/bootstrap.min.js"), "top", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
+@Html.StyleSheet(Url.Content("~/Content/css/Card/card-planform.css"))
+
 
 <div class="form-box mt-5">
     <div class="text-medium weight-600 mb-2">
@@ -50,7 +52,7 @@
                 <div class="col-12 col-md-6">
                     <div class="float-container">
                         <label class="float-label" for="phone">Tel&eacute;fono</label>
-                        <input class="form-input effect-2" type="tel" id="phone" name="phone" required="" /><span class="focus-border"></span>
+                        <input class="form-input effect-2" type="number" maxlength="10" id="phone" name="phone" required="" /><span class="focus-border"></span>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">

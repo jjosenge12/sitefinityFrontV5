@@ -29,6 +29,8 @@
                 encrypt_reg(false);
 
                 sessionStorage.setItem("reg-client", false);
+                //true cliente, false no cliente
+                //primer parametro nombre, segundo parametro string
                 sessionStorage.setItem("reg-name", document.getElementById("nameVisible").value);
                 sessionStorage.setItem("reg-lastname", document.getElementById("lastnameVisible").value);
                 sessionStorage.setItem("reg-email", document.getElementById("emailVisible").value);
@@ -82,7 +84,7 @@
                 Para ingresar deberás registrarte con el usuario y contraseña ingresados anteriormente.`);
                 $("#err").show();
                 break;
-            
+
 
         }
 
@@ -153,6 +155,41 @@
         }
     });
 
+    $("#reenviar").click(function{
+        let data = {
+            rfc: sessionStorage.getItem("reg-rfc"),
+            email: sessionStorage.getItem("reg-email")
+        }
+
+        $.ajax(window.config.UrlMySalesforce + '/services/apexrest/SetPasswordSitefinity', {
+            beforeSend: showLoader,
+            complete: hideLoader,
+            method: 'put',
+            headers: headers,
+            data: JSON.stringify(data),
+            error: function (res) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Ocurrio un error al intentar reenviar el mail"
+                })
+            },
+            success: function (res) {
+                if (res.isSuccess === "true") {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Se ha cambiado la contraseña exitosamente"
+                    })
+                }
+                else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Ocurrio un error al intentar reenviar el mail"
+                    })
+                }
+            }
+        })
+    });
+
     $("#registro-nc-form").validate({
         submitHandler: function (form) {
             document.getElementById("nameVisible").removeAttribute("name");
@@ -185,6 +222,6 @@
         }
     });
 
- 
+
 });
 

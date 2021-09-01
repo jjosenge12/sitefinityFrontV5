@@ -595,6 +595,11 @@ input[type="range"] {
 
 /*----------------STEP 5----------------*/
 
+#step-5-phone::-webkit-inner-spin-button,
+#step-5-phone::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
 #step-5 {
     min-height: calc(100vh - 63px);
     align-items: center;
