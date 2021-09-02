@@ -372,7 +372,7 @@
 
                                 <div class="d-flex hitch-content">
                                     <div>$</div>
-                                    <input id="hitch-text" type="number" value="0" />
+                                    <input id="hitch-text" type="number" value="0" onkeydown="return event.keyCode !== 69"/>
                                     <div>M.N.</div>
                                 </div>
 
@@ -607,7 +607,7 @@
                                                 </div>
                                                 <div class="float-container">
                                                     <label class="float-label" for="step-5-phone">Tel&eacute;fono</label>
-                                                    <input type="number" id="step-5-phone" name="phone" maxlength="10" class="form-input effect-2 bg-transparent" />
+                                                    <input type="number" id="step-5-phone" name="phone" maxlength="10" class="form-input effect-2 bg-transparent" onkeydown="return event.keyCode !== 69"/>
                                                     <span class="focus-border"></span>
                                                 </div>
                                             </div>
