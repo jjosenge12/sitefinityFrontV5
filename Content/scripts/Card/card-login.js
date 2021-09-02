@@ -13,12 +13,6 @@
                     title: "Se ha enviado el mail para el cambio de contraseña"
                 })
                 break;
-            case '2':
-                Swal.fire({
-                    icon: "error",
-                    title: "Ocurrio un error, no se ha podido enviar el mail"
-                })
-
         }
 
     }
