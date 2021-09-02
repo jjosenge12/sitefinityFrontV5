@@ -1,6 +1,28 @@
 ﻿$(document).ready(function () {
 
     var swiper;
+    /******************************************************************************/
+    if (window.location.search.includes("cp")) {
+        const urlParams = new URLSearchParams(window.location.search);
+        var error = urlParams.get("cp");
+        //window.location.href + '?cp=1'
+        switch (error) {
+            case '1':
+                Swal.fire({
+                    icon: "success",
+                    title: "Se ha enviado el mail para el cambio de contraseña"
+                })
+                break;
+            case '2':
+                Swal.fire({
+                    icon: "error",
+                    title: "Ocurrio un error, no se ha podido enviar el mail"
+                })
+
+        }
+
+    }
+    /****************************************************************************/
 
     if (window.location.search.includes("err")) {
         const urlParams = new URLSearchParams(window.location.search);
