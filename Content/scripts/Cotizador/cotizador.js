@@ -1,4 +1,7 @@
-﻿var form = {}, swiper, cars_swiper, cotizacion, car_slides;
+﻿
+//ESTO ES UN CAMBIO
+
+var form = {}, swiper, cars_swiper, cotizacion, car_slides;
 //var maxEnganche = 0;
 
 const formatter = new Intl.NumberFormat('en-US', {
