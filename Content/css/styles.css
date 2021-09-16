@@ -581,6 +581,7 @@ body p {
 }
 
 .custom-card {
+    overflow: hidden;
     border-radius: 1.2rem;
     background-color: #fff;
     border: #fff;
