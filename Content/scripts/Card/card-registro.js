@@ -217,12 +217,12 @@ $(document).ready(function () {
             _name: {
                 required: true,
                 isValidName: true,
-                minlength: 3
+                minlength: 2
             },
             _lastname: {
                 required: true,
                 isValidName: true,
-                minlength: 3
+                minlength: 2
             },
             _rfc: {
                 required: true,

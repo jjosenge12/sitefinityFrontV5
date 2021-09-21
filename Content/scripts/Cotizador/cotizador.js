@@ -95,12 +95,12 @@ $(document).ready(function () {
             name: {
                 required: true,
                 isValidName: true,
-                minlength: 3
+                minlength: 2
             },
             lastname: {
                 required: true,
                 isValidName: true,
-                minlength: 3
+                minlength: 2
             },
             email: {
                 required: true,
