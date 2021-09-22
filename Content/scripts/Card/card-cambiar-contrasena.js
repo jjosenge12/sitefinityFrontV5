@@ -25,8 +25,7 @@ $(document).ready(function () {
                 maxlength: 13
             },
             password: {
-                required: true,
-                confirmPassword: "confirm_password"
+                required: true
             },
             confirm_password: {
                 required: true,
