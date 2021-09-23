@@ -382,9 +382,9 @@
     top: 371px;
     display: block;
     float: left;
-    width: 326px;
+    width: 216px;
     height: 62px;
-    max-width: 326px;
+    max-width: 216px;
     max-height: 62px;
     background-color: white;
     border-style: solid;
@@ -406,7 +406,7 @@
     position: absolute;
     border-collapse: collapse;
     top: 10px;
-    left: 84px;
+    left: 14px;
     padding: 0%;
     border-spacing: 0px 0px;
     border: none;
@@ -420,12 +420,12 @@
     position: absolute;
     border-collapse: collapse;
     bottom: 10px;
-    left: 84px;
+    left: 14px;
     padding: 0%;
     border-spacing: 0px 0px;
     border: none;
     margin: 0px;
-    font-size: 22px;
+    font-size: 16px;
     color: black;
     text-align: left !important;
 }
@@ -433,10 +433,10 @@
 .container__row65 {
     position: absolute;
     top: 371px;
-    left: 329px;
-    width: 326px;
+    left: 219px;
+    width: 216px;
     height: 62px;
-    max-width: 326px;
+    max-width: 216px;
     max-height: 62px;
     background-color: white;
     border-style: solid;
@@ -458,7 +458,7 @@
     position: absolute;
     border-collapse: collapse;
     top: 10px;
-    left: 84px;
+    left: 14px;
     padding: 0%;
     border-spacing: 0px 0px;
     border: none;
@@ -472,12 +472,12 @@
     position: absolute;
     border-collapse: collapse;
     bottom: 10px;
-    left: 84px;
+    left: 14px;
     padding: 0%;
     border-spacing: 0px 0px;
     border: none;
     margin: 0px;
-    font-size: 22px;
+    font-size: 16px;
     color: black;
     text-align: left !important;
 }
@@ -493,6 +493,20 @@
     margin: 0px;
     font-size: 11px;
     color: black;
+}
+
+.container__row66 {
+    position: absolute;
+    top: 371px;
+    left: 438px;
+    width: 217px;
+    height: 62px;
+    max-width: 217px;
+    max-height: 62px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: black;
 }
 
 .container__row7 {
@@ -994,7 +1008,7 @@
 .container__row115-text2 {
     position: absolute;
     border-collapse: collapse;
-    top: 30px;
+    top: 44px;
     left: 12px;
     padding: 0%;
     border-spacing: 0px 0px;
@@ -1008,7 +1022,7 @@
 .container__row115-text3 {
     position: absolute;
     border-collapse: collapse;
-    top: 40px;
+    top: 54px;
     left: 12px;
     padding: 0%;
     border-spacing: 0px 0px;
@@ -1022,7 +1036,7 @@
 .container__row115-text4 {
     position: absolute;
     border-collapse: collapse;
-    top: 50px;
+    top: 64px;
     left: 12px;
     padding: 0%;
     border-spacing: 0px 0px;
@@ -1036,7 +1050,7 @@
 .container__row115-text5 {
     position: absolute;
     border-collapse: collapse;
-    top: 60px;
+    top: 74px;
     left: 12px;
     padding: 0%;
     border-spacing: 0px 0px;
