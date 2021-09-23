@@ -16,6 +16,7 @@
 @Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/Card/card-login.css"))
 @Html.StyleSheet("https://unpkg.com/swiper/swiper-bundle.min.css")
+@Html.StyleSheet(Url.Content("~/Content/fontawesome/css/all.css"))
 
 <div class="container-fluid" id="main-container">
     <div class="customRow flex-column-reverse flex-lg-row align-items-center justify-content-center">
@@ -47,9 +48,10 @@
                                 <label class="float-label" for="password">
                                     Nueva contrase&ntilde;a
                                 </label>
-                                <input class="form-input effect-2" type="password" name="password" id="password" />
+                                <input class="form-input effect-2" type="password" name="password" id="password" data-html="true" data-placement="bottom" data-toggle="popover" data-container="body" />
                                 <span class="focus-border"></span>
                             </div>
+                           
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -60,6 +62,14 @@
                                 </label>
                                 <input class="form-input effect-2" type="password" name="confirm_password" id="confirm_password" />
                                 <span class="focus-border"></span>
+                            </div>
+                            <div id="popover-password">
+                                <ul class="list-unstyled pt-3">
+                                    <li class=""><span class="low-upper-case"><i class="fa fa-times" aria-hidden="true"></i></span>&nbsp; Una minuscula y una mayuscula.</li>
+                                    <li class=""><span class="one-number"><i class="fa fa-times" aria-hidden="true"></i></span> &nbsp;Un numero (0-9).</li>
+                                    <li class=""><span class="one-special-char"><i class="fa fa-times" aria-hidden="true"></i></span> &nbsp;Un caracter especial (!&#64#$%^&*()_+-={}[]\|;:',.?/`~>&#60).</li>
+                                    <li class=""><span class="eight-character"><i class="fa fa-times" aria-hidden="true"></i></span>&nbsp; Como mínimo ocho caracteres.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
