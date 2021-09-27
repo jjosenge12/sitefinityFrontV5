@@ -88,6 +88,17 @@
         document.getElementById("ok").value = ok_enc;
     });
 
+    //---- TOOL TIP ------
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    //$.widget.bridge('uibutton', $.ui.button);
+    //$.widget.bridge('uitooltip', $.ui.tooltip);
+
+    // -------------------------
+
     $("#c-form").submit(function (e) {
         var pass = document.getElementById("passClientVisible").value;
         var user = document.getElementById("clientVisible").value;

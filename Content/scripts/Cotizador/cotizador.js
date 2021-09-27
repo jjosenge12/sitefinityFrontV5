@@ -670,7 +670,7 @@ function cotizar() {
         error: function (err) {
             Swal.fire({
                 title: "Error",
-                text: "Ocurrio un error al procesar la información",
+                text: "Ocurrió un error al procesar la información",
                 icon: "error",
                 confirmButtonColor: "#cc0000",
                 timer: 5000
@@ -920,7 +920,7 @@ function getCantidadDepositos(autoId) {
             console.log(err);
             Swal.fire({
                 title: "Error",
-                text: "Ocurrio un error al intentar obtener datos del servicio",
+                text: "Ocurrió un error al intentar obtener datos del servicio",
                 icon: "error",
                 confirmButtonColor: "#cc0000",
                 timer: 5000

@@ -10,11 +10,15 @@
 @Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-login.js"), "bottom", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/swiper-bundle.min.js"), "top", true)
 
+
+
 @Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/fonts.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/inputs.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/Card/card-login.css"))
 @Html.StyleSheet(Url.Content("~/Content/css/swiper-bundle.min.css"))
+
+
 
 <div class="container-fluid" id="main-container">
     <div class="row customRow flex-column-reverse flex-lg-row align-items-center">
@@ -129,7 +133,7 @@
                                 </button>
                             </div>
                             <div class="col-12 col-lg-6">
-                                <button type="button" class="btn-registro" id="ingreso-clientes">
+                                <button type="button" class="btn-registro" id="ingreso-clientes" data-toggle="tooltip" data-placement="bottom" title="Para ingresar a  &quot;Soy Cliente&quot; es necesario un ID de cliente.">
                                     SOY CLIENTE
                                 </button>
                             </div>
@@ -209,3 +213,4 @@
         </div>
     </div>
 </div>
+

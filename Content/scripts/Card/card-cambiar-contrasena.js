@@ -25,7 +25,8 @@ $(document).ready(function () {
                 maxlength: 13
             },
             password: {
-                required: true
+                required: true,
+                checkStrength: true                
             },
             confirm_password: {
                 required: true,
@@ -33,6 +34,76 @@ $(document).ready(function () {
             }
         }
     });
+
+    /*---------------codigo para los iconos de las validaciones--------------------------*/
+
+    $('#password').keyup(function () {
+        var password = $('#password').val();
+        checkStrength(password);
+    });
+
+    jQuery.validator.addMethod(
+        "checkStrength",
+        function (value, element) {
+            if (checkStrength(value) == true)
+                return true;
+        }, "La contraseña no cumple con las condiciones"
+    );
+
+    function checkStrength(value) {
+        var strength = 0;
+
+        //si la contraseña posee un caracter mayuscula y minuscula.
+        if (value.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+            strength += 1;
+            $('.low-upper-case').addClass('text-success');
+            $('.low-upper-case i').removeClass('fa-times').addClass('fa-check');
+
+        } else {
+            $('.low-upper-case').removeClass('text-success');
+            $('.low-upper-case i').addClass('fa-times').removeClass('fa-check');
+        }
+
+        //si tiene numeros y letras.
+        if (value.match(/([a-zA-Z])/) && value.match(/([0-9])/)) {
+            strength += 1;
+            $('.one-number').addClass('text-success');
+            $('.one-number i').removeClass('fa-times').addClass('fa-check');
+
+        } else {
+            $('.one-number').removeClass('text-success');
+            $('.one-number i').addClass('fa-times').removeClass('fa-check');
+        }
+
+        //si tiene caracteres especiales.
+        // el @ anda a veces
+        if (value.match(/([@,#,$,%,^,&,*,(,),_,+,-,=,{,},\,|,;,:,',,,.,?,/,`,~,>,<,\[,\]]+)/)) {
+            strength += 1;
+            $('.one-special-char').addClass('text-success');
+            $('.one-special-char i').removeClass('fa-times').addClass('fa-check');
+
+        } else {
+            $('.one-special-char').removeClass('text-success');
+            $('.one-special-char i').addClass('fa-times').removeClass('fa-check');
+        }
+
+        if (value.length > 7) {
+            strength += 1;
+            $('.eight-character').addClass('text-success');
+            $('.eight-character i').removeClass('fa-times').addClass('fa-check');
+
+        } else {
+            $('.eight-character').removeClass('text-success');
+            $('.eight-character i').addClass('fa-times').removeClass('fa-check');
+        }
+
+        if (strength == 4) {
+            return true;
+        }
+    }
+        /*---------------fin codigo para los iconos de las validaciones--------------------------*/
+
+    
 });
 
 function submitPassword() {
