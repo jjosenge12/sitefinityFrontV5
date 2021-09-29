@@ -148,7 +148,7 @@ WriteLiteral("\r\n");
 
             
             #line 17 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/header.js"), "bottom", true));
 
             
             #line default
@@ -211,7 +211,7 @@ WriteLiteral("\r\n");
 
             
             #line 25 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css")));
+Write(Html.StyleSheet(Url.Content("~/Content/css/styles.css")));
 
             
             #line default
@@ -258,14 +258,14 @@ WriteLiteral(">\r\n            <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2434), Tuple.Create("\"", 2522)
+WriteAttribute("href", Tuple.Create(" href=\"", 2328), Tuple.Create("\"", 2416)
             
             #line 34 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 2441), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
+, Tuple.Create(Tuple.Create("", 2335), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
             
             #line default
             #line hidden
-, 2441), false)
+, 2335), false)
 );
 
 WriteLiteral(" id=\"my-tfsm\"");
@@ -316,14 +316,14 @@ WriteLiteral(">\r\n        <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 3091), Tuple.Create("\"", 3179)
+WriteAttribute("href", Tuple.Create(" href=\"", 2985), Tuple.Create("\"", 3073)
             
             #line 42 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 3098), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
+, Tuple.Create(Tuple.Create("", 2992), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
             
             #line default
             #line hidden
-, 3098), false)
+, 2992), false)
 );
 
 WriteLiteral(" id=\"my-tfsm-menu\"");

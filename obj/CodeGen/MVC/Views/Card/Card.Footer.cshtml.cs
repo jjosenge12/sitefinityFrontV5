@@ -103,7 +103,7 @@ WriteLiteral("\r\n");
 
             
             #line 12 "..\..\MVC\Views\Card\Card.Footer.cshtml"
-Write(Html.Script("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/header.js", "bottom", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/header.js"), "bottom", true));
 
             
             #line default
@@ -130,7 +130,7 @@ WriteLiteral("\r\n");
 
             
             #line 16 "..\..\MVC\Views\Card\Card.Footer.cshtml"
-Write(Html.StyleSheet(Url.Content("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Css/Virtual%20Dreams/styles.css")));
+Write(Html.StyleSheet(Url.Content("~/Content/css/styles.css")));
 
             
             #line default
