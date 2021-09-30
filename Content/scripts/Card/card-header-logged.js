@@ -7,7 +7,7 @@ if (isLogged !== "true" && !window.location.href.includes("Sitefinity/adminapp")
 $(document).ready(function () {
     let username = sessionStorage.getItem("name"), isClient = sessionStorage.getItem("isClient");
     $(".user-name").html(username || "Usuario");
-    console.log(typeof (isClient));
+    console.log(isClient === 'true');
     if (isClient === "true") {
         $("#link-portal").css("display", "block");
     }
