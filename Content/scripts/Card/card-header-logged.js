@@ -7,7 +7,13 @@ if (isLogged !== "true" && !window.location.href.includes("Sitefinity/adminapp")
 $(document).ready(function () {
     let username = sessionStorage.getItem("name"), isClient = sessionStorage.getItem("isClient");
     $(".user-name").html(username || "Usuario");
-    $("#link-portal").css("display", isClient === "true" ? "block" : "none");
+
+    if (isClient === "true") {
+        $("#link-portal").css("display", "block");
+    }
+    else {
+        $("#link-portal").css("display", "none");
+    }
 
     $("#logout").click(function () {
         sessionStorage.clear();
