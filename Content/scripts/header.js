@@ -100,7 +100,7 @@ $(document).ready(function () {
       $("#menuOverlay").fadeToggle(100),
       $("#drawerMenu").toggle("slide", { direction: "right" })
     ).then(() => {
-      if (overlay === "flex") {
+      if (overlay === "block") {
         document.body.style.overflow = "auto";
         $(".deployItems").each(function () {
           $(`#${this.id}Arrow`).removeClass("pointDown");
