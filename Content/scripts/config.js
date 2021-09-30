@@ -1,4 +1,6 @@
 ﻿window.config = {
+    //origin: 'http://localhost:60876/',
+    origin: 'https://tfs-sitefinity.virtualdreams.io/',
     urlbase: 'https://tfs-sitefinity.virtualdreams.io:444/api/tfsm',
     //urlbase: 'https://localhost:44386/api/tfsm',
     urlToyotaFinancial: 'https://toyotafinancial--salt001.lightning.force.com',
