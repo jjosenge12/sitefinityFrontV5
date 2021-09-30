@@ -9,7 +9,7 @@ $(document).ready(function () {
     $(".user-name").html(username || "Usuario");
     if (isClient === 'true') {
         //$("#link-portal").show();
-        $("link-portal-nav").html(`<a id="link-portal" target="_blank" href="${window.config.urlMyTfsm}" class="linkFinanciamiento">My TFS</a>`);
+        $("#link-portal-nav").html(`<a id="link-portal" target="_blank" href="${window.config.urlMyTfsm}" class="linkFinanciamiento">My TFS</a>`);
     }
     else {
         //$("#link-portal").hide();
