@@ -491,7 +491,7 @@ $(document).ready(function () {
             DatosCotizar: cotizacion,
             Plazo: form.Plazo,
             ImagenAuto: window.config.origin + '/' + form.ImagenAuto,
-            ImagenModelo: window.config.origin + '/' + form.ImagenModelo,
+            ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
             PrecioAuto: form.precioAuto
         };
 
