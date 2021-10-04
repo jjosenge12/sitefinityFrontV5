@@ -1,10 +1,10 @@
 let isLogged = sessionStorage.getItem("isLogged");
 
-if (isLogged !== "true" && !window.location.href.includes("Sitefinity/adminapp")) {
-  window.location.replace(window.location.origin + "/tfsm/home-delivery");
-}
 
 $(document).ready(function () {
+    if (isLogged !== "true" && !window.location.href.includes("Sitefinity/adminapp")) {
+        window.location.replace(window.location.origin + "/tfsm/home-delivery");
+    }
     let username = sessionStorage.getItem("name"), isClient = sessionStorage.getItem("isClient");
     $(".user-name").html(username || "Usuario");
     if (isClient === 'true') {
