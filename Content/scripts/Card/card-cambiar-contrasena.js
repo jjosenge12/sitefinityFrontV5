@@ -77,7 +77,7 @@ $(document).ready(function () {
 
         //si tiene caracteres especiales.
         // el @ anda a veces
-        if (value.match(/([!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},\,|,;,:,',,,.,?,/,`,~,>,<,\[,\]]+)/)) {
+        if (value.match(/([!,@,#,$,%,^,&,*,(,),_,+,-,=,{,},\,|,;,:,',,,.,?,/,`,~,>,<,\-,\\,\[,\]]+)/)) {
             strength += 1;
             $('.one-special-char').addClass('text-success');
             $('.one-special-char i').removeClass('fa-times').addClass('fa-check');
