@@ -8,4 +8,10 @@ $(document).ready(function () {
 	}
 
 	$(".boton_video_hover").click(reproducirVideo);
+
+	$(".video-box").click(function () {
+		$(".video-box img").addClass("d-none");
+		$(".video-box figure").removeClass("d-none");
+		$(".video-box video")[0].play();
+	});
 });
