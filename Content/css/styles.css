@@ -858,6 +858,10 @@ glyphicon-chevron-right:before {
   height: 79vh;
 }
 
+.perks-container_small {
+    height: 60vh;
+}
+
 .perks {
   color: var(--color-gray-4);
   height: 21.8%;
@@ -874,6 +878,11 @@ glyphicon-chevron-right:before {
 .perks-container_big .perks {
   height: 22%;
   padding: 0 4%;
+}
+
+.perks-container_small .perks {
+    height: 19%;
+    padding: 0 4%;
 }
 
 .perks > div {
