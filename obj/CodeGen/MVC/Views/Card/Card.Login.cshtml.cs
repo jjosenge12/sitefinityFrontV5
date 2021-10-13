@@ -99,10 +99,10 @@ Write(Html.Script(Url.WidgetContent("~/Content/scripts/swiper-bundle.min.js"), "
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n");
+WriteLiteral("\r\n\r\n\r\n\r\n");
 
             
-            #line 13 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 15 "..\..\MVC\Views\Card\Card.Login.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css")));
 
             
@@ -111,7 +111,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css")));
 WriteLiteral("\r\n");
 
             
-            #line 14 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 16 "..\..\MVC\Views\Card\Card.Login.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/fonts.css")));
 
             
@@ -120,7 +120,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/fonts.css")));
 WriteLiteral("\r\n");
 
             
-            #line 15 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 17 "..\..\MVC\Views\Card\Card.Login.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/inputs.css")));
 
             
@@ -129,7 +129,7 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/inputs.css")));
 WriteLiteral("\r\n");
 
             
-            #line 16 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 18 "..\..\MVC\Views\Card\Card.Login.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/Card/card-login.css")));
 
             
@@ -138,13 +138,13 @@ Write(Html.StyleSheet(Url.Content("~/Content/css/Card/card-login.css")));
 WriteLiteral("\r\n");
 
             
-            #line 17 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 19 "..\..\MVC\Views\Card\Card.Login.cshtml"
 Write(Html.StyleSheet(Url.Content("~/Content/css/swiper-bundle.min.css")));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<div");
+WriteLiteral("\r\n\r\n\r\n\r\n<div");
 
 WriteLiteral(" class=\"container-fluid\"");
 
@@ -165,13 +165,13 @@ WriteLiteral(" class=\"login-img\"");
 WriteLiteral(">\r\n");
 
             
-            #line 23 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 27 "..\..\MVC\Views\Card\Card.Login.cshtml"
                 
             
             #line default
             #line hidden
             
-            #line 23 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 27 "..\..\MVC\Views\Card\Card.Login.cshtml"
                  if (!string.IsNullOrEmpty(Model.SelectedSizeUrl))
                 {
 
@@ -180,14 +180,14 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("                    <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 1229), Tuple.Create("\"", 1257)
+WriteAttribute("src", Tuple.Create(" src=\"", 1237), Tuple.Create("\"", 1265)
             
-            #line 25 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 1235), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
+            #line 29 "..\..\MVC\Views\Card\Card.Login.cshtml"
+, Tuple.Create(Tuple.Create("", 1243), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
             
             #line default
             #line hidden
-, 1235), false)
+, 1243), false)
 );
 
 WriteLiteral(" class=\"img-fluid custom-img-fluid\"");
@@ -195,7 +195,7 @@ WriteLiteral(" class=\"img-fluid custom-img-fluid\"");
 WriteLiteral(" />\r\n");
 
             
-            #line 26 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 30 "..\..\MVC\Views\Card\Card.Login.cshtml"
                 }
                 else
                 {
@@ -212,7 +212,7 @@ WriteLiteral(" class=\"img-fluid custom-img-fluid\"");
 WriteLiteral(" />\r\n");
 
             
-            #line 30 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 34 "..\..\MVC\Views\Card\Card.Login.cshtml"
                 }
 
             
@@ -282,7 +282,7 @@ WriteLiteral(" data-method=\"GET\"");
 WriteLiteral(" data-action=\"");
 
             
-            #line 52 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 56 "..\..\MVC\Views\Card\Card.Login.cshtml"
                                                                                                    Write(System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString());
 
             
@@ -390,15 +390,15 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"fail\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 4472), Tuple.Create("\"", 4574)
+WriteAttribute("value", Tuple.Create(" value=\"", 4480), Tuple.Create("\"", 4582)
             
-            #line 80 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 4480), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
+            #line 84 "..\..\MVC\Views\Card\Card.Login.cshtml"
+, Tuple.Create(Tuple.Create("", 4488), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
             
             #line default
             #line hidden
-, 4480), false)
-, Tuple.Create(Tuple.Create("", 4555), Tuple.Create("/tfsm/home-delivery", 4555), true)
+, 4488), false)
+, Tuple.Create(Tuple.Create("", 4563), Tuple.Create("/tfsm/home-delivery", 4563), true)
 );
 
 WriteLiteral(" id=\"fail\"");
@@ -409,15 +409,15 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"ok\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 4648), Tuple.Create("\"", 4753)
+WriteAttribute("value", Tuple.Create(" value=\"", 4656), Tuple.Create("\"", 4761)
             
-            #line 81 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 4656), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
+            #line 85 "..\..\MVC\Views\Card\Card.Login.cshtml"
+, Tuple.Create(Tuple.Create("", 4664), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
             
             #line default
             #line hidden
-, 4656), false)
-, Tuple.Create(Tuple.Create("", 4731), Tuple.Create("/home-delivery/session", 4731), true)
+, 4664), false)
+, Tuple.Create(Tuple.Create("", 4739), Tuple.Create("/home-delivery/session", 4739), true)
 );
 
 WriteLiteral("\r\n                                   id=\"ok\"");
@@ -548,6 +548,12 @@ WriteLiteral(" class=\"btn-registro\"");
 
 WriteLiteral(" id=\"ingreso-clientes\"");
 
+WriteLiteral(" data-toggle=\"tooltip\"");
+
+WriteLiteral(" data-placement=\"bottom\"");
+
+WriteLiteral(" title=\"Para ingresar a  &quot;Soy Cliente&quot; es necesario un ID de cliente.\"");
+
 WriteLiteral(">\r\n                                    SOY CLIENTE\r\n                             " +
 "   </button>\r\n                            </div>\r\n                        </div>" +
 "\r\n                        <div");
@@ -610,7 +616,7 @@ WriteLiteral(" data-method=\"GET\"");
 WriteLiteral(" data-action=\"");
 
             
-            #line 156 "..\..\MVC\Views\Card\Card.Login.cshtml"
+            #line 160 "..\..\MVC\Views\Card\Card.Login.cshtml"
                                                                                                   Write(System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString());
 
             
@@ -717,27 +723,15 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"fail\"");
 
-<<<<<<< Updated upstream
-WriteAttribute("value", Tuple.Create(" value=\"", 10380), Tuple.Create("\"", 10482)
+WriteAttribute("value", Tuple.Create(" value=\"", 10627), Tuple.Create("\"", 10729)
             
-            #line 183 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 10388), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
-            
-            #line default
-            #line hidden
-, 10388), false)
-, Tuple.Create(Tuple.Create("", 10463), Tuple.Create("/tfsm/home-delivery", 10463), true)
-=======
-WriteAttribute("value", Tuple.Create(" value=\"", 10493), Tuple.Create("\"", 10595)
-            
-            #line 184 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 10501), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
+            #line 188 "..\..\MVC\Views\Card\Card.Login.cshtml"
+, Tuple.Create(Tuple.Create("", 10635), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
             
             #line default
             #line hidden
-, 10501), false)
-, Tuple.Create(Tuple.Create("", 10576), Tuple.Create("/tfsm/home-delivery", 10576), true)
->>>>>>> Stashed changes
+, 10635), false)
+, Tuple.Create(Tuple.Create("", 10710), Tuple.Create("/tfsm/home-delivery", 10710), true)
 );
 
 WriteLiteral(" id=\"failClient\"");
@@ -748,27 +742,15 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"ok\"");
 
-<<<<<<< Updated upstream
-WriteAttribute("value", Tuple.Create(" value=\"", 10562), Tuple.Create("\"", 10667)
+WriteAttribute("value", Tuple.Create(" value=\"", 10809), Tuple.Create("\"", 10914)
             
-            #line 184 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 10570), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
-            
-            #line default
-            #line hidden
-, 10570), false)
-, Tuple.Create(Tuple.Create("", 10645), Tuple.Create("/home-delivery/session", 10645), true)
-=======
-WriteAttribute("value", Tuple.Create(" value=\"", 10675), Tuple.Create("\"", 10780)
-            
-            #line 185 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 10683), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
+            #line 189 "..\..\MVC\Views\Card\Card.Login.cshtml"
+, Tuple.Create(Tuple.Create("", 10817), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
             
             #line default
             #line hidden
-, 10683), false)
-, Tuple.Create(Tuple.Create("", 10758), Tuple.Create("/home-delivery/session", 10758), true)
->>>>>>> Stashed changes
+, 10817), false)
+, Tuple.Create(Tuple.Create("", 10892), Tuple.Create("/home-delivery/session", 10892), true)
 );
 
 WriteLiteral(" id=\"okClient\"");
@@ -815,7 +797,9 @@ WriteLiteral(@">
             </div>
         </div>
     </div>
-</div>");
+</div>
+
+");
 
         }
     }
