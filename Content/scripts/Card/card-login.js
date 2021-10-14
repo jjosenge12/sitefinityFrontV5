@@ -173,10 +173,15 @@
     $("#volver-nc").click(() => swiper.slideTo(2));
     $("#volver-inicio").click(() => swiper.slideTo(1));
     $("#volver-inicio-reg").click(() => swiper.slideTo(1));
+    $("#volver-inicio-nc").click(() => swiper.slideTo(1));
+    $("#volver-inicio-c").click(() => swiper.slideTo(1));
     $("#ingresar").click(() => swiper.slideTo(2));
     $("#registro").click(() => swiper.slideTo(4));
     $("#registro-2").click(() => swiper.slideTo(4));
     $("#registro-clientes").click(() => swiper.slideTo(5));
+    $("#registro-no-clientes").click(() => swiper.slideTo(6));
+    
+    
 
     $(".link-aviso-privacidad").click(function () {
         window.open(

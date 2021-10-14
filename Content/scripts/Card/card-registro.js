@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
 
+
     $.ajax(window.config.urlbase + "/GetAccessToken", {
         beforeSend: showLoader,
         complete: hideLoader,
@@ -29,6 +30,18 @@ $(document).ready(function () {
     });
 
     $("#registro-terms").click(function () {
+        console.log("entre");
+        termsCheckbox = "#registro-terms";
+        openModal("newsletterTermsModal");
+    });
+
+    $("#terms-btn-nc").click(function () {
+        console.log("entre");
+        termsCheckbox = "#registro-terms";
+        openModal("newsletterTermsModal");
+    });
+
+    $("#registro-terms-nc").click(function () {
         console.log("entre");
         termsCheckbox = "#registro-terms";
         openModal("newsletterTermsModal");
