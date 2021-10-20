@@ -261,7 +261,8 @@ $(document).ready(function () {
             Anio: $("#car_version option:selected")[0].dataset.anio,
             precioAuto: $(this).val(),
             EngancheDeposito: $(this).val() / 10,
-            MaxEnganche: $(this).val() - maxEnganche
+            //MaxEnganche: $(this).val() - maxEnganche
+            MaxEnganche: $(this).val() * .4
         }
 
         $("#hitch-range").attr("min", form.EngancheDeposito);
@@ -336,7 +337,8 @@ $(document).ready(function () {
         $("#hitch-text").val(Number(form.hitch).toFixed(2));
         let porcentaje = (form.hitch * 100) / form.precioAuto;
         $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-        let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+        //let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+        let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - form.MaxEnganche));
         progress.style.width = progress_val + "%";
     });
 
@@ -352,14 +354,15 @@ $(document).ready(function () {
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
             //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
             $("#hitch-text").val(calc.toFixed(2));
-            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+            //let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - form.MaxEnganche));
             progress.style.width = progress_val + "%";
         }
     });
 
     $("#hitch-plus").click(function () {
         let val = $("#hitch-range").val();
-        let calc = Number(val) + 5000, max = form.precioAuto - maxEnganche;
+        let calc = Number(val) + 5000, max = form.precioAuto - form.maxEnganche;
 
         let porcentaje = (calc * 100) / form.precioAuto;
 
@@ -369,7 +372,8 @@ $(document).ready(function () {
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
             //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
             $("#hitch-text").val(calc.toFixed(2));
-            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+            //let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - form.MaxEnganche));
             progress.style.width = progress_val + "%";
 
         }
@@ -379,19 +383,20 @@ $(document).ready(function () {
     $("#hitch-text").on('keyup', function (e) {
         let val = Number($(this).val());
         console.log(val);
-        if (val >= (form.precioAuto / 10) && val <= (form.precioAuto - maxEnganche)) {
+        if (val >= (form.precioAuto / 10) && val <= (form.precioAuto - form.maxEnganche)) {
             console.log("valid")
             $("#hitch-range").val(val);
             let porcentaje = (val * 100) / form.precioAuto;
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+            //let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
+            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - form.MaxEnganche));
             progress.style.width = progress_val + "%";
         }
     });
 
     $("#hitch-text").blur(function () {
         let val = this.value;
-        if (val < (form.precioAuto / 10) || val > (form.precioAuto - maxEnganche)) {
+        if (val < (form.precioAuto / 10) || val > (form.precioAuto - form.MaxEnganche)) {
             let valBarra = $("#hitch-range").val();
             this.value = valBarra;
         }
