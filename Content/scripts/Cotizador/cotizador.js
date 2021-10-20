@@ -36,7 +36,7 @@ function formNextStep(step) {
 }
 
 $(document).ready(function () {
-    var maxEnganche = Number($("#max-enganche").val());
+    var maxEnganche = Number($("#max-enganche").val()); // esta linea habria q quitarla
     car_slides = $(".swiper-slide.car-slide-container");
 
     jQuery.validator.addMethod(
@@ -260,7 +260,7 @@ $(document).ready(function () {
             Vesion: $("#car_version option:selected")[0].dataset.version,
             Anio: $("#car_version option:selected")[0].dataset.anio,
             precioAuto: $(this).val(),
-            EngancheDeposito: $(this).val() / 10,
+            EngancheDeposito: $(this).val() / 10, // seria el Minimo Enganche (10% del precioAuto)
             //MaxEnganche: $(this).val() - maxEnganche
             MaxEnganche: $(this).val() * .4
         }
@@ -337,8 +337,12 @@ $(document).ready(function () {
         $("#hitch-text").val(Number(form.hitch).toFixed(2));
         let porcentaje = (form.hitch * 100) / form.precioAuto;
         $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-        //let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
-        let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - form.MaxEnganche));
+               
+        /* Codigo para aumentar o disminuir la barra de progreso */
+
+        // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
+        let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
+        let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
         progress.style.width = progress_val + "%";
     });
 
@@ -354,15 +358,19 @@ $(document).ready(function () {
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
             //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
             $("#hitch-text").val(calc.toFixed(2));
-            //let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
-            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - form.MaxEnganche));
+
+            /* Codigo para aumentar o disminuir la barra de progreso */
+
+            // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
+            let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
+            let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
             progress.style.width = progress_val + "%";
         }
     });
 
     $("#hitch-plus").click(function () {
         let val = $("#hitch-range").val();
-        let calc = Number(val) + 5000, max = form.precioAuto - form.maxEnganche;
+        let calc = Number(val) + 5000, max = /*form.precioAuto - */form.MaxEnganche;
 
         let porcentaje = (calc * 100) / form.precioAuto;
 
@@ -372,8 +380,12 @@ $(document).ready(function () {
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
             //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
             $("#hitch-text").val(calc.toFixed(2));
-            //let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
-            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - form.MaxEnganche));
+
+            /* Codigo para aumentar o disminuir la barra de progreso */
+
+            // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
+            let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
+            let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
             progress.style.width = progress_val + "%";
 
         }
@@ -383,20 +395,26 @@ $(document).ready(function () {
     $("#hitch-text").on('keyup', function (e) {
         let val = Number($(this).val());
         console.log(val);
-        if (val >= (form.precioAuto / 10) && val <= (form.precioAuto - form.maxEnganche)) {
+
+        // Utilizo form.EngancheDepostio como cota inferior, es el minimo enganche(10% del precio del auto)
+        if (val >= form.EngancheDeposito && val <= form.MaxEnganche) {
             console.log("valid")
             $("#hitch-range").val(val);
             let porcentaje = (val * 100) / form.precioAuto;
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-            //let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - maxEnganche));
-            let progress_val = ((($("#hitch-range").val() - form.precioAuto * 0.1) * 100) / (form.precioAuto * 0.9 - form.MaxEnganche));
+
+            /* Codigo para aumentar o disminuir la barra de progreso */
+
+            // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
+            let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
+            let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
             progress.style.width = progress_val + "%";
         }
     });
 
     $("#hitch-text").blur(function () {
         let val = this.value;
-        if (val < (form.precioAuto / 10) || val > (form.precioAuto - form.MaxEnganche)) {
+        if (val < (form.precioAuto / 10) || val > form.MaxEnganche) {
             let valBarra = $("#hitch-range").val();
             this.value = valBarra;
         }
@@ -568,7 +586,7 @@ function showResults(data) {
     $(".step-5-imagen-auto").attr("src", form.ImagenAuto);
     $(".step-5-mensualidad").html(`$ ${numberWithCommas(_data.Mensualidad.toFixed(2))} M.N.`);
     $(".step-5-enganche").html(`$ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.`);
-    $(".step-5-deposito").html(`${_data.DepositoGarantia} - $ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.`);
+    $(".step-5-deposito").html(`${_data.DepositoGarantia} `);
     $(".step-5-plazo").html(_data.Plazo + " Meses");
     $(".step-5-precio-total").html(`$ ${numberWithCommas(_data.PrecioTotal.toFixed(2))} M.N.`);
     $(".step-5-monto-arrendar").html(`$ ${numberWithCommas(_data.PrecioTotal.toFixed(2))} M.N.`);
