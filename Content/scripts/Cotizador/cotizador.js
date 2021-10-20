@@ -301,6 +301,7 @@ $(document).ready(function () {
         formNextStep(3);
     });
 
+    var planes;
     $("#select-financing .select-button").click(function () {
         switch (this.dataset.value) {
             case "Financiamiento":
@@ -309,24 +310,37 @@ $(document).ready(function () {
                 $("#select-plan").show();
                 $("#select-arrendamiento").hide();
                 $("#data-depositos").hide();
+                $("#step4").show();
                 $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
+                planes = 1;
                 break;
             case "Arrendamiento":
                 $(".title-financiamiento").html("arrendamiento");
                 $(".title-enganche").html("depósito");
                 $("#select-plan").hide();
+                $("#step4").hide();
                 $("#select-arrendamiento").show();
                 $("#data-depositos").show();
                 $("#select-plan .select-button.selected")[0]?.classList.remove("selected");
+                planes = 0;
                 break;
         }
         swiper.updateAutoHeight(0);
         formNextStep(5);
+        console.log(planes);
     });
 
     $("#select-plan .select-button").click(function () { formNextStep(7); });
     $("#select-arrendamiento .select-button").click(function () { formNextStep(6); });
-    $("#select-term .select-button").click(function () { formNextStep(8); });
+    $("#select-term .select-button").click(function () {
+        if (planes == 1) {
+            formNextStep(8);
+            $("#finish").show();
+        }
+        else
+            formNextStep(9);
+    });
+
     $("#select-cantidad-depositos").change(function () { formNextStep(7); });
 
     //var slider = document.getElementById("hitch-range");

@@ -333,55 +333,57 @@
                                 <div class="select-button" data-for="term" data-value="48">48 MESES</div>
                             </div>
                         </div>
-                        <div class="row mt-4 step-4-8" style="display: none;">
-                            <div class="col-12">
-                                <div class="title">Selecciona el monto de <span class="title-enganche">enganche</span> con el que deseas iniciar tu plan</div>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="row mt-4 step-4-8" style="display: none;">
-                            <div class="col-12">
-                                <div class="title" id="porcentaje">10%</div>
-                                <div class="title position-relative">
-                                    @*<input type="range" id="hitch-range" min="0" max="100000" step="1" value="0" />*@
-
-                                    <input type="range"
-                                           value="0"
-                                           min="0"
-                                           max="100000"
-                                           id="hitch-range"
-                                           step="1"/>
-                                    <div id="progressBar"></div>
-
-
-                                    @*<div id="selector">
-                                        <div id="selectBtn"></div>
-                                    </div>*@
+                        <div id="step4">
+                            <div class="row mt-4 step-4-8" style="display: none;">
+                                <div class="col-12">
+                                    <div class="title">Selecciona el monto de <span class="title-enganche">enganche</span> con el que deseas iniciar tu plan</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row block range-controls step-4-8" style="display: none;">
-                            <div class="col-12 d-flex">
-                                <div id="hitch-minus" class="range-button">
-                                    <img src="~/Content/images/Cotizador/menos.png" />
-                                </div>
 
-                                <div class="d-flex hitch-content">
-                                    <div>$</div>
-                                    <input id="hitch-text" type="number" value="0" onkeydown="return event.keyCode !== 69"/>
-                                    <div>M.N.</div>
-                                </div>
 
-                                <div id="hitch-plus" class="range-button">
-                                    <img src="~/Content/images/Cotizador/mas.png" />
+
+
+
+                            <div class="row mt-4 step-4-8" style="display: none;">
+                                <div class="col-12">
+                                    <div class="title" id="porcentaje">10%</div>
+                                    <div class="title position-relative">
+                                        @*<input type="range" id="hitch-range" min="0" max="100000" step="1" value="0" />*@
+
+                                        <input type="range"
+                                               value="0"
+                                               min="0"
+                                               max="100000"
+                                               id="hitch-range"
+                                               step="1" />
+                                        <div id="progressBar"></div>
+
+
+                                        @*<div id="selector">
+                                                <div id="selectBtn"></div>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row block range-controls step-4-8" style="display: none;">
+                                <div class="col-12 d-flex">
+                                    <div id="hitch-minus" class="range-button">
+                                        <img src="~/Content/images/Cotizador/menos.png" />
+                                    </div>
+
+                                    <div class="d-flex hitch-content">
+                                        <div>$</div>
+                                        <input id="hitch-text" type="number" value="0" onkeydown="return event.keyCode !== 69" />
+                                        <div>M.N.</div>
+                                    </div>
+
+                                    <div id="hitch-plus" class="range-button">
+                                        <img src="~/Content/images/Cotizador/mas.png" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row block justify-content-center step-4-8" style="display: none;">
+                        <div class="row block justify-content-center step-4-9" style="display: none;" id="finish">
                             <div class="col-12 col-lg-4">
                                 <button type="button" id="step-4-finish" class="btn-red w-100">FINALIZAR</button>
                             </div>
@@ -607,7 +609,7 @@
                                                 </div>
                                                 <div class="float-container">
                                                     <label class="float-label" for="step-5-phone">Tel&eacute;fono</label>
-                                                    <input type="number" id="step-5-phone" name="phone" maxlength="10" class="form-input effect-2 bg-transparent" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 188 && event.keyCode !== 110 && event.keyCode !== 190)"/>
+                                                    <input type="number" id="step-5-phone" name="phone" maxlength="10" class="form-input effect-2 bg-transparent" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 188 && event.keyCode !== 110 && event.keyCode !== 190)" />
                                                     <span class="focus-border"></span>
                                                 </div>
                                             </div>
