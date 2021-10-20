@@ -9,7 +9,6 @@
 @Html.Script(Url.WidgetContent("~/Content/scripts/inputs.js"), "bottom", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-login.js"), "bottom", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/swiper-bundle.min.js"), "top", true)
-@Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-registro.js"), "bottom", true)
 
 
 
@@ -38,7 +37,6 @@
         <!-- COLUMNA VARIABLE -->
         <div class="swiper-container col-12 col-lg-5">
             <div class="swiper-wrapper">
-                <!--INICIO SESION NC -->
                 <div class="swiper-slide">
                     <div id="iniciar-sesion" class="login-form-stretch">
                         <div class="d-flex mb-4">
@@ -109,10 +107,9 @@
                         </div>
                     </div>
                 </div>
-                <!--INICIO -->
                 <div class="swiper-slide">
                     <div id="bienvenida" class="login-form-stretch">
-                        <!-- ** -->
+                        <!-- **************************************************************** -->
                         <div class="my-3">
                             <img src="/images/default-source/tfsm/my-tfsm/tfsm-logo-home-delivery.png" class="img-fluid" />
                         </div>
@@ -120,61 +117,30 @@
                             <h1 class="registro-title red-title">Bienvenido</h1>
                         </div>
                         <div class="mb-3">
-                            <p class="normal-p font-weight-bold">
-                                Con Home Delivery podras iniciar tu proceso de financiamiento estes donde estes.
-                                Tanto si ya eres cliente como si quieres pertenecer a la familia Toyota.
+                            <p class="normal-p">
+                                Desde Home Delivery podrás iniciar tu proceso de financiamiento estés en donde
+                                estés.
                             </p>
                         </div>
-
-                        <div class="row mb-5" style="margin-top: 70px;">
+                        <div class="my-5 my-lg-3">
+                            <h3 class="sub-title">Elije una opción para Iniciar sesión</h3>
+                            <p class="small-p">Para ingresar a "Soy Cliente" es necesario un ID de cliente.</p>
+                        </div>
+                        <div class="row" style="margin-top: 70px;">
                             <div class="col-12 col-lg-6 mb-3 mb-lg-0">
-                                <button type="button" class="btn-red btn-long col-lg-9 col-sm-12" id="ingresar">
-                                    INGRESAR
+                                <button type="button" class="btn-registro btn-long" id="ingreso-no-clientes">
+                                    QUIERO SER CLIENTE
+                                </button>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <button type="button" class="btn-registro" id="ingreso-clientes" data-toggle="tooltip" data-placement="bottom" title="Para ingresar a  &quot;Soy Cliente&quot; es necesario un ID de cliente.">
+                                    SOY CLIENTE
                                 </button>
                             </div>
                         </div>
                         <div id="err"></div>
-                        <p class="small-p mb-5 font-weight-bold"><small>Si aún no cuentas con los datos para iniciar sesión <span id="registro" class="red-link">registrate aquí.</span></small></p>
-
                     </div>
                 </div>
-                <!-- MENU INICIO SESION -->
-                <div class="swiper-slide">
-
-                    <div id="bienvenida" class="login-form-stretch">
-                        <!-- **************************************************************** -->
-                        <div class="d-flex mb-4 ">
-                            <div class="back-button" id="volver-inicio">
-                                <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <h1 class="registro-title red-title">Iniciar sesión</h1>
-                        </div>
-                        <div class="mb-3 pb-4">
-                            <p class="normal-p font-weight-bold mb-4">
-                                Para iniciar sesión selecciona la opción más adecuada.
-                            </p>
-                        </div>
-                        <div class="row my-5 my-lg-3 pb-4 ml-0" style="margin-top: 70px;">
-                            <div class="col-12 row mb-5">
-                                <button type="button" class="btn-red mb-3 col-xl-6 col-lg-7 font-weight-light " id="ingreso-clientes">
-                                    Ingresa con Id de cliente
-                                </button>
-                                <p class="small-p mb-5 font-weight-bold">Si eres cliente y tienes un id de cliente inicia sesión con esta opción.</p>
-                            </div>
-                            <div class="col-12 mb-3 mb-5 row">
-                                <button type="button" class="btn-red btn-long mb-3 col-xl-6 col-lg-7 font-weight-light" id="ingreso-no-clientes">
-                                    Ingresa con correo electrónico
-                                </button>
-                                <p class="small-p mb-5 font-weight-bold">Si cuentas con un correo electrónico y una clave, que registraste para pertencer a la familia Toyota. Inicia sesión con esta opción.</p>
-                            </div>
-                            <p class="small-p mb-5 font-weight-bold"><small>Si aún no cuentas con los datos para iniciar sesión <span id="registro-2" class="red-link">registrate aquí.</span></small></p>
-                        </div>
-                        <div id="err"></div>
-                    </div>
-                </div>
-                <!-- INICIO SESION C -->
                 <div class="swiper-slide">
                     <div id="iniciar-sesion" class="login-form">
                         <div class="d-flex mb-4">
@@ -243,204 +209,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- MENU DE REGISTROS -->
-                <div class="swiper-slide">
-
-                    <div id="bienvenida" class="login-form-stretch">
-                        <!-- **************************************************************** -->
-                        <div class="d-flex mb-4">
-                            <div class="back-button" id="volver-inicio-reg">
-                                <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <h1 class="registro-title red-title">Registro</h1>
-                        </div>
-                        <div class="mb-3 pb-4">
-                            <p class="normal-p font-weight-bold mb-4">
-                                Tenemos dos opciones para registrarte, elige una de ellas:
-                            </p>
-                        </div>
-                        <div class="row my-5 my-lg-3 pb-4 ml-0" style="margin-top: 70px;">
-                            <div class="col-12 row mb-5">
-                                <button type="button" class="btn-red mb-3 col-xl-6 col-lg-7 font-weight-light " id="registro-clientes">
-                                    Registro para clientes
-                                </button>
-                                <p class="small-p mb-5 font-weight-bold">Si eres parte de la familia Toyota. "Registro para clientes" es la opción adecuada para ti. Ten a la mano tu ID de cliente para completar el registro y con ello seguir el nuevo proceso de financiamiento.</p>
-                            </div>
-                            <div class="col-12 mb-3 mb-5 row">
-                                <button type="button" class="btn-red btn-long mb-3 col-xl-6 col-lg-7 font-weight-light" id="registro-no-clientes">
-                                    Registro nuevo
-                                </button>
-                                <p class="small-p mb-5 font-weight-bold">Si quieres ser parte de la familia Toyota e iniciar tu proceso de financiamiento así como el seguimiento del mismo, "Registro como nuevo" es la opción perfecta.</p>
-                            </div>
-
-                        </div>
-                        <div id="err"></div>
-                    </div>
-                </div>
-                <!-- REGISTRO CLIENTE -->
-                <div class="swiper-slide">
-                    <div id="bienvenida" class="login-form-stretch">
-                        <!-- **************************************************************** -->
-                        <div class="d-flex mb-4">
-                            <div class="back-button" id="volver-inicio-c">
-                                <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <h1 class="registro-title red-title">Registrate para iniciar sesión.</h1>
-                        </div>
-                        <div class="mb-3 pb-4">
-                            <p class="normal-p mb-4">
-                                Completa los siguientes campos para generar tu cuenta de ingreso a nuestra plataforma Home Delivery, con la que podrás iniciar y dar seguimiento a tu proceso de financiamiento para Estrenar un Toyota.
-                            </p>
-                        </div>
-                        <div data-id="registro-c-form" class="sf-form-container" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinityregister">
-                            <div class="row mt-5">
-                                <div class="col-12 col-lg-6">
-                                    <div class="float-container">
-                                        <label class="float-label" for="clientVisible">
-                                            Número de cliente / ID de cliente
-                                        </label>
-                                        <input class="form-input effect-2" type="text" name="_clientId" id="clientVisible" />
-                                        <span class="focus-border"></span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <div class="float-container">
-                                        <label class="float-label" for="rfcVisible">
-                                            RFC con Homoclave
-                                        </label>
-                                        <input class="form-input effect-2" type="text" name="_rfc" id="rfcVisible" />
-                                        <span class="focus-border"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-lg-6">
-                                    <div class="float-container">
-                                        <label class="float-label" for="emailVisible">
-                                            Correo electr&oacute;nico
-                                        </label>
-                                        <input class="form-input effect-2" type="email" name="_email" id="emailVisible" />
-                                        <span class="focus-border"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="err" class="login-error mt-4" style="display:none;"></div>
-
-                            <input type="hidden" value="" name="client" id="client" />
-                            <input type="hidden" value="" name="email" id="email" />
-                            <input type="hidden" value="" name="rfc" id="rfc" />
-                            <input type="hidden" name="fail" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery/registro-clientes" id="fail" />
-                            <input type="hidden" name="ok" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery/registro-exito"
-                                   id="ok" />
-
-                            <div class="my-5 row align-items-center">
-                                <div class="col-12 col-lg-12 mb-4">
-                                    <div class="terms">
-                                        <div><input type="checkbox" id="registro-terms" /></div>
-                                        <div>
-                                            <small>He le&iacute;do y acepto el <span class="red-link link-aviso-privacidad">aviso de privacidad</span> y los <span id="terms-btn" class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span></small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <button type="submit" class="btn-registro align-self-center">REGISTRARME</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- REGISTRO NO CLIENTE -->
-                <div class="swiper-slide">
-                    <div id="bienvenida" class="login-form-stretch">
-                        <!-- **************************************************************** -->
-                        <div class="d-flex mb-4">
-                            <div class="back-button" id="volver-inicio-nc">
-                                <img src="/images/default-source/tfsm/my-tfsm/back_button.png" />
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <h1 class="registro-title">Nos da mucho gusto que quieras ser parte de la familia Toyota.</h1>
-                        </div>
-                        <div class="mb-3 pb-4">
-                            <p class="normal-p mb-4">
-                                Completa los siguientes campos para generar tu cuenta de ingreso a nuestra plataforma Home Delivery, con la que podrás iniciar y dar seguimiento a tu proceso de financiamiento para Estrenar un Toyota.
-                            </p>
-                        </div>
-                        <div data-id="registro-nc-form" class="sf-form-container" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinityregister">
-                            <div class="row mt-5">
-                                <div class="col-12 col-lg-6">
-                                    <div class="float-container">
-                                        <label class="float-label" for="nameVisible">
-                                            Nombre
-                                        </label>
-                                        <input class="form-input effect-2" type="text" name="_name" id="nameVisible" />
-                                        <span class="focus-border"></span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <div class="float-container">
-                                        <label class="float-label" for="lastnameVisible">
-                                            Apellido
-                                        </label>
-                                        <input class="form-input effect-2" type="text" name="_lastname" id="lastnameVisible" />
-                                        <span class="focus-border"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-lg-6">
-                                    <div class="float-container">
-                                        <label class="float-label" for="emailVisible">
-                                            Correo electr&oacute;nico
-                                        </label>
-                                        <input class="form-input effect-2" type="email" name="_email" id="emailVisible" />
-                                        <span class="focus-border"></span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <div class="float-container">
-                                        <label class="float-label" for="rfcVisible">
-                                            RFC
-                                        </label>
-                                        <input class="form-input effect-2" type="text" name="_rfc" id="rfcVisible" />
-                                        <span class="focus-border"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="err" class="login-error" style="display:none;"></div>
-
-                            <input type="hidden" value="" name="name" id="name" />
-                            <input type="hidden" value="" name="lastname" id="lastname" />
-                            <input type="hidden" value="" name="email" id="email" />
-                            <input type="hidden" value="" name="rfc" id="rfc" />
-                            <input type="hidden" name="fail" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery/registro-nuevo-cliente" id="fail" />
-                            <input type="hidden" name="ok" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery/registro-exito"
-                                   id="ok" />
-
-                            <div class="my-5 row align-items-center">
-                                <div class="col-12 col-lg-12 mb-4">
-                                    <div class="terms">
-                                        <div><input type="checkbox" id="registro-terms-nc" /></div>
-                                        <div>
-                                            <small>He le&iacute;do y acepto el <span class="red-link link-aviso-privacidad">aviso de privacidad</span> y los <span id="terms-btn" class="red-link">T&eacute;rminos y condiciones de servicio de TFS</span></small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <button type="submit" class="btn-registro align-self-center">REGISTRARME</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-
     </div>
 </div>
+
