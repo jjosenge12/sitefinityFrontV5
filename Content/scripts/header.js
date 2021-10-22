@@ -147,31 +147,52 @@ $(document).ready(function () {
     $(this).html(form);
   });
 
+  // He leído y acepto el aviso de privacidad y los términos y condiciones de uso de la página
+  $("#newsletterAviso").click(function () {
+    window.open(
+        window.location.origin + "/legales/aviso-de-privacidad", 
+        "_blank"
+    );
+  });
+
   $("#newsletterTerms").click(() => {
     termsCheckbox = "#termsCheckbox";
-    openModal("newsletterTermsModal");
+    //openModal("newsletterTermsModal"); //quito el modal y reemplazo para que se abra una Page
+    window.open(
+        window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Term
+        "_blank"
+    );
   });
 
+  // Planes - tambien se quitara el modal
   $("#plansTerms").click(() => {
     termsCheckbox = "#plansTermsCheckbox";
-    openModal("newsletterTermsModal");
+    //openModal("newsletterTermsModal");
+    window.open(
+        window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Term
+        "_blank"
+    );
   });
 
-  $("#termsCheckbox").click(function (e) {
+ 
+  // Quito el modal que aparece al tildar el checkbox.
+
+  /*$("#termsCheckbox").click(function (e) {
     if ($("#termsCheckbox").prop("checked")) {
       e.preventDefault();
       termsCheckbox = "#termsCheckbox";
       openModal("newsletterTermsModal");
     }
-  });
+  });*/
 
-  $("#plansTermsCheckbox").click(function (e) {
+    // seria bueno que esto pase a plans.js
+  /*$("#plansTermsCheckbox").click(function (e) {
     if ($("#plansTermsCheckbox").prop("checked")) {
       e.preventDefault();
       termsCheckbox = "#plansTermsCheckbox";
       openModal("newsletterTermsModal");
     }
-  });
+  });*/
 
   $("#closeNewsletterTerms").click(() => closeModal("newsletterTermsModal"));
 
@@ -188,13 +209,13 @@ $(document).ready(function () {
   $("#denyNewsletterTerms").click(function () {
     console.log(termsCheckbox);
     $(termsCheckbox).prop("checked", false);
-    closeModal("newsletterTermsModal");
+    closeModal("newsletterTermsModal");// si no hay modal, esta linea deberia sacarse
   });
 
   $("#acceptNewsletterTerms").click(function () {
     console.log(termsCheckbox);
     $(termsCheckbox).prop("checked", true);
-    closeModal("newsletterTermsModal");
+    closeModal("newsletterTermsModal");// si no hay modal, esta linea deberia sacarse
   });
 
   $(".social-network").click(function () {
@@ -245,9 +266,11 @@ $(document).ready(function () {
   $("#newsletter-form").submit(function (e) {
     e.preventDefault();
     if ($(this).valid()) {
+      // Como quité el modal ver si tirar un alerta indicando de que el check no esta tildado
       if (!$("#termsCheckbox").prop("checked")) {
         termsCheckbox = "#termsCheckbox";
-        openModal("newsletterTermsModal");
+        //openModal("newsletterTermsModal"); //quito el modal del boton enviar
+        console.log("termsCheckbox no aceptado");
       } else {
         commitNewsletter($("#nl-email").val());
       }

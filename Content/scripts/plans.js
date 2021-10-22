@@ -294,7 +294,8 @@ $(document).ready(function () {
           commitSalesforcePlan();
         } else {
           termsCheckbox = "#plansTermsCheckbox";
-          openModal("newsletterTermsModal");
+          //openModal("newsletterTermsModal"); //quito el modal
+            console.log("PlansTermsCheckbox no aceptado");
         }
       } else {
         console.log("formulario inválido");

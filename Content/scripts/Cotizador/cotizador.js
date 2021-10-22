@@ -111,12 +111,16 @@ $(document).ready(function () {
 
     $("#step-2-terms").click(function () {
         termsCheckbox = "#step-2-terms";
-        openModal("newsletterTermsModal");
+        //openModal("newsletterTermsModal"); quito el modal al tildar el checkbox
     });
 
     $("#step-2-terms-btn").click(function () {
         termsCheckbox = "#step-2-terms";
-        openModal("newsletterTermsModal");
+        //openModal("newsletterTermsModal");
+        window.open(
+            window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Terminos
+            "_blank"
+        );
     });
 
     $("#step-2-continue").click(() => {
@@ -129,8 +133,8 @@ $(document).ready(function () {
 
                 cars_swiper.autoplay.start();
             } else {
-                termsCheckbox = "#step-2-terms";
-                openModal("newsletterTermsModal");
+                termsCheckbox = "#step-2-terms";// Ver si es necesario tirar un alerta cuando se oprime en continuar y el checkbox no esta tildado
+                //openModal("newsletterTermsModal"); quito el modal que aparece al oprimir en Continuar
             }
         }
     });
@@ -492,12 +496,16 @@ $(document).ready(function () {
 
     $("#step-5-terms-btn").click(function () {
         termsCheckbox = "#step-5-terms";
-        openModal("newsletterTermsModal");
+        //openModal("newsletterTermsModal"); quito el modal y reemplazo para direccionar a nueva pagina de terminos y condiciones
+        window.open(
+            window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Terminos y condiciones
+            "_blank"
+        );
     });
 
     $("#step-5-terms").click(function () {
         termsCheckbox = "#step-5-terms";
-        openModal("newsletterTermsModal");
+        //openModal("newsletterTermsModal"); quito el modal al clickear el checkbox
     });
 
     $("#select-otro-plazo .select-button").click(function () {
@@ -517,7 +525,8 @@ $(document).ready(function () {
 
             } else {
                 termsCheckbox = "#step-5-terms";
-                openModal("newsletterTermsModal");
+                //openModal("newsletterTermsModal"); quito el modal
+                // Ver si se deberia tirar un alerta indicando de que el cehckbox no fue tildado
             }
         }
     });
