@@ -170,7 +170,7 @@ $(document).ready(function () {
 
     $(".link-aviso-privacidad").click(function () {
         window.open(
-            window.location.origin + "/aviso-de-privacidad-clientes",
+            window.location.origin + "/aviso-de-privacidad-para-clientes",
             "_blank"
         );
     });
