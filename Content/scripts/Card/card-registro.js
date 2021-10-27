@@ -9,8 +9,8 @@ $(document).ready(function () {
             token = data.result;
         }
     });
-
-    $(".sf-form-container").each(function () {
+  
+    $(".sf-form-container.regis").each(function () {
         var form = document.createElement("form");
 
         form.innerHTML = this.innerHTML;
@@ -25,32 +25,47 @@ $(document).ready(function () {
     $("#terms-btn").click(function () {
         console.log("entre");
         termsCheckbox = "#registro-terms";
-        openModal("newsletterTermsModal");
+        //openModal("newsletterTermsModal");
+        window.open(
+            window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Terminos y condiciones
+            "_blank"
+        );
     });
 
     $("#registro-terms").click(function () {
         console.log("entre");
         termsCheckbox = "#registro-terms";
-        openModal("newsletterTermsModal");
+        //openModal("newsletterTermsModal");
+    });
+
+    $("#terms-btn-nc").click(function () {
+        console.log("entre");
+        termsCheckbox = "#registro-terms";
+        //openModal("newsletterTermsModal"); quito el modal para redireccionar a nueva page de TyC
+        window.open(
+            window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Terminos y condiciones
+            "_blank"
+        );
     });
 
     $("#registro-nc-form").submit(function (e) {
         if ($("#registro-nc-form").valid()) {
-            if ($("#registro-terms").prop("checked")) {
+            if ($("#registro-terms-nc").prop("checked")) {
                 encrypt_reg(false);
 
                 sessionStorage.setItem("reg-client", false);
                 //true cliente, false no cliente
                 //primer parametro nombre, segundo parametro string
-                sessionStorage.setItem("reg-name", document.getElementById("nameVisible").value);
-                sessionStorage.setItem("reg-lastname", document.getElementById("lastnameVisible").value);
-                sessionStorage.setItem("reg-email", document.getElementById("emailVisible").value);
-                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible").value);
+                sessionStorage.setItem("reg-name", document.getElementById("nameVisible-nr").value);
+                sessionStorage.setItem("reg-lastname", document.getElementById("lastnameVisible-nr").value);
+                sessionStorage.setItem("reg-email", document.getElementById("emailVisible-nr").value);
+                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible-nr").value);
             }
             else {
                 e.preventDefault();
-                termsCheckbox = "#registro-terms";
-                openModal("newsletterTermsModal");
+                termsCheckbox = "#registro-terms-nc";
+                //openModal("newsletterTermsModal");
+                console.log("No estan aceptados el aviso de privacidad y los TyC");
             }
         }
         else {
@@ -60,98 +75,111 @@ $(document).ready(function () {
 
     $("#registro-c-form").submit(function (e) {
         if ($("#registro-c-form").valid()) {
-            if ($("#registro-terms").prop("checked")) {
+            if ($("#registro-terms-c").prop("checked")) {
                 encrypt_reg(true);
 
                 sessionStorage.setItem("reg-client", true);
-                sessionStorage.setItem("reg-clientId", document.getElementById("clientVisible").value);
-                sessionStorage.setItem("reg-email", document.getElementById("emailVisible").value);
-                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible").value);
+                sessionStorage.setItem("reg-clientId", document.getElementById("clientVisible-r").value);
+                sessionStorage.setItem("reg-email", document.getElementById("emailVisible-r").value);
+                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible-r").value);
             }
             else {
                 e.preventDefault();
-                termsCheckbox = "#registro-terms";
-                openModal("newsletterTermsModal");
+                termsCheckbox = "#registro-terms-c";
+                //openModal("newsletterTermsModal");
+                console.log("No estan aceptados el aviso de privacidad y los TyC");
             }
         }
         else {
             e.preventDefault();
         }
     });
-
-    if (window.location.search.includes("err")) {
+   
+   /* if (window.location.search.includes("err")) {
         const urlParams = new URLSearchParams(window.location.search);
-        var error = urlParams.get("err");
-
+        var error = urlParams.get("err").split;
+        console.log(error[1]);
         switch (error) {
             case '6':
-                $("#err").html(`Estás registrado como uno de nuestros clientes, por lo que te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
+                $("#err-nc").html(`Estás registrado como uno de nuestros clientes, por lo que te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
                 En este acceso deberás registrarte con el usuario y contraseña con los que actualmente ingresas
                 a nuestro portal MyTFS`);
-                $("#err").show();
+                $("#err-nc").show();
                 break;
             case '0':
-                $("#err").html(`Este usuario ya se encuentra registrado, te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
+                $("#err-nc").html(`Este usuario ya se encuentra registrado, te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
                 Para ingresar deberás registrarte con el usuario y contraseña ingresados anteriormente.`);
                 $("#err").show();
                 break;
             case '10':
-                $("#err").html(`Este usuario ya se encuentra registrado con otro correo electronico, te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
+                $("#err-nc").html(`Este usuario ya se encuentra registrado con otro correo electronico, te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
                 `);
-                $("#err").show();
+                $("#err-nc").show();
                 break;
 
 
         }
 
-    }
-
+    }*/
+    
 
     function encrypt_reg(isClient) {
 
         if (isClient) {
-            var clientId = document.getElementById("clientVisible").value;
-            var clientId_enc = window.btoa(clientId);
-            document.getElementById("client").value = clientId_enc;
+            var clientIdr = document.getElementById("clientVisible-r").value;
+            var clientId_encr = window.btoa(clientIdr);
+            document.getElementById("client-r").value = clientId_encr;
+            var rfcr = document.getElementById("rfcVisible-r").value;
+            var emailr = document.getElementById("emailVisible-r").value;
+            var failr = document.getElementById("fail-r").value;
+            var okr = document.getElementById("ok-r").value;
+            var rfc_encr = window.btoa(rfcr);
+            var email_encr = window.btoa(emailr);
+            var fail_encr = window.btoa(failr);
+            var ok_encr = window.btoa(okr);
+            document.getElementById("rfc-r").value = rfc_encr;
+            document.getElementById("email-r").value = email_encr;
+            document.getElementById("fail-r").value = fail_encr;
+            document.getElementById("ok-r").value = ok_encr;
         }
         else {
-            var name = document.getElementById("nameVisible").value;
-            var lastname = document.getElementById("lastnameVisible").value;
+            var namer = document.getElementById("nameVisible-nr").value;
+            var lastnamer = document.getElementById("lastnameVisible-nr").value;
 
-            var name_enc = window.btoa(name);
-            var lastname_enc = window.btoa(lastname);
+            var name_encr = window.btoa(namer);
+            var lastname_encr = window.btoa(lastnamer);
 
-            document.getElementById("name").value = name_enc;
-            document.getElementById("lastname").value = lastname_enc;
+            document.getElementById("name-nr").value = name_encr;
+            document.getElementById("lastname-nr").value = lastname_encr;
+            var rfcr = document.getElementById("rfcVisible-nr").value;
+            var emailr = document.getElementById("emailVisible-nr").value;
+            var failr = document.getElementById("fail-nr").value;
+            var okr = document.getElementById("ok-nr").value;
+            var rfc_encr = window.btoa(rfcr);
+            var email_encr = window.btoa(emailr);
+            var fail_encr = window.btoa(failr);
+            var ok_encr = window.btoa(okr);
+            document.getElementById("rfc-nr").value = rfc_encr;
+            document.getElementById("email-nr").value = email_encr;
+            document.getElementById("fail-nr").value = fail_encr;
+            document.getElementById("ok-nr").value = ok_encr;
+            
         }
-
-        var rfc = document.getElementById("rfcVisible").value;
-        var email = document.getElementById("emailVisible").value;
-        var fail = document.getElementById("fail").value;
-        var ok = document.getElementById("ok").value;
-        var rfc_enc = window.btoa(rfc);
-        var email_enc = window.btoa(email);
-        var fail_enc = window.btoa(fail);
-        var ok_enc = window.btoa(ok);
-        document.getElementById("rfc").value = rfc_enc;
-        document.getElementById("email").value = email_enc;
-        document.getElementById("fail").value = fail_enc;
-        document.getElementById("ok").value = ok_enc;
         //alert(pass_enc);
     }
 
     $(".link-aviso-privacidad").click(function () {
         window.open(
-            window.location.origin + "/legales/aviso-de-privacidad",
+            window.location.origin + "/aviso-de-privacidad-clientes",
             "_blank"
         );
     });
 
     $("#registro-c-form").validate({
         submitHandler: function (form) {
-            document.getElementById("clientVisible").removeAttribute("name");
-            document.getElementById("rfcVisible").removeAttribute("name");
-            document.getElementById("emailVisible").removeAttribute("name");
+            document.getElementById("clientVisible-r").removeAttribute("name");
+            document.getElementById("rfcVisible-r").removeAttribute("name");
+            document.getElementById("emailVisible-r").removeAttribute("name");
 
             $(form).ajaxSubmit();
         },
@@ -206,10 +234,10 @@ $(document).ready(function () {
 
     $("#registro-nc-form").validate({
         submitHandler: function (form) {
-            document.getElementById("nameVisible").removeAttribute("name");
-            document.getElementById("lastnameVisible").removeAttribute("name");
-            document.getElementById("emailVisible").removeAttribute("name");
-            document.getElementById("rfcVisible").removeAttribute("name");
+            document.getElementById("nameVisible-nr").removeAttribute("name");
+            document.getElementById("lastnameVisible-nr").removeAttribute("name");
+            document.getElementById("emailVisible-nr").removeAttribute("name");
+            document.getElementById("rfcVisible-nr").removeAttribute("name");
 
             $(form).ajaxSubmit();
         },
