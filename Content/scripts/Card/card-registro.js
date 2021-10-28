@@ -25,9 +25,9 @@ $(document).ready(function () {
     $("#terms-btn").click(function () {
         console.log("entre");
         termsCheckbox = "#registro-terms";
-        //openModal("newsletterTermsModal");
+     
         window.open(
-            window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Terminos y condiciones
+            window.location.origin + "/terminos-de-servicio", 
             "_blank"
         );
     });
@@ -35,15 +35,15 @@ $(document).ready(function () {
     $("#registro-terms").click(function () {
         console.log("entre");
         termsCheckbox = "#registro-terms";
-        //openModal("newsletterTermsModal");
+     
     });
 
     $("#terms-btn-nc").click(function () {
         console.log("entre");
         termsCheckbox = "#registro-terms";
-        //openModal("newsletterTermsModal"); quito el modal para redireccionar a nueva page de TyC
+   
         window.open(
-            window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Terminos y condiciones
+            window.location.origin + "/terminos-de-servicio", 
             "_blank"
         );
     });
@@ -54,8 +54,6 @@ $(document).ready(function () {
                 encrypt_reg(false);
 
                 sessionStorage.setItem("reg-client", false);
-                //true cliente, false no cliente
-                //primer parametro nombre, segundo parametro string
                 sessionStorage.setItem("reg-name", document.getElementById("nameVisible-nr").value);
                 sessionStorage.setItem("reg-lastname", document.getElementById("lastnameVisible-nr").value);
                 sessionStorage.setItem("reg-email", document.getElementById("emailVisible-nr").value);
@@ -64,7 +62,6 @@ $(document).ready(function () {
             else {
                 e.preventDefault();
                 termsCheckbox = "#registro-terms-nc";
-                //openModal("newsletterTermsModal");
                 console.log("No estan aceptados el aviso de privacidad y los TyC");
             }
         }
@@ -86,7 +83,6 @@ $(document).ready(function () {
             else {
                 e.preventDefault();
                 termsCheckbox = "#registro-terms-c";
-                //openModal("newsletterTermsModal");
                 console.log("No estan aceptados el aviso de privacidad y los TyC");
             }
         }
@@ -95,32 +91,7 @@ $(document).ready(function () {
         }
     });
    
-   /* if (window.location.search.includes("err")) {
-        const urlParams = new URLSearchParams(window.location.search);
-        var error = urlParams.get("err").split;
-        console.log(error[1]);
-        switch (error) {
-            case '6':
-                $("#err-nc").html(`Estás registrado como uno de nuestros clientes, por lo que te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
-                En este acceso deberás registrarte con el usuario y contraseña con los que actualmente ingresas
-                a nuestro portal MyTFS`);
-                $("#err-nc").show();
-                break;
-            case '0':
-                $("#err-nc").html(`Este usuario ya se encuentra registrado, te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
-                Para ingresar deberás registrarte con el usuario y contraseña ingresados anteriormente.`);
-                $("#err").show();
-                break;
-            case '10':
-                $("#err-nc").html(`Este usuario ya se encuentra registrado con otro correo electronico, te pedimos hacer clic <a href="${window.location.origin + "/tfsm/home-delivery"}" class="black-link">aquí</a> para ingresar.
-                `);
-                $("#err-nc").show();
-                break;
-
-
-        }
-
-    }*/
+   
     
 
     function encrypt_reg(isClient) {
@@ -165,7 +136,6 @@ $(document).ready(function () {
             document.getElementById("ok-nr").value = ok_encr;
             
         }
-        //alert(pass_enc);
     }
 
     $(".link-aviso-privacidad").click(function () {

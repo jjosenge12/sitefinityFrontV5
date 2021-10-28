@@ -1,11 +1,9 @@
 ﻿$(document).ready(function () {
 
     var swiper;
-    /******************************************************************************/
     if (window.location.search.includes("cp")) {
         const urlParams = new URLSearchParams(window.location.search);
         var error = urlParams.get("cp");
-        //window.location.href + '?cp=1'
         switch (error) {
             case '1':
                 Swal.fire({
@@ -16,14 +14,13 @@
         }
 
     }
-    /****************************************************************************/
    
 
     if (window.location.search.includes("err")) {
         const urlParams = new URLSearchParams(window.location.search);
         var error = urlParams.get("err").split('.');
         switch (error[0]) {
-            //Errores de usuarios no clientes
+            
             case '1':
                 swiper = new Swiper('.swiper-container', {
                     speed: 400,
@@ -41,7 +38,7 @@
 
                 break;
 
-            //Errores de usuario cliente
+           
             case '2':
                 swiper = new Swiper('.swiper-container', {
                     speed: 400,
@@ -62,7 +59,7 @@
                 }
                 break;
 
-                /**********ERRORES DE REGISTRO**************/
+               
             case '4':
                     swiper = new Swiper('.swiper-container', {
                         speed: 400,
@@ -161,7 +158,6 @@
             }
         }
         else {
-            /************************/
                 swiper = new Swiper('.swiper-container', {
                     speed: 400,
                     allowTouchMove: false,
@@ -185,16 +181,9 @@
         document.getElementById("ok").value = ok_enc;
     });
 
-    //---- TOOL TIP ------
-
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
-
-    //$.widget.bridge('uibutton', $.ui.button);
-    //$.widget.bridge('uitooltip', $.ui.tooltip);
-
-    // -------------------------
 
     $("#c-form").submit(function (e) {
         var pass = document.getElementById("passClientVisible").value;
@@ -261,7 +250,7 @@
         document.getElementById("email").value = email_enc;
         document.getElementById("fail").value = fail_enc;
         document.getElementById("ok").value = ok_enc;
-        //alert(pass_enc);
+        
     }
 
     $("#ingreso-no-clientes").click(() => swiper.slideTo(0));
