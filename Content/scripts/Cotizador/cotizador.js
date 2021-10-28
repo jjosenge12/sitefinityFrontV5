@@ -1,8 +1,6 @@
 ﻿
-//ESTO ES UN CAMBIO
 
 var form = {}, swiper, cars_swiper, cotizacion, car_slides;
-//var maxEnganche = 0;
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -11,9 +9,8 @@ const formatter = new Intl.NumberFormat('en-US', {
 });
 
 function scrollToTargetAdjusted(element) {
-    //var element = document.getElementById(elementId);
-    var headerOffset = 0;
-    //var elementPosition = element.getBoundingClientRect().top;
+    
+    var headerOffset = 0;    
     var elementPosition = element.offsetTop;
     var offsetPosition = elementPosition - headerOffset;
 
@@ -36,7 +33,7 @@ function formNextStep(step) {
 }
 
 $(document).ready(function () {
-    var maxEnganche = Number($("#max-enganche").val()); // esta linea habria q quitarla
+    
     car_slides = $(".swiper-slide.car-slide-container");
 
     jQuery.validator.addMethod(
@@ -110,15 +107,13 @@ $(document).ready(function () {
     });
 
     $("#step-2-terms").click(function () {
-        termsCheckbox = "#step-2-terms";
-        //openModal("newsletterTermsModal"); quito el modal al tildar el checkbox
+        termsCheckbox = "#step-2-terms";        
     });
 
     $("#step-2-terms-btn").click(function () {
-        termsCheckbox = "#step-2-terms";
-        //openModal("newsletterTermsModal");
+        termsCheckbox = "#step-2-terms";        
         window.open(
-            window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Terminos
+            window.location.origin + "/terminos-de-servicio",
             "_blank"
         );
     });
@@ -133,8 +128,7 @@ $(document).ready(function () {
 
                 cars_swiper.autoplay.start();
             } else {
-                termsCheckbox = "#step-2-terms";// Ver si es necesario tirar un alerta cuando se oprime en continuar y el checkbox no esta tildado
-                //openModal("newsletterTermsModal"); quito el modal que aparece al oprimir en Continuar
+                termsCheckbox = "#step-2-terms";
             }
         }
     });
@@ -264,8 +258,7 @@ $(document).ready(function () {
             Vesion: $("#car_version option:selected")[0].dataset.version,
             Anio: $("#car_version option:selected")[0].dataset.anio,
             precioAuto: $(this).val(),
-            EngancheDeposito: $(this).val() / 10, // seria el Minimo Enganche (10% del precioAuto)
-            //MaxEnganche: $(this).val() - maxEnganche
+            EngancheDeposito: $(this).val() / 10, // Cota minima de enganche (10% del precioAuto)
             MaxEnganche: $(this).val() * .4
         }
 
@@ -292,9 +285,7 @@ $(document).ready(function () {
     });
 
     $("#select-personalidad-fiscal .select-button").click(function () {
-        if (this.dataset.value === "Física") {
-            //$("#select-financing .select-button")[0].classList.add("selected");
-            //$("#select-financing .select-button")[0].click();
+        if (this.dataset.value === "Física") {            
             $("#select-financing .select-button")[1].style.display = "none";
             $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
         }
@@ -347,7 +338,7 @@ $(document).ready(function () {
 
     $("#select-cantidad-depositos").change(function () { formNextStep(7); });
 
-    //var slider = document.getElementById("hitch-range");
+    
     var progress = document.getElementById("progressBar");
 
     $("#hitch-range").change(function () {
@@ -355,10 +346,9 @@ $(document).ready(function () {
         $("#hitch-text").val(Number(form.hitch).toFixed(2));
         let porcentaje = (form.hitch * 100) / form.precioAuto;
         $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-               
-        /* Codigo para aumentar o disminuir la barra de progreso */
 
         // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
+        /* Codigo para aumentar o disminuir la barra de progreso */        
         let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
         let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
         progress.style.width = progress_val + "%";
@@ -367,46 +357,43 @@ $(document).ready(function () {
     $("#hitch-minus").click(function () {
         let val = $("#hitch-range").val();
         let calc = Number(val) - 5000;
+                
+        if (calc < form.EngancheDeposito)
+            calc = form.EngancheDeposito;
 
         let porcentaje = (calc * 100) / form.precioAuto;
 
-        if (calc >= (form.precioAuto / 10)) {
-            $("#hitch-range").val(calc);
-            $("#hitch-range").change();
-            $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-            //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
-            $("#hitch-text").val(calc.toFixed(2));
+        $("#hitch-range").val(calc);
+        $("#hitch-range").change();
+        $("#porcentaje").html(porcentaje.toFixed(0) + " %");        
+        $("#hitch-text").val(calc.toFixed(2));
 
-            /* Codigo para aumentar o disminuir la barra de progreso */
-
-            // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
-            let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
-            let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
-            progress.style.width = progress_val + "%";
-        }
+        /* Sentencias para aumentar o disminuir la barra de progreso */        
+        let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
+        let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
+        progress.style.width = progress_val + "%";        
     });
 
     $("#hitch-plus").click(function () {
         let val = $("#hitch-range").val();
-        let calc = Number(val) + 5000, max = /*form.precioAuto - */form.MaxEnganche;
+        let calc = Number(val) + 5000, max = form.MaxEnganche;
+        
+        if (calc > max)
+            calc = max;
 
         let porcentaje = (calc * 100) / form.precioAuto;
+                        
+        $("#hitch-range").val(calc);
+        $("#hitch-range").change();
+        $("#porcentaje").html(porcentaje.toFixed(0) + " %");        
+        $("#hitch-text").val(calc.toFixed(2));
 
-        if (calc <= max) {
-            $("#hitch-range").val(calc);
-            $("#hitch-range").change();
-            $("#porcentaje").html(porcentaje.toFixed(0) + " %");
-            //$("#hitch-text").html("$ " + calc.toFixed(2) + " M.N.");
-            $("#hitch-text").val(calc.toFixed(2));
-
-            /* Codigo para aumentar o disminuir la barra de progreso */
-
-            // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
-            let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
-            let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
-            progress.style.width = progress_val + "%";
-
-        }
+        // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
+        /* Codigo para aumentar o disminuir la barra de progreso */
+        let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
+        let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
+        progress.style.width = progress_val + "%";
+       
     });
 
 
@@ -421,9 +408,7 @@ $(document).ready(function () {
             let porcentaje = (val * 100) / form.precioAuto;
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
 
-            /* Codigo para aumentar o disminuir la barra de progreso */
-
-            // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
+            /* Codigo para aumentar o disminuir la barra de progreso */                        
             let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
             let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
             progress.style.width = progress_val + "%";
@@ -496,16 +481,15 @@ $(document).ready(function () {
 
     $("#step-5-terms-btn").click(function () {
         termsCheckbox = "#step-5-terms";
-        //openModal("newsletterTermsModal"); quito el modal y reemplazo para direccionar a nueva pagina de terminos y condiciones
+        
         window.open(
-            window.location.origin + "/terminos-de-servicio", // se redirige a la nueva page de Terminos y condiciones
+            window.location.origin + "/terminos-de-servicio",
             "_blank"
         );
     });
 
     $("#step-5-terms").click(function () {
-        termsCheckbox = "#step-5-terms";
-        //openModal("newsletterTermsModal"); quito el modal al clickear el checkbox
+        termsCheckbox = "#step-5-terms";        
     });
 
     $("#select-otro-plazo .select-button").click(function () {
@@ -524,9 +508,7 @@ $(document).ready(function () {
                 sendDataSalesforce();
 
             } else {
-                termsCheckbox = "#step-5-terms";
-                //openModal("newsletterTermsModal"); quito el modal
-                // Ver si se deberia tirar un alerta indicando de que el cehckbox no fue tildado
+                termsCheckbox = "#step-5-terms";                
             }
         }
     });
