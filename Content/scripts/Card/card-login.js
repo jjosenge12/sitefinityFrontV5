@@ -71,11 +71,14 @@
                     case '0':                  
                         $("#err-nc").html(`Este usuario ya se encuentra registrado, te pedimos hacer clic<span class="black-link" id="error-lognc"> aquí </span>para ingresar.
                 Para ingresar deberás registrarte con el usuario y contraseña ingresados anteriormente.
-                        <script>swiper = new Swiper('.swiper-container', {
+                        <script>
+                        swiper2 = new Swiper('.swiper-container', {
                         speed: 400,
                         allowTouchMove: false,
                         initialSlide: 6});
-                        $("#error-lognc").click(() => swiper.slideTo(0));
+                        $("#error-lognc").click(() => {swiper2.slideTo(0);$("#err-nc").remove() });
+                        
+                        $("#al-registro-nc").click(() => swiper2.slideTo(6));
                         </script>`);
                         $("#err-nc").show();
                         
@@ -87,7 +90,7 @@
                         speed: 400,
                         allowTouchMove: false,
                         initialSlide: 6});
-                        $("#error-logc").click(() => swiper.slideTo(3));
+                        $("#error-logc").click(() => {swiper.slideTo(3);$("#err-nc").remove()});
                         </script>`);
                         $("#err-nc").show();
                         break;
@@ -98,7 +101,7 @@
                         speed: 400,
                         allowTouchMove: false,
                         initialSlide: 6});
-                        $("#error-trc").click(() => swiper.slideTo(5));
+                        $("#error-trc").click(() => {swiper.slideTo(5);$("#err-nc").remove()});
                         </script>`);
                         $("#err-nc").show();
                         break;
@@ -107,7 +110,7 @@
                         $("#err-nc").show();
                         break;
 
-                }
+                } 
                 break;
             case '3':
                 swiper = new Swiper('.swiper-container', {
