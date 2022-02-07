@@ -22,6 +22,26 @@ grecaptcha.ready(function () {
 
 $(document).ready(function () {
     $("a.url-mytfsm").attr("href", window.config.urlMyTfsm);
+    let isLogged = sessionStorage.getItem("isLogged"), reg = sessionStorage.getItem("reg-rfc");
+    $("#logout").hide();
+
+    let username = sessionStorage.getItem("name"), isClient = sessionStorage.getItem("isClient");
+    $(".user-name").html(username || "Usuario");
+
+    if (isLogged == "true") {
+        $("#link-finan").text("Mis Cotizaciones");
+        $("#openMenuBtn").hide()
+        $("#openMenuBtn2").show()
+        $("#logout").show();
+    }
+    if (sessionStorage.length == 0 || isLogged == "false" || reg) {
+        $("#link-finan").text("FINANCIAMIENTO EN LÍNEA");
+    }
+
+    $("#logout").click(function () {
+        sessionStorage.clear();
+        window.location.replace(window.location.origin + "/tfsm/home-delivery");
+    });
 
 
     jQuery.extend(jQuery.validator.messages, {
@@ -107,22 +127,39 @@ $(document).ready(function () {
     $(".toggleMenu").click(() => {
         let overlay = $("#menuOverlay").css("display");
         document.body.style.overflow = "hidden";
-
-        $.when(
-            $("#openMenuBtn").toggle(),
-            $("#closeMenuBtn").toggle(),
-            $("#menuOverlay").fadeToggle(100),
-            $("#drawerMenu").toggle("slide", { direction: "right" })
-        ).then(() => {
-            if (overlay === "flex") {
-                document.body.style.overflow = "auto";
-                $(".deployItems").each(function () {
-                    $(`#${this.id}Arrow`).removeClass("pointDown");
-                    $(`#${this.id}Arrow`).addClass("pointRight");
-                    $(`#${this.id}Items`).slideUp();
-                });
-            }
-        });
+        if (sessionStorage.length == 0 || isLogged == "false" || reg) {
+            $.when(
+                $("#openMenuBtn").toggle(),
+                $("#closeMenuBtn").toggle(),
+                $("#menuOverlay").fadeToggle(100),
+                $("#drawerMenu").toggle("slide", { direction: "right" })
+            ).then(() => {
+                if (overlay === "flex") {
+                    document.body.style.overflow = "auto";
+                    $(".deployItems").each(function () {
+                        $(`#${this.id}Arrow`).removeClass("pointDown");
+                        $(`#${this.id}Arrow`).addClass("pointRight");
+                        $(`#${this.id}Items`).slideUp();
+                    });
+                }
+            });
+        } else {
+            $.when(
+                $("#closeMenuBtn2").toggle(),
+                $("#openMenuBtn2").toggle(),
+                $("#menuOverlay").fadeToggle(100),
+                $("#drawerMenu").toggle("slide", { direction: "right" })
+            ).then(() => {
+                if (overlay === "flex") {
+                    document.body.style.overflow = "auto";
+                    $(".deployItems").each(function () {
+                        $(`#${this.id}Arrow`).removeClass("pointDown");
+                        $(`#${this.id}Arrow`).addClass("pointRight");
+                        $(`#${this.id}Items`).slideUp();
+                    });
+                }
+            });
+        }
     });
 
     $(".deployItems").click(function () {

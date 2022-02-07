@@ -21,6 +21,10 @@ $(document).ready(function () {
         $("#link-portal").css("display", isClient === 'true' ? "block" : "none");
     }
 
+    if (window.location.href.includes("/tfsm/mis-cotizaciones")) {
+        $("#link-portal").hide();
+    }
+
     $("#logout").click(function () {
         sessionStorage.clear();
         window.location.replace(window.location.origin + "/tfsm/home-delivery");
