@@ -913,6 +913,7 @@ function commitSalesforce() {
             console.log(result);
         },
         error: function (err) {
+            console.log('ERROR OBTENER DATOS DE SERVICIO');
             console.log(err);
             Swal.fire({
                 title: "Error",
@@ -949,11 +950,13 @@ function getCantidadDepositos(autoId) {
             console.log(err);
             Swal.fire({
                 title: "Error",
-                text: "Ocurrió un error al intentar obtener datos del servicio",
+                text: "Ocurrió un error al intentar obtener datos del servicio, por favor vuelva a intentarlo más tarde",
                 icon: "error",
                 confirmButtonColor: "#cc0000",
                 timer: 5000
-            });
+            }).then(function () {
+                window.location = '/cotizador';
+            })
         }
     });
 }
@@ -1120,3 +1123,9 @@ var normalize = (function () {
     }
 
 })();
+
+$(document).keydown(function (objEvent) {
+    if (objEvent.keyCode == 9) {
+        objEvent.preventDefault();
+    }
+})

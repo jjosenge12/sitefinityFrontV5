@@ -249,7 +249,7 @@ $(document).ready(function () {
             data.results.forEach((x) => {
                 let state = {
                     id: x.id_estado,
-                    text: capitalize(x.descripcion),
+                    text: x.descripcion,
                 };
 
                 states.push(state);

@@ -183,7 +183,7 @@ $(document).ready(function () {
                     s.Distribuidores.forEach((d) => {
                         state.children.push({
                             id: d.IdDealer,
-                            text: capitalize(d.Dealer),
+                            text: capitalize2(d.Dealer),
                             dealerCode: d.Code,
                         });
                     });

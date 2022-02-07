@@ -9,6 +9,20 @@ function capitalize(str) {
     });
 }
 
+function capitalize2(str) {
+
+    const listaPalabras = str.toLowerCase().split(' ');
+
+    for (var i = 0; i < listaPalabras.length; i++) {
+        listaPalabras[i] = listaPalabras[i].charAt(0).toUpperCase() + listaPalabras[i].slice(1);
+    }
+
+    const cadena = listaPalabras.join(' ');
+
+    return cadena;
+
+}
+
 grecaptcha.ready(function () {
     // do request for recaptcha token
     // response is promise with passed token
