@@ -41,6 +41,8 @@
             <button type="button"
                     id="submit-newsletter"
                     class="btn btn-primary custom-button text-small g-recaptcha"
+                    data-callback='onSubmit' 
+                    data-action='submit'
                     data-sitekey="@System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString()">
                 ENVIAR
             </button>
@@ -99,3 +101,15 @@
         </div>
     </div>
 </div>
+
+@section Scripts
+{
+    <script src="https://www.google.com/recaptcha/api.js?render=" + @System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString()></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute(@System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString(), { action: 'homepage' }).then(function (token) {
+                document.getElementById("foo").value = token;
+            });
+        });
+    </script>
+}

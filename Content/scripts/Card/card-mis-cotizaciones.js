@@ -44,7 +44,7 @@ $(document).ready(() => {
             sessionStorage.setItem("lastname", capitalize(apellido));
             sessionStorage.setItem("isClient", isClient);
             $(".user-name").html(capitalize(nombre));
-            $("#link-portal").css("display", isClient ? "block" : "none");
+            $("#link-portal").css("display", isClient === 'true' ? "block" : "none");
 
             bannerBienvenida +=
                 '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +

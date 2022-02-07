@@ -13,7 +13,7 @@
 @Html.Script(Url.WidgetContent("~/Content/scripts/sweetalert2.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/toastnotify.js"), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/config.js"), "top", true)
-@Html.Script("https://www.google.com/recaptcha/api.js", "top", true)
+@Html.Script("https://www.google.com/recaptcha/api.js?render=" + System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString(), "top", true)
 @Html.Script(Url.WidgetContent("~/Content/scripts/header.js"), "bottom", true)
 
 @Html.StyleSheet(Url.Content("~/Content/css/bootstrap.min.css"))
@@ -117,9 +117,9 @@
             que no son necesarias.
         </div>
         @*<div class="modal-actions-custom">
-            <button type="button" id="denyNewsletterTerms" class="btn-red_inverted mr-3">NO</button>
-            <button type="button" id="acceptNewsletterTerms" class="btn-red">SI, ACEPTO</button>
-        </div>*@
+                <button type="button" id="denyNewsletterTerms" class="btn-red_inverted mr-3">NO</button>
+                <button type="button" id="acceptNewsletterTerms" class="btn-red">SI, ACEPTO</button>
+            </div>*@
     </div>
 </div>
 <div id="instagramModal" class="siteModal" style="display:none;">
