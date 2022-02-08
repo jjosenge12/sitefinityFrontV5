@@ -41,7 +41,7 @@ $(document).ready(() => {
             sessionStorage.setItem("lastname", capitalize(apellido));
             sessionStorage.setItem("isClient", isClient);
             $(".user-name").html(capitalize(nombre));
-            $("#link-portal").css("display", isClient === "true" ? "block" : "none");
+            //$("#link-portal").css("display", isClient === "true" ? "block" : "none");
 
             // Hola
             // Nos da mucho gusto que quieras ser parte de la familia Toyota.
