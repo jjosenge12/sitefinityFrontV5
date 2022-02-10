@@ -250,6 +250,10 @@ $(document).ready(function () {
         $("#cotizador-swiper-container").addClass("limited-height");
         clearValues();
         swiper.slidePrev();
+        progress_val = 0;
+        progress.style.width = progress_val + "%";
+        $("#porcentaje").html("10%");
+        $("#step-4-finish").hide();
     });
 
     $("#car_version").change(function (e) {
@@ -334,6 +338,8 @@ $(document).ready(function () {
         }
         else
             formNextStep(9);
+            $("#step-4-finish").show();
+
     });
 
     $("#select-cantidad-depositos").change(function () { formNextStep(7); });
@@ -673,6 +679,8 @@ function cotizar() {
                     icon: "error",
                     confirmButtonColor: "#cc0000",
                     timer: 5000
+                }).then(function () {
+                    window.location = '/cotizador';
                 });
                 console.log(result.data.Message);
             } else {
@@ -691,6 +699,8 @@ function cotizar() {
                         icon: "error",
                         confirmButtonColor: "#cc0000",
                         timer: 5000
+                    }).then(function () {
+                        window.location = '/cotizador';
                     });
                     console.log(result.data.Message);
                 }
@@ -703,6 +713,8 @@ function cotizar() {
                 icon: "error",
                 confirmButtonColor: "#cc0000",
                 timer: 5000
+            }).then(function () {
+                window.location = '/cotizador';
             });
             console.log(err);
         }
