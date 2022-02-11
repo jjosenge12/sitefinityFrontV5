@@ -292,7 +292,8 @@ $(document).ready(function () {
         if (this.dataset.value === "Física") {            
             $("#select-financing .select-button")[1].style.display = "none";
             $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
-            $("#arr").removeClass("selected"); 
+            /*$("#arr").removeClass("selected");
+            $("#arr").style.display = "none"*/
         }
         else {
             $("#select-financing .select-button")[1].style.display = "flex";
