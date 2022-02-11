@@ -689,8 +689,6 @@ function cotizar() {
                 if (result.data.Prices.length > 0) {
                     cotizacion = result.data.Prices;
                     showResults(result.data.Prices);
-                    window.scrollTo(0, 0);
-                    swiper.slideNext();
                     commitSalesforce();
 
                 } else {
@@ -914,6 +912,7 @@ function commitSalesforce() {
         Plazo: form.Plazo,
         Ballon: "text_ballon",
         DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
+        recaptchaToken,
     }
 
     $.ajax({
@@ -922,7 +921,8 @@ function commitSalesforce() {
         data: data,
         dataType: "json",
         success: function (result) {
-
+            window.scrollTo(0, 0);
+            swiper.slideNext();
             console.log(result);
         },
         error: function (err) {
