@@ -47,8 +47,8 @@ $(document).ready(function () {
         $("#openMenuBtn").hide()
         $("#openMenuBtn2").show()
         $("#logout").show();
-    }
-    if (sessionStorage.length == 0 || isLogged == "false" || reg) {
+    } else {
+    //if (sessionStorage.length == 0 || isLogged == "false" || reg) {
         $("#link-finan").text("FINANCIAMIENTO EN LÍNEA");
     }
 
@@ -141,10 +141,10 @@ $(document).ready(function () {
     $(".toggleMenu").click(() => {
         let overlay = $("#menuOverlay").css("display");
         document.body.style.overflow = "hidden";
-        if (sessionStorage.length == 0 || isLogged == "false" || reg) {
+        if (isLogged == "true" ) {
             $.when(
-                $("#openMenuBtn").toggle(),
-                $("#closeMenuBtn").toggle(),
+                $("#closeMenuBtn2").toggle(),
+                $("#openMenuBtn2").toggle(),
                 $("#menuOverlay").fadeToggle(100),
                 $("#drawerMenu").toggle("slide", { direction: "right" })
             ).then(() => {
@@ -157,10 +157,11 @@ $(document).ready(function () {
                     });
                 }
             });
+            
         } else {
             $.when(
-                $("#closeMenuBtn2").toggle(),
-                $("#openMenuBtn2").toggle(),
+                $("#openMenuBtn").toggle(),
+                $("#closeMenuBtn").toggle(),
                 $("#menuOverlay").fadeToggle(100),
                 $("#drawerMenu").toggle("slide", { direction: "right" })
             ).then(() => {

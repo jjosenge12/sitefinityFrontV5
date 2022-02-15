@@ -507,7 +507,10 @@ $(document).ready(function () {
 
     $("#cotizar-otro").click(function () {
         $.when(clearValues())
-            .then(() => swiper.slideTo(2, 0));
+            .then(() => {
+                swiper.slideTo(2, 0);
+                $("#step-4-finish").hide();
+        });
     });
 
     $("#step-5-contact").click(() => {
