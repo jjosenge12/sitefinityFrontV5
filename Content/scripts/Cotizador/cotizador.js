@@ -265,7 +265,9 @@ $(document).ready(function () {
             EngancheDeposito: $(this).val() / 10, // Cota minima de enganche (10% del precioAuto)
             MaxEnganche: $(this).val() * .4
         }
-
+        progress_val = 0;
+        progress.style.width = progress_val + "%";
+        $("#porcentaje").html("10%");
         $("#hitch-range").attr("min", form.EngancheDeposito);
         $("#hitch-range").attr("max", form.MaxEnganche);
         $("#hitch-range").val(form.EngancheDeposito);
@@ -436,9 +438,9 @@ $(document).ready(function () {
 
     $("#step-4-finish").click(function () {
         if (validateStepFour()) {
-            progress_val = 0;
-            progress.style.width = progress_val + "%";
-            $("#porcentaje").html("10%")
+            //progress_val = 0;
+            //progress.style.width = progress_val + "%";
+            //$("#porcentaje").html("10%")
             $.when(getFormValues())
                 .then(() => cotizar());
 
@@ -510,7 +512,10 @@ $(document).ready(function () {
             .then(() => {
                 swiper.slideTo(2, 0);
                 $("#step-4-finish").hide();
-        });
+            });
+        progress_val = 0;
+        progress.style.width = progress_val + "%";
+        $("#porcentaje").html("10%");
     });
 
     $("#step-5-contact").click(() => {
