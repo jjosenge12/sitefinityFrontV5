@@ -207,6 +207,7 @@ $(document).ready(function () {
 
     $("#step-3-back").click(function () {
         swiper.slidePrev();
+        $(".step-2-form .sf-form-container .float-container").addClass("active");
 
         $(".car-slide").removeClass("selected");
         cars_swiper.autoplay.start();
