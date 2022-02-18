@@ -34,8 +34,11 @@ $(document).ready(() => {
 
             //Sección de Bienvenida Home Delivery
             var bannerBienvenida = "";
-            var nombre = data.esCliente[0].nombre,
-                apellido = data.esCliente[0].apellido,
+            if (data.esCliente[0].nombre)
+                var nombre = data.esCliente[0].nombre;
+            else
+                var nombre = data.esCliente[0].apellido;
+                var apellido = data.esCliente[0].apellido,
                 isClient = data.esCliente[0].esCliente;
             sessionStorage.setItem("name", capitalize(nombre));
             sessionStorage.setItem("lastname", capitalize(apellido));
