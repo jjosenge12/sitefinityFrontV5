@@ -183,6 +183,11 @@ $(document).ready(() => {
                         "</div>" +
                         '<div class="row">' +
                         '<div class="col-sm-12 mb-table-title mb-table-link text-center">' +
+                        '<a class="' +
+                        cotizacion.clickeable +
+                        '" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
+                        cotizacion.id +
+                        '">'+
                         cotizacion.etapa +
                         "</div>" +
                         "</div>" +
