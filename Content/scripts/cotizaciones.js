@@ -187,7 +187,7 @@ $(document).ready(() => {
                         cotizacion.clickeable +
                         '" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
                         cotizacion.id +
-                        '">'+
+                        '"/>'+
                         cotizacion.etapa +
                         "</div>" +
                         "</div>" +
