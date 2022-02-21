@@ -148,7 +148,7 @@ $(document).ready(() => {
                 /*Mobile*/
                 $.each(data.cotizaciones, function (c, cotizacion) {
                     tableCotizacionesMobileHTML +=
-                        '<div class="container d-block d-md-none">' +
+                        '<div class="container d-block d-md-none card pb-4">' +
                         '<div class="row tfs-fila">' +
                         '<div class="col-sm-12"><span class="mb-table-title float-left"></span>' +
                         '<span class="float-right">' +
@@ -187,8 +187,9 @@ $(document).ready(() => {
                         cotizacion.clickeable +
                         '" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
                         cotizacion.id +
-                        '"/>'+
+                        '">'+
                         cotizacion.etapa +
+                        "</div>" +
                         "</div>" +
                         "</div>" +
                         "</div>";
