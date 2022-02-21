@@ -38,6 +38,9 @@ $(document).ready(function () {
     $("a.url-mytfsm").attr("href", window.config.urlMyTfsm);
     let isLogged = sessionStorage.getItem("isLogged"), reg = sessionStorage.getItem("reg-rfc");
     $("#logout").hide();
+    /*$("#my-tfsm-menu").hide();
+    $("#link-finan-menu").hide();
+    $("#ir-cotizador").hide();*/
 
     let username = sessionStorage.getItem("name"), isClient = sessionStorage.getItem("isClient");
     $(".user-name").html(username || "Usuario");
@@ -47,6 +50,8 @@ $(document).ready(function () {
         $("#openMenuBtn").hide()
         $("#openMenuBtn2").show()
         $("#logout").show();
+        if (window.location.href.includes("/tfsm/home-delivery"))
+            window.location.replace(window.location.origin);
     } else {
     //if (sessionStorage.length == 0 || isLogged == "false" || reg) {
         $("#link-finan").text("FINANCIAMIENTO EN LÍNEA");
