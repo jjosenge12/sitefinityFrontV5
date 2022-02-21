@@ -25,6 +25,8 @@ $(document).ready(() => {
         "Access-Control-Allow-Credentials": true,
     };
 
+    
+
     const settings = {
         method: "POST",
         headers: _myHeader,
@@ -185,7 +187,7 @@ $(document).ready(() => {
                         '<div class="col-sm-12 mb-table-title mb-table-link text-center">' +
                         '<a class="' +
                         cotizacion.clickeable +
-                        '" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
+                        '" style="color:red" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
                         cotizacion.id +
                         '">'+
                         cotizacion.etapa +
@@ -265,7 +267,7 @@ $(document).ready(() => {
                 //MOBILE
                 $.each(data.solicitudes, function (s, solicitud) {
                     tableProcesosMobileHTML +=
-                        '<div class="container d-block d-md-none">' +
+                        '<div class="container d-block d-md-none card pb-4">' +
                         '<div class="row tfs-fila">' +
                         '<div class="col-sm-12"><span class="mb-table-title float-left">Veh&iacute;culo</span>' +
                         '<span class="float-right">' +
@@ -291,7 +293,7 @@ $(document).ready(() => {
                         "</span></div>" +
                         "</div>" +
                         '<div class="row">' +
-                        '<div class="col-sm-12 mb-table-title mb-table-link text-center">' +
+                        '<div class="col-sm-12 mb-table-title text-center">' +
                         solicitud.etapa +
                         "</div>" +
                         "</div>" +
@@ -303,6 +305,8 @@ $(document).ready(() => {
                 $("#procesos_table").append(closeTableProcesosHTML);
                 $("#mis-procesos").append(tableProcesosMobileHTML);
 
+                $(".false").css("text-decoration", "line-through");
+                
                 //ESTATUS DE PROCESO DE CRÉDITO (último realizado)
 
                 // "Tienes un proceso de crédito activo. Podrás iniciar otro proceso hasta concluirlo."
