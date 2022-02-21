@@ -50,7 +50,7 @@ $(document).ready(function () {
         $("#openMenuBtn").hide()
         $("#openMenuBtn2").show()
         $("#logout").show();
-        if (window.location.href.includes("/tfsm/home-delivery"))
+        if ((window.location.href.includes("/tfsm/home-delivery")) && !(window.location.href.includes("solicitud-digital")))
             window.location.replace(window.location.origin);
     } else {
     //if (sessionStorage.length == 0 || isLogged == "false" || reg) {
