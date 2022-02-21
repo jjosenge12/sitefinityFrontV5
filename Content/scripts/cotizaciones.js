@@ -189,7 +189,7 @@ $(document).ready(() => {
                         cotizacion.id +
                         '">'+
                         cotizacion.etapa +
-                        "</div>" +
+                        '</a>' +
                         "</div>" +
                         "</div>" +
                         "</div>";
