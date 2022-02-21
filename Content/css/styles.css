@@ -1477,6 +1477,10 @@ label.error {
 
 /* -------DISEÑO CON WIDGETS------- */
 
+.false{
+    text-decoration:line-through;
+}
+
 .content-section {
   padding: 7% 0;
 }

@@ -305,7 +305,7 @@ $(document).ready(() => {
                 $("#procesos_table").append(closeTableProcesosHTML);
                 $("#mis-procesos").append(tableProcesosMobileHTML);
 
-                $(".false").css("text-decoration", "line-through");
+                //$(".false").css("text-decoration", "line-through");
                 
                 //ESTATUS DE PROCESO DE CRÉDITO (último realizado)
 
