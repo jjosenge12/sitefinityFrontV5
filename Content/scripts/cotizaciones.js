@@ -210,8 +210,7 @@ $(document).ready(() => {
             });
 
             $(".pdf").click(function () {
-                $.when(cotizar())
-                    .then(() => downloadPdf());
+                downloadPdf();
             })
 
             form = {
@@ -454,8 +453,9 @@ $(document).ready(() => {
         });
     }
 
-    function downloadPdf() {
+        async function downloadPdf() {
 
+        await cotizar();
         let data = {
             DatosCotizar: cotizaciones2,
             Plazo: form.Plazo,
