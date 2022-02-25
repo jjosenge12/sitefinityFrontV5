@@ -119,7 +119,7 @@ $(document).ready(() => {
 
                 $.each(data.cotizaciones, function (c, cotizacion) {
                     trCotizacionesHTML +=
-                        "<tr><td><a class='pdf'>" +
+                        "<tr><td><a class='pdf link-danger'>" +
                         cotizacion.vehiculo +
                         "</a></td><td>" +
                         cotizacion.version +
@@ -232,7 +232,7 @@ $(document).ready(() => {
                 Estado: data.cotizaciones[0].estado,
                 Aseguradora: data.cotizaciones[0].aseguradora,
                 Cobertura: data.cotizaciones[0].cobertura,
-                PlanCotizar: data.cotizaciones[0].plan, // tradi llega en mayuscula
+                PlanCotizar: "Tradicional", // tradi llega en mayuscula
                 Plazo: data.cotizaciones[0].plazo,
                 TipoUso: "Depósitos de Garantía",
                 CantidadDepositosGarantia: data.cotizaciones[0].depositoGarantia,
