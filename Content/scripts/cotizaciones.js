@@ -119,7 +119,7 @@ $(document).ready(() => {
 
                 $.each(data.cotizaciones, function (c, cotizacion) {
                     trCotizacionesHTML +=
-                        "<tr><td><a class='pdf link-danger'>" +
+                        "<tr><td><a class='pdf' href='' style='color:red'>" +
                         cotizacion.vehiculo +
                         "</a></td><td>" +
                         cotizacion.version +
@@ -447,7 +447,7 @@ $(document).ready(() => {
                     confirmButtonColor: "#cc0000",
                     timer: 5000
                 }).then(function () {
-                    window.location = '/cotizador';
+                    //window.location = '/cotizador';
                 });
                 console.log(err);
             }
@@ -456,7 +456,7 @@ $(document).ready(() => {
 
     function downloadPdf() {
 
-        var data = {
+        let data = {
             DatosCotizar: cotizaciones2,
             Plazo: form.Plazo,
             //ImagenAuto: window.config.origin + '/' + form.ImagenAuto,
