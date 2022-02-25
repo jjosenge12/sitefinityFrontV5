@@ -1,4 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
+var cotizaciones2,form;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -118,9 +119,9 @@ $(document).ready(() => {
 
                 $.each(data.cotizaciones, function (c, cotizacion) {
                     trCotizacionesHTML +=
-                        "<tr><td>" +
+                        "<tr><td><a class='pdf'>" +
                         cotizacion.vehiculo +
-                        "</td><td>" +
+                        "</a></td><td>" +
                         cotizacion.version +
                         "</td><td>" +
                         cotizacion.fecha +
@@ -207,6 +208,37 @@ $(document).ready(() => {
             $(".eliminarCotizacion").click(function () {
                 sessionStorage.setItem("leadId", this.dataset.lead);
             });
+
+            $(".pdf").click(function () {
+                $.when(cotizar())
+                    .then(() => downloadPdf());
+            })
+
+            form = {
+                Nombre: data.cotizaciones[0].nombre,
+                Apellido: data.cotizaciones[0].apellido,
+                emailCliente: data.cotizaciones[0].email,
+                Telefono: "",
+                Marca: data.cotizaciones[0].vehiculo,
+                autoId: "",
+                ImagenAuto: "",
+                ImagenModelo: "",
+                Vesion: data.cotizaciones[0].modelo,
+                Anio: "2021",
+                Modelo: data.cotizaciones[0].version,
+                precioAuto: data.cotizaciones[0].precioAuto,
+                EngancheDeposito: data.cotizaciones[0].enganche,
+                TipoPersona: data.cotizaciones[0].tipoPersona,
+                Estado: data.cotizaciones[0].estado,
+                Aseguradora: data.cotizaciones[0].aseguradora,
+                Cobertura: data.cotizaciones[0].cobertura,
+                PlanCotizar: data.cotizaciones[0].plan, // tradi llega en mayuscula
+                Plazo: data.cotizaciones[0].plazo,
+                TipoUso: "Depósitos de Garantía",
+                CantidadDepositosGarantia: data.cotizaciones[0].depositoGarantia,
+                precioAuto:"454900",
+            }
+
 
             //Procesos de crédito activos.
             var noProcesosHTML = "";
@@ -363,6 +395,103 @@ $(document).ready(() => {
 
     $("#eliminarCotizacionesModalClose").click(function () {
         closeModal(`${this.dataset.modal}Modal`);
+    });
+
+    function cotizar() {
+
+        $.ajax({
+            type: 'POST',
+            url: window.config.urlbase + '/PostCotizacion',
+            data: form,
+            beforeSend: showLoader,
+            complete: hideLoader,
+            dataType: "json",
+            success: function (result) {
+                if (parseInt(result.data.Status) == 400) {
+                    Swal.fire({
+                        title: "Error",
+                        text: "No existe información para la versión seleccionada",
+                        icon: "error",
+                        confirmButtonColor: "#cc0000",
+                        timer: 5000
+                    }).then(function () {
+                        window.location = '/cotizador';
+                    });
+                    console.log(result.data.Message);
+                } else {
+
+                    if (result.data.Prices.length > 0) {
+                        cotizaciones2 = result.data.Prices;
+                        showResults(result.data.Prices);
+                        //commitSalesforce();
+
+                    } else {
+                        Swal.fire({
+                            title: "Error",
+                            text: "No existe información para la versión seleccionada",
+                            icon: "error",
+                            confirmButtonColor: "#cc0000",
+                            timer: 5000
+                        }).then(function () {
+                            window.location = '/cotizador';
+                        });
+                        console.log(result.data.Message);
+                    }
+                }
+            },
+            error: function (err) {
+                Swal.fire({
+                    title: "Error",
+                    text: "Ocurrió un error al procesar la información",
+                    icon: "error",
+                    confirmButtonColor: "#cc0000",
+                    timer: 5000
+                }).then(function () {
+                    window.location = '/cotizador';
+                });
+                console.log(err);
+            }
+        });
+    }
+
+    function downloadPdf() {
+
+        var data = {
+            DatosCotizar: cotizaciones2,
+            Plazo: form.Plazo,
+            //ImagenAuto: window.config.origin + '/' + form.ImagenAuto,
+            //ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
+            PrecioAuto: form.precioAuto
+        };
+
+        $.ajax(window.config.urlbase + "/DownloadPlanPdf", {
+            method: 'POST',
+            beforeSend: showLoader,
+            complete: hideLoader,
+            data: data,
+            success: function (res) {
+                console.log(res);
+
+                var _data = base64ToArrayBuffer(res.result);
+                var blob = new Blob([_data], { type: "application/pdf" });
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                var fileName = "Cotizacion_Toyota";
+                link.download = fileName;
+                link.click();
+
+            },
+            error: function (err) {
+                console.log(err);
+                Swal.fire({
+                    title: "Error",
+                    text: "Ocurrió un error generar el pdf",
+                    icon: "error",
+                    confirmButtonColor: "#cc0000",
+                    timer: 5000
+                });
+            }
+        });
     });
 
     //Elimina cotizaciones.
