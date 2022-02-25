@@ -119,7 +119,7 @@ $(document).ready(() => {
 
                 $.each(data.cotizaciones, function (c, cotizacion) {
                     trCotizacionesHTML +=
-                        "<tr><td><a class='pdf' href='' style='color:red'>" +
+                        "<tr><td><a class='pdf' style='color:red'>" +
                         cotizacion.vehiculo +
                         "</a></td><td>" +
                         cotizacion.version +
