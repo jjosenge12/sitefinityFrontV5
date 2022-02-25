@@ -492,7 +492,7 @@ $(document).ready(() => {
                 });
             }
         });
-    });
+    }
 
     //Elimina cotizaciones.
     $("#cotizacionModalDelete").click(function () {
