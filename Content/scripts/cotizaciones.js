@@ -422,7 +422,7 @@ $(document).ready(() => {
 
                     if (result.data.Prices.length > 0) {
                         cotizaciones2 = result.data.Prices;
-                        showResults(result.data.Prices);
+                        //showResults(result.data.Prices);
                         //commitSalesforce();
 
                     } else {
