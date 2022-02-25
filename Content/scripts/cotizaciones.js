@@ -210,7 +210,7 @@ $(document).ready(() => {
             });
 
             $(".pdf").click(function () {
-                downloadPdf();
+                cotizar();
             })
 
             form = {
@@ -421,6 +421,7 @@ $(document).ready(() => {
 
                     if (result.data.Prices.length > 0) {
                         cotizaciones2 = result.data.Prices;
+                        downloadPdf();
                         //showResults(result.data.Prices);
                         //commitSalesforce();
 
@@ -453,9 +454,8 @@ $(document).ready(() => {
         });
     }
 
-        async function downloadPdf() {
-
-        await cotizar();
+        function downloadPdf() {
+        
         let data = {
             DatosCotizar: cotizaciones2,
             Plazo: form.Plazo,
