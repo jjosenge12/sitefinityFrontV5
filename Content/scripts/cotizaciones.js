@@ -149,7 +149,7 @@ $(document).ready(() => {
                 });
 
                 closeTableCotizacionesHTML += "</tbody></table></div>";
-
+                nroPdf = 0;
                 /*Mobile*/
                 $.each(data.cotizaciones, function (c, cotizacion) {
                     tableCotizacionesMobileHTML +=
@@ -165,7 +165,9 @@ $(document).ready(() => {
                         '<div class="row tfs-fila">' +
                         '<div class="col-sm-12"><span class="mb-table-title float-left">Veh&iacute;culo</span>' +
                         '<span class="float-right">' +
+                        `<a class='pdf' id='${nroPdf}' style='color:red'>` +
                         cotizacion.vehiculo +
+                        "</a>"
                         "</span></div>" +
                         "</div>" +
                         '<div class="row tfs-fila">' +
@@ -198,7 +200,10 @@ $(document).ready(() => {
                         "</div>" +
                         "</div>" +
                         "</div>";
+                    nroPdf++;
                 });
+                
+
 
                 $("#cotizaciones").append(tableCotizacionesHTML);
                 $("#cotizaciones_table").append(trCotizacionesHTML);
@@ -228,7 +233,7 @@ $(document).ready(() => {
                     ImagenAuto: "",
                     ImagenModelo: "",
                     Vesion: data.cotizaciones[idPdf].modelo,
-                    Anio: data.cotizaciones[idPdf].modelo,
+                    Anio: data.cotizaciones[idPdf].version,
                     Modelo: data.cotizaciones[idPdf].version,
                     precioAuto: data.cotizaciones[idPdf].precioAuto,
                     EngancheDeposito: data.cotizaciones[idPdf].enganche,
