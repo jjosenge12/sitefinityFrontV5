@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2,form,nroPdf=0;
+var cotizaciones2, form, nroPdf = 0,idElem;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -212,7 +212,7 @@ $(document).ready(() => {
             });
 
             $(".pdf").click(function (e) {
-                let idElem = e.id;
+                idElem = e.target.id;
                 console.log(idElem);
                 $.when(getFormValues(idElem))
                     .then(() => cotizar());
