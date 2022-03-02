@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2,form;
+var cotizaciones2,form,nroPdf=-1;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -119,7 +119,7 @@ $(document).ready(() => {
 
                 $.each(data.cotizaciones, function (c, cotizacion) {
                     trCotizacionesHTML +=
-                        "<tr><td><a class='pdf' style='color:red'>" +
+                        `<tr><td><a class='pdf' id='${nroPdf+1}' style='color:red'>` +
                         cotizacion.vehiculo +
                         "</a></td><td>" +
                         cotizacion.version +
@@ -210,32 +210,36 @@ $(document).ready(() => {
             });
 
             $(".pdf").click(function () {
-                cotizar();
+                $.when(getFormValues($('.pdf').attr('id')))
+                    .then(() => cotizar());
             })
 
-            form = {
-                Nombre: data.cotizaciones[0].nombre,
-                Apellido: data.cotizaciones[0].apellido,
-                emailCliente: data.cotizaciones[0].email,
-                Telefono: "",
-                Marca: data.cotizaciones[0].vehiculo,
-                autoId: "",
-                ImagenAuto: "",
-                ImagenModelo: "",
-                Vesion: data.cotizaciones[0].modelo,
-                Anio: "2021",
-                Modelo: data.cotizaciones[0].version,
-                precioAuto: data.cotizaciones[0].precioAuto,
-                EngancheDeposito: data.cotizaciones[0].enganche,
-                TipoPersona: data.cotizaciones[0].tipoPersona,
-                Estado: data.cotizaciones[0].estado,
-                Aseguradora: data.cotizaciones[0].aseguradora,
-                Cobertura: data.cotizaciones[0].cobertura,
-                PlanCotizar: "Tradicional", // tradi llega en mayuscula
-                Plazo: data.cotizaciones[0].plazo,
-                TipoUso: "Depósitos de Garantía",
-                CantidadDepositosGarantia: data.cotizaciones[0].depositoGarantia,
-                precioAuto:"454900",
+
+            function getFormValues(idPdf) {
+                form = {
+                    Nombre: data.cotizaciones[idPdf].nombre,
+                    Apellido: data.cotizaciones[idPdf].apellido,
+                    emailCliente: data.cotizaciones[idPdf].email,
+                    Telefono: "",
+                    Marca: data.cotizaciones[idPdf].vehiculo,
+                    autoId: "",
+                    ImagenAuto: "",
+                    ImagenModelo: "",
+                    Vesion: data.cotizaciones[idPdf].modelo,
+                    Anio: data.cotizaciones[idPdf].modelo,
+                    Modelo: data.cotizaciones[idPdf].version,
+                    precioAuto: data.cotizaciones[idPdf].precioAuto,
+                    EngancheDeposito: data.cotizaciones[idPdf].enganche,
+                    TipoPersona: data.cotizaciones[idPdf].tipoPersona,
+                    Estado: data.cotizaciones[idPdf].estado,
+                    Aseguradora: data.cotizaciones[idPdf].aseguradora,
+                    Cobertura: data.cotizaciones[idPdf].cobertura,
+                    PlanCotizar: "Tradicional", // tradi llega en mayuscula
+                    Plazo: data.cotizaciones[idPdf].plazo,
+                    TipoUso: "Depósitos de Garantía",
+                    CantidadDepositosGarantia: data.cotizaciones[idPdf].depositoGarantia,
+                    precioAuto: "454900",
+                }
             }
 
 
