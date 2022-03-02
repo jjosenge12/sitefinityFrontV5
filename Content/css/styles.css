@@ -1481,6 +1481,10 @@ label.error {
     text-decoration:line-through;
 }
 
+.pdf:hover {
+    cursor: pointer;
+}
+
 .content-section {
   padding: 7% 0;
 }

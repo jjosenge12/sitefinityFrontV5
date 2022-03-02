@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2, form, nroPdf = 0,idElem;
+var cotizaciones2, form, nroPdf = 0;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -212,9 +212,7 @@ $(document).ready(() => {
             });
 
             $(".pdf").click(function (e) {
-                idElem = e.target.id;
-                console.log(idElem);
-                $.when(getFormValues(idElem))
+                $.when(getFormValues(e.target.id))
                     .then(() => cotizar());
             })
 
@@ -421,8 +419,6 @@ $(document).ready(() => {
                         icon: "error",
                         confirmButtonColor: "#cc0000",
                         timer: 5000
-                    }).then(function () {
-                        window.location = '/cotizador';
                     });
                     console.log(result.data.Message);
                 } else {
@@ -440,8 +436,6 @@ $(document).ready(() => {
                             icon: "error",
                             confirmButtonColor: "#cc0000",
                             timer: 5000
-                        }).then(function () {
-                            window.location = '/cotizador';
                         });
                         console.log(result.data.Message);
                     }
@@ -454,8 +448,6 @@ $(document).ready(() => {
                     icon: "error",
                     confirmButtonColor: "#cc0000",
                     timer: 5000
-                }).then(function () {
-                    //window.location = '/cotizador';
                 });
                 console.log(err);
             }
