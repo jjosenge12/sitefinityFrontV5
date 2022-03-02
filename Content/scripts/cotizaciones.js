@@ -212,7 +212,9 @@ $(document).ready(() => {
             });
 
             $(".pdf").click(function (e) {
-                $.when(getFormValues($(e).attr('id')))
+                let idElem = $(e).attr('id');
+                console.log(idElem);
+                $.when(getFormValues(idElem))
                     .then(() => cotizar());
             })
 
