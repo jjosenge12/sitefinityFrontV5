@@ -164,10 +164,8 @@ $(document).ready(() => {
                         "</div>" +
                         '<div class="row tfs-fila">' +
                         '<div class="col-sm-12"><span class="mb-table-title float-left">Veh&iacute;culo</span>' +
-                        '<span class="float-right">' +
-                        `<a class='pdf' id='${nroPdf}' style='color:red'>` +
+                        `<span class="float-right pdf" id='${nroPdf}' style='color:red'>` +
                         cotizacion.vehiculo +
-                        "</a>"
                         "</span></div>" +
                         "</div>" +
                         '<div class="row tfs-fila">' +
