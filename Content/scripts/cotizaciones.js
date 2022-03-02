@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2,form,nroPdf=-1;
+var cotizaciones2,form,nroPdf=0;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -119,7 +119,7 @@ $(document).ready(() => {
 
                 $.each(data.cotizaciones, function (c, cotizacion) {
                     trCotizacionesHTML +=
-                        `<tr><td><a class='pdf' id='${nroPdf+1}' style='color:red'>` +
+                        `<tr><td><a class='pdf' id='${nroPdf}' style='color:red'>` +
                         cotizacion.vehiculo +
                         "</a></td><td>" +
                         cotizacion.version +
@@ -134,6 +134,8 @@ $(document).ready(() => {
                         '">' +
                         cotizacion.etapa +
                         "</div></td>";
+
+                    nroPdf++;
 
                     if (cotizacion.etapa !== "Solicitud en proceso") {
                         trCotizacionesHTML +=
