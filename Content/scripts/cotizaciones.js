@@ -211,8 +211,8 @@ $(document).ready(() => {
                 sessionStorage.setItem("leadId", this.dataset.lead);
             });
 
-            $(".pdf").click(function () {
-                $.when(getFormValues($('.pdf').attr('id')))
+            $(".pdf").click(function (e) {
+                $.when(getFormValues($(e).attr('id')))
                     .then(() => cotizar());
             })
 
