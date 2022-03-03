@@ -1,6 +1,6 @@
 ﻿
 
-var form = {}, swiper, cars_swiper, cotizacion, car_slides;
+var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen;
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -264,7 +264,7 @@ $(document).ready(function () {
             Anio: $("#car_version option:selected")[0].dataset.anio,
             precioAuto: $(this).val(),
             EngancheDeposito: $(this).val() / 10, // Cota minima de enganche (10% del precioAuto)
-            MaxEnganche: $(this).val() * .4
+            MaxEnganche: $(this).val() * .9
         }
         progress_val = 0;
         progress.style.width = progress_val + "%";
@@ -292,11 +292,10 @@ $(document).ready(function () {
     });
 
     $("#select-personalidad-fiscal .select-button").click(function () {
-        if (this.dataset.value === "Física") {            
+        if (this.dataset.value === "Física" || this.dataset.value ==="F�sica") {
             $("#select-financing .select-button")[1].style.display = "none";
             $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
-            /*$("#arr").removeClass("selected");
-            $("#arr").style.display = "none"*/
+            $("#select-financing .select-button")[1].classList.remove("selected");
         }
         else {
             $("#select-financing .select-button")[1].style.display = "flex";
@@ -442,6 +441,7 @@ $(document).ready(function () {
             //progress_val = 0;
             //progress.style.width = progress_val + "%";
             //$("#porcentaje").html("10%")
+            enganche_porcen = $("#porcentaje").html();
             $.when(getFormValues())
                 .then(() => cotizar());
 
@@ -607,7 +607,7 @@ function showResults(data) {
     $(".step-5-tipo-persona").html(normalize(_data.TipoPersona));
     $(".step-5-imagen-auto").attr("src", form.ImagenAuto);
     $(".step-5-mensualidad").html(`$ ${numberWithCommas(_data.Mensualidad.toFixed(2))} M.N.`);
-    $(".step-5-enganche").html(`$ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.`);
+    $(".step-5-enganche").html(`$ ${numberWithCommas(_data.Enganche.toFixed(2))} M.N.    (${enganche_porcen})`);
     $(".step-5-deposito").html(`${_data.DepositoGarantia} `);
     $(".step-5-plazo").html(_data.Plazo + " Meses");
     $(".step-5-precio-total").html(`$ ${numberWithCommas(_data.PrecioTotal.toFixed(2))} M.N.`);
@@ -922,7 +922,7 @@ function commitSalesforce() {
         Plazo: form.Plazo,
         Ballon: "text_ballon",
         DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
-        recaptchaToken,
+        Precio: form.precioAuto,
     }
 
     $.ajax({
