@@ -1154,7 +1154,8 @@ $(document).keydown(function (objEvent) {
 });
 
 function maxLengthCheck(object) {
-    if (object.value.length > 10)
-        object.value = object.value.slice(0, 10)
+    var ch = String.fromCharCode(object.which);
+    if (!(/[0-9]/.test(ch)))
+        object.preventDefault();
 
 }
