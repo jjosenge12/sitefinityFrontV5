@@ -1151,4 +1151,10 @@ $(document).keydown(function (objEvent) {
     if (objEvent.keyCode == 9) {
         objEvent.preventDefault();
     }
-})
+});
+
+function maxLengthCheck(object) {
+    if (object.value.length > 10)
+        object.value = object.value.slice(0, 10)
+
+}
