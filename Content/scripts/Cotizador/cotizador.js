@@ -272,7 +272,7 @@ $(document).ready(function () {
         $("#hitch-range").attr("min", form.EngancheDeposito);
         $("#hitch-range").attr("max", form.MaxEnganche);
         $("#hitch-range").val(form.EngancheDeposito);
-        $("#hitch-text").val(form.EngancheDeposito);
+        $("#hitch-text").val(form.EngancheDeposito.toFixed(2));
 
         formNextStep(2);
     });
@@ -427,10 +427,34 @@ $(document).ready(function () {
 
     $("#hitch-text").blur(function () {
         let val = this.value;
-        if (val < (form.precioAuto / 10) || val > form.MaxEnganche) {
+        if (val < (form.precioAuto / 10)) {
+            Swal.fire({
+                title: "Error",
+                text: "El monto mínimo de enganche es el 10% del valor del vehículo: " + form.precioAuto / 10 + ",00 M.N.",
+                icon: "error",
+                confirmButtonColor: '#cc0000'
+            })
             let valBarra = $("#hitch-range").val();
             this.value = valBarra;
+
+            $("#hitch-text").val((Number(this.value)).toFixed(2));
         }
+        else {
+            if (val > form.MaxEnganche) {
+                let valBarra = $("#hitch-range").val();
+                this.value = valBarra;
+
+                $("#hitch-text").val((Number(this.value)).toFixed(2));
+            }
+            else {
+                $("#hitch-text").val((Number(val)).toFixed(2));
+            }
+        }
+
+        /*if (val < (form.precioAuto / 10) || val > form.MaxEnganche) {
+            let valBarra = $("#hitch-range").val();
+            this.value = valBarra;
+        }*/
     });
 
 
