@@ -894,8 +894,25 @@ function getCoverages() {
         url: window.config.urlbase + '/getCoverage?id=' + $("#select-insurance").val(),
         beforeSend: showLoader,
         complete: hideLoader,
-        success: function (data) {
+        success: function (data) {            
 
+            var listCoverage;
+
+            // Se ordena las coberturas 
+
+            if (data.results.length == 4) {
+                listCoverage = [data.results[3], data.results[0], data.results[1], data.results[2]];
+                data.results = listCoverage;
+            }
+            else {
+                if (data.results.length == 5) {
+                    listCoverage = [data.results[3], data.results[0], data.results[1], data.results[2], data.results[4]];
+                    data.results = listCoverage;
+                }
+            }                       
+
+            /*
+            Funcion para ordenar alfabeticamente las coberturas
             data.results.sort((a, b) => {
                 if (a.descripcion > b.descripcion) {
                     return 1;
@@ -906,7 +923,7 @@ function getCoverages() {
                 else {
                     return 0;
                 }
-            });
+            });*/
 
             $("#select-coverage").html($("#select-coverage option")[0]);
 
@@ -946,7 +963,7 @@ function commitSalesforce() {
         Plazo: form.Plazo,
         Ballon: "text_ballon",
         DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
-        Precio: form.precioAuto,
+        //Precio: form.precioAuto,
     }
 
     $.ajax({
