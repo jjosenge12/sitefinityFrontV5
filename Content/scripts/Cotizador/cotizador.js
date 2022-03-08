@@ -279,26 +279,74 @@ $(document).ready(function () {
 
     $("#select-insurance").change(() => getCoverages());
 
-    $("#select-state").change(() => {
+$("#select-state").change(() => {
         if ($("#select-state").val() && $("#select-coverage").val()) {
-            formNextStep(4);
+            if (fisica == 1) {
+                $(".title-financiamiento").html("financiamiento");
+                $(".title-enganche").html("enganche");
+                $("#select-plan").show();
+                $("#select-arrendamiento").hide();
+                $("#data-depositos").hide();
+                $("#step4").show();
+                $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
+                planes = 1;
+                swiper.updateAutoHeight(0);
+                formNextStep(5);
+                console.log(planes);
+                formNextStep(5);
+            }
+            else
+                formNextStep(4);
         }
     });
 
     $("#select-coverage").change(() => {
         if ($("#select-state").val() && $("#select-coverage").val()) {
-            formNextStep(4);
+            if (fisica == 1) {
+                $(".title-financiamiento").html("financiamiento");
+                $(".title-enganche").html("enganche");
+                $("#select-plan").show();
+                $("#select-arrendamiento").hide();
+                $("#data-depositos").hide();
+                $("#step4").show();
+                $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
+                planes = 1;
+                swiper.updateAutoHeight(0);
+                formNextStep(5);
+                console.log(planes);
+                formNextStep(5);
+            }
+            else
+                formNextStep(4);
         }
     });
-
+    var fisica;
     $("#select-personalidad-fiscal .select-button").click(function () {
         if (this.dataset.value === "Física" || this.dataset.value ==="F�sica") {
             $("#select-financing .select-button")[1].style.display = "none";
             $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
             $("#select-financing .select-button")[1].classList.remove("selected");
+            $("#select-financing .select-button")[0].classList.add("selected");
+            fisica = 1;
+            planes = 1;
+            $(".step-4-4").hide();
+            $("#select-financing").hide();
+            $(".title-financiamiento").html("financiamiento");
+            $(".title-enganche").html("enganche");
+            $("#select-plan").show();
+            $("#select-arrendamiento").hide();
+            $("#data-depositos").hide();
+            $("#step4").show();
+            $("#step-4-finish").show();
+
         }
         else {
             $("#select-financing .select-button")[1].style.display = "flex";
+            if (fisica == 1) {
+                $(".step-4-4").show();
+                $("#select-financing").show();
+            }
+            fisica = 0;
         }
 
         formNextStep(3);
@@ -306,7 +354,11 @@ $(document).ready(function () {
 
     var planes;
     $("#select-financing .select-button").click(function () {
-        switch (this.dataset.value) {
+        if (fisica != 1)
+            fisica = this.dataset.value
+        else
+            fisica = "Financiamiento"
+        switch (fisica) {
             case "Financiamiento":
                 $(".title-financiamiento").html("financiamiento");
                 $(".title-enganche").html("enganche");
@@ -326,6 +378,7 @@ $(document).ready(function () {
                 $("#data-depositos").show();
                 $("#select-plan .select-button.selected")[0]?.classList.remove("selected");
                 planes = 0;
+                fisica = 0;
                 break;
         }
         swiper.updateAutoHeight(0);
