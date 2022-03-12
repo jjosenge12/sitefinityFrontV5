@@ -255,6 +255,7 @@ $(document).ready(function () {
         progress.style.width = progress_val + "%";
         $("#porcentaje").html("10%");
         $("#step-4-finish").hide();
+        fisica = 0;
     });
 
     $("#car_version").change(function (e) {
@@ -264,7 +265,7 @@ $(document).ready(function () {
             Anio: $("#car_version option:selected")[0].dataset.anio,
             precioAuto: $(this).val(),
             EngancheDeposito: $(this).val() / 10, // Cota minima de enganche (10% del precioAuto)
-            MaxEnganche: $(this).val() * .9
+            MaxEnganche: $(this).val() * .4
         }
         progress_val = 0;
         progress.style.width = progress_val + "%";
@@ -337,12 +338,12 @@ $("#select-state").change(() => {
             $("#select-arrendamiento").hide();
             $("#data-depositos").hide();
             $("#step4").show();
-            $("#step-4-finish").show();
+            //$("#step-4-finish").show();
 
         }
         else {
             $("#select-financing .select-button")[1].style.display = "flex";
-            if (fisica == 1) {
+            if (fisica == 1 && ($("#select-state").val() && $("#select-coverage").val())) {
                 $(".step-4-4").show();
                 $("#select-financing").show();
             }
@@ -594,6 +595,7 @@ $("#select-state").change(() => {
         progress_val = 0;
         progress.style.width = progress_val + "%";
         $("#porcentaje").html("10%");
+        fisica = 0;
     });
 
     $("#step-5-contact").click(() => {
@@ -1016,7 +1018,7 @@ function commitSalesforce() {
         Plazo: form.Plazo,
         Ballon: "text_ballon",
         DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
-        //Precio: form.precioAuto,
+        Precio: form.precioAuto,
     }
 
     $.ajax({

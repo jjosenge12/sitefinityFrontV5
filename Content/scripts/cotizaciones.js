@@ -239,11 +239,11 @@ $(document).ready(() => {
                     Estado: data.cotizaciones[idPdf].estado,
                     Aseguradora: data.cotizaciones[idPdf].aseguradora,
                     Cobertura: data.cotizaciones[idPdf].cobertura,
-                    PlanCotizar: "Tradicional", // tradi llega en mayuscula
+                    PlanCotizar: data.cotizaciones[idPdf].plan === "TRADICIONAL" ? "Tradicional" : data.cotizaciones[idPdf].plan, // tradi llega en mayuscula
                     Plazo: data.cotizaciones[idPdf].plazo,
                     TipoUso: "Depósitos de Garantía",
                     CantidadDepositosGarantia: data.cotizaciones[idPdf].depositoGarantia,
-                    precioAuto: "454900",
+                    precioAuto: data.cotizaciones[idPdf].precio,
                 }
             }
 
