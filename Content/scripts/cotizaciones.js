@@ -243,7 +243,7 @@ $(document).ready(() => {
                     Plazo: data.cotizaciones[idPdf].plazo,
                     TipoUso: "Depósitos de Garantía",
                     CantidadDepositosGarantia: data.cotizaciones[idPdf].depositoGarantia,
-                    precioAuto: (parseInt(data.cotizaciones[idPdf].precio)).toString(),
+                    precioAuto: parseInt(data.cotizaciones[idPdf].precioAuto).toString(),
                 }
             }
 
