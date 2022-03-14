@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2, form, nroPdf = 0;
+var cotizaciones2, form, nroPdf = 0, fechaCotizacion;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -239,12 +239,13 @@ $(document).ready(() => {
                     Estado: data.cotizaciones[idPdf].estado,
                     Aseguradora: data.cotizaciones[idPdf].aseguradora,
                     Cobertura: data.cotizaciones[idPdf].cobertura,
-                    PlanCotizar: data.cotizaciones[idPdf].plan === "TRADICIONAL" ? "Tradicional" : data.cotizaciones[idPdf].plan, // tradi llega en mayuscula
+                    PlanCotizar: data.cotizaciones[idPdf].plan === "TRADICIONAL" ? "Tradicional" : data.cotizaciones[idPdf].plan === "BALLOON" ? "Balloon" : data.cotizaciones[idPdf].plan === "ANUALIDADES" ? "Anualidades" : data.cotizaciones[idPdf].plan, 
                     Plazo: data.cotizaciones[idPdf].plazo,
                     TipoUso: "Depósitos de Garantía",
                     CantidadDepositosGarantia: data.cotizaciones[idPdf].depositoGarantia,
                     precioAuto: parseInt(data.cotizaciones[idPdf].precioAuto).toString(),
                 }
+                fechaCotizacion = data.cotizaciones[idPdf].fecha;
             }
 
 
@@ -464,7 +465,8 @@ $(document).ready(() => {
             Plazo: form.Plazo,
             //ImagenAuto: window.config.origin + '/' + form.ImagenAuto,
             //ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
-            PrecioAuto: form.precioAuto
+            PrecioAuto: form.precioAuto,
+            FechaCotizacion: fechaCotizacion,
         };
 
         $.ajax(window.config.urlbase + "/DownloadPlanPdf", {
