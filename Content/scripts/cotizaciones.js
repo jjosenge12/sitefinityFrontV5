@@ -429,7 +429,7 @@ $(document).ready(() => {
 
                     if (result.data.Prices.length > 0) {
                         cotizaciones2 = result.data.Prices;
-                        downloadPdf();
+                        setInterval(downloadPdf(), 2000);
                         //showResults(result.data.Prices);
                         //commitSalesforce();
 
@@ -463,7 +463,7 @@ $(document).ready(() => {
         let data = {
             DatosCotizar: cotizaciones2,
             Plazo: form.Plazo,
-            //ImagenAuto: window.config.origin + '/' + form.ImagenAuto,
+            ImagenAuto: "",
             //ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
             PrecioAuto: form.precioAuto,
             FechaCotizacion: fechaCotizacion,
