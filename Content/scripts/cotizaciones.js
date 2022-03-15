@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2, form, nroPdf = 0, fechaCotizacion;
+var cotizaciones2, form, nroPdf = 0, fechaCotizacion,imagenAuto;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -246,6 +246,8 @@ $(document).ready(() => {
                     precioAuto: parseInt(data.cotizaciones[idPdf].precioAuto).toString(),
                 }
                 fechaCotizacion = data.cotizaciones[idPdf].fecha;
+                //imagenAuto = data.cotizacion[idPdf].ImagenAuto;
+                imagenAuto ="images/default-source/tfsm/autos/sedanes/02-camry-se_296x126.png"
             }
 
 
@@ -463,7 +465,7 @@ $(document).ready(() => {
         let data = {
             DatosCotizar: cotizaciones2,
             Plazo: form.Plazo,
-            ImagenAuto: "",
+            ImagenAuto: imagenAuto,
             //ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
             PrecioAuto: form.precioAuto,
             FechaCotizacion: fechaCotizacion,
