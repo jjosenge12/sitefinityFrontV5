@@ -246,8 +246,7 @@ $(document).ready(() => {
                     precioAuto: parseInt(data.cotizaciones[idPdf].precioAuto).toString(),
                 }
                 fechaCotizacion = data.cotizaciones[idPdf].fecha;
-                //imagenAuto = data.cotizacion[idPdf].ImagenAuto;
-                imagenAuto ="images/default-source/tfsm/autos/sedanes/02-camry-se_296x126.png"
+                imagenAuto = data.cotizacion[idPdf].imagenAuto;
             }
 
 

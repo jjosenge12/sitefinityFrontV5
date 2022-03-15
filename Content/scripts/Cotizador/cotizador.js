@@ -616,7 +616,7 @@ $("#select-state").change(() => {
             Plazo: form.Plazo,
             ImagenAuto: window.config.origin + '/' + form.ImagenAuto,
             ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
-            PrecioAuto: form.precioAuto
+            PrecioAuto: form.precioAuto,
         };
 
         $.ajax(window.config.urlbase + "/DownloadPlanPdf", {
@@ -1019,6 +1019,7 @@ function commitSalesforce() {
         Ballon: "text_ballon",
         DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
         Precio: form.precioAuto,
+        ImagenAuto: form.ImagenAuto,
     }
 
     $.ajax({
