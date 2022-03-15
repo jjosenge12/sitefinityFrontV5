@@ -246,7 +246,7 @@ $(document).ready(() => {
                     precioAuto: parseInt(data.cotizaciones[idPdf].precioAuto).toString(),
                 }
                 fechaCotizacion = data.cotizaciones[idPdf].fecha;
-                imagenAuto = data.cotizacion[idPdf].imagenAuto;
+                imagenAuto = data.cotizacion[idPdf].ImagenAuto;
             }
 
 
