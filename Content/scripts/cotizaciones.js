@@ -465,7 +465,7 @@ $(document).ready(() => {
         let data = {
             DatosCotizar: cotizaciones2,
             Plazo: form.Plazo,
-            ImagenAuto: imagenAuto,
+            ImagenAuto: window.config.origin + '/' + imagenAuto,
             //ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
             PrecioAuto: form.precioAuto,
             FechaCotizacion: fechaCotizacion,
