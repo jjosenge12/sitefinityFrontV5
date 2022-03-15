@@ -430,7 +430,7 @@ $(document).ready(() => {
 
                     if (result.data.Prices.length > 0) {
                         cotizaciones2 = result.data.Prices;
-                        setInterval(downloadPdf(), 3500);
+                        setInterval(downloadPdf(), 10000);
                         //showResults(result.data.Prices);
                         //commitSalesforce();
 
