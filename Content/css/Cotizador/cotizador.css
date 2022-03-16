@@ -433,12 +433,12 @@
 
 #hitch-text{
     border:none;
-    width:45%;
-    text-align:start;
+    width:18rem;
+    text-align:center;
 }
- #hitch-max, #hitch-min {
+#hitch-max, #hitch-min {
     border: none;
-    width: 30%;
+    width: 7rem;
     text-align: center;
 }
 
