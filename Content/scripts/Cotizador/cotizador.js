@@ -282,7 +282,7 @@ $(document).ready(function () {
 
 $("#select-state").change(() => {
         if ($("#select-state").val() && $("#select-coverage").val()) {
-            if (fisica == 1) {
+            if (fisica == 1 || fisicaEmp == 1) {
                 $(".title-financiamiento").html("financiamiento");
                 $(".title-enganche").html("enganche");
                 $("#select-plan").show();
@@ -303,7 +303,7 @@ $("#select-state").change(() => {
 
     $("#select-coverage").change(() => {
         if ($("#select-state").val() && $("#select-coverage").val()) {
-            if (fisica == 1) {
+            if (fisica == 1 || fisicaEmp == 1) {
                 $(".title-financiamiento").html("financiamiento");
                 $(".title-enganche").html("enganche");
                 $("#select-plan").show();
@@ -321,14 +321,18 @@ $("#select-state").change(() => {
                 formNextStep(4);
         }
     });
-    var fisica;
+    var fisica,fisicaEmp;
     $("#select-personalidad-fiscal .select-button").click(function () {
-        if (this.dataset.value === "Física" || this.dataset.value ==="F�sica") {
+        if (this.dataset.value === "Física" || this.dataset.value === "F�sica" || this.dataset.value === "Física con Actividad Empresarial" || this.dataset.value === "F�sica con Actividad Empresarial") {
             $("#select-financing .select-button")[1].style.display = "none";
             $("#select-arrendamiento .select-button.selected")[0]?.classList.remove("selected");
             $("#select-financing .select-button")[1].classList.remove("selected");
             $("#select-financing .select-button")[0].classList.add("selected");
+            $("#select-term .select-button")[0].classList.remove("selected");
+            $("#select-term .select-button")[1].classList.remove("selected");
+            $("#select-term .select-button")[2].classList.remove("selected");
             fisica = 1;
+            fisicaEmp = 1;
             planes = 1;
             $(".step-4-4").hide();
             $("#select-financing").hide();
@@ -343,11 +347,12 @@ $("#select-state").change(() => {
         }
         else {
             $("#select-financing .select-button")[1].style.display = "flex";
-            if (fisica == 1 && ($("#select-state").val() && $("#select-coverage").val())) {
+            if ((fisica == 1 || fisicaEmp == 1) && ($("#select-state").val() && $("#select-coverage").val())) {
                 $(".step-4-4").show();
                 $("#select-financing").show();
             }
             fisica = 0;
+            fisicaEmp = 0;
         }
 
         formNextStep(3);
@@ -355,7 +360,7 @@ $("#select-state").change(() => {
 
     var planes;
     $("#select-financing .select-button").click(function () {
-        if (fisica != 1)
+        if (fisica != 1 || fisicaEmp!=1)
             fisica = this.dataset.value
         else
             fisica = "Financiamiento"
