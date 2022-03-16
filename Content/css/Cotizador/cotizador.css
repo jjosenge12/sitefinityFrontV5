@@ -431,10 +431,15 @@
     line-height: 32px;
 }
 
-#hitch-text, #hitch-max, #hitch-min{
+#hitch-text{
     border:none;
-    width:30%;
-    text-align:center;
+    width:45%;
+    text-align:start;
+}
+ #hitch-max, #hitch-min {
+    border: none;
+    width: 30%;
+    text-align: center;
 }
 
     #hitch-text::-webkit-inner-spin-button,
@@ -612,7 +617,7 @@ input[type="range"] {
 }
 
 @media(max-width: 991px) {
-    #hitch-text, #hitch-min, #hitch-max {
+    #hitch-text, #hitch-min, #hitch-max, .text-enganche {
         font-size: 18px;
     }
 }
