@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2, form, nroPdf = 0, fechaCotizacion,imagenAuto;
+var cotizaciones2, form, nroPdf = 0, fechaCotizacion,imagenAuto,oksales=0;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -430,7 +430,7 @@ $(document).ready(() => {
 
                     if (result.data.Prices.length > 0) {
                         cotizaciones2 = result.data.Prices;
-                        setInterval(downloadPdf(), 10000);
+                        oksales = 1;
                         //showResults(result.data.Prices);
                         //commitSalesforce();
 
@@ -456,6 +456,10 @@ $(document).ready(() => {
                 });
                 console.log(err);
             }
+        }).then(function () {
+            if (oksales == 1)
+                downloadPdf();
+            oksales = 0;
         });
     }
 
