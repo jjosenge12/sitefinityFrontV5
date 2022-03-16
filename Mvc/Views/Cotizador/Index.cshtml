@@ -346,7 +346,9 @@
 
                             <div class="row mt-4 step-4-8" style="display: none;">
                                 <div class="col-12">
-                                    <div class="title" id="porcentaje">10%</div>
+                                    <div class="d-flex hitch-content-2">                                        
+                                        <p>Ingrese la Cantidad de Enganche:&nbsp;</p><div><span>$ &nbsp;</span><input id="hitch-text" type="number" value="0" onkeydown="return event.keyCode !== 69" /></div>
+                                    </div>
                                     <div class="title position-relative">
                                         @*<input type="range" id="hitch-range" min="0" max="100000" step="1" value="0" />*@
 
@@ -365,22 +367,27 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row block range-controls step-4-8" style="display: none;">
                                 <div class="col-12 d-flex">
-                                    <div id="hitch-minus" class="range-button">
-                                        <img src="~/Content/images/Cotizador/menos.png" />
+                                    <div>
+                                        <div>$&nbsp; <input id="hitch-min" type="number" value="0" readonly /></div>
+                                        <div id="hitch-minus" class="range-button">
+                                            <img src="~/Content/images/Cotizador/menos.png" />
+                                        </div>
                                     </div>
 
                                     <div class="d-flex hitch-content">
-                                        <div>$</div>
-                                        <input id="hitch-text" type="number" value="0" onkeydown="return event.keyCode !== 69" />
-                                        <div>M.N.</div>
+                                        <div class="title" id="porcentaje">10%</div>
                                     </div>
 
-                                    <div id="hitch-plus" class="range-button">
-                                        <img src="~/Content/images/Cotizador/mas.png" />
+                                    <div class="text-right margin-range-plus">
+                                        <div>$&nbsp; <input id="hitch-max" type="number" value="0" readonly /></div>
+                                        <div id="hitch-plus" class="range-button">
+                                            <img src="~/Content/images/Cotizador/mas.png" />
+                                        </div>
                                     </div>
-                                </div>
+                            </div>
                             </div>
                         </div>
                         <div class="row block justify-content-center step-4-9" style="display: none;" id="finish">

@@ -274,6 +274,8 @@ $(document).ready(function () {
         $("#hitch-range").attr("max", form.MaxEnganche);
         $("#hitch-range").val(form.EngancheDeposito);
         $("#hitch-text").val(form.EngancheDeposito.toFixed(2));
+        $("#hitch-max").val(form.MaxEnganche);
+        $("#hitch-min").val(form.precioAuto * .1);
 
         formNextStep(2);
     });

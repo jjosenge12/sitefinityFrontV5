@@ -382,6 +382,8 @@
     }
 
     #step-4 .range-button {
+        width: 51px;
+        height: 51px;
         padding: 12px;
         border-radius: 50%;
         border: 1px solid #cccccc;
@@ -389,6 +391,7 @@
         user-select: none;
         flex: 0 1 auto;
         transition: all 0.2s ease-in-out;
+        margin-top: 10px;
     }
 
         #step-4 .range-button:hover {
@@ -401,7 +404,14 @@
             transition: all 0.1s ease-in-out;
         }
 
+.margin-range-plus {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
 .hitch-content{
+    margin-bottom: 30px;
     flex: 1 1 auto;
     text-align: center;
     align-self: center;
@@ -411,14 +421,28 @@
     justify-content: center;
 }
 
-#hitch-text{
+.hitch-content-2 {
+    margin-bottom: 30px;
+    flex: 1 1 auto;
+    text-align: center;
+    align-self: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+#hitch-text, #hitch-max, #hitch-min{
     border:none;
     width:30%;
     text-align:center;
 }
 
     #hitch-text::-webkit-inner-spin-button,
-    #hitch-text::-webkit-outer-spin-button {
+    #hitch-text::-webkit-outer-spin-button,
+    #hitch-max::-webkit-inner-spin-button,
+    #hitch-max::-webkit-outer-spin-button,
+    #hitch-min::-webkit-inner-spin-button,
+    #hitch-min::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
     }
@@ -588,7 +612,7 @@ input[type="range"] {
 }
 
 @media(max-width: 991px) {
-    #hitch-text {
+    #hitch-text, #hitch-min, #hitch-max {
         font-size: 18px;
     }
 }
