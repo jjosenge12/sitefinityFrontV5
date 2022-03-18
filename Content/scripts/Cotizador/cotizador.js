@@ -399,10 +399,12 @@ $("#select-state").change(() => {
     $("#select-term .select-button").click(function () {
         if (planes == 1) {
             formNextStep(8);
+            swiper.updateAutoHeight(0);
             $("#finish").show();
         }
         else
             formNextStep(9);
+            swiper.updateAutoHeight(0);
             $("#step-4-finish").show();
 
     });
@@ -593,6 +595,23 @@ $("#select-state").change(() => {
             .then(() => showResults(cotizacion));
     });
 
+    switch (form.PlanCotizar) {
+        case "Tradicional":
+            $("#tradicional").show();
+            break;
+        case "Anualidades":
+            $("#anualidades").show();
+            break;
+        case "Balloon":
+            $("#balloon").show();
+            break;
+        default:
+            $("#arrendamiento").show();
+            break;
+    }
+
+    $("#tradicional").show();
+
     $("#cotizar-otro").click(function () {
         $.when(clearValues())
             .then(() => {
@@ -603,6 +622,10 @@ $("#select-state").change(() => {
         progress.style.width = progress_val + "%";
         $("#porcentaje").html("10%");
         fisica = 0;
+        $("#arrendamiento").hide();
+        $("#anualidades").hide();
+        $("#balloon").hide();
+        $("#arrendamiento").hide();
     });
 
     $("#step-5-contact").click(() => {
