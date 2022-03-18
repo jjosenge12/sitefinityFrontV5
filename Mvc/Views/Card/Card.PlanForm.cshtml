@@ -13,8 +13,16 @@
 
 <div class="form-box mt-5">
     <div class="text-medium weight-600 mb-2">
-        Reg&iacute;strate para ser contactado y conocer m&aacute;s de este
-        plan:
+        Reg&iacute;strate para ser contactado por el Distribuidor Toyota de tu elecci&oacute;n y conocer m&aacute;s de este
+        
+        @if (HttpContext.Current.Request.Url.AbsolutePath.Split('/')[1] == "nuestros-planes")
+        {
+            <span>plan</span>          
+         }else
+        {
+            <span>arrendamiento</span>
+        }
+    <span>:</span>
     </div>
     @if (!string.IsNullOrEmpty(Model.Heading))
     {
@@ -74,8 +82,9 @@
             </div>
             <div class="py-3">
                 <input type="checkbox" id="plansTermsCheckbox" name="terms" />
-                <span class="text-small">&nbsp;He le&iacute;do y aceptado los</span>                
-                <span id="plansTerms" class="text-small color-red cursor-pointer">T&eacute;rminos y condiciones</span>            
+                <span class="text-small">&nbsp;He le&iacute;do y acepto el aviso de privacidad, los</span>
+                <span id="plansTerms" class="text-small color-red cursor-pointer">T&eacute;rminos y condiciones</span>
+                <span>de uso de página.</span>
             </div>
             <div class="d-flex justify-content-center my-5">
                 <button class="btn btn-primary custom-button text-small g-recaptcha"
