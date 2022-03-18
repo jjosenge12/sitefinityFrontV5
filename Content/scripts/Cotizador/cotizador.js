@@ -605,7 +605,10 @@ $("#select-state").change(() => {
         case "Balloon":
             $("#balloon").show();
             break;
-        default:
+        case "Arrendamiento financiero":
+            $("#arrendamiento").show();
+            break;
+        case "Arrendamiento puro":
             $("#arrendamiento").show();
             break;
     }
