@@ -202,6 +202,11 @@ $(document).ready(function () {
         $("#listPlanes").slideToggle();
     });
 
+    $("#expandArrendamientos").click(function () {
+        $("#arrendamientosArrow").toggleClass("pointRight pointDown");
+        $("#listArrendamientos").slideToggle();
+    });
+
     $("#expandLegales").click(function () {
         $("#legalesArrow").toggleClass("pointRight pointDown");
         $("#listLegales").slideToggle();
