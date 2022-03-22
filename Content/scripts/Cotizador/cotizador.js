@@ -1,6 +1,6 @@
 ﻿
 
-var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen;
+var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen,enganche_width,back;
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -431,7 +431,7 @@ $("#select-state").change(() => {
         let val = $("#hitch-range").val();
         let calc = Number(val) - 5000;
                 
-        if (calc < form.EngancheDeposito)
+        if (calc < form.EngancheDeposito )
             calc = form.EngancheDeposito;
 
         let porcentaje = (calc * 100) / form.precioAuto;
@@ -528,7 +528,9 @@ $("#select-state").change(() => {
             //progress_val = 0;
             //progress.style.width = progress_val + "%";
             //$("#porcentaje").html("10%")
+            back = 0;
             enganche_porcen = $("#porcentaje").html();
+            enganche_width = progress.style.width;
             $.when(getFormValues())
                 .then(() => cotizar());
 
@@ -631,16 +633,22 @@ $("#select-state").change(() => {
         $("#arrendamiento").hide();
     });
 
-    $("#step-5-contact").click(() => {
-        if ($("#step-5-contact-form").valid()) {
-            if ($("#step-5-terms").prop("checked")) {
-                sendDataSalesforce();
-
-            } else {
-                termsCheckbox = "#step-5-terms";                
-            }
-        }
+    $("#step-5-contact").click(() => { 
+        sendDataSalesforce();
     });
+
+    /*$("#step-5-back").click(() => {
+        swiper.slidePrev();
+        //$("#porcentaje").html(enganche_porcen);
+        //progress.style.width = enganche_width;
+        form.hitch = form.EngancheDeposito;
+        form.EngancheDeposito = form.precioAuto * .1;
+        form.MaxEnganche = form.precioAuto * .4;
+        $("#hitch-max").val(form.MaxEnganche);
+        $("#hitch-min").val(form.precioAuto * .1);
+        back = 1;
+
+    });*/
 
     $("#downloadPdf").click(function () {
 
