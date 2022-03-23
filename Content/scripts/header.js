@@ -250,6 +250,22 @@ $(document).ready(function () {
         );
     });
 
+    /*$("#termsCheckbox").click(function (e) {
+        if ($("#termsCheckbox").prop("checked")) {
+            e.preventDefault();
+            termsCheckbox = "#termsCheckbox";
+            openModal("newsletterTermsModal");
+        }
+    });*/
+
+    $("#plansTermsCheckbox").click(function (e) {
+        if ($("#plansTermsCheckbox").prop("checked")) {
+            e.preventDefault();
+            termsCheckbox = "#plansTermsCheckbox";
+            openModal("newsletterTermsModal");
+        }
+    });
+
     $("#closeNewsletterTerms").click(() => closeModal("newsletterTermsModal"));
 
     $("#modalOverlay").click(function () {

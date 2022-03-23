@@ -106,8 +106,12 @@ $(document).ready(function () {
         }
     });
 
-    $("#step-2-terms").click(function () {
-        termsCheckbox = "#step-2-terms";        
+    $("#step-2-terms").click(function (e) {
+        if ($("#step-2-terms").prop("checked")) {
+            e.preventDefault();
+            termsCheckbox = "#step-2-terms";
+            openModal("newsletterTermsModal");
+        }
     });
 
     $("#step-2-terms-btn").click(function () {
@@ -129,6 +133,7 @@ $(document).ready(function () {
                 cars_swiper.autoplay.start();
             } else {
                 termsCheckbox = "#step-2-terms";
+                openModal("newsletterTermsModal");
             }
         }
     });
