@@ -281,13 +281,13 @@ $(document).ready(function () {
     $("#denyNewsletterTerms").click(function () {
         console.log(termsCheckbox);
         $(termsCheckbox).prop("checked", false);
-        closeModal("newsletterTermsModal");// si no hay modal, esta linea deberia sacarse
+        closeModal("newsletterTermsModal");
     });
 
     $("#acceptNewsletterTerms").click(function () {
         console.log(termsCheckbox);
         $(termsCheckbox).prop("checked", true);
-        closeModal("newsletterTermsModal");// si no hay modal, esta linea deberia sacarse
+        closeModal("newsletterTermsModal");
     });
 
     $(".social-network").click(function () {
