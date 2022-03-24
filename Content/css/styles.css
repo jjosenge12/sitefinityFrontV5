@@ -465,7 +465,7 @@ body p {
   justify-content: center;
 }
 
-#newsletterTermsModal,
+#newsletterTermsModal, #avisoPrivClientesModal,
 .modal-auto {
   display: block;
   width: 620px;
@@ -1160,6 +1160,7 @@ video.video-content {
   }
 
   #newsletterTermsModal,
+  #avisoPrivClientesModal,
   .modal-auto,
   .siteModal {
     width: 100vw;
