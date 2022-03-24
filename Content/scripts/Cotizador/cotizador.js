@@ -1,6 +1,6 @@
 ﻿
 
-var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen,enganche_width,back;
+var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen,enganche_width,back,plan;
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -399,8 +399,8 @@ $("#select-state").change(() => {
         console.log(planes);
     });
 
-    $("#select-plan .select-button").click(function () { formNextStep(7); });
-    $("#select-arrendamiento .select-button").click(function () { formNextStep(6); });
+    $("#select-plan .select-button").click(function () { formNextStep(7); plan = this.dataset.value; });
+    $("#select-arrendamiento .select-button").click(function () { formNextStep(6); plan = this.dataset.value; });
     $("#select-term .select-button").click(function () {
         if (planes == 1) {
             formNextStep(8);
@@ -537,8 +537,27 @@ $("#select-state").change(() => {
             enganche_porcen = $("#porcentaje").html();
             enganche_width = progress.style.width;
             $.when(getFormValues())
-                .then(() => cotizar());
-
+                .then(() => {
+                    cotizar();
+                }).then(() => {
+                    switch (plan) {
+                        case "Tradicional":
+                            $("#tradicional").show();
+                            break;
+                        case "Anualidades":
+                            $("#anualidades").show();
+                            break;
+                        case "Balloon":
+                            $("#balloon").show();
+                            break;
+                        case "financiero":
+                            $("#arrendamiento").show();
+                            break;
+                        case "puro":
+                            $("#arrendamiento").show();
+                            break;
+                    }
+                });
         }
         else {
             Swal.fire({
@@ -602,25 +621,6 @@ $("#select-state").change(() => {
             .then(() => showResults(cotizacion));
     });
 
-    switch (form.PlanCotizar) {
-        case "Tradicional":
-            $("#tradicional").show();
-            break;
-        case "Anualidades":
-            $("#anualidades").show();
-            break;
-        case "Balloon":
-            $("#balloon").show();
-            break;
-        case "Arrendamiento financiero":
-            $("#arrendamiento").show();
-            break;
-        case "Arrendamiento puro":
-            $("#arrendamiento").show();
-            break;
-    }
-
-    $("#tradicional").show();
 
     $("#cotizar-otro").click(function () {
         $.when(clearValues())
@@ -635,7 +635,7 @@ $("#select-state").change(() => {
         $("#arrendamiento").hide();
         $("#anualidades").hide();
         $("#balloon").hide();
-        $("#arrendamiento").hide();
+        $("#tradicional").hide();
     });
 
     $("#step-5-contact").click(() => { 
