@@ -70,36 +70,6 @@ $(document).ready(function () {
         }
     });
 
-    $("#registro-terms-c").click(function (e) {
-        if ($("#registro-terms-c").prop("checked")) {
-            e.preventDefault();
-            termsCheckbox = "#registro-terms-c";
-            openModal("avisoPrivClientesModal");
-        }
-    });
-
-    $("#registro-terms-nc").click(function (e) {
-        if ($("#registro-terms-nc").prop("checked")) {
-            e.preventDefault();
-            termsCheckbox = "#registro-terms-nc";
-            openModal("avisoPrivClientesModal");// ver que aviso de privacidad mostrar, si el clientes o pospectos ??????
-        }
-    });    
-
-    $("#denyAvisoPriv").click(function () {
-        console.log(termsCheckbox);        
-        $(termsCheckbox).prop("checked", false);
-        closeModal("avisoPrivClientesModal");
-    });
-
-    $("#acceptAvisoPriv").click(function () {
-        console.log(termsCheckbox);
-        $(termsCheckbox).prop("checked", true);        
-        closeModal("avisoPrivClientesModal");
-    });     
-
-    $("#closeAviPrivCli").click(() => closeModal("avisoPrivClientesModal"));    
-
     $("#registro-c-form").submit(function (e) {
         if ($("#registro-c-form").valid()) {
             if ($("#registro-terms-c").prop("checked")) {

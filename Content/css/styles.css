@@ -465,15 +465,15 @@ body p {
   justify-content: center;
 }
 
-#newsletterTermsModal, #avisoPrivClientesModal,
+#newsletterTermsModal,
 .modal-auto {
-    display: block;
-    width: 620px;
-    height: 500px;
-    position: fixed;
-    top: calc(50% - 200px);
-    left: calc(50% - 310px);
-    z-index: 14;
+  display: block;
+  width: 620px;
+  height: 500px;
+  position: fixed;
+  top: calc(50% - 200px);
+  left: calc(50% - 310px);
+  z-index: 14;
 }
 
 .modal-auto{
@@ -1159,15 +1159,14 @@ video.video-content {
     padding: 11% 7%;
   }
 
-    #newsletterTermsModal,
-    #avisoPrivClientesModal,
-    .modal-auto,
-    .siteModal {
-        width: 100vw;
-        left: 0;
-        top: 0;
-        height: 100vh;
-    }
+  #newsletterTermsModal,
+  .modal-auto,
+  .siteModal {
+    width: 100vw;
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
 
   .modal-custom {
     border-radius: 0;
