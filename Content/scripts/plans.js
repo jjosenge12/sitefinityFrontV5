@@ -293,6 +293,7 @@ $(document).ready(function () {
                     commitSalesforcePlan();
                 } else {
                     termsCheckbox = "#plansTermsCheckbox";
+                    openModal("newsletterTermsModal");
                 }
             } else {
                 console.log("formulario inválido");

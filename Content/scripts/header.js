@@ -250,13 +250,13 @@ $(document).ready(function () {
         );
     });
 
-    /*$("#termsCheckbox").click(function (e) {
+    $("#termsCheckbox").click(function (e) {
         if ($("#termsCheckbox").prop("checked")) {
             e.preventDefault();
             termsCheckbox = "#termsCheckbox";
             openModal("newsletterTermsModal");
         }
-    });*/
+    });
 
     $("#plansTermsCheckbox").click(function (e) {
         if ($("#plansTermsCheckbox").prop("checked")) {
@@ -337,12 +337,11 @@ $(document).ready(function () {
 
     $("#newsletter-form").submit(function (e) {
         e.preventDefault();
-        if ($(this).valid()) {
-            // Como quité el modal ver si tirar un alerta indicando de que el check no esta tildado
+        if ($(this).valid()) {            
             if (!$("#termsCheckbox").prop("checked")) {
                 termsCheckbox = "#termsCheckbox";
-                //openModal("newsletterTermsModal"); //quito el modal del boton enviar
-                Swal.fire({ type: 'error', title: 'Aceptar términos y condiciones', text: 'Por favor acepte los términos y condiciones de uso de la página para continuar' });
+                openModal("newsletterTermsModal");
+                //Swal.fire({ type: 'error', title: 'Aceptar términos y condiciones', text: 'Por favor acepte los términos y condiciones de uso de la página para continuar' });
             } else {
                 commitNewsletter($("#nl-email").val());
             }
