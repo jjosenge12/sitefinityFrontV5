@@ -261,6 +261,7 @@ $(document).ready(function () {
         $("#porcentaje").html("10%");
         $("#step-4-finish").hide();
         fisica = 0;
+        swiper.updateAutoHeight(0);
     });
 
     $("#car_version").change(function (e) {
