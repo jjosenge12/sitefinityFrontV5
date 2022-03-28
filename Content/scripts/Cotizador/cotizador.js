@@ -1346,6 +1346,16 @@ function commitSalesforce2() {
         "submit":"Enviar"
     }
 
+    data2 ={
+    "Company":"Example",
+    "Email":"example@mail.com",
+    "Description":"descripcion",
+    "Status":"Nuevo",
+    "FWY_Modelo__c":"Modelo",
+    "FWY_Veh_culo__c":"Avanza",
+    "LastName":"Test"
+    }
+
     $.ajax({
         type: 'POST',
         headers: {
@@ -1353,7 +1363,7 @@ function commitSalesforce2() {
             Authorization: "Bearer " + token,
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
-        data: data,
+        data: data2,
         //dataType: "json",
         crossDomain: true,
         success: function (result) {
