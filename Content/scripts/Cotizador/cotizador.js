@@ -1351,8 +1351,6 @@ function commitSalesforce2() {
         headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + token,
-            "Access-Control-Allow-Credentials": true,
-            "Access-Control-Allow-Origin": "*",
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
         data: data,
