@@ -667,6 +667,9 @@ $("#select-state").change(() => {
             PrecioAuto: form.precioAuto,
         };
 
+        console.log(data.ImagenAuto);
+
+
         $.ajax(window.config.urlbase + "/DownloadPlanPdf", {
             method: 'POST',
             beforeSend: showLoader,
@@ -826,7 +829,7 @@ function cotizar() {
                 if (result.data.Prices.length > 0) {
                     cotizacion = result.data.Prices;
                     showResults(result.data.Prices);
-                    commitSalesforce2();
+                    commitSalesforce();
 
                 } else {
                     Swal.fire({
