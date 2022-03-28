@@ -1360,12 +1360,10 @@ function commitSalesforce2() {
         type: 'POST',
         headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer " + token,
+            "Authorization": "Bearer " + token,
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
         data: data2,
-        //dataType: "json",
-        crossDomain: true,
         success: function (result) {
             window.scrollTo(0, 0);
             swiper.slideNext();
