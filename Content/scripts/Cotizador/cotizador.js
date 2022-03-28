@@ -1,6 +1,6 @@
 ﻿
 
-var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen,enganche_width,back,plan;
+var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen,enganche_width,back,plan,token;
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -83,6 +83,7 @@ $(document).ready(function () {
         else {
             swiper.slideTo(1);
         }
+        getToken();
     });
 
     //----------------STEP 2----------------
@@ -825,7 +826,7 @@ function cotizar() {
                 if (result.data.Prices.length > 0) {
                     cotizacion = result.data.Prices;
                     showResults(result.data.Prices);
-                    commitSalesforce();
+                    commitSalesforce2();
 
                 } else {
                     Swal.fire({
@@ -1302,4 +1303,76 @@ function maxLengthCheck(object) {
     if (!(/[0-9]/.test(ch)))
         object.preventDefault();
 
+}
+
+function getToken(){
+    $.ajax({
+        type: 'GET',
+        url: window.config.urlbase + '/GetAccessToken',
+        success: function (result) {
+            token = result.result;
+            console.log(result);
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+
+function commitSalesforce2() {
+
+    var data = {
+        Estado: form.Estado,
+        Aseguradora: form.Aseguradora,
+        Mensualidad: formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
+        Cobertura: form.Cobertura,
+        Plan: form.PlanCotizar,
+        Movil: form.Telefono,
+        Email: form.emailCliente,
+        Nombre: form.Nombre,
+        Apellido: form.Apellido,
+        AceptoTerminosYCondiciones: 'SiAcepto',
+        Marca: form.Marca,
+        Modelo: form.Modelo,
+        Vesion: form.Vesion,
+        TipoPersona: form.TipoPersona,
+        Enganche: form.EngancheDeposito,
+        Plazo: form.Plazo,
+        Ballon: "text_ballon",
+        DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
+        Precio: form.precioAuto,
+        ImagenAuto: form.ImagenAuto,
+        lead_source: "Cotizador Web paso 4",
+        submit:"Enviar"
+    }
+
+    $.ajax({
+        type: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+            "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Origin": "*",
+        },
+        url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
+        data: data,
+        //dataType: "json",
+        crossDomain: true,
+        success: function (result) {
+            window.scrollTo(0, 0);
+            swiper.slideNext();
+            console.log(result);
+        },
+        error: function (err) {
+            console.log('ERROR OBTENER DATOS DE SERVICIO');
+            console.log(err);
+            Swal.fire({
+                title: "Error",
+                text: "Error al enviar información a Salesforce",
+                icon: "error",
+                confirmButtonColor: "#cc0000",
+                timer: 5000
+            });
+        }
+    });
 }
