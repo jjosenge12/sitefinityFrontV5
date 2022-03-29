@@ -1324,7 +1324,7 @@ function getToken(){
 
 function commitSalesforce2() {
 
-    var data = {
+    var data = `{
         "Estado": form.Estado,
         "Aseguradora": form.Aseguradora,
         "Mensualidad": formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
@@ -1347,17 +1347,8 @@ function commitSalesforce2() {
         "ImagenAuto": form.ImagenAuto,
         "lead_source": "Cotizador Web paso 4",
         "submit":"Enviar"
-    }
-
-    var data2 = `{
-    "Company":"Example",
-    "Email":"example@mail.com",
-    "Description":"descripcion",
-    "Status":"Nuevo",
-    "FWY_Modelo__c":"Modelo",
-    "FWY_Veh_culo__c":"Avanza",
-    "LastName":"Test"
     }`;
+
 
     $.ajax({
         type: 'POST',
@@ -1366,7 +1357,7 @@ function commitSalesforce2() {
             "Authorization": "Bearer " + token,
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
-        data: data2,
+        data: data,
         success: function (result) {
             window.scrollTo(0, 0);
             swiper.slideNext();
