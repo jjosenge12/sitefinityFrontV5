@@ -1324,31 +1324,32 @@ function getToken(){
 
 function commitSalesforce2() {
 
-    var data = `{
-        "Estado":`+ form.Estado`,
-        "Aseguradora": `+ form.Aseguradora`,
-        "Mensualidad":`+ formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad)`,
-        "Cobertura": `+ form.Cobertura`,
-        "Plan": `+form.PlanCotizar`,
-        "Movil": `+form.Telefono`,
-        "Email": `+ form.emailCliente`,
-        "Nombre": `+ form.Nombre`,
-        "Apellido": `+form.Apellido`,
-        "AceptoTerminosYCondiciones": 'SiAcepto',
-        "Marca": `+ form.Marca`,
-        "Modelo": `+ form.Modelo`,
-        "Vesion": `+ form.Vesion`,
-        "TipoPersona": `+ form.TipoPersona`,
-        "Enganche": `+ form.EngancheDeposito`,
-        "Plazo": `+ form.Plazo`,
-        "Ballon": "text_ballon",
-        "DepositoGarantia": `+ cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0"`,
-        "Precio": `+ form.precioAuto`,
-        "ImagenAuto": `+ form.ImagenAuto`,
-        "lead_source": "Cotizador Web paso 4",
-        "submit":"Enviar"
-    }`;
+    var data = {
+        Estado: form.Estado,
+        Aseguradora: form.Aseguradora,
+        Mensualidad: formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
+        Cobertura: form.Cobertura,
+        Plan: form.PlanCotizar,
+        Movil: form.Telefono,
+        Email: form.emailCliente,
+        Nombre: form.Nombre,
+        Apellido: form.Apellido,
+        AceptoTerminosYCondiciones: 'SiAcepto',
+        Marca: form.Marca,
+        Modelo: form.Modelo,
+        Vesion: form.Vesion,
+        TipoPersona: form.TipoPersona,
+        Enganche: form.EngancheDeposito,
+        Plazo: form.Plazo,
+        Ballon: "text_ballon",
+        DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
+        Precio: form.precioAuto,
+        ImagenAuto: form.ImagenAuto,
+        lead_source: "Cotizador Web paso 4",
+        submit:"Enviar"
+    };
 
+    let datajson = JSON.stringify(data);
 
     $.ajax({
         type: 'POST',
@@ -1357,7 +1358,7 @@ function commitSalesforce2() {
             "Authorization": "Bearer " + token,
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
-        data: data,
+        data: datajson,
         success: function (result) {
             window.scrollTo(0, 0);
             swiper.slideNext();
