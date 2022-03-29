@@ -829,7 +829,7 @@ function cotizar() {
                 if (result.data.Prices.length > 0) {
                     cotizacion = result.data.Prices;
                     showResults(result.data.Prices);
-                    commitSalesforce();
+                    commitSalesforce2();
 
                 } else {
                     Swal.fire({
