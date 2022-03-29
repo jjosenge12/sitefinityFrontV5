@@ -1349,14 +1349,14 @@ function commitSalesforce2() {
         "submit":"Enviar"
     }
 
-    var data2 ={
-    "Company":"Example",
-    "Email":"example@mail.com",
-    "Description":"descripcion",
-    "Status":"Nuevo",
-    "FWY_Modelo__c":"Modelo",
-    "FWY_Veh_culo__c":"Avanza",
-    "LastName":"Test"
+    var data2 = {
+    Company:"Example",
+    Email:"example@mail.com",
+    Description:"descripcion",
+    Status:"Nuevo",
+    FWY_Modelo__c:"Modelo",
+    FWY_Veh_culo__c:"Avanza",
+    LastName:"Test"
     }
 
     $.ajax({
