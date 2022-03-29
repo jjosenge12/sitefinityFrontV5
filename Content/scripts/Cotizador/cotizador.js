@@ -1349,7 +1349,7 @@ function commitSalesforce2() {
         "submit":"Enviar"
     }
 
-    data2 ={
+    var data2 ={
     "Company":"Example",
     "Email":"example@mail.com",
     "Description":"descripcion",
