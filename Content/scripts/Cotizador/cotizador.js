@@ -1,6 +1,6 @@
 ﻿
 
-var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen,enganche_width,back,plan,token;
+var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen,enganche_width,back,plan,token,idcoti;
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -644,7 +644,7 @@ $("#select-state").change(() => {
         sendDataSalesforce();
     });
 
-    /*$("#step-5-back").click(() => {
+    $("#step-5-back").click(() => {
         swiper.slidePrev();
         //$("#porcentaje").html(enganche_porcen);
         //progress.style.width = enganche_width;
@@ -655,7 +655,7 @@ $("#select-state").change(() => {
         $("#hitch-min").val(form.precioAuto * .1);
         back = 1;
 
-    });*/
+    });
 
     $("#downloadPdf").click(function () {
 
@@ -829,7 +829,10 @@ function cotizar() {
                 if (result.data.Prices.length > 0) {
                     cotizacion = result.data.Prices;
                     showResults(result.data.Prices);
-                    commitSalesforce2();
+                    if (back == 1)
+                        updateSalesforce2();
+                    else
+                        commitSalesforce2();
 
                 } else {
                     Swal.fire({
@@ -1343,7 +1346,6 @@ function commitSalesforce2() {
         Plazo__c: form.Plazo,
         FWY_Balloon__c: "text_ballon",
         Depositos_Garantia__c: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
-        Precio_Auto__c: form.precioAuto,
         ImagenAuto__c: form.ImagenAuto,
         lead_source: "Cotizador Web paso 4",
         submit:"Enviar"
@@ -1370,6 +1372,75 @@ function commitSalesforce2() {
             "Authorization": "Bearer " + token,
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
+        data: datajson,
+        success: function (result) {
+            window.scrollTo(0, 0);
+            swiper.slideNext();
+            console.log(result);
+            idcoti = result.id;
+        },
+        error: function (err) {
+            console.log('ERROR OBTENER DATOS DE SERVICIO');
+            console.log(err);
+            Swal.fire({
+                title: "Error",
+                text: "Error al enviar información a Salesforce",
+                icon: "error",
+                confirmButtonColor: "#cc0000",
+                timer: 5000
+            });
+        }
+    });
+}
+
+function updateSalesforce2() {
+
+    var data = {
+        state: form.Estado,
+        FWY_Aseguradora__c: form.Aseguradora,
+        Mensualidad__c: formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
+        Cobertura__c: form.Cobertura,
+        FWY_Tipo_de_plan__c: form.PlanCotizar,
+        mobile: form.Telefono,
+        email: form.emailCliente,
+        first_name: form.Nombre,
+        last_name: form.Apellido,
+        AceptoTerminosYCondiciones: 'SiAcepto',
+        FWY_Veh_culo__c: form.Marca,
+        FWY_Versi_n__c: form.Modelo,
+        FWY_Modelo__c: form.Vesion,
+        FWY_Tipo_de_persona__c: form.TipoPersona,
+        FWY_Enganche_Monto__c: form.EngancheDeposito,
+        Plazo__c: form.Plazo,
+        FWY_Balloon__c: "text_ballon",
+        Depositos_Garantia__c: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
+        Precio_Auto__c: form.precioAuto,
+        ImagenAuto__c: form.ImagenAuto,
+        lead_source: "Cotizador Web paso 4",
+        submit: "Enviar"
+    };
+
+    var data2 =
+    {
+        Company: "Example",
+        Email: "example@mail.com",
+        Description: "descripcion",
+        Status: "Nuevo",
+        FWY_Modelo__c: "Modelo",
+        FWY_Veh_culo__c: "Avanza",
+        LastName: "Test"
+    };
+
+
+    let datajson = JSON.stringify(data);
+
+    $.ajax({
+        type: 'PATCH',
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token,
+        },
+        url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/"+idcoti,
         data: datajson,
         success: function (result) {
             window.scrollTo(0, 0);
