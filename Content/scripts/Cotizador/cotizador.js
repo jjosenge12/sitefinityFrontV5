@@ -1325,26 +1325,26 @@ function getToken(){
 function commitSalesforce2() {
 
     var data = {
-        Estado: form.Estado,
-        Aseguradora: form.Aseguradora,
-        Mensualidad: formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
-        Cobertura: form.Cobertura,
-        Plan: form.PlanCotizar,
-        Movil: form.Telefono,
-        Email: form.emailCliente,
-        Nombre: form.Nombre,
-        Apellido: form.Apellido,
+        state: form.Estado,
+        FWY_Aseguradora__c: form.Aseguradora,
+        Mensualidad__c: formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
+        Cobertura__c: form.Cobertura,
+        FWY_Tipo_de_plan__c: form.PlanCotizar,
+        mobile: form.Telefono,
+        email: form.emailCliente,
+        first_name: form.Nombre,
+        last_name: form.Apellido,
         AceptoTerminosYCondiciones: 'SiAcepto',
-        Marca: form.Marca,
-        Modelo: form.Modelo,
-        Vesion: form.Vesion,
-        TipoPersona: form.TipoPersona,
-        Enganche: form.EngancheDeposito,
-        Plazo: form.Plazo,
-        Ballon: "text_ballon",
-        DepositoGarantia: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
-        Precio: form.precioAuto,
-        ImagenAuto: form.ImagenAuto,
+        FWY_Veh_culo__c: form.Marca,
+        FWY_Versi_n__c: form.Modelo,
+        FWY_Modelo__c: form.Vesion,
+        FWY_Tipo_de_persona__c: form.TipoPersona,
+        FWY_Enganche_Monto__c: form.EngancheDeposito,
+        Plazo__c: form.Plazo,
+        FWY_Balloon__c: "text_ballon",
+        Depositos_Garantia__c: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
+        Precio_Auto__c: form.precioAuto,
+        ImagenAuto__c: form.ImagenAuto,
         lead_source: "Cotizador Web paso 4",
         submit:"Enviar"
     };
@@ -1361,7 +1361,7 @@ function commitSalesforce2() {
     };
     
 
-    let datajson = JSON.stringify(data2);
+    let datajson = JSON.stringify(data);
 
     $.ajax({
         type: 'POST',
