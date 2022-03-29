@@ -41,8 +41,9 @@ $(document).ready(() => {
                 var nombre = data.esCliente[0].nombre;
             else
                 var nombre = data.esCliente[0].apellido;
-                var apellido = data.esCliente[0].apellido,
-                isClient = data.esCliente[0].esCliente;
+            var apellido = data.esCliente[0].apellido,
+                isClient = data.esCliente[0].esCliente,
+                esMoral = data.esCliente[0].tipoPersona;
             sessionStorage.setItem("name", capitalize(nombre));
             sessionStorage.setItem("lastname", capitalize(apellido));
             sessionStorage.setItem("isClient", isClient);
@@ -51,7 +52,20 @@ $(document).ready(() => {
 
             // Hola
             // Nos da mucho gusto que quieras ser parte de la familia Toyota.
+            if (sessionStorage.getItem("isClient") === "true" && esMoral === 'MORAL') {
+                bannerBienvenida +=
+                    '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
+                    '<h1 class="cotizaciones-title">Hola ' +
+                    capitalize(nombre) +
+                    "<br />Nos da mucho gusto que sigas siendo parte de la familia Toyota." +
+                    '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
+                    "En &eacute;l podr&aacute;s iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
+                    '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
+                    '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
+                    '</div><div class="col-md-1"></div>';
+                $("#bannerBienvenida").append(bannerBienvenida);
 
+            } else {
             if (sessionStorage.getItem("isClient") === "true") {
                 bannerBienvenida +=
                     '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
@@ -192,7 +206,7 @@ $(document).ready(() => {
                         cotizacion.clickeable +
                         '" style="color:red" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
                         cotizacion.id +
-                        '">'+
+                        '">' +
                         cotizacion.etapa +
                         '</a>' +
                         "</div>" +
@@ -200,7 +214,7 @@ $(document).ready(() => {
                         "</div>";
                     nroPdf++;
                 });
-                
+
 
 
                 $("#cotizaciones").append(tableCotizacionesHTML);
@@ -239,7 +253,7 @@ $(document).ready(() => {
                     Estado: data.cotizaciones[idPdf].estado,
                     Aseguradora: data.cotizaciones[idPdf].aseguradora,
                     Cobertura: data.cotizaciones[idPdf].cobertura,
-                    PlanCotizar: data.cotizaciones[idPdf].plan === "TRADICIONAL" ? "Tradicional" : data.cotizaciones[idPdf].plan === "BALLOON" ? "Balloon" : data.cotizaciones[idPdf].plan === "ANUALIDADES" ? "Anualidades" : data.cotizaciones[idPdf].plan, 
+                    PlanCotizar: data.cotizaciones[idPdf].plan === "TRADICIONAL" ? "Tradicional" : data.cotizaciones[idPdf].plan === "BALLOON" ? "Balloon" : data.cotizaciones[idPdf].plan === "ANUALIDADES" ? "Anualidades" : data.cotizaciones[idPdf].plan,
                     Plazo: data.cotizaciones[idPdf].plazo,
                     TipoUso: "Depósitos de Garantía",
                     CantidadDepositosGarantia: data.cotizaciones[idPdf].depositoGarantia,
@@ -348,7 +362,7 @@ $(document).ready(() => {
                 $("#mis-procesos").append(tableProcesosMobileHTML);
 
                 //$(".false").css("text-decoration", "line-through");
-                
+
                 //ESTATUS DE PROCESO DE CRÉDITO (último realizado)
 
                 // "Tienes un proceso de crédito activo. Podrás iniciar otro proceso hasta concluirlo."
@@ -389,6 +403,7 @@ $(document).ready(() => {
                         //document.getElementById("aprobada").classList.add("active-red");
                         break;
                 }
+            }
             }
         },
 
