@@ -1325,6 +1325,7 @@ function getToken(){
 function commitSalesforce2() {
 
     var data = {
+        Estado: form.Estado,
         Aseguradora: form.Aseguradora,
         Mensualidad: formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
         Cobertura: form.Cobertura,
@@ -1348,7 +1349,19 @@ function commitSalesforce2() {
         submit:"Enviar"
     };
 
-    let datajson = JSON.stringify(data);
+    var data2 =
+    {
+        Company: "Example",
+        Email: "example@mail.com",
+        Description: "descripcion",
+        Status: "Nuevo",
+        FWY_Modelo__c: "Modelo",
+        FWY_Veh_culo__c: "Avanza",
+        LastName: "Test"
+    };
+    
+
+    let datajson = JSON.stringify(data2);
 
     $.ajax({
         type: 'POST',
