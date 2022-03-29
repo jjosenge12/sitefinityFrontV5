@@ -1325,7 +1325,6 @@ function getToken(){
 function commitSalesforce2() {
 
     var data = {
-        Estado: form.Estado,
         Aseguradora: form.Aseguradora,
         Mensualidad: formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
         Cobertura: form.Cobertura,
