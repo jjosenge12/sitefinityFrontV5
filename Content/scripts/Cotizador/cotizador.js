@@ -1339,7 +1339,7 @@ function commitSalesforce2() {
         FWY_Tipo_de_plan__c: form.PlanCotizar,
         MobilePhone: form.Telefono,
         Email: form.emailCliente,
-        Name: form.Nombre,
+        FirstName: form.Nombre,
         LastName: form.Apellido,
         FWY_Veh_culo__c: form.Marca,
         FWY_Versi_n__c: form.Modelo,
