@@ -536,10 +536,11 @@ $("#select-state").change(() => {
             //progress.style.width = progress_val + "%";
             //$("#porcentaje").html("10%")
             enganche_porcen = $("#porcentaje").html();
-            getToken();
             enganche_width = progress.style.width;
             $.when(getFormValues())
                 .then(() => {
+                    getToken();
+                }).then(() => {
                     cotizar();
                 }).then(() => {
                     switch (plan) {
