@@ -638,6 +638,7 @@ $("#select-state").change(() => {
         $("#anualidades").hide();
         $("#balloon").hide();
         $("#tradicional").hide();
+        back = 0;
     });
 
     $("#step-5-contact").click(() => { 
@@ -1075,6 +1076,7 @@ function commitSalesforce() {
         Precio: form.precioAuto,
         ImagenAuto: form.ImagenAuto,
     }
+    console.log(data);
 
     $.ajax({
         type: 'POST',
@@ -1346,6 +1348,7 @@ function commitSalesforce2() {
         Plazo__c: form.Plazo,
         FWY_Balloon__c: "text_ballon",
         Depositos_Garantia__c: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
+        Precio_Auto__c: form.precioAuto,
         ImagenAuto__c: form.ImagenAuto,
         lead_source: "Cotizador Web paso 4",
         submit:"Enviar"

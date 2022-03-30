@@ -615,5 +615,11 @@ $(document).ready(() => {
 
     getDealersByState("step-5-distribuidores");
 
+    function maxLengthCheck(object) {
+        var ch = String.fromCharCode(object.which);
+        if (!(/[0-9]/.test(ch)))
+            object.preventDefault();
+
+    }
 
 });
