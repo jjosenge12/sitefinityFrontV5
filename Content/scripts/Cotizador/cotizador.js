@@ -1351,7 +1351,8 @@ function commitSalesforce2() {
         Depositos_Garantia__c: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
         Precio_Auto__c: form.precioAuto,
         ImagenAuto__c: form.ImagenAuto,
-        LeadSource: "Cotizador Web paso 4"
+        LeadSource: "Cotizador Web paso 4",
+        Company: "Example",
         };
 
     var data2 =
