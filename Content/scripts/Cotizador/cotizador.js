@@ -1076,7 +1076,7 @@ function commitSalesforce() {
         Precio: form.precioAuto,
         ImagenAuto: form.ImagenAuto,
     }
-    console.log(data);
+    
 
     $.ajax({
         type: 'POST',
@@ -1384,6 +1384,7 @@ function commitSalesforce2() {
         },
         error: function (err) {
             console.log('ERROR OBTENER DATOS DE SERVICIO');
+            console.log(data);
             console.log(err);
             Swal.fire({
                 title: "Error",
