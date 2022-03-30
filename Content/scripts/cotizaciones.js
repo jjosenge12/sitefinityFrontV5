@@ -26,8 +26,7 @@ $(document).ready(() => {
         "Access-Control-Allow-Credentials": true,
     };
 
-    
-
+   
     const settings = {
         method: "POST",
         headers: _myHeader,
@@ -576,4 +575,45 @@ $(document).ready(() => {
             return e;
         }
     });
+
+    $("#step-5-contact-form").validate({
+        rules: {
+            distribuidores: {
+                selectRequired: true
+            },
+            phone: {
+                required: true
+            }
+        }
+    });
+
+    $("#step-5-distribuidores").on("select2:open", function () {
+        $("#step-5-distribuidores").siblings("[class='focus-border']").addClass("active");
+    });
+
+    $("#step-5-distribuidores").on("select2:close", function () {
+        $("#step-5-distribuidores")
+            .siblings("[class='focus-border active']")
+            .removeClass("active");
+    });
+
+    $("#step-5-distribuidores").on("select2:select", function () {
+        $("#step-5-distribuidores").valid();
+    });
+
+    $("#step-5-contact-form").submit(function (e) {
+        e.preventDefault();
+    });
+
+    $("#step-5-contact").click(function () {
+        $("#step-5-contact-form").valid();
+    });
+
+    $("#step-5-contact").click(() => {
+        sendDataSalesforce();
+    });
+
+    getDealersByState("step-5-distribuidores");
+
+
 });
