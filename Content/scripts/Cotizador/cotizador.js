@@ -83,7 +83,7 @@ $(document).ready(function () {
         else {
             swiper.slideTo(1);
         }
-        getToken();
+        
     });
 
     //----------------STEP 2----------------
@@ -536,6 +536,7 @@ $("#select-state").change(() => {
             //progress.style.width = progress_val + "%";
             //$("#porcentaje").html("10%")
             enganche_porcen = $("#porcentaje").html();
+            getToken();
             enganche_width = progress.style.width;
             $.when(getFormValues())
                 .then(() => {
