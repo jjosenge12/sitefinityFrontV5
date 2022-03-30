@@ -1398,11 +1398,14 @@ function commitSalesforce2() {
 }
 
 function updateSalesforce2() {
+    let mensualidad = formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad);
+    let mensu = mensualidad.substr(1, mensualidad.length);
+    mensu = parseFloat(mensu);
 
     var data = {
         state: form.Estado,
         FWY_Aseguradora__c: form.Aseguradora,
-        Mensualidad__c: formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad),
+        Mensualidad__c: mensu,
         Cobertura__c: form.Cobertura,
         FWY_Tipo_de_plan__c: form.PlanCotizar,
         mobile: form.Telefono,
