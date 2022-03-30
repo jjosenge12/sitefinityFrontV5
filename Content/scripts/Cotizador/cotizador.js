@@ -535,7 +535,6 @@ $("#select-state").change(() => {
             //progress_val = 0;
             //progress.style.width = progress_val + "%";
             //$("#porcentaje").html("10%")
-            back = 0;
             enganche_porcen = $("#porcentaje").html();
             enganche_width = progress.style.width;
             $.when(getFormValues())
@@ -559,6 +558,7 @@ $("#select-state").change(() => {
                             $("#arrendamiento").show();
                             break;
                     }
+                    back = 0;
                 });
         }
         else {
