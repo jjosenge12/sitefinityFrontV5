@@ -83,7 +83,7 @@ $(document).ready(function () {
         else {
             swiper.slideTo(1);
         }
-        
+        getToken();
     });
 
     //----------------STEP 2----------------
@@ -539,8 +539,6 @@ $("#select-state").change(() => {
             enganche_width = progress.style.width;
             $.when(getFormValues())
                 .then(() => {
-                    getToken();
-                }).then(() => {
                     cotizar();
                 }).then(() => {
                     switch (plan) {
