@@ -558,8 +558,7 @@ $("#select-state").change(() => {
                             $("#arrendamiento").show();
                             break;
                     }
-                    back = 0;
-                });
+                   });
         }
         else {
             Swal.fire({
@@ -1416,6 +1415,7 @@ function updateSalesforce2() {
 
     let datajson = JSON.stringify(data);
     console.log("Update");
+    back = 0;
 
     $.ajax({
         type: 'PATCH',
