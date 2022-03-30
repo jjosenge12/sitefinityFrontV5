@@ -55,15 +55,23 @@ $(document).ready(() => {
             if (sessionStorage.getItem("isClient") === "true" && esMoral === 'MORAL') {
                 bannerBienvenida +=
                     '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
-                    '<h1 class="cotizaciones-title">Hola ' +
-                    capitalize(nombre) +
-                    "<br />Nos da mucho gusto que sigas siendo parte de la familia Toyota." +
-                    '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
-                    "En &eacute;l podr&aacute;s iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
+                    '<p class="cotizaciones-p">Para continuar con tu proceso de financiamiento, es importante registres tus datos para ser contactado por el Distribuidor autorizado ' +
+                    "Toyota más cercano a tu ciudad, ya que por el momento para tu régimen fiscal no esta habilitada esta opción.</p></div>" +
                     '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
                     '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
                     '</div><div class="col-md-1"></div>';
                 $("#bannerBienvenida").append(bannerBienvenida);
+                var dashboard = "";
+                dashboard +=
+                    '<div class="col-12"><div class="sf-form-container step-5-card" data-id="step-5-contact-form">' +
+                    '<div class="title"><span class="step-5-nombre-cliente"></span>,<br />contacta con uno de nuestros Distribuidores para recibir m&aacute;s informaci&oacute;n:' +
+                    '</div><div class="d-grid"><div class="float-container"><label class="float-label" for="step-5-distribuidores">Distribuidor</label>' +
+                    '<select class="form-input effect-2 bg-transparent" id="step-5-distribuidores" name="distribuidores"><option value="0" disabled selected>Distribuidor</option></select>' +
+                    '<span class="focus-border"></span></div><div class="float-container"><label class="float-label" for="step-5-phone">Tel&eacute;fono</label>' +
+                    '<input type="text" id="step-5-phone" name="phone" maxlength="10" onkeypress="maxLengthCheck(event)" class="form-input effect-2 bg-transparent" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 188 && event.keyCode !== 110 && event.keyCode !== 190)" />' +
+                    '<span class="focus-border"></span></div></div><div class="mt-5"><button id="step-5-contact" type="button" class="btn-red btn-long col-12 col-lg-7">SER CONTACTADO</button></div></div></div></div>';
+
+                $("#dashboard").append(dashboard);
 
             } else {
             if (sessionStorage.getItem("isClient") === "true") {
@@ -88,7 +96,7 @@ $(document).ready(() => {
                     '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
                     '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
                     '</div><div class="col-md-1"></div>';
-            }
+            } 
             $("#bannerBienvenida").append(bannerBienvenida);
 
             // Tablero Iniciar Cotización y Estatus de Procesos
