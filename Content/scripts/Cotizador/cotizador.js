@@ -1353,19 +1353,7 @@ function commitSalesforce2() {
         ImagenAuto__c: form.ImagenAuto,
         LeadSource: "Cotizador Web paso 4",
         Company: "Example",
-        };
-
-    var data2 =
-    {
-        Company: "Example",
-        Email: "example@mail.com",
-        Description: "descripcion",
-        Status: "Nuevo",
-        FWY_Modelo__c: "Modelo",
-        FWY_Veh_culo__c: "Avanza",
-        LastName: "Test"
-    };
-    
+        }; 
 
     let datajson = JSON.stringify(data);
 
@@ -1402,18 +1390,16 @@ function updateSalesforce2() {
     let mensualidad = formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad);
     let mensu = mensualidad.substr(1, mensualidad.length);
     mensu = mensu.replace(',', '');
-
     var data = {
         state: form.Estado,
         FWY_Aseguradora__c: form.Aseguradora,
         Mensualidad__c: mensu,
         Cobertura__c: form.Cobertura,
         FWY_Tipo_de_plan__c: form.PlanCotizar,
-        mobile: form.Telefono,
-        email: form.emailCliente,
-        first_name: form.Nombre,
-        last_name: form.Apellido,
-        AceptoTerminosYCondiciones: 'SiAcepto',
+        MobilePhone: form.Telefono,
+        Email: form.emailCliente,
+        FirstName: form.Nombre,
+        LastName: form.Apellido,
         FWY_Veh_culo__c: form.Marca,
         FWY_Versi_n__c: form.Modelo,
         FWY_Modelo__c: form.Vesion,
@@ -1424,23 +1410,12 @@ function updateSalesforce2() {
         Depositos_Garantia__c: cotizacion.find(x => x.Plazo === Number(form.Plazo)).DepositoGarantia || "0",
         Precio_Auto__c: form.precioAuto,
         ImagenAuto__c: form.ImagenAuto,
-        lead_source: "Cotizador Web paso 4",
-        submit: "Enviar"
-    };
-
-    var data2 =
-    {
+        LeadSource: "Cotizador Web paso 4",
         Company: "Example",
-        Email: "example@mail.com",
-        Description: "descripcion",
-        Status: "Nuevo",
-        FWY_Modelo__c: "Modelo",
-        FWY_Veh_culo__c: "Avanza",
-        LastName: "Test"
     };
-
 
     let datajson = JSON.stringify(data);
+    console.log("Update");
 
     $.ajax({
         type: 'PATCH',
