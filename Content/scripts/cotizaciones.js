@@ -63,13 +63,13 @@ $(document).ready(() => {
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
                 dashboard +=
-                    '<div class="col-12"><div class="sf-form-container step-5-card" data-id="step-5-contact-form">' +
-                    '<div class="title"><span class="step-5-nombre-cliente"></span>,<br />contacta con uno de nuestros Distribuidores para recibir m&aacute;s informaci&oacute;n:' +
+                    '<div class="col-12 mt-5"><div class="sf-form-container step-5-card mt-5" data-id="step-5-contact-form">' +
+                    '<div class="cotizaciones-p">Contacta con uno de nuestros Distribuidores para recibir m&aacute;s informaci&oacute;n:' +
                     '</div><div class="d-grid"><div class="float-container"><label class="float-label" for="step-5-distribuidores">Distribuidor</label>' +
                     '<select class="form-input effect-2 bg-transparent" id="step-5-distribuidores" name="distribuidores"><option value="0" disabled selected>Distribuidor</option></select>' +
                     '<span class="focus-border"></span></div><div class="float-container"><label class="float-label" for="step-5-phone">Tel&eacute;fono</label>' +
                     '<input type="text" id="step-5-phone" name="phone" maxlength="10" onkeypress="maxLengthCheck(event)" class="form-input effect-2 bg-transparent" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 188 && event.keyCode !== 110 && event.keyCode !== 190)" />' +
-                    '<span class="focus-border"></span></div></div><div class="mt-5"><button id="step-5-contact" type="button" class="btn-red btn-long col-12 col-lg-7">SER CONTACTADO</button></div></div></div></div>';
+                    '<span class="focus-border"></span></div></div><div class="mt-5"><button id="step-5-contact" type="button" class="btn-red btn-long col-12">SER CONTACTADO</button></div></div></div></div>';
 
                 $("#dashboard").append(dashboard);
 
