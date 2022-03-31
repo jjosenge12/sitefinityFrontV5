@@ -62,31 +62,9 @@ $(document).ready(() => {
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
                 dashboard +=
-                    `<div class="sf-form-container" data-id="plan-form">
+                    `<div class="sf-form-container" data-id="plan-form col-12">                     
                         <div class="row">
-                            <div class="col-12 col-md-6">
-                                <div class="float-container">
-                                    <label class="float-label" for="name">Nombre</label>
-                                    <input class="form-input effect-2" type="text" id="name" name="name" required="" /><span class="focus-border"></span>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div class="float-container">
-                                    <label class="float-label" for="lastname">Apellido</label>
-                                    <input class="form-input effect-2" type="text" id="lastname" name="lastname" required="" /><span class="focus-border"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="float-container">
-                            <label class="float-label" for="email">
-                                Correo
-                                electr&oacute;nico
-                            </label>
-                            <input class="form-input effect-2" type="email" id="email" name="email" required="" />
-                            <span class="focus-border"></span>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12">
                                 <div class="float-container">
                                     <label class="float-label" for="phone">Tel&eacute;fono</label>
                                     <input class="form-input effect-2" type="number" maxlength="10" id="phone" name="phone" required="" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 188 && event.keyCode !== 110 && event.keyCode !== 190 )" /><span class="focus-border"></span>
@@ -638,67 +616,6 @@ $(document).ready(() => {
     });
 
     //Para form de persona moral
-
-    const FloatLabel = (() => {
-        // add active class
-        const handleFocus = (e) => {
-            const target = e.target;
-            target.parentNode.classList.add("active");
-            target.parentNode.classList.add("focus");
-
-            var placeholder = target.getAttribute("data-placeholder");
-            if (placeholder) {
-                target.setAttribute("placeholder", placeholder);
-            }
-        };
-
-        // remove active class
-        const handleBlur = (e) => {
-            const target = e.target;
-            if (!target.value) {
-                target.parentNode.classList.remove("active");
-            }
-            target.parentNode.classList.remove("focus");
-            target.removeAttribute("placeholder");
-        };
-
-        // register events
-        const bindEvents = (floatField) => {
-            // const floatField = element.querySelector("input");
-            floatField.addEventListener("focus", handleFocus);
-            floatField.addEventListener("blur", handleBlur);
-        };
-
-        // get DOM elements
-        const init = () => {
-            const floatContainers = document.querySelectorAll(".float-container");
-
-            floatContainers.forEach((element) => {
-                let input = element.querySelector("input");
-                let select = element.querySelector("select");
-
-                if (input) {
-                    if (input.value) {
-                        element.classList.add("active");
-                    }
-
-                    bindEvents(input);
-                }
-
-                if (select) {
-                    if (select.value) {
-                        element.classList.add("active");
-                    }
-                    bindEvents(select);
-                }
-            });
-        };
-
-        return {
-            init: init,
-        };
-    })();
-
     FloatLabel.init();
 
     jQuery.extend(jQuery.validator.messages, {
@@ -720,7 +637,6 @@ $(document).ready(() => {
 
     function initSelects() {
         getDealers();
-        //getCars();
     }
 
     function getDealers() {
@@ -761,17 +677,9 @@ $(document).ready(() => {
         $("#distributor").on("select2:open", function () {
             $("#distributor").siblings("[class='focus-border']").addClass("active");
         });
-        $("#vehicle").on("select2:open", function () {
-            $("#vehicle").siblings("[class='focus-border']").addClass("active");
-        });
 
         $("#distributor").on("select2:close", function () {
             $("#distributor")
-                .siblings("[class='focus-border active']")
-                .removeClass("active");
-        });
-        $("#vehicle").on("select2:close", function () {
-            $("#vehicle")
                 .siblings("[class='focus-border active']")
                 .removeClass("active");
         });
@@ -779,26 +687,9 @@ $(document).ready(() => {
         $("#distributor").on("select2:select", function () {
             $("#distributor").valid();
         });
-        $("#vehicle").on("select2:select", function (e) {
-            $("#vehicle").valid();
-        });
 
         plan_validator = $("#plan-form").validate({
             rules: {
-                name: {
-                    required: true,
-                    isValidName: true,
-                    minlength: 2
-                },
-                lastname: {
-                    required: true,
-                    isValidName: true,
-                    minlength: 2
-                },
-                email: {
-                    required: true,
-                    isEmail: true,
-                },
                 phone: {
                     required: true,
                     minlength: 10,
@@ -823,67 +714,130 @@ $(document).ready(() => {
     $("#submit-plan").click(function () {
         $("#plan-form").submit();
     });
+            
+});
 
+const FloatLabel = (() => {
+    // add active class
+    const handleFocus = (e) => {
+        const target = e.target;
+        target.parentNode.classList.add("active");
+        target.parentNode.classList.add("focus");
+
+        var placeholder = target.getAttribute("data-placeholder");
+        if (placeholder) {
+            target.setAttribute("placeholder", placeholder);
+        }
+    };
+
+    // remove active class
+    const handleBlur = (e) => {
+        const target = e.target;
+        if (!target.value) {
+            target.parentNode.classList.remove("active");
+        }
+        target.parentNode.classList.remove("focus");
+        target.removeAttribute("placeholder");
+    };
+
+    // register events
+    const bindEvents = (floatField) => {
+        // const floatField = element.querySelector("input");
+        floatField.addEventListener("focus", handleFocus);
+        floatField.addEventListener("blur", handleBlur);
+    };
+
+    // get DOM elements
+    const init = () => {
+        const floatContainers = document.querySelectorAll(".float-container");
+
+        floatContainers.forEach((element) => {
+            let input = element.querySelector("input");
+            let select = element.querySelector("select");
+
+            if (input) {
+                if (input.value) {
+                    element.classList.add("active");
+                }
+
+                bindEvents(input);
+            }
+
+            if (select) {
+                if (select.value) {
+                    element.classList.add("active");
+                }
+                bindEvents(select);
+            }
+        });
+    };
+
+    return {
+        init: init,
+    };
+})();
 
 function planSubmitClick() {
     $("#plan-form").submit();
 }
-   
 
-    function commitSalesforcePlan() {
-        var data = {
-            Plan: "",
-            Movil: $("#step-5-phone").val(),
-            Nombre: nombre,
-            Apellido: apellido,
-            AceptoTerminosYCondiciones: "SiAcepto",
-            Aseguradora: $("#select2-step-5-distribuidores-container option:selected").html(),
-            CodigoDistribuidor: $("#select2-step-5-distribuidores-container").select2("data")[0].dealerCode,
-        };
 
-        $.ajax({
-            type: "POST",
-            url: window.config.urlbase + "/SalesForceCommitPlan",
-            data: data,
-            dataType: "json",
-            success: function (result) {
-                console.log(result);
+function commitSalesforcePlan() {
+    var data = {
+        Plan: $("#planType").val(),
+        Movil: $("#phone").val(),
+        Email: $("#email").val(),
+        Nombre: $("#name").val(),
+        Apellido: $("#lastname").val(),
+        AceptoTerminosYCondiciones: "SiAcepto",
+        Marca: $("#vehicle option:selected").html(),
+        Ballon: "text_ballon",
+        Aseguradora: $("#distributor option:selected").html(),
+        CodigoDistribuidor: $("#distributor").select2("data")[0].dealerCode,
+        recaptchaToken
+    };
 
-                $("#phone").val("");
-                $("#email").val("");
-                $("#name").val("");
-                $("#lastname").val("");
-                $("#distributor").val("0");
-                $("#distributor").trigger("change");
-                $("#vehicle").val("0");
-                $("#vehicle").trigger("change");
-                $("#plansTermsCheckbox").prop("checked", false);
+    $.ajax({
+        type: "POST",
+        url: window.config.urlbase + "/SalesForceCommitPlan",
+        data: data,
+        dataType: "json",
+        success: function (result) {
+            console.log(result);
 
-                Toastnotify.create({
-                    text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
-                    duration: 10000,
+            $("#phone").val("");
+            $("#email").val("");
+            $("#name").val("");
+            $("#lastname").val("");
+            $("#distributor").val("0");
+            $("#distributor").trigger("change");
+            $("#vehicle").val("0");
+            $("#vehicle").trigger("change");
+            $("#plansTermsCheckbox").prop("checked", false);
+
+            Toastnotify.create({
+                text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
+                duration: 10000,
+            });
+
+            $.ajax(window.location.origin + "/plan-submitted");
+        },
+        error: function (err) {
+            console.log(err);
+            Swal.fire({
+                title: "Error",
+                text: "Error al enviar información a Salesforce",
+                icon: "error",
+                confirmButtonColor: "#cc0000",
+                timer: 5000,
+            });
+        },
+        complete: function () {
+            grecaptcha.execute(window.config.reCaptchaSiteKey, { action: 'validate_captcha' })
+                .then(function (token) {
+                    // add token value to form
+                    recaptchaToken = token;
                 });
-
-                $.ajax(window.location.origin + "/plan-submitted");
-            },
-            error: function (err) {
-                console.log(err);
-                Swal.fire({
-                    title: "Error",
-                    text: "Error al enviar información a Salesforce",
-                    icon: "error",
-                    confirmButtonColor: "#cc0000",
-                    timer: 5000,
-                });
-            },
-            complete: function () {
-                grecaptcha.execute(window.config.reCaptchaSiteKey, { action: 'validate_captcha' })
-                    .then(function (token) {
-                        // add token value to form
-                        recaptchaToken = token;
-                    });
-            }
-        });
-    }
-
-});
+        }
+    });
+}
