@@ -435,8 +435,8 @@ $(document).ready(() => {
             type: 'POST',
             url: window.config.urlbase + '/PostCotizacion',
             data: form,
-            beforeSend: showLoader,
-            complete: hideLoader,
+            //beforeSend: showLoader,
+            //complete: hideLoader,
             dataType: "json",
             success: function (result) {
                 if (parseInt(result.data.Status) == 400) {
@@ -485,44 +485,65 @@ $(document).ready(() => {
         });
     }
 
-        function downloadPdf() {
-        
-        let data = {
-            DatosCotizar: cotizaciones2,
-            Plazo: form.Plazo,
-            ImagenAuto: window.config.origin + '/' + imagenAuto,
-            //ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
-            PrecioAuto: form.precioAuto,
-            FechaCotizacion: fechaCotizacion,
-        };
-
-        $.ajax(window.config.urlbase + "/DownloadPlanPdf", {
-            method: 'POST',
-            beforeSend: showLoader,
-            complete: hideLoader,
-            data: data,
-            success: function (res) {
-                console.log(res);
-
-                var _data = base64ToArrayBuffer(res.result);
-                var blob = new Blob([_data], { type: "application/pdf" });
-                var link = document.createElement('a');
-                link.href = window.URL.createObjectURL(blob);
-                var fileName = "Cotizacion_Toyota";
-                link.download = fileName;
-                link.click();
-
-            },
-            error: function (err) {
-                console.log(err);
-                Swal.fire({
-                    title: "Error",
-                    text: "Ocurrió un error generar el pdf",
-                    icon: "error",
-                    confirmButtonColor: "#cc0000",
-                    timer: 5000
-                });
+    //Se agrega esta funcion para la conversion a base64
+    function toDataURL(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            var reader = new FileReader();
+            reader.onloadend = function () {
+                callback(reader.result);
             }
+            reader.readAsDataURL(xhr.response);
+        };
+        xhr.open('GET', url);
+        xhr.responseType = 'blob';
+        xhr.send();
+    }
+
+    function downloadPdf() {
+
+        // Se utiliza la variable imageInBase64 (el string de la imagen en base64)
+        toDataURL(window.config.origin + '/' + imagenAuto, function (imageInBase64) {
+
+            let data = {
+                DatosCotizar: cotizaciones2,
+                Plazo: form.Plazo,
+                //ImagenAuto: window.config.origin + '/' + imagenAuto,
+                ImagenAuto: imageInBase64,
+                //ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
+                PrecioAuto: form.precioAuto,
+                FechaCotizacion: fechaCotizacion,
+            };
+
+            $.ajax(window.config.urlbase + "/DownloadPlanPdf", {
+                method: 'POST',
+                beforeSend: showLoader,
+                complete: hideLoader,
+                data: data,
+                success: function (res) {
+                    console.log(res);
+
+                    var _data = base64ToArrayBuffer(res.result);
+                    var blob = new Blob([_data], { type: "application/pdf" });
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    var fileName = "Cotizacion_Toyota";
+                    link.download = fileName;
+                    link.click();
+
+                },
+                error: function (err) {
+                    console.log(err);
+                    Swal.fire({
+                        title: "Error",
+                        text: "Ocurrió un error generar el pdf",
+                        icon: "error",
+                        confirmButtonColor: "#cc0000",
+                        timer: 5000
+                    });
+                }
+            });
+
         });
     }
 
