@@ -657,7 +657,7 @@ $("#select-state").change(() => {
         $("#hitch-max").val(form.MaxEnganche);
         $("#hitch-min").val(form.precioAuto * .1);
         back = 1;
-
+        getToken();
     });
 
     $("#downloadPdf").click(function () {
