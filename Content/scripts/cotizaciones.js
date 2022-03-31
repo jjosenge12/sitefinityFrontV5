@@ -62,8 +62,8 @@ $(document).ready(() => {
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
                 dashboard +=
-                    `<div class="sf-form-container col-12" data-id="plan-form">
-                        <div class="row">
+                    `<div class="sf-form-container col-12 mt-5" data-id="plan-form">
+                        <div class="row mt-5">
                             <div class="col-12">
                                 <div class="float-container">
                                     <label class="float-label" for="phone">Tel&eacute;fono</label>
