@@ -1,6 +1,6 @@
 ﻿
 
-var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen,enganche_width,back,plan,token,idcoti;
+var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen, enganche_width, back, plan, token, idcoti, isLogged = sessionStorage.getItem("isLogged");
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -284,7 +284,8 @@ $(document).ready(function () {
         $("#hitch-text").val(form.EngancheDeposito.toFixed(2));
         $("#hitch-max").val(form.MaxEnganche);
         $("#hitch-min").val(form.precioAuto * .1);
-
+        if (isLogged === "true")
+            $("#select-personalidad-fiscal .select-button")[2].classList.add("d-none");
         formNextStep(2);
     });
 
@@ -306,8 +307,9 @@ $("#select-state").change(() => {
                 console.log(planes);
                 formNextStep(5);
             }
-            else
+            else {
                 formNextStep(4);
+            }
         }
     });
 
@@ -327,8 +329,9 @@ $("#select-state").change(() => {
                 console.log(planes);
                 formNextStep(5);
             }
-            else
+            else {
                 formNextStep(4);
+            }
         }
     });
     var fisica,fisicaEmp;
