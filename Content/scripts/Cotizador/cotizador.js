@@ -1353,36 +1353,36 @@ function commitSalesforce2() {
         LeadSource: "Cotizador Web paso 4",
         Company: "Example",
         }; 
-    
+
     let datajson = JSON.stringify(data);
-    getToken().then(function () {
-        $.ajax({
-            type: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer " + token,
-            },
-            url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
-            data: datajson,
-            success: function (result) {
-                window.scrollTo(0, 0);
-                swiper.slideNext();
-                console.log(result);
-                idcoti = result.id;
-            },
-            error: function (err) {
-                console.log('ERROR OBTENER DATOS DE SERVICIO');
-                console.log(data);
-                console.log(err);
-                Swal.fire({
-                    title: "Error",
-                    text: "Error al enviar información a Salesforce",
-                    icon: "error",
-                    confirmButtonColor: "#cc0000",
-                    timer: 5000
-                });
-            }
-        });
+    getToken();
+
+    $.ajax({
+        type: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token,
+        },
+        url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
+        data: datajson,
+        success: function (result) {
+            window.scrollTo(0, 0);
+            swiper.slideNext();
+            console.log(result);
+            idcoti = result.id;
+        },
+        error: function (err) {
+            console.log('ERROR OBTENER DATOS DE SERVICIO');
+            console.log(data);
+            console.log(err);
+            Swal.fire({
+                title: "Error",
+                text: "Error al enviar información a Salesforce",
+                icon: "error",
+                confirmButtonColor: "#cc0000",
+                timer: 5000
+            });
+        }
     });
 }
 
@@ -1417,7 +1417,9 @@ function updateSalesforce2() {
     let datajson = JSON.stringify(data);
     console.log("Update");
     back = 0;
-    getToken().then(function () {
+    getToken();
+
+
     $.ajax({
         type: 'PATCH',
         headers: {
@@ -1442,6 +1444,5 @@ function updateSalesforce2() {
                 timer: 5000
             });
         }
-    });
     });
 }
