@@ -1377,35 +1377,37 @@ function commitSalesforce2() {
         }; 
 
     let datajson = JSON.stringify(data);
-    getToken();
 
-    $.ajax({
-        type: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + token,
-        },
-        url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
-        data: datajson,
-        success: function (result) {
-            window.scrollTo(0, 0);
-            swiper.slideNext();
-            console.log(result);
-            idcoti = result.id;
-        },
-        error: function (err) {
-            console.log('ERROR OBTENER DATOS DE SERVICIO');
-            console.log(data);
-            console.log(err);
-            Swal.fire({
-                title: "Error",
-                text: "Error al enviar información a Salesforce",
-                icon: "error",
-                confirmButtonColor: "#cc0000",
-                timer: 5000
+    $.when(getToken())
+        .then(() => {
+            $.ajax({
+                type: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + token,
+                },
+                url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
+                data: datajson,
+                success: function (result) {
+                    window.scrollTo(0, 0);
+                    swiper.slideNext();
+                    console.log(result);
+                    idcoti = result.id;
+                },
+                error: function (err) {
+                    console.log('ERROR OBTENER DATOS DE SERVICIO');
+                    console.log(data);
+                    console.log(err);
+                    Swal.fire({
+                        title: "Error",
+                        text: "Error al enviar información a Salesforce",
+                        icon: "error",
+                        confirmButtonColor: "#cc0000",
+                        timer: 5000
+                    });
+                }
             });
-        }
-    });
+        });
 }
 
 function updateSalesforce2() {
@@ -1439,32 +1441,33 @@ function updateSalesforce2() {
     let datajson = JSON.stringify(data);
     console.log("Update");
     back = 0;
-            getToken();
-
-
-    $.ajax({
-        type: 'PATCH',
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + token,
-        },
-        url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/"+idcoti,
-        data: datajson,
-        success: function (result) {
-            window.scrollTo(0, 0);
-            swiper.slideNext();
-            console.log(result);
-        },
-        error: function (err) {
-            console.log('ERROR OBTENER DATOS DE SERVICIO');
-            console.log(err);
-            Swal.fire({
-                title: "Error",
-                text: "Error al enviar información a Salesforce",
-                icon: "error",
-                confirmButtonColor: "#cc0000",
-                timer: 5000
+    $.when(getToken())
+        .then(() => {
+            $.ajax({
+                type: 'PATCH',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + token,
+                },
+                url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/" + idcoti,
+                data: datajson,
+                success: function (result) {
+                    window.scrollTo(0, 0);
+                    swiper.slideNext();
+                    console.log(result);
+                },
+                error: function (err) {
+                    console.log('ERROR OBTENER DATOS DE SERVICIO');
+                    console.log(err);
+                    Swal.fire({
+                        title: "Error",
+                        text: "Error al enviar información a Salesforce",
+                        icon: "error",
+                        confirmButtonColor: "#cc0000",
+                        timer: 5000
+                    });
+                }
             });
-        }
-    });
+        });
+  
 }

@@ -597,6 +597,8 @@ $(document).ready(() => {
         }
     });
 
+    //Para form de persona moral
+
     $("#step-5-contact-form").validate({
         rules: {
             distribuidores: {
@@ -631,7 +633,7 @@ $(document).ready(() => {
     });
 
     $("#step-5-contact").click(() => {
-        sendDataSalesforce();
+        commitSalesforcePlan();
     });
 
     getDealersByState("step-5-distribuidores");
@@ -640,7 +642,62 @@ $(document).ready(() => {
         var ch = String.fromCharCode(object.which);
         if (!(/[0-9]/.test(ch)))
             object.preventDefault();
+    }
 
+    function commitSalesforcePlan() {
+        var data = {
+            Plan: "",
+            Movil: $("#step-5-phone").val(),
+            Nombre: nombre,
+            Apellido: apellido,
+            AceptoTerminosYCondiciones: "SiAcepto",
+            Aseguradora: $("#select2-step-5-distribuidores-container option:selected").html(),
+            CodigoDistribuidor: $("#select2-step-5-distribuidores-container").select2("data")[0].dealerCode,
+        };
+
+        $.ajax({
+            type: "POST",
+            url: window.config.urlbase + "/SalesForceCommitPlan",
+            data: data,
+            dataType: "json",
+            success: function (result) {
+                console.log(result);
+
+                $("#phone").val("");
+                $("#email").val("");
+                $("#name").val("");
+                $("#lastname").val("");
+                $("#distributor").val("0");
+                $("#distributor").trigger("change");
+                $("#vehicle").val("0");
+                $("#vehicle").trigger("change");
+                $("#plansTermsCheckbox").prop("checked", false);
+
+                Toastnotify.create({
+                    text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
+                    duration: 10000,
+                });
+
+                $.ajax(window.location.origin + "/plan-submitted");
+            },
+            error: function (err) {
+                console.log(err);
+                Swal.fire({
+                    title: "Error",
+                    text: "Error al enviar información a Salesforce",
+                    icon: "error",
+                    confirmButtonColor: "#cc0000",
+                    timer: 5000,
+                });
+            },
+            complete: function () {
+                grecaptcha.execute(window.config.reCaptchaSiteKey, { action: 'validate_captcha' })
+                    .then(function (token) {
+                        // add token value to form
+                        recaptchaToken = token;
+                    });
+            }
+        });
     }
 
 });
