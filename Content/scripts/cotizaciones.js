@@ -62,7 +62,7 @@ $(document).ready(() => {
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
                 dashboard +=
-                    `<div class="sf-form-container" data-id="plan-form col-12">                     
+                    `<div class="sf-form-container col-12" data-id="plan-form">
                         <div class="row">
                             <div class="col-12">
                                 <div class="float-container">
@@ -620,7 +620,6 @@ $(document).ready(() => {
 
     jQuery.extend(jQuery.validator.messages, {
         required: "Este campo es obligatorio.",
-        email: "Ingrese un valor de email válido.",
         number: "Ingrese un número válido.",
         maxlength: jQuery.validator.format("Máximo {0} caracteres."),
         minlength: jQuery.validator.format("Mínimo {0} caracteres."),
