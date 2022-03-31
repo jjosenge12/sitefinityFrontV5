@@ -1319,6 +1319,7 @@ function getToken(){
         success: function (result) {
             token = result.result;
             console.log(result);
+            return result;
         },
         error: function (err) {
             console.log(err);
@@ -1326,7 +1327,7 @@ function getToken(){
     });
 }
 
-function commitSalesforce2() {
+async function commitSalesforce2() {
     let mensualidad = formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad);
     let mensu = mensualidad.substr(1, mensualidad.length);
     mensu = mensu.replace(',', '');
@@ -1355,13 +1356,13 @@ function commitSalesforce2() {
         }; 
 
     let datajson = JSON.stringify(data);
-    getToken();
+    let token1 = await getToken();
 
     $.ajax({
         type: 'POST',
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer " + token,
+            "Authorization": "Bearer " + token1,
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
         data: datajson,
@@ -1386,7 +1387,7 @@ function commitSalesforce2() {
     });
 }
 
-function updateSalesforce2() {
+async function updateSalesforce2() {
     let mensualidad = formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad);
     let mensu = mensualidad.substr(1, mensualidad.length);
     mensu = mensu.replace(',', '');
@@ -1417,14 +1418,14 @@ function updateSalesforce2() {
     let datajson = JSON.stringify(data);
     console.log("Update");
     back = 0;
-    getToken();
+    let token1 = await getToken();
 
 
     $.ajax({
         type: 'PATCH',
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer " + token,
+            "Authorization": "Bearer " + token1,
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/"+idcoti,
         data: datajson,
