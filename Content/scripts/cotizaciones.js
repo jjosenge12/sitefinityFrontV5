@@ -62,13 +62,53 @@ $(document).ready(() => {
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
                 dashboard +=
-                    '<div class="col-12 mt-5"><div class="sf-form-container step-5-card mt-5" data-id="step-5-contact-form">' +
-                    '<div class="cotizaciones-p">Contacta con uno de nuestros Distribuidores para recibir m&aacute;s informaci&oacute;n:' +
-                    '</div><div class="d-grid"><div class="float-container"><label class="float-label" for="step-5-distribuidores">Distribuidor</label>' +
-                    '<select class="form-input effect-2 bg-transparent" id="step-5-distribuidores" name="distribuidores"><option value="0" disabled selected>Distribuidor</option></select>' +
-                    '<span class="focus-border"></span></div><div class="float-container"><label class="float-label" for="step-5-phone">Tel&eacute;fono</label>' +
-                    '<input type="text" id="step-5-phone" name="phone" maxlength="10" class="form-input effect-2 bg-transparent" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 188 && event.keyCode !== 110 && event.keyCode !== 190)" />' +
-                    '<span class="focus-border"></span></div></div><div class="mt-5"><button id="step-5-contact" type="button" class="btn-red btn-long col-12">SER CONTACTADO</button></div></div></div></div>';
+                    `<div class="sf-form-container" data-id="plan-form">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="float-container">
+                                    <label class="float-label" for="name">Nombre</label>
+                                    <input class="form-input effect-2" type="text" id="name" name="name" required="" /><span class="focus-border"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="float-container">
+                                    <label class="float-label" for="lastname">Apellido</label>
+                                    <input class="form-input effect-2" type="text" id="lastname" name="lastname" required="" /><span class="focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float-container">
+                            <label class="float-label" for="email">
+                                Correo
+                                electr&oacute;nico
+                            </label>
+                            <input class="form-input effect-2" type="email" id="email" name="email" required="" />
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="float-container">
+                                    <label class="float-label" for="phone">Tel&eacute;fono</label>
+                                    <input class="form-input effect-2" type="number" maxlength="10" id="phone" name="phone" required="" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 188 && event.keyCode !== 110 && event.keyCode !== 190 )" /><span class="focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float-container select-container">
+                            <label class="float-label active" for="distributor">Distribuidor</label>
+                            <select class="form-input effect-2" id="distributor" name="distributor">
+                                <option selected="selected" disabled="disabled" value="0">Distribuidor</option>
+                            </select>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="d-flex justify-content-center my-5">
+                            <button class="btn btn-primary custom-button text-small g-recaptcha"
+                                data-sitekey="@System.Configuration.ConfigurationManager.AppSettings[" reCaptchaSiteKey"].ToString()"
+                            data-callback='planSubmitClick'
+                        data-action='submit'>
+                            CONTACTAR
+                </button>
+                    </div>
+                    </div >`;
 
                 $("#dashboard").append(dashboard);
 
@@ -599,45 +639,196 @@ $(document).ready(() => {
 
     //Para form de persona moral
 
-    $("#step-5-contact-form").validate({
-        rules: {
-            distribuidores: {
-                selectRequired: true
-            },
-            phone: {
-                required: true
+    const FloatLabel = (() => {
+        // add active class
+        const handleFocus = (e) => {
+            const target = e.target;
+            target.parentNode.classList.add("active");
+            target.parentNode.classList.add("focus");
+
+            var placeholder = target.getAttribute("data-placeholder");
+            if (placeholder) {
+                target.setAttribute("placeholder", placeholder);
             }
-        }
+        };
+
+        // remove active class
+        const handleBlur = (e) => {
+            const target = e.target;
+            if (!target.value) {
+                target.parentNode.classList.remove("active");
+            }
+            target.parentNode.classList.remove("focus");
+            target.removeAttribute("placeholder");
+        };
+
+        // register events
+        const bindEvents = (floatField) => {
+            // const floatField = element.querySelector("input");
+            floatField.addEventListener("focus", handleFocus);
+            floatField.addEventListener("blur", handleBlur);
+        };
+
+        // get DOM elements
+        const init = () => {
+            const floatContainers = document.querySelectorAll(".float-container");
+
+            floatContainers.forEach((element) => {
+                let input = element.querySelector("input");
+                let select = element.querySelector("select");
+
+                if (input) {
+                    if (input.value) {
+                        element.classList.add("active");
+                    }
+
+                    bindEvents(input);
+                }
+
+                if (select) {
+                    if (select.value) {
+                        element.classList.add("active");
+                    }
+                    bindEvents(select);
+                }
+            });
+        };
+
+        return {
+            init: init,
+        };
+    })();
+
+    FloatLabel.init();
+
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Este campo es obligatorio.",
+        email: "Ingrese un valor de email válido.",
+        number: "Ingrese un número válido.",
+        maxlength: jQuery.validator.format("Máximo {0} caracteres."),
+        minlength: jQuery.validator.format("Mínimo {0} caracteres."),
     });
 
-    $("#step-5-distribuidores").on("select2:open", function () {
-        $("#step-5-distribuidores").siblings("[class='focus-border']").addClass("active");
+    $.validator.addMethod(
+        "valueNotEquals",
+        function (value, element, arg) {
+            console.log("value not equals: " + String(arg) + "  -  " + String(value));
+            return String(arg) !== String(value);
+        },
+        "Value must not equal arg."
+    );
+
+    function initSelects() {
+        getDealers();
+        //getCars();
+    }
+
+    function getDealers() {
+        let _dealers = [];
+        $.ajax({
+            type: "get",
+            url: window.config.urlbase + "/getdealersbystate",
+            datatype: "json",
+            success: function (data) {
+                data.results.forEach((s) => {
+                    var state = {
+                        text: s.Descripcion,
+                        children: [],
+                    };
+
+                    s.Distribuidores.forEach((d) => {
+                        state.children.push({
+                            id: d.IdDealer,
+                            text: capitalize2(d.Dealer),
+                            dealerCode: d.Code,
+                        });
+                    });
+
+                    _dealers.push(state);
+                });
+
+                $("#distributor").select2({
+                    dropdownParent: $("#distributor").parent(),
+                    data: _dealers,
+                });
+            },
+        });
+    }
+
+    $.when(initSelects()).then(() => {
+        FloatLabel.init();
+
+        $("#distributor").on("select2:open", function () {
+            $("#distributor").siblings("[class='focus-border']").addClass("active");
+        });
+        $("#vehicle").on("select2:open", function () {
+            $("#vehicle").siblings("[class='focus-border']").addClass("active");
+        });
+
+        $("#distributor").on("select2:close", function () {
+            $("#distributor")
+                .siblings("[class='focus-border active']")
+                .removeClass("active");
+        });
+        $("#vehicle").on("select2:close", function () {
+            $("#vehicle")
+                .siblings("[class='focus-border active']")
+                .removeClass("active");
+        });
+
+        $("#distributor").on("select2:select", function () {
+            $("#distributor").valid();
+        });
+        $("#vehicle").on("select2:select", function (e) {
+            $("#vehicle").valid();
+        });
+
+        plan_validator = $("#plan-form").validate({
+            rules: {
+                name: {
+                    required: true,
+                    isValidName: true,
+                    minlength: 2
+                },
+                lastname: {
+                    required: true,
+                    isValidName: true,
+                    minlength: 2
+                },
+                email: {
+                    required: true,
+                    isEmail: true,
+                },
+                phone: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 10
+                },
+                distributor: {
+                    selectRequired: true,
+                },
+            },
+        });
+
+        $("#plan-form").submit(function (e) {
+            e.preventDefault();
+            if ($("#plan-form").valid()) {
+                    commitSalesforcePlan();
+            } else {
+                console.log("formulario inválido");
+            }
+        });
     });
 
-    $("#step-5-distribuidores").on("select2:close", function () {
-        $("#step-5-distribuidores")
-            .siblings("[class='focus-border active']")
-            .removeClass("active");
+    $("#submit-plan").click(function () {
+        $("#plan-form").submit();
     });
 
-    $("#step-5-distribuidores").on("select2:select", function () {
-        $("#step-5-distribuidores").valid();
-    });
 
-    $("#step-5-contact-form").submit(function (e) {
-        e.preventDefault();
-    });
-
-    /*$("#step-5-contact").click(function () {
-        $("#step-5-contact-form").valid();
-    });*/
-
-    $("#step-5-contact").click(() => {
-        commitSalesforcePlan();
-    });
-
-    getDealersByState("step-5-distribuidores");
-
+function planSubmitClick() {
+    $("#plan-form").submit();
+}
+   
 
     function commitSalesforcePlan() {
         var data = {
