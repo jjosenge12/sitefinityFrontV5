@@ -660,46 +660,65 @@ $("#select-state").change(() => {
         getToken();
     });
 
+    //Se agrega esta funcion para la conversion a base64
+    function toDataURL(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            var reader = new FileReader();
+            reader.onloadend = function () {
+                callback(reader.result);
+            }
+            reader.readAsDataURL(xhr.response);
+        };
+        xhr.open('GET', url);
+        xhr.responseType = 'blob';
+        xhr.send();
+    }
+
     $("#downloadPdf").click(function () {
 
-        var data = {
-            DatosCotizar: cotizacion,
-            Plazo: form.Plazo,
-            ImagenAuto: window.config.origin + '/' + form.ImagenAuto,
-            ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
-            PrecioAuto: form.precioAuto,
-        };
+        // Se utiliza la variable imageInBase64 (el string de la imagen en base64)
+        toDataURL(window.config.origin + '/' + form.ImagenAuto, function (imageInBase64) {
 
-        console.log(data.ImagenAuto);
+            var data = {
+                DatosCotizar: cotizacion,
+                Plazo: form.Plazo,
+                //ImagenAuto: window.config.origin + '/' + form.ImagenAuto,
+                ImagenAuto: imageInBase64,
+                ImagenModelo: form.ImagenModelo ? window.config.origin + '/' + form.ImagenModelo : form.ImagenModelo,
+                PrecioAuto: form.precioAuto,
+            };
 
+            //console.log(data.ImagenAuto);
 
-        $.ajax(window.config.urlbase + "/DownloadPlanPdf", {
-            method: 'POST',
-            beforeSend: showLoader,
-            complete: hideLoader,
-            data: data,
-            success: function (res) {
-                console.log(res);
+            $.ajax(window.config.urlbase + "/DownloadPlanPdf", {
+                method: 'POST',
+                beforeSend: showLoader,
+                complete: hideLoader,
+                data: data,
+                success: function (res) {
+                    console.log(res);
 
-                var _data = base64ToArrayBuffer(res.result);
-                var blob = new Blob([_data], { type: "application/pdf" });
-                var link = document.createElement('a');
-                link.href = window.URL.createObjectURL(blob);
-                var fileName = "Cotizacion_Toyota";
-                link.download = fileName;
-                link.click();
+                    var _data = base64ToArrayBuffer(res.result);
+                    var blob = new Blob([_data], { type: "application/pdf" });
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    var fileName = "Cotizacion_Toyota";
+                    link.download = fileName;
+                    link.click();
 
-            },
-            error: function (err) {
-                console.log(err);
-                Swal.fire({
-                    title: "Error",
-                    text: "Ocurrió un error generar el pdf",
-                    icon: "error",
-                    confirmButtonColor: "#cc0000",
-                    timer: 5000
-                });
-            }
+                },
+                error: function (err) {
+                    console.log(err);
+                    Swal.fire({
+                        title: "Error",
+                        text: "Ocurrió un error generar el pdf",
+                        icon: "error",
+                        confirmButtonColor: "#cc0000",
+                        timer: 5000
+                    });
+                }
+            });
         });
     });
 });
