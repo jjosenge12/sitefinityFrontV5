@@ -263,6 +263,7 @@ $(document).ready(function () {
         $("#step-4-finish").hide();
         fisica = 0;
         swiper.updateAutoHeight(0);
+        getToken();
     });
 
     $("#car_version").change(function (e) {
@@ -408,11 +409,13 @@ $("#select-state").change(() => {
             formNextStep(8);
             swiper.updateAutoHeight(0);
             $("#finish").show();
+            getToken();
         }
         else
             formNextStep(9);
             swiper.updateAutoHeight(0);
             $("#step-4-finish").show();
+            getToken();
 
     });
 
@@ -1319,7 +1322,6 @@ function getToken(){
         success: function (result) {
             token = result.result;
             console.log(result);
-            return result;
         },
         error: function (err) {
             console.log(err);
@@ -1327,7 +1329,7 @@ function getToken(){
     });
 }
 
-async function commitSalesforce2() {
+function commitSalesforce2() {
     let mensualidad = formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad);
     let mensu = mensualidad.substr(1, mensualidad.length);
     mensu = mensu.replace(',', '');
@@ -1356,13 +1358,13 @@ async function commitSalesforce2() {
         }; 
 
     let datajson = JSON.stringify(data);
-    let token1 = await getToken();
+    getToken();
 
     $.ajax({
         type: 'POST',
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer " + token1,
+            "Authorization": "Bearer " + token,
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
         data: datajson,
@@ -1387,7 +1389,7 @@ async function commitSalesforce2() {
     });
 }
 
-async function updateSalesforce2() {
+function updateSalesforce2() {
     let mensualidad = formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad);
     let mensu = mensualidad.substr(1, mensualidad.length);
     mensu = mensu.replace(',', '');
@@ -1418,14 +1420,14 @@ async function updateSalesforce2() {
     let datajson = JSON.stringify(data);
     console.log("Update");
     back = 0;
-    let token1 = await getToken();
+            getToken();
 
 
     $.ajax({
         type: 'PATCH',
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer " + token1,
+            "Authorization": "Bearer " + token,
         },
         url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/"+idcoti,
         data: datajson,
