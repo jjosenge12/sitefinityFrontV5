@@ -655,7 +655,7 @@ $(document).ready(() => {
 function commitSalesforcePlan() {
     var data = {
         Plan: $("#planType").val(),
-        Movil: $("#step-5-phone").val(),,
+        Movil: $("#step-5-phone").val(),
         Email: $("#email").val(),
         Nombre: $("#name").val(),
         Apellido: $("#lastname").val(),
