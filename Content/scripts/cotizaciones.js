@@ -61,7 +61,7 @@ $(document).ready(() => {
                     '</div><div class="col-md-1"></div>';
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
-                /*dashboard +=
+                dashboard +=
                     `<div class="col-12 mt-5">
                         <div class="sf-form-container step-5-card mt-5" id="step-5-contact-form">
                             <div class="d-grid">
@@ -82,7 +82,7 @@ $(document).ready(() => {
                                 <button id="step-5-contact" type="button" class="btn-red btn-long col-12">SER CONTACTADO</button>
                             </div>
                         </div>
-                    </div>`;*/
+                    </div>`;
 
                 $("#dashboard").append(dashboard);
 
