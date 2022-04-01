@@ -564,6 +564,8 @@ $("#select-state").change(() => {
                             $("#arrendamiento").show();
                             break;
                     }
+                    if (isLogged === "true")
+                        document.querySelector('[data-id="step-5-contact-form"]').classList.add("d-none");
                    });
         }
         else {
