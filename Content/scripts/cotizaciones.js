@@ -62,31 +62,27 @@ $(document).ready(() => {
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
                 dashboard +=
-                    `<div class="sf-form-container col-12 mt-5" data-id="plan-form">
-                        <div class="row mt-5">
-                            <div class="col-12">
+                    `<div class="col-12 mt-5">
+                        <div class="sf-form-container step-5-card mt-5" id="step-5-contact-form">
+                            <div class="d-grid">
                                 <div class="float-container">
-                                    <label class="float-label" for="phone">Tel&eacute;fono</label>
-                                    <input class="form-input effect-2" type="number" maxlength="10" id="phone" name="phone" required="" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 188 && event.keyCode !== 110 && event.keyCode !== 190 )" /><span class="focus-border"></span>
+                                    <label class="float-label" for="step-5-distribuidores">Distribuidor</label>
+                                    <select class="form-input effect-2 bg-transparent" id="step-5-distribuidores" name="distribuidores">
+                                        <option value="0" disabled selected>Distribuidor</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="float-container">
+                                    <label class="float-label" for="step-5-phone">Tel&eacute;fono</label>
+                                    <input type="text" id="step-5-phone" name="phone" maxlength="10" class="form-input effect-2 bg-transparent" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 188 && event.keyCode !== 110 && event.keyCode !== 190)" />
+                                    <span class="focus-border"></span>
                                 </div>
                             </div>
+                            <div class="mt-5">
+                                <button id="step-5-contact" type="button" class="btn-red btn-long col-12">SER CONTACTADO</button>
+                            </div>
                         </div>
-                        <div class="float-container select-container">
-                            <label class="float-label active" for="distributor">Distribuidor</label>
-                            <select class="form-input effect-2" id="distributor" name="distributor">
-                                <option selected="selected" disabled="disabled" value="0">Distribuidor</option>
-                            </select>
-                            <span class="focus-border"></span>
-                        </div>
-                        <div class="d-flex justify-content-center my-5">
-                            <button class="btn btn-primary custom-button text-small g-recaptcha"
-                                data-sitekey="@System.Configuration.ConfigurationManager.AppSettings[" reCaptchaSiteKey"].ToString()"
-                            data-callback='planSubmitClick'
-                        data-action='submit'>
-                            CONTACTAR
-                </button>
-                    </div>
-                    </div >`;
+                    </div>`;
 
                 $("#dashboard").append(dashboard);
 
@@ -616,175 +612,50 @@ $(document).ready(() => {
     });
 
     //Para form de persona moral
-    FloatLabel.init();
-
-    jQuery.extend(jQuery.validator.messages, {
-        required: "Este campo es obligatorio.",
-        number: "Ingrese un número válido.",
-        maxlength: jQuery.validator.format("Máximo {0} caracteres."),
-        minlength: jQuery.validator.format("Mínimo {0} caracteres."),
-    });
-
-    $.validator.addMethod(
-        "valueNotEquals",
-        function (value, element, arg) {
-            console.log("value not equals: " + String(arg) + "  -  " + String(value));
-            return String(arg) !== String(value);
-        },
-        "Value must not equal arg."
-    );
-
-    function initSelects() {
-        getDealers();
-    }
-
-    function getDealers() {
-        let _dealers = [];
-        $.ajax({
-            type: "get",
-            url: window.config.urlbase + "/getdealersbystate",
-            datatype: "json",
-            success: function (data) {
-                data.results.forEach((s) => {
-                    var state = {
-                        text: s.Descripcion,
-                        children: [],
-                    };
-
-                    s.Distribuidores.forEach((d) => {
-                        state.children.push({
-                            id: d.IdDealer,
-                            text: capitalize2(d.Dealer),
-                            dealerCode: d.Code,
-                        });
-                    });
-
-                    _dealers.push(state);
-                });
-
-                $("#distributor").select2({
-                    dropdownParent: $("#distributor").parent(),
-                    data: _dealers,
-                });
+    $("#step-5-contact-form").validate({
+        rules: {
+            distribuidores: {
+                selectRequired: true
             },
-        });
-    }
-
-    $.when(initSelects()).then(() => {
-        FloatLabel.init();
-
-        $("#distributor").on("select2:open", function () {
-            $("#distributor").siblings("[class='focus-border']").addClass("active");
-        });
-
-        $("#distributor").on("select2:close", function () {
-            $("#distributor")
-                .siblings("[class='focus-border active']")
-                .removeClass("active");
-        });
-
-        $("#distributor").on("select2:select", function () {
-            $("#distributor").valid();
-        });
-
-        plan_validator = $("#plan-form").validate({
-            rules: {
-                phone: {
-                    required: true,
-                    minlength: 10,
-                    maxlength: 10
-                },
-                distributor: {
-                    selectRequired: true,
-                },
-            },
-        });
-
-        $("#plan-form").submit(function (e) {
-            e.preventDefault();
-            if ($("#plan-form").valid()) {
-                    commitSalesforcePlan();
-            } else {
-                console.log("formulario inválido");
+            phone: {
+                required: true
             }
-        });
+        }
     });
 
-    $("#submit-plan").click(function () {
-        $("#plan-form").submit();
+    $("#step-5-distribuidores").on("select2:open", function () {
+        $("#step-5-distribuidores").siblings("[class='focus-border']").addClass("active");
+    });
+
+    $("#step-5-distribuidores").on("select2:close", function () {
+        $("#step-5-distribuidores")
+            .siblings("[class='focus-border active']")
+            .removeClass("active");
+    });
+
+    $("#step-5-distribuidores").on("select2:select", function () {
+        $("#step-5-distribuidores").valid();
+    });
+
+    $("#step-5-contact-form").submit(function (e) {
+        e.preventDefault();
+    });
+
+    $("#step-5-contact").click(function () {
+        $("#step-5-contact-form").valid();
+    });
+
+    $("#step-5-contact").click(() => {
+        commitSalesforcePlan();
     });
             
 });
-
-const FloatLabel = (() => {
-    // add active class
-    const handleFocus = (e) => {
-        const target = e.target;
-        target.parentNode.classList.add("active");
-        target.parentNode.classList.add("focus");
-
-        var placeholder = target.getAttribute("data-placeholder");
-        if (placeholder) {
-            target.setAttribute("placeholder", placeholder);
-        }
-    };
-
-    // remove active class
-    const handleBlur = (e) => {
-        const target = e.target;
-        if (!target.value) {
-            target.parentNode.classList.remove("active");
-        }
-        target.parentNode.classList.remove("focus");
-        target.removeAttribute("placeholder");
-    };
-
-    // register events
-    const bindEvents = (floatField) => {
-        // const floatField = element.querySelector("input");
-        floatField.addEventListener("focus", handleFocus);
-        floatField.addEventListener("blur", handleBlur);
-    };
-
-    // get DOM elements
-    const init = () => {
-        const floatContainers = document.querySelectorAll(".float-container");
-
-        floatContainers.forEach((element) => {
-            let input = element.querySelector("input");
-            let select = element.querySelector("select");
-
-            if (input) {
-                if (input.value) {
-                    element.classList.add("active");
-                }
-
-                bindEvents(input);
-            }
-
-            if (select) {
-                if (select.value) {
-                    element.classList.add("active");
-                }
-                bindEvents(select);
-            }
-        });
-    };
-
-    return {
-        init: init,
-    };
-})();
-
-function planSubmitClick() {
-    $("#plan-form").submit();
-}
 
 
 function commitSalesforcePlan() {
     var data = {
         Plan: $("#planType").val(),
-        Movil: $("#phone").val(),
+        Movil: $("#step-5-phone").val(),,
         Email: $("#email").val(),
         Nombre: $("#name").val(),
         Apellido: $("#lastname").val(),
@@ -792,8 +663,7 @@ function commitSalesforcePlan() {
         Marca: $("#vehicle option:selected").html(),
         Ballon: "text_ballon",
         Aseguradora: $("#distributor option:selected").html(),
-        CodigoDistribuidor: $("#distributor").select2("data")[0].dealerCode,
-        recaptchaToken
+        CodigoDistribuidor: $("#step-5-distribuidores").select2('data')[0].codigo,
     };
 
     $.ajax({
