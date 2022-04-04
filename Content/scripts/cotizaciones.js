@@ -26,67 +26,7 @@ $(document).ready(() => {
         "Access-Control-Allow-Credentials": true,
     };
 
-    const FloatLabel = (() => {
-        // add active class
-        const handleFocus = (e) => {
-            const target = e.target;
-            target.parentNode.classList.add("active");
-            target.parentNode.classList.add("focus");
-
-            var placeholder = target.getAttribute("data-placeholder");
-            if (placeholder) {
-                target.setAttribute("placeholder", placeholder);
-            }
-        };
-
-        // remove active class
-        const handleBlur = (e) => {
-            const target = e.target;
-            if (!target.value) {
-                target.parentNode.classList.remove("active");
-            }
-            target.parentNode.classList.remove("focus");
-            target.removeAttribute("placeholder");
-        };
-
-        // register events
-        const bindEvents = (floatField) => {
-            // const floatField = element.querySelector("input");
-            floatField.addEventListener("focus", handleFocus);
-            floatField.addEventListener("blur", handleBlur);
-        };
-
-        // get DOM elements
-        const init = () => {
-            const floatContainers = document.querySelectorAll(".float-container");
-
-            floatContainers.forEach((element) => {
-                let input = element.querySelector("input");
-                let select = element.querySelector("select");
-
-                if (input) {
-                    bindEvents(input);
-
-                    if (input.value) {
-                        element.classList.add("active");
-                    }
-                }
-
-                if (select) {
-                    if (select.value) {
-                        element.classList.add("active");
-                    }
-                    bindEvents(select);
-                }
-            });
-        };
-
-        return {
-            init: init,
-        };
-    })();
-
-    FloatLabel.init();
+    
        
     const settings = {
         method: "POST",
@@ -124,7 +64,7 @@ $(document).ready(() => {
                 var dashboard = "";
                 dashboard +=
                     `<div class="col-12 mt-5">
-                        <div class="sf-form-container step-5-card mt-5" id="step-5-contact-form">
+                        <div class="sf-form-container step-5-card mt-5" data-id="step-5-contact-form">
                             <div class="d-grid">
                                 <div class="float-container">
                                     <label class="float-label" for="step-5-distribuidores">Distribuidor</label>
@@ -673,57 +613,119 @@ $(document).ready(() => {
     });
 
     //Para form de persona moral
-
+        
     
-
-    $("#step-5-contact-form").validate({
-        rules: {
-            distribuidores: {
-                selectRequired: true
-            },
-            phone: {
-                required: true
-            }
-        }
-    });
-
-    $("#step-5-distribuidores").on("select2:open", function () {
-        $("#step-5-distribuidores").siblings("[class='focus-border']").addClass("active");
-    });
-
-    $("#step-5-distribuidores").on("select2:close", function () {
-        $("#step-5-distribuidores")
-            .siblings("[class='focus-border active']")
-            .removeClass("active");
-    });
-
-    $("#step-5-distribuidores").on("select2:select", function () {
-        $("#step-5-distribuidores").valid();
-    });
-
-    $("#step-5-contact-form").submit(function (e) {
-        e.preventDefault();
-    });
-
-    $("#step-5-contact").click(function () {
-        $("#step-5-contact-form").valid();
-    });
-
-    $("#step-5-contact").click(() => {
-        commitSalesforcePlan();
-    });
-
-    $("#step-5-contact-form").submit(function (e) {
-        e.preventDefault();
-        if ($("#step-5-contact-form").valid()) {
-                commitSalesforcePlan();
-        }else {
-            console.log("formulario inválido");
-        }
-    });
-
-            
+               
+               
 });
+
+$("#step-5-contact-form").validate({
+    rules: {
+        distribuidores: {
+            selectRequired: true
+        },
+        phone: {
+            required: true
+        }
+    }
+});
+
+$("#step-5-distribuidores").on("select2:open", function () {
+    $("#step-5-distribuidores").siblings("[class='focus-border']").addClass("active");
+});
+
+$("#step-5-distribuidores").on("select2:close", function () {
+    $("#step-5-distribuidores")
+        .siblings("[class='focus-border active']")
+        .removeClass("active");
+});
+
+$("#step-5-distribuidores").on("select2:select", function () {
+    $("#step-5-distribuidores").valid();
+});
+
+$("#step-5-contact-form").submit(function (e) {
+    e.preventDefault();
+});
+
+$("#step-5-contact").click(function () {
+    $("#step-5-contact-form").valid();
+});
+
+$("#step-5-contact").click(() => {
+    commitSalesforcePlan();
+});
+
+$("#step-5-contact-form").submit(function (e) {
+    e.preventDefault();
+    if ($("#step-5-contact-form").valid()) {
+        commitSalesforcePlan();
+    } else {
+        console.log("formulario inválido");
+    }
+});
+
+const FloatLabel = (() => {
+    // add active class
+    const handleFocus = (e) => {
+        const target = e.target;
+        target.parentNode.classList.add("active");
+        target.parentNode.classList.add("focus");
+
+        var placeholder = target.getAttribute("data-placeholder");
+        if (placeholder) {
+            target.setAttribute("placeholder", placeholder);
+        }
+    };
+
+    // remove active class
+    const handleBlur = (e) => {
+        const target = e.target;
+        if (!target.value) {
+            target.parentNode.classList.remove("active");
+        }
+        target.parentNode.classList.remove("focus");
+        target.removeAttribute("placeholder");
+    };
+
+    // register events
+    const bindEvents = (floatField) => {
+        // const floatField = element.querySelector("input");
+        floatField.addEventListener("focus", handleFocus);
+        floatField.addEventListener("blur", handleBlur);
+    };
+
+    // get DOM elements
+    const init = () => {
+        const floatContainers = document.querySelectorAll(".float-container");
+
+        floatContainers.forEach((element) => {
+            let input = element.querySelector("input");
+            let select = element.querySelector("select");
+
+            if (input) {
+                bindEvents(input);
+
+                if (input.value) {
+                    element.classList.add("active");
+                }
+            }
+
+            if (select) {
+                if (select.value) {
+                    element.classList.add("active");
+                }
+                bindEvents(select);
+            }
+        });
+    };
+
+    return {
+        init: init,
+    };
+})();
+
+FloatLabel.init();
 
 function planSubmitClick() {
     $("#step-5-contact-form").submit();
