@@ -79,13 +79,12 @@ $(document).ready(() => {
                                 </div>
                             </div>
                             <div class="mt-5">
-                                <button id="step-5-contact" type="button" class="btn-red btn-long col-12">SER CONTACTADO</button>
+                                <button id="step-5-contact" type="button" class="btn-red btn-long col-12" data-callback='planSubmitClick' data-action='submit'>SER CONTACTADO</button>
                             </div>
                         </div>
                     </div>`;
                 $("#dashboard").append(dashboard);
-                $("input + label").css({ "position": "absolute", "left": "20px", "top": "1.15em", "transition": "transform 200ms ease", "pointer-events": "none" });
-                $("input:focus + label,input + label.freeze").css({ "font-size": "0.7em", "font-weight": "400", "transform": "translateY(-3em)"});
+                getDealersByState("step-5-distribuidores");
 
             } else {
             if (sessionStorage.getItem("isClient") === "true") {
@@ -613,16 +612,7 @@ $(document).ready(() => {
     });
 
     //Para form de persona moral
-    $("#step-5-contact-form").validate({
-        rules: {
-            distribuidores: {
-                selectRequired: true
-            },
-            phone: {
-                required: true
-            }
-        }
-    });
+    
 
     $("#step-5-distribuidores").on("select2:open", function () {
         $("#step-5-distribuidores").siblings("[class='focus-border']").addClass("active");
@@ -650,11 +640,21 @@ $(document).ready(() => {
         commitSalesforcePlan();
     });
 
-    getDealersByState("step-5-distribuidores");
+    $("#step-5-contact-form").submit(function (e) {
+        e.preventDefault();
+        if ($("#step-5-contact-form").valid()) {
+                commitSalesforcePlan();
+        }else {
+            console.log("formulario inválido");
+        }
+    });
 
             
 });
 
+function planSubmitClick() {
+    $("#step-5-contact-form").submit();
+}
 
 function commitSalesforcePlan() {
     var data = {
@@ -714,3 +714,17 @@ function commitSalesforcePlan() {
         }
     });
 }
+
+$("#step-5-contact-form").validate({
+    rules: {
+        distribuidores: {
+            selectRequired: true
+        },
+        phone: {
+            required: true
+        }
+    }
+});
+
+$("input + label").css({ "position": "absolute", "left": "20px", "top": "1.15em", "transition": "transform 200ms ease", "pointer-events": "none" });
+$("input:focus + label,input + label.freeze").css({ "font-size": "0.7em", "font-weight": "400", "transform": "translateY(-3em)" });
