@@ -26,7 +26,7 @@ $(document).ready(() => {
         "Access-Control-Allow-Credentials": true,
     };
 
-    FloatLabel.init();
+    
        
     const settings = {
         method: "POST",
@@ -673,6 +673,8 @@ $(document).ready(() => {
             init: init,
         };
     })();
+
+    FloatLabel.init();
 
     $("#step-5-contact-form").validate({
         rules: {
