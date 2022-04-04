@@ -123,7 +123,7 @@ $(document).ready(() => {
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
                 $("#dashboard").append(dashboard);
-                document.querySelector('[data-id="step-5-contact-form"]').show();
+                document.querySelector('[data-id="step-5-contact-form"]').css('display', 'block');
                 getDealersByState("step-5-distribuidores");
 
             } else {
