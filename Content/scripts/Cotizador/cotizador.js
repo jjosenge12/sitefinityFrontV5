@@ -1,6 +1,6 @@
 ﻿
 
-var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen, enganche_width, back, plan, token, idcoti, isLogged = sessionStorage.getItem("isLogged");
+var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen, enganche_width, back, plan, token, idcoti, isLogged = sessionStorage.getItem("isLogged"),ok=0;
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -545,7 +545,9 @@ $("#select-state").change(() => {
             enganche_width = progress.style.width;
             $.when(getFormValues())
                 .then(() => {
-                    cotizar();
+                    if(ok==0)
+                        cotizar();
+                    ok = 1;
                 }).then(() => {
                     switch (plan) {
                         case "Tradicional":
@@ -566,6 +568,7 @@ $("#select-state").change(() => {
                     }
                     if (isLogged === "true")
                         document.querySelector('[data-id="step-5-contact-form"]').classList.add("d-none");
+                    ok = 0;
                    });
         }
         else {
