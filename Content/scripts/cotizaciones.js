@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2, form, nroPdf = 0, fechaCotizacion,imagenAuto,oksales=0;
+var cotizaciones2, form, nroPdf = 0, fechaCotizacion, imagenAuto, oksales = 0;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -85,9 +85,7 @@ $(document).ready(() => {
         Authorization: "Bearer " + _paramToken,
         "Access-Control-Allow-Credentials": true,
     };
-
-    
-       
+              
     const settings = {
         method: "POST",
         headers: _myHeader,
@@ -123,7 +121,7 @@ $(document).ready(() => {
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
                 $("#dashboard").append(dashboard);
-                $("#step-5-contact-form").css('display', 'block');
+                document.querySelector('[data-id="step-5-contact-form"]').classList.add("d-block");
                 getDealersByState("step-5-distribuidores");
 
             } else {
@@ -661,7 +659,9 @@ $(document).ready(() => {
                 selectRequired: true
             },
             phone: {
-                required: true
+                required: true,
+                minlength: 10,
+                maxlength: 10
             }
         }
     });
@@ -710,9 +710,9 @@ function planSubmitClick() {
 function commitSalesforcePlan() {
     var data = {
         Movil: $("#step-5-phone").val(),
-        Email: $("#email").val(),
-        Nombre: $("#name").val(),
-        Apellido: $("#lastname").val(),
+        Email: sessionStorage.getItem("email"),
+        Nombre: sessionStorage.getItem("name"),
+        Apellido: sessionStorage.getItem("apellido"),
         AceptoTerminosYCondiciones: "SiAcepto",
         Marca: $("#vehicle option:selected").html(),
         Ballon: "text_ballon",
