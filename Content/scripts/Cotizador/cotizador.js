@@ -1,6 +1,6 @@
 ﻿
 
-var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen, enganche_width, back, plan, token, idcoti, isLogged = sessionStorage.getItem("isLogged"),ok=0;
+var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen, enganche_width, back, plan, token, idcoti, isLogged = sessionStorage.getItem("isLogged");
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -545,9 +545,7 @@ $("#select-state").change(() => {
             enganche_width = progress.style.width;
             $.when(getFormValues())
                 .then(() => {
-                    if(ok==0)
                         cotizar();
-                    ok = 1;
                 }).then(() => {
                     switch (plan) {
                         case "Tradicional":
@@ -1396,6 +1394,8 @@ function commitSalesforce2() {
                 },
                 url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/",
                 data: datajson,
+                beforeSend: showLoader,
+                complete: hideLoader,
                 success: function (result) {
                     window.scrollTo(0, 0);
                     swiper.slideNext();
@@ -1459,6 +1459,8 @@ function updateSalesforce2() {
                 },
                 url: "https://toyotafinancial--salt001.my.salesforce.com/services/data/v54.0/sobjects/Lead/" + idcoti,
                 data: datajson,
+                beforeSend: showLoader,
+                complete: hideLoader,
                 success: function (result) {
                     window.scrollTo(0, 0);
                     swiper.slideNext();
