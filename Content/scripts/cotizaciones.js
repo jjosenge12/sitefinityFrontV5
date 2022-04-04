@@ -82,7 +82,24 @@ $(document).ready(() => {
                                 <button id="step-5-contact" type="button" class="btn-red btn-long col-12">SER CONTACTADO</button>
                             </div>
                         </div>
-                    </div>`;
+                    </div>
+                    <style>
+                        input + label {
+                            position: absolute;
+                            left: 20px;
+                            top: 1.15em;
+                            transition: transform 200ms ease;
+
+                            /* You have to use this to make it clickable through*/
+                            pointer-events: none;
+                        }
+                         input:focus + label,
+                         input + label.freeze {
+                           font-size: 0.7em;
+                           font-weight: 400;
+                           transform: translateY(-3em);
+                        }
+                    </style>`;
 
                 $("#dashboard").append(dashboard);
 
