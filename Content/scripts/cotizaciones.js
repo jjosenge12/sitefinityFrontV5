@@ -123,6 +123,7 @@ $(document).ready(() => {
                 $("#bannerBienvenida").append(bannerBienvenida);
                 var dashboard = "";
                 $("#dashboard").append(dashboard);
+                document.querySelector('[data-id="step-5-contact-form"]').show();
                 getDealersByState("step-5-distribuidores");
 
             } else {
@@ -683,15 +684,15 @@ $(document).ready(() => {
         e.preventDefault();
     });
 
-    $("#step-5-contact").click(function () {
+    /*$("#step-5-contact").click(function () {
         $("#step-5-contact-form").valid();
     });
 
     $("#step-5-contact").click(() => {
         commitSalesforcePlan();
-    });
+    });*/
 
-    $("#step-5-contact-form").submit(function (e) {
+    $("#step-5-contact").click(function (e) {
         e.preventDefault();
         if ($("#step-5-contact-form").valid()) {
                 commitSalesforcePlan();
@@ -708,7 +709,6 @@ function planSubmitClick() {
 
 function commitSalesforcePlan() {
     var data = {
-        Plan: $("#planType").val(),
         Movil: $("#step-5-phone").val(),
         Email: $("#email").val(),
         Nombre: $("#name").val(),
@@ -719,7 +719,7 @@ function commitSalesforcePlan() {
         Aseguradora: $("#distributor option:selected").html(),
         CodigoDistribuidor: $("#step-5-distribuidores").select2('data')[0].codigo,
     };
-
+    console.log(data);
     $.ajax({
         type: "POST",
         url: window.config.urlbase + "/SalesForceCommitPlan",
