@@ -712,7 +712,7 @@ function commitSalesforcePlan() {
         Movil: $("#step-5-phone").val(),
         Email: sessionStorage.getItem("email"),
         Nombre: sessionStorage.getItem("name"),
-        Apellido: sessionStorage.getItem("apellido"),
+        Apellido: sessionStorage.getItem("lastname"),
         AceptoTerminosYCondiciones: "SiAcepto",
         Marca: $("#vehicle option:selected").html(),
         Ballon: "text_ballon",
