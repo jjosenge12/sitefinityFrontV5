@@ -26,7 +26,11 @@ $(document).ready(function () {
         if (e.params.data.id != "0") {
             $.ajax(`/get-docs?folderId=${e.params.data.id}`, {
                 success: function (data) {
-                    console.log(data);
+                    console.log(data);                   
+
+                    // Ordenar alfabeticamente Insentitive
+                    data.documents.sort((a, b) => a.Title.localeCompare(b.Title))
+
                     $("#select-two").html($("#select-two option[value='0']"));
                     $.each(data.documents, function () {
                         files.push(this);
