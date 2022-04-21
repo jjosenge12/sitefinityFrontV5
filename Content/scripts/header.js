@@ -380,6 +380,19 @@ function openModal(modalId) {
         $(body).animate({ scrollTop: $(body).offset().top - 20 }, "fast");
     }
 
+    $(document).keydown(function (objEvent) {
+        if (objEvent.keyCode == 9) {
+            objEvent.preventDefault();
+        }
+    });
+
+    $(document).keydown(function (objEvent) {
+        if (objEvent.keyCode == 13) {
+            objEvent.preventDefault();
+            closeModal(modalId);
+        }
+    });
+
     if (deviceWidth() <= 767) {
         modal.show("slide", { direction: "down" });
     } else {
@@ -414,6 +427,7 @@ function closeModal(modalId) {
             }
         );
     }
+    $(document).unbind('keydown');
     document.body.style.overflow = "auto";
 }
 
