@@ -389,6 +389,7 @@ function openModal(modalId) {
     $(document).keydown(function (objEvent) {
         if (objEvent.keyCode == 13) {
             objEvent.preventDefault();
+            $("#acceptNewsletterTerms").click();
             closeModal(modalId);
         }
     });

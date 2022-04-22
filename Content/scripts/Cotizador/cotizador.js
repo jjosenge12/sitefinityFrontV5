@@ -38,31 +38,7 @@ $(document).ready(function () {
 
     var inputs = $('#name, #lastname, #email,#step-2-terms,#step-2-continue'), inputTo;
    
-    inputs.on('keydown', function (e) {
 
-        // if we pressed the tab
-        if (e.keyCode == 9 || e.which == 9) {
-            // prevent default tab action
-            e.preventDefault();
-
-            if (e.shiftKey) {
-                // get previous input based on the current input
-                inputTo = inputs.get(inputs.index(this) - 1);
-            } else {
-                // get next input based on the current input
-                inputTo = inputs.get(inputs.index(this) + 1);
-            }
-
-            // move focus to inputTo, otherwise focus first input
-            if (inputTo) {
-                inputTo.focus();
-            } else {
-                inputs[0].focus();
-            }
-        }
-    });
-
-    // bind on keydown
     $('input:checkbox').keypress(function (e) {
         if ((e.keyCode ? e.keyCode : e.which) == 13) {
             $(this).trigger('click');
@@ -115,6 +91,30 @@ $(document).ready(function () {
         }
         else {
             swiper.slideTo(1);
+            $(document).unbind('keydown');
+
+            inputs.on('keydown', function (e) {
+
+                if (e.keyCode == 9 || e.which == 9) {
+                    e.preventDefault();
+                    if (document.activeElement.type == 'checkbox')
+                        $("#step-2-continue").addClass("btn-red_inverted");
+                    else
+                        $("#step-2-continue").removeClass("btn-red_inverted");
+
+                    if (e.shiftKey) {
+                        inputTo = inputs.get(inputs.index(this) - 1);
+                    } else {
+                        inputTo = inputs.get(inputs.index(this) + 1);
+                    }
+
+                    if (inputTo) {
+                        inputTo.focus();
+                    } else {
+                        inputs[0].focus();
+                    }
+                }
+            });
         }
         getToken();
     });
@@ -1369,13 +1369,13 @@ var normalize = (function () {
 
 })();
 
-/*
+
 $(document).keydown(function (objEvent) {
     if (objEvent.keyCode == 9) {
         objEvent.preventDefault();
     }
 });
-*/
+
 
 function maxLengthCheck(object) {
     var ch = String.fromCharCode(object.which);
