@@ -274,7 +274,7 @@
         $(document).keydown(function (e) {
             if (e.keyCode == 9 || e.which == 9) {
                 if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#userVisible").focus();
+                    $("#volver-nc").focus();
             }
         });
         
@@ -285,7 +285,7 @@
         $(document).keydown(function (e) {
             if (e.keyCode == 9 || e.which == 9) {
                 if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#ingreso-clientes").focus();
+                    $("#volver-c").focus();
             }
         });
 
@@ -327,13 +327,27 @@
         $(document).keydown(function (e) {
             if (e.keyCode == 9 || e.which == 9) {
                 if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#registro-clientes").focus();
+                    $("#volver-inicio-c").focus();
             }
         });
         $('#registro-terms-c').keypress(function (e) {
             if ((e.keyCode ? e.keyCode : e.which) == 13) {
                 $(this).trigger('click');
+                $(document).unbind('keydown');
             }
+        });
+        $("#acceptAvisoPriv").click(() => {
+            $(document).keydown(function (e) {
+                if (e.keyCode == 9 || e.which == 9) {
+                    if (document.activeElement.classList[0] == 'btn-registro')
+                        $("#volver-inicio-c").focus();
+                }
+            });
+            /*$('#registro-terms-c').keypress(function (e) {
+                if ((e.keyCode ? e.keyCode : e.which) == 13) {
+                    $(this).trigger('click');
+                }
+            });*/
         });
     });
     $("#registro-no-clientes").click(() => {
@@ -342,12 +356,13 @@
         $(document).keydown(function (e) {
             if (e.keyCode == 9 || e.which == 9) {
                 if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#nameVisible-nr").focus();
+                    $("#volver-inicio-nc").focus();
             }
         });
         $('#registro-terms-nc').keypress(function (e) {
             if ((e.keyCode ? e.keyCode : e.which) == 13) {
                 $(this).trigger('click');
+                $(document).unbind('keydown');
             }
 
         });
@@ -359,12 +374,14 @@
         $(document).keydown(function (e) {
             if (e.keyCode == 9 || e.which == 9) {
                 if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#registro-clientes").focus();
+                    $("#volver-inicio-c").focus();
             }
         });
         $('#registro-terms-c').keypress(function (e) {
             if ((e.keyCode ? e.keyCode : e.which) == 13) {
                 $(this).trigger('click');
+                $(document).unbind('keydown');
+
             }
         });
     });
@@ -374,12 +391,14 @@
         $(document).keydown(function (e) {
             if (e.keyCode == 9 || e.which == 9) {
                 if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#registro-no-clientes").focus();
+                    $("#volver-inicio-nc").focus();
             }
         });
         $('#registro-terms-nc').keypress(function (e) {
             if ((e.keyCode ? e.keyCode : e.which) == 13) {
                 $(this).trigger('click');
+                $(document).unbind('keydown');
+
             }
         });
     });
