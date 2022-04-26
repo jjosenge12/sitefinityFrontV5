@@ -32,6 +32,15 @@
                     allowTouchMove: false,
                     initialSlide: 0
                 });
+                $(document).unbind('keydown');
+                $("#userVisible").focus();
+
+                $(document).keydown(function (e) {
+                    if (e.keyCode == 9 || e.which == 9) {
+                        if (document.activeElement.classList[0] == 'btn-registro')
+                            $("#volver-nc").focus();
+                    }
+                });
 
                 switch (error[1]) {
                     case '1':
@@ -50,6 +59,13 @@
                     allowTouchMove: false,
                     initialSlide: 3
                 });
+                $(document).unbind('keydown');
+        $(document).keydown(function (e) {
+            if (e.keyCode == 9 || e.which == 9) {
+                if (document.activeElement.classList[0] == 'btn-registro')
+                    $("#volver-c").focus();
+            }
+        });
 
                 switch (error[1]) {
                     case '1':
@@ -71,6 +87,20 @@
                         allowTouchMove: false,
                         initialSlide: 6
                     });
+                $(document).unbind('keydown');
+                $(document).keydown(function (e) {
+                    if (e.keyCode == 9 || e.which == 9) {
+                        if (document.activeElement.classList[0] == 'btn-registro')
+                            $("#volver-inicio-nc").focus();
+                    }
+                });
+                $('input:checkbox').keypress(function (e) {
+                    if ((e.keyCode ? e.keyCode : e.which) == 13) {
+                        $(this).trigger('click');
+                        $(termsCheckbox).prop("checked", false);
+
+                    }
+                });
 
                 switch (error[1]) {
                     case '0':                  
@@ -122,6 +152,20 @@
                     speed: 400,
                     allowTouchMove: false,
                     initialSlide: 5
+                });
+                $(document).unbind('keydown');
+                $(document).keydown(function (e) {
+                    if (e.keyCode == 9 || e.which == 9) {
+                        if (document.activeElement.classList[0] == 'btn-registro')
+                            $("#volver-inicio-c").focus();
+                    }
+                });
+                $('input:checkbox').keypress(function (e) {
+                    if ((e.keyCode ? e.keyCode : e.which) == 13) {
+                        $(this).trigger('click');
+                        $(termsCheckbox).prop("checked", false);
+
+                    }
                 });
 
                 switch (error[1]) {
@@ -330,25 +374,14 @@
                     $("#volver-inicio-c").focus();
             }
         });
-        $('#registro-terms-c').keypress(function (e) {
+        $('input:checkbox').keypress(function (e) {
             if ((e.keyCode ? e.keyCode : e.which) == 13) {
                 $(this).trigger('click');
-                $(document).unbind('keydown');
+                $(termsCheckbox).prop("checked", false);
+
             }
         });
-        $("#acceptAvisoPriv").click(() => {
-            $(document).keydown(function (e) {
-                if (e.keyCode == 9 || e.which == 9) {
-                    if (document.activeElement.classList[0] == 'btn-registro')
-                        $("#volver-inicio-c").focus();
-                }
-            });
-            /*$('#registro-terms-c').keypress(function (e) {
-                if ((e.keyCode ? e.keyCode : e.which) == 13) {
-                    $(this).trigger('click');
-                }
-            });*/
-        });
+        
     });
     $("#registro-no-clientes").click(() => {
         swiper.slideTo(6)
@@ -359,14 +392,13 @@
                     $("#volver-inicio-nc").focus();
             }
         });
-        $('#registro-terms-nc').keypress(function (e) {
+        $('input:checkbox').keypress(function (e) {
             if ((e.keyCode ? e.keyCode : e.which) == 13) {
                 $(this).trigger('click');
-                $(document).unbind('keydown');
-            }
+                $(termsCheckbox).prop("checked", false);
 
+            }
         });
-        
     });
     $("#al-registro").click(() => {
         swiper.slideTo(5);
@@ -377,10 +409,10 @@
                     $("#volver-inicio-c").focus();
             }
         });
-        $('#registro-terms-c').keypress(function (e) {
+        $('input:checkbox').keypress(function (e) {
             if ((e.keyCode ? e.keyCode : e.which) == 13) {
                 $(this).trigger('click');
-                $(document).unbind('keydown');
+                $(termsCheckbox).prop("checked", false);
 
             }
         });
@@ -394,10 +426,10 @@
                     $("#volver-inicio-nc").focus();
             }
         });
-        $('#registro-terms-nc').keypress(function (e) {
+        $('input:checkbox').keypress(function (e) {
             if ((e.keyCode ? e.keyCode : e.which) == 13) {
                 $(this).trigger('click');
-                $(document).unbind('keydown');
+                $(termsCheckbox).prop("checked", false);
 
             }
         });

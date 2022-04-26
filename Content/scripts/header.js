@@ -390,6 +390,7 @@ function openModal(modalId) {
         if (objEvent.keyCode == 13) {
             objEvent.preventDefault();
             $("#acceptNewsletterTerms").click();
+            $("#acceptAvisoPriv").click();
             closeModal(modalId);
         }
     });
