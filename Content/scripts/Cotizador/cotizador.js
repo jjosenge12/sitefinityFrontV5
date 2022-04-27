@@ -326,8 +326,8 @@ $(document).ready(function () {
         $("#hitch-text").val(form.EngancheDeposito.toFixed(2));
         $("#hitch-max").val(form.MaxEnganche);
         $("#hitch-min").val(form.precioAuto * .1);
-        if (isLogged === "true")
-            $("#select-personalidad-fiscal .select-button")[2].classList.add("d-none");
+        /*if (isLogged === "true")
+            $("#select-personalidad-fiscal .select-button")[2].classList.add("d-none");*/
         formNextStep(2);
     });
 
