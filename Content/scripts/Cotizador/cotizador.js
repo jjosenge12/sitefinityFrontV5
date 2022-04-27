@@ -704,6 +704,10 @@ $("#select-state").change(() => {
         form.MaxEnganche = form.precioAuto * .4;
         $("#hitch-max").val(form.MaxEnganche);
         $("#hitch-min").val(form.precioAuto * .1);
+        $("#arrendamiento").hide();
+        $("#anualidades").hide();
+        $("#balloon").hide();
+        $("#tradicional").hide();
         back = 1;
         getToken();
     });
