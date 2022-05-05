@@ -80,7 +80,7 @@ $(document).ready(() => {
     };
 
     let _myHeader = {
-        "Access-Control-Allow-Origin": "https://tfs-sitefinity.virtualdreams.io/",
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
         Authorization: "Bearer " + _paramToken,
         "Access-Control-Allow-Credentials": true,
@@ -89,6 +89,8 @@ $(document).ready(() => {
     const settings = {
         method: "POST",
         headers: _myHeader,
+        dataType: "jsonp",
+        crossDomain: true,
         data: JSON.stringify(_data),
         success: (data) => {
             console.log(data);
