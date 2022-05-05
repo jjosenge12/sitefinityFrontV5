@@ -80,7 +80,7 @@ $(document).ready(() => {
     };
 
     let _myHeader = {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://tfs-sitefinity.virtualdreams.io/",
         "Content-Type": "application/json",
         Authorization: "Bearer " + _paramToken,
         "Access-Control-Allow-Credentials": true,
