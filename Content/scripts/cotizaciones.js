@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2, form, nroPdf = 0, fechaCotizacion, imagenAuto, oksales = 0,token;
+var cotizaciones2, form, nroPdf = 0, fechaCotizacion, imagenAuto, oksales = 0, token, _myHeader;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -79,7 +79,7 @@ $(document).ready(() => {
         email: _paramEmail,
     };
 
-    var _myHeader;
+    
 
     function getToken() {
         $.ajax({
@@ -105,10 +105,7 @@ $(document).ready(() => {
         method: "POST",
         headers: _myHeader,
         data: JSON.stringify(_data),
-        beforeSend: () => {
-            getToken();
-            showLoader;
-        },
+        beforeSend: () => (getToken()),
             complete: hideLoader,
         success: (data) => {
             console.log(data);
