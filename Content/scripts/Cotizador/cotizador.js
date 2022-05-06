@@ -1,4 +1,6 @@
-﻿var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen, enganche_width, back, plan, token, idcoti, isLogged = sessionStorage.getItem("isLogged");
+﻿
+
+var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen, enganche_width, back, plan, token, idcoti, isLogged = sessionStorage.getItem("isLogged");
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -33,6 +35,15 @@ function formNextStep(step) {
 $(document).ready(function () {
 
     car_slides = $(".swiper-slide.car-slide-container");
+
+    var inputs = $('#name, #lastname, #email,#step-2-terms,#step-2-continue'), inputTo;
+
+
+    $('input:checkbox').keypress(function (e) {
+        if ((e.keyCode ? e.keyCode : e.which) == 13) {
+            $(this).trigger('click');
+        }
+    });
 
     jQuery.validator.addMethod(
         "selectRequired",
@@ -80,6 +91,30 @@ $(document).ready(function () {
         }
         else {
             swiper.slideTo(1);
+            $(document).unbind('keydown');
+
+            inputs.on('keydown', function (e) {
+
+                if (e.keyCode == 9 || e.which == 9) {
+                    e.preventDefault();
+                    if (document.activeElement.type == 'checkbox')
+                        $("#step-2-continue").addClass("btn-red_inverted");
+                    else
+                        $("#step-2-continue").removeClass("btn-red_inverted");
+
+                    if (e.shiftKey) {
+                        inputTo = inputs.get(inputs.index(this) - 1);
+                    } else {
+                        inputTo = inputs.get(inputs.index(this) + 1);
+                    }
+
+                    if (inputTo) {
+                        inputTo.focus();
+                    } else {
+                        inputs[0].focus();
+                    }
+                }
+            });
         }
         getToken();
     });
@@ -128,6 +163,15 @@ $(document).ready(function () {
                 form["Nombre"] = $("#name").val();
                 form["Apellido"] = $("#lastname").val();
                 form["emailCliente"] = $("#email").val();
+                $(document).keydown(function (objEvent) {
+                    if (objEvent.keyCode == 9) {
+                        objEvent.preventDefault();
+                    }
+                    if (objEvent.keyCode == 13) {
+                        objEvent.preventDefault();
+                    }
+                });
+
 
                 cars_swiper.autoplay.start();
             } else {
@@ -282,8 +326,8 @@ $(document).ready(function () {
         $("#hitch-text").val(form.EngancheDeposito.toFixed(2));
         $("#hitch-max").val(form.MaxEnganche);
         $("#hitch-min").val(form.precioAuto * .1);
-        if (isLogged === "true")
-            $("#select-personalidad-fiscal .select-button")[2].classList.add("d-none");
+        /*if (isLogged === "true")
+            $("#select-personalidad-fiscal .select-button")[2].classList.add("d-none");*/
         formNextStep(2);
     });
 
@@ -660,6 +704,10 @@ $(document).ready(function () {
         form.MaxEnganche = form.precioAuto * .4;
         $("#hitch-max").val(form.MaxEnganche);
         $("#hitch-min").val(form.precioAuto * .1);
+        $("#arrendamiento").hide();
+        $("#anualidades").hide();
+        $("#balloon").hide();
+        $("#tradicional").hide();
         back = 1;
         getToken();
     });
@@ -1325,11 +1373,13 @@ var normalize = (function () {
 
 })();
 
+
 $(document).keydown(function (objEvent) {
     if (objEvent.keyCode == 9) {
         objEvent.preventDefault();
     }
 });
+
 
 function maxLengthCheck(object) {
     var ch = String.fromCharCode(object.which);
