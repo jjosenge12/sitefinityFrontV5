@@ -89,8 +89,6 @@ $(document).ready(() => {
     const settings = {
         method: "POST",
         headers: _myHeader,
-        dataType: "jsonp",
-        crossDomain: true,
         data: JSON.stringify(_data),
         success: (data) => {
             console.log(data);
