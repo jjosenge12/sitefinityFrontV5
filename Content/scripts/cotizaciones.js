@@ -88,7 +88,6 @@ $(document).ready(() => {
     // Se almacenan en Session Storage.
     var _paramEmail = sessionStorage.getItem("email");
     var _paramToken = sessionStorage.getItem("token");
-    getToken();
 
     let _data = {
         email: _paramEmail,
@@ -489,7 +488,9 @@ $(document).ready(() => {
     };
 
     try {
-        $.ajax(settings);
+        $.when(getToken())
+            .then(
+        $.ajax(settings))
     } catch (e) {
         console.log(e);
         return e;
