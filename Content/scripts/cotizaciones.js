@@ -1,23 +1,9 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2, form, nroPdf = 0, fechaCotizacion, imagenAuto, oksales = 0,token;
+var cotizaciones2, form, nroPdf = 0, fechaCotizacion, imagenAuto, oksales = 0;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
         return letter.toUpperCase();
-    });
-}
-
-function getToken() {
-    $.ajax({
-        type: 'GET',
-        url: window.config.urlbase + '/GetAccessToken',
-        success: function (result) {
-            token = result.result;
-            console.log(result);
-        },
-        error: function (err) {
-            console.log(err);
-        }
     });
 }
 
@@ -96,7 +82,7 @@ $(document).ready(() => {
     let _myHeader = {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + _paramToken,
         "Access-Control-Allow-Credentials": true,
     };
               
@@ -105,7 +91,7 @@ $(document).ready(() => {
         headers: _myHeader,
         data: JSON.stringify(_data),
         beforeSend: showLoader,
-        complete: hideLoader,
+            complete: hideLoader,
         success: (data) => {
             console.log(data);
 
@@ -488,9 +474,7 @@ $(document).ready(() => {
     };
 
     try {
-        $.when(getToken())
-            .then(
-        $.ajax(settings))
+        $.ajax(settings);
     } catch (e) {
         console.log(e);
         return e;
