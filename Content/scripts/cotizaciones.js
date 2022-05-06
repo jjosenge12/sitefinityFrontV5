@@ -82,7 +82,7 @@ $(document).ready(() => {
     let _myHeader = {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
-        Authorization: "Bearer " + _paramToken,
+        Authorization: "Bearer " + '00D530000008aQy!AQQAQIbC3dCwOlT3OwLK_anZelyJfGE60uXJfrXl4c88_OVo8sb_.pg8Cu837hdz0TJ3skZ64eFaD2rPdkv3PDV9yDfH5JdI',
         "Access-Control-Allow-Credentials": true,
     };
               
