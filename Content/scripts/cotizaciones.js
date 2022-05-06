@@ -90,8 +90,6 @@ $(document).ready(() => {
         method: "POST",
         headers: _myHeader,
         data: JSON.stringify(_data),
-        dataType: 'jsonp',
-        crossOrigin: true,
         success: (data) => {
             console.log(data);
 
