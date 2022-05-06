@@ -79,12 +79,7 @@ $(document).ready(() => {
         email: _paramEmail,
     };
 
-    let _myHeader = {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + token,
-        "Access-Control-Allow-Credentials": true,
-    };
+    var _myHeader;
 
     function getToken() {
         $.ajax({
@@ -93,6 +88,12 @@ $(document).ready(() => {
             success: function (result) {
                 token = result.result;
                 console.log(result);
+                _myHeader = {
+                    "Access-Control-Allow-Origin": "*",
+                    "Content-Type": "application/json",
+                    Authorization: "Bearer " + token,
+                    "Access-Control-Allow-Credentials": true,
+                };
             },
             error: function (err) {
                 console.log(err);
