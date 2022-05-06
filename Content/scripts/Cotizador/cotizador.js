@@ -1,6 +1,4 @@
-﻿
-
-var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen, enganche_width, back, plan, token, idcoti, isLogged = sessionStorage.getItem("isLogged");
+﻿var form = {}, swiper, cars_swiper, cotizacion, car_slides, enganche_porcen, enganche_width, back, plan, token, idcoti, isLogged = sessionStorage.getItem("isLogged");
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -9,8 +7,8 @@ const formatter = new Intl.NumberFormat('en-US', {
 });
 
 function scrollToTargetAdjusted(element) {
-    
-    var headerOffset = 0;    
+
+    var headerOffset = 0;
     var elementPosition = element.offsetTop;
     var offsetPosition = elementPosition - headerOffset;
 
@@ -33,17 +31,8 @@ function formNextStep(step) {
 }
 
 $(document).ready(function () {
-    
+
     car_slides = $(".swiper-slide.car-slide-container");
-
-    var inputs = $('#name, #lastname, #email,#step-2-terms,#step-2-continue'), inputTo;
-   
-
-    $('input:checkbox').keypress(function (e) {
-        if ((e.keyCode ? e.keyCode : e.which) == 13) {
-            $(this).trigger('click');
-        }
-    });
 
     jQuery.validator.addMethod(
         "selectRequired",
@@ -91,30 +80,6 @@ $(document).ready(function () {
         }
         else {
             swiper.slideTo(1);
-            $(document).unbind('keydown');
-
-            inputs.on('keydown', function (e) {
-
-                if (e.keyCode == 9 || e.which == 9) {
-                    e.preventDefault();
-                    if (document.activeElement.type == 'checkbox')
-                        $("#step-2-continue").addClass("btn-red_inverted");
-                    else
-                        $("#step-2-continue").removeClass("btn-red_inverted");
-
-                    if (e.shiftKey) {
-                        inputTo = inputs.get(inputs.index(this) - 1);
-                    } else {
-                        inputTo = inputs.get(inputs.index(this) + 1);
-                    }
-
-                    if (inputTo) {
-                        inputTo.focus();
-                    } else {
-                        inputs[0].focus();
-                    }
-                }
-            });
         }
         getToken();
     });
@@ -149,7 +114,7 @@ $(document).ready(function () {
     });
 
     $("#step-2-terms-btn").click(function () {
-        termsCheckbox = "#step-2-terms";        
+        termsCheckbox = "#step-2-terms";
         window.open(
             window.location.origin + "/terminos-de-servicio",
             "_blank"
@@ -163,15 +128,6 @@ $(document).ready(function () {
                 form["Nombre"] = $("#name").val();
                 form["Apellido"] = $("#lastname").val();
                 form["emailCliente"] = $("#email").val();
-                $(document).keydown(function (objEvent) {
-                    if (objEvent.keyCode == 9) {
-                        objEvent.preventDefault();
-                    }
-                    if (objEvent.keyCode == 13) {
-                        objEvent.preventDefault();
-                    }
-                });
-
 
                 cars_swiper.autoplay.start();
             } else {
@@ -326,14 +282,14 @@ $(document).ready(function () {
         $("#hitch-text").val(form.EngancheDeposito.toFixed(2));
         $("#hitch-max").val(form.MaxEnganche);
         $("#hitch-min").val(form.precioAuto * .1);
-        /*if (isLogged === "true")
-            $("#select-personalidad-fiscal .select-button")[2].classList.add("d-none");*/
+        if (isLogged === "true")
+            $("#select-personalidad-fiscal .select-button")[2].classList.add("d-none");
         formNextStep(2);
     });
 
     $("#select-insurance").change(() => getCoverages());
 
-$("#select-state").change(() => {
+    $("#select-state").change(() => {
         if ($("#select-state").val() && $("#select-coverage").val()) {
             if (fisica == 1 || fisicaEmp == 1) {
                 $(".title-financiamiento").html("financiamiento");
@@ -376,7 +332,7 @@ $("#select-state").change(() => {
             }
         }
     });
-    var fisica,fisicaEmp;
+    var fisica, fisicaEmp;
     $("#select-personalidad-fiscal .select-button").click(function () {
         if (this.dataset.value === "Física" || this.dataset.value === "F�sica" || this.dataset.value === "Física con Actividad Empresarial" || this.dataset.value === "F�sica con Actividad Empresarial") {
             $("#select-financing .select-button")[1].style.display = "none";
@@ -415,7 +371,7 @@ $("#select-state").change(() => {
 
     var planes;
     $("#select-financing .select-button").click(function () {
-        if (fisica != 1 || fisicaEmp!=1)
+        if (fisica != 1 || fisicaEmp != 1)
             fisica = this.dataset.value
         else
             fisica = "Financiamiento"
@@ -458,15 +414,15 @@ $("#select-state").change(() => {
         }
         else
             formNextStep(9);
-            swiper.updateAutoHeight(0);
-            $("#step-4-finish").show();
-            getToken();
+        swiper.updateAutoHeight(0);
+        $("#step-4-finish").show();
+        getToken();
 
     });
 
     $("#select-cantidad-depositos").change(function () { formNextStep(7); });
 
-    
+
     var progress = document.getElementById("progressBar");
 
     $("#hitch-range").change(function () {
@@ -476,7 +432,7 @@ $("#select-state").change(() => {
         $("#porcentaje").html(porcentaje.toFixed(0) + " %");
 
         // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
-        /* Codigo para aumentar o disminuir la barra de progreso */        
+        /* Codigo para aumentar o disminuir la barra de progreso */
         let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
         let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
         progress.style.width = progress_val + "%";
@@ -485,35 +441,35 @@ $("#select-state").change(() => {
     $("#hitch-minus").click(function () {
         let val = $("#hitch-range").val();
         let calc = Number(val) - 5000;
-                
-        if (calc < form.EngancheDeposito )
+
+        if (calc < form.EngancheDeposito)
             calc = form.EngancheDeposito;
 
         let porcentaje = (calc * 100) / form.precioAuto;
 
         $("#hitch-range").val(calc);
         $("#hitch-range").change();
-        $("#porcentaje").html(porcentaje.toFixed(0) + " %");        
+        $("#porcentaje").html(porcentaje.toFixed(0) + " %");
         $("#hitch-text").val(calc.toFixed(2));
 
-        /* Sentencias para aumentar o disminuir la barra de progreso */        
+        /* Sentencias para aumentar o disminuir la barra de progreso */
         let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
         let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
-        progress.style.width = progress_val + "%";        
+        progress.style.width = progress_val + "%";
     });
 
     $("#hitch-plus").click(function () {
         let val = $("#hitch-range").val();
         let calc = Number(val) + 5000, max = form.MaxEnganche;
-        
+
         if (calc > max)
             calc = max;
 
         let porcentaje = (calc * 100) / form.precioAuto;
-                        
+
         $("#hitch-range").val(calc);
         $("#hitch-range").change();
-        $("#porcentaje").html(porcentaje.toFixed(0) + " %");        
+        $("#porcentaje").html(porcentaje.toFixed(0) + " %");
         $("#hitch-text").val(calc.toFixed(2));
 
         // form.EngancheDeposito es el Enganche Minimo (10% del precio del auto)
@@ -521,7 +477,7 @@ $("#select-state").change(() => {
         let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
         let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
         progress.style.width = progress_val + "%";
-       
+
     });
 
 
@@ -536,7 +492,7 @@ $("#select-state").change(() => {
             let porcentaje = (val * 100) / form.precioAuto;
             $("#porcentaje").html(porcentaje.toFixed(0) + " %");
 
-            /* Codigo para aumentar o disminuir la barra de progreso */                        
+            /* Codigo para aumentar o disminuir la barra de progreso */
             let diferenciaMax = (form.MaxEnganche - form.EngancheDeposito);
             let progress_val = (($("#hitch-range").val() - form.EngancheDeposito) * 100) / diferenciaMax;
             progress.style.width = progress_val + "%";
@@ -587,7 +543,7 @@ $("#select-state").change(() => {
             enganche_width = progress.style.width;
             $.when(getFormValues())
                 .then(() => {
-                        cotizar();
+                    cotizar();
                 }).then(() => {
                     switch (plan) {
                         case "Tradicional":
@@ -609,7 +565,7 @@ $("#select-state").change(() => {
                     if (isLogged === "true")
                         document.querySelector('[data-id="step-5-contact-form"]').classList.add("d-none");
                     ok = 0;
-                   });
+                });
         }
         else {
             Swal.fire({
@@ -657,7 +613,7 @@ $("#select-state").change(() => {
 
     $("#step-5-terms-btn").click(function () {
         termsCheckbox = "#step-5-terms";
-        
+
         window.open(
             window.location.origin + "/terminos-de-servicio",
             "_blank"
@@ -665,7 +621,7 @@ $("#select-state").change(() => {
     });
 
     $("#step-5-terms").click(function () {
-        termsCheckbox = "#step-5-terms";        
+        termsCheckbox = "#step-5-terms";
     });
 
     $("#select-otro-plazo .select-button").click(function () {
@@ -691,7 +647,7 @@ $("#select-state").change(() => {
         back = 0;
     });
 
-    $("#step-5-contact").click(() => { 
+    $("#step-5-contact").click(() => {
         sendDataSalesforce();
     });
 
@@ -704,10 +660,6 @@ $("#select-state").change(() => {
         form.MaxEnganche = form.precioAuto * .4;
         $("#hitch-max").val(form.MaxEnganche);
         $("#hitch-min").val(form.precioAuto * .1);
-        $("#arrendamiento").hide();
-        $("#anualidades").hide();
-        $("#balloon").hide();
-        $("#tradicional").hide();
         back = 1;
         getToken();
     });
@@ -1077,7 +1029,7 @@ function getCoverages() {
         url: window.config.urlbase + '/getCoverage?id=' + $("#select-insurance").val(),
         beforeSend: showLoader,
         complete: hideLoader,
-        success: function (data) {            
+        success: function (data) {
 
             var listCoverage;
 
@@ -1092,7 +1044,7 @@ function getCoverages() {
                     listCoverage = [data.results[3], data.results[0], data.results[1], data.results[2], data.results[4]];
                     data.results = listCoverage;
                 }
-            }                       
+            }
 
             /*
             Funcion para ordenar alfabeticamente las coberturas
@@ -1149,7 +1101,7 @@ function commitSalesforce() {
         Precio: form.precioAuto,
         ImagenAuto: form.ImagenAuto,
     }
-    
+
 
     $.ajax({
         type: 'POST',
@@ -1373,13 +1325,11 @@ var normalize = (function () {
 
 })();
 
-
 $(document).keydown(function (objEvent) {
     if (objEvent.keyCode == 9) {
         objEvent.preventDefault();
     }
 });
-
 
 function maxLengthCheck(object) {
     var ch = String.fromCharCode(object.which);
@@ -1388,7 +1338,7 @@ function maxLengthCheck(object) {
 
 }
 
-function getToken(){
+function getToken() {
     $.ajax({
         type: 'GET',
         url: window.config.urlbase + '/GetAccessToken',
@@ -1428,7 +1378,7 @@ function commitSalesforce2() {
         ImagenAuto__c: form.ImagenAuto,
         LeadSource: "Cotizador Web paso 4",
         Company: "Example",
-        }; 
+    };
 
     let datajson = JSON.stringify(data);
 
@@ -1527,5 +1477,5 @@ function updateSalesforce2() {
                 }
             });
         });
-  
+
 }

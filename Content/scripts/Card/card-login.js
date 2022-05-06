@@ -1,11 +1,5 @@
 ﻿$(document).ready(function () {
 
-    $(document).keydown(function (objEvent) {
-        if (objEvent.keyCode == 9) {
-            objEvent.preventDefault();
-        }
-    });
-
     var swiper;
     if (window.location.search.includes("cp")) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -21,6 +15,7 @@
 
     }
 
+
     if (window.location.search.includes("err")) {
         const urlParams = new URLSearchParams(window.location.search);
         var error = urlParams.get("err").split('.');
@@ -31,15 +26,6 @@
                     speed: 400,
                     allowTouchMove: false,
                     initialSlide: 0
-                });
-                $(document).unbind('keydown');
-                $("#userVisible").focus();
-
-                $(document).keydown(function (e) {
-                    if (e.keyCode == 9 || e.which == 9) {
-                        if (document.activeElement.classList[0] == 'btn-registro')
-                            $("#volver-nc").focus();
-                    }
                 });
 
                 switch (error[1]) {
@@ -58,13 +44,6 @@
                     speed: 400,
                     allowTouchMove: false,
                     initialSlide: 3
-                });
-                $(document).unbind('keydown');
-                $(document).keydown(function (e) {
-                    if (e.keyCode == 9 || e.which == 9) {
-                        if (document.activeElement.classList[0] == 'btn-registro')
-                            $("#volver-c").focus();
-                    }
                 });
 
                 switch (error[1]) {
@@ -86,20 +65,6 @@
                     speed: 400,
                     allowTouchMove: false,
                     initialSlide: 6
-                });
-                $(document).unbind('keydown');
-                $(document).keydown(function (e) {
-                    if (e.keyCode == 9 || e.which == 9) {
-                        if (document.activeElement.classList[0] == 'btn-registro')
-                            $("#volver-inicio-nc").focus();
-                    }
-                });
-                $('input:checkbox').keypress(function (e) {
-                    if ((e.keyCode ? e.keyCode : e.which) == 13) {
-                        $(this).trigger('click');
-                        $(termsCheckbox).prop("checked", false);
-
-                    }
                 });
 
                 switch (error[1]) {
@@ -152,20 +117,6 @@
                     speed: 400,
                     allowTouchMove: false,
                     initialSlide: 5
-                });
-                $(document).unbind('keydown');
-                $(document).keydown(function (e) {
-                    if (e.keyCode == 9 || e.which == 9) {
-                        if (document.activeElement.classList[0] == 'btn-registro')
-                            $("#volver-inicio-c").focus();
-                    }
-                });
-                $('input:checkbox').keypress(function (e) {
-                    if ((e.keyCode ? e.keyCode : e.which) == 13) {
-                        $(this).trigger('click');
-                        $(termsCheckbox).prop("checked", false);
-
-                    }
                 });
 
                 switch (error[1]) {
@@ -305,135 +256,26 @@
 
     }
 
-    $("#volver-nc").click(function (e) {
-        e.preventDefault();
-    });
-
-
-    $("#ingreso-no-clientes").click(() => {
-        swiper.slideTo(0)
-        $(document).unbind('keydown');
-        $("#userVisible").focus();
-
-        $(document).keydown(function (e) {
-            if (e.keyCode == 9 || e.which == 9) {
-                if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#volver-nc").focus();
-            }
-        });
-
-    });
-    $("#ingreso-clientes").click(() => {
-        swiper.slideTo(3)
-        $(document).unbind('keydown');
-        $(document).keydown(function (e) {
-            if (e.keyCode == 9 || e.which == 9) {
-                if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#volver-c").focus();
-            }
-        });
-
-    });
-    $("#volver-c").click(() => {
-        swiper.slideTo(2)
-        $(document).keydown(function (objEvent) {
-            if (objEvent.keyCode == 9) {
-                objEvent.preventDefault();
-            }
-        });
-    });
-    $("#volver-nc").click(() => {
-        swiper.slideTo(2)
-        $(document).keydown(function (objEvent) {
-            if (objEvent.keyCode == 9) {
-                objEvent.preventDefault();
-            }
-        });
-    });
+    $("#ingreso-no-clientes").click(() => swiper.slideTo(0));
+    $("#ingreso-clientes").click(() => swiper.slideTo(3));
+    $("#volver-c").click(() => swiper.slideTo(2));
+    $("#volver-nc").click(() => swiper.slideTo(2));
     $("#volver-inicio").click(() => swiper.slideTo(1));
     $("#volver-inicio-reg").click(() => swiper.slideTo(1));
     $("#volver-inicio-nc").click(() => swiper.slideTo(4));
     $("#volver-inicio-c").click(() => swiper.slideTo(4));
     $("#back-button-re").click(() => swiper.slideTo(1));
-    $("#ingresar").click(() => {
-        swiper.slideTo(2)
-        $(document).keydown(function (objEvent) {
-            if (objEvent.keyCode == 9) {
-                objEvent.preventDefault();
-            }
-        });
-    });
+    $("#ingresar").click(() => swiper.slideTo(2));
     $("#registro").click(() => swiper.slideTo(4));
     $("#registro-2").click(() => swiper.slideTo(4));
-    $("#registro-clientes").click(() => {
-        swiper.slideTo(5);
-        $(document).unbind('keydown');
-        $(document).keydown(function (e) {
-            if (e.keyCode == 9 || e.which == 9) {
-                if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#volver-inicio-c").focus();
-            }
-        });
-        $('input:checkbox').keypress(function (e) {
-            if ((e.keyCode ? e.keyCode : e.which) == 13) {
-                $(this).trigger('click');
-                $(termsCheckbox).prop("checked", false);
+    $("#registro-clientes").click(() => swiper.slideTo(5));
+    $("#registro-no-clientes").click(() => swiper.slideTo(6));
+    $("#al-registro").click(() => swiper.slideTo(5));
+    $("#al-registro-nc").click(() => swiper.slideTo(6));
 
-            }
-        });
 
-    });
-    $("#registro-no-clientes").click(() => {
-        swiper.slideTo(6)
-        $(document).unbind('keydown');
-        $(document).keydown(function (e) {
-            if (e.keyCode == 9 || e.which == 9) {
-                if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#volver-inicio-nc").focus();
-            }
-        });
-        $('input:checkbox').keypress(function (e) {
-            if ((e.keyCode ? e.keyCode : e.which) == 13) {
-                $(this).trigger('click');
-                $(termsCheckbox).prop("checked", false);
 
-            }
-        });
-    });
-    $("#al-registro").click(() => {
-        swiper.slideTo(5);
-        $(document).unbind('keydown');
-        $(document).keydown(function (e) {
-            if (e.keyCode == 9 || e.which == 9) {
-                if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#volver-inicio-c").focus();
-            }
-        });
-        $('input:checkbox').keypress(function (e) {
-            if ((e.keyCode ? e.keyCode : e.which) == 13) {
-                $(this).trigger('click');
-                $(termsCheckbox).prop("checked", false);
 
-            }
-        });
-    });
-    $("#al-registro-nc").click(() => {
-        swiper.slideTo(6)
-        $(document).unbind('keydown');
-        $(document).keydown(function (e) {
-            if (e.keyCode == 9 || e.which == 9) {
-                if (document.activeElement.classList[0] == 'btn-registro')
-                    $("#volver-inicio-nc").focus();
-            }
-        });
-        $('input:checkbox').keypress(function (e) {
-            if ((e.keyCode ? e.keyCode : e.which) == 13) {
-                $(this).trigger('click');
-                $(termsCheckbox).prop("checked", false);
-
-            }
-        });
-    });
 
     $(".link-aviso-privacidad").click(function () {
         window.open(
@@ -527,4 +369,3 @@
     });
 
 });
-

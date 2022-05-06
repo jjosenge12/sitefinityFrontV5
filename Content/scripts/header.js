@@ -53,7 +53,7 @@ $(document).ready(function () {
         if ((window.location.href.includes("/tfsm/home-delivery")) && !(window.location.href.includes("solicitud-digital")))
             window.location.replace(window.location.origin);
     } else {
-    //if (sessionStorage.length == 0 || isLogged == "false" || reg) {
+        //if (sessionStorage.length == 0 || isLogged == "false" || reg) {
         $("#link-finan").text("FINANCIAMIENTO EN LÍNEA");
     }
 
@@ -146,7 +146,7 @@ $(document).ready(function () {
     $(".toggleMenu").click(() => {
         let overlay = $("#menuOverlay").css("display");
         document.body.style.overflow = "hidden";
-        if (isLogged == "true" ) {
+        if (isLogged == "true") {
             $.when(
                 $("#closeMenuBtn2").toggle(),
                 $("#openMenuBtn2").toggle(),
@@ -162,7 +162,7 @@ $(document).ready(function () {
                     });
                 }
             });
-            
+
         } else {
             $.when(
                 $("#openMenuBtn").toggle(),
@@ -337,7 +337,7 @@ $(document).ready(function () {
 
     $("#newsletter-form").submit(function (e) {
         e.preventDefault();
-        if ($(this).valid()) {            
+        if ($(this).valid()) {
             if (!$("#termsCheckbox").prop("checked")) {
                 termsCheckbox = "#termsCheckbox";
                 openModal("newsletterTermsModal");
@@ -380,21 +380,6 @@ function openModal(modalId) {
         $(body).animate({ scrollTop: $(body).offset().top - 20 }, "fast");
     }
 
-    $(document).keydown(function (objEvent) {
-        if (objEvent.keyCode == 9) {
-            objEvent.preventDefault();
-        }
-    });
-
-    $(document).keydown(function (objEvent) {
-        if (objEvent.keyCode == 13) {
-            objEvent.preventDefault();
-            $("#acceptNewsletterTerms").click();
-            $("#acceptAvisoPriv").click();
-            closeModal(modalId);
-        }
-    });
-
     if (deviceWidth() <= 767) {
         modal.show("slide", { direction: "down" });
     } else {
@@ -429,7 +414,6 @@ function closeModal(modalId) {
             }
         );
     }
-    $(document).unbind('keydown');
     document.body.style.overflow = "auto";
 }
 
