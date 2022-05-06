@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2, form, nroPdf = 0, fechaCotizacion, imagenAuto, oksales = 0;
+var cotizaciones2, form, nroPdf = 0, fechaCotizacion, imagenAuto, oksales = 0,token;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -82,15 +82,32 @@ $(document).ready(() => {
     let _myHeader = {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
-        Authorization: "Bearer " + '00D530000008aQy!AQQAQIbC3dCwOlT3OwLK_anZelyJfGE60uXJfrXl4c88_OVo8sb_.pg8Cu837hdz0TJ3skZ64eFaD2rPdkv3PDV9yDfH5JdI',
+        Authorization: "Bearer " + token,
         "Access-Control-Allow-Credentials": true,
     };
+
+    function getToken() {
+        $.ajax({
+            type: 'GET',
+            url: window.config.urlbase + '/GetAccessToken',
+            success: function (result) {
+                token = result.result;
+                console.log(result);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }
               
     const settings = {
         method: "POST",
         headers: _myHeader,
         data: JSON.stringify(_data),
-        beforeSend: showLoader,
+        beforeSend: () => {
+            getToken();
+            showLoader;
+        },
             complete: hideLoader,
         success: (data) => {
             console.log(data);
