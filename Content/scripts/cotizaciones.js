@@ -479,8 +479,7 @@ $(document).ready(() => {
             url: window.config.urlbase + '/GetAccessToken',
             success: function (result) {
                 token = result.result;
-                console.log(result);
-                console.log(settings);
+                sessionStorage.setItem("token", token);
             },
             complete: function () {
                 settings.headers.Authorization = "Bearer " + token;
