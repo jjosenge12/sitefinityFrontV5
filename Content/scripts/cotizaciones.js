@@ -1,5 +1,5 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
-var cotizaciones2, form, nroPdf = 0, fechaCotizacion, imagenAuto, oksales = 0;
+var cotizaciones2, form, nroPdf = 0, fechaCotizacion, imagenAuto, oksales = 0,token;
 
 function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
@@ -82,7 +82,7 @@ $(document).ready(() => {
     let _myHeader = {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
-        Authorization: "Bearer " + _paramToken,
+        Authorization: "Bearer " + token,
         "Access-Control-Allow-Credentials": true,
     };
               
@@ -474,7 +474,17 @@ $(document).ready(() => {
     };
 
     try {
-        $.ajax(settings);
+        $.ajax({
+            type: 'GET',
+            url: window.config.urlbase + '/GetAccessToken',
+            success: function (result) {
+                token = result.result;
+                console.log(result);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        }).then($.ajax(settings));
     } catch (e) {
         console.log(e);
         return e;
