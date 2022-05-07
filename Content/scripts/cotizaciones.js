@@ -85,7 +85,7 @@ $(document).ready(() => {
         Authorization: "Bearer " + token,
         "Access-Control-Allow-Credentials": true,
     };
-              
+             
     const settings = {
         method: "POST",
         headers: _myHeader,
@@ -480,11 +480,16 @@ $(document).ready(() => {
             success: function (result) {
                 token = result.result;
                 console.log(result);
+                console.log(settings);
+            },
+            complete: function () {
+                settings.headers.Authorization = "Bearer " + token;
+                $.ajax(settings);
             },
             error: function (err) {
                 console.log(err);
             }
-        }).then($.ajax(settings));
+        });
     } catch (e) {
         console.log(e);
         return e;
