@@ -241,6 +241,7 @@ $(document).ready(function () {
     $("#boton-login-cliente").click(function (e) {
         var pass = document.getElementById("passClientVisible").value;
         var user = document.getElementById("clientVisible").value;
+        window.location = "/tfsm/mis-cotizaciones";
 
         var data = {
             idCliente_email: user,
@@ -277,8 +278,9 @@ $(document).ready(function () {
                         sessionStorage.setItem("lastname", result.Nombre);
                         sessionStorage.setItem("name", result.Nombre);
                         sessionStorage.setItem("lenght", 6);
+                        window.location = "/tfsm/mis-cotizaciones";
 
-                        window.location.href = "/tfsm/mis-cotizaciones";
+                        //window.location.href = "/tfsm/mis-cotizaciones";
                     },
                     error: function (err) {
                         console.log('ERROR OBTENER DATOS DE SERVICIO');
