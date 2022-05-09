@@ -270,7 +270,7 @@ $(document).ready(function () {
                     complete: hideLoader,
                     success: function (result) {
                         console.log(result);
-                        window.location.href = "/mis-cotizaciones";
+                        window.location.href = "/tfsm/mis-cotizaciones";
                     },
                     error: function (err) {
                         console.log('ERROR OBTENER DATOS DE SERVICIO');
