@@ -186,7 +186,7 @@
                             </p>
                         </div>
 
-                        <div data-id="c-form" class="sf-form-container" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinitylogin">
+                        <div class="sf-form-container">
                             <div class="float-container my-5">
                                 <label class="float-label" for="clientVisible">
                                     Ingresar su n&uacute;mero de cliente / ID de cliente
@@ -214,11 +214,11 @@
 
                             <input type="hidden" value="" name="client" id="client" />
                             <input type="hidden" value="" name="pass" id="passClient" />
-                            <input type="hidden" name="fail" value="@System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()/tfsm/home-delivery" id="failClient" />
-                            <input type="hidden" name="ok" value="@System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()/home-delivery/session" id="okClient" />
+                            <input type="hidden" name="fail" id="failClient" />
+                            <input type="hidden" name="ok"  id="okClient" />
 
                             <div class="my-4 d-flex justify-content-center">
-                                <button type="submit" class="btn-registro g-recaptcha"> INGRESAR </button>
+                                <button type="button" class="btn-registro g-recaptcha" id="boton-login-cliente"> INGRESAR </button>
                             </div>
 
                         </div>

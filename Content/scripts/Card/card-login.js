@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var token;
+$(document).ready(function () {
 
     $(document).keydown(function (objEvent) {
         if (objEvent.keyCode == 9) {
@@ -237,19 +238,58 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 
-    $("#c-form").submit(function (e) {
+    $("#boton-login-cliente").click(function (e) {
         var pass = document.getElementById("passClientVisible").value;
         var user = document.getElementById("clientVisible").value;
-        var fail = document.getElementById("failClient").value;
-        var ok = document.getElementById("okClient").value;
-        var pass_enc = window.btoa(pass);
-        var user_enc = window.btoa(user);
-        var fail_enc = window.btoa(fail);
-        var ok_enc = window.btoa(ok);
-        document.getElementById("passClient").value = pass_enc;
-        document.getElementById("client").value = user_enc;
-        document.getElementById("failClient").value = fail_enc;
-        document.getElementById("okClient").value = ok_enc;
+
+        var data = {
+            idCliente_email: user,
+            password: pass,
+            esCliente: "true"
+        };
+
+        console.log(data)
+
+        let datajson = JSON.stringify(data);
+        $.ajax({
+            type: 'GET',
+            url: window.config.urlbase + '/GetAccessToken',
+            success: function (result) {
+                token = result.result;
+            },
+            complete: function () {
+                $.ajax({
+                    type: 'POST',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": "Bearer " + token,
+                    },
+                    url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityLoginWS",
+                    data: datajson,
+                    beforeSend: showLoader,
+                    complete: hideLoader,
+                    success: function (result) {
+                        console.log(result);
+                        window.location.href = "/mis-cotizaciones";
+                    },
+                    error: function (err) {
+                        console.log('ERROR OBTENER DATOS DE SERVICIO');
+                        console.log(data);
+                        console.log(err);
+                        Swal.fire({
+                            title: "Error",
+                            text: "Error al enviar información a Salesforce",
+                            icon: "error",
+                            confirmButtonColor: "#cc0000",
+                            timer: 5000
+                        });
+                    }
+                });
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
 
     });
 
@@ -308,8 +348,6 @@
     $("#volver-nc").click(function (e) {
         e.preventDefault();
     });
-
-
     $("#ingreso-no-clientes").click(() => {
         swiper.slideTo(0)
         $(document).unbind('keydown');
@@ -443,12 +481,6 @@
     });
 
     $("#c-form").validate({
-        submitHandler: function (form) {
-            document.getElementById("passClientVisible").removeAttribute("name");
-            document.getElementById("clientVisible").removeAttribute("name");
-
-            $(form).ajaxSubmit();
-        },
         rules: {
             _clientId: {
                 required: true
