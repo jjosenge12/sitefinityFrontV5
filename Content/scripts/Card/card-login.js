@@ -271,7 +271,6 @@ $(document).ready(function () {
                     complete: hideLoader,
                     success: function (result) {
                         console.log(result);
-                        if (result.IsSuccess == "true") {
                             sessionStorage.setItem("token", result.sessionId);
                             sessionStorage.setItem("email", result.Email);
                             sessionStorage.setItem("isClient", "true");
@@ -280,10 +279,6 @@ $(document).ready(function () {
                             sessionStorage.setItem("name", result.Nombre);
                             sessionStorage.setItem("lenght", 6);
                             window.location = "/tfsm/mis-cotizaciones";
-                        } else
-                            window.location.href = "/tfsm/home-delivery";
-                        
-
                         //window.location.href = "/tfsm/mis-cotizaciones";
                     },
                     error: function (err) {
