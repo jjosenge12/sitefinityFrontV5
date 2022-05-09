@@ -241,7 +241,7 @@ $(document).ready(function () {
     $("#boton-login-cliente").click(function (e) {
         var pass = document.getElementById("passClientVisible").value;
         var user = document.getElementById("clientVisible").value;
-        window.location = "/tfsm/mis-cotizaciones";
+        
 
         var data = {
             idCliente_email: user,
