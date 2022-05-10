@@ -54,7 +54,7 @@
                             </p>
                         </div>
 
-                        <div data-id="nc-form" class="sf-form-container" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinitylogin" data-onsubmit="encrypt()">
+                        <div data-id="nc-form" class="sf-form-container">
                             <div class="float-container my-5">
                                 <label class="float-label" for="userVisible">
                                     Correo electr&oacute;nico
@@ -82,12 +82,11 @@
 
                             <input type="hidden" value="" name="user" id="user" />
                             <input type="hidden" value="" name="pass" id="pass" />
-                            <input type="hidden" name="fail" value="@System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()/tfsm/home-delivery" id="fail" />
-                            <input type="hidden" name="ok" value="@System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()/home-delivery/session"
-                                   id="ok" />
+                            <input type="hidden" name="fail"  id="fail" />
+                            <input type="hidden" name="ok" id="ok" />
 
                             <div class="my-4 d-flex justify-content-center">
-                                <button type="submit" class="btn-registro g-recaptcha"> INGRESAR </button>
+                                <button type="button" class="btn-registro g-recaptcha" id="boton-login-nocliente"> INGRESAR </button>
                             </div>
 
                         </div>

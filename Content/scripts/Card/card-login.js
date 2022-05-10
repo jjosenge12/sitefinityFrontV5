@@ -219,33 +219,21 @@ $(document).ready(function () {
         }
     }
 
-    $("#nc-form").submit(function (e) {
-        var pass = document.getElementById("passVisible").value;
-        var user = document.getElementById("userVisible").value;
-        var fail = document.getElementById("fail").value;
-        var ok = document.getElementById("ok").value;
-        var pass_enc = window.btoa(pass);
-        var user_enc = window.btoa(user);
-        var fail_enc = window.btoa(fail);
-        var ok_enc = window.btoa(ok);
-        document.getElementById("pass").value = pass_enc;
-        document.getElementById("user").value = user_enc;
-        document.getElementById("fail").value = fail_enc;
-        document.getElementById("ok").value = ok_enc;
-    });
 
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
 
-    $("#c-form").validate({
-        rules: {
-            _clientId: {
-                required: true
-            },
-            _password: {
-                required: true
-            }
+    $("#boton-login-nocliente").click(function (e) {
+        if ($("#nc-form").valid()) {
+            var pass = document.getElementById("passVisible").value;
+            var user = document.getElementById("userVisible").value;
+            var data = {
+                inCliente_email: user,
+                password: pass,
+                esCliente: "true"
+            };
+            inicio_sesion(data);
         }
     });
 
@@ -450,16 +438,21 @@ $(document).ready(function () {
     });
 
     $("#nc-form").validate({
-        submitHandler: function (form) {
-            document.getElementById("passVisible").removeAttribute("name");
-            document.getElementById("userVisible").removeAttribute("name");
-
-            $(form).ajaxSubmit();
-        },
         rules: {
             _email: {
                 required: true,
                 isEmail: true
+            },
+            _password: {
+                required: true
+            }
+        }
+    });
+
+    $("#c-form").validate({
+        rules: {
+            _clientId: {
+                required: true
             },
             _password: {
                 required: true
@@ -516,7 +509,7 @@ $(document).ready(function () {
         openModal("newsletterTermsModal");
     });
 
-    function inicio_sesion(data) {
+    function inicio_sesion(data,prospecto = 0) {
         let datajson = JSON.stringify(data);
         $.ajax({
             type: 'GET',
@@ -537,15 +530,24 @@ $(document).ready(function () {
                     complete: hideLoader,
                     success: function (result) {
                         console.log(result);
-                        sessionStorage.setItem("token", result.sessionId);
-                        sessionStorage.setItem("email", result.Email);
-                        sessionStorage.setItem("isClient", "true");
-                        sessionStorage.setItem("isLogged", "true");
-                        sessionStorage.setItem("lastname", result.Nombre);
-                        sessionStorage.setItem("name", result.Nombre);
-                        sessionStorage.setItem("lenght", 6);
-                        window.location = "/tfsm/mis-cotizaciones";
-                        //window.location.href = "/tfsm/mis-cotizaciones";
+                        if (result.code == 1) {
+                            sessionStorage.setItem("token", result.sessionId);
+                            sessionStorage.setItem("email", result.Email);
+                            sessionStorage.setItem("isClient", "true");
+                            sessionStorage.setItem("isLogged", "true");
+                            sessionStorage.setItem("lastname", result.Nombre);
+                            sessionStorage.setItem("name", result.Nombre);
+                            sessionStorage.setItem("lenght", 6);
+                            window.location = "/tfsm/mis-cotizaciones";
+                        } else {
+                            if (prospecto == 0) {
+                                if (result.code == "2.1")
+                                    window.location.href = "/tfsm/home-delivery?err=2.1"
+                                if (result.code == "2.2")
+                                    window.location.href = "/tfsm/home-delivery?err=2.2"
+                            } else
+                                window.location.href = "/tfsm/home-delivery?err=1.1"
+                        }
                     },
                     error: function (err) {
                         console.log('Error en la conexion con SalesForce');
