@@ -229,11 +229,11 @@ $(document).ready(function () {
             var pass = document.getElementById("passVisible").value;
             var user = document.getElementById("userVisible").value;
             var data = {
-                inCliente_email: user,
+                idCliente_email: user,
                 password: pass,
-                esCliente: "true"
+                esCliente: "false"
             };
-            inicio_sesion(data);
+            inicio_sesion(data,1);
         }
     });
 
