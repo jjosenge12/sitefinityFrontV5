@@ -543,7 +543,7 @@ $(document).ready(function () {
                             if (prospecto == 0) {
                                 if (result.code == "2.1")
                                     window.location.href = "/tfsm/home-delivery?err=2.1"
-                                if (result.code == "2.2")
+                                else
                                     window.location.href = "/tfsm/home-delivery?err=2.2"
                             } else
                                 window.location.href = "/tfsm/home-delivery?err=1.1"
