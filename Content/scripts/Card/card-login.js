@@ -7,17 +7,6 @@ $(document).ready(function () {
         }
     });
 
-    $.ajax({
-        type: 'GET',
-        url: window.config.urlbase + '/GetAccessToken',
-        success: function (result) {
-            token = result.result;
-        },
-        error: function (err) {
-            console.log(err);
-        }
-    });
-
     var swiper;
     if (window.location.search.includes("cp")) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -527,7 +516,7 @@ $(document).ready(function () {
         openModal("newsletterTermsModal");
     });
 
-    /*function inicio_sesion(data) {
+    function inicio_sesion(data) {
         let datajson = JSON.stringify(data);
         $.ajax({
             type: 'GET',
@@ -559,62 +548,14 @@ $(document).ready(function () {
                         //window.location.href = "/tfsm/mis-cotizaciones";
                     },
                     error: function (err) {
-                        console.log('ERROR OBTENER DATOS DE SERVICIO');
-                        console.log(data);
-                        console.log(err);
-                        Swal.fire({
-                            title: "Error",
-                            text: "Error al enviar información a Salesforce",
-                            icon: "error",
-                            confirmButtonColor: "#cc0000",
-                            timer: 5000
-                        });
+                        console.log('Error en la conexion con SalesForce');
                     }
                 });
             },
             error: function (err) {
-                console.log(err);
+                console.log('Error token invalido');
             }
         });
-    }*/
-
-    function inicio_sesion(data) {
-        let datajson = JSON.stringify(data);
-        $.ajax({
-            type: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer " + token,
-            },
-            url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityLoginWS",
-            data: datajson,
-            beforeSend: showLoader,
-            complete: hideLoader,
-            success: function (result) {
-                console.log(result);
-                sessionStorage.setItem("token", result.sessionId);
-                sessionStorage.setItem("email", result.Email);
-                sessionStorage.setItem("isClient", "true");
-                sessionStorage.setItem("isLogged", "true");
-                sessionStorage.setItem("lastname", result.Nombre);
-                sessionStorage.setItem("name", result.Nombre);
-                sessionStorage.setItem("lenght", 6);
-                window.location = "/tfsm/mis-cotizaciones";
-                //window.location.href = "/tfsm/mis-cotizaciones";
-            },
-            error: function (err) {
-                console.log('ERROR OBTENER DATOS DE SERVICIO');
-                console.log(data);
-                console.log(err);
-                Swal.fire({
-                    title: "Error",
-                    text: "Error al enviar información a Salesforce",
-                    icon: "error",
-                    confirmButtonColor: "#cc0000",
-                    timer: 5000
-                });
-            }
-        });  
     }
 
 });
