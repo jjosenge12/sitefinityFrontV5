@@ -20,9 +20,9 @@ $(document).ready(function () {
                 })
         }
         else {
-            $("#loading-page").show();
+            $("#loader-overlay").show();
             $Lightning.use("c:solicitudDigitalEmbebed", () => {
-                $Lightning.createComponent("c:frontofficeSolicitudDigital", { "lead": lead, "backUrl": window.config.origin + "/tfsm/mis-cotizaciones" }, "lightning", () => { console.log("YA SE CREO EL COMPONENTE"); $("#loading-page").hide(); });
+                $Lightning.createComponent("c:frontofficeSolicitudDigital", { "lead": lead, "backUrl": window.config.origin + "/tfsm/mis-cotizaciones" }, "lightning", () => { console.log("YA SE CREO EL COMPONENTE"); $("#loader-overlay").hide(); });
             },
                 "https://toyotafinancial--salt001.lightning.force.com", token
             );
