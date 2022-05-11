@@ -514,7 +514,6 @@ $(document).ready(function () {
         $.ajax({
             type: 'GET',
             beforeSend: showLoader,
-            complete: hideLoader,
             url: window.config.urlbase + '/GetAccessToken',
             success: function (result) {
                 token = result.result;
@@ -528,7 +527,6 @@ $(document).ready(function () {
                     },
                     url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityLoginWS",
                     data: datajson,
-                    beforeSend: showLoader,
                     complete: hideLoader,
                     success: function (result) {
                         console.log(result);
