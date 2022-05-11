@@ -513,6 +513,8 @@ $(document).ready(function () {
         let datajson = JSON.stringify(data);
         $.ajax({
             type: 'GET',
+            beforeSend: showLoader,
+            complete: hideLoader,
             url: window.config.urlbase + '/GetAccessToken',
             success: function (result) {
                 token = result.result;
