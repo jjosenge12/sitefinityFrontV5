@@ -22,13 +22,22 @@
 <div class="container my-3 py-3" style="border: solid 0.5px #c0c0c0;border-radius:8px;">
     <div id="lightning" style="font-size:14px;"></div>
 </div>
-<div id="loader-overlay"> 
-     <p class="h4">Loading</p>
+<div id="loading-page"> 
+     <p>Loading</p>
 </div>
 
 <style>
-    p{
-        color:aliceblue;
+    #loading-page {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.7);
     }
 </style>
 
