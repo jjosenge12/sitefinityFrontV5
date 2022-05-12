@@ -20,12 +20,21 @@ $(document).ready(function () {
                 })
         }
         else {
-            $("#loading-page").show();
-            $Lightning.use("c:solicitudDigitalEmbebed", () => {
-                $Lightning.createComponent("c:frontofficeSolicitudDigital", { "lead": lead, "backUrl": window.config.origin + "/tfsm/mis-cotizaciones" }, "lightning", () => { console.log("YA SE CREO EL COMPONENTE"); $("#loading-page").hide(); });
-            },
-                "https://toyotafinancial--salt001.lightning.force.com", token
-            );
+            if (sessionStorage.getItem("enviada") == "true") {
+                $("#loading-page").show();
+                $Lightning.use("c:solicitudDigitalTerminadaEmbebed", () => {
+                    $Lightning.createComponent("c:frontofficeSolicitudDigitalTerminada", { "lead": lead, "backUrl": window.config.origin + "/tfsm/mis-cotizaciones" }, "lightning", () => { console.log("YA SE CREO EL COMPONENTE"); $("#loading-page").hide(); });
+                },
+                    "https://toyotafinancial--salt001.lightning.force.com", token
+                );
+            } else {
+                $("#loading-page").show();
+                $Lightning.use("c:solicitudDigitalEmbebed", () => {
+                    $Lightning.createComponent("c:frontofficeSolicitudDigital", { "lead": lead, "backUrl": window.config.origin + "/tfsm/mis-cotizaciones" }, "lightning", () => { console.log("YA SE CREO EL COMPONENTE"); $("#loading-page").hide(); });
+                },
+                    "https://toyotafinancial--salt001.lightning.force.com", token
+                );
+            }
         }
     }
 

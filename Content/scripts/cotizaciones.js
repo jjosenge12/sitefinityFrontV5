@@ -294,6 +294,11 @@ $(document).ready(() => {
                         .then(() => cotizar());
                 })
 
+                $(".true").click(function (e) {
+                    if (e.text() == "Solicitud enviada")
+                        sessionStorage.setItem("enviada", "true");
+                })
+
 
                 function getFormValues(idPdf) {
                     form = {
@@ -469,8 +474,8 @@ $(document).ready(() => {
         },
 
         error: (err) => console.log(err),
-        url: window.config.urlToyotaCotizaciones + "/services/apexrest/sitefinity",
-        //url: window.config.urlbase + '/coti',
+        //url: window.config.urlToyotaCotizaciones + "/services/apexrest/sitefinity",
+        url: window.config.urlbase + '/coti',
     };
 
     try {
