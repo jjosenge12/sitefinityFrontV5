@@ -295,7 +295,7 @@ $(document).ready(() => {
                 })
 
                 $(".true").click(function (e) {
-                    if (e.text() == "Solicitud enviada")
+                    if ($(this).text() == "Solicitud enviada")
                         sessionStorage.setItem("enviada", "true");
                 })
 
