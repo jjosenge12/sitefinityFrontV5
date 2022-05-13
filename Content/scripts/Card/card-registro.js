@@ -1,4 +1,4 @@
-﻿var token = "";
+﻿var token ;
 
 $(document).ready(function () {
   
@@ -49,7 +49,7 @@ $(document).ready(function () {
                     lastName: document.getElementById("lastnameVisible-nr").value,
                     email: document.getElementById("emailVisible-nr").value
                 }
-                registro(data, 'https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS', 0);
+                registro(data, 'https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterProspectoWS', 0);
             }
             else {
                 e.preventDefault();
@@ -246,6 +246,7 @@ $(document).ready(function () {
 
     function registro(data,url,cliente) {
         let datajson = JSON.stringify(data);
+        console.log(data);
         $.ajax({
             type: 'GET',
             beforeSend: showLoader,
@@ -265,6 +266,7 @@ $(document).ready(function () {
                     success: function (result) {
                         console.log(result);
                         if (result.code == 200) {
+                            console.log(result);
                             if (cliente == 1) {
                                 sessionStorage.setItem("reg-client", true);
                                 sessionStorage.setItem("reg-clientId", document.getElementById("clientVisible-r").value);
@@ -293,6 +295,7 @@ $(document).ready(function () {
                                 },
                                 url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS",
                                 data: datajson2,
+                                complete: hideLoader,
                                 success: function (result) {
                                     if (result == "true")
                                         window.location.href = "/tfsm/home-delivery?ok=1"
