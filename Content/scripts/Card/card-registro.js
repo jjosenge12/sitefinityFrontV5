@@ -221,13 +221,14 @@ $(document).ready(function () {
             "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json"
         };
-
-        $.ajax("https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS", {
+        let datajson = JSON.stringify(data);
+        $.ajax({
+            url: 'https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS',
             beforeSend: showLoader,
             complete: hideLoader,
             method: 'put',
             headers: headers,
-            data: JSON.stringify(data),
+            data: JSON.stringify(datajson),
             error: function (res) {
                 Swal.fire({
                     icon: "error",
@@ -287,7 +288,7 @@ $(document).ready(function () {
                             data2 = {
                                 email : data.email,
                                 idUsuario: id,
-                                url: window.location.origin
+                                url: window.location.origin,
                             }
                             let datajson2 = JSON.stringify(data2);
                             $.ajax({
