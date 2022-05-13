@@ -184,6 +184,30 @@ $(document).ready(function () {
         }
     });
 
+    $("#registro-nc-form").validate({
+        rules: {
+            _name: {
+                required: true,
+                isValidName: true,
+                minlength: 2
+            },
+            _lastname: {
+                required: true,
+                isValidName: true,
+                minlength: 2
+            },
+            _rfc: {
+                required: true,
+                minlength: 12,
+                maxlength: 13
+            },
+            _email: {
+                required: true,
+                isEmail: true
+            }
+        }
+    });
+
     $("#reenviar").click(function () {
         let data = {
             rfc: sessionStorage.getItem("reg-rfc"),
@@ -217,29 +241,7 @@ $(document).ready(function () {
         })
     });
 
-    $("#registro-nc-form").validate({
-        rules: {
-            _name: {
-                required: true,
-                isValidName: true,
-                minlength: 2
-            },
-            _lastname: {
-                required: true,
-                isValidName: true,
-                minlength: 2
-            },
-            _rfc: {
-                required: true,
-                minlength: 12,
-                maxlength: 13
-            },
-            _email: {
-                required: true,
-                isEmail: true
-            }
-        }
-    });
+    
 
 
     function registro(data,url,cliente) {
@@ -278,7 +280,7 @@ $(document).ready(function () {
                             }
                             var id = result.idUsuario;
                             data2 = {
-                                email = data.email,
+                                email : data.email,
                                 idUsuario: id,
                                 url: window.location.origin + 'home-delivery/cambiar-contrasena'
                             }
@@ -306,6 +308,7 @@ $(document).ready(function () {
                     },
                     error: function (err) {
                         console.log('Error en la conexion con SalesForce');
+                        window.location.href = "/tfsm/home-delivery";
                     }
                 });
             },
