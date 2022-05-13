@@ -210,9 +210,11 @@ $(document).ready(function () {
 
     $("#reenviar").click(function () {
         let data = {
-            rfc: sessionStorage.getItem("reg-rfc"),
-            email: sessionStorage.getItem("reg-email")
+            email: sessionStorage.getItem("reg-email"),
+            idUsuario: sessionStorage.getItem("id"),
+            url: window.location.origin
         }
+        
 
         var headers = {
             "Authorization": "Bearer " + token,
@@ -220,7 +222,7 @@ $(document).ready(function () {
             "Content-Type": "application/json"
         };
 
-        $.ajax(window.config.UrlMySalesforce + '/services/apexrest/SetPasswordSitefinity', {
+        $.ajax("https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS", {
             beforeSend: showLoader,
             complete: hideLoader,
             method: 'put',
@@ -281,10 +283,11 @@ $(document).ready(function () {
                                 sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible-nr").value);
                             }
                             var id = result.idUsuario;
+                            sessionStorage.setItem("id", id);
                             data2 = {
                                 email : data.email,
                                 idUsuario: id,
-                                url: window.location.origin + 'home-delivery/cambiar-contrasena'
+                                url: window.location.origin
                             }
                             let datajson2 = JSON.stringify(data2);
                             $.ajax({

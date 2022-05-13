@@ -315,6 +315,9 @@ $(document).ready(function () {
                 if (document.activeElement.classList[0] == 'btn-registro')
                     $("#volver-nc").focus();
             }
+            if (e.keyCode == 13 || e.which == 13) {
+                $("#boton-login-nocliente").click();
+            }
         });
 
     });
@@ -325,6 +328,9 @@ $(document).ready(function () {
             if (e.keyCode == 9 || e.which == 9) {
                 if (document.activeElement.classList[0] == 'btn-registro')
                     $("#volver-c").focus();
+            }
+            if (e.keyCode == 13 || e.which == 13) {
+                $("#boton-login-cliente").click();
             }
         });
 
@@ -368,6 +374,9 @@ $(document).ready(function () {
                 if (document.activeElement.classList[0] == 'btn-registro')
                     $("#volver-inicio-c").focus();
             }
+            if (e.keyCode == 13 || e.which == 13) {
+                $("#boton-registro-cliente").click();
+            }
         });
         $('input:checkbox').keypress(function (e) {
             if ((e.keyCode ? e.keyCode : e.which) == 13) {
@@ -385,6 +394,9 @@ $(document).ready(function () {
             if (e.keyCode == 9 || e.which == 9) {
                 if (document.activeElement.classList[0] == 'btn-registro')
                     $("#volver-inicio-nc").focus();
+            }
+            if (e.keyCode == 13 || e.which == 13) {
+                    $("#boton-registro-nocliente").click();
             }
         });
         $('input:checkbox').keypress(function (e) {
