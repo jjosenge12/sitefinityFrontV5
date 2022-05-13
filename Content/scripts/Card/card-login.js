@@ -537,7 +537,6 @@ $(document).ready(function () {
                             sessionStorage.setItem("isLogged", "true");
                             sessionStorage.setItem("lastname", result.Nombre);
                             sessionStorage.setItem("name", result.Nombre);
-                            sessionStorage.setItem("lenght", 6);
                             window.location = "/tfsm/mis-cotizaciones";
                         } else {
                             if (prospecto == 0) {

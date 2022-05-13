@@ -286,7 +286,7 @@
                                 Completa los siguientes campos para generar tu cuenta de ingreso a nuestra plataforma Home Delivery, con la que podrás iniciar y dar seguimiento a tu proceso de financiamiento para estrenar un Toyota.
                             </p>
                         </div>
-                        <div data-id="registro-c-form" class="sf-form-container regis" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinityregister">
+                        <div data-id="registro-c-form" class="sf-form-container regis">
                             <div class="row mt-5">
                                 <div class="col-12 col-lg-6">
                                     <div class="float-container">
@@ -323,9 +323,8 @@
                             <input type="hidden" value="" name="client" id="client-r" />
                             <input type="hidden" value="" name="email" id="email-r" />
                             <input type="hidden" value="" name="rfc" id="rfc-r" />
-                            <input type="hidden" name="fail" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery" id="fail-r" />
-                            <input type="hidden" name="ok" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery?ok=1"
-                                   id="ok-r" />
+                            <input type="hidden" name="fail"/>
+                            <input type="hidden" name="ok" id="ok-r" />
 
                             <div class="my-5 row align-items-center justify-content-center">
                                 <div class="col-12 col-lg-12 mb-4">
@@ -337,7 +336,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4 d-flex justify-content-center">
-                                    <button type="submit" class="btn-registro align-self-center g-recaptcha">REGISTRARME</button>
+                                    <button type="submit" class="btn-registro align-self-center g-recaptcha" id="boton-registro-cliente">REGISTRARME</button>
                                 </div>
                             </div>
 
@@ -361,7 +360,7 @@
                                 Completa los siguientes campos para generar tu cuenta de ingreso a nuestra plataforma Home Delivery, con la que podrás iniciar y dar seguimiento a tu proceso de financiamiento para estrenar un Toyota.
                             </p>
                         </div>
-                        <div data-id="registro-nc-form" class="sf-form-container regis" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinityregister">
+                        <div data-id="registro-nc-form" class="sf-form-container regis">
                             <div class="row mt-5">
                                 <div class="col-12 col-lg-6">
                                     <div class="float-container">
@@ -408,9 +407,8 @@
                             <input type="hidden" value="" name="lastname" id="lastname-nr" />
                             <input type="hidden" value="" name="email" id="email-nr" />
                             <input type="hidden" value="" name="rfc" id="rfc-nr" />
-                            <input type="hidden" name="fail" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery" id="fail-nr" />
-                            <input type="hidden" name="ok" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery?ok=1"
-                                   id="ok-nr" />
+                            <input type="hidden" name="fail" id="fail-nr" />
+                            <input type="hidden" name="ok" id="ok-nr" />
 
                             <div class="my-5 row align-items-center justify-content-center">
                                 <div class="col-12 col-lg-12 mb-4">
@@ -422,7 +420,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4 d-flex justify-content-center">
-                                    <button type="submit" class="btn-registro g-recaptcha">REGISTRARME</button>
+                                    <button type="submit" class="btn-registro g-recaptcha" id="boton-registro-nocliente">REGISTRARME</button>
                                 </div>
                             </div>
 

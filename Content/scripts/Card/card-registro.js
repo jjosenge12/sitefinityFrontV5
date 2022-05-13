@@ -1,14 +1,6 @@
 ﻿var token = "";
 
 $(document).ready(function () {
-
-    $.ajax(window.config.urlbase + "/GetAccessToken", {
-        beforeSend: showLoader,
-        complete: hideLoader,
-        success: function (data) {
-            token = data.result;
-        }
-    });
   
     $(".sf-form-container.regis").each(function () {
         var form = document.createElement("form");
@@ -48,16 +40,16 @@ $(document).ready(function () {
         );
     });
 
-    $("#registro-nc-form").submit(function (e) {
+    $("#boton-registro-nocliente").click(function (e) {
         if ($("#registro-nc-form").valid()) {
             if ($("#registro-terms-nc").prop("checked")) {
-                encrypt_reg(false);
-
-                sessionStorage.setItem("reg-client", false);
-                sessionStorage.setItem("reg-name", document.getElementById("nameVisible-nr").value);
-                sessionStorage.setItem("reg-lastname", document.getElementById("lastnameVisible-nr").value);
-                sessionStorage.setItem("reg-email", document.getElementById("emailVisible-nr").value);
-                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible-nr").value);
+                var data = {
+                    rfcFull: document.getElementById("rfcVisible-nr").value,
+                    name: document.getElementById("nameVisible-nr").value,
+                    lastName: document.getElementById("lastnameVisible-nr").value,
+                    email: document.getElementById("emailVisible-nr").value
+                }
+                registro(data, 'https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS', 0);
             }
             else {
                 e.preventDefault();
@@ -100,15 +92,15 @@ $(document).ready(function () {
 
     $("#closeAviPrivCli").click(() => closeModal("avisoPrivClientesModal"));
 
-    $("#registro-c-form").submit(function (e) {
+    $("#boton-registro-cliente").click(function (e) {
         if ($("#registro-c-form").valid()) {
             if ($("#registro-terms-c").prop("checked")) {
-                encrypt_reg(true);
-
-                sessionStorage.setItem("reg-client", true);
-                sessionStorage.setItem("reg-clientId", document.getElementById("clientVisible-r").value);
-                sessionStorage.setItem("reg-email", document.getElementById("emailVisible-r").value);
-                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible-r").value);
+                var data = {
+                    rfcFull: document.getElementById("rfcVisible-r").value,
+                    idCliente: document.getElementById("clientVisible-r").value,
+                    email: document.getElementById("emailVisible-r").value
+                }
+                registro(data, 'https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS', 1);
             }
             else {
                 e.preventDefault();
@@ -176,13 +168,6 @@ $(document).ready(function () {
     });
 
     $("#registro-c-form").validate({
-        submitHandler: function (form) {
-            document.getElementById("clientVisible-r").removeAttribute("name");
-            document.getElementById("rfcVisible-r").removeAttribute("name");
-            document.getElementById("emailVisible-r").removeAttribute("name");
-
-            $(form).ajaxSubmit();
-        },
         rules: {
             _clientId: {
                 required: true
@@ -233,14 +218,6 @@ $(document).ready(function () {
     });
 
     $("#registro-nc-form").validate({
-        submitHandler: function (form) {
-            document.getElementById("nameVisible-nr").removeAttribute("name");
-            document.getElementById("lastnameVisible-nr").removeAttribute("name");
-            document.getElementById("emailVisible-nr").removeAttribute("name");
-            document.getElementById("rfcVisible-nr").removeAttribute("name");
-
-            $(form).ajaxSubmit();
-        },
         rules: {
             _name: {
                 required: true,
@@ -263,6 +240,80 @@ $(document).ready(function () {
             }
         }
     });
+
+
+    function registro(data,url,cliente) {
+        let datajson = JSON.stringify(data);
+        $.ajax({
+            type: 'GET',
+            beforeSend: showLoader,
+            url: window.config.urlbase + '/GetAccessToken',
+            success: function (result) {
+                token = result.result;
+            },
+            complete: function () {
+                $.ajax({
+                    type: 'POST',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": "Bearer " + token,
+                    },
+                    url: url,
+                    data: datajson,
+                    success: function (result) {
+                        console.log(result);
+                        if (result.code == 200) {
+                            if (cliente == 1) {
+                                sessionStorage.setItem("reg-client", true);
+                                sessionStorage.setItem("reg-clientId", document.getElementById("clientVisible-r").value);
+                                sessionStorage.setItem("reg-email", document.getElementById("emailVisible-r").value);
+                                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible-r").value);
+                            }
+                            else {
+                                sessionStorage.setItem("reg-client", false);
+                                sessionStorage.setItem("reg-name", document.getElementById("nameVisible-nr").value);
+                                sessionStorage.setItem("reg-lastname", document.getElementById("lastnameVisible-nr").value);
+                                sessionStorage.setItem("reg-email", document.getElementById("emailVisible-nr").value);
+                                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible-nr").value);
+                            }
+                            var id = result.idUsuario;
+                            data2 = {
+                                email = data.email,
+                                idUsuario: id,
+                                url: window.location.origin + 'home-delivery/cambiar-contrasena'
+                            }
+                            let datajson2 = JSON.stringify(data2);
+                            $.ajax({
+                                type: 'PUT',
+                                headers: {
+                                    "Content-Type": "application/json",
+                                    "Authorization": "Bearer " + token,
+                                },
+                                url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS",
+                                data: datajson2,
+                                success: function (result) {
+                                    if (result == "true")
+                                        window.location.href = "/tfsm/home-delivery?ok=1"
+                                    else
+                                        Swal.fire({
+                                            icon: "error",
+                                            title: "Ocurrio un error al intentar enviar el mail"
+                                        });
+                                }
+                            });
+                        } else
+                            window.location.href = "/tfsm/home-delivery?err=" + result.code;
+                    },
+                    error: function (err) {
+                        console.log('Error en la conexion con SalesForce');
+                    }
+                });
+            },
+            error: function (err) {
+                console.log('Error token invalido');
+            }
+        });
+    }
 
 
 });
