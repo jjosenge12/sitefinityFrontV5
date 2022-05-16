@@ -228,7 +228,7 @@ $(document).ready(function () {
             complete: hideLoader,
             method: 'put',
             headers: headers,
-            data: JSON.stringify(datajson),
+            data: datajson,
             error: function (res) {
                 Swal.fire({
                     icon: "error",
