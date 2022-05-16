@@ -214,10 +214,10 @@ $(document).ready(function () {
             idUsuario: sessionStorage.getItem("id"),
             url: window.location.origin
         }
-        
+        let token1 = sessionStorage.getItem("token");
 
         var headers = {
-            "Authorization": "Bearer " + token,
+            "Authorization": "Bearer " + token1,
             "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json"
         };
@@ -256,6 +256,7 @@ $(document).ready(function () {
             url: window.config.urlbase + '/GetAccessToken',
             success: function (result) {
                 token = result.result;
+                sessionStorage.setItem("token", token);
             },
             complete: function () {
                 $.ajax({
@@ -267,7 +268,6 @@ $(document).ready(function () {
                     url: url,
                     data: datajson,
                     success: function (result) {
-                        console.log(result);
                         if (result.code == 200) {
                             console.log(result);
                             if (cliente == 1) {
@@ -303,11 +303,9 @@ $(document).ready(function () {
                                 success: function (result) {
                                     if (result == "true")
                                         window.location.href = "/tfsm/home-delivery?ok=1"
-                                    else
-                                        Swal.fire({
-                                            icon: "error",
-                                            title: "Ocurrio un error al intentar enviar el mail"
-                                        });
+                                },
+                                error: function (err) {
+                                    console.log("No se pudo enviar el mail")
                                 }
                             });
                         } else
