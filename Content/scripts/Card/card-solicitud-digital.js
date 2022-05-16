@@ -25,14 +25,14 @@ $(document).ready(function () {
                 $Lightning.use("c:solicitudDigitalTerminadaEmbebed", () => {
                     $Lightning.createComponent("c:frontofficeSolicitudDigitalTerminada", { "lead": lead, "backUrl": window.config.origin + "/tfsm/mis-cotizaciones" }, "lightning", () => { console.log("YA SE CREO EL COMPONENTE"); $("#loading-page").hide(); });
                 },
-                    "https://toyotafinancial--salt001.lightning.force.com", token
+                    window.config.urlToyotaFinancial, token
                 );
             } else {
                 $("#loading-page").show();
                 $Lightning.use("c:solicitudDigitalEmbebed", () => {
                     $Lightning.createComponent("c:frontofficeSolicitudDigital", { "lead": lead, "backUrl": window.config.origin + "/tfsm/mis-cotizaciones" }, "lightning", () => { console.log("YA SE CREO EL COMPONENTE"); $("#loading-page").hide(); });
                 },
-                    "https://toyotafinancial--salt001.lightning.force.com", token
+                    window.config.urlToyotaFinancial, token
                 );
             }
         }

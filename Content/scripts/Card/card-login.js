@@ -556,7 +556,7 @@ $(document).ready(function () {
                         "Content-Type": "application/json",
                         "Authorization": "Bearer " + token,
                     },
-                    url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityLoginWS",
+                    url: window.config.urlToyotaCotizaciones + "/services/apexrest/SitefinityLoginWS",
                     data: datajson,
                     complete: hideLoader,
                     success: function (result) {

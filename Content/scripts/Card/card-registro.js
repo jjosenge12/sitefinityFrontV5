@@ -49,7 +49,7 @@ $(document).ready(function () {
                     lastName: document.getElementById("lastnameVisible-nr").value,
                     email: document.getElementById("emailVisible-nr").value
                 }
-                registro(data, 'https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterProspectoWS', 0);
+                registro(data, window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterProspectoWS', 0);
             }
             else {
                 e.preventDefault();
@@ -100,7 +100,7 @@ $(document).ready(function () {
                     idCliente: document.getElementById("clientVisible-r").value,
                     email: document.getElementById("emailVisible-r").value
                 }
-                registro(data, 'https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS', 1);
+                registro(data, window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterClientWS', 1);
             }
             else {
                 e.preventDefault();
@@ -223,7 +223,7 @@ $(document).ready(function () {
         };
         let datajson = JSON.stringify(data);
         $.ajax({
-            url: 'https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS',
+            url: window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterClientWS',
             beforeSend: showLoader,
             complete: hideLoader,
             method: 'put',
@@ -297,7 +297,7 @@ $(document).ready(function () {
                                     "Content-Type": "application/json",
                                     "Authorization": "Bearer " + token,
                                 },
-                                url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/SitefinityRegisterClientWS",
+                                url: window.config.urlToyotaCotizaciones + "/services/apexrest/SitefinityRegisterClientWS",
                                 data: datajson2,
                                 complete: hideLoader,
                                 success: function (result) {
