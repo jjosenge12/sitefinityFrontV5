@@ -211,7 +211,7 @@ $(document).ready(function () {
     $("#reenviar").click(function () {
         let data = {
             email: sessionStorage.getItem("reg-email"),
-            idUsuario: sessionStorage.getItem("id"),
+            idUsuario: "null",
             url: window.location.origin
         }
         let token1 = sessionStorage.getItem("token");
