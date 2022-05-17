@@ -208,6 +208,20 @@ function capitalize(str) {
     });
 }
 
+function capitalize2(str) {
+
+    const listaPalabras = str.toLowerCase().split(' ');
+
+    for (var i = 0; i < listaPalabras.length; i++) {
+        listaPalabras[i] = listaPalabras[i].charAt(0).toUpperCase() + listaPalabras[i].slice(1);
+    }
+
+    const cadena = listaPalabras.join(' ');
+
+    return cadena;
+
+}
+
 $(document).ready(function () {
     var select_validator = $("#state-select").validate({
         rules:
@@ -460,7 +474,7 @@ function createDealerCards(data) {
         title.classList.add("dealer-result-title");
         address.classList.add("dealer-result-address");
 
-        title.innerHTML = capitalize(x.Dealer);
+        title.innerHTML = capitalize2(x.Dealer);
         address.innerHTML = x.Adress;
         card.append(title);
         card.append(address);
