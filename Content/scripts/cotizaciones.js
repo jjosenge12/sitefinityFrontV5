@@ -94,6 +94,14 @@ $(document).ready(() => {
         complete: hideLoader,
         success: (data) => {
             console.log(data);
+            if (sessionStorage.getItem("idcoti")) {
+                let href = "/tfsm/my-tfsm/solicitud-digital?lead=" + sessionStorage.getItem("idcoti");
+                let id = sessionStorage.getItem("idcoti");
+                sessionStorage.removeItem("idcoti");
+                if (data.cotizaciones[0].clickeable === "true" && data.cotizaciones[0].id == id) {
+                    window.location.replace(window.location.origin + href);
+                }
+            }
 
             //Sección de Bienvenida Home Delivery
             var bannerBienvenida = "";
@@ -298,15 +306,6 @@ $(document).ready(() => {
                     if ($(this).text() == "Solicitud enviada")
                         sessionStorage.setItem("enviada", "true");
                 })
-
-                if (sessionStorage.getItem("idcoti")) {
-                    if (data.cotizaciones[0].clickeable === "true" && data.cotizaciones[0].id == sessionStorage.getItem("idcoti")) {
-                        let href = "/tfsm/my-tfsm/solicitud-digital?lead=" + sessionStorage.getItem("idcoti");
-                        sessionStorage.removeItem("idcoti");
-                        window.location.replace(window.location.origin + href);
-                    }
-                }
-
 
                 function getFormValues(idPdf) {
                     form = {
