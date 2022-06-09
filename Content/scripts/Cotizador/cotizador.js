@@ -695,6 +695,10 @@ $(document).ready(function () {
         sendDataSalesforce();
     });
 
+    $("#iniciar-coti").click(() => {
+        sessionStorage.setItem("idcoti", idcoti);
+    });
+
     $("#step-5-back").click(() => {
         swiper.slidePrev();
         //$("#porcentaje").html(enganche_porcen);

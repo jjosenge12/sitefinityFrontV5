@@ -299,6 +299,14 @@ $(document).ready(() => {
                         sessionStorage.setItem("enviada", "true");
                 })
 
+                if (sessionStorage.getItem("idcoti")) {
+                    if (data.cotizaciones[0].clickeable === "true" && data.cotizaciones[0].id == sessionStorage.getItem("idcoti")) {
+                        let href = "/tfsm/my-tfsm/solicitud-digital?lead=" + sessionStorage.getItem("idcoti");
+                        sessionStorage.removeItem("idcoti");
+                        window.location.replace(window.location.origin + href);
+                    }
+                }
+
 
                 function getFormValues(idPdf) {
                     form = {
