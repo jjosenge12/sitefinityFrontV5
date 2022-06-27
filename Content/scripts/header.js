@@ -30,7 +30,7 @@ grecaptcha.ready(function () {
         .then(function (token) {
             // add token value to form
             recaptchaToken = token;
-            console.log(token);
+            //console.log(token);
         });
 });
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
             window.location.replace(window.location.origin);
     } else {
         //if (sessionStorage.length == 0 || isLogged == "false" || reg) {
-        $("#link-finan").text("FINANCIAMIENTO EN LÍNEA");
+        $("#link-finan").text("Inicia tu crédito");
     }
 
     $("#logout").click(function () {

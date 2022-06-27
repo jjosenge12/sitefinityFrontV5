@@ -31,8 +31,8 @@
     </div>
     <div class="col-6 col-md-10 customNavbar">
         <nav class="links d-none d-md-block">
-            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()" id="my-tfsm">My TFS</a>
-            <a href="/cotizador">Cotizar Plan</a>
+            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()" id="my-tfsm">myTFS</a>
+            <a href="/cotizador">Cotiza aquí</a>
             <a href="/tfsm/home-delivery" class="linkFinanciamiento" id="link-finan"></a>
         </nav>
         <div class="btn menuButton toggleMenu" id="openMenuBtn"><span class="material-icons">menu</span></div>
@@ -42,8 +42,8 @@
     </div>
     <div class="drawerMenu" style="display:none;" id="drawerMenu">
         <div id="logout">Cerrar sesión&nbsp;<span class="material-icons">logout</span></div>
-        <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()" id="my-tfsm-menu">My TFS</a>
-        <a href="/tfsm/home-delivery" id="link-finan-menu">Financiamiento en l&iacute;nea</a>
+        <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()" id="my-tfsm-menu">myTFS</a>
+        <a href="/tfsm/home-delivery" id="link-finan-menu">Inicia tu cr&eacute;dito</a>
         <div id="deployPlans" class="deployItems">
             <span>Nuestros Planes</span>
             <span class="material-icons pointRight" id="deployPlansArrow">chevron_right</span>
@@ -55,7 +55,7 @@
                 <a class="menuLink" href="/nuestros-planes/tasas-y-comisiones">Tasas y comisiones</a>
             </div>
         </span>
-        <a href="/cotizador">Cotizar Plan</a>
+        <a href="/cotizador">Cotiza aquí</a>
         <div id="deployArrendamientos" class="deployItems">
             <span>Arrendamientos</span>
             <span class="material-icons pointRight" id="deployArrendamientosArrow">chevron_right</span>
