@@ -12,6 +12,10 @@
     display: grid !important;
 }
 
+.textX2{
+    font-size:28px;
+}
+
 .flex-center {
     display: flex;
     align-items: center;
