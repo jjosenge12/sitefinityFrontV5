@@ -96,6 +96,10 @@ $(document).ready(function () {
         minlength: jQuery.validator.format("Mínimo {0} caracteres."),
     });
 
+    const linkImp = document.getElementById("link-impuestos");
+
+    linkImp.innerHTML = "<a href='https://www.sat.gob.mx/ordenamiento/18355/ley-del-impuesto-sobre-la-renta' target= '_blank' >click aquí</a>";
+
     $.validator.addMethod(
         "valueNotEquals",
         function (value, element, arg) {
