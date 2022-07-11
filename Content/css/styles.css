@@ -1538,6 +1538,12 @@ label.error {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+@media (min-width: 1900px) {
+    .text-normal {
+        font-size: 24px !important;
+    }
+}
+
 /* LARGE */
 @media (min-width: 992px) {
   .w-lg-95 {
