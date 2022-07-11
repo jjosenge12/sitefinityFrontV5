@@ -1538,9 +1538,12 @@ label.error {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 2200px) {
     .text-normal {
         font-size: 24px !important;
+    }
+    .perks > div > img {
+        width: 60px !important;
     }
 }
 
