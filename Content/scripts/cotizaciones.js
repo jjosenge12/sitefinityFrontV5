@@ -141,10 +141,9 @@ $(document).ready(() => {
                         '<h1 class="cotizaciones-title">Hola ' +
                         capitalize(nombre) +
                         "<br />Nos da mucho gusto que sigas siendo parte de la familia Toyota." +
-                        '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
-                        "En &eacute;l podr&aacute;s iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
-                        '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
-                        '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
+                        '</h1><p class="cotizaciones-p">Aqu&iacute; podr&aacute;s iniciar y dar seguimiento a tu proceso de cr&eacute;dito.' +
+                        "</p></div>" +
+                        '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +                        
                         '</div><div class="col-md-1"></div>';
                 } else {
                     bannerBienvenida +=
@@ -152,10 +151,9 @@ $(document).ready(() => {
                         '<h1 class="cotizaciones-title">Hola ' +
                         capitalize(nombre) +
                         "<br />Nos da mucho gusto que quieras ser parte de la familia Toyota." +
-                        '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
-                        "En &eacute;l podr&aacute;s iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
-                        '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
-                        '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
+                        '</h1><p class="cotizaciones-p">Aqu&iacute; podr&aacute;s iniciar y dar seguimiento a tu proceso de cr&eacute;dito.' +
+                        "</p></div>" +
+                        '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +                        
                         '</div><div class="col-md-1"></div>';
                 }
                 $("#bannerBienvenida").append(bannerBienvenida);
