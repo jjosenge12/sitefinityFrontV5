@@ -250,6 +250,13 @@ $(document).ready(function () {
         );
     });
 
+    $("#plansPriv").click(() => {
+        window.open(
+            window.location.origin + "/legales/aviso-de-privacidad",
+            "_blank"
+        );
+    });
+
     $("#termsCheckbox").click(function (e) {
         if ($("#termsCheckbox").prop("checked")) {
             e.preventDefault();

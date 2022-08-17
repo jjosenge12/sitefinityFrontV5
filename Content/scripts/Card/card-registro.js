@@ -24,6 +24,26 @@ $(document).ready(function () {
         );
     });
 
+    $("#priv-cli-btn").click(function () {
+        console.log("entre");
+        termsCheckbox = "#registro-terms";
+
+        window.open(
+            window.location.origin + "/aviso-de-privacidad-para-clientes",
+            "_blank"
+        );
+    });
+
+    $("#priv-pros-btn").click(function () {
+        console.log("entre");
+        termsCheckbox = "#registro-terms";
+
+        window.open(
+            window.location.origin + "/legales/aviso-de-privacidad",
+            "_blank"
+        );
+    });
+
     $("#registro-terms").click(function () {
         console.log("entre");
         termsCheckbox = "#registro-terms";

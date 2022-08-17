@@ -156,6 +156,13 @@ $(document).ready(function () {
         );
     });
 
+    $("#step-2-priv-btn").click(function () {
+        window.open(
+            window.location.origin + "/legales/aviso-de-privacidad",
+            "_blank"
+        );
+    });
+
     $("#step-2-continue").click(() => {
         if ($("#step-2-form").valid()) {
             if ($("#step-2-terms").prop("checked")) {
