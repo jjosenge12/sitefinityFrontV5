@@ -69,7 +69,7 @@ $(document).ready(function () {
                     lastName: document.getElementById("lastnameVisible-nr").value,
                     email: document.getElementById("emailVisible-nr").value
                 }
-                registro(data, window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterProspectoWS', 0);
+                registro(data, window.config.urlbase + '/RegistroPC', 0);
             }
             else {
                 e.preventDefault();
@@ -120,7 +120,7 @@ $(document).ready(function () {
                     idCliente: document.getElementById("clientVisible-r").value,
                     email: document.getElementById("emailVisible-r").value
                 }
-                registro(data, window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterClientWS', 1);
+                registro(data, window.config.urlbase + '/RegistroPC', 1);
             }
             else {
                 e.preventDefault();
@@ -269,22 +269,8 @@ $(document).ready(function () {
 
     function registro(data,url,cliente) {
         let datajson = JSON.stringify(data);
-        console.log(data);
-        $.ajax({
-            type: 'GET',
-            beforeSend: showLoader,
-            url: window.config.urlbase + '/GetAccessToken',
-            success: function (result) {
-                token = result.result;
-                sessionStorage.setItem("token", token);
-            },
-            complete: function () {
                 $.ajax({
                     type: 'POST',
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": "Bearer " + token,
-                    },
                     url: url,
                     data: datajson,
                     success: function (result) {
@@ -317,7 +303,7 @@ $(document).ready(function () {
                                     "Content-Type": "application/json",
                                     "Authorization": "Bearer " + token,
                                 },
-                                url: window.config.urlToyotaCotizaciones + "/services/apexrest/SitefinityRegisterClientWS",
+                                url: window.config.urlbase + "/Put-mail",
                                 data: datajson2,
                                 complete: hideLoader,
                                 success: function (result) {
@@ -336,11 +322,6 @@ $(document).ready(function () {
                         window.location.href = "/tfsm/home-delivery";
                     }
                 });
-            },
-            error: function (err) {
-                console.log('Error token invalido');
-            }
-        });
     }
 
 
