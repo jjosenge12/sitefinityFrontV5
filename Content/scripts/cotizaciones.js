@@ -479,8 +479,8 @@ $(document).ready(() => {
         },
 
         error: (err) => console.log(err),
-        url: window.config.urlToyotaCotizaciones + "/services/apexrest/sitefinity",
-        //url: window.config.urlbase + '/coti',
+        //url: window.config.urlToyotaCotizaciones + "/services/apexrest/sitefinity",
+        url: window.config.urlbase + '/coti',
     };
 
     try {
