@@ -118,13 +118,14 @@ function submitPassword() {
         "password": $("#password").val()
     };
 
-    $.ajax(window.config.UrlMySalesforce + '/services/apexrest/SetPasswordSitefinity', {
+    $.ajax(window.config.urlbase + '/SetPassword', {
         beforeSend: showLoader,
         complete: hideLoader,
-        method: 'post',
+        method: 'POST',
         headers: headers,
         data: JSON.stringify(body),
         success: function (res) {
+            res = JSON.parse(res);
             console.log(res);
 
             $("#password").val("");
