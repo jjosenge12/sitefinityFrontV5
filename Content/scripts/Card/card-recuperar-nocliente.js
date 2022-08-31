@@ -95,4 +95,39 @@
         termsCheckbox = "#registro-terms";
         openModal("newsletterTermsModal");
     });
+
+    $("#enviar").click(function () {
+
+        let data = {
+            rfcVisible: document.getElementById("rfcVisible").value,
+            email: document.getElementById("emailVisible").value,
+            url: window.location.origin
+        }
+
+        var headers = {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json"
+        };
+        let datajson = JSON.stringify(data);
+        $.ajax({
+            url: window.config.urlbase + '/UpdatePassword',
+            beforeSend: showLoader,
+            complete: hideLoader,
+            method: 'POST',
+            headers: headers,
+            data: datajson,
+            error: function (res) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Ocurrio un error al intentar reenviar el mail"
+                })
+            },
+            success: function (res) {
+                Swal.fire({
+                    icon: "success",
+                    title: "Se ha reenviado el mail correctamente"
+                })
+            }
+        })
+    });
 });

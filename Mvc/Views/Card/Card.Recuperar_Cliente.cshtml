@@ -34,7 +34,7 @@
                     </p>
                 </div>
 
-                <div data-id="recuperar-c-form" class="sf-form-container" data-method="GET" data-action="@System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString()/s/sitefinityforgotpwd">
+                <div class="sf-form-container">
                     <div class="row mt-5">
                         <div class="col-12 col-lg-6">
                             <div class="float-container">
@@ -68,16 +68,11 @@
                     </div>
                     <div id="err" class="login-error" style="display:none;"></div>
 
-                    <input type="hidden" value="" name="client" id="client" />
-                    <input type="hidden" value="" name="email" id="email" />
-                    <input type="hidden" value="" name="rfc" id="rfc" />
-                    <input type="hidden" name="fail" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery/recuperar-contrasena" id="fail" />
-                    <input type="hidden" name="ok" value="@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, string.Empty))/tfsm/home-delivery?cp=1"
-                           id="ok" />
+                    
 
                     <div class="my-5 row align-items-center justify-content-center">
                         <div class="col-12 col-lg-4">
-                            <button type="submit" class="btn-registro">ENVIAR</button>
+                            <button id="enviar" type="button" class="btn-registro">ENVIAR</button>
                         </div>
                     </div>
 
