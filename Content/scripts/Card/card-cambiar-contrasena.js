@@ -150,7 +150,7 @@ function submitPassword() {
             console.log(err);
             Swal.fire({
                 icon: "error",
-                title: "La contraseña no se puede restablecer en este momento. Póngase en contacto con el administrador de su organización si desea obtener más información"
+                title: "La contraseña no se puede restablecer en este momento. Inténtelo dentro de 24 horas."
             })
                 .then(() => {
                     window.location.replace(window.location.origin + "/tfsm/home-delivery");
