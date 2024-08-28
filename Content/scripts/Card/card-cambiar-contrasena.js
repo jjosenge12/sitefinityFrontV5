@@ -30,7 +30,7 @@ $(document).ready(function () {
             },
             confirm_password: {
                 required: true,
-                confirmPassword: "password"
+                equalTo: "#password"
             }
         }
     });
@@ -118,14 +118,13 @@ function submitPassword() {
         "password": $("#password").val()
     };
 
-    $.ajax(window.config.urlbase + '/SetPassword', {
+    $.ajax(window.config.UrlMySalesforce + '/services/apexrest/SetPasswordSitefinity', {
         beforeSend: showLoader,
         complete: hideLoader,
-        method: 'POST',
+        method: 'post',
         headers: headers,
         data: JSON.stringify(body),
         success: function (res) {
-            res = JSON.parse(res);
             console.log(res);
 
             $("#password").val("");
@@ -148,13 +147,6 @@ function submitPassword() {
         },
         error: function (err) {
             console.log(err);
-            Swal.fire({
-                icon: "error",
-                title: "La contraseña no se puede restablecer en este momento. Inténtelo dentro de 24 horas."
-            })
-                .then(() => {
-                    window.location.replace(window.location.origin + "/tfsm/home-delivery");
-                })
         }
     });
 }

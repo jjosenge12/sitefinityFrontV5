@@ -23,10 +23,22 @@ function capitalize2(str) {
 
 }
 
-grecaptcha.ready(function () {
+grecaptcha.ready(async function () {
     // do request for recaptcha token
     // response is promise with passed token
-    grecaptcha.execute(window.config.reCaptchaSiteKey, { action: 'validate_captcha' })
+    let recaptchaSiteKey;
+    console.log("Invocando recaptcha 1");
+    console.log("Valor anterior:" + window.config.reCaptchaSiteKey);
+    await $.ajax({
+        type: "get",
+        url: window.config.urlbase + "/recaptchaSiteKey",
+        datatype: "json",
+        success: function (data) {
+            recaptchaSiteKey = data;
+            console.log("La clave recaptchaSiteKey es:", recaptchaSiteKey);
+        },
+    });
+    grecaptcha.execute(recaptchaSiteKey, { action: 'validate_captcha' })
         .then(function (token) {
             // add token value to form
             recaptchaToken = token;
@@ -472,7 +484,19 @@ function getDealersByState(select) {
     });
 }
 
-function commitNewsletter(email) {
+async function commitNewsletter(email) {
+    let recaptchaSiteKey;
+    console.log("Invocando recaptcha 2");
+    console.log("Valor anterior:" + window.config.reCaptchaSiteKey);
+    await $.ajax({
+        type: "get",
+        url: window.config.urlbase + "/recaptchaSiteKey",
+        datatype: "json",
+        success: function (data) {
+            recaptchaSiteKey = data;
+            console.log("La clave recaptchaSiteKey es:", recaptchaSiteKey);
+        },
+    });
     $.ajax({
         url: window.config.urlbase + "/SalesforceNewsletter",
         method: "POST",
@@ -481,7 +505,7 @@ function commitNewsletter(email) {
             $("#nl-email").val("");
             $("#termsCheckbox").prop("checked", false);
             hideLoader();
-            grecaptcha.execute(window.config.reCaptchaSiteKey, { action: 'validate_captcha' })
+            grecaptcha.execute(recaptchaSiteKey, { action: 'validate_captcha' })
                 .then(function (token) {
                     // add token value to form
                     recaptchaToken = token;
@@ -507,10 +531,22 @@ function commitNewsletter(email) {
     });
 }
 
-function validateCaptcha() {
+async function validateCaptcha() {
+    let recaptchaSiteKey;
+    console.log("Invocando recaptcha 3");
+    console.log("Valor anterior:" + window.config.reCaptchaSiteKey);
+    await $.ajax({
+        type: "get",
+        url: window.config.urlbase + "/recaptchaSiteKey",
+        datatype: "json",
+        success: function (data) {
+            recaptchaSiteKey = data;
+            console.log("La clave recaptchaSiteKey es:", recaptchaSiteKey);
+        },
+    });
     grecaptcha.ready(function () {
         grecaptcha
-            .execute(window.config.reCaptchaSiteKey, { action: "submit" })
+            .execute(windowrecaptchaSiteKey, { action: "submit" })
             .then(function (token) {
                 // Add your logic to submit to your backend server here.
             });

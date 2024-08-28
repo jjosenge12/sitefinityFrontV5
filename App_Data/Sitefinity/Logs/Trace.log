@@ -26,3 +26,31 @@ Message: The domain name Default configured to serve your website content was no
 
 
 ----------------------------------------
+----------------------------------------
+Timestamp: 8/28/2024 11:20:34 PM
+
+Message: Enter upgrade mode
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 8/28/2024 11:21:33 PM
+
+Message: Exit upgrade mode
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 8/28/2024 11:25:45 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Packaging.Tasks.PackagingImportFromArchiveScheduledTask'. Start time: 8/28/2024 11:24:45 PM. End time: 8/28/2024 11:25:45 PM. Task data: 'c50f4fce-de90-4059-ac4d-ea5971d4374f;153fe05f-09f0-4444-9089-26746c7b61bd.zip'
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 8/28/2024 11:28:21 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Packaging.Tasks.PackagingImportFromArchiveScheduledTask'. Start time: 8/28/2024 11:26:39 PM. End time: 8/28/2024 11:28:21 PM. Task data: 'c50f4fce-de90-4059-ac4d-ea5971d4374f;2797d964-7d1c-4260-92c2-41d8143fd2f6.zip'
+
+
+----------------------------------------
