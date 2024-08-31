@@ -479,8 +479,8 @@ $(document).ready(() => {
         },
 
         error: (err) => console.log(err),
-        //url: window.config.urlToyotaCotizaciones + "/services/apexrest/sitefinity",
-        url: window.config.urlbase + '/coti',
+        url: window.config.urlToyotaCotizaciones + "/services/apexrest/sitefinity",
+        //url: window.config.urlbase + '/coti',
     };
 
     try {
@@ -707,6 +707,8 @@ $(document).ready(() => {
 
     $("#step-5-contact").click(function (e) {
         e.preventDefault();
+        console.log("$(#step - 5 - contact - form).valid()");
+        console.log($("#step-5-contact-form").valid());
         if ($("#step-5-contact-form").valid()) {
             commitSalesforcePlan();
         } else {
@@ -768,8 +770,20 @@ function commitSalesforcePlan() {
                 timer: 5000,
             });
         },
-        complete: function () {
-            grecaptcha.execute(window.config.reCaptchaSiteKey, { action: 'validate_captcha' })
+        complete: async function () {
+            let recaptchaSiteKey;
+            console.log("Invocando recaptcha");
+            //console.log("Valor anterior:" + window.config.reCaptchaSiteKey);
+            await $.ajax({
+                type: "get",
+                url: window.config.urlbase + "/recaptchaSiteKey",
+                datatype: "json",
+                success: function (data) {
+                    recaptchaSiteKey = data;
+                    //console.log("La clave recaptchaSiteKey es:", recaptchaSiteKey);
+                },
+            });
+            grecaptcha.execute(recaptchaSiteKey, { action: 'validate_captcha' })
                 .then(function (token) {
                     // add token value to form
                     recaptchaToken = token;

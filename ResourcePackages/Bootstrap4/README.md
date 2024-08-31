@@ -1,13 +1,13 @@
 # Bootstrap package
 
-This package is based on the [Bootstrap 4 framework](http://getbootstrap.com/). To use the package, you simply add it to the `ResourcePackages folder` of your project. In case the `ResourcePackages` folder does not contain any packages, widget templates are loaded from *Embedded resources* or from the **MVC** folder of **SitefinityWebApp** folder only if it contains files with names, matching the naming convention. The priority for loading templates is as follows (in descending order):
+This package is based on the [Bootstrap 5 framework](http://getbootstrap.com/). To use the package, you simply add it to the `ResourcePackages folder` of your project. In case the `ResourcePackages` folder does not contain any packages, widget templates are loaded from *Embedded resources* or from the **MVC** folder of **SitefinityWebApp** folder only if it contains files with names, matching the naming convention. The priority for loading templates is as follows (in descending order):
 1. Templates from the resource package
 2. Templates in the **MVC** folder of **SitefinityWebApp**
 3. Templates from the *Embedded resources* source
 
 ## Npm
 ### Install
-Npm is the package manager for JavaScript that enables you to assemble packages of reusable code. For more information, visit [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) websites. Currently *Bootstrap 4* package supports Node.js LTS version 10.14.0.
+Npm is the package manager for JavaScript that enables you to assemble packages of reusable code. For more information, visit [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) websites. Currently *Bootstrap 5* package supports Node.js LTS version 16.13.0.
 ```
 > npm install
 > npm start
@@ -16,17 +16,18 @@ Npm is the package manager for JavaScript that enables you to assemble packages 
 
 ## Package structure
 
-The Bootstrap package contains frontend assets, widget templates, and grid widget templates. Following is a hierarchical list of the major folders and files that come with the *Bootstrap 4* package:
+The Bootstrap package contains frontend assets, widget templates, and grid widget templates. Following is a hierarchical list of the major folders and files that come with the *Bootstrap 5* package:
  - **assets** - contains frontend files such as CSS, JS, images, and  SVG sprites
  	- **dist** - contains the processed ready-to-use frontend assets
  		- **css** - contains the processed CSS files
  			- **main.css** - this is output of the processed `main.scss` from `assets/src/project/sass`. This file contains the CSS files for Sitefinity CMS, Bootstrap, and the project itself
  			- **main.min.css** - this is the minified version of the `main.css` file. The 'main.min.css' file is the distributed CSS file that is linked in the `MVC/Views/Layouts/default.cshtml` Razor layout file of the package.
+			- **main.min.rtl.css** - this is the right to left minified version of the `main.css` file. The 'main.min.rtl.css' is linked in the `MVC/Views/Layouts/default.cshtml` when the page language direction is right to left, e.g. Arabic or Hebrew.
         - **sprites** - contains SVG sprites for the Sitefinity CMS icons. These are [Font Awesome](https://fontawesome.com/) SVG sprites.
         - **images** - contains compressed images from the project's SRC folder. These images are usually used as background images in the CSS.
         - **js** - contains the JavaScript files `bootstrap.min.js` and `poper.min.js`. These files are required for the proper use of the Bootstrap framework. The files are linked in the `MVC/Views/Layouts/default.cshtml` Razor layout file of the package.
  	- **src** - contains the source frontend files that are processed to the **dist** folder
-	    - **vendors** - contains imports of third-party vendors like Bootstrap and Magnific popup
+	    - **vendors** - contains imports of third-party vendors like Bootstrap or FontAwesome
         - **sitefinity** - contains the SCSS files for Sitefinity CMS styling
  		- **project** - add your non-Sitefinity CMS frontend assets in this folder
  			- **sprites** - add sprite files in this folder that need to be moved to the `assets/dist/sprites` folder. To do this, you need to extend or replace the file paths listed in `package.json` file in `config.copySprites` section.
@@ -59,7 +60,7 @@ Following is an example of how to structure files hierarchically:
  - **package.json** - stores metadata that the project requires and all the **npm** scripts that are used for the build
 
 ## Create and modify widget templates
-By default, all widget templates are included in the Bootstrap 4 package. To modify a widget template, simply open the respective template, say, *Countries* navigation template. To do so, navigate to `/ResourcePackages/Bootstrap4/MVC/Views/Navigation`, open the `NavigationView.Countries.cshtml` file, and make your changes.
+By default, all widget templates are included in the Bootstrap 5 package. To modify a widget template, simply open the respective template, say, *Countries* navigation template. To do so, navigate to `/ResourcePackages/Bootstrap5/MVC/Views/Navigation`, open the `NavigationView.Countries.cshtml` file, and make your changes.
 
 Creating a new template is just as simple:
 1. Duplicate an existing template.
@@ -71,14 +72,14 @@ As a result, the new template is displayed in widget designer for this widget in
 To create a new widget template for dynamic content:
 
 1. Create a folder with a name that corresponds to the name of the dynamic content module (in singular).
-In this folder, you organize the project widget templates, located in either `/Mvc/Views/` or `/ResourcePackages/Bootstrap4/MVC/Views`.
+In this folder, you organize the project widget templates, located in either `/Mvc/Views/` or `/ResourcePackages/Bootstrap5/MVC/Views`.
 2. Create a `*.cshtml` file, according to the following convention: `List.XXXXXX.cshtml` for list view and `Detail.XXXXXX.cshtml` for details view.
 3. Write the markup of the template.
 
 When you create a new Dynamic module, list and details widget templates for this module are automatically created in for this module in `Design > Widget Templates`. 
 
 ## Create and edit grid widget templates
-By default, the most popular column combinations are included in the Bootstrap 4 package as grid widgets. To modify a grid widget template, for example, a grid widget with two equal columns, simply navigate to `/ResourcePackages/Bootstrap4/GridSystem/Templates`, open `grid-6+6.html` and make your changes.
+By default, the most popular column combinations are included in the Bootstrap 5 package as grid widgets. To modify a grid widget template, for example, a grid widget with two equal columns, simply navigate to `/ResourcePackages/Bootstrap5/GridSystem/Templates`, open `grid-6+6.html` and make your changes.
 
 You can:
 - Add an extra CSS class to a column
@@ -100,7 +101,7 @@ To create a new grid widget is just as simple:
 1. Duplicate an existing grid widget template
 2. Name the new file, so that the new grid widget is displayed in the list of grid widgets in the Layout tab in the Page editor.
 
-**Example:** To create a simple placeholder with `<section>` tag, create `section.html` in `/ResourcePackages/Bootstrap4/GridSystem/Templates/`
+**Example:** To create a simple placeholder with `<section>` tag, create `section.html` in `/ResourcePackages/Bootstrap5/GridSystem/Templates/`
 ```
 <section class="section" data-sf-element="Section" data-placeholder-label="Section"></section>
 ```
@@ -123,9 +124,9 @@ The responsiveness of widgets, including grid widgets, relies solely on the Boot
 
 The only exception is the Navigation widget. You have the option to transform the navigation into a `<select>`.
 
-To do this, in the Navigation widget template file, for example, `/ResourcePackages/Bootstrap4/MVC/Views/Navigation/NavigationView.Horizontal.cshtml`, you need to use the `@Html.Action("GetView", new { viewName = "Dropdown",  model= Model})` helper method.
+To do this, in the Navigation widget template file, for example, `/ResourcePackages/Bootstrap5/MVC/Views/Navigation/NavigationView.Horizontal.cshtml`, you need to use the `@Html.Action("GetView", new { viewName = "Dropdown",  model= Model})` helper method.
 The helper method renders the `<select>`. It's commented out by default but you can use it in combination with the responsive utility classes of Bootstrap.
-To use the helper method, modify its markup in the `/ResourcePackages/Bootstrap4/MVC/Views/Navigation/Dropdown.cshtml` file.
+To use the helper method, modify its markup in the `/ResourcePackages/Bootstrap5/MVC/Views/Navigation/Dropdown.cshtml` file.
 
 ## Location of project frontend assets
 All project-specific frontend assets like SCSS, images, JavaSCript files, sprites, and so on need to be placed in the `assets/src/project` folder. When the `npm start` is run, all source files are processed and moved to the `assets/dist` folder, from which there are used in the project.
@@ -146,12 +147,11 @@ File structure
 ...
 
 main.scss
-//Import Bootstrap from npm
-@import "../../../../node_modules/bootstrap/scss/bootstrap";
-@import "../../../../node_modules/magnific-popup/src/css/main";
+//Vendoers
+@import "../../vendors";
 
-// Sitefinity
-@import "../../sitefinity/sass/sitefinity";
+//Sitefinity
+@import "../../sitefinity/sass";
 
 //Import .scss files here
 ...
@@ -172,13 +172,13 @@ In the `packages.json -> config.copyJs` section, list all your JavaScript files 
 }
 ```
 
-**Example:** To load `project-file-1.js` open the project Razor layout file (`/ResourcePackages/Bootstrap4/MVC/Views/Layouts/default.cshtml`) and add a reference there.
+**Example:** To load `project-file-1.js` open the project Razor layout file (`/ResourcePackages/Bootstrap5/MVC/Views/Layouts/default.cshtml`) and add a reference there.
 ```
-@Html.Script(Url.Content("~/ResourcePackages/Bootstrap4/assets/dist/js/project-file-1.js"), "bottom", true)
+@Html.Script(Url.Content("~/ResourcePackages/Bootstrap5/assets/dist/js/project-file-1.js"), "bottom", true)
 ```
 
 ### SVG sprites
-According to the [Bootstrap 4 framework](https://getbootstrap.com/docs/4.1/migration/#components) best practices, Sitefinity CMS uses [Font Awesome](https://fontawesome.com/) SVG sprites for our icons. After `npm start` is run, these sprites are located in the `assets/dist/sprites` folder. If you need to load more sprites, list them (separated by space) in the `package.json -> config.copySprits` section in a manner, similar to the following:
+Following [Bootstrap 5 framework](https://getbootstrap.com/docs/5.0/extend/icons/) recommendations, Sitefinity CMS uses [Font Awesome](https://fontawesome.com/) SVG sprites for our icons. After `npm start` is run, these sprites are located in the `assets/dist/sprites` folder. If you need to load more sprites, list them (separated by space) in the `package.json -> config.copySprits` section in a manner, similar to the following:
 
 **packages.json**
 ```
@@ -190,7 +190,7 @@ According to the [Bootstrap 4 framework](https://getbootstrap.com/docs/4.1/migra
 
 **Example:** To use SVG icon in widget template add a reference there like this: (`solid.svg` is the sprite and `#book` is the [icon](https://fontawesome.com/icons/book?style=solid))
 ```
-<svg>
-    <use class="sf-icon-right" xlink:href="~/ResourcePackages/Bootstrap4/assets/dist/sprites/solid.svg#book"></use>
+<svg class="svg-inline--fa fa-w-18" aria-hidden="true">
+    <use class="fa-primary" xlink:href="~/ResourcePackages/Bootstrap5/assets/dist/sprites/solid.svg#book"></use>
 </svg>
 ```

@@ -26,3 +26,78 @@ Message: The domain name Default configured to serve your website content was no
 
 
 ----------------------------------------
+----------------------------------------
+Timestamp: 31/08/2024 1:43:55
+
+Message: Attempting application domain unload. Reason: 'Error al intentar adjuntar una base de datos nombrada automáticamente para el archivo C:\Users\Jano\Documents\GitHub\sitefinityFrontV5\App_Data\Sitefinity.mdf. Ya existe una base de datos con el mismo nombre, no se puede abrir el archivo especificado o se encuentra en un recurso compartido UNC. Telerik.OpenAccess.RT.sql.SQLException: Error al intentar adjuntar una base de datos nombrada automáticamente para el archivo C:\Users\Jano\Documents\GitHub\sitefinityFrontV5\App_Data\Sitefinity.mdf. Ya existe una base de datos con el mismo nombre, no se puede abrir el archivo especificado o se encuentra en un recurso compartido UNC. ---> System.Data.SqlClient.SqlException: Error al intentar adjuntar una base de datos nombrada automáticamente para el archivo C:\Users\Jano\Documents\GitHub\sitefinityFrontV5\App_Data\Sitefinity.mdf. Ya existe una base de datos con el mismo nombre, no se puede abrir el archivo especificado o se encuentra en un recurso compartido UNC.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at OpenAccessRuntime.Intellitrace.OpenConnection(DbConnection connection, String connectionString, String id)
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   --- End of inner exception stack trace ---
+   at Telerik.OpenAccess.RT.Adonet2Generic.Impl.DBDriver.connect(ConnectionString connectionString, PropertySet driverProps, ConnectionPoolType poolType, LogEventStore pes)
+   at OpenAccessRuntime.Relational.sql.SqlDriver.InitializeFor(ConnectionString connectionString, Boolean noConnect, PropertySet props, DBDriver& driver, Connection& conn, ConnectionPoolType poolType) ---> Error al intentar adjuntar una base de datos nombrada automáticamente para el archivo C:\Users\Jano\Documents\GitHub\sitefinityFrontV5\App_Data\Sitefinity.mdf. Ya existe una base de datos con el mismo nombre, no se puede abrir el archivo especificado o se encuentra en un recurso compartido UNC. ---> Error al intentar adjuntar una base de datos nombrada automáticamente para el archivo C:\Users\Jano\Documents\GitHub\sitefinityFrontV5\App_Data\Sitefinity.mdf. Ya existe una base de datos con el mismo nombre, no se puede abrir el archivo especificado o se encuentra en un recurso compartido UNC.'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at Telerik.Sitefinity.Services.SystemManager.TryRestartApplication(String restartReason)
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.HandleBootstrapException(Exception exception)
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()'
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 31/08/2024 1:43:55
+
+Message: Application domain unload succeeded. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at Telerik.Sitefinity.Services.SystemManager.TryRestartApplication(String restartReason)
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.HandleBootstrapException(Exception exception)
+   at Telerik.Sitefinity.Web.SitefinityHttpModule.<>c.<BootstrapAsync>b__4_0(Object ctx)
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()'
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 8/31/2024 1:38:46 PM
+
+Message: Enter upgrade mode
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 8/31/2024 1:42:11 PM
+
+Message: Exit upgrade mode
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 8/31/2024 2:18:53 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Packaging.Tasks.PackagingImportFromArchiveScheduledTask'. Start time: 8/31/2024 2:14:23 PM. End time: 8/31/2024 2:18:53 PM. Task data: '711827c6-bb91-4ae0-879b-ad192093baec;6759cfd5-7097-4480-8aba-ed3c4514b11b.zip'
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 8/31/2024 2:28:52 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Packaging.Tasks.PackagingImportFromArchiveScheduledTask'. Start time: 8/31/2024 2:20:14 PM. End time: 8/31/2024 2:28:52 PM. Task data: '711827c6-bb91-4ae0-879b-ad192093baec;385a6cc9-8c83-4cf6-b199-5faa2e933748.zip'
+
+
+----------------------------------------

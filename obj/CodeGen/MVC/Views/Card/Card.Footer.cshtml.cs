@@ -194,15 +194,16 @@ WriteLiteral(" id=\"termsCheckbox\"");
 
 WriteLiteral(" type=\"checkbox\"");
 
-WriteLiteral(" /><span>\r\n                    <span>Acepto los&nbsp;</span>\r\n                   " +
-" <span");
+WriteLiteral(" /><span>\r\n                    <span>He le&iacute;do y acepto el aviso de privaci" +
+"dad, los</span>                    \r\n                    <span");
 
 WriteLiteral(" id=\"newsletterTerms\"");
 
 WriteLiteral(" class=\"cursor-pointer color-red\"");
 
-WriteLiteral(">T&eacute;rminos de servicio de TFS</span>\r\n                </span>\r\n            " +
-"</div>\r\n        </div>\r\n        <div");
+WriteLiteral(">&nbsp;t&eacute;rminos y condiciones&nbsp;</span>\r\n                    <span>de u" +
+"so de p&aacute;gina&nbsp;</span>\r\n                </span>\r\n            </div>\r\n " +
+"       </div>\r\n        <div");
 
 WriteLiteral(" class=\"col-12 col-lg-4 mb-4 justify-content-center d-flex d-lg-block\"");
 
@@ -215,10 +216,14 @@ WriteLiteral("\r\n                    id=\"submit-newsletter\"");
 WriteLiteral("\r\n                    class=\"btn btn-primary custom-button text-small g-recaptcha" +
 "\"");
 
+WriteLiteral("\r\n                    data-callback=\'onSubmit\'");
+
+WriteLiteral(" \r\n                    data-action=\'submit\'");
+
 WriteLiteral("\r\n                    data-sitekey=\"");
 
             
-            #line 41 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+            #line 44 "..\..\MVC\Views\Card\Card.Footer.cshtml"
                              Write(System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString());
 
             
@@ -294,7 +299,34 @@ WriteLiteral(" href=\"/nuestros-planes/plan-anualidades\"");
 
 WriteLiteral(">Plan Anualidades</a></li>\r\n                ");
 
-WriteLiteral("\r\n                <li");
+WriteLiteral("\r\n            </ul>\r\n            <div");
+
+WriteLiteral(" class=\"footerSectionTitle d-none d-md-block mt-5\"");
+
+WriteLiteral(">Planes de Arrendamiento</div>\r\n            <div");
+
+WriteLiteral(" class=\"footerSectionTitle d-md-none\"");
+
+WriteLiteral(" style=\"cursor:pointer;\"");
+
+WriteLiteral(" id=\"expandArrendamientos\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"material-icons mr-2 pointRight\"");
+
+WriteLiteral(" id=\"arrendamientosArrow\"");
+
+WriteLiteral(">chevron_right</span>\r\n                <span>Planes de Arrendamiento</span>\r\n    " +
+"        </div>\r\n            <ul");
+
+WriteLiteral(" class=\"d-md-block nav-list\"");
+
+WriteLiteral(" style=\"padding:0;display:none;\"");
+
+WriteLiteral(" id=\"listArrendamientos\"");
+
+WriteLiteral(">\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
@@ -355,10 +387,9 @@ WriteLiteral(" class=\"footerItem\"");
 
 WriteLiteral("><a");
 
-WriteLiteral(" href=\"/legales/proteccion-de-datos\"");
+WriteLiteral(" href=\"/aviso-de-privacidad-para-clientes\"");
 
-WriteLiteral(">Pol&iacute;tica de protecci&oacute;n de datos Personales</a></li>\r\n             " +
-"   <li");
+WriteLiteral(">Aviso de Privacidad Clientes</a></li>\r\n                <li");
 
 WriteLiteral(" class=\"footerItem\"");
 
@@ -537,7 +568,37 @@ WriteLiteral(@"
 
 WriteLiteral(" sfref=\"[images|OpenAccessDataProvider]48356baa-ce0b-442d-aacd-134b81bd293f\"");
 
-WriteLiteral(" />\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>");
+WriteLiteral(" />\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n");
+
+DefineSection("Scripts", () => {
+
+WriteLiteral("\r\n    <script");
+
+WriteLiteral(" src=\"https://www.google.com/recaptcha/api.js?render=\"");
+
+WriteLiteral(" + ");
+
+            
+            #line 111 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+                                                               Write(System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("></script>\r\n    <script>\r\n        grecaptcha.ready(function () {\r\n            gre" +
+"captcha.execute(");
+
+            
+            #line 114 "..\..\MVC\Views\Card\Card.Footer.cshtml"
+                          Write(System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString());
+
+            
+            #line default
+            #line hidden
+WriteLiteral(", { action: \'homepage\' }).then(function (token) {\r\n                document.getEl" +
+"ementById(\"foo\").value = token;\r\n            });\r\n        });\r\n    </script>\r\n");
+
+});
 
         }
     }
