@@ -99,7 +99,7 @@ WriteLiteralTo(__razor_helper_writer, "    <div");
 
 WriteLiteralTo(__razor_helper_writer, " class=\"form-group\"");
 
-WriteLiteralTo(__razor_helper_writer, ">\n\n");
+WriteLiteralTo(__razor_helper_writer, ">\r\n\r\n");
 
 WriteLiteralTo(__razor_helper_writer, "        ");
 
@@ -110,7 +110,7 @@ WriteTo(__razor_helper_writer, Html.LabelFor(expression, Html.Resource(label)));
 
 #line default
 #line hidden
-WriteLiteralTo(__razor_helper_writer, "\n\n");
+WriteLiteralTo(__razor_helper_writer, "\r\n\r\n");
 
 
 #line 73 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -180,7 +180,7 @@ WriteTo(__razor_helper_writer, Html.PasswordFor(expression, attributes));
 
 #line default
 #line hidden
-WriteLiteralTo(__razor_helper_writer, "\n");
+WriteLiteralTo(__razor_helper_writer, "\r\n");
 
 
 #line 91 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -198,14 +198,14 @@ WriteLiteralTo(__razor_helper_writer, "\n");
 #line hidden
 WriteLiteralTo(__razor_helper_writer, "            <div");
 
-WriteAttributeTo(__razor_helper_writer, "id", Tuple.Create(" id=\'", 3040), Tuple.Create("\'", 3067)
+WriteAttributeTo(__razor_helper_writer, "id", Tuple.Create(" id=\'", 3132), Tuple.Create("\'", 3159)
 
 #line 93 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
-, Tuple.Create(Tuple.Create("", 3045), Tuple.Create<System.Object, System.Int32>(Html.UniqueId(descId)
+, Tuple.Create(Tuple.Create("", 3137), Tuple.Create<System.Object, System.Int32>(Html.UniqueId(descId)
 
 #line default
 #line hidden
-, 3045), false)
+, 3137), false)
 );
 
 WriteLiteralTo(__razor_helper_writer, " class=\"text-danger\"");
@@ -214,7 +214,7 @@ WriteLiteralTo(__razor_helper_writer, " role=\"alert\"");
 
 WriteLiteralTo(__razor_helper_writer, " aria-live=\"assertive\"");
 
-WriteLiteralTo(__razor_helper_writer, ">\n                <span");
+WriteLiteralTo(__razor_helper_writer, ">\r\n                <span");
 
 WriteLiteralTo(__razor_helper_writer, " class=\"form-text\"");
 
@@ -227,7 +227,7 @@ WriteLiteralTo(__razor_helper_writer, ">");
 
 #line default
 #line hidden
-WriteLiteralTo(__razor_helper_writer, "</span>\n            </div>\n");
+WriteLiteralTo(__razor_helper_writer, "</span>\r\n            </div>\r\n");
 
 
 #line 96 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -236,7 +236,7 @@ WriteLiteralTo(__razor_helper_writer, "</span>\n            </div>\n");
 
 #line default
 #line hidden
-WriteLiteralTo(__razor_helper_writer, "    </div>\n");
+WriteLiteralTo(__razor_helper_writer, "    </div>\r\n");
 
 
 #line 98 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -256,19 +256,19 @@ WriteLiteralTo(__razor_helper_writer, "    </div>\n");
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 321), Tuple.Create("\"", 344)
+WriteAttribute("class", Tuple.Create(" class=\"", 329), Tuple.Create("\"", 352)
             
             #line 9 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
-, Tuple.Create(Tuple.Create("", 329), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 337), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 329), false)
+, 337), false)
 );
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
             
             #line 10 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -299,7 +299,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</h3>\n");
+WriteLiteral("</h3>\r\n");
 
             
             #line 13 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -319,7 +319,7 @@ WriteLiteral("        <h3>");
             
             #line default
             #line hidden
-WriteLiteral("</h3>\n");
+WriteLiteral("</h3>\r\n");
 
             
             #line 17 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -330,7 +330,7 @@ WriteLiteral("</h3>\n");
             
             #line default
             #line hidden
-WriteLiteral("            <div>\n");
+WriteLiteral("            <div>\r\n");
 
 WriteLiteral("                ");
 
@@ -341,7 +341,7 @@ WriteLiteral("                ");
             
             #line default
             #line hidden
-WriteLiteral("\n            </div>\n");
+WriteLiteral("\r\n            </div>\r\n");
 
             
             #line 23 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -364,7 +364,7 @@ WriteLiteral(" role=\"alert\"");
 
 WriteLiteral(" aria-live=\"assertive\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("                        ");
 
@@ -375,7 +375,7 @@ WriteLiteral("                        ");
             
             #line default
             #line hidden
-WriteLiteral("\n                    </div>\n");
+WriteLiteral("\r\n                    </div>\r\n");
 
             
             #line 33 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -454,7 +454,7 @@ WriteLiteral(" >");
             
             #line default
             #line hidden
-WriteLiteral("</button> \n");
+WriteLiteral("</button> \r\n");
 
             
             #line 42 "..\..MVC\Views\ChangePassword\ChangePassword.ChangePassword.cshtml"
@@ -465,7 +465,7 @@ WriteLiteral("</button> \n");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n\n");
+WriteLiteral("</div>\r\n\r\n");
 
         }
     }

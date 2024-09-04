@@ -48,38 +48,38 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.HiddenField
         }
         public override void Execute()
         {
-WriteLiteral("\n<input");
+WriteLiteral("\r\n<input");
 
-WriteAttribute("id", Tuple.Create(" id=\'", 202), Tuple.Create("\'", 236)
+WriteAttribute("id", Tuple.Create(" id=\'", 207), Tuple.Create("\'", 241)
             
             #line 6 "..\..MVC\Views\HiddenField\Read.Default.cshtml"
-, Tuple.Create(Tuple.Create("", 207), Tuple.Create<System.Object, System.Int32>(Html.UniqueId("HiddenField")
+, Tuple.Create(Tuple.Create("", 212), Tuple.Create<System.Object, System.Int32>(Html.UniqueId("HiddenField")
             
             #line default
             #line hidden
-, 207), false)
+, 212), false)
 );
 
 WriteLiteral(" type=\"hidden\"");
 
-WriteAttribute("name", Tuple.Create(" name=\"", 251), Tuple.Create("\"", 284)
+WriteAttribute("name", Tuple.Create(" name=\"", 256), Tuple.Create("\"", 289)
             
             #line 6 "..\..MVC\Views\HiddenField\Read.Default.cshtml"
-, Tuple.Create(Tuple.Create("", 258), Tuple.Create<System.Object, System.Int32>(Model.MetaField.FieldName
+, Tuple.Create(Tuple.Create("", 263), Tuple.Create<System.Object, System.Int32>(Model.MetaField.FieldName
             
             #line default
             #line hidden
-, 258), false)
+, 263), false)
 );
 
-WriteAttribute("value", Tuple.Create(" value=\"", 285), Tuple.Create("\"", 322)
+WriteAttribute("value", Tuple.Create(" value=\"", 290), Tuple.Create("\"", 327)
             
             #line 6 "..\..MVC\Views\HiddenField\Read.Default.cshtml"
-                  , Tuple.Create(Tuple.Create("", 293), Tuple.Create<System.Object, System.Int32>(Model.MetaField.DefaultValue
+                  , Tuple.Create(Tuple.Create("", 298), Tuple.Create<System.Object, System.Int32>(Model.MetaField.DefaultValue
             
             #line default
             #line hidden
-, 293), false)
+, 298), false)
 );
 
 WriteLiteral(" />");

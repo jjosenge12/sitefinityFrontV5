@@ -60,9 +60,9 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.UnsubscribeForm
         }
         public override void Execute()
         {
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 9 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -71,7 +71,7 @@ Write(Html.Script(ScriptRef.JQuery, "top", false));
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 10 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -80,7 +80,7 @@ Write(Html.Script("//ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.valida
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 11 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -89,7 +89,7 @@ Write(Html.Script("//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive
             
             #line default
             #line hidden
-WriteLiteral("\n\n");
+WriteLiteral("\r\n\r\n");
 
             
             #line 13 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -114,19 +114,19 @@ WriteLiteral("\n\n");
             
             #line default
             #line hidden
-WriteLiteral("\n\n<div");
+WriteLiteral("\r\n\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 1018), Tuple.Create("\"", 1041)
+WriteAttribute("class", Tuple.Create(" class=\"", 1049), Tuple.Create("\"", 1072)
             
             #line 32 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
-, Tuple.Create(Tuple.Create("", 1026), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 1057), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 1026), false)
+, 1057), false)
 );
 
-WriteLiteral(">    \n");
+WriteLiteral(">    \r\n");
 
             
             #line 33 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -151,7 +151,7 @@ WriteLiteral("\t\t<h3>");
             
             #line default
             #line hidden
-WriteLiteral("</h3>\n");
+WriteLiteral("</h3>\r\n");
 
             
             #line 36 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -164,17 +164,17 @@ WriteLiteral("\t\t<p");
 
 WriteLiteral(" class=\"text-muted\"");
 
-WriteAttribute("id", Tuple.Create(" id=\'", 1177), Tuple.Create("\'", 1219)
+WriteAttribute("id", Tuple.Create(" id=\'", 1213), Tuple.Create("\'", 1255)
             
             #line 37 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
-, Tuple.Create(Tuple.Create("", 1182), Tuple.Create<System.Object, System.Int32>(Html.UniqueId("UnsubscribeFormInfo")
+, Tuple.Create(Tuple.Create("", 1218), Tuple.Create<System.Object, System.Int32>(Html.UniqueId("UnsubscribeFormInfo")
             
             #line default
             #line hidden
-, 1182), false)
+, 1218), false)
 );
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("\t\t\t");
 
@@ -185,7 +185,7 @@ WriteLiteral("\t\t\t");
             
             #line default
             #line hidden
-WriteLiteral("\n\t\t</p>\n");
+WriteLiteral("\r\n\t\t</p>\r\n");
 
             
             #line 40 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -204,7 +204,7 @@ WriteLiteral(" role=\"alert\"");
 
 WriteLiteral(" aria-live=\"assertive\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("\t\t\t\t");
 
@@ -215,7 +215,7 @@ WriteLiteral("\t\t\t\t");
             
             #line default
             #line hidden
-WriteLiteral("\n\t\t\t</div>\n");
+WriteLiteral("\r\n\t\t\t</div>\r\n");
 
             
             #line 46 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -249,7 +249,7 @@ WriteLiteral(" role=\"alert\"");
 
 WriteLiteral(" aria-live=\"assertive\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("\t\t\t\t");
 
@@ -260,7 +260,7 @@ WriteLiteral("\t\t\t\t");
             
             #line default
             #line hidden
-WriteLiteral("\n\t\t\t</div>\n");
+WriteLiteral("\r\n\t\t\t</div>\r\n");
 
             
             #line 54 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -274,7 +274,7 @@ WriteLiteral("\t\t<div");
 
 WriteLiteral(" class=\"form-group\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("\t\t\t");
 
@@ -285,11 +285,11 @@ WriteLiteral("\t\t\t");
             
             #line default
             #line hidden
-WriteLiteral("\n\n\t\t\t<div");
+WriteLiteral("\r\n\r\n\t\t\t<div");
 
 WriteLiteral(" class=\"form-inline\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("\t\t\t\t");
 
@@ -300,7 +300,7 @@ WriteLiteral("\t\t\t\t");
             
             #line default
             #line hidden
-WriteLiteral("\n\t\t\t\t<button");
+WriteLiteral("\r\n\t\t\t\t<button");
 
 WriteLiteral(" type=\"submit\"");
 
@@ -324,7 +324,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</button>\n\t\t\t</div>\n\n");
+WriteLiteral("</button>\r\n\t\t\t</div>\r\n\r\n");
 
             
             #line 64 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -342,14 +342,14 @@ WriteLiteral("</button>\n\t\t\t</div>\n\n");
             #line hidden
 WriteLiteral("\t\t\t\t<div");
 
-WriteAttribute("id", Tuple.Create(" id=\'", 2003), Tuple.Create("\'", 2054)
+WriteAttribute("id", Tuple.Create(" id=\'", 2068), Tuple.Create("\'", 2119)
             
             #line 66 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
-, Tuple.Create(Tuple.Create("", 2008), Tuple.Create<System.Object, System.Int32>(Html.UniqueId("UnsubscribeFormValidatonInfo")
+, Tuple.Create(Tuple.Create("", 2073), Tuple.Create<System.Object, System.Int32>(Html.UniqueId("UnsubscribeFormValidatonInfo")
             
             #line default
             #line hidden
-, 2008), false)
+, 2073), false)
 );
 
 WriteLiteral(" class=\"text-danger\"");
@@ -358,7 +358,7 @@ WriteLiteral(" role=\"alert\"");
 
 WriteLiteral(" aria-live=\"assertive\"");
 
-WriteLiteral(">\n                    <span");
+WriteLiteral(">\r\n                    <span");
 
 WriteLiteral(" class=\"form-text\"");
 
@@ -371,7 +371,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</span>\n\t\t\t\t</div>\n");
+WriteLiteral("</span>\r\n\t\t\t\t</div>\r\n");
 
             
             #line 69 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"
@@ -380,7 +380,7 @@ WriteLiteral("</span>\n\t\t\t\t</div>\n");
             
             #line default
             #line hidden
-WriteLiteral("\t\t</div>\n");
+WriteLiteral("\t\t</div>\r\n");
 
             
             #line 71 "..\..MVC\Views\UnsubscribeForm\UnsubscribeFormByEmailAddress.UnsubscribeForm.cshtml"

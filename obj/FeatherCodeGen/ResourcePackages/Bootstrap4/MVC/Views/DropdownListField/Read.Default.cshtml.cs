@@ -38,20 +38,20 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.DropdownListFie
         {
 WriteLiteral("<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 109), Tuple.Create("\"", 143)
+WriteAttribute("class", Tuple.Create(" class=\"", 111), Tuple.Create("\"", 145)
             
             #line 3 "..\..MVC\Views\DropdownListField\Read.Default.cshtml"
-, Tuple.Create(Tuple.Create("", 117), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 119), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 117), false)
-, Tuple.Create(Tuple.Create(" ", 132), Tuple.Create("form-group", 133), true)
+, 119), false)
+, Tuple.Create(Tuple.Create(" ", 134), Tuple.Create("form-group", 135), true)
 );
 
 WriteLiteral(" data-sf-role=\"text-field-container\"");
 
-WriteLiteral(">\n    <strong>");
+WriteLiteral(">\r\n    <strong>");
 
             
             #line 4 "..\..MVC\Views\DropdownListField\Read.Default.cshtml"
@@ -60,7 +60,7 @@ WriteLiteral(">\n    <strong>");
             
             #line default
             #line hidden
-WriteLiteral("</strong>\n    <p>");
+WriteLiteral("</strong>\r\n    <p>");
 
             
             #line 5 "..\..MVC\Views\DropdownListField\Read.Default.cshtml"
@@ -69,7 +69,7 @@ WriteLiteral("</strong>\n    <p>");
             
             #line default
             #line hidden
-WriteLiteral("</p>\n</div>\n");
+WriteLiteral("</p>\r\n</div>\r\n");
 
         }
     }

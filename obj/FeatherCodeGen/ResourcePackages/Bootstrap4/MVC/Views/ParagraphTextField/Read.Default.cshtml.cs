@@ -38,20 +38,20 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.ParagraphTextFi
         {
 WriteLiteral("<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 111), Tuple.Create("\"", 145)
-, Tuple.Create(Tuple.Create("", 119), Tuple.Create("form-group", 119), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 113), Tuple.Create("\"", 147)
+, Tuple.Create(Tuple.Create("", 121), Tuple.Create("form-group", 121), true)
             
             #line 3 "..\..MVC\Views\ParagraphTextField\Read.Default.cshtml"
-, Tuple.Create(Tuple.Create(" ", 129), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create(" ", 131), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 130), false)
+, 132), false)
 );
 
 WriteLiteral(" data-sf-role=\"text-field-container\"");
 
-WriteLiteral(">\n    <label>");
+WriteLiteral(">\r\n    <label>");
 
             
             #line 4 "..\..MVC\Views\ParagraphTextField\Read.Default.cshtml"
@@ -60,7 +60,7 @@ WriteLiteral(">\n    <label>");
             
             #line default
             #line hidden
-WriteLiteral("</label>\n    <p>");
+WriteLiteral("</label>\r\n    <p>");
 
             
             #line 5 "..\..MVC\Views\ParagraphTextField\Read.Default.cshtml"
@@ -69,7 +69,7 @@ WriteLiteral("</label>\n    <p>");
             
             #line default
             #line hidden
-WriteLiteral("</p>\n</div>\n");
+WriteLiteral("</p>\r\n</div>\r\n");
 
         }
     }

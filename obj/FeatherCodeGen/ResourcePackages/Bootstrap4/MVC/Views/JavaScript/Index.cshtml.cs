@@ -54,7 +54,7 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.JavaScript
         }
         public override void Execute()
         {
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 7 "..\..MVC\Views\JavaScript\Index.cshtml"
@@ -79,7 +79,7 @@ Write(Html.Raw(Model.JavaScriptCode));
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 12 "..\..MVC\Views\JavaScript\Index.cshtml"
@@ -93,7 +93,7 @@ WriteLiteral("    <div");
 
 WriteLiteral(" class=\"sf-Code\"");
 
-WriteLiteral(">\n        <pre>");
+WriteLiteral(">\r\n        <pre>");
 
             
             #line 15 "..\..MVC\Views\JavaScript\Index.cshtml"
@@ -102,7 +102,7 @@ WriteLiteral(">\n        <pre>");
             
             #line default
             #line hidden
-WriteLiteral("</pre>\n    </div>\n");
+WriteLiteral("</pre>\r\n    </div>\r\n");
 
             
             #line 17 "..\..MVC\Views\JavaScript\Index.cshtml"

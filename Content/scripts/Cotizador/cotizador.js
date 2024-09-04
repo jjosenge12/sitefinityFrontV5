@@ -116,6 +116,7 @@ $(document).ready(function () {
                 }
             });
         }
+        getToken();
     });
 
     //----------------STEP 2----------------
@@ -311,6 +312,7 @@ $(document).ready(function () {
         $("#step-4-finish").hide();
         fisica = 0;
         swiper.updateAutoHeight(0);
+        getToken();
     });
 
     $("#car_version").change(function (e) {
@@ -459,11 +461,13 @@ $(document).ready(function () {
             formNextStep(8);
             swiper.updateAutoHeight(0);
             $("#finish").show();
+            getToken();
         }
         else
             formNextStep(9);
         swiper.updateAutoHeight(0);
         $("#step-4-finish").show();
+        getToken();
 
     });
 
@@ -695,7 +699,11 @@ $(document).ready(function () {
     });
 
     $("#step-5-contact").click(() => {
-        sendDataSalesforce();
+        if ($("#step-5-contact-form").valid()) {
+            sendDataSalesforce();
+        } else {
+            console.error("No valida");
+        }
     });
 
     $("#iniciar-coti").click(() => {
@@ -716,6 +724,7 @@ $(document).ready(function () {
         $("#balloon").hide();
         $("#tradicional").hide();
         back = 1;
+        getToken();
     });
 
     //Se agrega esta funcion para la conversion a base64
@@ -755,6 +764,7 @@ $(document).ready(function () {
                 complete: hideLoader,
                 data: data,
                 success: function (res) {
+                    console.log(res);
 
                     var _data = base64ToArrayBuffer(res.result);
                     var blob = new Blob([_data], { type: "application/pdf" });
@@ -1158,12 +1168,13 @@ function commitSalesforce() {
 
     $.ajax({
         type: 'POST',
-        url: window.config.urlbase + '/submit-lead',//SalesForceStep4
+        url: window.config.urlbase + '/SalesForceStep4',
         data: data,
         dataType: "json",
         success: function (result) {
             window.scrollTo(0, 0);
             swiper.slideNext();
+            console.log(result);
         },
         error: function (err) {
             console.log('ERROR OBTENER DATOS DE SERVICIO');
@@ -1294,6 +1305,7 @@ function sendDataSalesforce() {
             beforeSend: showLoader,
             complete: hideLoader,
             success: function (result) {
+                console.log(result);
                 Swal.fire({
                     title: "¡Gracias!",
                     text: "Nos pondremos en contacto contigo",
@@ -1391,6 +1403,20 @@ function maxLengthCheck(object) {
 
 }
 
+function getToken() {
+    $.ajax({
+        type: 'GET',
+        url: window.config.urlbase + '/GetAccessToken',
+        success: function (result) {
+            token = result.result;
+            console.log(result);
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+
 function commitSalesforce2() {
     let mensualidad = formatter.format(cotizacion.find(x => x.Plazo === Number(form.Plazo)).Mensualidad);
     let mensu = mensualidad.substr(1, mensualidad.length);
@@ -1416,13 +1442,13 @@ function commitSalesforce2() {
         Precio_Auto__c: form.precioAuto,
         ImagenAuto__c: form.ImagenAuto,
         LeadSource: "Cotizador Web paso 4",
-        Company: "Example",
+        Company: form.Aseguradora,
+        FWY_Nombre_distribuidor__c: form.Aseguradora,
     };
 
     let datajson = JSON.stringify(data);
-    console.log(datajson);
 
-    $.when()
+    $.when(getToken())
         .then(() => {
             $.ajax({
                 type: 'POST',
@@ -1430,12 +1456,11 @@ function commitSalesforce2() {
                     "Content-Type": "application/json",
                     "Authorization": "Bearer " + token,
                 },
-                url: window.config.urlbase + '/submit-lead',
+                url: window.config.urlToyotaCotizaciones + "/services/data/v54.0/sobjects/Lead/",
                 data: datajson,
                 beforeSend: showLoader,
                 complete: hideLoader,
                 success: function (result) {
-                    result = JSON.parse(result);
                     window.scrollTo(0, 0);
                     swiper.slideNext();
                     console.log(result);
@@ -1483,21 +1508,20 @@ function updateSalesforce2() {
         ImagenAuto__c: form.ImagenAuto,
         LeadSource: "Cotizador Web paso 4",
         Company: "Example",
-        idcoti: idcoti,
     };
 
     let datajson = JSON.stringify(data);
     console.log("Update");
     back = 0;
-    $.when()
+    $.when(getToken())
         .then(() => {
             $.ajax({
-                type: 'POST',
+                type: 'PATCH',
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": "Bearer " + token,
                 },
-                url: window.config.urlbase + '/submit-lead',
+                url: window.config.urlToyotaCotizaciones + '/services/data/v54.0/sobjects/Lead/' + idcoti,
                 data: datajson,
                 beforeSend: showLoader,
                 complete: hideLoader,

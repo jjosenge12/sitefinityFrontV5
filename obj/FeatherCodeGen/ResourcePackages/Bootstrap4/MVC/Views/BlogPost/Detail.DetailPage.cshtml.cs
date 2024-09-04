@@ -54,16 +54,16 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.BlogPost
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 196), Tuple.Create("\"", 219)
+WriteAttribute("class", Tuple.Create(" class=\"", 202), Tuple.Create("\"", 225)
             
             #line 7 "..\..MVC\Views\BlogPost\Detail.DetailPage.cshtml"
-, Tuple.Create(Tuple.Create("", 204), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 210), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 204), false)
+, 210), false)
 );
 
 WriteLiteral(" ");
@@ -75,7 +75,7 @@ WriteLiteral(" ");
             
             #line default
             #line hidden
-WriteLiteral(">\n    <h3>\n        <span ");
+WriteLiteral(">\r\n    <h3>\r\n        <span ");
 
             
             #line 9 "..\..MVC\Views\BlogPost\Detail.DetailPage.cshtml"
@@ -93,7 +93,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</span>\n    </h3>\n\n    <div>\n");
+WriteLiteral("</span>\r\n    </h3>\r\n\r\n    <div>\r\n");
 
 WriteLiteral("        ");
 
@@ -104,7 +104,7 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("        ");
 
@@ -115,7 +115,7 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("        ");
 
@@ -126,7 +126,7 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("        ");
 
@@ -137,7 +137,7 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\n    </div>\n    \n    <div ");
+WriteLiteral("\r\n    </div>\r\n    \r\n    <div ");
 
             
             #line 19 "..\..MVC\Views\BlogPost\Detail.DetailPage.cshtml"
@@ -155,7 +155,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n\n    <div ");
+WriteLiteral("</div>\r\n\r\n    <div ");
 
             
             #line 21 "..\..MVC\Views\BlogPost\Detail.DetailPage.cshtml"
@@ -173,7 +173,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n\n");
+WriteLiteral("</div>\r\n\r\n");
 
 WriteLiteral("    ");
 
@@ -184,7 +184,7 @@ Write(Html.CommentsList(@Model.Item.DataItem));
             
             #line default
             #line hidden
-WriteLiteral("\n</div>");
+WriteLiteral("\r\n</div>");
 
         }
     }

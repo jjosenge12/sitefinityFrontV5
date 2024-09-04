@@ -111,7 +111,7 @@ WriteLiteralTo(__razor_helper_writer, "    <div");
 
 WriteLiteralTo(__razor_helper_writer, " class=\"form-group\"");
 
-WriteLiteralTo(__razor_helper_writer, ">\n\n");
+WriteLiteralTo(__razor_helper_writer, ">\r\n\r\n");
 
 WriteLiteralTo(__razor_helper_writer, "        ");
 
@@ -122,7 +122,7 @@ WriteTo(__razor_helper_writer, Html.LabelFor(expression, Html.Resource(label)));
 
 #line default
 #line hidden
-WriteLiteralTo(__razor_helper_writer, "\n\n");
+WriteLiteralTo(__razor_helper_writer, "\r\n\r\n");
 
 
 #line 120 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -192,7 +192,7 @@ WriteTo(__razor_helper_writer, Html.PasswordFor(expression, attributes));
 
 #line default
 #line hidden
-WriteLiteralTo(__razor_helper_writer, "\n");
+WriteLiteralTo(__razor_helper_writer, "\r\n");
 
 
 #line 138 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -210,14 +210,14 @@ WriteLiteralTo(__razor_helper_writer, "\n");
 #line hidden
 WriteLiteralTo(__razor_helper_writer, "            <div");
 
-WriteAttributeTo(__razor_helper_writer, "id", Tuple.Create(" id=\'", 5542), Tuple.Create("\'", 5569)
+WriteAttributeTo(__razor_helper_writer, "id", Tuple.Create(" id=\'", 5681), Tuple.Create("\'", 5708)
 
 #line 140 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
-, Tuple.Create(Tuple.Create("", 5547), Tuple.Create<System.Object, System.Int32>(Html.UniqueId(descId)
+, Tuple.Create(Tuple.Create("", 5686), Tuple.Create<System.Object, System.Int32>(Html.UniqueId(descId)
 
 #line default
 #line hidden
-, 5547), false)
+, 5686), false)
 );
 
 WriteLiteralTo(__razor_helper_writer, " class=\"text-danger\"");
@@ -226,7 +226,7 @@ WriteLiteralTo(__razor_helper_writer, " role=\"alert\"");
 
 WriteLiteralTo(__razor_helper_writer, " aria-live=\"assertive\"");
 
-WriteLiteralTo(__razor_helper_writer, ">\n                <span");
+WriteLiteralTo(__razor_helper_writer, ">\r\n                <span");
 
 WriteLiteralTo(__razor_helper_writer, " class=\"form-text\"");
 
@@ -239,7 +239,7 @@ WriteLiteralTo(__razor_helper_writer, ">");
 
 #line default
 #line hidden
-WriteLiteralTo(__razor_helper_writer, "</span>\n            </div>\n");
+WriteLiteralTo(__razor_helper_writer, "</span>\r\n            </div>\r\n");
 
 
 #line 143 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -248,7 +248,7 @@ WriteLiteralTo(__razor_helper_writer, "</span>\n            </div>\n");
 
 #line default
 #line hidden
-WriteLiteralTo(__razor_helper_writer, "    </div>\n");
+WriteLiteralTo(__razor_helper_writer, "    </div>\r\n");
 
 
 #line 145 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -268,9 +268,9 @@ WriteLiteralTo(__razor_helper_writer, "    </div>\n");
         }
         public override void Execute()
         {
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 12 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -279,7 +279,7 @@ Write(Html.Script(ScriptRef.JQuery, "top", true));
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 13 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -288,7 +288,7 @@ Write(Html.Script("//ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.valida
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 14 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -297,7 +297,7 @@ Write(Html.Script("//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive
             
             #line default
             #line hidden
-WriteLiteral("\n\n");
+WriteLiteral("\r\n\r\n");
 
             
             #line 16 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -309,20 +309,20 @@ WriteLiteral("\n\n");
             
             #line default
             #line hidden
-WriteLiteral("\n\n<div");
+WriteLiteral("\r\n\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 871), Tuple.Create("\"", 898)
+WriteAttribute("class", Tuple.Create(" class=\"", 892), Tuple.Create("\"", 919)
             
             #line 22 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
-, Tuple.Create(Tuple.Create("", 879), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 900), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 879), false)
-, Tuple.Create(Tuple.Create(" ", 894), Tuple.Create("m-0", 895), true)
+, 900), false)
+, Tuple.Create(Tuple.Create(" ", 915), Tuple.Create("m-0", 916), true)
 );
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
             
             #line 23 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -355,29 +355,29 @@ WriteLiteral(">\n");
             #line hidden
 WriteLiteral("        <div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 1119), Tuple.Create("\"", 1136)
+WriteAttribute("class", Tuple.Create(" class=\"", 1145), Tuple.Create("\"", 1162)
             
             #line 27 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
-, Tuple.Create(Tuple.Create("", 1127), Tuple.Create<System.Object, System.Int32>(rowClass
+, Tuple.Create(Tuple.Create("", 1153), Tuple.Create<System.Object, System.Int32>(rowClass
             
             #line default
             #line hidden
-, 1127), false)
+, 1153), false)
 );
 
-WriteLiteral(">\n            <div");
+WriteLiteral(">\r\n            <div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 1155), Tuple.Create("\"", 1172)
+WriteAttribute("class", Tuple.Create(" class=\"", 1182), Tuple.Create("\"", 1199)
             
             #line 28 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
-, Tuple.Create(Tuple.Create("", 1163), Tuple.Create<System.Object, System.Int32>(colClass
+, Tuple.Create(Tuple.Create("", 1190), Tuple.Create<System.Object, System.Int32>(colClass
             
             #line default
             #line hidden
-, 1163), false)
+, 1190), false)
 );
 
-WriteLiteral(">\n                <h3>");
+WriteLiteral(">\r\n                <h3>");
 
             
             #line 29 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -386,7 +386,7 @@ WriteLiteral(">\n                <h3>");
             
             #line default
             #line hidden
-WriteLiteral("</h3>\n\n");
+WriteLiteral("</h3>\r\n\r\n");
 
             
             #line 31 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -419,7 +419,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n");
+WriteLiteral("</div>\r\n");
 
             
             #line 34 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -428,7 +428,7 @@ WriteLiteral("</div>\n");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("                ");
 
@@ -439,7 +439,7 @@ WriteLiteral("                ");
             
             #line default
             #line hidden
-WriteLiteral("\n\n");
+WriteLiteral("\r\n\r\n");
 
 WriteLiteral("                ");
 
@@ -450,7 +450,7 @@ WriteLiteral("                ");
             
             #line default
             #line hidden
-WriteLiteral("\n\n");
+WriteLiteral("\r\n\r\n");
 
             
             #line 40 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -472,7 +472,7 @@ WriteLiteral("                    <div");
 
 WriteLiteral(" class=\"form-group row\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
             
             #line 45 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -492,7 +492,7 @@ WriteLiteral("                            <div");
 
 WriteLiteral(" class=\"checkbox col-lg-6 m-0\"");
 
-WriteLiteral(">\n                                <label>\n");
+WriteLiteral(">\r\n                                <label>\r\n");
 
 WriteLiteral("                                    ");
 
@@ -503,7 +503,7 @@ WriteLiteral("                                    ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("                                    ");
 
@@ -514,7 +514,7 @@ WriteLiteral("                                    ");
             
             #line default
             #line hidden
-WriteLiteral("\n                                </label>\n                            </div>\n");
+WriteLiteral("\r\n                                </label>\r\n                            </div>\r\n");
 
             
             #line 53 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -535,19 +535,19 @@ WriteLiteral("                    ");
             #line hidden
 WriteLiteral("                        <div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 2671), Tuple.Create("\"", 2712)
-, Tuple.Create(Tuple.Create("", 2679), Tuple.Create("text-lg-right", 2679), true)
-, Tuple.Create(Tuple.Create(" ", 2692), Tuple.Create("pr-4", 2693), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 2726), Tuple.Create("\"", 2767)
+, Tuple.Create(Tuple.Create("", 2734), Tuple.Create("text-lg-right", 2734), true)
+, Tuple.Create(Tuple.Create(" ", 2747), Tuple.Create("pr-4", 2748), true)
             
             #line 56 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
-, Tuple.Create(Tuple.Create(" ", 2697), Tuple.Create<System.Object, System.Int32>(isPulledRight
+, Tuple.Create(Tuple.Create(" ", 2752), Tuple.Create<System.Object, System.Int32>(isPulledRight
             
             #line default
             #line hidden
-, 2698), false)
+, 2753), false)
 );
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("                            ");
 
@@ -558,7 +558,7 @@ WriteLiteral("                            ");
             
             #line default
             #line hidden
-WriteLiteral("\n                        </div>\n");
+WriteLiteral("\r\n                        </div>\r\n");
 
             
             #line 59 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -567,7 +567,7 @@ WriteLiteral("\n                        </div>\n");
             
             #line default
             #line hidden
-WriteLiteral("                    </div>                \n");
+WriteLiteral("                    </div>                \r\n");
 
             
             #line 61 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -576,11 +576,11 @@ WriteLiteral("                    </div>                \n");
             
             #line default
             #line hidden
-WriteLiteral("\n                <div");
+WriteLiteral("\r\n                <div");
 
 WriteLiteral(" class=\"form-group\"");
 
-WriteLiteral(">\n                    <button");
+WriteLiteral(">\r\n                    <button");
 
 WriteLiteral(" type=\"submit\"");
 
@@ -604,7 +604,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</button>\n                </div>\n\n");
+WriteLiteral("</button>\r\n                </div>\r\n\r\n");
 
             
             #line 67 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -624,7 +624,7 @@ WriteLiteral("            <div");
 
 WriteLiteral(" class=\"sf-registration-link\"");
 
-WriteLiteral(">\n                <div>");
+WriteLiteral(">\r\n                <div>");
 
             
             #line 70 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -633,16 +633,16 @@ WriteLiteral(">\n                <div>");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n                <a");
+WriteLiteral("</div>\r\n                <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 3349), Tuple.Create("\"", 3378)
+WriteAttribute("href", Tuple.Create(" href=\"", 3419), Tuple.Create("\"", 3448)
             
             #line 71 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
-, Tuple.Create(Tuple.Create("", 3356), Tuple.Create<System.Object, System.Int32>(Model.RegisterPageUrl
+, Tuple.Create(Tuple.Create("", 3426), Tuple.Create<System.Object, System.Int32>(Model.RegisterPageUrl
             
             #line default
             #line hidden
-, 3356), false)
+, 3426), false)
 );
 
 WriteLiteral(">");
@@ -654,7 +654,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</a>\n            </div>\n");
+WriteLiteral("</a>\r\n            </div>\r\n");
 
             
             #line 73 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -663,7 +663,7 @@ WriteLiteral("</a>\n            </div>\n");
             
             #line default
             #line hidden
-WriteLiteral("        </div>\n            \n");
+WriteLiteral("        </div>\r\n            \r\n");
 
             
             #line 76 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -683,7 +683,7 @@ WriteLiteral("                <div");
 
 WriteLiteral(" class=\"col-lg-6\"");
 
-WriteLiteral(">                \n                    <h3>");
+WriteLiteral(">                \r\n                    <h3>");
 
             
             #line 79 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -692,7 +692,7 @@ WriteLiteral(">                \n                    <h3>");
             
             #line default
             #line hidden
-WriteLiteral("</h3>\n\n");
+WriteLiteral("</h3>\r\n\r\n");
 
             
             #line 81 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -713,7 +713,7 @@ WriteLiteral("<div");
 
 WriteLiteral(" class=\"mb-1\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("                            ");
 
@@ -724,7 +724,7 @@ WriteLiteral("                            ");
             
             #line default
             #line hidden
-WriteLiteral("\n                        </div>\n");
+WriteLiteral("\r\n                        </div>\r\n");
 
             
             #line 87 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -733,7 +733,7 @@ WriteLiteral("\n                        </div>\n");
             
             #line default
             #line hidden
-WriteLiteral("                </div>\n");
+WriteLiteral("                </div>\r\n");
 
             
             #line 89 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -742,7 +742,7 @@ WriteLiteral("                </div>\n");
             
             #line default
             #line hidden
-WriteLiteral("        </div>\n");
+WriteLiteral("        </div>\r\n");
 
             
             #line 91 "..\..MVC\Views\LoginForm\LoginForm.LoginForm.cshtml"
@@ -751,7 +751,7 @@ WriteLiteral("        </div>\n");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n\n");
+WriteLiteral("</div>\r\n\r\n");
 
         }
     }

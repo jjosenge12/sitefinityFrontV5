@@ -13,9 +13,11 @@ var errImg = '../../Content/Images/Paso0/err.gif';
 var warningImg = '../../Content/Images/Paso0/alert.gif';
 var dealerCode = 0;
 var dealers = [], lastMarker;
-const apiKey = 'AIzaSyAXcPfvcjvg30JnlXggadE6_jbjnsQvCTw';
+var apiKey;
 
 function CenterControl(controlDiv, map, myLoc) {
+
+   
 
     // Set CSS for the control border.
     var controlUI = document.createElement('div');
@@ -49,7 +51,32 @@ function CenterControl(controlDiv, map, myLoc) {
 
 }
 
-function initMap() {
+async function initMap() {
+
+    /*// Cargar el archivo de configuración
+    fetch('config.json')
+        .then(response => response.json())
+        .then(config => {
+            // Acceder a la clave API
+            const apiKey = config.apiKey;
+            console.log("La clave API es:", apiKey);
+        })
+        .catch(error => {
+            console.error("Error al cargar el archivo de configuración:");
+            console.log(error);
+        });*/
+
+
+    await $.ajax({
+        type: "get",
+        url: window.config.urlbase + "/getApiKey",
+        datatype: "json",
+        success: function (data) {
+            apiKey = data.results;
+            console.log("La clave API es:", apiKey);
+        },
+    });
+    console.log("La clave API es:", apiKey);
 
     infoWindow = new google.maps.InfoWindow;
 

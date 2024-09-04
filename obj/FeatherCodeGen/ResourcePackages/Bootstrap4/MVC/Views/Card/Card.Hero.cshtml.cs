@@ -44,39 +44,39 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.Card
         {
 WriteLiteral("<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 121), Tuple.Create("\"", 154)
+WriteAttribute("class", Tuple.Create(" class=\"", 123), Tuple.Create("\"", 156)
             
             #line 3 "..\..MVC\Views\Card\Card.Hero.cshtml"
-, Tuple.Create(Tuple.Create("", 129), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 131), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 129), false)
-, Tuple.Create(Tuple.Create(" ", 144), Tuple.Create("container", 145), true)
+, 131), false)
+, Tuple.Create(Tuple.Create(" ", 146), Tuple.Create("container", 147), true)
 );
 
-WriteLiteral(">\n    <div");
+WriteLiteral(">\r\n    <div");
 
 WriteLiteral(" class=\"jumbotron\"");
 
-WriteAttribute("style", Tuple.Create(" style=\"", 183), Tuple.Create("\"", 281)
-, Tuple.Create(Tuple.Create("", 191), Tuple.Create("background:", 191), true)
-, Tuple.Create(Tuple.Create(" ", 202), Tuple.Create("url(&quot;", 203), true)
+WriteAttribute("style", Tuple.Create(" style=\"", 186), Tuple.Create("\"", 284)
+, Tuple.Create(Tuple.Create("", 194), Tuple.Create("background:", 194), true)
+, Tuple.Create(Tuple.Create(" ", 205), Tuple.Create("url(&quot;", 206), true)
             
             #line 4 "..\..MVC\Views\Card\Card.Hero.cshtml"
-, Tuple.Create(Tuple.Create("", 213), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
+, Tuple.Create(Tuple.Create("", 216), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
             
             #line default
             #line hidden
-, 213), false)
-, Tuple.Create(Tuple.Create("", 235), Tuple.Create("&quot;)", 235), true)
-, Tuple.Create(Tuple.Create(" ", 242), Tuple.Create("center", 243), true)
-, Tuple.Create(Tuple.Create(" ", 249), Tuple.Create("center;", 250), true)
-, Tuple.Create(Tuple.Create(" ", 257), Tuple.Create("background-size:", 258), true)
-, Tuple.Create(Tuple.Create(" ", 274), Tuple.Create("cover;", 275), true)
+, 216), false)
+, Tuple.Create(Tuple.Create("", 238), Tuple.Create("&quot;)", 238), true)
+, Tuple.Create(Tuple.Create(" ", 245), Tuple.Create("center", 246), true)
+, Tuple.Create(Tuple.Create(" ", 252), Tuple.Create("center;", 253), true)
+, Tuple.Create(Tuple.Create(" ", 260), Tuple.Create("background-size:", 261), true)
+, Tuple.Create(Tuple.Create(" ", 277), Tuple.Create("cover;", 278), true)
 );
 
-WriteLiteral(">\n        <h1");
+WriteLiteral(">\r\n        <h1");
 
 WriteLiteral(" class=\"display-4\"");
 
@@ -89,7 +89,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</h1>\n        <p");
+WriteLiteral("</h1>\r\n        <p");
 
 WriteLiteral(" class=\"lead\"");
 
@@ -102,7 +102,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</p>\n");
+WriteLiteral("</p>\r\n");
 
             
             #line 7 "..\..MVC\Views\Card\Card.Hero.cshtml"
@@ -122,14 +122,14 @@ WriteLiteral("            <a");
 
 WriteLiteral(" class=\"btn btn-primary btn-lg\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 528), Tuple.Create("\"", 569)
+WriteAttribute("href", Tuple.Create(" href=\"", 536), Tuple.Create("\"", 577)
             
             #line 9 "..\..MVC\Views\Card\Card.Hero.cshtml"
-, Tuple.Create(Tuple.Create("", 535), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.ActionUrl)
+, Tuple.Create(Tuple.Create("", 543), Tuple.Create<System.Object, System.Int32>(Html.UrlSanitize(Model.ActionUrl)
             
             #line default
             #line hidden
-, 535), false)
+, 543), false)
 );
 
 WriteLiteral(" class=\"btn btn-primary btn-lg\"");
@@ -145,7 +145,7 @@ WriteLiteral(" >");
             
             #line default
             #line hidden
-WriteLiteral("</a>\n");
+WriteLiteral("</a>\r\n");
 
             
             #line 10 "..\..MVC\Views\Card\Card.Hero.cshtml"
@@ -154,7 +154,7 @@ WriteLiteral("</a>\n");
             
             #line default
             #line hidden
-WriteLiteral("    </div>\n</div>\n");
+WriteLiteral("    </div>\r\n</div>\r\n");
 
         }
     }

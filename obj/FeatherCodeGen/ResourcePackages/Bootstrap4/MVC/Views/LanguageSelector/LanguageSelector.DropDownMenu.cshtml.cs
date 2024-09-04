@@ -54,20 +54,20 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.LanguageSelecto
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 231), Tuple.Create("\"", 271)
+WriteAttribute("class", Tuple.Create(" class=\"", 237), Tuple.Create("\"", 277)
             
             #line 7 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"
-, Tuple.Create(Tuple.Create("", 239), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 245), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 239), false)
-, Tuple.Create(Tuple.Create(" ", 254), Tuple.Create("sf-lang-selector", 255), true)
+, 245), false)
+, Tuple.Create(Tuple.Create(" ", 260), Tuple.Create("sf-lang-selector", 261), true)
 );
 
-WriteLiteral(">\n    <label>\n");
+WriteLiteral(">\r\n    <label>\r\n");
 
 WriteLiteral("        ");
 
@@ -78,7 +78,7 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 10 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"
@@ -96,7 +96,7 @@ WriteLiteral("\n");
             #line hidden
 WriteLiteral("            ");
 
-WriteLiteral("<select>\n");
+WriteLiteral("<select>\r\n");
 
             
             #line 13 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"
@@ -109,7 +109,7 @@ WriteLiteral("<select>\n");
             #line hidden
 WriteLiteral("            ");
 
-WriteLiteral("<select onChange=\"openLink(value)\">\n");
+WriteLiteral("<select onChange=\"openLink(value)\">\r\n");
 
             
             #line 17 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"
@@ -118,7 +118,7 @@ WriteLiteral("<select onChange=\"openLink(value)\">\n");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 19 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"
@@ -149,7 +149,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</option>\n");
+WriteLiteral("</option>\r\n");
 
             
             #line 22 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"
@@ -158,7 +158,7 @@ WriteLiteral("</option>\n");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 24 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"
@@ -176,14 +176,14 @@ WriteLiteral("\n");
             #line hidden
 WriteLiteral("                <option");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 767), Tuple.Create("\"", 792)
+WriteAttribute("value", Tuple.Create(" value=\"", 792), Tuple.Create("\"", 817)
             
             #line 26 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"
-, Tuple.Create(Tuple.Create("", 775), Tuple.Create<System.Object, System.Int32>(language.Culture
+, Tuple.Create(Tuple.Create("", 800), Tuple.Create<System.Object, System.Int32>(language.Culture
             
             #line default
             #line hidden
-, 775), false)
+, 800), false)
 );
 
 WriteLiteral(" ");
@@ -204,7 +204,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</option>\n");
+WriteLiteral("</option>\r\n");
 
             
             #line 27 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"
@@ -213,7 +213,7 @@ WriteLiteral("</option>\n");
             
             #line default
             #line hidden
-WriteLiteral("        </select>\n    </label>\n</div>\n\n");
+WriteLiteral("        </select>\r\n    </label>\r\n</div>\r\n\r\n");
 
             
             #line 32 "..\..MVC\Views\LanguageSelector\LanguageSelector.DropDownMenu.cshtml"

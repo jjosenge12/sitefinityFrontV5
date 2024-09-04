@@ -83,9 +83,9 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.ImageGallery
         }
         public override void Execute()
         {
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 13 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -94,7 +94,7 @@ Write(Html.Script(ScriptRef.JQuery, "top", true));
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 14 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -103,7 +103,7 @@ Write(Html.Script(Url.WidgetContent("Mvc/Scripts/ImageGallery/thumbnail-strip.js
             
             #line default
             #line hidden
-WriteLiteral("\n\n");
+WriteLiteral("\r\n\r\n");
 
             
             #line 16 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -122,21 +122,21 @@ WriteLiteral("\n\n");
             
             #line default
             #line hidden
-WriteLiteral("\n\n<div");
+WriteLiteral("\r\n\r\n<div");
 
 WriteLiteral(" class=\"sf-Gallery sf-Gallery--strip\"");
 
-WriteAttribute("aria-label", Tuple.Create(" aria-label=\"", 986), Tuple.Create("\"", 1029)
+WriteAttribute("aria-label", Tuple.Create(" aria-label=\"", 1014), Tuple.Create("\"", 1057)
             
             #line 29 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-, Tuple.Create(Tuple.Create("", 999), Tuple.Create<System.Object, System.Int32>(Html.Resource("ImageGallery")
+, Tuple.Create(Tuple.Create("", 1027), Tuple.Create<System.Object, System.Int32>(Html.Resource("ImageGallery")
             
             #line default
             #line hidden
-, 999), false)
+, 1027), false)
 );
 
-WriteLiteral(">\n\n");
+WriteLiteral(">\r\n\r\n");
 
             
             #line 31 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -161,7 +161,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</h2>\n");
+WriteLiteral("</h2>\r\n");
 
             
             #line 36 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -183,7 +183,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</p>\n");
+WriteLiteral("</p>\r\n");
 
             
             #line 38 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -205,7 +205,7 @@ WriteLiteral(">1</span> of ");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n");
+WriteLiteral("</div>\r\n");
 
             
             #line 40 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -218,20 +218,20 @@ WriteLiteral("\t<p");
 
 WriteLiteral(" class=\"sf-Gallery-image js-Gallery-image\"");
 
-WriteLiteral(">\n\t\t<a");
+WriteLiteral(">\r\n\t\t<a");
 
 WriteLiteral(" href=\"javascript:void(0)\"");
 
 WriteLiteral(" class=\'js-Gallery-prev sf-Gallery-prev\'");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 1409), Tuple.Create("\"", 1452)
+WriteAttribute("title", Tuple.Create(" title=\"", 1450), Tuple.Create("\"", 1493)
             
             #line 42 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-    , Tuple.Create(Tuple.Create("", 1417), Tuple.Create<System.Object, System.Int32>(Html.Resource("GoToPreviousImage")
+    , Tuple.Create(Tuple.Create("", 1458), Tuple.Create<System.Object, System.Int32>(Html.Resource("GoToPreviousImage")
             
             #line default
             #line hidden
-, 1417), false)
+, 1458), false)
 );
 
 WriteLiteral("><span");
@@ -240,20 +240,20 @@ WriteLiteral(" class=\"carousel-control-prev-icon\"");
 
 WriteLiteral(" aria-hidden=\"true\"");
 
-WriteLiteral("></span></a>\n\t\t<a");
+WriteLiteral("></span></a>\r\n\t\t<a");
 
 WriteLiteral(" href=\"javascript:void(0)\"");
 
 WriteLiteral(" class=\'js-Gallery-next sf-Gallery-next\'");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 1596), Tuple.Create("\"", 1635)
+WriteAttribute("title", Tuple.Create(" title=\"", 1638), Tuple.Create("\"", 1677)
             
             #line 43 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-    , Tuple.Create(Tuple.Create("", 1604), Tuple.Create<System.Object, System.Int32>(Html.Resource("GoToNextImage")
+    , Tuple.Create(Tuple.Create("", 1646), Tuple.Create<System.Object, System.Int32>(Html.Resource("GoToNextImage")
             
             #line default
             #line hidden
-, 1604), false)
+, 1646), false)
 );
 
 WriteLiteral("><span");
@@ -262,39 +262,39 @@ WriteLiteral(" class=\"carousel-control-next-icon\"");
 
 WriteLiteral(" aria-hidden=\"true\"");
 
-WriteLiteral("></span></a>\n        <img");
+WriteLiteral("></span></a>\r\n        <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 1721), Tuple.Create("\"", 1757)
+WriteAttribute("src", Tuple.Create(" src=\"", 1764), Tuple.Create("\"", 1800)
             
             #line 44 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-, Tuple.Create(Tuple.Create("", 1727), Tuple.Create<System.Object, System.Int32>(thumbnailViewModel.MediaUrl
+, Tuple.Create(Tuple.Create("", 1770), Tuple.Create<System.Object, System.Int32>(thumbnailViewModel.MediaUrl
             
             #line default
             #line hidden
-, 1727), false)
+, 1770), false)
 );
 
-WriteAttribute("title", Tuple.Create(" title=\"", 1758), Tuple.Create("\"", 1791)
+WriteAttribute("title", Tuple.Create(" title=\"", 1801), Tuple.Create("\"", 1834)
             
             #line 44 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-, Tuple.Create(Tuple.Create("", 1766), Tuple.Create<System.Object, System.Int32>(firstItem.DataItem.Title
+, Tuple.Create(Tuple.Create("", 1809), Tuple.Create<System.Object, System.Int32>(firstItem.DataItem.Title
             
             #line default
             #line hidden
-, 1766), false)
+, 1809), false)
 );
 
-WriteAttribute("alt", Tuple.Create(" alt=\"", 1792), Tuple.Create("\"", 1833)
+WriteAttribute("alt", Tuple.Create(" alt=\"", 1835), Tuple.Create("\"", 1876)
             
             #line 44 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-         , Tuple.Create(Tuple.Create("", 1798), Tuple.Create<System.Object, System.Int32>(firstItem.DataItem.AlternativeText
+         , Tuple.Create(Tuple.Create("", 1841), Tuple.Create<System.Object, System.Int32>(firstItem.DataItem.AlternativeText
             
             #line default
             #line hidden
-, 1798), false)
+, 1841), false)
 );
 
-WriteLiteral(" \n                  ");
+WriteLiteral(" \r\n                  ");
 
             
             #line 45 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -303,7 +303,7 @@ WriteLiteral(" \n                  ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("                  ");
 
@@ -314,7 +314,7 @@ WriteLiteral("                  ");
             
             #line default
             #line hidden
-WriteLiteral(" />\n\n\t</p>\n");
+WriteLiteral(" />\r\n\r\n\t</p>\r\n");
 
             
             #line 49 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -333,7 +333,7 @@ WriteLiteral(" aria-live=\"polite\"");
 
 WriteLiteral(" aria-atomic=\"true\"");
 
-WriteLiteral("></h2>\n");
+WriteLiteral("></h2>\r\n");
 
             
             #line 53 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -350,7 +350,7 @@ WriteLiteral(" aria-live=\"polite\"");
 
 WriteLiteral(" aria-atomic=\"true\"");
 
-WriteLiteral("></p>\n");
+WriteLiteral("></p>\r\n");
 
             
             #line 55 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -378,7 +378,7 @@ WriteLiteral("></span> of ");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n");
+WriteLiteral("</div>\r\n");
 
             
             #line 57 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -391,34 +391,34 @@ WriteLiteral("\t<div");
 
 WriteLiteral(" class=\"sf-Gallery-image js-Gallery-image\"");
 
-WriteLiteral(">\n        <nav");
+WriteLiteral(">\r\n        <nav");
 
 WriteLiteral(" role=\"navigation\"");
 
-WriteAttribute("aria-label", Tuple.Create(" aria-label=\"", 2362), Tuple.Create("\"", 2410)
+WriteAttribute("aria-label", Tuple.Create(" aria-label=\"", 2420), Tuple.Create("\"", 2468)
             
             #line 59 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-, Tuple.Create(Tuple.Create("", 2375), Tuple.Create<System.Object, System.Int32>(Html.Resource("PreviousNextImage")
+, Tuple.Create(Tuple.Create("", 2433), Tuple.Create<System.Object, System.Int32>(Html.Resource("PreviousNextImage")
             
             #line default
             #line hidden
-, 2375), false)
+, 2433), false)
 );
 
-WriteLiteral(">\n            <a");
+WriteLiteral(">\r\n            <a");
 
 WriteLiteral(" href=\"javascript:void(0)\"");
 
 WriteLiteral(" class=\"js-Gallery-prev sf-Gallery-prev\"");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 2493), Tuple.Create("\"", 2536)
+WriteAttribute("title", Tuple.Create(" title=\"", 2552), Tuple.Create("\"", 2595)
             
             #line 60 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-        , Tuple.Create(Tuple.Create("", 2501), Tuple.Create<System.Object, System.Int32>(Html.Resource("GoToPreviousImage")
+        , Tuple.Create(Tuple.Create("", 2560), Tuple.Create<System.Object, System.Int32>(Html.Resource("GoToPreviousImage")
             
             #line default
             #line hidden
-, 2501), false)
+, 2560), false)
 );
 
 WriteLiteral("><span");
@@ -427,20 +427,20 @@ WriteLiteral(" class=\"carousel-control-prev-icon\"");
 
 WriteLiteral(" aria-hidden=\"true\"");
 
-WriteLiteral("></span></a>\n            <a");
+WriteLiteral("></span></a>\r\n            <a");
 
 WriteLiteral(" href=\"javascript:void(0)\"");
 
 WriteLiteral(" class=\"js-Gallery-next sf-Gallery-next\"");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 2690), Tuple.Create("\"", 2729)
+WriteAttribute("title", Tuple.Create(" title=\"", 2750), Tuple.Create("\"", 2789)
             
             #line 61 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-        , Tuple.Create(Tuple.Create("", 2698), Tuple.Create<System.Object, System.Int32>(Html.Resource("GoToNextImage")
+        , Tuple.Create(Tuple.Create("", 2758), Tuple.Create<System.Object, System.Int32>(Html.Resource("GoToNextImage")
             
             #line default
             #line hidden
-, 2698), false)
+, 2758), false)
 );
 
 WriteLiteral("><span");
@@ -449,7 +449,7 @@ WriteLiteral(" class=\"carousel-control-next-icon\"");
 
 WriteLiteral(" aria-hidden=\"true\"");
 
-WriteLiteral("></span></a>\n        </nav>\n\t\t<img />\n\t</div>\n");
+WriteLiteral("></span></a>\r\n        </nav>\r\n\t\t<img />\r\n\t</div>\r\n");
 
             
             #line 65 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -459,15 +459,15 @@ WriteLiteral("></span></a>\n        </nav>\n\t\t<img />\n\t</div>\n");
             
             #line default
             #line hidden
-WriteLiteral("\n\n\n\t<ul");
+WriteLiteral("\r\n\r\n\r\n\t<ul");
 
 WriteLiteral(" class=\"sf-Gallery-thumbs-container list-unstyled\"");
 
-WriteLiteral(">\n\t\t<li");
+WriteLiteral(">\r\n\t\t<li");
 
 WriteLiteral(" class=\"sf-Gallery-thumbs js-Gallery-thumbs d-inline-block\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
             
             #line 72 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -481,7 +481,7 @@ WriteLiteral(">\n");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 73 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -505,14 +505,14 @@ WriteLiteral(" href=\"javascript:void(0)\"");
 
 WriteLiteral(" class=\"text-center\"");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 3136), Tuple.Create("\"", 3162)
+WriteAttribute("title", Tuple.Create(" title=\"", 3212), Tuple.Create("\"", 3238)
             
             #line 77 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-, Tuple.Create(Tuple.Create("", 3144), Tuple.Create<System.Object, System.Int32>(item.Fields.Title
+, Tuple.Create(Tuple.Create("", 3220), Tuple.Create<System.Object, System.Int32>(item.Fields.Title
             
             #line default
             #line hidden
-, 3144), false)
+, 3220), false)
 );
 
 WriteLiteral(" data-item=\"");
@@ -537,29 +537,29 @@ WriteLiteral(" data-detail-url=\"");
             #line hidden
 WriteLiteral("\"");
 
-WriteLiteral(">\n                <img");
+WriteLiteral(">\r\n                <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 3365), Tuple.Create("\"", 3400)
+WriteAttribute("src", Tuple.Create(" src=\"", 3442), Tuple.Create("\"", 3477)
             
             #line 78 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-, Tuple.Create(Tuple.Create("", 3371), Tuple.Create<System.Object, System.Int32>(itemViewModel.ThumbnailUrl
+, Tuple.Create(Tuple.Create("", 3448), Tuple.Create<System.Object, System.Int32>(itemViewModel.ThumbnailUrl
             
             #line default
             #line hidden
-, 3371), false)
+, 3448), false)
 );
 
-WriteAttribute("alt", Tuple.Create(" alt=\"", 3401), Tuple.Create("\"", 3435)
+WriteAttribute("alt", Tuple.Create(" alt=\"", 3478), Tuple.Create("\"", 3512)
             
             #line 78 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
-, Tuple.Create(Tuple.Create("", 3407), Tuple.Create<System.Object, System.Int32>(item.Fields.AlternativeText
+, Tuple.Create(Tuple.Create("", 3484), Tuple.Create<System.Object, System.Int32>(item.Fields.AlternativeText
             
             #line default
             #line hidden
-, 3407), false)
+, 3484), false)
 );
 
-WriteLiteral(" \n                              ");
+WriteLiteral(" \r\n                              ");
 
             
             #line 79 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -568,7 +568,7 @@ WriteLiteral(" \n                              ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("                              ");
 
@@ -579,7 +579,7 @@ WriteLiteral("                              ");
             
             #line default
             #line hidden
-WriteLiteral(" />\n\t\t\t</a>\n");
+WriteLiteral(" />\r\n\t\t\t</a>\r\n");
 
             
             #line 82 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"
@@ -589,7 +589,7 @@ WriteLiteral(" />\n\t\t\t</a>\n");
             
             #line default
             #line hidden
-WriteLiteral("\t\t</li>\n\t</ul>\n</div>\n");
+WriteLiteral("\t\t</li>\r\n\t</ul>\r\n</div>\r\n");
 
             
             #line 87 "..\..MVC\Views\ImageGallery\List.ThumbnailStrip.cshtml"

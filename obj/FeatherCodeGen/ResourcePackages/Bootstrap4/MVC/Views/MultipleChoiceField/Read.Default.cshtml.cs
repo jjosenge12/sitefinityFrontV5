@@ -38,20 +38,20 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.MultipleChoiceF
         {
 WriteLiteral("<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 113), Tuple.Create("\"", 147)
+WriteAttribute("class", Tuple.Create(" class=\"", 115), Tuple.Create("\"", 149)
             
             #line 3 "..\..MVC\Views\MultipleChoiceField\Read.Default.cshtml"
-, Tuple.Create(Tuple.Create("", 121), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 123), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 121), false)
-, Tuple.Create(Tuple.Create(" ", 136), Tuple.Create("form-group", 137), true)
+, 123), false)
+, Tuple.Create(Tuple.Create(" ", 138), Tuple.Create("form-group", 139), true)
 );
 
 WriteLiteral(" data-sf-role=\"text-field-container\"");
 
-WriteLiteral(">\n    <strong>");
+WriteLiteral(">\r\n    <strong>");
 
             
             #line 4 "..\..MVC\Views\MultipleChoiceField\Read.Default.cshtml"
@@ -60,7 +60,7 @@ WriteLiteral(">\n    <strong>");
             
             #line default
             #line hidden
-WriteLiteral("</strong>\n    <p>");
+WriteLiteral("</strong>\r\n    <p>");
 
             
             #line 5 "..\..MVC\Views\MultipleChoiceField\Read.Default.cshtml"
@@ -69,7 +69,7 @@ WriteLiteral("</strong>\n    <p>");
             
             #line default
             #line hidden
-WriteLiteral("</p>\n</div>\n");
+WriteLiteral("</p>\r\n</div>\r\n");
 
         }
     }

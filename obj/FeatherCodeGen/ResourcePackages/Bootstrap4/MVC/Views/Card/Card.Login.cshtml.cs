@@ -70,7 +70,7 @@ WriteLiteral("\r\n");
 
             
             #line 8 "..\..MVC\Views\Card\Card.Login.cshtml"
-Write(Html.Script(Url.WidgetContent("https://marianamartinezvd.github.io/tfs-sitefinity/Content/TFSM/Scripts/login.js"), "top", true));
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/login.js"), "top", true));
 
             
             #line default

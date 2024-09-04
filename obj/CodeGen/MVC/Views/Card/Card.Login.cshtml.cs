@@ -99,7 +99,16 @@ Write(Html.Script(Url.WidgetContent("~/Content/scripts/swiper-bundle.min.js"), "
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n\r\n\r\n");
+WriteLiteral("\r\n");
+
+            
+            #line 12 "..\..\MVC\Views\Card\Card.Login.cshtml"
+Write(Html.Script(Url.WidgetContent("~/Content/scripts/Card/card-registro.js"), "bottom", true));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n\r\n");
 
             
             #line 15 "..\..\MVC\Views\Card\Card.Login.cshtml"
@@ -180,14 +189,14 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("                    <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 1237), Tuple.Create("\"", 1265)
+WriteAttribute("src", Tuple.Create(" src=\"", 1327), Tuple.Create("\"", 1355)
             
             #line 29 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 1243), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
+, Tuple.Create(Tuple.Create("", 1333), Tuple.Create<System.Object, System.Int32>(Model.SelectedSizeUrl
             
             #line default
             #line hidden
-, 1243), false)
+, 1333), false)
 );
 
 WriteLiteral(" class=\"img-fluid custom-img-fluid\"");
@@ -227,7 +236,7 @@ WriteLiteral(">\r\n            <div");
 
 WriteLiteral(" class=\"swiper-wrapper\"");
 
-WriteLiteral(">\r\n                <div");
+WriteLiteral(">\r\n                <!--INICIO SESION NC -->\r\n                <div");
 
 WriteLiteral(" class=\"swiper-slide\"");
 
@@ -242,6 +251,8 @@ WriteLiteral(">\r\n                        <div");
 WriteLiteral(" class=\"d-flex mb-4\"");
 
 WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" tabindex=\"-1\"");
 
 WriteLiteral(" class=\"back-button\"");
 
@@ -267,7 +278,7 @@ WriteLiteral(" class=\"mb-3\"");
 
 WriteLiteral(">\r\n                            <p");
 
-WriteLiteral(" class=\"normal-p\"");
+WriteLiteral(" class=\"normal-p text-justify\"");
 
 WriteLiteral(">\r\n                                Nos da mucho gusto que quieras ser parte de la" +
 " familia Toyota, juntos es posible.\r\n                            </p>\r\n         " +
@@ -276,21 +287,6 @@ WriteLiteral(">\r\n                                Nos da mucho gusto que quiera
 WriteLiteral(" data-id=\"nc-form\"");
 
 WriteLiteral(" class=\"sf-form-container\"");
-
-WriteLiteral(" data-method=\"GET\"");
-
-WriteLiteral(" data-action=\"");
-
-            
-            #line 56 "..\..\MVC\Views\Card\Card.Login.cshtml"
-                                                                                                   Write(System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("/s/sitefinitylogin\"");
-
-WriteLiteral(" data-onsubmit=\"encrypt()\"");
 
 WriteLiteral(">\r\n                            <div");
 
@@ -390,18 +386,7 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"fail\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 4480), Tuple.Create("\"", 4582)
-            
-            #line 84 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 4488), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
-            
-            #line default
-            #line hidden
-, 4488), false)
-, Tuple.Create(Tuple.Create("", 4563), Tuple.Create("/tfsm/home-delivery", 4563), true)
-);
-
-WriteLiteral(" id=\"fail\"");
+WriteLiteral("  id=\"fail\"");
 
 WriteLiteral(" />\r\n                            <input");
 
@@ -409,18 +394,7 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"ok\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 4656), Tuple.Create("\"", 4761)
-            
-            #line 85 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 4664), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
-            
-            #line default
-            #line hidden
-, 4664), false)
-, Tuple.Create(Tuple.Create("", 4739), Tuple.Create("/home-delivery/session", 4739), true)
-);
-
-WriteLiteral("\r\n                                   id=\"ok\"");
+WriteLiteral(" id=\"ok\"");
 
 WriteLiteral(" />\r\n\r\n                            <div");
 
@@ -428,9 +402,11 @@ WriteLiteral(" class=\"my-4 d-flex justify-content-center\"");
 
 WriteLiteral(">\r\n                                <button");
 
-WriteLiteral(" type=\"submit\"");
+WriteLiteral(" type=\"button\"");
 
-WriteLiteral(" class=\"btn-registro\"");
+WriteLiteral(" class=\"btn-registro g-recaptcha\"");
+
+WriteLiteral(" id=\"boton-login-nocliente\"");
 
 WriteLiteral("> INGRESAR </button>\r\n                            </div>\r\n\r\n                     " +
 "   </div>\r\n\r\n\r\n                        <div");
@@ -446,24 +422,23 @@ WriteLiteral(">\r\n                                ¿No tienes cuenta?\r\n      
 
 WriteLiteral(" class=\"mb-3\"");
 
-WriteLiteral(">\r\n                            <p");
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                                <p");
 
 WriteLiteral(" class=\"normal-p\"");
 
-WriteLiteral(">\r\n                                <a");
+WriteLiteral("><span");
 
-WriteLiteral(" href=\"/tfsm/home-delivery/registro-nuevo-cliente\"");
+WriteLiteral(" id=\"al-registro-nc\"");
 
-WriteLiteral(" style=\"text-decoration:none;\"");
+WriteLiteral(" class=\"red-link\"");
 
-WriteLiteral(@">
-                                    Regístrate e inicia tu proceso de crédito en línea.
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div");
+WriteLiteral(">Regístrate e inicia tu proceso de crédito en línea.</span></p>\r\n                " +
+"            </div>\r\n                        </div>\r\n                    </div>\r\n" +
+"                </div>\r\n                <!--INICIO -->\r\n                <div");
 
 WriteLiteral(" class=\"swiper-slide\"");
 
@@ -476,17 +451,12 @@ WriteLiteral(" class=\"login-form-stretch\"");
 WriteLiteral(">\r\n                        <!-- *************************************************" +
 "*************** -->\r\n                        <div");
 
-WriteLiteral(" class=\"my-3\"");
+WriteLiteral(" class=\"mb-4\"");
 
-WriteLiteral(">\r\n                            <img");
+WriteLiteral(">\r\n                           \r\n                        </div>\r\n                 " +
+"       <div");
 
-WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/tfsm-logo-home-delivery.png\"");
-
-WriteLiteral(" class=\"img-fluid\"");
-
-WriteLiteral(" />\r\n                        </div>\r\n                        <div");
-
-WriteLiteral(" class=\"mb-3\"");
+WriteLiteral(" class=\"pt-5 mb-3\"");
 
 WriteLiteral(">\r\n                            <h1");
 
@@ -498,27 +468,16 @@ WriteLiteral(" class=\"mb-3\"");
 
 WriteLiteral(">\r\n                            <p");
 
-WriteLiteral(" class=\"normal-p\"");
+WriteLiteral(" class=\"normal-p font-weight-bold text-justify\"");
 
-WriteLiteral(">\r\n                                Desde Home Delivery podrás iniciar tu proceso " +
-"de financiamiento estés en donde\r\n                                estés.\r\n      " +
-"                      </p>\r\n                        </div>\r\n                    " +
-"    <div");
+WriteLiteral(@">
+                                Inicia tu proceso de financiamiento estés en  donde estés. Tanto si ya eres cliente, como si quieres pertenecer a la familia Toyota.
+                            </p>
+                        </div>
 
-WriteLiteral(" class=\"my-5 my-lg-3\"");
+                        <div");
 
-WriteLiteral(">\r\n                            <h3");
-
-WriteLiteral(" class=\"sub-title\"");
-
-WriteLiteral(">Elije una opción para Iniciar sesión</h3>\r\n                            <p");
-
-WriteLiteral(" class=\"small-p\"");
-
-WriteLiteral(">Para ingresar a \"Soy Cliente\" es necesario un ID de cliente.</p>\r\n              " +
-"          </div>\r\n                        <div");
-
-WriteLiteral(" class=\"row\"");
+WriteLiteral(" class=\"row mb-5\"");
 
 WriteLiteral(" style=\"margin-top: 70px;\"");
 
@@ -530,38 +489,121 @@ WriteLiteral(">\r\n                                <button");
 
 WriteLiteral(" type=\"button\"");
 
-WriteLiteral(" class=\"btn-registro btn-long\"");
+WriteLiteral(" class=\"btn-red btn-long col-lg-9 col-sm-12\"");
 
-WriteLiteral(" id=\"ingreso-no-clientes\"");
+WriteLiteral(" id=\"ingresar\"");
 
-WriteLiteral(">\r\n                                    QUIERO SER CLIENTE\r\n                      " +
-"          </button>\r\n                            </div>\r\n                       " +
-"     <div");
+WriteLiteral(">\r\n                                    INGRESAR\r\n                                " +
+"</button>\r\n                            </div>\r\n                        </div>\r\n " +
+"                       <div");
 
-WriteLiteral(" class=\"col-12 col-lg-6\"");
+WriteLiteral(" id=\"err\"");
+
+WriteLiteral("></div>\r\n                        <p");
+
+WriteLiteral(" class=\"small-p mb-5 font-weight-bold\"");
+
+WriteLiteral("><small>Si aún no cuentas con los datos para iniciar sesión <span");
+
+WriteLiteral(" id=\"registro\"");
+
+WriteLiteral(" class=\"red-link\"");
+
+WriteLiteral(">regístrate aquí.</span></small></p>\r\n\r\n                    </div>\r\n             " +
+"   </div>\r\n                <!-- MENU INICIO SESION -->\r\n                <div");
+
+WriteLiteral(" class=\"swiper-slide\"");
+
+WriteLiteral(">\r\n                    <div");
+
+WriteLiteral(" id=\"bienvenida\"");
+
+WriteLiteral(" class=\"login-form-stretch\"");
+
+WriteLiteral(">\r\n                        <!-- *************************************************" +
+"*************** -->\r\n                        <div");
+
+WriteLiteral(" class=\"d-flex mb-4 \"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"back-button\"");
+
+WriteLiteral(" id=\"volver-inicio\"");
+
+WriteLiteral(">\r\n                                <img");
+
+WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/back_button.png\"");
+
+WriteLiteral(" />\r\n                            </div>\r\n                        </div>\r\n        " +
+"                <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                            <h1");
+
+WriteLiteral(" class=\"registro-title red-title\"");
+
+WriteLiteral(">Iniciar sesión</h1>\r\n                        </div>\r\n                        <di" +
+"v");
+
+WriteLiteral(" class=\"mb-3 pb-4\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p font-weight-bold mb-4 text-justify\"");
+
+WriteLiteral(">\r\n                                Para iniciar sesión selecciona la opción más a" +
+"decuada.\r\n                            </p>\r\n                        </div>\r\n    " +
+"                    <div");
+
+WriteLiteral(" class=\"row my-5 my-lg-3 pb-4 ml-0\"");
+
+WriteLiteral(" style=\"margin-top: 70px;\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"col-12 row mb-5\"");
 
 WriteLiteral(">\r\n                                <button");
 
 WriteLiteral(" type=\"button\"");
 
-WriteLiteral(" class=\"btn-registro\"");
+WriteLiteral(" class=\"btn-red mb-3 col-xl-6 col-lg-7 font-weight-light \"");
 
 WriteLiteral(" id=\"ingreso-clientes\"");
 
-WriteLiteral(" data-toggle=\"tooltip\"");
+WriteLiteral(">\r\n                                    Ingresa con Id de cliente\r\n               " +
+"                 </button>\r\n                                <p");
 
-WriteLiteral(" data-placement=\"bottom\"");
+WriteLiteral(" class=\"small-p mb-5 font-weight-bold text-justify\"");
 
-WriteLiteral(" title=\"Para ingresar a  &quot;Soy Cliente&quot; es necesario un ID de cliente.\"");
+WriteLiteral(">Si eres cliente y tienes un id de cliente inicia sesión con esta opción.</p>\r\n  " +
+"                          </div>\r\n                            <div");
 
-WriteLiteral(">\r\n                                    SOY CLIENTE\r\n                             " +
-"   </button>\r\n                            </div>\r\n                        </div>" +
-"\r\n                        <div");
+WriteLiteral(" class=\"col-12 mb-3 mb-5 row\"");
+
+WriteLiteral(">\r\n                                <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn-red btn-long mb-3 col-xl-6 col-lg-7 font-weight-light\"");
+
+WriteLiteral(" id=\"ingreso-no-clientes\"");
+
+WriteLiteral(">\r\n                                    Ingresa con correo electrónico\r\n          " +
+"                      </button>\r\n                                <p");
+
+WriteLiteral(" class=\"small-p mb-5 font-weight-bold text-justify\"");
+
+WriteLiteral(">Si cuentas con un correo electrónico y una clave, que registraste para pertencer" +
+" a la familia Toyota. Inicia sesión con esta opción.</p>\r\n                      " +
+"      </div>\r\n                        </div>\r\n                        <div");
 
 WriteLiteral(" id=\"err\"");
 
-WriteLiteral("></div>\r\n                    </div>\r\n                </div>\r\n                <div" +
-"");
+WriteLiteral("></div>\r\n                    </div>\r\n                </div>\r\n                <!--" +
+" INICIO SESION C -->\r\n                <div");
 
 WriteLiteral(" class=\"swiper-slide\"");
 
@@ -576,6 +618,8 @@ WriteLiteral(">\r\n                        <div");
 WriteLiteral(" class=\"d-flex mb-4\"");
 
 WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" tabindex=\"-1\"");
 
 WriteLiteral(" class=\"back-button\"");
 
@@ -601,28 +645,15 @@ WriteLiteral(" class=\"mb-3\"");
 
 WriteLiteral(">\r\n                            <p");
 
-WriteLiteral(" class=\"normal-p\"");
+WriteLiteral(" class=\"normal-p text-justify\"");
 
 WriteLiteral(">\r\n                                Nos da mucho gusto que sigas siendo parte de l" +
 "a familia Toyota.\r\n                            </p>\r\n                        </d" +
 "iv>\r\n\r\n                        <div");
 
-WriteLiteral(" data-id=\"c-form\"");
-
 WriteLiteral(" class=\"sf-form-container\"");
 
-WriteLiteral(" data-method=\"GET\"");
-
-WriteLiteral(" data-action=\"");
-
-            
-            #line 160 "..\..\MVC\Views\Card\Card.Login.cshtml"
-                                                                                                  Write(System.Configuration.ConfigurationManager.AppSettings["UrlToyotaClientes"].ToString());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("/s/sitefinitylogin\"");
+WriteLiteral(" data-id=\"c-form\"");
 
 WriteLiteral(">\r\n                            <div");
 
@@ -723,17 +754,6 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"fail\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 10627), Tuple.Create("\"", 10729)
-            
-            #line 188 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 10635), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
-            
-            #line default
-            #line hidden
-, 10635), false)
-, Tuple.Create(Tuple.Create("", 10710), Tuple.Create("/tfsm/home-delivery", 10710), true)
-);
-
 WriteLiteral(" id=\"failClient\"");
 
 WriteLiteral(" />\r\n                            <input");
@@ -742,18 +762,7 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" name=\"ok\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 10809), Tuple.Create("\"", 10914)
-            
-            #line 189 "..\..\MVC\Views\Card\Card.Login.cshtml"
-, Tuple.Create(Tuple.Create("", 10817), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["Origin"].ToString()
-            
-            #line default
-            #line hidden
-, 10817), false)
-, Tuple.Create(Tuple.Create("", 10892), Tuple.Create("/home-delivery/session", 10892), true)
-);
-
-WriteLiteral(" id=\"okClient\"");
+WriteLiteral("  id=\"okClient\"");
 
 WriteLiteral(" />\r\n\r\n                            <div");
 
@@ -761,9 +770,11 @@ WriteLiteral(" class=\"my-4 d-flex justify-content-center\"");
 
 WriteLiteral(">\r\n                                <button");
 
-WriteLiteral(" type=\"submit\"");
+WriteLiteral(" type=\"button\"");
 
-WriteLiteral(" class=\"btn-registro\"");
+WriteLiteral(" class=\"btn-registro g-recaptcha\"");
+
+WriteLiteral(" id=\"boton-login-cliente\"");
 
 WriteLiteral("> INGRESAR </button>\r\n                            </div>\r\n\r\n                     " +
 "   </div>\r\n\r\n                        <div");
@@ -783,13 +794,730 @@ WriteLiteral(">\r\n                            <p");
 
 WriteLiteral(" class=\"normal-p\"");
 
-WriteLiteral(">\r\n                                <a");
+WriteLiteral("><span");
 
-WriteLiteral(" href=\"/tfsm/home-delivery/registro-clientes\"");
+WriteLiteral(" id=\"al-registro\"");
+
+WriteLiteral(" class=\"red-link\"");
+
+WriteLiteral(">Regístrate e inicia tu proceso de crédito en línea.</span></p>\r\n                " +
+"        </div>\r\n                    </div>\r\n                </div>\r\n            " +
+"    <!-- MENU DE REGISTROS -->\r\n                <div");
+
+WriteLiteral(" class=\"swiper-slide\"");
+
+WriteLiteral(">\r\n\r\n                    <div");
+
+WriteLiteral(" id=\"bienvenida\"");
+
+WriteLiteral(" class=\"login-form-stretch\"");
+
+WriteLiteral(">\r\n                        <!-- *************************************************" +
+"*************** -->\r\n                        <div");
+
+WriteLiteral(" class=\"d-flex mb-4\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"back-button\"");
+
+WriteLiteral(" id=\"volver-inicio-reg\"");
+
+WriteLiteral(">\r\n                                <img");
+
+WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/back_button.png\"");
+
+WriteLiteral(" />\r\n                            </div>\r\n                        </div>\r\n        " +
+"                <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                            <h1");
+
+WriteLiteral(" class=\"registro-title red-title\"");
+
+WriteLiteral(">Registro</h1>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"mb-3 pb-4\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p font-weight-bold mb-4 text-justify\"");
+
+WriteLiteral(">\r\n                                Tenemos dos opciones para registrarte, elige u" +
+"na de ellas:\r\n                            </p>\r\n                        </div>\r\n" +
+"                        <div");
+
+WriteLiteral(" class=\"row my-5 my-lg-3 pb-4 ml-0\"");
+
+WriteLiteral(" style=\"margin-top: 70px;\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"col-12 row mb-5\"");
+
+WriteLiteral(">\r\n                                <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn-red mb-3 col-xl-6 col-lg-7 font-weight-light \"");
+
+WriteLiteral(" id=\"registro-clientes\"");
+
+WriteLiteral(">\r\n                                    Registro para clientes\r\n                  " +
+"              </button>\r\n                                <p");
+
+WriteLiteral(" class=\"small-p mb-5 font-weight-bold text-justify\"");
+
+WriteLiteral(@">Si eres parte de la familia Toyota. ""Registro para clientes"" es la opción adecuada para ti. Ten a la mano tu ID de cliente para completar el registro y con ello seguir el nuevo proceso de financiamiento.</p>
+                            </div>
+                            <div");
+
+WriteLiteral(" class=\"col-12 mb-3 mb-5 row\"");
+
+WriteLiteral(">\r\n                                <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn-red btn-long mb-3 col-xl-6 col-lg-7 font-weight-light\"");
+
+WriteLiteral(" id=\"registro-no-clientes\"");
+
+WriteLiteral(">\r\n                                    Registro nuevo\r\n                          " +
+"      </button>\r\n                                <p");
+
+WriteLiteral(" class=\"small-p mb-5 font-weight-bold text-justify\"");
+
+WriteLiteral(@">Si quieres ser parte de la familia Toyota e iniciar tu proceso de financiamiento así como el seguimiento del mismo, ""Registro nuevo"" es la opción perfecta.</p>
+                            </div>
+
+                        </div>
+                        <div");
+
+WriteLiteral(" id=\"err\"");
+
+WriteLiteral("></div>\r\n                    </div>\r\n                </div>\r\n                <!--" +
+" REGISTRO CLIENTE -->\r\n                <div");
+
+WriteLiteral(" class=\"swiper-slide\"");
+
+WriteLiteral(">\r\n                    <div");
+
+WriteLiteral(" id=\"bienvenida\"");
+
+WriteLiteral(" class=\"login-form-stretch\"");
+
+WriteLiteral(">\r\n                        <!-- *************************************************" +
+"*************** -->\r\n                        <div");
+
+WriteLiteral(" class=\"d-flex mb-4\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" tabindex=\"-1\"");
+
+WriteLiteral(" class=\"back-button\"");
+
+WriteLiteral(" id=\"volver-inicio-c\"");
+
+WriteLiteral(">\r\n                                <img");
+
+WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/back_button.png\"");
+
+WriteLiteral(" />\r\n                            </div>\r\n                        </div>\r\n        " +
+"                <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                            <h1");
+
+WriteLiteral(" class=\"registro-title red-title\"");
+
+WriteLiteral(">Registrate para iniciar sesión.</h1>\r\n                        </div>\r\n          " +
+"              <div");
+
+WriteLiteral(" class=\"mb-3 pb-4\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p mb-4 text-justify\"");
 
 WriteLiteral(@">
-                                    Regístrate e inicia tu proceso de crédito en línea.
-                                </a>
+                                Completa los siguientes campos para generar tu cuenta de ingreso a nuestra plataforma Home Delivery, con la que podrás iniciar y dar seguimiento a tu proceso de financiamiento para estrenar un Toyota.
+                            </p>
+                        </div>
+                        <div");
+
+WriteLiteral(" data-id=\"registro-c-form\"");
+
+WriteLiteral(" class=\"sf-form-container regis\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"row mt-5\"");
+
+WriteLiteral(">\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-6\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"float-container\"");
+
+WriteLiteral(">\r\n                                        <label");
+
+WriteLiteral(" class=\"float-label\"");
+
+WriteLiteral(" for=\"clientVisible-r\"");
+
+WriteLiteral(">\r\n                                            Número de cliente / ID de cliente\r" +
+"\n                                        </label>\r\n                             " +
+"           <input");
+
+WriteLiteral(" class=\"form-input effect-2\"");
+
+WriteLiteral(" type=\"text\"");
+
+WriteLiteral(" name=\"_clientId\"");
+
+WriteLiteral(" id=\"clientVisible-r\"");
+
+WriteLiteral(" />\r\n                                        <span");
+
+WriteLiteral(" class=\"focus-border\"");
+
+WriteLiteral("></span>\r\n                                    </div>\r\n                           " +
+"     </div>\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-6\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"float-container\"");
+
+WriteLiteral(">\r\n                                        <label");
+
+WriteLiteral(" class=\"float-label\"");
+
+WriteLiteral(" for=\"rfcVisible-r\"");
+
+WriteLiteral(">\r\n                                            RFC con Homoclave\r\n               " +
+"                         </label>\r\n                                        <inpu" +
+"t");
+
+WriteLiteral(" class=\"form-input effect-2\"");
+
+WriteLiteral(" type=\"text\"");
+
+WriteLiteral(" name=\"_rfc\"");
+
+WriteLiteral(" id=\"rfcVisible-r\"");
+
+WriteLiteral(" />\r\n                                        <span");
+
+WriteLiteral(" class=\"focus-border\"");
+
+WriteLiteral("></span>\r\n                                    </div>\r\n                           " +
+"     </div>\r\n                            </div>\r\n                            <di" +
+"v");
+
+WriteLiteral(" class=\"row mb-3\"");
+
+WriteLiteral(">\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-6\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"float-container\"");
+
+WriteLiteral(">\r\n                                        <label");
+
+WriteLiteral(" class=\"float-label\"");
+
+WriteLiteral(" for=\"emailVisible-r\"");
+
+WriteLiteral(">\r\n                                            Correo electr&oacute;nico\r\n       " +
+"                                 </label>\r\n                                     " +
+"   <input");
+
+WriteLiteral(" class=\"form-input effect-2\"");
+
+WriteLiteral(" type=\"email\"");
+
+WriteLiteral(" name=\"_email\"");
+
+WriteLiteral(" id=\"emailVisible-r\"");
+
+WriteLiteral(" />\r\n                                        <span");
+
+WriteLiteral(" class=\"focus-border\"");
+
+WriteLiteral("></span>\r\n                                    </div>\r\n                           " +
+"     </div>\r\n                            </div>\r\n                            <di" +
+"v");
+
+WriteLiteral(" id=\"err-c\"");
+
+WriteLiteral(" class=\"login-error mt-4\"");
+
+WriteLiteral(" style=\"display:none;\"");
+
+WriteLiteral("></div>\r\n\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" name=\"client\"");
+
+WriteLiteral(" id=\"client-r\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" name=\"email\"");
+
+WriteLiteral(" id=\"email-r\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" name=\"rfc\"");
+
+WriteLiteral(" id=\"rfc-r\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"fail\"");
+
+WriteLiteral("/>\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"ok\"");
+
+WriteLiteral(" id=\"ok-r\"");
+
+WriteLiteral(" />\r\n\r\n                            <div");
+
+WriteLiteral(" class=\"my-5 row align-items-center justify-content-center\"");
+
+WriteLiteral(">\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-12 mb-4\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"terms align-items-center\"");
+
+WriteLiteral(">\r\n                                        <div><input");
+
+WriteLiteral(" type=\"checkbox\"");
+
+WriteLiteral(" id=\"registro-terms-c\"");
+
+WriteLiteral(" /></div>\r\n                                        <div>\r\n                       " +
+"                     <small>He le&iacute;do y acepto el aviso de privacidad, los" +
+" <span");
+
+WriteLiteral(" id=\"terms-btn\"");
+
+WriteLiteral(" class=\"red-link\"");
+
+WriteLiteral(">t&eacute;rminos y condiciones</span> de uso de p&aacute;gina.</small>\r\n         " +
+"                               </div>\r\n                                    </div" +
+">\r\n                                </div>\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-4 d-flex justify-content-center\"");
+
+WriteLiteral(">\r\n                                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn-registro align-self-center g-recaptcha\"");
+
+WriteLiteral(" id=\"boton-registro-cliente\"");
+
+WriteLiteral(">REGISTRARME</button>\r\n                                </div>\r\n                  " +
+"          </div>\r\n\r\n                        </div>\r\n                    </div>\r\n" +
+"                </div>\r\n                <!-- REGISTRO NO CLIENTE -->\r\n          " +
+"      <div");
+
+WriteLiteral(" class=\"swiper-slide\"");
+
+WriteLiteral(">\r\n                    <div");
+
+WriteLiteral(" id=\"bienvenida\"");
+
+WriteLiteral(" class=\"login-form-stretch\"");
+
+WriteLiteral(">\r\n                        <!-- *************************************************" +
+"*************** -->\r\n                        <div");
+
+WriteLiteral(" class=\"d-flex mb-4\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" tabindex=\"-1\"");
+
+WriteLiteral(" class=\"back-button\"");
+
+WriteLiteral(" id=\"volver-inicio-nc\"");
+
+WriteLiteral(">\r\n                                <img");
+
+WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/back_button.png\"");
+
+WriteLiteral(" />\r\n                            </div>\r\n                        </div>\r\n        " +
+"                <div");
+
+WriteLiteral(" class=\"mb-3\"");
+
+WriteLiteral(">\r\n                            <h1");
+
+WriteLiteral(" class=\"registro-title\"");
+
+WriteLiteral(">Nos da mucho gusto que quieras ser parte de la familia Toyota.</h1>\r\n           " +
+"             </div>\r\n                        <div");
+
+WriteLiteral(" class=\"mb-3 pb-4\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p mb-4 text-justify\"");
+
+WriteLiteral(@">
+                                Completa los siguientes campos para generar tu cuenta de ingreso a nuestra plataforma Home Delivery, con la que podrás iniciar y dar seguimiento a tu proceso de financiamiento para estrenar un Toyota.
+                            </p>
+                        </div>
+                        <div");
+
+WriteLiteral(" data-id=\"registro-nc-form\"");
+
+WriteLiteral(" class=\"sf-form-container regis\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"row mt-5\"");
+
+WriteLiteral(">\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-6\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"float-container\"");
+
+WriteLiteral(">\r\n                                        <label");
+
+WriteLiteral(" class=\"float-label\"");
+
+WriteLiteral(" for=\"nameVisible-nr\"");
+
+WriteLiteral(">\r\n                                            Nombre\r\n                          " +
+"              </label>\r\n                                        <input");
+
+WriteLiteral(" class=\"form-input effect-2\"");
+
+WriteLiteral(" type=\"text\"");
+
+WriteLiteral(" name=\"_name\"");
+
+WriteLiteral(" id=\"nameVisible-nr\"");
+
+WriteLiteral(" />\r\n                                        <span");
+
+WriteLiteral(" class=\"focus-border\"");
+
+WriteLiteral("></span>\r\n                                    </div>\r\n                           " +
+"     </div>\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-6\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"float-container\"");
+
+WriteLiteral(">\r\n                                        <label");
+
+WriteLiteral(" class=\"float-label\"");
+
+WriteLiteral(" for=\"lastnameVisible-nr\"");
+
+WriteLiteral(">\r\n                                            Apellido\r\n                        " +
+"                </label>\r\n                                        <input");
+
+WriteLiteral(" class=\"form-input effect-2\"");
+
+WriteLiteral(" type=\"text\"");
+
+WriteLiteral(" name=\"_lastname\"");
+
+WriteLiteral(" id=\"lastnameVisible-nr\"");
+
+WriteLiteral(" />\r\n                                        <span");
+
+WriteLiteral(" class=\"focus-border\"");
+
+WriteLiteral("></span>\r\n                                    </div>\r\n                           " +
+"     </div>\r\n                            </div>\r\n                            <di" +
+"v");
+
+WriteLiteral(" class=\"row mb-3\"");
+
+WriteLiteral(">\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-6\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"float-container\"");
+
+WriteLiteral(">\r\n                                        <label");
+
+WriteLiteral(" class=\"float-label\"");
+
+WriteLiteral(" for=\"emailVisible-nr\"");
+
+WriteLiteral(">\r\n                                            Correo electr&oacute;nico\r\n       " +
+"                                 </label>\r\n                                     " +
+"   <input");
+
+WriteLiteral(" class=\"form-input effect-2\"");
+
+WriteLiteral(" type=\"email\"");
+
+WriteLiteral(" name=\"_email\"");
+
+WriteLiteral(" id=\"emailVisible-nr\"");
+
+WriteLiteral(" />\r\n                                        <span");
+
+WriteLiteral(" class=\"focus-border\"");
+
+WriteLiteral("></span>\r\n                                    </div>\r\n                           " +
+"     </div>\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-6\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"float-container\"");
+
+WriteLiteral(">\r\n                                        <label");
+
+WriteLiteral(" class=\"float-label\"");
+
+WriteLiteral(" for=\"rfcVisible-nr\"");
+
+WriteLiteral(">\r\n                                            RFC\r\n                             " +
+"           </label>\r\n                                        <input");
+
+WriteLiteral(" class=\"form-input effect-2\"");
+
+WriteLiteral(" type=\"text\"");
+
+WriteLiteral(" name=\"_rfc\"");
+
+WriteLiteral(" id=\"rfcVisible-nr\"");
+
+WriteLiteral(" />\r\n                                        <span");
+
+WriteLiteral(" class=\"focus-border\"");
+
+WriteLiteral("></span>\r\n                                    </div>\r\n                           " +
+"     </div>\r\n                            </div>\r\n                            <di" +
+"v");
+
+WriteLiteral(" id=\"err-nc\"");
+
+WriteLiteral(" class=\"login-error\"");
+
+WriteLiteral(" style=\"display:none;\"");
+
+WriteLiteral("></div>\r\n\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" name=\"name\"");
+
+WriteLiteral(" id=\"name-nr\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" name=\"lastname\"");
+
+WriteLiteral(" id=\"lastname-nr\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" name=\"email\"");
+
+WriteLiteral(" id=\"email-nr\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" name=\"rfc\"");
+
+WriteLiteral(" id=\"rfc-nr\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"fail\"");
+
+WriteLiteral(" id=\"fail-nr\"");
+
+WriteLiteral(" />\r\n                            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"ok\"");
+
+WriteLiteral(" id=\"ok-nr\"");
+
+WriteLiteral(" />\r\n\r\n                            <div");
+
+WriteLiteral(" class=\"my-5 row align-items-center justify-content-center\"");
+
+WriteLiteral(">\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-12 mb-4\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"terms align-items-center\"");
+
+WriteLiteral(">\r\n                                        <div><input");
+
+WriteLiteral(" type=\"checkbox\"");
+
+WriteLiteral(" id=\"registro-terms-nc\"");
+
+WriteLiteral(" /></div>\r\n                                        <div>\r\n                       " +
+"                     <small>He le&iacute;do y acepto el aviso de privacidad, los" +
+" <span");
+
+WriteLiteral(" id=\"terms-btn-nc\"");
+
+WriteLiteral(" class=\"red-link\"");
+
+WriteLiteral(">t&eacute;rminos y condiciones</span> de uso de p&aacute;gina.</small>\r\n         " +
+"                               </div>\r\n                                    </div" +
+">\r\n                                </div>\r\n                                <div");
+
+WriteLiteral(" class=\"col-12 col-lg-4 d-flex justify-content-center\"");
+
+WriteLiteral(">\r\n                                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn-registro g-recaptcha\"");
+
+WriteLiteral(" id=\"boton-registro-nocliente\"");
+
+WriteLiteral(">REGISTRARME</button>\r\n                                </div>\r\n                  " +
+"          </div>\r\n\r\n                        </div>\r\n                    </div>\r\n" +
+"                </div>\r\n                <!-- REGISTRO EXITOSO -->\r\n             " +
+"   <div");
+
+WriteLiteral(" class=\"swiper-slide\"");
+
+WriteLiteral(">\r\n                    <div");
+
+WriteLiteral(" id=\"iniciar-sesion\"");
+
+WriteLiteral(" class=\"reg-exitoso\"");
+
+WriteLiteral(">\r\n                        <div");
+
+WriteLiteral(" class=\"d-flex mb-4\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"back-button\"");
+
+WriteLiteral(" id=\"back-button-re\"");
+
+WriteLiteral(">\r\n                                <img");
+
+WriteLiteral(" src=\"/images/default-source/tfsm/my-tfsm/back_button.png\"");
+
+WriteLiteral(" />\r\n                            </div>\r\n                        </div>\r\n        " +
+"                <div");
+
+WriteLiteral(" class=\"mt-5 mb-1\"");
+
+WriteLiteral(">\r\n                            <h1");
+
+WriteLiteral(" class=\"registro-title red-title text-left\"");
+
+WriteLiteral(">Gracias por registrarte</h1>\r\n                        </div>\r\n                  " +
+"      <div");
+
+WriteLiteral(" class=\"mb-4\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p\"");
+
+WriteLiteral(">\r\n                                En breve recibirás un correo electrónico con e" +
+"l que podrás validar tu cuenta y obtener tu contraseña de ingreso.\r\n            " +
+"                </p>\r\n                        </div>\r\n                        <d" +
+"iv");
+
+WriteLiteral(" class=\"my-5 row align-items-center\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"col-12 col-md-5\"");
+
+WriteLiteral(">\r\n                                <a");
+
+WriteLiteral(" href=\"/tfsm/home-delivery\"");
+
+WriteLiteral(" class=\"btn-red w-100 text-decoration-none\"");
+
+WriteLiteral(">ACEPTAR</a>\r\n                            </div>\r\n                        </div>\r" +
+"\n                        <div");
+
+WriteLiteral(" class=\"mt-3\"");
+
+WriteLiteral(">\r\n                            <p");
+
+WriteLiteral(" class=\"normal-p\"");
+
+WriteLiteral(">\r\n                                <div");
+
+WriteLiteral(" id=\"reenviar\"");
+
+WriteLiteral(@">
+                                    No recib&iacute; el correo electr&oacute;nico
+                                </div>
                             </p>
                         </div>
                     </div>

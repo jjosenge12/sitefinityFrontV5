@@ -60,16 +60,16 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.News
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 250), Tuple.Create("\"", 273)
+WriteAttribute("class", Tuple.Create(" class=\"", 257), Tuple.Create("\"", 280)
             
             #line 8 "..\..MVC\Views\News\Detail.TestLogin.cshtml"
-, Tuple.Create(Tuple.Create("", 258), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 265), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 258), false)
+, 265), false)
 );
 
 WriteLiteral(" ");
@@ -81,7 +81,7 @@ WriteLiteral(" ");
             
             #line default
             #line hidden
-WriteLiteral(">\n    <h3>\n        <span ");
+WriteLiteral(">\r\n    <h3>\r\n        <span ");
 
             
             #line 10 "..\..MVC\Views\News\Detail.TestLogin.cshtml"
@@ -99,7 +99,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</span>\n    </h3>\n\n    <div>\n");
+WriteLiteral("</span>\r\n    </h3>\r\n\r\n    <div>\r\n");
 
 WriteLiteral("        ");
 
@@ -110,7 +110,7 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("        ");
 
@@ -121,7 +121,7 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("        ");
 
@@ -132,7 +132,7 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("        ");
 
@@ -143,7 +143,7 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\n    </div>\n    \n    <div ");
+WriteLiteral("\r\n    </div>\r\n    \r\n    <div ");
 
             
             #line 20 "..\..MVC\Views\News\Detail.TestLogin.cshtml"
@@ -161,7 +161,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n\n    <div ");
+WriteLiteral("</div>\r\n\r\n    <div ");
 
             
             #line 22 "..\..MVC\Views\News\Detail.TestLogin.cshtml"
@@ -179,7 +179,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n\n");
+WriteLiteral("</div>\r\n\r\n");
 
 WriteLiteral("    ");
 
@@ -190,7 +190,7 @@ Write(Html.CommentsList(@Model.Item.DataItem));
             
             #line default
             #line hidden
-WriteLiteral("\n\n");
+WriteLiteral("\r\n\r\n");
 
             
             #line 26 "..\..MVC\Views\News\Detail.TestLogin.cshtml"
@@ -212,7 +212,7 @@ WriteLiteral("\n\n");
             
             #line default
             #line hidden
-WriteLiteral("\n\n</div>");
+WriteLiteral("\r\n\r\n</div>");
 
         }
     }

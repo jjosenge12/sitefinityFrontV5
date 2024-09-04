@@ -48,22 +48,22 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.SectionHeader
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 204), Tuple.Create("\"", 239)
+WriteAttribute("class", Tuple.Create(" class=\"", 209), Tuple.Create("\"", 244)
             
             #line 6 "..\..MVC\Views\SectionHeader\Read.Default.cshtml"
-, Tuple.Create(Tuple.Create("", 212), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 217), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 212), false)
-, Tuple.Create(Tuple.Create(" ", 227), Tuple.Create("sf-fieldWrp", 228), true)
+, 217), false)
+, Tuple.Create(Tuple.Create(" ", 232), Tuple.Create("sf-fieldWrp", 233), true)
 );
 
 WriteLiteral(" role=\"heading\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("    ");
 
@@ -74,7 +74,7 @@ Write(Html.HtmlSanitize((string)Model.Text));
             
             #line default
             #line hidden
-WriteLiteral("\n</div>");
+WriteLiteral("\r\n</div>");
 
         }
     }

@@ -139,7 +139,7 @@ WriteLiteral("\r\n");
 
             
             #line 16 "..\..\MVC\Views\Card\Card.Header.cshtml"
-Write(Html.Script("https://www.google.com/recaptcha/api.js", "top", true));
+Write(Html.Script("https://www.google.com/recaptcha/api.js?render=" + System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"].ToString(), "top", true));
 
             
             #line default
@@ -258,23 +258,23 @@ WriteLiteral(">\r\n            <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2328), Tuple.Create("\"", 2416)
+WriteAttribute("href", Tuple.Create(" href=\"", 2423), Tuple.Create("\"", 2511)
             
             #line 34 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 2335), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
+, Tuple.Create(Tuple.Create("", 2430), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
             
             #line default
             #line hidden
-, 2335), false)
+, 2430), false)
 );
 
 WriteLiteral(" id=\"my-tfsm\"");
 
-WriteLiteral(">My TFS</a>\r\n            <a");
+WriteLiteral(">myTFS</a>\r\n            <a");
 
 WriteLiteral(" href=\"/cotizador\"");
 
-WriteLiteral(">Cotizar Plan</a>\r\n            <a");
+WriteLiteral(">Cotiza aquí</a>\r\n            <a");
 
 WriteLiteral(" href=\"/tfsm/home-delivery\"");
 
@@ -282,7 +282,7 @@ WriteLiteral(" class=\"linkFinanciamiento\"");
 
 WriteLiteral(" id=\"link-finan\"");
 
-WriteLiteral(">FINANCIAMIENTO EN L&Iacute;NEA</a>\r\n        </nav>\r\n        <div");
+WriteLiteral("></a>\r\n        </nav>\r\n        <div");
 
 WriteLiteral(" class=\"btn menuButton toggleMenu\"");
 
@@ -304,7 +304,39 @@ WriteLiteral("><span");
 
 WriteLiteral(" class=\"material-icons\"");
 
-WriteLiteral(">close</span></div>\r\n    </div>\r\n    <div");
+WriteLiteral(">close</span></div>\r\n        <div");
+
+WriteLiteral(" class=\"btn userButton toggleMenu\"");
+
+WriteLiteral(" id=\"openMenuBtn2\"");
+
+WriteLiteral(" style=\"display:none;\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"material-icons\"");
+
+WriteLiteral(">account_circle</span>&nbsp;<span");
+
+WriteLiteral(" class=\"user-name\"");
+
+WriteLiteral("></span></div>\r\n        <div");
+
+WriteLiteral(" class=\"btn userButton toggleMenu\"");
+
+WriteLiteral(" style=\"display:none;\"");
+
+WriteLiteral(" id=\"closeMenuBtn2\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"material-icons\"");
+
+WriteLiteral(">close</span>&nbsp;<span");
+
+WriteLiteral(" class=\"user-name\"");
+
+WriteLiteral("></span></div>\r\n    </div>\r\n    <div");
 
 WriteLiteral(" class=\"drawerMenu\"");
 
@@ -312,29 +344,37 @@ WriteLiteral(" style=\"display:none;\"");
 
 WriteLiteral(" id=\"drawerMenu\"");
 
-WriteLiteral(">\r\n        <a");
+WriteLiteral(">\r\n        <div");
+
+WriteLiteral(" id=\"logout\"");
+
+WriteLiteral(">Cerrar sesión&nbsp;<span");
+
+WriteLiteral(" class=\"material-icons\"");
+
+WriteLiteral(">logout</span></div>\r\n        <a");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2985), Tuple.Create("\"", 3073)
+WriteAttribute("href", Tuple.Create(" href=\"", 3498), Tuple.Create("\"", 3586)
             
-            #line 42 "..\..\MVC\Views\Card\Card.Header.cshtml"
-, Tuple.Create(Tuple.Create("", 2992), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
+            #line 45 "..\..\MVC\Views\Card\Card.Header.cshtml"
+, Tuple.Create(Tuple.Create("", 3505), Tuple.Create<System.Object, System.Int32>(System.Configuration.ConfigurationManager.AppSettings["UrlComunidad"].ToString()
             
             #line default
             #line hidden
-, 2992), false)
+, 3505), false)
 );
 
 WriteLiteral(" id=\"my-tfsm-menu\"");
 
-WriteLiteral(">My TFS</a>\r\n        <a");
+WriteLiteral(">myTFS</a>\r\n        <a");
 
 WriteLiteral(" href=\"/tfsm/home-delivery\"");
 
 WriteLiteral(" id=\"link-finan-menu\"");
 
-WriteLiteral(">Financiamiento en l&iacute;nea</a>\r\n        <div");
+WriteLiteral(">Inicia tu cr&eacute;dito</a>\r\n        <div");
 
 WriteLiteral(" id=\"deployPlans\"");
 
@@ -382,7 +422,7 @@ WriteLiteral(">Tasas y comisiones</a>\r\n            </div>\r\n        </span>\r
 
 WriteLiteral(" href=\"/cotizador\"");
 
-WriteLiteral(">Cotizar Plan</a>\r\n        <div");
+WriteLiteral(">Cotiza aquí</a>\r\n        <div");
 
 WriteLiteral(" id=\"deployArrendamientos\"");
 
@@ -498,7 +538,9 @@ WriteLiteral(">\r\n            <span");
 
 WriteLiteral(" class=\"modal-header-custom_title\"");
 
-WriteLiteral(">T&eacute;rminos de servicio de TFS</span>\r\n            <div");
+WriteLiteral(" style=\"font-size:22px\"");
+
+WriteLiteral(">Aviso de Privacidad Integral para prospectos</span>\r\n            <div");
 
 WriteLiteral(" class=\"modal-header-custom_close\"");
 
@@ -508,19 +550,245 @@ WriteLiteral(" id=\"closeNewsletterTerms\"");
 
 WriteLiteral(" class=\"material-icons icon-button\"");
 
-WriteLiteral(">close</span>\r\n            </div>\r\n        </div>\r\n        <div");
+WriteLiteral(">close</span>\r\n            </div>\r\n        </div>\r\n\r\n        <div");
 
 WriteLiteral(" id=\"newsletterTermsBody\"");
 
 WriteLiteral(" class=\"modal-body-custom\"");
 
-WriteLiteral(@">
-            Identidad y domicilio del responsable. Toyota Financial Services M&eacute;xico, S.A. de C.V. (en los sucesivo &ldquo;TFSM&rdquo;), con domicilio en Paseo de los Tamarindos 400-B, piso 11, Colonia Bosques de las Lomas, C&oacute;digo Postal 05120,
-            Delegaci&oacute;n Cuajimalpa, en la Ciudad de M&eacute;xico, es el responsable del uso y protecci&oacute;n de sus datos personales, y al respecto le informamos lo siguiente: Finalidades del tratamiento de datos personales. Los datos personales
-            que se recaban de usted, se utilizar&aacute;n para las siguientes finalidades que son necesarias para brindarle los servicios solicitados: identificarlo y autenticarlo a trav&eacute;s de la informaci&oacute;n que proporciona; llevar a cabo
-            los procesos para ofrecerle la informaci&oacute;n que solicita; brindarle cotizaciones de productos y servicios; contactarlo en relaci&oacute;n con su solicitud de informaci&oacute;n; atender y dar seguimiento a dudas, quejas o comentarios
-            en relaci&oacute;n con nuestros servicios; mantener controles administrativos y generar informaci&oacute;n estad&iacute;stica. De manera adicional, su informaci&oacute;n personal ser&aacute; utilizada para las siguientes finalidades secundarias
-            que no son necesarias.
+WriteLiteral(">\r\n            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(@">Identidad y domicilio del responsable</span>
+            </div>
+            <p>
+                Toyota Financial Services México, S.A. de C.V. (en los sucesivo “TFSM”), con domicilio en Paseo de los Tamarindos 400-B, piso 11,
+                Colonia Bosques de las Lomas, Código Postal 05120, Delegación Cuajimalpa, en la Ciudad de México, es el responsable del uso y
+                protección de sus datos personales, y al respecto le informamos lo siguiente:
+            </p>
+            <br>
+
+            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(">Finalidades del tratamiento de datos personales</span>\r\n            </div>\r\n    " +
+"        <p>\r\n                Los datos personales que se recaban de usted, se ut" +
+"ilizarán para las siguientes finalidades que son necesarias para brindarle los s" +
+"ervicios\r\n                solicitados: identificarlo y autenticarlo a través de " +
+"la información que proporciona; llevar a cabo los procesos para ofrecerle la inf" +
+"ormación\r\n                que solicita; brindarle cotizaciones de productos y se" +
+"rvicios; contactarlo en relación con su solicitud de información; atender\r\n     " +
+"           y dar seguimiento a dudas, quejas o comentarios en relación con nuest" +
+"ros servicios; mantener controles administrativos y generar información\r\n       " +
+"         estadística.\r\n            </p><br />\r\n            <p>\r\n                " +
+"De manera adicional, su información personal será utilizada para las siguientes " +
+"finalidades secundarias que no son necesarias para brindarle\r\n                lo" +
+"s servicios solicitados, pero que permiten y facilitan brindarle una mejor atenc" +
+"ión: evaluar la calidad del servicio prestado; enviarle\r\n                informa" +
+"ción de carácter publicitario, promocional y/o informativo; contactarlo para ofr" +
+"ecerle servicios y beneficios adicionales; realizar\r\n                actividades" +
+" de mercadotecnia, publicidad y prospección comercial.\r\n            </p><br />\r\n" +
+"            <p>\r\n                En caso de que no desee que sus datos personale" +
+"s se utilicen para estas finalidades secundarias, desde este momento usted nos p" +
+"uede\r\n                comunicar lo anterior enviando un correo electrónico a la " +
+"siguiente dirección: servicioalcliente@toyota.com.\r\n            </p><br />\r\n    " +
+"        <p>\r\n                La negativa para el uso de sus datos personales par" +
+"a estas finalidades no podrá ser un motivo para que le sean negados los servicio" +
+"s\r\n                y productos que solicita.\r\n            </p><br />\r\n          " +
+"  <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(@">Datos personales que serán tratados</span>
+            </div>
+            <p>
+                Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, se utilizarán los siguientes datos personales: nombre,
+                apellidos, teléfono celular, correo electrónico y fecha de nacimiento.
+            </p><br />
+
+            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(@">Transferencias de sus datos personales</span>
+            </div>
+            <p>
+                Sus datos personales son compartidos dentro y fuera del país con empresas relacionadas del Grupo Toyota y a terceros con los que TFSM tenga
+                una relación jurídica, socios comerciales, compañías de seguros y distribuidores autorizados Toyota para el cumplimiento de las finalidades
+                establecidas en el presente Aviso de Privacidad.
+            </p><br />
+            <p>
+                Con relación a las transferencias que requieren su consentimiento, si usted después de leer este aviso de privacidad, no manifiesta
+                su negativa para que las mismas se lleven a cabo, entenderemos que nos lo ha otorgado. Ponemos a su disposición el siguiente correo electrónico
+                para que, en su caso, nos pueda comunicar su negativa para que dichas transferencias se realicen: servicioalcliente@toyota.com
+            </p><br />
+
+            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(">Revocación del consentimiento y ejercicio de derechos ARCO</span>\r\n            <" +
+"/div>\r\n            <p>\r\n                Usted tiene derecho a revocar el consent" +
+"imiento que, en su caso, haya otorgado a TFSM para el tratamiento de sus datos p" +
+"ersonales.\r\n                Asimismo, es su derecho conocer qué datos personales" +
+" se tienen de usted, para qué se utilizan y las condiciones del uso que se les d" +
+"a (Acceso);\r\n                solicitar la corrección de su información personal " +
+"en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); q" +
+"ue sea eliminada\r\n                de los registros o bases de datos cuando consi" +
+"dere que la misma no está siendo utilizada adecuadamente (Cancelación); así como" +
+" oponerse al\r\n                uso de sus datos personales para fines específicos" +
+" (Oposición). Estos derechos se conocen como derechos ARCO.\r\n            </p><br" +
+" />\r\n            <p>\r\n                Para revocar su consentimiento para el tra" +
+"tamiento de sus datos personales o ejercer cualquiera de los derechos ARCO, uste" +
+"d deberá\r\n                acompañar al formato de solicitud que pondremos a su d" +
+"isposición en nuestra página www.toyotacredito.com.mx, la siguiente información " +
+"y\r\n                documentación: a) Nombre, domicilio y correo electrónico del " +
+"titular para poder comunicarle la respuesta a su solicitud; b) Identificación\r\n " +
+"               oficial que acredite su identidad (copia de su credencial para vo" +
+"tar con fotografía, pasaporte o cualquier otra identificación considerada oficia" +
+"l)\r\n                o, en su caso, los documentos que acrediten su representació" +
+"n legal, cuyo original deberá forzosamente presentar para cotejo e inmediata\r\n  " +
+"              devolución en la distribuidora de vehículos Toyota más cercana a s" +
+"u domicilio o bien en aquella en la que haya adquirido su vehículo Toyota,\r\n    " +
+"            a fin de obtener la respuesta a su trámite; c) Descripción clara y p" +
+"recisa de los datos personales respecto de los cuales busca revocar su\r\n        " +
+"        consentimiento o ejercer alguno de los Derechos ARCO; d) Cualquier docum" +
+"ento o información que facilite la localización de sus datos personales;\r\n      " +
+"          e) En caso de solicitar una rectificación de sus datos personales, deb" +
+"erá de indicar también, las modificaciones que en concreto solicita realizar\r\n  " +
+"              y aportar la documentación fehaciente que sustente su petición. El" +
+" formato de solicitud, así como la información y documentación correspondiente,\r" +
+"\n                deberá enviarse mediante correo electrónico a la siguiente dire" +
+"cción: servicioalcliente@toyota.com\r\n            </p><br />\r\n            <p>\r\n  " +
+"              Es posible que, para su protección y beneficio, TFSM le solicite d" +
+"ocumentación adicional que permita identificar con plenitud los datos\r\n         " +
+"       personales que desee revocar, acceder, rectificar y/o cancelar, o aquello" +
+"s respecto de los cuales usted desee oponerse a su tratamiento.\r\n            </p" +
+"><br />\r\n            <p>\r\n                TFSM responderá a su solicitud mediant" +
+"e el correo electrónico institucional que usted proporcione junto con su solicit" +
+"ud, en un plazo\r\n                máximo de 20 días hábiles contados desde el día" +
+" en que esta se haya recibido. En caso de que la solicitud se conteste de manera" +
+"\r\n                afirmativa o procedente, esta se materializará en un plazo máx" +
+"imo de 15 días hábiles. Es importante señalar que TFSM podrá notificarle\r\n      " +
+"          dentro de los plazos referidos en este párrafo un aviso de prórroga de" +
+" los mismos, por una sola vez, por un periodo igual al original.\r\n            </" +
+"p><br />\r\n            <p>\r\n                El ejercicio de los Derechos ARCO ser" +
+"á gratuito. Sin embargo, usted deberá de cubrir los gastos justificados de envío" +
+" o el costo de\r\n                reproducción en copias u otros formatos y, en su" +
+" caso, el costo de la certificación de documentos.\r\n            </p><br />\r\n    " +
+"        <p>\r\n                Es importante que tenga en cuenta que no en todos l" +
+"os casos se podrá atender su solicitud o concluir el uso de forma inmediata,\r\n  " +
+"              ya que es posible que por alguna obligación legal TFSM requiera se" +
+"guir tratando sus datos personales. Asimismo, tenga presente que revocar\r\n      " +
+"          el consentimiento que ha otorgado a TFSM para impedir total o parcialm" +
+"ente el tratamiento de sus datos personales, implicará que no podamos\r\n         " +
+"       dar cumplimiento de las finalidades para las cuales los recabamos. TFSM p" +
+"odrá negarse a revocar el consentimiento otorgado en los supuestos\r\n            " +
+"    que lo permite la Ley de la materia, en el entendido de que se le informará " +
+"a usted el motivo de tal decisión. La negativa podrá ser parcial.\r\n            <" +
+"/p><br />\r\n\r\n            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(@">Limitación del uso o divulgación de su información personal</span>
+            </div>
+            <p>
+                Usted puede limitar el uso y divulgación de su información personal, enviando un correo electrónico a la siguiente dirección:
+                servicioalcliente@toyota.com
+            </p><br />
+            <p>
+                Asimismo, usted se podrá inscribir a los siguientes registros, en caso de que no desee obtener publicidad de nuestra parte:
+                Registro Público para Evitar Publicidad, para mayor información consulte el portal de internet de la PROFECO.
+            </p><br />
+
+            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(">El uso de tecnologías de rastreo en nuestro portal de internet</span>\r\n         " +
+"   </div>\r\n            <p>\r\n                Le informamos que en nuestra página " +
+"de internet utilizamos cookies, web beacons u otras tecnologías, a través de las" +
+" cuales\r\n                es posible monitorear su comportamiento como usuario de" +
+" internet, así como brindarle un mejor servicio y experiencia al navegar en nues" +
+"tra página.\r\n            </p><br />\r\n            <p>\r\n                Los datos " +
+"personales que recabamos a través de estas tecnologías, los utilizaremos para lo" +
+"s siguientes fines: identificarlo\r\n                como usuario del sitio web; r" +
+"ecordar sus preferencias y ofrecerle un servicio personalizado; analizar y monit" +
+"orear su comportamiento\r\n                de navegación; permitir la realización " +
+"y seguimiento de encuestas; realizar análisis internos de rendimiento del sitio " +
+"web; permitirle\r\n                un uso adecuado del sitio web y las característ" +
+"icas del mismo.\r\n            </p><br />\r\n            <p>\r\n                Los da" +
+"tos personales que obtenemos de estas tecnologías de rastreo son los siguientes:" +
+" identificadores; región en la que se encuentra;\r\n                tipo de navega" +
+"dor; Tipo de sistema operativo; Fecha y hora del inicio y final de una sesión; P" +
+"áginas web que visita; Búsquedas realizadas;\r\n                Publicidad revisad" +
+"a; Listas y hábitos de consumo en páginas de compras; vínculos que sigue; Direcc" +
+"ión IP; La fecha y hora de acceso al sitio web;\r\n                Tiempo de naveg" +
+"ación en el sitio web; El número de visitas diarias en cada sección del sitio we" +
+"b; La fecha y hora de la última vez que el\r\n                usuario visitó el si" +
+"tio web; El diseño de contenidos que el usuario escogió en su primera visita al " +
+"sitio web; Páginas de Internet accedidas\r\n                previo a la visita a n" +
+"uestro sitio web.\r\n            </p><br />\r\n            <p>\r\n                Esta" +
+"s tecnologías podrán deshabilitarse siguiendo los siguientes pasos, de acuerdo a" +
+"l navegador que utiliza para visitar el sitio web:\r\n                a) Internet " +
+"Explorer: Herramientas -> Opciones de Internet -> Privacidad -> Configuración. P" +
+"ara más información, puede consultar el soporte de\r\n                Microsoft o " +
+"la Ayuda del navegador. b) Firefox: Herramientas -> Opciones -> Privacidad -> Hi" +
+"storial -> Configuración Personalizada. Para más\r\n                información, p" +
+"uedes consultar el soporte de Mozilla o la Ayuda del navegador. c) Chrome: Confi" +
+"guración -> Mostrar opciones avanzadas -> Privacidad ->\r\n                Configu" +
+"ración de contenido. Para más información, puedes consultar el soporte de Google" +
+" o la Ayuda del navegador. d) Safari: Preferencias -> Seguridad.\r\n              " +
+"  Para más información, puedes consultar el soporte de Apple o la Ayuda del nave" +
+"gador.\r\n            </p><br />\r\n\r\n            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(@">Modificaciones, cambios o actualizaciones al aviso de privacidad</span>
+            </div>
+            <p>
+                El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales;
+                de nuestras propias necesidades por los productos o servicios que ofrecemos; de nuestras prácticas de privacidad; de cambios en nuestro
+                modelo de negocio, o por otras causas.
+            </p><br />
+            <p>
+                Nos comprometemos a mantenerlo informado sobre los cambios que pueda sufrir el presente aviso de privacidad, a través
+                de la publicación actualizada en nuestra página de internet.
+            </p><br />
         </div>
         <div");
 
@@ -579,7 +847,7 @@ WriteLiteral(">close</span>\r\n            </div>\r\n        </div>\r\n        <
 WriteLiteral(" class=\"modal-body-custom\"");
 
 WriteLiteral(@">
-            Identidad y domicilio del responsable. Toyota Financial Services M&eacute;xico, S.A. de C.V. (en los sucesivo &ldquo;TFSM&rdquo;), con domicilio en Paseo de los Tamarindos 400-B, piso 11, Colonia Bosques de las Lomas, C&oacute;digo Postal 05120,
+            Identidad y domicilio del responsable. Toyota Financial Services M&eacute;xico, S.A. de C.V. (en los sucesivo &ldquo;TFSM&rdquo;), con domicilio en Paseo de los Tamarindos 400-B, piso 4, Colonia Bosques de las Lomas, C&oacute;digo Postal 05120,
             Delegaci&oacute;n Cuajimalpa, en la Ciudad de M&eacute;xico, es el responsable del uso y protecci&oacute;n de sus datos personales, y al respecto le informamos lo siguiente: Finalidades del tratamiento de datos personales. Los datos personales
             que se recaban de usted, se utilizar&aacute;n para las siguientes finalidades que son necesarias para brindarle los servicios solicitados: identificarlo y autenticarlo a trav&eacute;s de la informaci&oacute;n que proporciona; llevar a cabo
             los procesos para ofrecerle la informaci&oacute;n que solicita; brindarle cotizaciones de productos y servicios; contactarlo en relaci&oacute;n con su solicitud de informaci&oacute;n; atender y dar seguimiento a dudas, quejas o comentarios
@@ -589,6 +857,270 @@ WriteLiteral(@">
         ");
 
 WriteLiteral("\r\n    </div>\r\n</div>\r\n<div");
+
+WriteLiteral(" id=\"avisoPrivClientesModal\"");
+
+WriteLiteral(" style=\"display:none;\"");
+
+WriteLiteral(">\r\n    <div");
+
+WriteLiteral(" class=\"modal-custom\"");
+
+WriteLiteral(">\r\n        <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n            <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(" style=\"font-size:22px\"");
+
+WriteLiteral(">Aviso de Privacidad Integral para Clientes</span>\r\n            <div");
+
+WriteLiteral(" class=\"modal-header-custom_close\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" id=\"closeAviPrivCli\"");
+
+WriteLiteral(" class=\"material-icons icon-button\"");
+
+WriteLiteral(">close</span>\r\n            </div>\r\n        </div>\r\n\r\n        <div");
+
+WriteLiteral(" id=\"newsletterTermsBody\"");
+
+WriteLiteral(" class=\"modal-body-custom\"");
+
+WriteLiteral(">\r\n            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(@">I. Identificación del responsable y tratamiento de sus datos personales.</span>
+            </div>
+            <p>
+                De conformidad con lo establecido en el artículo 17, fracción II de la Ley Federal  de Protección de Datos Personales en Posesión
+                de los Particulares, le informamos  que Toyota Financial Services México, S.A. de C.V. (en los sucesivo “TFSM”),  con domicilio en
+                Paseo de los Tamarindos 400-B, piso 11, Colonia Bosques de las  Lomas, Código Postal 05120, Delegación Cuajimalpa, en la Ciudad de México,
+                hace de su conocimiento que recaba y trata sus datos personales, entendiendo  por éstos, aquellos que los que lo identifican
+                o lo hacen identificable, para las  finalidades que se establecen en este Aviso de Privacidad.
+            </p>
+            <br>
+
+            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(">II. Finalidades.</span>\r\n            </div>\r\n            <p>\r\n                TF" +
+"SM recaba de usted los datos personales y financieros necesarios para la adecuad" +
+"a prestación de nuestros servicios de\r\n                financiamiento automotriz" +
+" en cada una de sus fases o etapas; para el puntual cumplimiento de las obligaci" +
+"ones derivadas de los\r\n                servicios para los cuales hemos sido cont" +
+"ratados; mantener controles estadísticos, comparativos y administrativos, evalua" +
+"r la\r\n                calidad de los servicios otorgados y, en su caso, para fin" +
+"es de publicidad y prospección comercial. Estos datos personales los\r\n          " +
+"      obtenemos directamente de usted a través de la utilización de nuestros ser" +
+"vicios en línea, por escrito, vía telefónica y/o grabaciones\r\n                te" +
+"lefónicas o a través de dispositivos biométricos, en su caso; por conducto de la" +
+" red de distribuidores Toyota en la República\r\n                Mexicana y/o cuan" +
+"do nos son transferidos por terceros para poder prestarle nuestros servicios de " +
+"financiamiento automotriz.\r\n            </p><br />\r\n            <p>\r\n           " +
+"     Para alcanzar las finalidades antes expuestas, se tratarán los siguientes d" +
+"atos personales:\r\n            </p>\r\n            <p>\r\n                Nombre, ape" +
+"llidos, teléfono (móvil y fijo), correo electrónico, dirección,  comprobante de " +
+"domicilio, sexo, Registro Federal\r\n                de Contribuyentes, Cédula  Ún" +
+"ica de Registro Poblacional, Cédula Profesional, identificación oficial, número " +
+" de pasaporte, estado civil,\r\n                número de cartilla de servicio mil" +
+"itar, clase y número de  licencia de manejo, estado civil, lugar y fecha de naci" +
+"miento, nacionalidad,\r\n                actividad profesional o empleo y en algun" +
+"os casos huellas digitales –cuando esté  disponible- así como los siguientes dat" +
+"os financieros,\r\n                patrimoniales o fiscales:  recibos de nómina, c" +
+"omprobantes de ingresos, números de cuenta, números de  tarjeta, cuentas bancari" +
+"as,\r\n                cuentas CLABE, cuenta para retiro, declaraciones de  impues" +
+"tos.\r\n            </p><br />\r\n\r\n            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(@">III. Datos Financieros.</span>
+            </div>
+            <p>
+                Nos comprometemos a que los “datos financieros y patrimoniales” que nos son proporcionados a través de los medios que usted
+                amablemente nos los proporcione, serán tratados bajo las más estrictas medidas de seguridad que garanticen su confidencialidad.
+                De conformidad con el artículo 8, tercer párrafo de la Ley Federal de Protección de Datos Personales en Posesión de Particulares,
+                requerimos de su consentimiento para el tratamiento de sus datos personales “financieros y patrimoniales”, en el entendido de que
+                la falta de oposición expresa de su parte será considerada como un signo inequívoco de su aceptación a dicho tratamiento.
+            </p><br />
+            <p>
+                De igual forma, nos comprometemos a no tratar los datos financieros para finalidades diversas de las apuntadas en este Aviso de Privacidad,
+                salvo en el caso de las excepciones previstas en el artículo 37 de la Ley Federal de Protección de Datos Personales en Posesión
+                de los Particulares.
+            </p><br />
+
+            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(">IV. Transferencias de sus datos personales.</span>\r\n            </div>\r\n        " +
+"    <p>\r\n                Le informamos que sus datos personales pueden ser trans" +
+"feridos y tratados dentro y fuera del país a empresas relacionadas\r\n            " +
+"    del Grupo Toyota y a terceros ajenos a esta empresa con quienes mantenemos u" +
+"na relación jurídica para el cumplimiento de los fines\r\n                establec" +
+"idos en el presente Aviso de Privacidad y de las  obligaciones legales a cargo d" +
+"e las empresas del Grupo Toyota que se relacionan\r\n                con los servi" +
+"cios de financiamiento automotriz contratados con TFSM. Tanto las empresas del G" +
+"rupo Toyota como los terceros a los\r\n                que transferimos sus datos " +
+"personales, se comprometen en los mismos términos del presente Aviso de  Privaci" +
+"dad y cumplen con las medidas\r\n                de seguridad y confidencialidad  " +
+"correspondientes.\r\n            </p><br />\r\n            <p>\r\n                Nos " +
+"comprometemos a no transferir su información personal a terceros sin su consenti" +
+"miento previo, salvo en el caso de las excepciones\r\n                previstas en" +
+" el artículo 37 de la Ley Federal de Protección de Datos Personales en Posesión " +
+"de los Particulares.\r\n            </p><br />\r\n            <p>\r\n                T" +
+"oda vez que el tratamiento y la transferencia de sus datos personales es indispe" +
+"nsable para cumplir las finalidades antes expuestas,\r\n                requerimos" +
+" de su consentimiento expreso para cumplir con los fines para los cuales los rec" +
+"abamos y transferimos, en el entendido de que\r\n                su limitación pud" +
+"iera conllevar a la imposibilidad de establecer la relación jurídica necesaria p" +
+"ara prestarle nuestros servicios.\r\n            </p><br />\r\n            <p>\r\n    " +
+"            Consiento que mis datos personales sean transferidos en los términos" +
+" y para los fines que se señalan en el presente Aviso de Privacidad.\r\n          " +
+"  </p><br />\r\n\r\n            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(@">V. Opciones para limitar el uso o divulgación de sus datos personales.</span>
+            </div>
+            <p>
+                TFSM ha designado a un encargado de datos personales por lo tanto usted podrá  limitar el uso o divulgación de sus datos personales
+                de manera directa  presentando su solicitud ante nuestro Departamento de Servicio al Cliente de  lunes a viernes (días hábiles) de 9:00 a
+                14:00 y de 16:00 a 18:00 horas, o a través  del correo electrónico servicioalcliente@toyota.com.
+            </p><br />
+
+            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(">VI. Medios para revocar el consentimiento y ejercer sus Derechos ARCO.</span>\r\n " +
+"           </div>\r\n            <p>\r\n                Usted podrá revocar su conse" +
+"ntimiento para el tratamiento de sus datos personales. De igual forma, tiene el " +
+"derecho de:\r\n                (i) acceder a sus datos  personales en nuestro pode" +
+"r y conocer los detalles del tratamiento de los  mismos, (ii) rectificarlos\r\n   " +
+"             en caso de ser inexactos o incompletos, (iii) cancelarlos  cuando c" +
+"onsidere que no se requieren para alguna de las finalidades\r\n                señ" +
+"aladas  en el presente aviso de privacidad, estén siendo utilizados para finalid" +
+"ades no  consentidas o haya finalizado la\r\n                relación contractual " +
+"o de servicio, o (iv) oponerse  al tratamiento de los mismos para fines específi" +
+"cos.\r\n            </p><br />\r\n            <p>\r\n                Para revocar su c" +
+"onsentimiento al tratamiento de sus datos personales o ejercer  sus Derechos ARC" +
+"O, deberá acompañar\r\n                al formato de solicitud que pondremos a  su" +
+" disposición en nuestra página www.toyotacredito.com.mx, la siguiente\r\n         " +
+"       información y documentación:\r\n            </p>\r\n            <p>\r\n        " +
+"        a) Nombre, domicilio y correo electrónico para poder comunicarle la resp" +
+"uesta a su solicitud;\r\n            </p>\r\n            <p>\r\n                b) Ide" +
+"ntificación oficial que acredite su identidad (copia de su credencial para votar" +
+" con fotografía,\r\n                pasaporte o  cualquier otra identificación con" +
+"siderada oficial)  o, en su caso, los documentos que acrediten\r\n                " +
+"su representación legal, cuyo original  deberá forzosamente presentar para cotej" +
+"o e inmediata devolución en la\r\n                distribuidora de vehículos Toyot" +
+"a más cercana a su domicilio o bien en aquella en  la que haya adquirido su vehí" +
+"culo Toyota,\r\n                a fin de obtener la respuesta a su  trámite;\r\n    " +
+"        </p>\r\n            <p>\r\n                c) Descripción clara y precisa de" +
+" los datos personales respecto de los cuales busca revocar su consentimiento o e" +
+"jercer\r\n                alguno de los Derechos ARCO;\r\n            </p>\r\n        " +
+"    <p>\r\n                d) Cualquier documento o información que facilite la lo" +
+"calización de sus datos personales, y;\r\n            </p>\r\n            <p>\r\n     " +
+"           e) En caso de solicitar una rectificación de sus datos personales, de" +
+"berá de indicar también, las modificaciones\r\n                que en concreto sol" +
+"icita realizar y aportar la documentación fehaciente que sustente su petición.\r\n" +
+"            </p><br />\r\n            <p>\r\n                Es posible que, para su" +
+" protección y beneficio, TFSM le solicite documentación adicional que permita id" +
+"entificar con\r\n                plenitud los datos personales que desee revocar, " +
+"acceder, rectificar y/o cancelar, o aquellos respecto de los cuales usted\r\n     " +
+"           desee oponerse a su tratamiento. Le informamos que es posible que sus" +
+" datos personales no puedan ser cancelados o bloqueados\r\n                de conf" +
+"ormidad con lo dispuesto por la Ley Federal de Protección de Datos Personales en" +
+" Posesión de Particulares y su Reglamento.\r\n            </p><br />\r\n            " +
+"<p>\r\n                TFSM responderá a su solicitud mediante correo electrónico " +
+"a la dirección que Usted nos proporcione junto con su solicitud,\r\n              " +
+"  en un plazo máximo de 20 días hábiles contados desde el día en que esta se hay" +
+"a recibido. En caso de que la solicitud se conteste\r\n                de manera a" +
+"firmativa o procedente, esta se materializará en un plazo máximo de 15 días hábi" +
+"les. Es importante señalar que TFSM podrá\r\n                notificarle dentro de" +
+" los plazos referidos en este párrafo un aviso de prórroga de los mismos, por un" +
+"a sola vez, por un periodo igual\r\n                al original.\r\n            </p>" +
+"<br />\r\n            <p>\r\n                Tenga presente que revocar el consentim" +
+"iento que nos ha otorgado para impedir total o parcialmente el tratamiento de su" +
+"s datos\r\n                personales, podría dificultarnos el cumplimiento de las" +
+" finalidades para las cuales los recabamos y la prestación de los servicios\r\n   " +
+"             que usted espera de nosotros. TFSM podrá negarse a revocar este con" +
+"sentimiento otorgado en los supuestos que lo permite la Ley de\r\n                " +
+"la materia, en el entendido de que habremos de informarle a usted el motivo de t" +
+"al decisión. La negativa podrá ser parcial.\r\n            </p><br />\r\n           " +
+" <p>\r\n                El ejercicio de los Derechos ARCO será gratuito. Sin embar" +
+"go, usted deberá de cubrir los gastos justificados de envío o\r\n                e" +
+"l costo de reproducción en copias u otros formatos y, en su caso, el costo de la" +
+" certificación de documentos.\r\n            </p><br />\r\n\r\n            <div");
+
+WriteLiteral(" class=\"modal-header-custom\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"modal-header-custom_title\"");
+
+WriteLiteral(@">VII. Cambios o modificaciones al Aviso de Privacidad.</span>
+            </div>
+            <p>
+                TFSM se reserva el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente Aviso de Privacidad,
+                en el entendido de que toda modificación al mismo se dará conocer por medio de la publicación actualizada en nuestra página
+                de internet. Por esta razón, le solicitamos consultar periódicamente el Aviso de Privacidad que puede encontrar en nuestra página web.
+            </p><br />
+
+        </div>
+        <div");
+
+WriteLiteral(" class=\"modal-actions-custom\"");
+
+WriteLiteral(">\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" id=\"denyAvisoPriv\"");
+
+WriteLiteral(" class=\"btn-red_inverted mr-3\"");
+
+WriteLiteral(">NO</button>\r\n            <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" id=\"acceptAvisoPriv\"");
+
+WriteLiteral(" class=\"btn-red\"");
+
+WriteLiteral(">SI, ACEPTO</button>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div");
 
 WriteLiteral(" id=\"instagramModal\"");
 
@@ -797,7 +1329,7 @@ WriteLiteral(">\r\n            <span");
 
 WriteLiteral(" class=\"modal-header-custom_title\"");
 
-WriteLiteral(">Est&aacute;s saliendo de toyotacredito.com.mx para entrar al sitio de Youtube.</" +
+WriteLiteral(">Est&aacute;s saliendo de toyotacredito.com.mx para entrar al sitio de YouTube.</" +
 "span>\r\n            <div");
 
 WriteLiteral(" class=\"modal-header-custom_close\"");

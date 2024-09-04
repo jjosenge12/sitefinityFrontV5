@@ -39,7 +39,7 @@ $(document).ready(function () {
         termsCheckbox = "#registro-terms";
 
         window.open(
-            window.location.origin + "/legales/aviso-de-privacidad",
+            window.location.origin + "/aviso-de-privacidad-para-clientes",
             "_blank"
         );
     });
@@ -69,8 +69,7 @@ $(document).ready(function () {
                     lastName: document.getElementById("lastnameVisible-nr").value,
                     email: document.getElementById("emailVisible-nr").value
                 }
-                registro(data, window.config.urlbase + '/RegistroPC', 0);
-                //registro(data, window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterProspectoWS', 0);
+                registro(data, window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterProspectoWS', 0);
             }
             else {
                 e.preventDefault();
@@ -121,8 +120,7 @@ $(document).ready(function () {
                     idCliente: document.getElementById("clientVisible-r").value,
                     email: document.getElementById("emailVisible-r").value
                 }
-                registro(data, window.config.urlbase + '/RegistroPC', 1);
-                //registro(data, window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterClientWS', 1);
+                registro(data, window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterClientWS', 1);
             }
             else {
                 e.preventDefault();
@@ -245,10 +243,10 @@ $(document).ready(function () {
         };
         let datajson = JSON.stringify(data);
         $.ajax({
-            url: window.config.urlbase + '/Put-mail',
+            url: window.config.urlToyotaCotizaciones + '/services/apexrest/SitefinityRegisterClientWS',
             beforeSend: showLoader,
             complete: hideLoader,
-            method: 'POST',
+            method: 'put',
             headers: headers,
             data: datajson,
             error: function (res) {
@@ -269,73 +267,7 @@ $(document).ready(function () {
     
 
 
-    function registro(data, url, cliente) {
-        let datajson = JSON.stringify(data);
-        console.log(datajson);
-                $.ajax({
-                    type: 'POST',
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": "Bearer " + token,
-                    },
-                    url: window.config.urlbase + '/RegistroPC',
-                    beforeSend: showLoader,
-                    data: datajson,
-                    success: function (result) {
-                        if (result.code == 200) {
-                            console.log(result);
-                            if (cliente == 1) {
-                                sessionStorage.setItem("reg-client", true);
-                                sessionStorage.setItem("reg-clientId", document.getElementById("clientVisible-r").value);
-                                sessionStorage.setItem("reg-email", document.getElementById("emailVisible-r").value);
-                                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible-r").value);
-                            }
-                            else {
-                                sessionStorage.setItem("reg-client", false);
-                                sessionStorage.setItem("reg-name", document.getElementById("nameVisible-nr").value);
-                                sessionStorage.setItem("reg-lastname", document.getElementById("lastnameVisible-nr").value);
-                                sessionStorage.setItem("reg-email", document.getElementById("emailVisible-nr").value);
-                                sessionStorage.setItem("reg-rfc", document.getElementById("rfcVisible-nr").value);
-                            }
-                            var id = result.idUsuario;
-                            sessionStorage.setItem("id", id);
-                            data2 = {
-                                email: data.email,
-                                idUsuario: id,
-                                url: window.location.origin,
-                            }
-                            let datajson2 = JSON.stringify(data2);
-                            $.ajax({
-                                type: 'POST',
-                                headers: {
-                                    "Content-Type": "application/json",
-                                    "Authorization": "Bearer " + token,
-                                },
-                                url: window.config.urlbase + "/Put-mail",
-                                complete: hideLoader,
-                                data: datajson2,
-                                complete: hideLoader,
-                                success: function (result) {
-                                    result = JSON.parse(result);
-                                    if (result == "true")
-                                        window.location.href = "/tfsm/home-delivery?ok=1"
-                                },
-                                error: function (err) {
-                                    console.log("No se pudo enviar el mail")
-                                }
-                            });
-                        } else                             
-                            window.location.href = "/tfsm/home-delivery?err=" + result.code;
-                    },
-                    error: function (err) {
-                        console.log('Error en la conexion con SalesForce');
-                        window.location.href = "/tfsm/home-delivery";
-                    }
-                });
-    }
-
-
-    /*function registro(data, url, cliente) {
+    function registro(data,url,cliente) {
         let datajson = JSON.stringify(data);
         console.log(data);
         $.ajax({
@@ -374,7 +306,7 @@ $(document).ready(function () {
                             var id = result.idUsuario;
                             sessionStorage.setItem("id", id);
                             data2 = {
-                                email: data.email,
+                                email : data.email,
                                 idUsuario: id,
                                 url: window.location.origin,
                             }
@@ -409,7 +341,7 @@ $(document).ready(function () {
                 console.log('Error token invalido');
             }
         });
-    }*/
+    }
 
 
 });

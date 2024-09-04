@@ -54,19 +54,19 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.LoginForm
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 211), Tuple.Create("\"", 234)
+WriteAttribute("class", Tuple.Create(" class=\"", 217), Tuple.Create("\"", 240)
             
             #line 7 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
-, Tuple.Create(Tuple.Create("", 219), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 225), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 219), false)
+, 225), false)
 );
 
-WriteLiteral(">\n\n    <h3>");
+WriteLiteral(">\r\n\r\n    <h3>");
 
             
             #line 9 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
@@ -75,7 +75,7 @@ WriteLiteral(">\n\n    <h3>");
             
             #line default
             #line hidden
-WriteLiteral("</h3>\n\n");
+WriteLiteral("</h3>\r\n\r\n");
 
             
             #line 11 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
@@ -100,18 +100,18 @@ WriteLiteral("        <h3>");
             
             #line default
             #line hidden
-WriteLiteral("</h3>\n");
+WriteLiteral("</h3>\r\n");
 
 WriteLiteral("        <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 392), Tuple.Create("\"", 418)
+WriteAttribute("href", Tuple.Create(" href=\"", 405), Tuple.Create("\"", 431)
             
             #line 14 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
-, Tuple.Create(Tuple.Create("", 399), Tuple.Create<System.Object, System.Int32>(Model.LoginPageUrl
+, Tuple.Create(Tuple.Create("", 412), Tuple.Create<System.Object, System.Int32>(Model.LoginPageUrl
             
             #line default
             #line hidden
-, 399), false)
+, 412), false)
 );
 
 WriteLiteral(">");
@@ -123,7 +123,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</a>\n");
+WriteLiteral("</a>\r\n");
 
             
             #line 15 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
@@ -151,7 +151,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n");
+WriteLiteral("</div>\r\n");
 
             
             #line 19 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
@@ -164,21 +164,21 @@ WriteLiteral("</div>\n");
             #line hidden
 WriteLiteral("        <form");
 
-WriteAttribute("action", Tuple.Create(" action=\"", 740), Tuple.Create("\"", 792)
+WriteAttribute("action", Tuple.Create(" action=\"", 761), Tuple.Create("\"", 813)
             
             #line 22 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
-, Tuple.Create(Tuple.Create("", 749), Tuple.Create<System.Object, System.Int32>(Url.Action("ResetPassword", "LoginForm")
+, Tuple.Create(Tuple.Create("", 770), Tuple.Create<System.Object, System.Int32>(Url.Action("ResetPassword", "LoginForm")
             
             #line default
             #line hidden
-, 749), false)
+, 770), false)
 );
 
 WriteLiteral(" method=\"post\"");
 
 WriteLiteral(" autocomplete=\"off\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("            ");
 
@@ -189,7 +189,7 @@ WriteLiteral("            ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("            ");
 
@@ -200,7 +200,7 @@ WriteLiteral("            ");
             
             #line default
             #line hidden
-WriteLiteral("\n\n");
+WriteLiteral("\r\n\r\n");
 
             
             #line 26 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
@@ -220,7 +220,7 @@ WriteLiteral("                <div");
 
 WriteLiteral(" class=\"form-group\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("                    ");
 
@@ -231,7 +231,7 @@ WriteLiteral("                    ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("                    ");
 
@@ -242,7 +242,7 @@ WriteLiteral("                    ");
             
             #line default
             #line hidden
-WriteLiteral("\n                </div>\n");
+WriteLiteral("\r\n                </div>\r\n");
 
             
             #line 32 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
@@ -251,11 +251,11 @@ WriteLiteral("\n                </div>\n");
             
             #line default
             #line hidden
-WriteLiteral("\n            <div");
+WriteLiteral("\r\n            <div");
 
 WriteLiteral(" class=\"form-group\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("                ");
 
@@ -266,7 +266,7 @@ WriteLiteral("                ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("                ");
 
@@ -277,11 +277,11 @@ WriteLiteral("                ");
             
             #line default
             #line hidden
-WriteLiteral("\n            </div>\n\n            <div");
+WriteLiteral("\r\n            </div>\r\n\r\n            <div");
 
 WriteLiteral(" class=\"form-group\"");
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("                ");
 
@@ -292,7 +292,7 @@ WriteLiteral("                ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("                ");
 
@@ -303,20 +303,20 @@ WriteLiteral("                ");
             
             #line default
             #line hidden
-WriteLiteral("\n            </div>\n\n            <input");
+WriteLiteral("\r\n            </div>\r\n\r\n            <input");
 
 WriteLiteral(" class=\"btn btn-primary\"");
 
 WriteLiteral(" type=\"submit\"");
 
-WriteAttribute("value", Tuple.Create(" value=\'", 1825), Tuple.Create("\'", 1874)
+WriteAttribute("value", Tuple.Create(" value=\'", 1868), Tuple.Create("\'", 1917)
             
             #line 44 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
-, Tuple.Create(Tuple.Create("", 1833), Tuple.Create<System.Object, System.Int32>(Html.Resource("ResetPasswordSaveButton")
+, Tuple.Create(Tuple.Create("", 1876), Tuple.Create<System.Object, System.Int32>(Html.Resource("ResetPasswordSaveButton")
             
             #line default
             #line hidden
-, 1833), false)
+, 1876), false)
 );
 
 WriteLiteral(" ");
@@ -328,7 +328,7 @@ WriteLiteral(" ");
             
             #line default
             #line hidden
-WriteLiteral(" />      \n        </form>\n");
+WriteLiteral(" />      \r\n        </form>\r\n");
 
             
             #line 46 "..\..MVC\Views\LoginForm\ResetPassword.ResetPassword.cshtml"
@@ -337,7 +337,7 @@ WriteLiteral(" />      \n        </form>\n");
             
             #line default
             #line hidden
-WriteLiteral("\n</div>\n");
+WriteLiteral("\r\n</div>\r\n");
 
         }
     }

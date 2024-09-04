@@ -54,16 +54,16 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.Lists
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 204), Tuple.Create("\"", 227)
+WriteAttribute("class", Tuple.Create(" class=\"", 210), Tuple.Create("\"", 233)
             
             #line 7 "..\..MVC\Views\Lists\Detail.DetailPage.cshtml"
-, Tuple.Create(Tuple.Create("", 212), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 218), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 212), false)
+, 218), false)
 );
 
 WriteLiteral(" ");
@@ -75,7 +75,7 @@ WriteLiteral(" ");
             
             #line default
             #line hidden
-WriteLiteral(">\n    <h3>\n        <span ");
+WriteLiteral(">\r\n    <h3>\r\n        <span ");
 
             
             #line 9 "..\..MVC\Views\Lists\Detail.DetailPage.cshtml"
@@ -93,7 +93,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</span>\n    </h3>\n\n");
+WriteLiteral("</span>\r\n    </h3>\r\n\r\n");
 
 WriteLiteral("    ");
 
@@ -104,7 +104,7 @@ Write(Html.CommentsCount(string.Empty, @Model.Item.DataItem));
             
             #line default
             #line hidden
-WriteLiteral("\n\n    <div ");
+WriteLiteral("\r\n\r\n    <div ");
 
             
             #line 14 "..\..MVC\Views\Lists\Detail.DetailPage.cshtml"
@@ -122,7 +122,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</div>\n    \n");
+WriteLiteral("</div>\r\n    \r\n");
 
 WriteLiteral("    ");
 
@@ -133,7 +133,7 @@ Write(Html.CommentsList(@Model.Item.DataItem));
             
             #line default
             #line hidden
-WriteLiteral("\n</div>");
+WriteLiteral("\r\n</div>");
 
         }
     }

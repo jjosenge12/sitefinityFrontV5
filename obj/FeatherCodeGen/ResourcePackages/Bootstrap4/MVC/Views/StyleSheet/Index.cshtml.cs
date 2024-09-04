@@ -42,11 +42,11 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.StyleSheet
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
 WriteLiteral(" class=\"sf-Code\"");
 
-WriteLiteral(">\n    <pre>\n");
+WriteLiteral(">\r\n    <pre>\r\n");
 
 WriteLiteral("    ");
 
@@ -57,7 +57,7 @@ Write(ViewBag.DesignModeContent);
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 6 "..\..MVC\Views\StyleSheet\Index.cshtml"
@@ -88,7 +88,7 @@ WriteLiteral("\n");
             
             #line default
             #line hidden
-WriteLiteral("    </pre>\n</div>\n");
+WriteLiteral("    </pre>\r\n</div>\r\n");
 
         }
     }

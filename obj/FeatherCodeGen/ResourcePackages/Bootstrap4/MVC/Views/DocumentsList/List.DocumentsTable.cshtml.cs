@@ -53,27 +53,27 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.DocumentsList
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 225), Tuple.Create("\"", 248)
+WriteAttribute("class", Tuple.Create(" class=\"", 231), Tuple.Create("\"", 254)
             
             #line 7 "..\..MVC\Views\DocumentsList\List.DocumentsTable.cshtml"
-, Tuple.Create(Tuple.Create("", 233), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 239), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 233), false)
+, 239), false)
 );
 
-WriteLiteral(">\n\n    <div");
+WriteLiteral(">\r\n\r\n    <div");
 
 WriteLiteral(" class=\"sf-document-list sf-document-list--table\"");
 
-WriteLiteral(">\n\n        <table");
+WriteLiteral(">\r\n\r\n        <table");
 
 WriteLiteral(" class=\"table\"");
 
-WriteLiteral(">\n            <thead>\n                <tr>\n                    <td");
+WriteLiteral(">\r\n            <thead>\r\n                <tr>\r\n                    <td");
 
 WriteLiteral(" scope=\"col\"");
 
@@ -86,7 +86,7 @@ WriteLiteral("><strong>");
             
             #line default
             #line hidden
-WriteLiteral("</strong></td>\n                    <td");
+WriteLiteral("</strong></td>\r\n                    <td");
 
 WriteLiteral(" scope=\"col\"");
 
@@ -99,7 +99,7 @@ WriteLiteral("><strong>");
             
             #line default
             #line hidden
-WriteLiteral("</strong></td>\n                    <td");
+WriteLiteral("</strong></td>\r\n                    <td");
 
 WriteLiteral(" scope=\"col\"");
 
@@ -112,8 +112,8 @@ WriteLiteral("><strong>");
             
             #line default
             #line hidden
-WriteLiteral("</strong></td>\n                    <td></td>\n                </tr>\n            </" +
-"thead>\n");
+WriteLiteral("</strong></td>\r\n                    <td></td>\r\n                </tr>\r\n           " +
+" </thead>\r\n");
 
             
             #line 20 "..\..MVC\Views\DocumentsList\List.DocumentsTable.cshtml"
@@ -129,39 +129,39 @@ WriteLiteral("</strong></td>\n                    <td></td>\n                </t
             
             #line default
             #line hidden
-WriteLiteral("                <tr>\n                    <th");
+WriteLiteral("                <tr>\r\n                    <th");
 
 WriteLiteral(" scope=\"row\"");
 
-WriteLiteral(">\n                        <span");
+WriteLiteral(">\r\n                        <span");
 
 WriteLiteral(" class=\"sf-icon-txt\"");
 
 WriteLiteral(" aria-hidden=\"true\"");
 
-WriteLiteral(">\n                            <svg");
+WriteLiteral(">\r\n                            <svg");
 
 WriteLiteral(" class=\"sf-icon-file sf-icon-sm\"");
 
-WriteLiteral(">\n                                <use");
+WriteLiteral(">\r\n                                <use");
 
-WriteAttribute("xlink:href", Tuple.Create(" xlink:href=\"", 991), Tuple.Create("\"", 1068)
-, Tuple.Create(Tuple.Create("", 1004), Tuple.Create<System.Object, System.Int32>(Href("~/ResourcePackages/Bootstrap4/assets/dist/sprites/solid.svg#file")
-, 1004), false)
+WriteAttribute("xlink:href", Tuple.Create(" xlink:href=\"", 1016), Tuple.Create("\"", 1093)
+, Tuple.Create(Tuple.Create("", 1029), Tuple.Create<System.Object, System.Int32>(Href("~/ResourcePackages/Bootstrap4/assets/dist/sprites/solid.svg#file")
+, 1029), false)
 );
 
-WriteLiteral("></use>\n                            </svg>\n                            <span");
+WriteLiteral("></use>\r\n                            </svg>\r\n                            <span");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 1145), Tuple.Create("\"", 1222)
-, Tuple.Create(Tuple.Create("", 1153), Tuple.Create("sf-icon-txt-sm", 1153), true)
-, Tuple.Create(Tuple.Create(" ", 1167), Tuple.Create("sf-icon-txt-", 1168), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 1172), Tuple.Create("\"", 1249)
+, Tuple.Create(Tuple.Create("", 1180), Tuple.Create("sf-icon-txt-sm", 1180), true)
+, Tuple.Create(Tuple.Create(" ", 1194), Tuple.Create("sf-icon-txt-", 1195), true)
             
             #line 28 "..\..MVC\Views\DocumentsList\List.DocumentsTable.cshtml"
-, Tuple.Create(Tuple.Create("", 1180), Tuple.Create<System.Object, System.Int32>(((DocumentItemViewModel)item).Extension
+, Tuple.Create(Tuple.Create("", 1207), Tuple.Create<System.Object, System.Int32>(((DocumentItemViewModel)item).Extension
             
             #line default
             #line hidden
-, 1180), false)
+, 1207), false)
 );
 
 WriteLiteral(">");
@@ -173,21 +173,21 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</span>\n                        </span>\n                        <a");
+WriteLiteral("</span>\r\n                        </span>\r\n                        <a");
 
 WriteLiteral(" class=\"sf-title\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1349), Tuple.Create("\"", 1463)
+WriteAttribute("href", Tuple.Create(" href=\"", 1378), Tuple.Create("\"", 1492)
             
             #line 30 "..\..MVC\Views\DocumentsList\List.DocumentsTable.cshtml"
-, Tuple.Create(Tuple.Create("", 1356), Tuple.Create<System.Object, System.Int32>(HyperLinkHelpers.GetDetailPageUrl(item, ViewBag.DetailsPageId, ViewBag.OpenInSamePage, Model.UrlKeyPrefix)
+, Tuple.Create(Tuple.Create("", 1385), Tuple.Create<System.Object, System.Int32>(HyperLinkHelpers.GetDetailPageUrl(item, ViewBag.DetailsPageId, ViewBag.OpenInSamePage, Model.UrlKeyPrefix)
             
             #line default
             #line hidden
-, 1356), false)
+, 1385), false)
 );
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
 WriteLiteral("                            ");
 
@@ -198,8 +198,8 @@ WriteLiteral("                            ");
             
             #line default
             #line hidden
-WriteLiteral("\n                        </a>\n                    </th>\n                    <td>\n" +
-"");
+WriteLiteral("\r\n                        </a>\r\n                    </th>\r\n                    <t" +
+"d>\r\n");
 
 WriteLiteral("                        ");
 
@@ -210,7 +210,7 @@ WriteLiteral("                        ");
             
             #line default
             #line hidden
-WriteLiteral("\n                    </td>\n                    <td>\n");
+WriteLiteral("\r\n                    </td>\r\n                    <td>\r\n");
 
 WriteLiteral("                        ");
 
@@ -221,16 +221,17 @@ WriteLiteral("                        ");
             
             #line default
             #line hidden
-WriteLiteral("\n                    </td>\n                    <td>\n                        <a");
+WriteLiteral("\r\n                    </td>\r\n                    <td>\r\n                        <a" +
+"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1874), Tuple.Create("\"", 1902)
+WriteAttribute("href", Tuple.Create(" href=\"", 1914), Tuple.Create("\"", 1942)
             
             #line 41 "..\..MVC\Views\DocumentsList\List.DocumentsTable.cshtml"
-, Tuple.Create(Tuple.Create("", 1881), Tuple.Create<System.Object, System.Int32>(item.Fields.MediaUrl
+, Tuple.Create(Tuple.Create("", 1921), Tuple.Create<System.Object, System.Int32>(item.Fields.MediaUrl
             
             #line default
             #line hidden
-, 1881), false)
+, 1921), false)
 );
 
 WriteLiteral(" target=\"_blank\"");
@@ -257,7 +258,7 @@ WriteLiteral(">");
             
             #line default
             #line hidden
-WriteLiteral("</span></a>\n                    </td>\n                </tr>\n");
+WriteLiteral("</span></a>\r\n                    </td>\r\n                </tr>\r\n");
 
             
             #line 44 "..\..MVC\Views\DocumentsList\List.DocumentsTable.cshtml"
@@ -266,7 +267,7 @@ WriteLiteral("</span></a>\n                    </td>\n                </tr>\n");
             
             #line default
             #line hidden
-WriteLiteral("        </table>\n\n    </div>\n\n</div>\n\n");
+WriteLiteral("        </table>\r\n\r\n    </div>\r\n\r\n</div>\r\n\r\n");
 
             
             #line 51 "..\..MVC\Views\DocumentsList\List.DocumentsTable.cshtml"
@@ -296,7 +297,7 @@ Write(Html.Action("Index", "ContentPager", new
             
             #line default
             #line hidden
-WriteLiteral("\n\n");
+WriteLiteral("\r\n\r\n");
 
         }
     }

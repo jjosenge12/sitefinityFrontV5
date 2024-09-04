@@ -6,3 +6,5 @@ App_Data/Sitefinity.mdf
 *.cache
 *.cache
 *.ldf
+/.vs/sitefinityFrontV5/FileContentIndex
+/.vs/SitefinityWebApp/FileContentIndex

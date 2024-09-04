@@ -66,7 +66,7 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.ImageGallery
         }
         public override void Execute()
         {
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 9 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
@@ -75,7 +75,7 @@ Write(Html.Script(ScriptRef.JQuery, "top", true));
             
             #line default
             #line hidden
-WriteLiteral("\n\n");
+WriteLiteral("\r\n\r\n");
 
             
             #line 11 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
@@ -84,7 +84,7 @@ Write(Html.StyleSheet(Url.WidgetContent("assets/magnific/magnific-popup.css"), "
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 12 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
@@ -93,7 +93,7 @@ Write(Html.Script(Url.WidgetContent("assets/magnific/jquery.magnific-popup.min.j
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 13 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
@@ -102,35 +102,35 @@ Write(Html.Script(Url.WidgetContent("Mvc/Scripts/ImageGallery/overlay-gallery.js
             
             #line default
             #line hidden
-WriteLiteral("\n\n<div");
+WriteLiteral("\r\n\r\n<div");
 
 WriteLiteral(" class=\"sf-Gallery-thumbs-container\"");
 
-WriteLiteral(">\n  <ul");
+WriteLiteral(">\r\n  <ul");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 677), Tuple.Create("\"", 732)
-, Tuple.Create(Tuple.Create("", 685), Tuple.Create("sf-Gallery-thumbs", 685), true)
-, Tuple.Create(Tuple.Create(" ", 702), Tuple.Create("list-unstyled", 703), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 692), Tuple.Create("\"", 747)
+, Tuple.Create(Tuple.Create("", 700), Tuple.Create("sf-Gallery-thumbs", 700), true)
+, Tuple.Create(Tuple.Create(" ", 717), Tuple.Create("list-unstyled", 718), true)
             
             #line 16 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
-, Tuple.Create(Tuple.Create(" ", 716), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create(" ", 731), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 717), false)
+, 732), false)
 );
 
-WriteAttribute("aria-label", Tuple.Create(" aria-label=\"", 733), Tuple.Create("\"", 776)
+WriteAttribute("aria-label", Tuple.Create(" aria-label=\"", 748), Tuple.Create("\"", 791)
             
             #line 16 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
-, Tuple.Create(Tuple.Create("", 746), Tuple.Create<System.Object, System.Int32>(Html.Resource("ImageGallery")
+, Tuple.Create(Tuple.Create("", 761), Tuple.Create<System.Object, System.Int32>(Html.Resource("ImageGallery")
             
             #line default
             #line hidden
-, 746), false)
+, 761), false)
 );
 
-WriteLiteral(">\n");
+WriteLiteral(">\r\n");
 
             
             #line 17 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
@@ -144,7 +144,7 @@ WriteLiteral(">\n");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
             
             #line 18 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
@@ -165,53 +165,53 @@ WriteLiteral("        <li");
 
 WriteLiteral(" class=\"d-inline-block\"");
 
-WriteLiteral(">\n            <a");
+WriteLiteral(">\r\n            <a");
 
 WriteLiteral(" class=\"text-center image-link\"");
 
-WriteAttribute("href", Tuple.Create("\n               href=\"", 990), Tuple.Create("\"", 1042)
+WriteAttribute("href", Tuple.Create("\r\n               href=\"", 1011), Tuple.Create("\"", 1064)
             
             #line 23 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
-, Tuple.Create(Tuple.Create("", 1012), Tuple.Create<System.Object, System.Int32>(thumbnailViewModel.MediaUrl
+, Tuple.Create(Tuple.Create("", 1034), Tuple.Create<System.Object, System.Int32>(thumbnailViewModel.MediaUrl
             
             #line default
             #line hidden
-, 1012), false)
+, 1034), false)
 );
 
-WriteAttribute("title", Tuple.Create("\n               title=\"", 1043), Tuple.Create("\"", 1084)
+WriteAttribute("title", Tuple.Create("\r\n               title=\"", 1065), Tuple.Create("\"", 1107)
             
             #line 24 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
-, Tuple.Create(Tuple.Create("", 1066), Tuple.Create<System.Object, System.Int32>(item.Fields.Title
+, Tuple.Create(Tuple.Create("", 1089), Tuple.Create<System.Object, System.Int32>(item.Fields.Title
             
             #line default
             #line hidden
-, 1066), false)
+, 1089), false)
 );
 
-WriteAttribute("aria-label", Tuple.Create("\n               aria-label=\"", 1085), Tuple.Create("\"", 1182)
+WriteAttribute("aria-label", Tuple.Create("\r\n               aria-label=\"", 1108), Tuple.Create("\"", 1206)
             
             #line 25 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
-, Tuple.Create(Tuple.Create("", 1113), Tuple.Create<System.Object, System.Int32>(string.Format(Html.Resource("OpenInModalDialog"), item.Fields.Title)
+, Tuple.Create(Tuple.Create("", 1137), Tuple.Create<System.Object, System.Int32>(string.Format(Html.Resource("OpenInModalDialog"), item.Fields.Title)
             
             #line default
             #line hidden
-, 1113), false)
+, 1137), false)
 );
 
-WriteLiteral(">\n                <img");
+WriteLiteral(">\r\n                <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 1205), Tuple.Create("\"", 1245)
+WriteAttribute("src", Tuple.Create(" src=\"", 1230), Tuple.Create("\"", 1270)
             
             #line 26 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
-, Tuple.Create(Tuple.Create("", 1211), Tuple.Create<System.Object, System.Int32>(thumbnailViewModel.ThumbnailUrl
+, Tuple.Create(Tuple.Create("", 1236), Tuple.Create<System.Object, System.Int32>(thumbnailViewModel.ThumbnailUrl
             
             #line default
             #line hidden
-, 1211), false)
+, 1236), false)
 );
 
-WriteLiteral("\n                     data-detail-url=\"");
+WriteLiteral("\r\n                     data-detail-url=\"");
 
             
             #line 27 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
@@ -222,17 +222,17 @@ WriteLiteral("\n                     data-detail-url=\"");
             #line hidden
 WriteLiteral("\"");
 
-WriteAttribute("alt", Tuple.Create("\n                     alt=\"", 1404), Tuple.Create("\"", 1459)
+WriteAttribute("alt", Tuple.Create("\r\n                     alt=\"", 1430), Tuple.Create("\"", 1486)
             
             #line 28 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
-, Tuple.Create(Tuple.Create("", 1431), Tuple.Create<System.Object, System.Int32>(item.Fields.AlternativeText
+, Tuple.Create(Tuple.Create("", 1458), Tuple.Create<System.Object, System.Int32>(item.Fields.AlternativeText
             
             #line default
             #line hidden
-, 1431), false)
+, 1458), false)
 );
 
-WriteLiteral("\n                     ");
+WriteLiteral("\r\n                     ");
 
             
             #line 29 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
@@ -241,7 +241,7 @@ WriteLiteral("\n                     ");
             
             #line default
             #line hidden
-WriteLiteral("\n");
+WriteLiteral("\r\n");
 
 WriteLiteral("                     ");
 
@@ -261,7 +261,7 @@ WriteLiteral(" ");
             
             #line default
             #line hidden
-WriteLiteral(" />\n            </a>\n        </li>\n");
+WriteLiteral(" />\r\n            </a>\r\n        </li>\r\n");
 
             
             #line 33 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"
@@ -271,7 +271,7 @@ WriteLiteral(" />\n            </a>\n        </li>\n");
             
             #line default
             #line hidden
-WriteLiteral("  </ul>\n</div>\n\n");
+WriteLiteral("  </ul>\r\n</div>\r\n\r\n");
 
             
             #line 38 "..\..MVC\Views\ImageGallery\List.OverlayGallery.cshtml"

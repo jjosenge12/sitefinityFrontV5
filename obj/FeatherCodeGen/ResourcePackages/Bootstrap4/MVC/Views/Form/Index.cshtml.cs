@@ -66,18 +66,18 @@ namespace SitefinityWebApp.ResourcePackages.Bootstrap4.MVC.Views.Form
         }
         public override void Execute()
         {
-WriteLiteral("\n<div");
+WriteLiteral("\r\n<div");
 
 WriteLiteral(" data-sf-role=\"form-container\"");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 332), Tuple.Create("\"", 355)
+WriteAttribute("class", Tuple.Create(" class=\"", 340), Tuple.Create("\"", 363)
             
             #line 9 "..\..MVC\Views\Form\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 340), Tuple.Create<System.Object, System.Int32>(Model.CssClass
+, Tuple.Create(Tuple.Create("", 348), Tuple.Create<System.Object, System.Int32>(Model.CssClass
             
             #line default
             #line hidden
-, 340), false)
+, 348), false)
 );
 
 WriteLiteral(">\r\n    <input");
@@ -86,14 +86,14 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" data-sf-role=\"form-id\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 406), Tuple.Create("\"", 427)
+WriteAttribute("value", Tuple.Create(" value=\"", 414), Tuple.Create("\"", 435)
             
             #line 10 "..\..MVC\Views\Form\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 414), Tuple.Create<System.Object, System.Int32>(Model.FormId
+, Tuple.Create(Tuple.Create("", 422), Tuple.Create<System.Object, System.Int32>(Model.FormId
             
             #line default
             #line hidden
-, 414), false)
+, 422), false)
 );
 
 WriteLiteral(" name=\"FormId\"");
@@ -104,14 +104,14 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" data-sf-role=\"marketo-settings\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 503), Tuple.Create("\"", 533)
+WriteAttribute("value", Tuple.Create(" value=\"", 511), Tuple.Create("\"", 541)
             
             #line 11 "..\..MVC\Views\Form\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 511), Tuple.Create<System.Object, System.Int32>(Model.MarketoSettings
+, Tuple.Create(Tuple.Create("", 519), Tuple.Create<System.Object, System.Int32>(Model.MarketoSettings
             
             #line default
             #line hidden
-, 511), false)
+, 519), false)
 );
 
 WriteLiteral(" name=\"MarketoSettings\"");
@@ -191,14 +191,14 @@ WriteLiteral("            <img");
 
 WriteLiteral(" data-sf-role=\"loading-img\"");
 
-WriteAttribute("src", Tuple.Create(" src=\'", 1032), Tuple.Create("\'", 1180)
+WriteAttribute("src", Tuple.Create(" src=\'", 1040), Tuple.Create("\'", 1188)
             
             #line 23 "..\..MVC\Views\Form\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1038), Tuple.Create<System.Object, System.Int32>(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Themes.Light.Images.Loadings.sfLoadingData.gif")
+, Tuple.Create(Tuple.Create("", 1046), Tuple.Create<System.Object, System.Int32>(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Themes.Light.Images.Loadings.sfLoadingData.gif")
             
             #line default
             #line hidden
-, 1038), false)
+, 1046), false)
 );
 
 WriteLiteral(" alt=\"Loading animation\"");
@@ -244,14 +244,14 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" data-sf-role=\"ajax-submit-url\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 1783), Tuple.Create("\"", 1811)
+WriteAttribute("value", Tuple.Create(" value=\"", 1791), Tuple.Create("\"", 1819)
             
             #line 38 "..\..MVC\Views\Form\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1791), Tuple.Create<System.Object, System.Int32>(Model.AjaxSubmitUrl
+, Tuple.Create(Tuple.Create("", 1799), Tuple.Create<System.Object, System.Int32>(Model.AjaxSubmitUrl
             
             #line default
             #line hidden
-, 1791), false)
+, 1799), false)
 );
 
 WriteLiteral(" />\r\n");
@@ -262,14 +262,14 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" data-sf-role=\"redirect-url\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 1877), Tuple.Create("\"", 1903)
+WriteAttribute("value", Tuple.Create(" value=\"", 1885), Tuple.Create("\"", 1911)
             
             #line 39 "..\..MVC\Views\Form\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1885), Tuple.Create<System.Object, System.Int32>(Model.RedirectUrl
+, Tuple.Create(Tuple.Create("", 1893), Tuple.Create<System.Object, System.Int32>(Model.RedirectUrl
             
             #line default
             #line hidden
-, 1885), false)
+, 1893), false)
 );
 
 WriteLiteral(" />\r\n");
@@ -280,14 +280,14 @@ WriteLiteral(" type=\"hidden\"");
 
 WriteLiteral(" data-sf-role=\"widget-id\"");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 1966), Tuple.Create("\"", 1991)
+WriteAttribute("value", Tuple.Create(" value=\"", 1974), Tuple.Create("\"", 1999)
             
             #line 40 "..\..MVC\Views\Form\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1974), Tuple.Create<System.Object, System.Int32>(ViewBag.WidgetId
+, Tuple.Create(Tuple.Create("", 1982), Tuple.Create<System.Object, System.Int32>(ViewBag.WidgetId
             
             #line default
             #line hidden
-, 1974), false)
+, 1982), false)
 );
 
 WriteLiteral(" name=\"WidgetId\"");
@@ -329,7 +329,7 @@ WriteLiteral(" />\r\n");
             
             #line default
             #line hidden
-WriteLiteral("\r\n</div>\n");
+WriteLiteral("\r\n</div>\r\n");
 
         }
     }
