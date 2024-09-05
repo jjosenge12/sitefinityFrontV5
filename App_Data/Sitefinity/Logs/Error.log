@@ -2410,3 +2410,654 @@ Win32 ThreadId:13560
 
 Extended Properties: 
 ----------------------------------------
+----------------------------------------
+ActivityId: 4c312c6a-bdd6-45be-a7ac-1383fb85c3d2
+
+Timestamp: 04/09/2024 08:14:00 p. m.
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133699535519860787
+
+ProcessId: 19140
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:24348
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 517e6fc5-395b-415c-b91b-f4561d6e2f39
+
+Timestamp: 04/09/2024 08:53:32 p. m.
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133699564141354962
+
+ProcessId: 23008
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:17992
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 04/09/2024 08:55:52 p. m.
+
+Message: HandlingInstanceID: c0eee436-47f8-4c81-bd91-e524d4a91de2
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+09/04/2024 15:55:52
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Se detectó un posible valor Request.Path peligroso en el cliente (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    en System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   en System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 04/09/2024 08:55:52 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133699564141354962
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133699564141354962
+
+ProcessId: 23008
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:9892
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 04/09/2024 08:55:52 p. m.
+
+Message: HandlingInstanceID: 7a5a4a2d-f774-4d8b-9414-7a8166b86bfd
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+09/04/2024 15:55:52
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Se detectó un posible valor Request.Path peligroso en el cliente (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    en System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   en System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 04/09/2024 08:55:52 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133699564141354962
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133699564141354962
+
+ProcessId: 23008
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:24524
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 04/09/2024 08:55:52 p. m.
+
+Message: HandlingInstanceID: 9be37d49-134d-459a-a0df-916a1a732c11
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+09/04/2024 15:55:52
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Se detectó un posible valor Request.Path peligroso en el cliente (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    en System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   en System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 04/09/2024 08:55:52 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133699564141354962
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133699564141354962
+
+ProcessId: 23008
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:17624
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 88ab30dc-3ef4-422a-b6dc-0682d1253903
+
+Timestamp: 05/09/2024 05:55:38 p. m.
+
+Message: IdentityServer signing certificate is not configured. System will be using default IdentityServer certificate
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133700320572370248
+
+ProcessId: 25472
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:8668
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 05/09/2024 05:55:39 p. m.
+
+Message: HandlingInstanceID: 7eeeef8b-177e-4961-88dd-488f240173d0
+An exception of type 'Telerik.Sitefinity.SitefinityExceptions.ItemNotFoundException' occurred and was caught.
+-------------------------------------------------------------------------------------------------------------
+09/05/2024 12:55:39
+Type : Telerik.Sitefinity.SitefinityExceptions.ItemNotFoundException, Telerik.Sitefinity, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+Message : You are trying to access ScheduledTaskData item with id 5aa46d3b-722d-4711-a2f3-b7cfc66ea331 that no longer exists. The most probable reason is that it has been deleted by another user.
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Telerik.Sitefinity.Scheduling.Model.ScheduledTaskData GetTaskData(System.Guid)
+HResult : -2146233088
+Stack Trace :    en DynamicModule.ns.Wrapped_OpenAccessSchedulingProvider_4b5109ba5b6e4ed683c6164180c1eb25.GetTaskData(Guid id)
+   en Telerik.Sitefinity.Scheduling.Scheduler.DeleteTask(ScheduledTask task, String transactionName)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 05/09/2024 05:55:39 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133700320572370248
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133700320572370248
+
+ProcessId: 25472
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:23496
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 05/09/2024 05:55:44 p. m.
+
+Message: HandlingInstanceID: 031da543-a746-4d87-bf89-c00a4ba1f3b0
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+09/05/2024 12:55:44
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Se detectó un posible valor Request.Path peligroso en el cliente (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    en System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   en System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 05/09/2024 05:55:44 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133700320572370248
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133700320572370248
+
+ProcessId: 25472
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:18756
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 05/09/2024 05:55:44 p. m.
+
+Message: HandlingInstanceID: f820ff93-3842-4a20-bad0-67d3f30dd2b9
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+09/05/2024 12:55:44
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Se detectó un posible valor Request.Path peligroso en el cliente (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    en System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   en System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 05/09/2024 05:55:44 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133700320572370248
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133700320572370248
+
+ProcessId: 25472
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:15500
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 05/09/2024 05:55:44 p. m.
+
+Message: HandlingInstanceID: 372fba02-4666-458d-b1c6-318d65de6c5e
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+09/05/2024 12:55:44
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Se detectó un posible valor Request.Path peligroso en el cliente (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    en System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   en System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 05/09/2024 05:55:44 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133700320572370248
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133700320572370248
+
+ProcessId: 25472
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:26788
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 05/09/2024 05:55:45 p. m.
+
+Message: HandlingInstanceID: 50cde771-1ab2-45e1-aba7-b8eae9b2de74
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+09/05/2024 12:55:45
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Se detectó un posible valor Request.Path peligroso en el cliente (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    en System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   en System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 05/09/2024 05:55:45 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133700320572370248
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/Item with ID: 'bdce3056-b1de-484b-9913-ce19d601e0cb' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133700320572370248
+
+ProcessId: 25472
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:15500
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 05/09/2024 05:55:45 p. m.
+
+Message: HandlingInstanceID: 1e93c8f0-b735-49ee-86af-fd308631139e
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+09/05/2024 12:55:45
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Se detectó un posible valor Request.Path peligroso en el cliente (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    en System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   en System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 05/09/2024 05:55:45 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133700320572370248
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/Item with ID: 'f3917a32-18bd-4bb6-a275-82435609fc6a' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133700320572370248
+
+ProcessId: 25472
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:8668
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 05/09/2024 05:55:45 p. m.
+
+Message: HandlingInstanceID: 99a4b8d1-ab9b-45de-a7fb-8aa4d0a42c30
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+09/05/2024 12:55:45
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Se detectó un posible valor Request.Path peligroso en el cliente (:).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    en System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   en System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : DIANA-PC
+TimeStamp : 05/09/2024 05:55:45 p. m.
+FullName : Telerik.Sitefinity.Utilities, Version=13.3.7625.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-133700320572370248
+ThreadIdentity : 
+WindowsIdentity : DIANA-PC\diana
+Requested URL : http://localhost:60876/Item with ID: '48356baa-ce0b-442d-aacd-134b81bd293f' was not found!
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DIANA-PC
+
+App Domain: /LM/W3SVC/2/ROOT-1-133700320572370248
+
+ProcessId: 25472
+
+Process Name: C:\Program Files\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:22496
+
+Extended Properties: 
+----------------------------------------

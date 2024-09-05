@@ -26,3 +26,45 @@ Message: The domain name Default configured to serve your website content was no
 
 
 ----------------------------------------
+----------------------------------------
+Timestamp: 9/4/2024 8:07:38 PM
+
+Message: Enter upgrade mode
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 9/4/2024 8:13:45 PM
+
+Message: Exit upgrade mode
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 9/4/2024 8:23:25 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Packaging.Tasks.PackagingImportFromArchiveScheduledTask'. Start time: 9/4/2024 8:16:50 PM. End time: 9/4/2024 8:23:25 PM. Task data: '8c63888c-09d2-4a28-812d-a5a7885580c0;6ad4ac79-5f56-4b40-8ea6-f68de1b64160.zip'
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 9/4/2024 8:33:13 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Packaging.Tasks.PackagingImportFromArchiveScheduledTask'. Start time: 9/4/2024 8:23:52 PM. End time: 9/4/2024 8:33:13 PM. Task data: '8c63888c-09d2-4a28-812d-a5a7885580c0;8e1aae34-fecc-4acf-b010-dc05edf48e07.zip'
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/09/2024 05:55:38 p. m.
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Versioning.Cleaner.VersioningCleanerTask'. Start time: 05/09/2024 05:55:38 p. m.. End time: 05/09/2024 05:55:38 p. m.. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/09/2024 05:55:39 p. m.
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Authentication.IdentityServer.Data.TransientDataCleanupTask'. Start time: 05/09/2024 05:55:38 p. m.. End time: 05/09/2024 05:55:39 p. m.. Task data: ''
+
+
+----------------------------------------

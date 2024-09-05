@@ -542,40 +542,52 @@ $(document).ready(function () {
 
     function inicio_sesion(data,prospecto = 0) {
         let datajson = JSON.stringify(data);
-            $.ajax({
-                type: 'POST',
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + token,
-                },
-                url: window.config.urlbase + "/inicio_sesion",
-                data: datajson,
-                complete: hideLoader,
-                success: function (result) {
-                    result = JSON.parse(result);
-                    console.log(result);
-                    if (result.code == 1) {
-                        sessionStorage.setItem("token", result.sessionId);
-                        sessionStorage.setItem("email", result.Email);
-                        sessionStorage.setItem("isClient", "true");
-                        sessionStorage.setItem("isLogged", "true");
-                        sessionStorage.setItem("lastname", result.Nombre);
-                        sessionStorage.setItem("name", result.Nombre);
-                        window.location = "/tfsm/mis-cotizaciones";
-                    } else {
-                        if (prospecto == 0) {
-                            if (result.code == "2.1")
-                                window.location.href = "/tfsm/home-delivery?err=2.1"
-                            else
-                                window.location.href = "/tfsm/home-delivery?err=2.2"
-                        } else
-                            window.location.href = "/tfsm/home-delivery?err=1.1"
+        $.ajax({
+            type: 'GET',
+            beforeSend: showLoader,
+            url: window.config.urlbase + '/GetAccessToken',
+            success: function (result) {
+                token = result.result;
+            },
+            complete: function () {
+                $.ajax({
+                    type: 'POST',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": "Bearer " + token,
+                    },
+                    url: window.config.urlToyotaCotizaciones + "/services/apexrest/SitefinityLoginWS",
+                    data: datajson,
+                    complete: hideLoader,
+                    success: function (result) {
+                        console.log(result);
+                        if (result.code == 1) {
+                            sessionStorage.setItem("token", result.sessionId);
+                            sessionStorage.setItem("email", result.Email);
+                            sessionStorage.setItem("isClient", "true");
+                            sessionStorage.setItem("isLogged", "true");
+                            sessionStorage.setItem("lastname", result.Nombre);
+                            sessionStorage.setItem("name", result.Nombre);
+                            window.location = "/tfsm/mis-cotizaciones";
+                        } else {
+                            if (prospecto == 0) {
+                                if (result.code == "2.1")
+                                    window.location.href = "/tfsm/home-delivery?err=2.1"
+                                else
+                                    window.location.href = "/tfsm/home-delivery?err=2.2"
+                            } else
+                                window.location.href = "/tfsm/home-delivery?err=1.1"
+                        }
+                    },
+                    error: function (err) {
+                        console.log('Error en la conexion con SalesForce');
                     }
-                },
-                error: function (err) {
-                    console.log('Error en la conexion con SalesForce');
-                }
-            });
+                });
+            },
+            error: function (err) {
+                console.log('Error token invalido');
+            }
+        });
     }
 
 });

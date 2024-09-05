@@ -1,9 +1,21 @@
 let isLogged = sessionStorage.getItem("isLogged");
 
-grecaptcha.ready(function () {
+grecaptcha.ready(async function () {
     // do request for recaptcha token
     // response is promise with passed token
-    grecaptcha.execute(window.config.reCaptchaSiteKey, { action: 'validate_captcha' })
+    let recaptchaSiteKey;
+    console.log("Invocando recaptcha");
+    //console.log("Valor anterior:" + window.config.reCaptchaSiteKey);
+    await $.ajax({
+        type: "get",
+        url: window.config.urlbase + "/recaptchaSiteKey",
+        datatype: "json",
+        success: function (data) {
+            recaptchaSiteKey = data;
+            //console.log("La clave recaptchaSiteKey es:", recaptchaSiteKey);
+        },
+    });
+    grecaptcha.execute(recaptchaSiteKey, { action: 'validate_captcha' })
         .then(function (token) {
             // add token value to form
             recaptchaToken = token;
